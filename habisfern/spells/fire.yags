@@ -2,76 +2,38 @@
 
 <grimoire name="Fire">
     <preface>
-	    <para>
-		    The domain of fire includes all that is hot and combustable.
-			It represents speed, energy and vitality as well as the
-			burning flames of fire. It can enflame passions and cause
-			fevers.
-		</para>
+        <para>
+            The domain of fire includes all that is hot and combustable.
+            It represents speed, energy and vitality as well as the
+            burning flames of fire. It can enflame passions and cause
+            fevers.
+        </para>
 
-		<para>
-		    Those who know Fire get to add their Fire score to any resistences
-			against heat or flame/ including for soak and the effect level
-			of spells.
-		</para>
+        <para>
+            Those who know Fire get to add their Fire score to any resistences
+            against heat or flame/ including for soak and the effect level
+            of spells.
+        </para>
 
-		<para>
-		    When heating objects, use the following chart.
-		</para>
+        <para>
+            When heating objects, use the following chart.
+        </para>
 
-		<targetlist>
-		    <valueLabel>Temperature</valueLabel>
-			<targetLabel>Level</targetLabel>
+    </preface>
 
-			</item>
-		    <item target="+0" value="Comfortable.">
-			    A reasonable, comfortable temperature.
-			</item>
-		    <item target="+1" value="Warm.">
-			    Uncomfortably warm, an object will be too hot to
-				hold for long. If a living creature is heated to
-				this extent, then they will soon die, gaining a
-				point of exhaustion every hour, then gaining
-				wounds until they die.
-			</item>
-		    <item target="+2" value="Hot.">
-			    Too hot to touch, doing so wil burn living flesh.
-				Water will scaled, though not boil. If used to
-				heat a living creature, then exhaustion is gained
-				every minute.
-			</item>
-		    <item target="+3" value="Very hot.">
-			    Water will boil vigourosly, metal cannot be held,
-				highly flammable objects will burst into flame.
-				Living creatures gain exhuastion every round.
-			</item>
-		    <item target="+4" value="Scorching.">
-			    Most flammable objects will ignite, living flesh
-				will also begin to burn, causing a wound every
-				round and making the creature incapable of
-				coherant action. Metals will begin to glow.
-			</item>
-		    <item target="+5" value="Utterly hot.">
-			    Metals will glow brightly, and will be hot enough
-				to work. Living flesh will ignite causing two
-				wounds a round.
-			</item>
-		</targetlist>
-	</preface>
-
-    <spell name="Ignite" level="1" type="fire">
+    <spell name="Ignite" level="0" type="fire">
         <range>-5/m</range>
         <duration>Momentary</duration>
         <target>+5/size</target>
 
-		<summary>Ignites flammable material</summary>
+        <summary>Ignites flammable material</summary>
 
         <description>
             <para>
                 Ignites targeted flamable material. An intense, momentary
                 heat is applied to the targets, which has a chance of
                 igniting them if they are flammable. The degree of success
-				denotes the types of items which will burn.
+                denotes the types of items which will burn.
             </para>
 
             <targetlist>
@@ -120,25 +82,30 @@
         Contains cantrips which affect heat directly, rather than causing
         fire or other effects.
      -->
-    
-    <spell name="Warm" level="3" type="fire">
-        <range>-5/m</range>
+
+    <spell name="Warm" level="1" type="fire">
+        <range>Self</range>
         <duration>Concentration</duration>
-        <radius>-5/m beyond 1m</radius>
-        <effect>10C + 2C/1</effect>
- 
+        <radius>+5/m beyond 1m</radius>
+
         <prerequisite>Ignite</prerequisite>
 
-		<summary>Warms a volume of air.</summary>
+        <summary>Warms a volume of air.</summary>
 
         <description>
             <para>
-                Gently warms a spherical volume of air up to a maximum
-                of the lowest of the cantrip effect, or human body
-                temperature. The effect halves each multiple of the
-                radius from the target point. Temperature changes occurs
-                at a rate of 50% the difference between the current
-                temperature and the required temperature each minute.
+                Gently warms a spherical volume of air according to the
+                success level of the cantrip. The effect is centred on
+                the caster, and extends out to a sphere one metre in
+                radius, or greater if extended. The caster is affected
+                by the temperature change.
+            </para>
+
+            <para>
+                Each level of success raises the temperature by one
+                category according to the <e>Environment</e> article
+                on weather. The air temperature takes time to rise,
+                normally one minute for the total change.
             </para>
 
             <para>
@@ -148,80 +115,203 @@
             </para>
         </description>
     </spell>
-    
-    <spell name="Resist Fire" level="5" type="fire">
+
+    <spell name="Heat" level="3" type="fire">
+        <range>-1/1m</range>
+        <duration>Concentration</duration>
+        <target>+3/size</target>
+        <resist>Stamina</resist>
+
+        <prerequisite>Warm</prerequisite>
+
+        <summary>Heat a solid material to a high temperature.</summary>
+
+        <description>
+            <para>
+                This cantrip affects a single object which is quickly
+                heated to a high temperature. A standard success will
+                warm an object so that it is hot to touch.
+            </para>
+
+            <targetlist>
+                <valueLabel>Temperature</valueLabel>
+                <targetLabel>Level</targetLabel>
+
+                </item>
+                <item target="+0" value="Comfortable.">
+                    A reasonable, comfortable temperature.
+                </item>
+                <item target="+1" value="Warm.">
+                    Uncomfortably warm, an object will be too hot to
+                    hold for long. If a living creature is heated to
+                    this extent, then they will soon die, gaining a
+                    point of exhaustion every hour, then gaining
+                    wounds until they die.
+                </item>
+                <item target="+2" value="Hot.">
+                    Too hot to touch, doing so will burn living flesh.
+                    Water will scaled, though not boil. If used to
+                    heat a living creature, then exhaustion is gained
+                    every minute.
+                </item>
+                <item target="+3" value="Very hot.">
+                    Water will boil vigourosly, metal cannot be held,
+                    highly flammable objects will burst into flame.
+                    Living creatures gain exhuastion every round.
+                </item>
+                <item target="+4" value="Scorching.">
+                    Most flammable objects will ignite, living flesh
+                    will also begin to burn, causing a wound every
+                    round and making the creature incapable of
+                    coherant action. Metals will begin to glow.
+                </item>
+                <item target="+5" value="Utterly hot.">
+                    Metals will glow brightly, and will be hot enough
+                    to work. Living flesh will ignite causing two
+                    wounds a round.
+                </item>
+            </targetlist>
+        </description>
+    </spell>
+
+
+    <spell name="Burning Wind" level="5" type="fire">
+        <duration>Concentration</duration>
+        <range>-1/5m</range>
+        <resist>Soak</resist>
+        <effect>+1 mixed damage/1</effect>
+
+        <prerequisite>Heat</prerequisite>
+
+        <summary>Creates a blast of hot wind that burns.</summary>
+
+        <description>
+            <para>
+                Creates an intensely hot wind which blows from the caster
+                in the specified direction, in a 30 degree arc. The range
+                can be doubled by halving the angle. Any within the blast
+                of air suffers burning damage.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Whither" level="7" type="fire">
+        <range>Self</range>
+        <duration>Momentary</duration>
+        <area>+1/20m radius</area>
+
+        <prerequisite>Burning Wind</prerequisite>
+
+        <description>
+            <para>
+                Destroys all plant life in a large area. Grass will die
+                first, followed by flowers, bushes and trees depending
+                on the level of success. Plant life withers and dies as
+                if suffering from severe drought.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Summer" level="9" type="fire">
+        <range>Self</range>
+        <duration>Day</duration>
+        <radius>+1/50m</radius>
+
+        <prerequisite>Whither</prerequisite>
+
+        <description>
+            <para>
+                As per <e>Warm</e>, but effects a much larger area. The
+                region affected is static even if the caster moves, and
+                lasts until the next sunrise or sunset. It is often used
+                to protect crops, or a village, from cold weather.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Shape fire" level="1" type="fire">
+        <range>-1/m</range>
+        <duration>Concentration</duration>
+        <target>+3/size</target>
+
+        <description>
+            <para>
+                Causes an existing fire to take on a specific shape,
+                such as that of a face or image. The flames will not
+                extend beyond the normal bounds of the fire.
+            </para>
+        </description>
+    </spell>
+
+
+    <spell name="Resist Fire" level="3" type="fire">
         <range>-1/m</range>
         <duration>Concentration</duration>
         <target>-5/extra target</target>
         <effect>+1 soak/1</effect>
 
         <prerequisite>Warm</prerequisite>
-		 
+
         <summary>Provides protection from fire.</summary>
-        
+
         <description>
             <para>
                 Increases the soak of the targets versus fire and heat.
-				Range is to the furthest target to be protected at time
-				of casting. Also reduces the effect of any fire spells
-				that work according to the level of effect, such as
-				<e>Heat</e> or <e>Ignite</e>.
+                Range is to the furthest target to be protected at time
+                of casting. Also reduces the effect of any fire spells
+                that work according to the level of effect, such as
+                <e>Heat</e> or <e>Ignite</e>.
             </para>
         </description>
     </spell>
-    
-    <spell name="Heat" level="5" type="fire">
-        <range>-1/1m</range>
+
+    <spell name="Control Fire" level="5" type="fire">
+        <range>+1/5m</range>
         <duration>Concentration</duration>
-        <target>-3/size</target>
-        <resist>Stamina</resist>
+        <target>+3/size</target>
 
-        <prerequisite>Warm</prerequisite>
-
-		<summary>Heat a solid material to a high temperature.</summary>
+        <prerequisite>Resist Fire</prerequisite>
 
         <description>
             <para>
-			    This cantrip affects a single object which is quickly
-				heated to a high temperature. A standard success will
-				warm an object so that it is hot to touch.
+                Cause a fire to increase or reduce in intensity. It may
+                burn faster or slower, hotter or colder. The flames may
+                darken to reduce light, or grow brighter to provide more
+                light. Each level of success allows one of these factors
+                to be halved or doubled.
             </para>
         </description>
     </spell>
 
-
-    <spell name="Burning Wind" level="7" type="fire">
+    <spell name="Smoke" level="5" type="fire">
+        <range>+1/5m</range>
+        <radius>+1/3m</radius>
         <duration>Concentration</duration>
-        <range>-1/5m</range>
-        <resist>Soak</resist>
-        <effect>+1 mixed damage/1</effect>
-        
-        <prerequisite>Heat</prerequisite>
 
-		<summary>Creates a blast of hot wind that burns.</summary>
-        
+        <prerequisite>Resist Fire</prerequisite>
+
         <description>
             <para>
-                Creates an intensely hot wind which blows from the caster
-                in the specified direction, in a 30 degree arc. The range
-                can be doubled by halving the arc.
+                Cause a fire to give off thick smoke which fills an area
+                choking and obscuring anyone caught within.
             </para>
         </description>
     </spell>
 
-    <spell name="Whither" level="9" type="fire">
-	    <duration>Momentary</duration>
-	    <area>+1/10m radius</area>
+    <spell name="Fire Cloud" level="7" type="fire">
+        <range>+1/5m</range>
+        <radius>+1/3m</radius>
+        <duration>Concentration</duration>
 
-        <prerequisite>Burning Wind</prerequisite>
+        <prerequisite>Smoke</prerequisite>
 
         <description>
             <para>
-                Destroys all plant life in a large area.
             </para>
         </description>
     </spell>
-    
+
+
 
     <!--
         Begin the 'Alertness' thread.
@@ -235,7 +325,7 @@
         <target>-5/extra target</target>
         <effect>+1 initiative/1</effect>
         <resist>Ego</resist>
-        
+
         <prerequisite>Ignite</prerequisite>
 
         <description>
@@ -255,7 +345,7 @@
         <resist>Ego</resist>
 
         <prerequisite>Alertness</prerequisite>
-        
+
         <description>
             <para>
                 Increases base movement speed of the target.
@@ -290,13 +380,13 @@
             </para>
         </description>
     </spell>
-    
+
     <spell name="Fire Sight" level="5" type="fire">
         <range>Self</range>
         <duration>Concentration</duration>
-        
+
         <prerequisite>Alertness</prerequisite>
-        
+
         <description>
             <para>
                 Enables the caster to see heat, as if they had infravision.
@@ -306,13 +396,13 @@
             </para>
         </description>
     </spell>
-    
+
     <spell name="Visions of Flame" level="7" type="fire">
         <range>-1/100m</range>
         <duration>Concentration</duration>
-        
+
         <prerequisite>Fire Sight</prerequisite>
-        
+
         <description>
             <para>
                 A fire can be used to see through another fire. One fire
@@ -323,13 +413,13 @@
             </para>
         </description>
     </spell>
-    
+
     <spell name="Perception of the Fires" level="9" type="fire">
         <range>-1/100m</range>
         <duration>Concentration</duration>
-        
+
         <prerequisite>Visions of Flame</prerequisite>
-        
+
         <description>
             <para>
                 As <e>Visions of Flame</e>, but the two fires may be
@@ -351,7 +441,7 @@
         <target>-5/extra target</target>
         <effect>-1/1</effect>
         <resist>Stamina</resist>
-        
+
         <prerequisite>Ignite</prerequisite>
 
         <description>
@@ -371,15 +461,15 @@
             </para>
         </description>
     </spell>
-    
+
     <spell name="Flaming Spear" level="5" type="fire">
         <range>-1/m</range>
         <duration>Momentary</duration>
         <effect>+1 damage/1</effect>
         <resist>Soak</resist>
-        
+
         <prerequisite>Burning Motes</prerequisite>
-        
+
         <description>
             <para>
                 Creates a jet of flame which strikes a single target
@@ -439,7 +529,7 @@
                 the same time. If the target is larger than the
                 wizard, then the effect is reduced since the fire
                 must cover a larger surface.
-            </para> 
+            </para>
         </description>
     </spell>
 
@@ -464,15 +554,15 @@
             </para>
         </description>
     </spell>
-    
+
     <spell name="Whip of Flame" level="7" type="fire">
         <range>-5/m</range>
         <duration>Concentration</duration>
         <effect>+1 damage/1</effect>
         <resist>Soak</resist>
-        
+
         <prerequisite>Flaming Spear</prerequisite>
-        
+
         <description>
             <para>
                 Creates a whip of flame which may be used to strike as
@@ -480,7 +570,7 @@
             </para>
         </description>
     </spell>
-    
+
     <spell name="Smoke Fog" level="5" type="fire">
     </spell>
 
@@ -501,7 +591,7 @@
         <duration>Momentary</duration>
         <target>-3/extra</target>
         <effect>+1/1</effect>
-        
+
         <prerequisite>Ignite</prerequisite>
 
         <description>
@@ -519,9 +609,9 @@
         <target>-5/extra</target>
         <effect>+1/1</effect>
         <resist>Soak</resist>
-        
+
         <prerequisite>Wild Fire</prerequisite>
-        
+
         <description>
             <para>
                 Causes fires to burst in a fiery explosion which engulfs
