@@ -3,7 +3,7 @@
 <!--
     List of talents available to characters.
     
-    Version: $Revision: 1.1 $
+    Version: $Revision: 1.2 $
     Author: Samuel Penn
 -->
 
@@ -173,28 +173,49 @@
         <description>
             <para>
                 The survival skill has to be specialised in a specific
-                climatic zone - either arctic, desert, temperate or
-                tropical. With it, the character is able to find food
+                terrain type, including desert, plains, arctic, mountains,
+                woodlands, jungle, coastal and swamp.
+            </para>
+            
+            <para>
+                With it, the character is able to find food
                 and shelter, track game, and know how to travel safely
                 and quickly through that type of terrain.
             </para>
+            
+            <para>
+                <e>Foraging</e>. When foraging for food, it takes four hours
+                for each roll. Each five over the difficulty allows enough
+                food to be found for another two people. If more food is
+                found than is needed, then the forager as the option of
+                stopping early as soon as enough food has been found.
+            </para>
+            
+            <para>
+                <e>Hunting</e>. Similar to foraging, it takes four hours
+                for each attempt to hunt game.
+            </para>
+            
+            <para>
+                <e>Tracking</e>.
+            </para>
         </description>
+
+        <examples>
+            <example target="10">Find a suitable shelter</example>
+            <example target="15">Forage for food for one person</example>
+            <example target="-5">Good conditions</example>
+            <example target="+5">Poor conditions</example>
+            <example target="+15">Very poor conditions (e.g. winter)</example>
+            <example target="+20">Trying to forage in arctic or desert</example>
+            <example target="+10">Trying to forage in mountains or swamp</example>
+        </examples>
     </skill>
 
     <skill name="Swim" type="wilderness">
         <description>
             The ability to move in water without drowning or panicking.
             Basically, a waterborne version of the athletics skill.
-        </description>
-    </skill>
-
-    <skill name="Track" type="wilderness">
-        <description>
-            The ability to find, identify and follow tracks left by
-            animals and people. To follow a single person across soft terrain
-            is moderate difficulty. Muddy terrain, or a large number of people
-            or creatures makes it easier. An opposed tracking roll can be
-            used to hide tracks.
         </description>
     </skill>
 
