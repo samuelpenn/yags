@@ -113,7 +113,7 @@
     </spell>
 
     <spell name="Quicken" level="3" type="fire">
-        <prerequisite>Quicken</prerequisite>
+        <prerequisite>Alertness</prerequisite>
         <range>-5/m</range>
         <duration>Concentration</duration>
         <target>-5/extra target</target>
@@ -122,7 +122,35 @@
 
         <description>
             <para>
-                Increases movement speed of the target.
+                Increases base movement speed of the target.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Haste" level="5" type="fire">
+        <range>Self</range>
+        <duration>Concentration</duration>
+        <effect>1 + 1/10</effect>
+        <target>-20/extra person</target>
+        <resist>Ego</resist>
+
+        <prerequisite>Quicken</prerequisite>
+
+        <description>
+            <para>
+                The agility and dexterity of the wizard is increased by
+                the effect of the cantrip for its duration, with the
+                effect being split between the two as equally as possible,
+                odd points going on agility (three points of effect
+                would give +2 agility, +1 dexterity).
+            </para>
+
+            <para>
+                Whilst the cantrip is in effect, all fatigue checks are
+                at -3 per point of effect, and the chance of gaining
+                fatigue on initiative is increased by the effect. At
+                any rate, those affected gain one fatigue every minute
+                they are under the influence of the cantrip.
             </para>
         </description>
     </spell>
@@ -133,7 +161,6 @@
         <duration>Concentration</duration>
         <target>-5/extra target</target>
         <effect>+1 soak/1</effect>
-        <resist>Ego</resist>
 
         <description>
             <para>
@@ -143,33 +170,114 @@
     </spell>
 
     <spell name="Burning Motes" level="3" type="fire">
-        <prerequisite>Ignite</prerequisite>
         <range>-1/m</range>
         <duration>Momentary</duration>
-        <target>-5/target</target>
-        <effect>+1/1</effect>
+        <target>-5/extra target</target>
+        <effect>-1/1</effect>
         <resist>Stamina</resist>
+        
+        <prerequisite>Ignite</prerequisite>
 
         <description>
             <para>
                 Creates a swarm of bright burning sparks to appear around
-                the caster, and to fly towards the designated targets. Each
-                target must make a stamina roll versus the level of effect.
-                Failure leaves the target blinded and confused, giving -1
+                the caster, and to fly towards the designated targets,
+                blinding and confusing them, causing them to suffer a
+                penalty to all actions equal to the effect of the spell.
+                The motes do not exist for long, and the penalty halves
+                at the end of the following round, and vanishes completely
+                at the end of the round after that.
             </para>
 
             <para>
-                The motes also do fire damage equal to half the effect. All
-                such damage is stun damage.
+                The motes may optionally also do fire damage equal to half
+                the effect. All such damage is stun damage.
             </para>
         </description>
     </spell>
+
+    <spell name="Ring of Fire" level="5" type="fire">
+        <range>-3/m</range>
+        <duration>Concentration</duration>
+        <resist>Soak</resist>
+        <effect>+1</effect>
+        <target>-10/extra ring</target>
+
+        <prerequisite>Burning Motes</prerequisite>
+
+        <description>
+            <para>
+                Creates a ring of fire centred on the wizard with a radius
+                of the cantrip. Any who pass through the flames takes mixed
+                damage equal to the effect of the cantrip. If multiple
+                rings are created, then each is at the next multiple of
+                radius. The flames can range in height from 1m up to
+                the fire score of the wizard.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Engulf" level="7" type="fire">
+        <range>Self</range>
+        <duration>Concentration</duration>
+        <resist>Soak</resist>
+        <effect>+1</effect>
+        <target>-5/extra</target>
+
+        <prerequisite>Ring of Fire</prerequisite>
+
+        <description>
+            <para>
+                The wizard is surrounded by an aura of flame, which
+                engulfs him but does not harm him. The flames will keep
+                the wizard comfortably warm, and can be made to
+                brighten or dim at will. Each round, it acts as per
+                <e>Ignite</e> on everything the wizard touches. If
+                another creature is touched, then it does mixed damage
+                equal to the effect.
+            </para>
+
+            <para>
+                If extra targets are specified, then the wizard can
+                opt to pass the effects of the cantrip onto others
+                as they are touched, rather than burning them. They
+                will also be surrounded by the aura. As many extra
+                people as specified can be affected. All end at
+                the same time. If the target is larger than the
+                wizard, then the effect is reduced since the fire
+                must cover a larger surface.
+            </para> 
+        </description>
+    </spell>
+
+    <spell name="Body of Fire" level="9" type="fire">
+        <range>Self</range>
+        <duration>Concentration</duration>
+
+        <prerequisite>Engulf</prerequisite>
+
+        <description>
+            <para>
+                The wizard's body is changed to fire, allowing her to
+                fly, fit through narrow openings, and burn anything
+                touched. Only the wizard's body is affected, and all
+                clothes and items carried will either fall to the
+                ground or burn.
+            </para>
+
+            <para>
+                It is difficult to harm the wizard in this form, all
+                physical damage is fifthed.
+            </para>
+        </description>
+    </spell>
+
 
     <spell name="Heat" level="5" type="fire">
         <prerequisite>Warm</prerequisite>
         <range>-1/1m</range>
         <duration>Concentration</duration>
-        <target>-5/1m radius</target>
+        <area>-5/1m radius</area>
         <effect>+3C/1</effect>
         <resist>Ego</resist>
 
@@ -182,16 +290,29 @@
     </spell>
 
     <spell name="Ashen Path" level="5" type="fire">
+        <duration>Concentration</duration>
+        <range>Self</range>
+        <radius>-5/metre</radius>
+        <effect>Kill 5% of plants/1</effect>
+        
         <prerequisite>Ignite</prerequisite>
+        
         <description>
             <para>
-                Destroy plant life around the caster as he walks.
+                Destroy plant life around the caster as he walks. Plants will
+                shrivel and die by an amount each round based on the effect.
             </para>
         </description>
     </spell>
 
     <spell name="Breath of the Forge" level="7" type="fire">
+        <duration>Concentration</duration>
+        <range>-1/5m</range>
+        <resist>Soak</resist>
+        <effect>+1 mixed damage/1</effect>
+        
         <prerequisite>Heat</prerequisite>
+        
         <description>
             <para>
                 Creates an intensely hot wind which blows from the caster
@@ -201,9 +322,8 @@
         </description>
     </spell>
 
-    <spell name="Whither" level="7" type="fire">
+    <spell name="Whither" level="9" type="fire">
         <prerequisite>Ashen Path</prerequisite>
-        <prerequisite>Heat</prerequisite>
 
         <description>
             <para>
@@ -212,14 +332,37 @@
         </description>
     </spell>
 
-    <spell name="Fiery Aura" level="9" type="fire">
-        <prerequisite>Resist Fire</prerequisite>
-        <prerequisite>Burning Motes</prerequisite>
+    <spell name="Wild Fire" level="3" type="fire">
+        <range>-1/5m</range>
+        <duration>Momentary</duration>
+        <target>-3/extra</target>
+        <effect>+1/1</effect>
+        
+        <prerequisite>Ignite</prerequisite>
 
         <description>
             <para>
-                Creates a flaming aura which surrounds but does not harm
-                the caster.
+                Causes designated fires to burst and flare up randomly.
+                They may ignite nearby combustubles, and the extra light
+                will probably ruin people's night vision.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Fire Burst" level="5">
+        <range>-1/5m</range>
+        <duration>Momentary</duration>
+        <target>-5/extra</target>
+        <effect>+1/1</effect>
+        <resist>Soak</resist>
+        
+        <prerequisite>Wild Fire</prerequisite>
+        
+        <description>
+            <para>
+                Causes fires to burst in a fiery explosion which engulfs
+                one nearby target. The fire does damage as per the effect
+                of the spell.
             </para>
         </description>
     </spell>
