@@ -2,9 +2,26 @@
 
 
 <character-templates>
+    <preface>
+        <para>
+            Commoners make up the bulk of the population. They will often
+            have a small amount of training in the local militia, but
+            otherwise seek peaceful pursuits, normally farming or trading.
+        </para>
+    </preface>
 
-    <character-template name="Kotsetla (Fair)" points="13">
-        <attributes>
+    <character name="Kotsetla">
+        <description>
+            <gender>Male</gender>
+            <age>18-24</age>
+            <short>
+                A poor farmer who has to farm his lord's land to survive.
+                Kotsetla's own little, and take part in the militia only
+                when times are desperate.
+            </short>
+        </description>
+        
+        <attributes size="5" soak="12" luck="0">
             <attribute name="strength" score="3"/>
             <attribute name="stamina" score="3"/>
             <attribute name="agility" score="3"/>
@@ -15,7 +32,123 @@
             <attribute name="will" score="3"/>
         </attributes>
 
-        <skills age="16" points="13">
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="2"/>
+                <skill name="Awareness" score="2"/>
+                <skill name="Brawl" score="2"/>
+                <skill name="Charm" score="2"/>
+                <skill name="Guile" score="3"/>
+                <skill name="Sleight" score="2"/>
+                <skill name="Stealth" score="2"/>
+                <skill name="Throw" score="2"/>
+            </group>
+
+            <group name="Knowledges" type="knowledges">
+                <skill name="Speak Rornic" score="4"/>
+                <skill name="Area lore" score="2"/>
+            </group>
+
+            <group name="Combat" type="skills">
+                <skill name="Longshaft weapon" score="2"/>
+            </group>
+
+            <group name="Profession" type="skills">
+                <skill name="Farming" score="3"/>
+                <skill name="Carpentry" score="1"/>
+            </group>
+
+            <group name="Misc" type="skills">
+                <skill name="Gambling" score="2"/>
+            </group>
+        </skills>
+        
+        <passions>
+            <passion name="Bravery" score="3"/>
+            <passion name="Ego" score="3"/>
+            <passion name="Restraint" score="3"/>
+            <passion name="Temperence" score="3"/>
+        </passions>
+    </character>
+
+    <character name="Kotsetla's wife">
+        <description>
+            <gender>Female</gender>
+            <age>18-24</age>
+            <short>
+                Wife of a Kotsetla. They have little opportunity to
+                achieve much in the world.
+            </short>
+        </description>
+        
+        <attributes size="5" soak="12" luck="0">
+            <attribute name="strength" score="3"/>
+            <attribute name="stamina" score="3"/>
+            <attribute name="agility" score="3"/>
+            <attribute name="dexterity" score="3"/>
+            <attribute name="perception" score="3"/>
+            <attribute name="intelligence" score="3"/>
+            <attribute name="charisma" score="3"/>
+            <attribute name="will" score="3"/>
+        </attributes>
+
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="2"/>
+                <skill name="Awareness" score="2"/>
+                <skill name="Brawl" score="2"/>
+                <skill name="Charm" score="3"/>
+                <skill name="Guile" score="3"/>
+                <skill name="Sleight" score="2"/>
+                <skill name="Stealth" score="2"/>
+                <skill name="Throw" score="2"/>
+            </group>
+
+            <group name="Knowledges" type="knowledges">
+                <skill name="Speak Rornic" score="4"/>
+                <skill name="Area lore" score="2"/>
+                <skill name="First aid" score="2"/>
+            </group>
+
+            <group name="Profession" type="skills">
+                <skill name="Farming" score="2"/>
+                <skill name="Dairying" score="1"/>
+                <skill name="Handicraft" score="3"/>
+            </group>
+        </skills>
+        
+        <passions>
+            <passion name="Bravery" score="3"/>
+            <passion name="Ego" score="3"/>
+            <passion name="Restraint" score="3"/>
+            <passion name="Temperence" score="3"/>
+        </passions>
+    </character>
+    
+    
+
+    <character name="Ceorl">
+        <description>
+            <gender>Male</gender>
+            <age>18-24</age>
+            <short>
+                A Ceorl is a freeman. He owes loyalty to his lord in return
+                for protection, but is free to come and go as he pleases.
+            </short>
+        </description>
+        
+        <attributes size="5" soak="12">
+            <attribute name="strength" score="3"/>
+            <attribute name="stamina" score="3"/>
+            <attribute name="agility" score="3"/>
+            <attribute name="dexterity" score="3"/>
+            <attribute name="perception" score="3"/>
+            <attribute name="intelligence" score="3"/>
+            <attribute name="charisma" score="3"/>
+            <attribute name="will" score="3"/>
+        </attributes>
+
+        <skills>
             <group name="Talents" type="talents">
                 <skill name="Athletics" score="2"/>
                 <skill name="Awareness" score="2"/>
@@ -28,64 +161,16 @@
             </group>
 
             <group name="Knowledges" type="knowledges">
-                <skill name="Speak Harnic" score="4"/>
+                <skill name="Speak Rornic" score="4"/>
                 <skill name="Area lore" score="2"/>
-                <skill name="Folk lore" score="2"/>
             </group>
 
             <group name="Combat" type="skills">
-                <skill name="Longshaft weapon" score="2"/>
+                <skill name="Longshaft weapon" score="3"/>
             </group>
 
             <group name="Profession" type="skills">
                 <skill name="Farming" score="4"/>
-                <skill name="Dairying" score="1"/>
-                <skill name="Carpentry" score="1"/>
-            </group>
-
-            <group name="Misc" type="skills">
-                <skill name="Gambling" score="2"/>
-            </group>
-        </skills>
-    </character-template>
-
-
-    <character-template name="Farmer (Competent)" points="13">
-        <attributes>
-            <attribute name="strength" score="3"/>
-            <attribute name="stamina" score="3"/>
-            <attribute name="agility" score="3"/>
-            <attribute name="dexterity" score="3"/>
-            <attribute name="perception" score="3"/>
-            <attribute name="intelligence" score="3"/>
-            <attribute name="charisma" score="3"/>
-            <attribute name="will" score="3"/>
-        </attributes>
-
-        <skills age="21" points="13">
-            <group name="Talents" type="talents">
-                <skill name="Athletics" score="2"/>
-                <skill name="Awareness" score="2"/>
-                <skill name="Brawl" score="2"/>
-                <skill name="Charm" score="2"/>
-                <skill name="Guile" score="3"/>
-                <skill name="Sleight" score="2"/>
-                <skill name="Stealth" score="2"/>
-                <skill name="Throw" score="2"/>
-            </group>
-
-            <group name="Knowledges" type="knowledges">
-                <skill name="Speak Harnic" score="4"/>
-                <skill name="Area lore" score="2"/>
-                <skill name="Folk lore" score="2"/>
-            </group>
-
-            <group name="Combat" type="skills">
-                <skill name="Longshaft weapon" score="2"/>
-            </group>
-
-            <group name="Profession" type="skills">
-                <skill name="Farming" score="5"/>
                 <skill name="Dairying" score="2"/>
                 <skill name="Carpentry" score="2"/>
             </group>
@@ -96,56 +181,14 @@
                 <skill name="Survival" score="1"/>
             </group>
         </skills>
-    </character-template>
+        
+        <passions>
+            <passion name="Bravery" score="4"/>
+            <passion name="Ego" score="4"/>
+            <passion name="Restraint" score="4"/>
+            <passion name="Temperence" score="4"/>
+        </passions>
+    </character>
 
-    <character-template name="Farmer (Good)" points="13">
-        <attributes>
-            <attribute name="strength" score="3"/>
-            <attribute name="stamina" score="4"/>
-            <attribute name="agility" score="3"/>
-            <attribute name="dexterity" score="3"/>
-            <attribute name="perception" score="3"/>
-            <attribute name="intelligence" score="3"/>
-            <attribute name="charisma" score="3"/>
-            <attribute name="will" score="3"/>
-        </attributes>
-
-        <skills age="25" points="13">
-            <group name="Talents" type="talents">
-                <skill name="Athletics" score="2"/>
-                <skill name="Awareness" score="3"/>
-                <skill name="Brawl" score="2"/>
-                <skill name="Charm" score="3"/>
-                <skill name="Guile" score="3"/>
-                <skill name="Sleight" score="2"/>
-                <skill name="Stealth" score="2"/>
-                <skill name="Throw" score="2"/>
-            </group>
-
-            <group name="Knowledges" type="knowledges">
-                <skill name="Speak Harnic" score="4"/>
-                <skill name="Area lore" score="3"/>
-                <skill name="Folk lore" score="2"/>
-            </group>
-
-            <group name="Combat" type="skills">
-                <skill name="Longshaft weapon" score="2"/>
-            </group>
-
-            <group name="Profession" type="skills">
-                <skill name="Farming" score="6"/>
-                <skill name="Dairying" score="2"/>
-                <skill name="Carpentry" score="2"/>
-                <skill name="Trade" score="1"/>
-                <skill name="Thatcher" score="1"/>
-            </group>
-
-            <group name="Misc" type="skills">
-                <skill name="Gambling" score="3"/>
-                <skill name="Game (Hnefatafl)" score="2"/>
-                <skill name="Survival" score="2"/>
-            </group>
-        </skills>
-    </character-template>
 
 </character-templates>

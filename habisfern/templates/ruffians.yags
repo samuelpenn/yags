@@ -11,6 +11,96 @@
             characters often need a large population to support them.
         </para>
     </preface>
+    
+    <character name="Footpad">
+        <description>
+            <short>
+                A robber or thug who operates in or around towns, preying
+                on people at night.
+            </short>
+        </description>
+
+        <attributes size="5" soak="12">
+            <attribute name="strength" score="3"/>
+            <attribute name="stamina" score="3"/>
+            <attribute name="agility" score="3"/>
+            <attribute name="dexterity" score="3"/>
+            <attribute name="perception" score="3"/>
+            <attribute name="intelligence" score="3"/>
+            <attribute name="charisma" score="3"/>
+            <attribute name="will" score="3"/>
+        </attributes>
+        
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="2"/>
+                <skill name="Awareness" score="3"/>
+                <skill name="Brawl" score="4"/>
+                <skill name="Charm" score="2"/>
+                <skill name="Guile" score="2"/>
+                <skill name="Sleight" score="2"/>
+                <skill name="Stealth" score="3"/>
+                <skill name="Throw" score="2"/>
+            </group>
+
+            <group name="Knowledges" type="knowledges">
+                <skill name="Speak own" score="4"/>
+                <skill name="Area lore" score="4"/>
+                <skill name="Streetwise" score="2"/>
+            </group>
+
+            <group name="Combat" type="skills">
+                <skill name="Single weapon" score="2"/>
+            </group>
+
+            <group name="Misc" type="skills">
+                <skill name="Intimidation" score="4"/>
+            </group>
+        </skills>
+
+        <passions>
+            <passion name="Bravery" score="4"/>
+            <passion name="Ego" score="4"/>
+            <passion name="Restraint" score="3"/>
+            <passion name="Temperence" score="3"/>
+        </passions>
+
+        <combat href="/usr/share/web/xml/yags/core/arms.yags">
+            <combatstyle style="Brawl" skill="Brawl">
+                <primary>Fist</primary>
+                <initiative attribute="agility"/>
+                <attack attribute="agility"/>
+                <defence attribute="agility"/>
+                <damage type="stun"/>
+            </combatstyle>
+
+            <combatstyle style="Dagger" skill="Brawl">
+                <primary>Dagger</primary>
+                <initiative attribute="agility"/>
+                <attack attribute="dexterity"/>
+                <defence attribute="dexterity"/>
+                <damage type="mixed"/>
+            </combatstyle>
+
+            <combatstyle style="Club" skill="Brawl">
+                <primary>Club</primary>
+                <initiative attribute="agility"/>
+                <attack attribute="dexterity"/>
+                <defence attribute="dexterity"/>
+                <damage type="mixed"/>
+            </combatstyle>
+
+            <armourstyle style="Leather">
+                <armour name="Soft leather jacket"/>
+                <armour name="Soft leather trousers"/>
+            </armourstyle>
+        </combat>
+        
+        <equipment>
+            <item name="Dagger"/>
+            <item name="Club"/>
+        </equipment>
+    </character>
 
     <character name="Thug (Average)">
         <description>
