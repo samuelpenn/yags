@@ -3,7 +3,7 @@
 
 <character-templates>
 
-    <character-template name="Bandit" points="5">
+    <character-template name="Bandit" points="8">
         <description>
             <background>
                 <para>
@@ -26,17 +26,18 @@
             <attribute name="will" score="3"/>
         </attributes>
 
-        <advantages>
-            <advantage name="Social class (outlaw)" cost="-6"/>
+        <advantages points="-3">
+            <advantage name="Attributes" cost="+3"/>
+            <advantage name="Social class (Outlaw)" cost="-6"/>
         </advantages>
 
-        <skills age="20">
+        <skills age="20" points="63">
             <group name="Talents" type="talents">
-                <skill name="Athletics" score="2"/>
+                <skill name="Athletics" score="3"/>
                 <skill name="Awareness" score="3"/>
-                <skill name="Brawl" score="2"/>
+                <skill name="Brawl" score="4"/>
                 <skill name="Charm" score="2"/>
-                <skill name="Guile" score="2"/>
+                <skill name="Guile" score="3"/>
                 <skill name="Sleight" score="2"/>
                 <skill name="Stealth" score="4"/>
                 <skill name="Throw" score="2"/>
@@ -54,19 +55,20 @@
             </group>
 
             <group name="Misc" type="skills">
-                <skill name="Survival" score="3"/>
+                <skill name="Survival" score="4"/>
                 <skill name="First aid" score="2"/>
             </group>
         </skills>
 
         <equipment>
-            <item name="short sword"/>
-            <item name="bow"/>
-            <item name="quiver and 20 arrows"/>
-            <item name="round shield"/>
-            <item name="leather armour"/>
-            <item name="dagger"/>
-            <cash value="10d"/>
+            <item name="Short sword"/>
+            <item name="Long bow"/>
+            <item name="Quiver and 20 arrows"/>
+            <item name="Round shield"/>
+            <item name="Soft leather jacket"/>
+            <item name="Soft leather trousers"/>
+            <item name="Dagger"/>
+            <cash value="12d"/>
         </equipment>
 
     </character-template>
@@ -100,26 +102,26 @@
             <attribute name="agility" score="4"/>
             <attribute name="dexterity" score="4"/>
             <attribute name="perception" score="3"/>
-            <attribute name="intelligence" score="3"/>
+            <attribute name="intelligence" score="2"/>
             <attribute name="charisma" score="2"/>
             <attribute name="will" score="3"/>
         </attributes>
 
-        <advantages points="16">
-            <advantage name="Social class (freeman)"/>
+        <advantages points="10">
+            <advantage name="Attributes" cost="15"/>
+            <advantage name="Social class (Freeman)" cost="+0"/>
             <advantage name="Combat reflexes" score="+4" cost="+6"/>
             <advantage name="Situational awareness" score="+3" cost="+3"/>
 
-            <advantage name="Body guard's code of honour" cost="-5"/>
-            <advantage name="Honesty" cost="-4"/>
+            <advantage name="Code of honour (Body guard's)" cost="-5"/>
         </advantages>
 
-        <skills age="25">
+        <skills age="25" points="45">
             <group name="Talents" type="talents">
-                <skill name="Athletics" score="3"/>
-                <skill name="Awareness" score="4"/>
-                <skill name="Brawl" score="4"/>
-                <skill name="Charm" score="3"/>
+                <skill name="Athletics" score="2"/>
+                <skill name="Awareness" score="5"/>
+                <skill name="Brawl" score="5"/>
+                <skill name="Charm" score="2"/>
                 <skill name="Guile" score="2"/>
                 <skill name="Sleight" score="2"/>
                 <skill name="Stealth" score="2"/>
@@ -228,7 +230,7 @@
 
 
 
-    <character-template name="Caravan Guard" points="+6">
+    <character-template name="Caravan Guard" points="6">
         <description>
             <background>
                 <para>
@@ -299,7 +301,7 @@
 
 
     <!-- One of the holy fighting orders of the church of Agrik -->
-    <character-template name="Company of the Copper Hook">
+    <character-template name="Company of the Copper Hook" points="10">
         <description>
             <background>
                 <para>
@@ -574,29 +576,31 @@
 
 
 
-    <character-template name="Landless Knight">
+    <character-template name="Landless Knight" points="12">
         <description>
             <background>
                 <para>
-                There are plenty of noble sons who are unlikely to inherit
-                anything capable of supporting them, either through general
-                poverty, or simply because they are the fifth or sixth son.
-                Such nobles face a choice of going into the church, or
-                becoming a wandering knight, looking for employment, fame
-                and fortune.
+                    There are plenty of noble sons who are unlikely to
+                    inherit anything capable of supporting them, either
+                    through general poverty, or simply because they are
+                    the fifth or sixth son. Such nobles face a choice of
+                    going into the church, or becoming a wandering knight,
+                    looking for employment, fame and fortune.
                 </para>
+                
                 <para>
-                Such knights do not see themselves as mercenaries, though
-                the road they take is very similar to that profession. They
-                believe they fight for ideals, though cash in hand, a warm
-                meal and a roof over their head will do in a pinch.
+                    Such knights do not see themselves as mercenaries,
+                    though the road they take is very similar to that
+                    profession. They believe they fight for ideals,
+                    though cash in hand, a warm meal and a roof over
+                    their head will do in a pinch.
                 </para>
             </background>
         </description>
 
-        <attributes points="48">
+        <attributes>
             <attribute name="strength" score="4"/>
-            <attribute name="stamina" score="4"/>
+            <attribute name="stamina" score="3"/>
             <attribute name="agility" score="3"/>
             <attribute name="dexterity" score="4"/>
             <attribute name="perception" score="2"/>
@@ -605,72 +609,55 @@
             <attribute name="will" score="2"/>
         </attributes>
 
-        <advantages points="11">
-            <advantage name="attributes" cost="+6"/>
-            <advantage name="social status (noble)" cost="+3"/>
-            <advantage name="hardy convalescence" score="+3" cost="+2"/>
+        <advantages point="+2">
+            <advantage name="Attributes" cost="+6"/>
+            <advantage name="Social status (Landless noble)" cost="+3"/>
 
-            <advantage name="code of honour (warriors)" cost="-5"/>
-            <advantage name="big mouth" score="-4" cost="-4"/>
-            <advantage name="vow (chastity before marriage)" cost="-2"/>
+            <advantage name="Code of honour (Warrior's)" cost="-5"/>
+            <advantage name="Vow (chastity)" cost="-2"/>
         </advantages>
 
-        <skills>
+        <skills age="21" point="63">
             <group name="Talents" type="talents">
                 <skill name="Athletics" score="3"/>
                 <skill name="Awareness" score="2"/>
-                <skill name="Brawl" score="3"/>
-                <skill name="Charm" score="2"/>
+                <skill name="Brawl" score="4"/>
+                <skill name="Charm" score="3"/>
                 <skill name="Guile" score="2"/>
-                <skill name="Sleight" score="1"/>
-                <skill name="Stealth" score="1"/>
-                <skill name="Throw" score="1"/>
+                <skill name="Sleight" score="2"/>
+                <skill name="Stealth" score="2"/>
+                <skill name="Throw" score="2"/>
             </group>
 
-            <group name="Common Knowledges" type="knowledges">
+            <group name="Knowledges" type="knowledges">
                 <skill name="Area lore" score="2"/>
                 <skill name="Folk lore" score="2"/>
-                <skill name="Speak own" score="4"/>
+                <skill name="Speak Harnic" score="4"/>
+                <skill name="Religion (Larani)" score="2"/>
             </group>
-        </skills>
-
-        <skills age="16">
+            
+            <group name="Combat" type="skills">
+                <skill name="Battle" score="2"/>
+                <skill name="Weapon and shield" score="5"/>
+            </group>
+            
             <group name="Misc" type="skills">
-                <skill name="Weapon and shield" score="4"/>
                 <skill name="Ride" score="4"/>
                 <skill name="Survival" score="2"/>
-                <skill name="Etiquette" score="3"/>
-                <skill name="First aid" score="1"/>
-            </group>
-        </skills>
-
-        <skills age="21">
-            <group name="Misc" type="Skills">
-                <skill name="Weapon and shield" score="5"/>
-                <skill name="First aid" score="2"/>
-                <skill name="Battle" score="2"/>
-            </group>
-        </skills>
-
-        <skills age="25">
-            <group name="Talents" type="talents">
-                <skill name="Stealth" score="2"/>
-                <skill name="Awareness" score="3"/>
-            </group>
-
-            <group name="Misc" type="Skills">
-                <skill name="Battle" score="3"/>
+                <skill name="Etiquette" score="4"/>
+                <skill name="First aid" score="2"/>60
+                <skill name="Heraldry" score="2"/>
             </group>
         </skills>
 
         <equipment>
-            <item name="dagger"/>
-            <item name="broad sword"/>
-            <item name="half chain"/>
-            <item name="helm"/>
-            <item name="round shield"/>
-            <item name="light warhorse"/>
-            <cash value="12d"/>
+            <item name="Dagger"/>
+            <item name="Broad sword"/>
+            <item name="Chain habergeon"/>
+            <item name="Metal helm"/>
+            <item name="Knight's shield"/>
+            <item name="Light warhorse"/>
+            <cash value="40d"/>
         </equipment>
     </character-template>
 

@@ -1,235 +1,186 @@
 <?xml version="1.0"?>
 <character-templates>
 
-<character-template name="Shek-Pvar Mavari">
+    <character-template name="Satia Mavari" points="12">
 
-    <description>
-		<background>
-			<para>
-			A player character Shek-Pvar starts with the following
-			character template. Since training is pretty standard
-			across all convocations and chantries, all Shek-Pvar
-			start with the same package of skills.
-			</para>
-			<para>
-			The youngest age is normally 21. A Shek-Pvar must
-			take the status advantage, as well as literacy. They
-			must also take a duty (the Pvaric code) as a
-			disadvantage.
-			</para>
-			<para>
-			For starting characters, spells may be purchased at a
-			cost of one experience point per point of skill, so a
-			skill of 4 in a spell, costs only 4 points (rather than
-			10 points).
-			</para>
-		</background>
-    </description>
+        <description>
+            <background>
+                <para>
+                    A Satia Mavari is a journeyman wizard. Having just
+                    finished their apprenticeship (which lasts from five
+                    to seven years), they are sent out into the world for
+                    at least a year, to cope and learn by themselves.
+                </para>
+                
+                <para>
+                    A Satia Mavari who spends more time before entering
+                    play on learning spells, may gain 5 experience each
+                    year, instead of the normal two. This is because of the
+                    intensive training that they receive.
+                </para>
+            </background>
+        </description>
 
-	<attributes points="48">
-		<attribute name="strength" score="2" weight="1"/>
-		<attribute name="stamina" score="4" weight="6"/>
-		<attribute name="agility" score="2" weight="1"/>
-		<attribute name="dexterity" score="2" weight="1"/>
-		<attribute name="perception" score="3" weight="3"/>
-		<attribute name="intelligence" score="5" weight="9"/>
-		<attribute name="charisma" score="3" weight="3"/>
-		<attribute name="will" score="4" weight="6"/>
-	</attributes>
+        <attributes>
+            <attribute name="strength" score="3"/>
+            <attribute name="stamina" score="3"/>
+            <attribute name="agility" score="2"/>
+            <attribute name="dexterity" score="3"/>
+            <attribute name="perception" score="3"/>
+            <attribute name="intelligence" score="4"/>
+            <attribute name="charisma" score="2"/>
+            <attribute name="will" score="4"/>
+        </attributes>
 
-	<advantages points="18">
-		<advantage name="attributes" cost="+8"/>
-		<advantage name="literate" cost="+2"/>
-		<advantage name="social status" cost="+1"/>
-		<advantage name="experience" score="10pts" cost="+5"/>
-		<advantage name="duty (Pvaric code)" cost="-4"/>
-		<advantage name="animal enmity" cost="-2"/>
-	</advantages>
+        <advantages points="10">
+            <advantage name="Attributes" cost="+6"/>
+            <advantage name="Literate" cost="+2"/>
+            <advantage name="Social status (Shek-Pvar)" cost="+1"/>
+            <advantage name="Intensive training (spells)" cost="+5"/>
+            <advantage name="Duty (Pvaric code)" cost="-4"/>
+        </advantages>
 
-	<skills>
-		<group name="Talents" type="talents">
-			<skill name="Athletics" score="1" weight="1"/>
-			<skill name="Awareness" score="3" weight="6"/>
-			<skill name="Brawl" score="1" weight="1"/>
-			<skill name="Charm" score="1" weight="1"/>
-			<skill name="Guile" score="3" weight="6"/>
-			<skill name="Sleight" score="2" weight="3"/>
-			<skill name="Stealth" score="2" weight="3"/>
-			<skill name="Throw" score="2" weight="3"/>
-		</group>
+        <skills age="21" points="67">
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="2"/>
+                <skill name="Awareness" score="2"/>
+                <skill name="Brawl" score="2"/>
+                <skill name="Charm" score="2"/>
+                <skill name="Guile" score="2"/>
+                <skill name="Sleight" score="2"/>
+                <skill name="Stealth" score="2"/>
+                <skill name="Throw" score="2"/>
+            </group>
 
-		<group name="Common Knowledges" type="knowledges">
-			<skill name="Area lore" score="2" weight="1"/>
-			<skill name="Folk lore" score="2" weight="1"/>
-			<skill name="Speak own" score="4" weight="0"/>
-			<skill name="Scribe own" score="4" weight="0"/>
-		</group>
-	</skills>
+            <group name="Knowledges" type="knowledges" points="18">
+                <skill name="Harn lore" score="3"/>
+                <skill name="Speak Harnic" score="4"/>
+                <skill name="Scribe Lakise" score="4"/>
+                <skill name="Pvaric Lore" score="4"/>
+                <skill name="Religion" score="2"/>
+                <skill name="Astrology" score="1"/>
+                <skill name="Earthmaster Lore" score="1"/>
+            </group>
+            
+            <group name="Convocations" type="convocations" points="25">
+                <skill name="Primary convocation" score="5"/>
+                <skill name="Neutral convocation" score="4"/>
+            </group>
 
-	<skills age="16">
-		<group name="Misc" type="skills">
-			<skill name="Pvaric Lore" score="4" weight="9"/>
-			<skill name="Astrology" score="2" weight="3"/>
-		</group>
+            <group name="Neutral" type="spells" points="12">
+                <skill name="Dispel" score="2"/>
+                <skill name="Open" score="2"/>
+                <skill name="Close" score="2"/>
+                <skill name="Store" score="2"/>
+            </group>
+            
+            <group name="Common" type="spells" points="20">
+                <skill name="Attune" score="4"/>
+                <skill name="Focus" score="4"/>
+            </group>
+            
+            <group name="Primary" type="spells" points="32">
+                <skill name="Spell I" score="4"/>
+                <skill name="Spell II" score="4"/>
+                <skill name="Spell III" score="3"/>
+                <skill name="Spell IV" score="3"/>
+            </group>
+        </skills>
 
-		<group name="Convocations" type="convocations">
-			<skill name="Primary convocation" score="4"/>
-			<skill name="Neutral convocation" score="3"/>
-		</group>
+        <equipment>
+            <item name="12d"/>
+            <item name="Knife"/>
+        </equipment>
+    </character-template>
 
-		<group name="Neutral" type="spells">
-			<skill name="Dispel" score="2"/>
-		</group>
+    <character-template name="Sindarin Shek-Pvar">
 
-		<group name="Primary" type="spells">
-			<skill name="Attune (Primary)" score="2"/>
-			<skill name="Spell I" score="2"/>
-			<skill name="Spell II" score="2"/>
-			<skill name="Spell III" score="2"/>
-			<skill name="Spell IV" score="1"/>
-		</group>
-	</skills>
+        <description>
+            <background>
+                <para>
+                The majority of Sindarin are attuned to Fyvria as
+                their primary convocation - enough so that it can
+                be assumed that all player character Sindarin will
+                be Fyvrian.
+                </para>
+                <para>
+                For starting characters, spells may be purchased at a
+                cost of one experience point per point of skill, so a
+                skill of 4 in a spell, costs only 4 points (rather than
+                10 points).
+                </para>
+            </background>
+        </description>
 
-	<skills age="21">
-        <group name="Primary" type="spells">
-			<skill name="Spell I" score="4"/>
-			<skill name="Spell II" score="4"/>
-			<skill name="Spell III" score="3"/>
-			<skill name="Spell IV" score="2"/>
-			<skill name="Focus (Primary)" score="1"/>
-		</group>
+        <attributes points="48">
+            <attribute name="strength" score="2" weight="1"/>
+            <attribute name="stamina" score="3" weight="3"/>
+            <attribute name="agility" score="3" weight="1"/>
+            <attribute name="dexterity" score="3" weight="3"/>
+            <attribute name="perception" score="3" weight="3"/>
+            <attribute name="intelligence" score="4" weight="9"/>
+            <attribute name="charisma" score="2" weight="3"/>
+            <attribute name="will" score="4" weight="6"/>
+        </attributes>
 
-		<group name="Neutral" type="spells">
-			<skill name="Open" score="1"/>
-			<skill name="Close" score="1"/>
-			<skill name="Store" score="1"/>
-        </group>
-	</skills>
+        <advantages points="14">
+            <advantage name="attributes" cost="+2"/>
+            <advantage name="literate" cost="+2"/>
+            <advantage name="Sindarin"/>
+        </advantages>
 
-	<skills age="25">
-		<group name="Convocations" type="convocations">
-			<skill name="Primary convocation" score="5"/>
-		</group>
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="2" weight="1"/>
+                <skill name="Awareness" score="4" weight="1"/>
+                <skill name="Brawl" score="2" weight="1"/>
+                <skill name="Charm" score="2" weight="1"/>
+                <skill name="Guile" score="2" weight="1"/>
+                <skill name="Sleight" score="2" weight="1"/>
+                <skill name="Stealth" score="2" weight="1"/>
+                <skill name="Throw" score="2" weight="1"/>
+            </group>
 
-		<group name="Primary" type="spells">
-			<skill name="Spell I" score="5"/>
-			<skill name="Spell II" score="5"/>
-			<skill name="Spell III" score="4"/>
-		</group>
-	</skills>
+            <group name="Common Knowledges" type="knowledges">
+                <skill name="Area lore (Evael)" score="3" weight="3"/>
+                <skill name="Folk lore (Sindarin)" score="4" weight="1"/>
+                <skill name="Speak Sindarin" score="4" weight="0"/>
+                <skill name="Scribe Selenian" score="4" weight="0"/>
+                <skill name="Speak Harnic" score="4" weight="0"/>
+            </group>
+        </skills>
 
-	<skills age="30">
-		<group name="Convocations" type="convocations">
-			<skill name="Neutral convocation" score="4"/>
-		</group>
+        <skills age="50+">
+            <group name="Misc" type="skills">
+                <skill name="Bow" score="2"/>
+                <skill name="Herb lore" score="3"/>
+                <skill name="Poetry" score="3"/>
+                <skill name="Survival" score="2"/>
+                <skill name="Pvaric lore" score="5"/>
+            </group>
 
-		<group name="Primary" type="spells">
-			<skill name="Attune" score="4"/>
-			<skill name="Focus" score="2"/>
-		</group>
+            <group name="Convocations" type="convocations">
+                <skill name="Fyvria" score="5"/>
+                <skill name="Neutral" score="4"/>
+            </group>
 
-		<group name="Neutral" type="spells">
-			<skill name="Store" score="2"/>
-		</group>
-	</skills>
+            <group name="Neutral" type="spells">
+                <skill name="Dispel" score="2"/>
+            </group>
 
-	<equipment>
-		<item name="12d"/>
-		<item name="Knife"/>
-	</equipment>
-</character-template>
+            <group name="Fyvria" type="spells">
+                <skill name="Attune (Fyvria)" score="2"/>
+                <skill name="Spell I" score="4"/>
+                <skill name="Spell II" score="4"/>
+                <skill name="Spell III" score="3"/>
+                <skill name="Spell IV" score="3"/>
+            </group>
+        </skills>
 
-<character-template name="Sindarin Shek-Pvar">
-
-    <description>
-		<background>
-			<para>
-			The majority of Sindarin are attuned to Fyvria as
-			their primary convocation - enough so that it can
-			be assumed that all player character Sindarin will
-			be Fyvrian.
-			</para>
-			<para>
-			For starting characters, spells may be purchased at a
-			cost of one experience point per point of skill, so a
-			skill of 4 in a spell, costs only 4 points (rather than
-			10 points).
-			</para>
-		</background>
-    </description>
-
-	<attributes points="48">
-		<attribute name="strength" score="2" weight="1"/>
-		<attribute name="stamina" score="3" weight="3"/>
-		<attribute name="agility" score="3" weight="1"/>
-		<attribute name="dexterity" score="3" weight="3"/>
-		<attribute name="perception" score="3" weight="3"/>
-		<attribute name="intelligence" score="4" weight="9"/>
-		<attribute name="charisma" score="2" weight="3"/>
-		<attribute name="will" score="4" weight="6"/>
-	</attributes>
-
-	<advantages points="14">
-		<advantage name="attributes" cost="+2"/>
-		<advantage name="literate" cost="+2"/>
-		<advantage name="Sindarin"/>
-	</advantages>
-
-	<skills>
-		<group name="Talents" type="talents">
-			<skill name="Athletics" score="2" weight="1"/>
-			<skill name="Awareness" score="4" weight="1"/>
-			<skill name="Brawl" score="2" weight="1"/>
-			<skill name="Charm" score="2" weight="1"/>
-			<skill name="Guile" score="2" weight="1"/>
-			<skill name="Sleight" score="2" weight="1"/>
-			<skill name="Stealth" score="2" weight="1"/>
-			<skill name="Throw" score="2" weight="1"/>
-		</group>
-
-		<group name="Common Knowledges" type="knowledges">
-			<skill name="Area lore (Evael)" score="3" weight="3"/>
-			<skill name="Folk lore (Sindarin)" score="4" weight="1"/>
-			<skill name="Speak Sindarin" score="4" weight="0"/>
-			<skill name="Scribe Selenian" score="4" weight="0"/>
-			<skill name="Speak Harnic" score="4" weight="0"/>
-		</group>
-	</skills>
-
-	<skills age="50+">
-		<group name="Misc" type="skills">
-			<skill name="Bow" score="2"/>
-			<skill name="Herb lore" score="3"/>
-			<skill name="Poetry" score="3"/>
-			<skill name="Survival" score="2"/>
-			<skill name="Pvaric lore" score="5"/>
-		</group>
-
-		<group name="Convocations" type="convocations">
-			<skill name="Fyvria" score="5"/>
-			<skill name="Neutral" score="4"/>
-		</group>
-
-		<group name="Neutral" type="spells">
-			<skill name="Dispel" score="2"/>
-		</group>
-
-		<group name="Fyvria" type="spells">
-			<skill name="Attune (Fyvria)" score="2"/>
-			<skill name="Spell I" score="4"/>
-			<skill name="Spell II" score="4"/>
-			<skill name="Spell III" score="3"/>
-			<skill name="Spell IV" score="3"/>
-		</group>
-	</skills>
-
-	<equipment>
-		<item name="Bow"/>
-		<item name="Knife"/>
-	</equipment>
-</character-template>
-
-
-
+        <equipment>
+            <item name="Bow"/>
+            <item name="Knife"/>
+        </equipment>
+    </character-template>
 
 </character-templates>
