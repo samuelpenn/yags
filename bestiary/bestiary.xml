@@ -1,36 +1,67 @@
 <?xml version="1.0"?>
-
+<?xml-stylesheet href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl" type="text/xsl"?>
 
 <article>
     <header>
         <title>Bestiary</title>
         <tagline>Yags 0.7</tagline>
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@bifrost.demon.co.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2002-09-09 15:21:53 $</date>
+        </cvsinfo>
+
+        <license>
+            <year>2002</year>
+            <holder>Samuel Penn</holder>
+            <url>http://www.bifrost.demon.co.uk/comp/yagsbook/fdl.html</url>
+            <text>
+                Permission is granted to copy, distribute and/or
+                modify this document under the terms of the GNU
+                Free Documentation License, Version 1.1 or any
+                later version published by the Free Software
+                Foundation; with no invariant sections, with no
+                Front-Cover Texts, and with no Back-Cover Texts.
+                A copy of the license is included in the section
+                entitled "GNU Free Documentation License".
+            </text>
+        </license>
+
+        <style name="combat"/>
     </header>
     
     
     <body>
         <sect1>
             <title>Bestiary</title>
+            
+            <para>
+                A bestiary is a book describing beasts.
+            </para>
         </sect1>
-        
-        
+
+
         <sect1>
-            <title>What does it all mean?</title>
+            <title>Creature Statistics</title>
             
             <para>
                 Meanings for some of the attributes.
             </para>
-            
+
             <sect2>
                 <title>Size</title>
-                
+
                 <para>
                     The size rating of a creature gives a rough indication
                     of how big it is. An average adult human is considered
                     to be size five - and very few adult humans will
                     differ from this norm.
                 </para>
-                
+
                 <para>
                     The smallest possible size is zero - about the size
                     of a robin or similar bird - something that fits
@@ -39,19 +70,19 @@
                     There is no upper limit on size, and scaling is non
                     linear.
                 </para>
-                
+
                 <para>
                     In game terms, a creature's size directly affects how
                     many body levels it has, and also affects some combat
                     statistics.
                 </para>
-                
+
                 <para>
                     Size ranges are classified according to the following
                     chart. The descriptive names simply give an indication
                     of the rough size of the beast.
                 </para>
-                
+
                 <targetlist targetFirst="true" bold="true">
                     <targetLabel>Size</targetLabel>
                     <valueLabel>Description</valueLabel>
@@ -125,8 +156,93 @@
             </para>
             
             <sect2>
-                <title>Multiple Attacks</title>
+                <title>Base Soak</title>
                 
+                <para>
+                    By default, all medium sized creatures have a
+                    basic soak of 12. Larger or smaller creatures
+                    can change this however. A huge creature may not
+                    be totally immune to damage from normal sized
+                    weapons, but they may be too small to do anything
+                    other than superficial cuts, which aren't worth
+                    even a single wound level.
+                </para>
+                
+                <targetlist bold="true">
+                    <targetLabel>Soak</targetLabel>
+                    <valueLabel>Creature Size</valueLabel>
+
+                    <entry target="3" value="Diminutive"/>
+                    <entry target="6" value="Tiny"/>
+                    <entry target="9" value="Small"/>
+                    <entry target="12" value="Medium"/>
+                    <entry target="15" value="Large"/>
+                    <entry target="20" value="Huge"/>
+                    <entry target="25" value="Enormous"/>
+                    <entry target="30" value="Gigantic"/>
+                    <entry target="40" value="Colossal"/>
+                    <entry target="50" value="Titanic"/>
+                </targetlist>
+                
+                <para>
+                    Large creatures will tend to have strengths of
+                    a suitable value in order to injure creatrures
+                    of a similar size.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Natural Armour</title>
+
+                <para>
+                    Some creatures, especially the larger ones,
+                    will have natural armour which helps them soak
+                    damage. Natural armour ranges in protection
+                    from +0 up to +9, though a creature may have
+                    more than one type of natural armour, all of
+                    which will stack. For example, a bear has both
+                    thick fur and a tough hide.
+                </para>
+
+                <targetlist targetFirst="true" bold="true">
+                    <title>Examples of Hide Armour</title>
+
+                    <targetLabel>Soak</targetLabel>
+                    <valueLabel>Description</valueLabel>
+
+                    <entry target="0-2" value="Thin">
+                    </entry>
+
+                    <entry target="3-5" value="Medium">
+                    </entry>
+                    <entry target="6-7" value="Thick">
+                    </entry>
+                    <entry target="8-9" value="Very thick">
+                    </entry>
+                </targetlist>
+
+                <targetlist targetFirst="true" bold="true">
+                    <title>Examples of Fur Armour</title>
+
+                    <targetLabel>Soak</targetLabel>
+                    <valueLabel>Description</valueLabel>
+
+                    <entry target="0-2" value="Thin">
+                    </entry>
+
+                    <entry target="3-5" value="Medium">
+                    </entry>
+                    <entry target="6-7" value="Thick">
+                    </entry>
+                    <entry target="8-9" value="Very thick">
+                    </entry>
+                </targetlist>
+
+            </sect2>
+            
+            <sect2>
+                <title>Multiple Attacks</title>
+
                 <para>
                     It is normal in Yags for creatures to be only able
                     to make a single attack in a round. In most cases
@@ -135,7 +251,7 @@
                     with its teeth and claws, but these are counted as
                     a single attack, directed at a single target.
                 </para>
-                
+
                 <para>
                     Some creatures may have several options open to them.
                     An eagle could bite someone annoying it. It could
@@ -167,7 +283,7 @@
                 
                 <sect3>
                     <title>Area attacks</title>
-                    
+
                     <para>
                         An area attack is directed at a single area, and
                         any targets within that area are affected. Tail
@@ -176,11 +292,21 @@
                         creature. Generally, only huge creatures
                         or bigger can make an area attack.
                     </para>
+                    
+                    <para>
+                        When a beast makes an area attack, all people
+                        in the area are potential targets. The beast
+                        makes a single attack roll, which everyone gets
+                        to defend against. Those that succeed fend off,
+                        or dodge, the attack. Anyone who is hit takes
+                        damage - in each case a seperate damage roll
+                        is made.
+                    </para>
                 </sect3>
             </sect2>
-            
+
         </sect1>
-    
+
     </body>
-    
-</article>#ÿ
+</article>
+
