@@ -4,8 +4,8 @@
 <!--
     List of low tech weapons and armour for Yags.
 
-    Version: $Revision: 1.12 $
-    Date:    $Date: 2005-01-15 14:27:04 $
+    Version: $Revision: 1.13 $
+    Date:    $Date: 2005-02-26 23:05:03 $
  -->
 <equipment>
     <weaponlist>
@@ -44,7 +44,7 @@
             <strength>1</strength>
             <load>1</load>
             <reach>1</reach>
-            
+
             <properties>
                 <heavy/>
                 <throwable/>
@@ -73,7 +73,7 @@
             <strength>3</strength>
             <load>3</load>
             <reach>3</reach>
-            
+
             <properties>
                 <heavy/>
                 <impaling/>
@@ -157,7 +157,7 @@
             <strength>1</strength>
             <load>1</load>
             <reach>1</reach>
-            
+
             <properties>
                 <impaling/>
                 <light/>
@@ -179,7 +179,7 @@
             <strength>0</strength>
             <load>0</load>
             <reach>0</reach>
-            
+
             <properties>
                 <light/>
             </properties>
@@ -237,7 +237,7 @@
             <strength>4</strength>
             <load>4</load>
             <reach>4</reach>
-            
+
             <properties>
                 <twohanded/>
                 <thrusting/>
@@ -267,7 +267,7 @@
             <strength>3</strength>
             <load>4</load>
             <reach>3</reach>
-            
+
             <properties>
             </properties>
         </weapon>
@@ -297,7 +297,7 @@
             <load>6</load>
             <reach>5</reach>
             <weight>1.5</weight>
-            
+
             <properties>
                 <twohanded/>
                 <heavy/>
@@ -322,7 +322,7 @@
             <load>0.5</load>
             <reach>0</reach>
             <weight>0.25</weight>
-            
+
             <properties>
                 <light/>
                 <throwable/>
@@ -395,7 +395,7 @@
             <load>2</load>
             <reach>5</reach>
             <weight>2</weight>
-            
+
             <properties>
                 <twohanded/>
             </properties>
@@ -640,7 +640,7 @@
             <strength>2</strength>
             <load>1</load>
             <reach>1</reach>
-            
+
             <properties>
                 <missile/>
                 <heavy/>
@@ -675,7 +675,7 @@
             <load>1</load>
             <reach>0</reach>
             <weight>1</weight>
-            
+
             <properties>
                 <missile/>
                 <impaling/>
@@ -712,7 +712,7 @@
             <load>2</load>
             <reach>0</reach>
             <weight>1</weight>
-            
+
             <properties>
                 <missile/>
                 <impaling/>
@@ -740,7 +740,7 @@
             <load>0.25</load>
             <reach>0</reach>
             <weight>0.25</weight>
-            
+
             <properties>
                 <missile/>
                 <weak/>
@@ -768,7 +768,7 @@
             <load>0</load>
             <reach>0</reach>
             <weight>0.1</weight>
-            
+
             <properties>
                 <missile/>
                 <light/>
@@ -796,7 +796,7 @@
             <load>2</load>
             <reach>4</reach>
             <weight>0.5</weight>
-            
+
             <properties>
                 <missile/>
                 <impaling/>
@@ -824,7 +824,7 @@
             <strength>2</strength>
             <load>2</load>
             <reach>0</reach>
-            
+
             <properties>
                 <missile/>
                 <impaling/>
@@ -851,7 +851,7 @@
             <strength>3</strength>
             <load>3</load>
             <reach>0</reach>
-            
+
             <properties>
                 <missile/>
                 <impaling/>
@@ -879,7 +879,7 @@
             <strength>3</strength>
             <load>4</load>
             <reach>0</reach>
-            
+
             <properties>
                 <missile/>
                 <impaling/>
@@ -890,6 +890,20 @@
 
     <!--
         List of available armour.
+
+        Armour elements have the following meanings:
+        @name:          Unique name of this type of armour.
+        description:    Text description, para block elements.
+        protection:     Soak bonus gained through wearing this armour.
+        load:           Encumbrance added to load of character.
+        weight:         Actual physical weight, in kg.
+        properties/
+            restrictive Maximum agility when being athletic.
+            light       Light armour, not good v heavy weapons.
+            heavy       Heavy armour, very good v light weapons.
+            soft        Soft armour, double protection v stun weapons.
+            mail        Half protection v piercing weapons.
+            noisy       Maximum agility when trying to be quiet.
      -->
     <armourlist>
         <armour name="Quilted jacket">
@@ -901,20 +915,17 @@
                     and never worn by real warriors.
                 </para>
             </description>
-            
+
             <protection>+3</protection>
             <load>0.5</load>
             <weight>1</weight>
-            
-            <athletics>0.5</athletics>
-            <stealth>0</stealth>
-            
+
             <properties>
                 <light/>
                 <soft/>
             </properties>
         </armour>
-        
+
         <armour name="Quilted hauberk">
             <description>
                 <para>
@@ -925,15 +936,13 @@
                     better padding.
                 </para>
             </description>
-            
+
             <protection>+4</protection>
             <load>0.5</load>
             <weight>1</weight>
-            
-            <athletics>0.75</athletics>
-            <stealth>0</stealth>
-            
+
             <properties>
+                <restrictive score="4"/>
                 <light/>
                 <soft/>
             </properties>
@@ -943,10 +952,10 @@
             <protection>+2</protection>
             <load>0.25</load>
             <weight>0.5</weight>
-            
-            <athletics>0.25</athletics>
-            <stealth>0</stealth>
-            
+
+            <athletics/>
+            <stealth/>
+
             <properties>
                 <light/>
                 <soft/>
@@ -957,11 +966,12 @@
             <protection>+1</protection>
             <load>0.5</load>
             <weight>0.5</weight>
-            
+
             <athletics>0.25</athletics>
             <stealth>0</stealth>
-            
+
             <properties>
+                <restrictive score="3"/>
                 <light/>
                 <soft/>
             </properties>
@@ -971,12 +981,12 @@
             <protection>+1</protection>
             <load>0.5</load>
             <weight>0.5</weight>
-            
+
             <athletics>0</athletics>
             <stealth>0</stealth>
-            
+
             <notes>Can be worn under chain or ring leggings, or greaves.</notes>
-            
+
             <properties>
                 <light/>
             </properties>
@@ -986,13 +996,12 @@
             <protection>+2</protection>
             <load>0.5</load>
             <weight>0.5</weight>
-            <athletics>0</athletics>
-            <stealth>0</stealth>
+
             <notes>
                 Can be worn under chain or ring mail, or cuirass and
                 vambraces.
             </notes>
-            
+
             <properties>
                 <light/>
             </properties>
@@ -1002,11 +1011,9 @@
             <protection>+3</protection>
             <load>2</load>
             <weight>2</weight>
-            
-            <athletics>0.5</athletics>
-            <stealth>0</stealth>
-            
+
             <properties>
+                <restrictive score="5"/>
                 <light/>
             </properties>
         </armour>
@@ -1015,14 +1022,11 @@
             <protection>+1</protection>
             <load>0.5</load>
             <weight>0.5</weight>
-            
-            <athletics>0</athletics>
-            <stealth>0</stealth>
-            
+
             <notes>
                 Can be worn over soft leather or quilted armour.
             </notes>
-            
+
             <properties>
                 <light/>
             </properties>
@@ -1055,10 +1059,9 @@
         <armour name="Fur jacket">
             <protection>+4</protection>
             <load>2</load>
-            
-            <athletics>0.5</athletics>
-            <stealth>0</stealth>
+
             <properties>
+                <restrictive score="4"/>
                 <light/>
                 <soft/>
             </properties>
@@ -1070,6 +1073,7 @@
             <athletics>0.5</athletics>
             <stealth>0</stealth>
             <properties>
+                <restrictive score="4"/>
                 <light/>
                 <soft/>
             </properties>
@@ -1091,6 +1095,8 @@
             <athletics>0.5</athletics>
             <stealth>1</stealth>
             <properties>
+                <restrictive score="5"/>
+                <noisy score="3"/>
                 <mail/>
                 <heavy/>
             </properties>
@@ -1102,6 +1108,8 @@
             <athletics>0.5</athletics>
             <stealth>1</stealth>
             <properties>
+                <restrictive score="4"/>
+                <noisy score="3"/>
                 <mail/>
                 <heavy/>
             </properties>
@@ -1113,6 +1121,8 @@
             <athletics>0.75</athletics>
             <stealth>1</stealth>
             <properties>
+                <restrictive score="3"/>
+                <noisy score="2"/>
                 <mail/>
                 <heavy/>
             </properties>
@@ -1137,6 +1147,8 @@
             <stealth>1</stealth>
             <notes>Can be worn over soft leather.</notes>
             <properties>
+                <restrictive score="3"/>
+                <noisy score="3"/>
                 <mail/>
                 <heavy/>
             </properties>
@@ -1149,6 +1161,8 @@
             <stealth>1</stealth>
             <notes>Can be worn over soft leather.</notes>
             <properties>
+                <restrictive score="3"/>
+                <noisy score="2"/>
                 <mail/>
                 <heavy/>
             </properties>
@@ -1161,6 +1175,8 @@
             <stealth>1</stealth>
             <notes>Can be worn over soft leather.</notes>
             <properties>
+                <restrictive score="2"/>
+                <noisy score="2"/>
                 <mail/>
                 <heavy/>
             </properties>
