@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.46 $</version>
-            <date>$Date: 2004-03-14 17:17:56 $</date>
+            <version>$Revision: 1.47 $</version>
+            <date>$Date: 2004-03-14 22:35:31 $</date>
         </cvsinfo>
 
         <license>
@@ -102,9 +102,8 @@
                     </entry>
 
                     <entry term="Mixed damage">
-                        Mixed damage is half stuns, half wounds. The first
-                        level is a wound, the second a stun, the third a
-                        wound etc. Often caused by animals.
+                        Mixed damage is half stuns, half wounds with odd
+                        damage going on stuns.
                     </entry>
                     
                     <entry term="Fatigue">
@@ -759,7 +758,8 @@
                             if more than one defence is performed.
                             Since defences are being declared, it is
                             necessary for a character to know who is
-                            attacking them that round.
+                            attacking them that round, so defences are
+                            declared after all attacks.
                         </para>
                     </sect4>
                 </sect3>
@@ -793,16 +793,9 @@
                         <title>Fumbling initiative</title>
                         
                         <para>
-                            If initiative is fumbled, by rolling a 1,
-                            then two things occur. First, the character
-                            acts in the next speed category down, so a
-                            normal action becomes slow, and a slow action
-                            becomes very slow.
-                        </para>
-                        
-                        <para>
-                            Secondly, the person becomes fatigued, gaining
-                            one level of temporary fatigue.
+                            If initiative is fumbled by rolling a 1, then
+                            the character gains one level of temporary
+                            fatigue. Their initiative occurs as normal.
                         </para>
                     </sect4>
                 </sect3>
@@ -864,75 +857,44 @@
                     <title>Multiple Opponents</title>
 
                     <para>
-                        A defender who is having to defend against
-                        multiple opponents will be at a penalty to all
-                        their defence rolls. It can sometimes be better
-                        to not defend against all attacks, in order to
-                        at least have a chance at defending against some
-                        of them. It is not possible to defend against more
-                        than four attacks in a round.
+                        A defender who is having to defend against multiple
+                        opponents will be at a penalty to all their defence
+                        rolls. Defence is per opponent, not per attack, so
+                        a single attacker making multiple attacks only
+                        counts as a single source of attack.
+                    </para>
+                    
+                    <para>
+                        Normally, it is not possible to defend against more
+                        than three attackers in a round.
                     </para>
 
-
-                    <table>
-                        <title>Defending Against Multiple Opponents</title>
-
-                        <colspec colwidth="3cm"/>
-                        <colspec colwidth="2cm"/>
-                        <colspec colwidth="2cm"/>
-                        <thead>
-                            <row>
-                                <entry>Opponents</entry>
-                                <entry>Defence</entry>
-                                <entry>Attack</entry>
-                            </row>
-                        </thead>
-                        <tbody>
-                            <row>
-                                <entry>1</entry>
-                                <entry>0</entry>
-                                <entry>0</entry>
-                            </row>
-                            <row>
-                                <entry>2</entry>
-                                <entry>-10</entry>
-                                <entry>-5</entry>
-                            </row>
-                            <row>
-                                <entry>3</entry>
-                                <entry>-20</entry>
-                                <entry>-10</entry>
-                            </row>
-                            <row>
-                                <entry>4</entry>
-                                <entry>-40</entry>
-                                <entry>-20</entry>
-                            </row>
-                            <row>
-                                <entry>5</entry>
-                                <entry>-60</entry>
-                                <entry>-30</entry>
-                            </row>
-                            <row>
-                                <entry>6</entry>
-                                <entry>-80</entry>
-                                <entry>-40</entry>
-                            </row>
-                        </tbody>
-                    </table>
+                    <targetlist>
+                        <valueLabel>Number of Opponents</valueLabel>
+                        <targetLabel>Penalty</targetLabel>
+                        
+                        <entry value="1" target="-0"/>
+                        <entry value="2" target="-10"/>
+                        <entry value="3" target="-20"/>
+                        <entry value="4" target="-40"/>
+                        <entry value="5" target="-60"/>
+                        <entry value="6" target="-80"/>
+                    </targetlist>
 
                     <para>
-                        A character is normally restricted to defending
-                        against a maximum of three opponents in a single
-                        round. A character with a shield may defend against
-                        four opponents. Certain techniques allow defence
-                        against up to six opponents.
+                        Characters with a shield using the <e>weapon and
+                        shield</e> style may defend against an extra
+                        opponent each round (as well as gaining a +5 bonus
+                        to defence if defending against two or more). A
+                        character who is using the defensive stance may
+                        also defend against an extra opponent. All such
+                        bonuses are cumulative.
                     </para>
-
+                    
                     <para>
-                        Note that the penalty is per opponent, not per
-                        attack, so all attacks from a single opponent can be
-                        defended against without penalty.
+                        Some techniques and abilities allow further
+                        opponents to be defended against, but the maximum
+                        is six, unless specifically stated otherwise.
                     </para>
                 </sect3>
             </sect2>
@@ -1010,10 +972,11 @@
                 </para>
 
                 <para>
-                    The knockdown score for a character is 10 x strength + 10.
-                    For an average human, this is 40. If a single blow equals
-                    or exceeds this value, then they suffer one stun, and
-                    are considered immediately <e>unsteady</e>.
+                    The knockdown score for a character is 2 x size x
+                    strength + 10. For an average human, this is 40.
+                    If a single blow equals or exceeds this value, then
+                    they suffer one stun, and are considered immediately
+                    <e>unsteady</e>.
                 </para>
 
                 <para>
@@ -1585,7 +1548,7 @@
 
                     <para>
                         Stuns are healed after a night's rest. Each morning,
-                        the character makes a stamina roll at difficulty 10,
+                        the character makes a stamina roll at difficulty 0,
                         modified by their current wound and stun penalties.
                         Success means that one stun level is healed, and each
                         10 above the difficulty heals a further stun level.
@@ -1798,30 +1761,30 @@
                     </entry>
 
                     <entry value="Large" target="10">
-                        Sizes 7 - 10, from 2m to 5m in length. Includes
+                        Sizes 7 - 12, from 2m to 5m in length. Includes
                         lions, horses and the like.
                     </entry>
 
                     <entry value="Huge" target="5">
-                        Sizes 11 - 15, up to 10m in length. Elephants,
+                        Sizes 13 - 20, up to 10m in length. Elephants,
                         houses and the like.
                     </entry>
 
                     <entry value="Enormous" target="0">
-                        Sizes 16 - 21, up to 16m in length. Dinosaurs.
+                        Sizes 21 - 30, up to 16m in length. Dinosaurs.
                     </entry>
 
                     <entry value="Gigantic" target="-5">
-                        Sizes 22 - 28, up to 23m in length. The largest
+                        Sizes 31 - 50, up to 23m in length. The largest
                         dinosaurs and whales are gigantic.
                     </entry>
 
                     <entry value="Colossal" target="-10">
-                        Sizes 29 - 36, up to 31m in length.
+                        Sizes 51 - 80, up to 31m in length.
                     </entry>
 
                     <entry value="Titanic" target="-15">
-                        Sizes 37+. Anything larger.
+                        Sizes 81+. Anything larger.
                     </entry>
                 </targetlist>
 
