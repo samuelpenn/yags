@@ -4,8 +4,8 @@
     General melee combat techniques.
     
     Author:  Samuel Penn
-    Version: $Revision: 1.2 $
-    Date:    $Date: 2004-03-14 17:01:19 $
+    Version: $Revision: 1.3 $
+    Date:    $Date: 2004-03-14 17:17:56 $
     
  -->
 
@@ -86,7 +86,7 @@
     </advantage>
     
     <advantage name="Disarm" type="technique">
-        <cost points="4"/>
+        <cost points="3"/>
         <skill name="Single weapon"/>
         <skill name="Weapon and shield"/>
         <skill name="Two weapons"/>
@@ -121,10 +121,8 @@
 
 
     <advantage name="Half sword" type="technique">
-        <cost points="4"/>
-        <skill name="Single weapon"/>
+        <cost points="3"/>
         <skill name="Great weapon"/>
-        <skill name="Longshaft weapon"/>
         <prerequisite>Improved attack</prerequisite>
         
         <description>
@@ -137,11 +135,7 @@
 
     <advantage name="Killing blow" type="technique">
         <cost points="6"/>
-        <skill name="Single weapon"/>
-        <skill name="Weapon and shield"/>
-        <skill name="Two weapons"/>
-        <skill name="Great weapon"/>
-        <skill name="Longshaft weapon"/>
+        <skill name="Any melee"/>
         <prerequisite>Improved attack</prerequisite>
         
         <description>
@@ -156,13 +150,14 @@
     </advantage>
     
     <advantage name="Mighty blow" type="technique">
-        <cost points="8"/>
+        <cost points="7"/>
         <skill name="Any melee"/>
         <prerequisite>Killing blow</prerequisite>
         
         <description>
             <para>
-                Aggressive stance, automatic. Damage is +10 rather than +5.
+                Aggressive stance, automatic. Damage bonus is +10 rather
+                than +5.
             </para>
         </description>
     </advantage>

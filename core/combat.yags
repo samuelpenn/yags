@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.45 $</version>
-            <date>$Date: 2004-03-14 17:01:19 $</date>
+            <version>$Revision: 1.46 $</version>
+            <date>$Date: 2004-03-14 17:17:56 $</date>
         </cvsinfo>
 
         <license>
@@ -2060,6 +2060,44 @@
                     fog or smoke). <e>Situational awareness</e>, and edges
                     which give bonuses to hearing also affect perception
                     for the purpose of this, even in pitch black conditions.
+                </para>
+            </sect2>
+            
+            <sect2>
+                <title>Unstable ground</title>
+                
+                <para>
+                    If the ground is unstable (on a ship, or swaying bridge)
+                    or broken (loose rocks, cracks) then the <e>Agility</e>
+                    and <e>Dexterity</e> of the character is capped to a
+                    modified <e>Agility</e>.
+                </para>
+                
+                <targetlist targetFirst="false" bold="true">
+                    <targetLabel>Penalty</targetLabel>
+                    <valueLabel>Condition</valueLabel>
+
+                    <entry target="-0" value="Swaying floor.">
+                        If the floor is swaying in a strong, but
+                        predictable fashion (boat at sea, a rope bridge).
+                    </entry>
+                    <entry target="-1" value="Unstable floor.">
+                        On a boat in rough seas, or an unpredictable
+                        rope bridge.
+                    </entry>
+                    <entry target="-2" value="Very unstable.">
+                        On a boat in a storm, a rope bridge in high winds.
+                    </entry>
+                    <entry target="-1" value="Loose ground.">
+                        Fighting on loose rocks.
+                    </entry>
+                </targetlist>
+                
+                <para>
+                    If the character is <e>sure footed</e>, then they get
+                    a +1 bonus to their <e>Agility</e> before the cap.
+                    The technique <e>Sea fighting</e> applies if fighting
+                    on a boat.
                 </para>
             </sect2>
         </sect1>
