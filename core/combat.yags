@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.58 $</version>
-            <date>$Date: 2004-09-04 22:21:47 $</date>
+            <version>$Revision: 1.59 $</version>
+            <date>$Date: 2004-09-05 14:27:07 $</date>
         </cvsinfo>
 
         <license>
@@ -1422,43 +1422,74 @@
                 <title>Fatigue</title>
 
                 <para>
-                    Fatigue is not strictly damage, but it is treated
-                    in much the same way as damage is, so is described
-                    here. Fatigue is gained due to strenuous exercise,
-                    some mental/magical attacks or lack of sleep. Depending
-                    on the magic system used, spell casting can also result
-                    in fatigue being gained.
+                    A character's fatigue is measured in a similar way to
+                    wounds, though the number of fatigue levels they have
+                    is based on their stamina, ranging from OK to
+                    Exhausted. If a character becomes Exhausted then they
+                    must immediately rest.
                 </para>
 
                 <para>
-                    As for other types of <e>damage</e>,
-                    fatigue is measured in levels, each level giving a
-                    penalty to all actions. These levels range from 'OK'
-                    to 'Exhausted'.
-                </para>
-
-                <para>
-                    There are two types of fatigue - temporary and permanent.
-                    Unless stated otherwise, all fatigue gained is temporary
-                    and can be lost with a short rest.
-                </para>
-
-                <para>
-                    All fatigue is recorded on the same track. If a person
-                    has two points of temporary fatigue and two points of
-                    permanent fatigue, then for purposes of everything save
-                    for recovery, they have four points of fatigue. For
-                    someone with a stamina of 3, this would give them a
-                    single -6 penalty, not two -1 penalties.
+                    Fatigue is normally short term, and can be lost in
+                    minutes. Exhaustion is gained through long term
+                    effort or lack of sleep, and can only be lost through
+                    a night of sleep. Exhaustion and fatigue stack
+                    together on the same track - two levels of
+                    fatigue and two levels of exhaustion add up to
+                    four levels on the fatigue track, and count as a
+                    single penalty as if the character had four levels
+                    of either.
                 </para>
 
                 <para>
                     It is suggested that fatigue is kept track of on the
-                    character sheet by crossing off temporary fatigue levels
-                    with a single line, and permanent fatigue with a cross.
-                    Permanent fatigue is always <e>first</e> on the line,
+                    character sheet by crossing off fatigue levels
+                    with a single line, and exhaustion with a cross.
+                    Exhaustion is always <e>first</e> on the line,
                     and last to be lost.
                 </para>
+
+                <sect3>
+                    <title>Gaining Fatigue</title>
+
+                    <para>
+                        Certain techniques, when they are used, potentially
+                        gain the character a point of short term fatigue.
+                        The fatigue is gained immediately after the 
+                        technique is completed.
+                    </para>
+
+                    <para>
+                        The following round, the character may opt to try
+                        and remove the recently gained fatigue level by
+                        limiting their actions. A stamina check is made,
+                        and if successful, the fatigue can be removed.
+                    </para>
+
+                    <targetlist>
+                        <valueLabel>Action taken</valueLabel>
+                        <targetLabel>Target</targetLabel>
+
+                        <item target="20" value="Nothing.">
+                            The character does nothing for the round,
+                            including moving and defending.
+                        </item>
+
+                        <item target="30" value="Defend.">
+                            The character takes the defensive stance, and
+                            makes no attacks.
+                        </item>
+                        
+                        <item target="40" value="Defensive.">
+                            The character takes the defensive stance.
+                        </item>
+                        
+                        <item target="50" value="Active.">
+                            The character does not take an aggressive stance
+                            and does not run that round.
+                        </item>
+                    </targetList>
+                </sect3>
             </sect2>
         </sect1>
 
