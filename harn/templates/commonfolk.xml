@@ -1,84 +1,149 @@
 <?xml version="1.0"?>
 
 <!--
- These templates are for common characters, found regularly
- in urban and rural regions.
+    These templates are for common characters, found regularly
+    in urban and rural regions.
  -->
 
 <character-templates>
 
-<character-template name="Farmer">
-	<description>
-		<background>
-			<para>
-			Farmers are amongst the most common people
-			encountered. All will have some basic weapons
-			training, but are not generally expected to fight
-			unless their homes are actually being attacked.
-			</para>
-		</background>
-	</description>
+    <character-template name="Farmer" points="0">
+        <description>
+            <age>16</age>
 
-	<attributes points="48">
-		<attribute name="strength" score="3"/>
-		<attribute name="stamina" score="3"/>
-		<attribute name="agility" score="3"/>
-		<attribute name="dexterity" score="3"/>
-		<attribute name="perception" score="3"/>
-		<attribute name="intelligence" score="3"/>
-		<attribute name="charisma" score="3"/>
-		<attribute name="will" score="3"/>
-	</attributes>
+            <background>
+                <para>
+                    Serfs make up the bulk of the population in feudal
+                    societies, and by far the majority of these will be
+                    farmers. Few will have ever left their home village,
+                    and indeed, they will need the permission of their
+                    lord in order to do so.
+                </para>
+                
+                <para>
+                    All able bodied males will have been given some
+                    weapon training, just enough to be able to form a
+                    militia in defence of the Lord's manor, but not
+                    enough to actually be a threat to the Lord.
+                </para>
+            </background>
+        </description>
 
-	<skills>
-		<group name="Talents" type="talents">
-			<skill name="Athletics" score="2"/>
-			<skill name="Awareness" score="2"/>
-			<skill name="Brawl" score="2"/>
-			<skill name="Charm" score="2"/>
-			<skill name="Guile" score="2"/>
-			<skill name="Sleight" score="2"/>
-			<skill name="Stealth" score="2"/>
-			<skill name="Throw" score="2"/>
-		</group>
+        <attributes>
+            <attribute name="strength" score="3"/>
+            <attribute name="stamina" score="3"/>
+            <attribute name="agility" score="3"/>
+            <attribute name="dexterity" score="3"/>
+            <attribute name="perception" score="3"/>
+            <attribute name="intelligence" score="3"/>
+            <attribute name="charisma" score="3"/>
+            <attribute name="will" score="3"/>
+        </attributes>
+        
+        <advantages>
+            <advantage name="Social class (Serf)"/>
+        </advantages>
 
-		<group name="Common Knowledges" type="knowledges">
-			<skill name="Area lore" score="2"/>
-			<skill name="Folk lore" score="2"/>
-			<skill name="Speak own" score="4"/>
-		</group>
-	</skills>
+        <skills age="16">
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="2"/>
+                <skill name="Awareness" score="2"/>
+                <skill name="Brawl" score="2"/>
+                <skill name="Charm" score="2"/>
+                <skill name="Guile" score="2"/>
+                <skill name="Sleight" score="2"/>
+                <skill name="Stealth" score="2"/>
+                <skill name="Throw" score="2"/>
+            </group>
 
-	<skills age="16">
-		<group name="Talents" type="talents">
-			<skill name="Athletics" score="3"/>
-			<skill name="Awareness" score="3"/>
-			<skill name="Brawl" score="3"/>
-		</group>
+            <group name="Knowledges" type="knowledges">
+                <skill name="Area lore" score="2"/>
+                <skill name="Folk lore" score="2"/>
+                <skill name="Religion (Peoni)" score="2"/>
+                <skill name="Speak Harnic" score="4"/>
+            </group>
 
-		<group name="Misc" type="skills">
-			<skill name="Farming" score="4"/>
-			<skill name="Longshaft weapon" score="3"/>
-			<skill name="Trade" score="2"/>
-			<skill name="Diarying" score="1"/>
-			<skill name="Carpentry" score="1"/>
-		</group>
-	</skills>
+            <group name="Professional" type="skills">
+                <skill name="Farming" score="4"/>
+                <skill name="Dairying" score="1"/>
+                <skill name="Carpentry" score="1"/>
+            </group>
 
-	<skills age="21">
-		<group name="Misc" type="skills">
-			<skill name="Trade" score="3"/>
-			<skill name="Diarying" score="2"/>
-			<skill name="Carpentry" score="2"/>
-		</group>
+            <group name="Combat" type="skills">
+                <skill name="Longshaft weapon" score="2"/>
+                <skill name="Bow" score="2"/>
+            </group>
 
-		<group name="Talents" type="talents">
-			<skill name="Guile" score="3"/>
-		</group>
-	</skills>
+            <group name="Misc" type="skills">
+                <skill name="Survival" score="1"/>
+                <skill name="Trade" score="2"/>
+            </group>
+        </skills>
+    </character-template>
 
-</character-template>
+    <character-template name="Yeoman" points="0">
+        <description>
+            <age>16</age>
 
+            <background>
+                <para>
+                    Yeoman are freeman who own their own land.
+                </para>
+            </background>
+        </description>
+
+        <attributes>
+            <attribute name="strength" score="3"/>
+            <attribute name="stamina" score="3"/>
+            <attribute name="agility" score="3"/>
+            <attribute name="dexterity" score="3"/>
+            <attribute name="perception" score="3"/>
+            <attribute name="intelligence" score="3"/>
+            <attribute name="charisma" score="3"/>
+            <attribute name="will" score="3"/>
+        </attributes>
+        
+        <advantages>
+            <advantage name="Social class (freeman)"/>
+        </advantages>
+
+        <skills age="16">
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="2"/>
+                <skill name="Awareness" score="2"/>
+                <skill name="Brawl" score="2"/>
+                <skill name="Charm" score="2"/>
+                <skill name="Guile" score="2"/>
+                <skill name="Sleight" score="2"/>
+                <skill name="Stealth" score="2"/>
+                <skill name="Throw" score="2"/>
+            </group>
+
+            <group name="Knowledges" type="knowledges">
+                <skill name="Area lore" score="2"/>
+                <skill name="Folk lore" score="2"/>
+                <skill name="Religion (Peoni)" score="2"/>
+                <skill name="Speak Harnic" score="4"/>
+            </group>
+
+            <group name="Professional" type="skills">
+                <skill name="Farming" score="4"/>
+                <skill name="Dairying" score="2"/>
+                <skill name="Carpentry" score="1"/>
+            </group>
+
+            <group name="Combat" type="skills">
+                <skill name="Weapon and shield" score="2"/>
+                <skill name="Longshaft weapon" score="2"/>
+                <skill name="Bow" score="2"/>
+            </group>
+
+            <group name="Misc" type="skills">
+                <skill name="Survival" score="1"/>
+                <skill name="Trade" score="2"/>
+            </group>
+        </skills>
+    </character-template>
 
 
 </character-templates>
