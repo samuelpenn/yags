@@ -2,15 +2,14 @@
 
 <!--
     Water cantrips.
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2004-09-27 19:28:29 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2004-12-27 21:22:25 $
 -->
 <grimoire name="Water">
     <spell name="Wet" level="1" type="water">
         <range>-5/m</range>
         <duration>Concentration</duration>
         <radius>-1/m</radius>
-        <effect>+1/1</effect>
 
         <description>
             <para>
@@ -43,7 +42,7 @@
 
     <spell name="Mist" level="3" type="water">
         <duration>Concentration</duration>
-        <radius>-1/m</radius>
+        <area>-1/5m radius</area>
 
         <prerequisite>Wet</prerequisite>
 
@@ -54,5 +53,168 @@
                 depends on the humidity of the air.
             </para>
         </description>
+    </spell>
+    
+    <spell name="Rain" level="5" type="water">
+        <duration>Concentration</duration>
+        <area>-1/10m</area>
+        
+        <prerequisite>Mist</prerequisite>
+        
+        <description>
+            <para>
+                It starts to rain over the area specified, centred on the
+                caster. The amount of rain will depend on the effectiveness
+                of the spell, and is modified by general humidity.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Flood" level="7" type="water">
+        <range>-1/5m</range>
+        <duration>Concentration</duration>
+        <target>10 tonnes, -2/x2</target>
+        <effect>+100% volume/+5</effect>
+        
+        <prerequisite>Rain</prerequisite>
+        
+        <description>
+            <para>
+                Causes the specified body of water to radically grow in
+                volume. Each 5 points of spell effect will increase the
+                volume (and mass) of water by a multiple. The water must
+                be in range of the spell when cast, but stays flooded
+                even if it passes out of range later.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Control Water" level="9" type="water">
+        <duration>Concentration</duration>
+        <radius>-1/10m radius</radius>
+        
+        <prerequisite>Flood</prerequisite>
+        
+        <description>
+            <para>
+                Control the flow and movement of water within the radius
+                of the spell. The effect gives the degree of control.
+                Rough sea can be turned to still pond, a river can be
+                made to overflow its banks. Once water leaves the spell
+                radius, control is lost. However, a wizard standing by
+                a river would gain control over water as it flowed into
+                range.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Body of Water" level="12" type="water">
+        <duration>Concentration</duration>
+        <range>Self</range>
+        
+        <prerequisite>Control Water</prerequisite>
+        
+        <description>
+            <para>
+                The caster's body changes to a water like substance.
+                It can move through water at will, and slowley on
+                land. It tends to stick together.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Breathe Water" level="3" type="water">
+        <range>-1/5m</range>
+        <target>-5/extra</target>
+        
+        <prerequisite>Wet</prerequisite>
+        
+        <description>
+            <para>
+                Targets of this cantrip are able to breathe water as if it
+                were air without loosing the ability to breathe air.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Drown" level="5" type="water">
+        <range>-1/5m</range>
+        <duration>Concentration</duration>
+        <target>-5/extra</target>
+        <resist>Strength x Swim</resist>
+        
+        <prerequisite>Breathe Water</prerequisite>
+        
+        <description>
+            <para>
+                The target, if in water, is sucked down beneath the
+                surface in an attempt to drown them.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Float" level="5" type="water">
+        <range>-1/5m</range>
+        <duration>Concentration</duration>
+        <target>-5/extra</target>
+        <resist>Strength x Swim</resist>
+        
+        <prerequisite>Breathe Water</prerequisite>
+        
+        <description>
+            <para>
+                The target is forced to the surface if they are in water.
+                They will float on the surface of water as if they were
+                made of air. They may attempt an athletics check to walk
+                on water if desired, though this is difficult in all but
+                the calmest of water.
+            </para>
+        </description>
+    </spell>
+    
+    
+    <spell name="Cold" level="3" type="water">
+        <duration>Concentration</duration>
+        <radius>-1/m</radius>
+        
+        <prerequisite>Wet</prerequisite>
+        
+        <description>
+            <para>
+                Make the area cold.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Frozen Touch" level="5" type="water">
+        <prerequisite>Cold</prerequisite>
+    </spell>
+    
+    <spell name="Slow" level="5" type="water">
+        <prerequisite>Cold</prerequisite>
+    </spell>
+    
+    <spell name="Fatigue" level="5" type="water">
+        <prerequisite>Cold</prerequisite>
+    </spell>
+    
+    <spell name="Frost" level="5" type="water">
+        <prerequisite>Cold</prerequisite>
+    </spell>
+    
+    <spell name="Breath of Winter" level="7" type="water">
+        <prerequisite>Frost</prerequisite>
+    </spell>
+    
+    <spell name="Winter Cloak" level="9" type="water">
+        <prerequisite>Breath of Winter</prerequisite>
+    </spell>
+    
+    <spell name="Gloom" level="3" type="water">
+        <prerequisite>Wet</prerequisite>
+    </spell>
+    
+    <spell name="Blind" level="5" type="water">
+        <prerequisite>Gloom</prerequisite>
     </spell>
 </grimoire>

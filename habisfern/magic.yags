@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.7 $</version>
-            <date>$Date: 2004-09-26 21:27:35 $</date>
+            <version>$Revision: 1.8 $</version>
+            <date>$Date: 2004-12-27 21:22:25 $</date>
         </cvsinfo>
 
         <license>
@@ -169,7 +169,7 @@
                 The set of known cantrips is small, and cannot be expanded
                 by mortal wizards. Once a wizard has achieved a high enough
                 understanding of a <e>Word</e>, then basic introspection
-                will make them aware of the cantrips within their power.  It
+                will make them aware of the cantrips within their power. It
                 is then up to them to spend time studying any given cantrip
                 in order to unleash its power.
             </para>
@@ -229,8 +229,8 @@
                 The name of the spell followed by its level. The wizard
                 must have a skill in the Word at least equal to the level
                 of the spell before learning it. The base difficulty to
-                case the spell is equal to its level x 5. The casting roll
-                is performed using Will x Word.
+                cast the cantrip is equal to its level x 5. The casting
+                roll is performed using Will x Word.
             </para>
             
             <para>
@@ -330,27 +330,38 @@
                     <valueLabel>Quality of effect</valueLabel>
                     <targetLabel>Effect</targetLabel>
                     
-                    <item target="0-4" value="Normal.">
+                    <item target="0-9" value="Normal.">
                         The result of the cantrip is the minimum needed
                         to be considered a success. It will give only basic
                         information, or cause only minimal changes.
                     </item>
                     
-                    <item target="5-9" value="Good.">
+                    <item target="10-19" value="Good.">
                         The result is respectable, and gives a decent level
                         of information, or has a significant affect on the
                         world.
                     </item>
                     
-                    <item target="10-14" value="Excellent.">
+                    <item target="20-29" value="Excellent.">
                     </item>
                     
-                    <item target="15-19" value="Superb.">
+                    <item target="30-39" value="Superb.">
                     </item>
                     
-                    <item target="20+" value="Fantastic.">
+                    <item target="40+" value="Fantastic.">
                     </item>
                 </targetlist>
+            </sect2>
+            
+            <sect2>
+                <title>Fatigue</title>
+                
+                <para>
+                    A wizard may try to push themselves beyond their normal
+                    limits when casting a cantrip, in order to get a more
+                    powerful effect. Each point of fatigue that they spend
+                    gives them an extra +10 bonus to their casting roll.
+                </para>
             </sect2>
         </sect1>
 
