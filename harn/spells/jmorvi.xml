@@ -16,6 +16,33 @@
             unpredictable and unreliable. They prefer the sureness and solidity of
             cold, hard steel.
         </para>
+
+        <para>
+            Several Jmorvi spells can be used to enhance the toughness of
+            materials. Enhancing fully metallic items is easier than
+            enhancing partially metallic or other items. If it is used to
+            enchant armour, then the basic bonus given to the soak of the
+            item is the soak to use if the armour itself is harmed. The
+            soak bonus gained by the wearer of the armour depends on the
+            type of armour being enhanced.
+        </para>
+
+        <targetlist>
+            <targetLabel>Soak</targetLabel>
+            <valueLabel>Type of armour</valueLabel>
+
+            <entry target="1/20" value="Helm, greaves or vambraces"/>
+            <entry target="1/10" value="Breastplate, vest"/>
+            <entry target="1/5" value="Habergeon, jacket, leggings"/>
+            <entry target="2/5" value="Hauberk"/>
+        </targetlist>
+
+        <para>
+            For example, a +30 bonus to a chain hauberk would only give a
+            +12 bonus to the wearer's soak. The same bonus to a metal helm
+            would only give +1.
+        </para>
+
     </preface>
 
     <spell name="Sight of Eneldir" level="10" convocation="jmorvi">
@@ -28,12 +55,14 @@
         <boost>+40 Range 2km</boost>
         <description>
             <para>
-                A spell to detect and identify metallic minerals. The caster declares
-                a specific metallic mineral and learns the direction to the nearest
-                (single) 'good source'. A small amount of refined metal in close
-                proximity is more noticeable than a large deposit of ore a hundred
-                metres away. Although the spell ignores any Focus through which it
-                is cast, it may detect a companion's sword.
+                A spell to detect and identify metallic minerals. The
+                caster declares a specific metallic mineral and learns
+                the direction to the nearest (single) 'good source'.
+                A small amount of refined metal in close proximity is
+                more noticeable than a large deposit of ore a hundred
+                metres away. Although the spell ignores any Focus
+                through which it is cast, it may detect a companion's
+                sword.
             </para>
         </description>
     </spell>
@@ -123,7 +152,7 @@
                 An enchantment which causes a wholly metallic object to resonate
                 and grow warmer. This makes the object difficult to use and
                 justifies an immediate penalty of at least 10. The object cannot
-                weight more than 5kg.
+                weight more than 15kg.
             </para>
         </description>
     </spell>
@@ -149,9 +178,9 @@
         <description>
             <para>
                 This spell affects any metallic, stone or crystalline objects
-                of up to size 5. It is a ward which grants a +10 bonus to
+                of up to size 5. It is a ward which grants a +30 bonus to
                 soak next time the object is harmed. If the object is being
-                used as armour, the wearer gains a +3 bonus to their soak.
+                used as armour, the wearer gains a +10 bonus to their soak.
             </para>
         </description>
     </spell>
@@ -192,10 +221,11 @@
         <range>Self</range>
         <duration>Ward</duration>
         <boost>+15 Range is touch</boost>
-        <boost>+60 Bonus is +10</boost>
+        <boost>+30 Bonus is +20</boost>
+        <boost>+60 Bonus is +25</boost>
         <description>
             <para>
-                This spell harden's the skin of the caster, giving her a +5
+                This spell harden's the skin of the caster, giving her a +15
                 bonus to soak. The ward comes into affect the next time the
                 caster is injured, and then terminates. It cannot be combined
                 with other wards on the same target.
@@ -208,10 +238,15 @@
         <range>Self</range>
         <duration>Concentration</duration>
         <boost>+15 Range is touch</boost>
+        <boost>+30 Skin colour is unaffected</boost>
+        <boost>+60 Agility and dexterity penalty negated</boost>
         <description>
             <para>
-                Grants the caster a +1 to their soak while the spell is being
-                maintained. This spell can be stacked with itself.
+                Grants the caster a +4 to their soak while the spell is being
+                maintained. This spell can be stacked with itself. The skin
+                will take on a slightly darker hue while the spell is in
+                effect, and the toughness of the skin means a -4 penalty
+                to all dexterity and agility rolls.
             </para>
         </description>
     </spell>
@@ -223,27 +258,33 @@
         <resist>Will</resist>
         <duration>Momentary</duration>
         <boost>+20 Can affect mostly metal armour</boost>
-        <boost>+40 Adds +3 soak</boost>
         <description>
             <para>
-                An enchantment to increase the soak of wholly metallic armour.
-                The soak of such armour is increased by 1. This cannot be
-                combined with another similar enchantment, including rune magic.
+                An enchantment to increase the soak of wholly metallic
+                armour. The soak of such armour is increased by a base
+                of +5, modified by the type of armour. This cannot be
+                combined with another similar enchantment, including
+                rune magic.
             </para>
         </description>
     </spell>
+
 
     <spell name="Barl's Cloak" level="160" convocation="jmorvi">
         <range>Self</range>
         <resist>Will</resist>
         <duration>Concentration</duration>
         <boost>+20 Range is touch</boost>
-        <boost>+40 Soak increased by 6</boost>
+        <boost>+40 Skin colour is unaffected</boost>
+        <boost>+60 Penalties are negated</boost>
         <description>
             <para>
-                An enchantment which toughens the skin to protect like armour.
-                The skin assumes a slight blue-black colour while the enchantment
-                is in place. The caster's soak is increased by 3.
+                An enchantment which toughens the skin to protect like
+                armour. The skin assumes a slight blue-black colour
+                while the enchantment is in place. The caster's soak is
+                increased by 6. This spell can be stacked with itself.
+                The target of the spell suffers a -6 penalty to agility
+                and dexterity rolls while the spell is in effect.
             </para>
         </description>
     </spell>
