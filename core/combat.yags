@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.36 $</version>
-            <date>$Date: 2003-12-23 19:14:47 $</date>
+            <version>$Revision: 1.37 $</version>
+            <date>$Date: 2003-12-27 13:21:05 $</date>
         </cvsinfo>
 
         <license>
@@ -1041,7 +1041,7 @@
                             <entry>1 - 5</entry>
                             <entry>1</entry>
                             <entry>+0</entry>
-                            <entry>Hurt</entry>
+                            <entry>Minor</entry>
                         </row>
                         <row>
                             <entry>6 - 10</entry>
@@ -1059,7 +1059,7 @@
                             <entry>16-20</entry>
                             <entry>4</entry>
                             <entry>-6</entry>
-                            <entry>Serious</entry>
+                            <entry>Heavy</entry>
                         </row>
                         <row>
                             <entry>21 - 25</entry>
@@ -1087,14 +1087,10 @@
                     <title>Critical Wounds</title>
 
                     <para>
-                        If a character becomes critically wounded
-                        (-10 penalty), then they must make an immediate
-                        stamina x 4 roll at difficulty 20. Failure means
-                        that they fall unconscious at the end of the round.
-                        It may be assumed that civilians and
-                        non-professional warriors either fall unconscious,
-                        or retreat from battle when their wounds reach this
-                        state.
+                        Most creatures and people who are critically wounded
+                        will seek to avoid further combat. Enraged creatures
+                        and people, or professional warriors may carry on
+                        fighting however.
                     </para>
                 </sect3>
 
@@ -1144,7 +1140,7 @@
                         <para>
                             Unless they receive suitable medical attention,
                             a fatally wounded character will die eventually.
-                            If the character is still conscious, they
+                            If the character is still active, they
                             must make another stamina roll at the end of
                             each round at a target difficulty of 30 to
                             remain conscious. Again, if the roll
@@ -1215,31 +1211,31 @@
                             <entry>1 - 5</entry>
                             <entry>1</entry>
                             <entry>+0</entry>
-                            <entry>Bruised</entry>
+                            <entry>Minor</entry>
                         </row>
                         <row>
                             <entry>6 - 10</entry>
                             <entry>2</entry>
                             <entry>-1</entry>
-                            <entry>Dazed</entry>
+                            <entry>Light</entry>
                         </row>
                         <row>
                             <entry>11 - 15</entry>
                             <entry>3</entry>
                             <entry>-3</entry>
-                            <entry>Bloodied</entry>
+                            <entry>Medium</entry>
                         </row>
                         <row>
                             <entry>16-20</entry>
                             <entry>4</entry>
                             <entry>-6</entry>
-                            <entry>Battered</entry>
+                            <entry>Heavy</entry>
                         </row>
                         <row>
                             <entry>21 - 25</entry>
                             <entry>5</entry>
                             <entry>-10</entry>
-                            <entry>Beaten</entry>
+                            <entry>Critical</entry>
                         </row>
                         <row>
                             <entry>26 - 30</entry>
@@ -1597,7 +1593,7 @@
 
                     <para>
                         It is not actually possible for a person with
-                        average or worse stamina to recover from being
+                        below average stamina to recover from being
                         fatally wounded alone. Someone with the first aid
                         skill can grant a bonus if they spend time
                         looking after the wounded person. An intelligence
@@ -2058,7 +2054,7 @@
                     skilled rider it can be a big advantage. Warriors who
                     wish to fight from horseback should look at the
                     <e>mounted combat</e> and <e>mounted archery</e>
-                    manouevres, since this mitigate most of the problems.
+                    techniques, since these mitigate most of the problems.
                 </para>
 
                 <para>
@@ -2071,9 +2067,9 @@
 
                 <para>
                     Failure of the riding roll means that the character
-                    becomes unstable, and must make a second roll at the
-                    same difficulty to remain on the horse. If the rider
-                    is not using saddle and stirrups, then both
+                    becomes unstable and looses their attack. A second roll
+                    at the same difficulty to remain on the horse. If the
+                    rider is not using saddle and stirrups, then both
                     difficulties are increased by 5.
                 </para>
 
@@ -2081,8 +2077,10 @@
                     The character's ride skill adds to attack rolls made
                     from horseback, against either infantry or other
                     mounted opponents. Characters with the <e>mounted
-                    combat</e> advantage add this bonus to <e>all</e>
-                    their combat rolls.
+                    combat</e> technique add this bonus to <e>all</e>
+                    their combat rolls (initiative, attack, defence and
+                    damage), as well as not needing to make ride rolls
+                    each round.
                 </para>
 
                 <sect3>
@@ -2128,101 +2126,6 @@
                         knocking them back or to the ground.
                     </para>
                 </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Poison</title>
-
-                <para>
-                    Use of poison is often frowned upon by honourable
-                    warriors, but not everyone is honourable, and not
-                    everyone is a warrior willing to stand up in a
-                    toe-to-toe fight. Poison may be used on darts, put
-                    in food, or put on bladed weapons. Different types
-                    of poisons have varying effectiveness, though very
-                    few will give instant death.
-                </para>
-
-                <para>
-                    For a full discussion on the use of poisons, see
-                    Herb Lore. However, some simple poison rules are
-                    given here.
-                </para>
-
-                <sect3>
-                    <title>Resisting Poison</title>
-
-                    <para>
-                        Any poison may be resisted by making a resistence
-                        roll. This is normally stamina x size of the
-                        intended victim.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Effects of Poison</title>
-
-                    <para>
-                        Poison can take a varying amount of time to take
-                        affect. This may be a round, a minute, 15 minutes,
-                        a day or any other period of time. When a poison is
-                        first administered, a resistence roll is not made,
-                        instead the roll is made after the given period of
-                        time has passed. Even deadly poisons will tend to
-                        have times in the minutes.
-                    </para>
-
-                    <para>
-                        The target difficulty of the resistence roll is the
-                        strength of the poison. A good poison will tend to
-                        have a strength in the 30 - 50 range. Whether the
-                        resistence roll was successful or not, the poison
-                        will continue to do damage to the victim. Once the
-                        poison's effect time has passed again, then another
-                        resistence roll is required, at a reduced difficulty.
-                        Normally, the difficulty drops by 5 each time,
-                        though this will be specified in the poison
-                        description.
-                    </para>
-
-                    <para>
-                        For example, a poison with a strength of 40, and a
-                        time of 1 minute, would require a resistence roll
-                        against 40 after one minute, against 35 after two
-                        minutes, then 30 after three minutes etc. Once 0
-                        or less has been reached, no further rolls are
-                        required and the poison is considered to have
-                        finished its work.
-                    </para>
-
-                    <sect4>
-                        <title>When poison works</title>
-
-                        <para>
-                            If a resistence roll was successful, then the
-                            poison has no effect over that time period. If
-                            it failed however, then the victim suffers
-                            some effect from the poison. Poisons will have
-                            a number of effects listed, in increasing order
-                            of severity. For example, these might be
-                            nausea, weakness, cramps, paralysis, death.
-                            </para>
-
-                        <para>
-                            The first time the resistence is failed, the
-                            first effect takes affect. The next failure
-                            causes the next effect and so on. For the
-                            above example, for a poison of strength 40,
-                            most people are likely to suffer nausea,
-                            weakness and cramps. Many people may suffer
-                            paralysis, and a few would actually die (in
-                            worst case, a stamina x size roll of 20 would
-                            need to be failed in order to die).
-                        </para>
-                    </sect4>
-
-                </sect3>
-
             </sect2>
         </sect1>
     </body>
