@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+<templates> 
+
+<character name="Knight">
+    <attributes size="5" soak="12" appearance="+0" points="48">
+        <attribute name="strength" score="1" weight="10"/>
+        <attribute name="stamina" score="1" weight="6"/>
+        <attribute name="agility" score="1" weight="6"/>
+        <attribute name="dexterity" score="1" weight="10"/>
+        <attribute name="perception" score="1" weight="3"/>
+        <attribute name="intelligence" score="1" weight="5"/>
+        <attribute name="charisma" score="1" weight="3"/>
+        <attribute name="will" score="1" weight="4"/>
+    </attributes>
+    
+    <skills>
+        <group name="Talents" type="talents" points="0">
+            <skill name="Athletics" score="3" weight="5"/>
+            <skill name="Awareness" score="2" weight="5"/>
+            <skill name="Brawl" score="3" weight="5"/>
+            <skill name="Charm" score="2" weight="5"/>
+            <skill name="Guile" score="1" weight="5"/>
+            <skill name="Sleight" score="1" weight="5"/>
+            <skill name="Stealth" score="1" weight="5"/>
+            <skill name="Throw" score="2" weight="5"/>
+        </group>
+
+        <group name="Knowledges" type="skills">
+            <skill name="Area lore (Kanday)" score="2" weight="3"/>
+            <skill name="Folk lore" score="2" weight="1"/>
+            <skill name="Religion (Larani)" score="0" weight="1"/>
+        </group>
+
+        <group name="Combat" type="skills">
+            <skill name="Weapon and shield" score="4" weight="10"/>
+            <skill name="Battle" score="0" weight="5"/>
+        </group>
+
+        <group name="Misc" type="skills">
+            <skill name="Etiquette" score="0" weight="2"/>
+            <skill name="Ride" score="4" weight="5"/>
+        </group>
+
+        <group name="Languages" type="languages">
+            <skill name="Speak own" score="4" weight="0"/>
+        </group>
+
+    </skills>
+
+    <combat style="Short sword" skill="Single weapon">
+        <initiative attribute="agility" bonus="+5"/>
+        <attack attribute="dexterity" bonus="+3"/>
+        <defence attribute="dexterity" bonus="+3"/>
+        <damage multiplier="4" type="wound" bonus="+6">
+    </combat>
+
+    <combat style="Dagger" skill="Brawl"/>
+        <initiative attribute="agility" bonus="+2"/>
+        <attack attribute="agility" bonus="+3"/>
+        <defence attribute="agility" bonus="+2"/>
+        <damage multiplier="4" type="wound" bonus="+4"/>
+    </combat>
+
+
+    <passions>
+    </passions>
+
+    <advantages>
+    </advantages>
+
+    <description>
+        <player>NPC</player>
+        <title>Knight</title>
+        <short></short>
+    </description>
+</character>
+<templates>
