@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.31 $</version>
-            <date>$Date: 2003-11-24 13:09:57 $</date>
+            <version>$Revision: 1.32 $</version>
+            <date>$Date: 2003-11-24 22:32:42 $</date>
         </cvsinfo>
 
         <license>
@@ -201,66 +201,127 @@
                 <title>Fighting Styles</title>
 
                 <para>
-                    When a character or creature makes an attack,
-                    they do so using one of a number of different
-                    fighting styles. Each fighting style has its
-                    own skill, and is independent of the weapon
-                    being used.
+                    Every creature has a style of fighting, which determines
+                    how they use their weapons. All combat using natural
+                    weapons uses the <e>Brawling</e> style. Combat with
+                    melee or missile weapons uses the style associated with
+                    the type of weapon being used.
                 </para>
 
-                <termlist>
-                    <entry term="Brawling">
+                <para>
+                    Each style is associated with a skill of the same name.
+                    Only single skill is needed to cover use of all weapons
+                    which can be used with that style of fighting. It is
+                    possible to use any melee weapon with any melee style,
+                    though at a penalty.
+                </para>
+
+                <para>
+                    If the weapon combination used is not applicable, the
+                    combat bonuses of the weapon are halved. Further, all
+                    attacks are slow, and all attack and defence rolls
+                    fumble on a 1-2 rather than a 1 (unless brawl is being
+                    used, in which case only fumble on a 1). No techniques
+                    can be used.
+                </para>
+
+                <para>
+                    If using a second weapon, or a shield, only half the
+                    defence bonus of the second weapon applies.
+                </para>
+
+                <sect3>
+                    <title>Brawling</title>
+
+                    <para>
                         Brawling is the simplest style of fighting,
-                        involving punching, kicking and grappling.
-                        It also covers use of small weapons such
-                        as a knife, dagger or broken bottle. Since
-                        the skill of brawling is one of the eight
-                        basic talents all people have, everyone has
-                        some skill in it. Creatures generally use
-                        brawling attacks.
-                    </entry>
+                        involving punching, kicking and grappling. It also
+                        covers the use of simple weapons such as a knife,
+                        dagger or broken bottle.
+                    </para>
 
-                    <entry term="Single weapon">
-                        The single weapon fighting style involves using
-                        a single one handed weapon to attack with. A
-                        shield cannot be used. Most weapons, other than
-                        shields and two handed weapons, can be used with
-                        this style, and only a single skill (single weapon)
-                        is needed to cover them all.
-                    </entry>
+                    <para>
+                        When using a brawling attack, the initiative,
+                        attack, defence and damage bonuses of the weapon
+                        (or the natural bonuses of the creature) add to
+                        the combat rolls.
+                    </para>
+                </sect3>
 
-                    <entry term="Weapon and shield">
+                <sect3>
+                    <title>Single weapon</title>
+
+                    <para>
+                        A fighting style involving a single melee weapon,
+                        such as a dagger, sword or mace. Most one handed
+                        weapons can be used with this style.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Weapon and shield</title>
+
+                    <para>
                         This fighting style uses a combination of a one
                         handed weapon and a shield, to give what is
                         possibly the best combination. Any type of shield,
                         and any one handed weapon can be used with this
                         style.
-                    </entry>
+                    </para>
 
-                    <entry term="Great weapon">
+                    <para>
+                        The full combat bonuses the shield are added to the
+                        combat bonuses of the primary weapon.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Great weapon</title>
+
+                    <para>
                         The great weapon style allows use of a single
                         weapon which requires two hands to use it. It
                         suffers from lack of defence, but such weapons
                         can be very good at cleaving through armour.
-                    </entry>
+                    </para>
+                </sect3>
 
-                    <entry term="Two weapons">
+                <sect3>
+                    <title>Two weapons</title>
+
+                    <para>
                         This style of fighting involves the use of two one
                         handed weapons at once. Though this gives an edge
                         over only using one weapon, it does not grant two
                         attacks in a combat round. Further, it is
                         generally not as good as using a shield instead
                         of a second weapon, but it does have its advantages.
-                    </entry>
+                    </para>
 
-                    <entry term="Longshaft weapon">
+                    <para>
+                        Half the combat bonuses of the secondary weapon
+                        (rounded up) are added to the die rolls. The minimum
+                        strength requirement of the second weapon is also
+                        increased by one.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Longshaft weapon</title>
+
+                    <para>
                         This style of fighting uses a single two handed
                         weapon such as a long spear, quarterstaff or
                         lance, or single handed versions of the same. A
-                        shield may be used if the weapon is one handed.
-                    </entry>
-                    
-                    <entry term="Flail weapon">
+                        shield may be used if the weapon is one handed, as
+                        if using the <e>Weapon and shield</e> style.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Flail weapon</title>
+
+                    <para>
                         Flails are a small category of weapon which are
                         quite rare, consisting of a number of balls or
                         rods, attached via chain or leather to a haft.
@@ -268,10 +329,36 @@
                         have the advantage that when used defensively,
                         the defence bonus is +10 (rather than +5). If
                         used aggresively, then the attack bonus is +10
-                        (rather than +5). See the section on special
-                        attacks for more information.
-                    </entry>
-                </termlist>
+                        (rather than +5).
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Throw</title>
+
+                    <para>
+                        The <e>Throw</e> skill is the missile equivalent
+                        of the <e>Brawl</e> skill, and is used for all
+                        simple missile weapons, including rocks, bottles,
+                        knives, axes and slings.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Bow</title>
+
+                    <para>
+                        Covers the user of the short and long bow.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Crossbow</title>
+
+                    <para>
+                        Covers the use of all types of crossbow.
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
@@ -356,128 +443,23 @@
                         </entry>
                     </termlist>
                 </sect3>
-            </sect2>
-
-            <para>
-                There are a variety of different weapons, all with their
-                own advantages and disadvantages. The table lists the
-                most common weapons, together with the statistics which
-                are required in combat.
-            </para>
-
-            <import-weaponlist href="xml/weapons.xml" importance="3" style="full"/>
-
-            <para>
-                The four ability modifiers - initiative, attack, defence and
-                damage add to the base ability for a character when they are
-                using that weapon.
-            </para>
-
-            <sect2>
-                <title>Using Weapons in Combat</title>
-
-                <para>
-                    When engaging in combat, a character or creature
-                    has five four main statistics which govern whether
-                    the attack succeeds or fails. These are based on
-                    the character's skill, with a modifier for the
-                    weapon.
-                </para>
-
-                <skillequation>
-                    <title>Initiative</title>
-                    <attribute>agility</attribute>
-                    <skill>skill</skill>
-                    <bonus>weapon initiative bonus</bonus>
-                    <die/>
-                </skillequation>
-
-                <skillequation><title>Brawl attack</title>
-                    <attribute>agility</attribute>
-                    <skill>skill</skill>
-                    <bonus>weapon attack bonus</bonus>
-                    <die/>
-                </skillequation>
-
-                <skillequation><title>Melee attack</title>
-                    <attribute>dexterity</attribute>
-                    <skill>skill</skill>
-                    <bonus>weapon attack bonus</bonus>
-                    <die/>
-                </skillequation>
-
-                <skillequation><title>Missile attack</title>
-                    <attribute>perception</attribute>
-                    <skill>skill</skill>
-                    <bonus>weapon attack bonus</bonus>
-                    <die/>
-                </skillequation>
-
-                <skillequation><title>Parry Defence</title>
-                    <attribute>dexterity</attribute>
-                    <skill>skill</skill>
-                    <bonus>weapon defence bonus</bonus>
-                    <die/>
-                </skillequation>
-
-                <skillequation><title>Brawl Defence</title>
-                    <attribute>agility</attribute>
-                    <skill>skill</skill>
-                    <bonus>weapon defence bonus</bonus>
-                    <die/>
-                </skillequation>
-
-                <skillequation><title>Weapon damage</title>
-                    <attribute>strength</attribute>
-                    <constant>4</constant>
-                    <bonus>weapon damage bonus</bonus>
-                    <die/>
-                </skillequation>
-
-                <para>
-                    An axe for example has an initiative of +6. If
-                    the character has a skill of 5 and an agility of
-                    3, then their initiative is 5 &#215; 3 (15) + 6 = 21.
-                </para>
 
                 <sect3>
-                    <title>Shields</title>
+                    <title>Weapon statistics</title>
 
                     <para>
-                        If a character is using a shield, then bonuses
-                        from the shield are added to the bonuses of the
-                        primary weapon. This can greatly bias combat in
-                        favour of having a shield. Further, there are
-                        other bonuses gained from using a shield when
-                        fighting multiple opponents, which is described
-                        later.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Fighting with Two Weapons</title>
-
-                    <para>
-                        When fighting with two weapons, the weapon in
-                        the off hand is the secondary weapon, and the
-                        other weapon is considered the primary weapon.
-                        Half the statistics (rounded down) of the
-                        secondary weapon are added to those of the
-                        primary weapon.
+                        There are a variety of different weapons, all with their
+                        own advantages and disadvantages. The table lists the
+                        most common weapons, together with the statistics which
+                        are required in combat.
                     </para>
 
-                    <para>
-                        Since both weapons give a bonus to damage,
-                        this style of fighting has one advantage over
-                        using a shield (which generally doesn't give
-                        any damage bonuses). However, defending with two
-                        weapons isn't as easy as defending with a weapon
-                        and shield.
-                    </para>
+                    <import-weaponlist href="xml/arms.xml" importance="3" style="list"/>
 
                     <para>
-                        The minimum strength requirement of the secondary
-                        weapon is increased by two.
+                        The four ability modifiers - initiative, attack, defence and
+                        damage add to the base ability for a character when they are
+                        using that weapon.
                     </para>
                 </sect3>
             </sect2>
