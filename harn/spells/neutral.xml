@@ -118,7 +118,7 @@ is 3.
 <boost>+40 Bonus is +10</boost>
 <description>
 A spell to protect the caster from enchantment by granting a +5 
-bonus to resist the effects of the spell. This can be either a 
+bonus to resist the effects of a spell. This can be either a 
 bonus to will, soak or any other applicable defence. Multiple 
 veils can be stacked, but each only affects one spell. The veil 
 hinders the caster's own spells. Each veil gives a cumulative -10 
@@ -126,7 +126,64 @@ penalty to all spell casting rolls.
 </description>
 </spell>
 
+<spell name="Open" level="10" convocation="neutral">
+<time>1 hour</time>
+<range>Touch</range>
+<resist>Will</resist>
+<duration>Special</duration>
+<description>
+Opens a minor artifact ready for storing spells into it. The 
+artifact must have had 'focus' cast on it previously. An opened 
+artifact can have spells placed into it with the use of Store. 
+</description>
+</spell>
 
+<spell name="Store" level="0" convocation="neutral">
+<range>Touch</range>
+<duration>Special</duration>
+<description>
+Stores the next spell cast into a minor artifact which has been 
+opened for enchantment. The spell to be stored must be cast on 
+the following round, and must be of at most the rank of the Store. 
+Only the basic spell is stored - any effects of options are ignored. 
+The spell to be stored cannot have a casting time longer than a round. 
+</description>
+</spell>
+
+<spell name="Close" level="0" convocation="neutral">
+<time>1 hour</time>
+<range>Touch</range>
+<duration>Special</duration>
+<boost>+25 Artifact can be activated with gestures</boost>
+<boost>+50 Artifact can be actived with mental command. This 
+requires the artifact to be attuned to</boost>
+<description>
+Closes an opened minor artifact. At this point the trigger event 
+for the artifact is also declared. The basic spell allows command 
+phrases to activate the artifact.
+</description>
+</spell>
+
+<spell name="Disrupt" level="0" convocation="neutral">
+<range>Near</range>
+<resist>Will</resist>
+<duration>Momentary</duration>
+<boost>+25 Range is short</boost>
+<boost>+50 Range is medium</boost>
+<boost>+100 Range is far</boost>
+<description>
+This spell disrupts all magic in the area. Spells which are currently 
+up will fail if their rank is less than or equal to the disrupt, however 
+the Shek-Pvar maintaining the spell gets a will check to resist. Major 
+artifacts are unaffected, though if they are maintaining spell effects, 
+then they need to make a will roll as well to keep them maintained. 
+Minor artifacts can be destroyed with this spell. If the Close that was 
+used is of a equal or lower rank, then all spells in the minor artifact 
+are lost. If the Focus is of equal or lower rank, then the artifact is 
+rendered non-magical (and hence any spells in it are lost, regardless 
+of the Close). 
+</description>
+</spell>
 
 </grimoire>
 
