@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.56 $</version>
-            <date>$Date: 2004-08-09 21:02:23 $</date>
+            <version>$Revision: 1.57 $</version>
+            <date>$Date: 2004-08-30 21:51:05 $</date>
         </cvsinfo>
 
         <license>
@@ -526,6 +526,11 @@
                             throwable weapons have better ranges.
                         </item>
                         
+                        <item name="Thrusting">
+                            A thrusting weapon, when used two handed,
+                            counts as impaling.
+                        </item>
+                        
                         <item name="Blocking">
                             A blocking weapon can be used as a shield. When
                             used as a shield, weapon attributes are not
@@ -666,6 +671,7 @@
                         <category>Bows</category>
                         <category>Clubs</category>
                         <category>Knives</category>
+                        <category>Shields</category>
                         <category>Spears</category>
                         <category>Swords</category>
                     </import-weaponlist>
@@ -1451,6 +1457,13 @@
                 Against light armour, <e>heavy</e> weapons halve the total
                 protective value of the armour if the weapon's damage bonus
                 is greater than the protective value of the armour.
+            </para>
+            
+            <para>
+                Some armour is also <e>soft</e>. Soft armour, due to its
+                material and thickness, is very good against certain types
+                of attacks. The protection gained from soft armour is
+                doubled against stun and mixed attacks.
             </para>
 
             <sect2>

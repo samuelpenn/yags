@@ -4,8 +4,8 @@
 <!--
     List of low tech weapons and armour for Yags.
 
-    Version: $Revision: 1.9 $
-    Date:    $Date: 2004-08-25 20:29:26 $
+    Version: $Revision: 1.10 $
+    Date:    $Date: 2004-08-30 21:51:05 $
  -->
 <equipment>
     <weaponlist>
@@ -67,7 +67,7 @@
                 <initiative>+6</initiative>
                 <attack>+4</attack>
                 <defence>+3</defence>
-                <damage>+12</damage>
+                <damage>+10</damage>
             </combat>
 
             <strength>3</strength>
@@ -76,6 +76,7 @@
             
             <properties>
                 <heavy/>
+                <impaling/>
             </properties>
         </weapon>
 
@@ -96,7 +97,7 @@
                 <initiative>+8</initiative>
                 <attack>+7</attack>
                 <defence>+4</defence>
-                <damage>+17</damage>
+                <damage>+15</damage>
             </combat>
 
             <strength>6</strength>
@@ -106,6 +107,7 @@
             <properties>
                 <twohanded/>
                 <heavy/>
+                <impaling/>
             </properties>
         </weapon>
 
@@ -238,6 +240,7 @@
             
             <properties>
                 <twohanded/>
+                <thrusting/>
             </properties>
         </weapon>
 
@@ -503,10 +506,10 @@
             <class>longshaft</class>
 
             <combat>
-                <initiative>+9</initiative>
+                <initiative>+11</initiative>
                 <attack>+3</attack>
                 <defence>+2</defence>
-                <damage>+9</damage>
+                <damage>+7</damage>
                 <range>
                     <increment>15</increment>
                     <short>10</short>
@@ -522,7 +525,7 @@
 
             <properties>
                 <missile/>
-                <impaling/>
+                <thrusting/>
             </properties>
         </weapon>
 
@@ -541,7 +544,7 @@
             </description>
 
             <combat>
-                <initiative>+9</initiative>
+                <initiative>+12</initiative>
                 <attack>+5</attack>
                 <defence>+3</defence>
                 <damage>+11</damage>
@@ -559,7 +562,7 @@
 
             <properties>
                 <missile/>
-                <impaling/>
+                <thrusting/>
                 <heavy/>
                 <twohanded/>
             </properties>
@@ -775,7 +778,7 @@
             <combat mode="Thrown" importance="2">
                 <initiative>+6</initiative>
                 <attack>+7</attack>
-                <damage>+7</damage>
+                <damage>+5</damage>
 
                 <range strength="true">
                     <increment>15</increment>
@@ -882,50 +885,66 @@
         <armour name="Quilted jacket">
             <description>
                 <para>
-                    A heavy jacket of padded cloth.
+                    A heavy jacket of padded cloth. It is bulkier than
+                    soft leather armour, but its extra thickness adds
+                    greater protection.
+                </para>
+                
+                <para>
+                    It is the most common protection worn by peasant
+                    militia and town guards.
                 </para>
             </description>
             
             <protection>+3</protection>
-            <load>1</load>
+            <load>0.5</load>
             <weight>1</weight>
-            <athletics>1</athletics>
-            <stealth>1</stealth>
+            
+            <athletics>0.5</athletics>
+            <stealth>0</stealth>
+            
             <properties>
                 <light/>
+                <soft/>
             </properties>
         </armour>
 
         <armour name="Quilted vest">
             <protection>+2</protection>
-            <load>0.5</load>
+            <load>0.25</load>
             <weight>0.5</weight>
-            <athletics>1</athletics>
-            <stealth>1</stealth>
+            
+            <athletics>0.25</athletics>
+            <stealth>0</stealth>
             
             <properties>
                 <light/>
+                <soft/>
             </properties>
         </armour>
 
         <armour name="Quilted leggings">
-            <protection>+2</protection>
+            <protection>+1</protection>
             <load>0.5</load>
             <weight>0.5</weight>
-            <athletics>1</athletics>
-            <stealth>1</stealth>
+            
+            <athletics>0.25</athletics>
+            <stealth>0</stealth>
             
             <properties>
                 <light/>
+                <soft/>
             </properties>
         </armour>
 
         <armour name="Soft leather trousers">
-            <protection>+2</protection>
+            <protection>+1</protection>
             <load>0.5</load>
             <weight>0.5</weight>
-            <athletics>1</athletics>
-            <stealth>1</stealth>
+            
+            <athletics>0</athletics>
+            <stealth>0</stealth>
+            
             <notes>Can be worn under chain or ring leggings, or greaves.</notes>
             
             <properties>
@@ -937,9 +956,12 @@
             <protection>+2</protection>
             <load>0.5</load>
             <weight>0.5</weight>
-            <athletics>1</athletics>
-            <stealth>1</stealth>
-            <notes>Can be worn under chain or ring mail, or cuirass and vambraces.</notes>
+            <athletics>0</athletics>
+            <stealth>0</stealth>
+            <notes>
+                Can be worn under chain or ring mail, or cuirass and
+                vambraces.
+            </notes>
             
             <properties>
                 <light/>
@@ -947,23 +969,12 @@
         </armour>
 
         <armour name="Hard leather jacket">
-            <protection>+4</protection>
+            <protection>+3</protection>
             <load>2</load>
             <weight>2</weight>
-            <athletics>2</athletics>
-            <stealth>1</stealth>
             
-            <properties>
-                <light/>
-            </properties>
-        </armour>
-
-        <armour name="Hard leather vest">
-            <protection>+3</protection>
-            <load>1</load>
-            <weight>1</weight>
-            <athletics>1</athletics>
-            <stealth>1</stealth>
+            <athletics>0.5</athletics>
+            <stealth>0</stealth>
             
             <properties>
                 <light/>
@@ -974,15 +985,20 @@
             <protection>+1</protection>
             <load>0.5</load>
             <weight>0.5</weight>
-            <athletics>2</athletics>
-            <stealth>1</stealth>
-            <notes>Can be worn over soft leather.</notes>
+            
+            <athletics>0</athletics>
+            <stealth>0</stealth>
+            
+            <notes>
+                Can be worn over soft leather or quilted armour.
+            </notes>
             
             <properties>
                 <light/>
             </properties>
         </armour>
 
+<!--
         <armour name="Kurbal greaves">
             <protection>+1</protection>
             <load>0.25</load>
@@ -1004,24 +1020,28 @@
                 <light/>
             </properties>
         </armour>
+-->
 
         <armour name="Fur jacket">
             <protection>+4</protection>
             <load>2</load>
-            <athletics>3</athletics>
-            <stealth>1</stealth>
+            
+            <athletics>0.5</athletics>
+            <stealth>0</stealth>
             <properties>
                 <light/>
+                <soft/>
             </properties>
         </armour>
 
         <armour name="Fur trousers">
-            <protection>+3</protection>
+            <protection>+2</protection>
             <load>2</load>
-            <athletics>2</athletics>
-            <stealth>1</stealth>
+            <athletics>0.5</athletics>
+            <stealth>0</stealth>
             <properties>
                 <light/>
+                <soft/>
             </properties>
         </armour>
 
@@ -1036,43 +1056,43 @@
         </armour>
 
         <armour name="Chain habergeon">
-            <protection>+5</protection>
+            <protection>+4</protection>
             <load>3</load>
-            <athletics>7</athletics>
-            <stealth>5</stealth>
+            <athletics>0.5</athletics>
+            <stealth>1</stealth>
             <properties>
                 <mail/>
                 <heavy/>
             </properties>
         </armour>
 
-        <armour name="Chain hauberk">
-            <protection>+8</protection>
+        <armour name="Mail hauberk">
+            <protection>+6</protection>
             <load>4</load>
-            <athletics>5</athletics>
-            <stealth>4</stealth>
+            <athletics>0.75</athletics>
+            <stealth>1</stealth>
             <properties>
                 <mail/>
                 <heavy/>
             </properties>
         </armour>
 
-        <armour name="Chain leggings">
-            <protection>+5</protection>
+        <armour name="Mail leggings">
+            <protection>+3</protection>
             <load>3</load>
-            <athletics>6</athletics>
-            <stealth>4</stealth>
+            <athletics>0.5</athletics>
+            <stealth>1</stealth>
             <properties>
                 <mail/>
                 <heavy/>
             </properties>
         </armour>
 
-        <armour name="Chain coif">
+        <armour name="Mail coif">
             <protection>+1</protection>
             <load>0.5</load>
-            <athletics>1</athletics>
-            <stealth>2</stealth>
+            <athletics>0</athletics>
+            <stealth>0.25</stealth>
             <notes>Often worn under a helm.</notes>
             <properties>
                 <mail/>
@@ -1081,10 +1101,10 @@
         </armour>
 
         <armour name="Ring habergeon">
-            <protection>+5</protection>
+            <protection>+4</protection>
             <load>4</load>
-            <athletics>8</athletics>
-            <stealth>8</stealth>
+            <athletics>0.75</athletics>
+            <stealth>1</stealth>
             <notes>Can be worn over soft leather.</notes>
             <properties>
                 <mail/>
@@ -1093,10 +1113,10 @@
         </armour>
 
         <armour name="Ring hauberk">
-            <protection>+8</protection>
+            <protection>+6</protection>
             <load>5</load>
-            <athletics>6</athletics>
-            <stealth>6</stealth>
+            <athletics>1</athletics>
+            <stealth>1</stealth>
             <notes>Can be worn over soft leather.</notes>
             <properties>
                 <mail/>
@@ -1105,10 +1125,10 @@
         </armour>
 
         <armour name="Ring leggings">
-            <protection>+5</protection>
+            <protection>+3</protection>
             <load>4</load>
-            <athletics>8</athletics>
-            <stealth>8</stealth>
+            <athletics>1</athletics>
+            <stealth>1</stealth>
             <notes>Can be worn over soft leather.</notes>
             <properties>
                 <mail/>
@@ -1116,6 +1136,7 @@
             </properties>
         </armour>
 
+<!--
         <armour name="Ring coif">
             <protection>+1</protection>
             <load>1</load>
@@ -1127,6 +1148,7 @@
                 <heavy/>
             </properties>
         </armour>
+-->
 <!--
         <armour name="Plate cuirass">
             <protection>+3</protection>
