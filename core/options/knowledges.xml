@@ -3,7 +3,7 @@
 <!--
     List of knowledge available to characters.
 
-    Version: $Revision: 1.7 $
+    Version: $Revision: 1.8 $
     Author: Samuel Penn
 -->
 
@@ -37,6 +37,15 @@
             </example>
         </examples>
     </skill>
+    
+    <skill name="Beast lore" type="knowledge">
+        <description>
+            <para>
+                Knowledge of animals, how to recognise them and what
+                their behaviours are.
+            </para>
+        </description>
+    </skill>
 
     <!-- Chirurgury -->
     <skill name="Chirurgury" type="knowledge">
@@ -53,54 +62,39 @@
     <skill name="First aid" type="knowledge">
         <description>
             <para>
-                Care and treatment of wounds to the extent of stopping
-                bleeding, and preventing infection. General first aid
-                checks are made with intelligence, though some tasks,
-                such as removing an arrow from a wound, use dexterity.
+                Provides care and treatment of wounds to stop bleeding and
+                prevent infection. Once a wound has been successfully
+                first aided, it may begin healing naturally. First aid
+                checks are generally made with intelligence. First aid can
+                also be used to treat stuns.
             </para>
 
             <para>
-                A first aid check may be made after someone has become
-                injured, though only one first aid roll is allowed for
-                a single set of injuries. A new first aid roll cannot
-                be made until the subject has received more injuries.
-            </para>
-
-            <para>
-                A successful first aid check will stabalise a wound and
-                allow it to begin healing naturally. Failure to perform
-                first aid on a subject means that nightly healing rolls
-                are not possible, and weekly checks are at +10 to the
-                target difficulty.
+                To treat a character's wounds, the base difficulty is 10.
+                This is modified upwards by the total of the character's
+                stun and wound penalties (a fatally wounded character (-15)
+                would be difficulty 25 to treat). Success means that the
+                wounds will begin healing naturally. If the roll was made
+                by 10 or more, then one level of wound is also healed.
             </para>
             
             <para>
-                If the subject is both stunned and wounded, seperate
-                first aid rolls are required. If the first aid check is
-                10 or more points above the target required, then one
-                level of stun or wound is also healed immediately. A
-                character may try to first aid themselves, though they
-                suffer all the normal penalties for being injured.
+                Stuns are a base difficulty of zero to first aid, again
+                modified by total stun and wound penalties. Success heals
+                one stun, and each 10 over that heals another level of
+                stuns. Stuns do not need to be treated before they begin
+                healing.
             </para>
         </description>
-
-        <examples>
-            <example target="0">First aid a bruised (1 stun) subject</example>
-            <example target="5">First aid a dazed (2 stuns) subject</example>
-            <example target="10">First aid a bloodied or battered (3-4 stuns) subject</example>
-            <example target="10">First aid a beaten or oblivious (5-6 stuns) subject</example>
-            <example target="10">First aid a hurt (1 wound) subject</example>
-            <example target="15">First aid light or medium (2-3) wounds</example>
-            <example target="20">First aid serious or critical (4-5) wounds</example>
-            <example target="25">First aid fatal (6) wounds</example>
-        </examples>
     </skill>
 
     <skill name="Vetinary" type="knowledge">
         <description>
             <para>
                 First aid for animals. The <e>first aid</e> skill may be
-                substituted, though the roll is halved.
+                substituted, though it takes twice as long, and no wounds
+                and no more than one stun can be healed immediately,
+                regardless of the roll.
             </para>
         </description>
     </skill>
@@ -114,9 +108,46 @@
 
     <skill name="Heraldry" type="knowledge">
         <description>
-            Knowledge of the family history of a given line, normally
-            a noble house. Based on intelligence.
+            <para>
+                Knowledge of heraldic arms, flags and other symbols. A
+                person skilled in heraldry can recognise nobles, understand
+                and describe the code of heraldic arms, and make guesses
+                as to who someone is allied with based on their coat of
+                arms. Based on intelligence.
+            </para>
+            
+            <para>
+                <e>Area lore</e> may be substituted, though all rolls are
+                halved and it can only be used for recognition.
+            </para>
         </description>
+        
+        <examples>
+            <example target="10">
+                Recognise a major personality based on their arms,
+                such as a principle member of the royal family, or a
+                major duke or earl. Recognise that someone belongs to
+                a major noble house.
+            </example>
+            
+            <example target="20">
+                Recognise a very important person, such as a duke or
+                earl, or a secondary member of the royal family.
+            </example>
+            
+            <example target="30">
+                Recognise an important land owner, such as a powerful
+                baron.
+            </example>
+            
+            <example target="40">
+                Recognise a baron or other low ranking land owner.
+            </example>
+            
+            <example target="50">
+                Recognise someone really obscure.
+            </example>
+        </examples>
     </skill>
 
     <skill name="Herb lore" type="knowledge">
@@ -143,8 +174,21 @@
 
     <skill name="Religion" type="knowledge">
         <description>
-            Knowledge of a religion, including its gods, customs
-            and rituals. Based on intelligence.
+            <para>
+                There are many <e>religion</e> skills, one for each god or
+                cult. Knowledge of other gods and religions can be provided
+                by a single religion skill (though the amount depends on
+                hoe much contact that religion has with the others), but
+                such knowledge will be biased by the point of view of the
+                source of the skill.
+            </para>
+            
+            <para>
+                The skill gives knowledge of the god, customs and rituals,
+                as well as political and social aspects of the religion.
+                <e>Techniques</e> may be available for particular cults,
+                which may be secret knowledges or supernatural abilities.
+            </para>
         </description>
     </skill>
 
