@@ -16,8 +16,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2004-10-19 17:44:06 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2004-10-24 21:27:34 $</date>
         </cvsinfo>
 
         <license>
@@ -126,13 +126,48 @@
             </sect2>
 
             <sect2>
-                <title>Professional Skills</title>
+                <title>Skill Rules</title>
 
-                <para>
-                    Professional skills are generally picked up through
-                    training with a master, often during apprenticeship.
-                </para>
-
+                <sect3>
+                    <title>Defaults</title>
+                    
+                    <para>
+                        Some skills have a default - this will generally be
+                        one of the <e>talents</e>. If desired, the default
+                        can be used instead, but the result (after the die
+                        roll) is halved, plus the chance of fumbling is
+                        doubled.
+                    </para>
+                    
+                    <para>
+                        A default skill may also restrict the type of
+                        tasks which are possible. For example, <e>Trade</e>
+                        defaults to <e>Guile</e>, but the latter can only
+                        be used to barter, and isn't much use if the
+                        character needs to know the real value of goods.
+                    </para>
+                </sect3>
+                
+                <sect3>
+                    <title>Pre-requisites</title>
+                    
+                    <para>
+                        A few skills have pre-requisites. Before this skill
+                        can be purchased at level one, all pre-requisites
+                        must be met. A skill like Physics might have a
+                        pre-requisite of Mathematics-2 and Science-2 for
+                        example, which means both skills must be known at
+                        level 2 before buying physics.
+                    </para>
+                    
+                    <para>
+                        Further, the main skill may never be more than
+                        double the level of any of the pre-requisites. A
+                        physicist would have to raise their Mathematics
+                        and Science to at least 3, before raising
+                        Physics to 6.
+                    </para>
+                </sect3>
             </sect2>
         </sect1>
 
@@ -165,7 +200,8 @@
             <sect2>
                 <title>Knowledges</title>
 
-                <import-skills href="options/knowledges.xml" type="knowledge"/>
+                <import-skills href="options/skills/knowledges.xml"
+                               type="knowledge"/>
             </sect2>
 
 
@@ -212,7 +248,8 @@
                     not apprenticed to a master will be difficult.
                 </para>
 
-                <import-skills href="options/professional-skills.xml" type="professional"/>
+                <import-skills href="options/skills/professional.yags" 
+                               type="professional"/>
             </sect2>
 
 
