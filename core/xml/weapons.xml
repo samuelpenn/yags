@@ -4,8 +4,8 @@
 <!--
     Weapon list for Yags.
 
-    Version: $Revision: 1.3 $
-    Date:    $Date: 2003-07-02 20:24:08 $
+    Version: $Revision: 1.4 $
+    Date:    $Date: 2003-08-09 10:09:18 $
  -->
 <equipment>
     <weaponlist>
@@ -22,7 +22,10 @@
 
         <weapon name="Axe">
             <description>
-                A battle axe for single handed use.
+                <para>
+                    A battle axe designed for single handed use. It has a
+                    single head, with a single blade.
+                </para>
             </description>
 
             <class>single</class>
@@ -190,6 +193,7 @@
 
             <strength>5</strength>
             <load>3</load>
+            <reach>5</reach>
         </weapon>
 
         <weapon name="Light lance">
@@ -204,6 +208,7 @@
 
             <strength>2</strength>
             <load>3</load>
+            <reach>5</reach>
         </weapon>
 
         <weapon name="Heavy lance">
@@ -218,6 +223,7 @@
 
             <strength>3</strength>
             <load>3</load>
+            <reach>5</reach>
         </weapon>
 
         <weapon name="Broad sword">
@@ -230,306 +236,372 @@
                 <damage>+12</damage>
             </combat>
 
+            <combat mode="Thrown" importance="1">
+                <initiative>+3</initiative>
+                <attack>+2</attack>
+                <damage>+9</damage>
+            </combat>
+
             <strength>3</strength>
             <load>4</load>
+            <reach>3</reach>
         </weapon>
 
 
         <weapon name="Mace">
             <class>single</class>
-            <initiative>+5</initiative>
-            <attack>+3</attack>
-            <defence>+3</defence>
-            <damage>+11</damage>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+5</initiative>
+                <attack>+3</attack>
+                <defence>+3</defence>
+                <damage>+11</damage>
+            </combat>
+
             <strength>3</strength>
             <load>3</load>
+            <reach>2</reach>
         </weapon>
+
         <weapon name="Quarterstaff">
             <class>longshaft</class>
             <class>great</class>
-            <initiative>+9</initiative>
-            <attack>+5</attack>
-            <defence>+9</defence>
-            <damage type="stun">+8</damage>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+9</initiative>
+                <attack>+5</attack>
+                <defence>+9</defence>
+                <damage type="split">+8</damage>
+            </combat>
+
             <strength>4</strength>
             <load>2</load>
+            <reach>4</reach>
         </weapon>
+
         <weapon name="Round shield">
             <class>shield</class>
-            <initiative>+0</initiative>
-            <attack>+2</attack>
-            <defence>+7</defence>
-            <damage>+0</damage>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+0</initiative>
+                <attack>+2</attack>
+                <defence>+7</defence>
+                <damage>+0</damage>
+                <bash>+5</bash>
+            </combat>
+
             <strength>2</strength>
-            <bash>+4</bash>
             <load>3</load>
+            <reach>2</reach>
         </weapon>
+
         <weapon name="Small shield">
             <class>shield</class>
-            <initiative>+0</initiative>
-            <attack>+2</attack>
-            <defence>+4</defence>
-            <damage>+0</damage>
-            <bash>+3</bash>
+
+            <combat mode="Melee" importance="2">
+                <initiative>+0</initiative>
+                <attack>+2</attack>
+                <defence>+4</defence>
+                <damage>+0</damage>
+                <bash>+3</bash>
+            </combat>
+
             <strength>2</strength>
             <load>2</load>
+            <reach>2</reach>
         </weapon>
+
         <weapon name="Buckler">
             <class>shield</class>
-            <initiative>+0</initiative>
-            <attack>+0</attack>
-            <defence>+3</defence>
-            <damage>+0</damage>
-            <bash>+2</bash>
+
+            <combat mode="Melee" importance="1">
+                <initiative>+0</initiative>
+                <attack>+0</attack>
+                <defence>+3</defence>
+                <damage>+0</damage>
+                <bash>+2</bash>
+            </combat>
+
             <strength>1</strength>
             <load>1</load>
+            <reach>1</reach>
         </weapon>
-        <weapon name="Kite shield">
-            <class>shield</class>
-            <initiative>+0</initiative>
-            <attack>+1</attack>
-            <defence>+8</defence>
-            <damage>+0</damage>
-            <bash>+4</bash>
-            <strength>2</strength>
-            <load>4</load>
-        </weapon>
-        <weapon name="Knight shield">
-            <class>shield</class>
-            <initiative>+0</initiative>
-            <attack>+3</attack>
-            <defence>+6</defence>
-            <damage>+0</damage>
-            <bash>+4</bash>
-            <strength>2</strength>
-            <load>3</load>
-        </weapon>
-        <weapon name="Tower shield">
-            <class>shield</class>
-            <initiative>+0</initiative>
-            <attack>+0</attack>
-            <defence>+9</defence>
-            <damage>+0</damage>
-            <bash>+5</bash>
-            <strength>3</strength>
-            <load>5</load>
-        </weapon>
+
         <weapon name="Short sword">
             <class>single</class>
-            <initiative>+5</initiative>
-            <attack>+4</attack>
-            <defence>+3</defence>
-            <damage>+9</damage>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+5</initiative>
+                <attack>+4</attack>
+                <defence>+3</defence>
+                <damage>+9</damage>
+            </combat>
+
             <strength>2</strength>
             <load>2</load>
+            <reach>2</reach>
         </weapon>
+
         <weapon name="Spear">
             <class>single</class>
             <class>longshaft</class>
-            <initiative>+9</initiative>
-            <attack>+3</attack>
-            <defence>+2</defence>
-            <damage>+9</damage>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+9</initiative>
+                <attack>+3</attack>
+                <defence>+2</defence>
+                <damage>+9</damage>
+            </combat>
+
+            <combat mode="Thrown" importance="3">
+                <initiative>+5</initiative>
+                <attack>+3</attack>
+                <damage>+9</damage>
+            </combat>
+
             <strength>2</strength>
             <load>2</load>
+            <reach>4</reach>
         </weapon>
 
         <weapon name="Hand axe">
             <class>single</class>
-            <initiative>+3</initiative>
-            <attack>+2</attack>
-            <defence>+1</defence>
-            <damage>+5</damage>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+3</initiative>
+                <attack>+2</attack>
+                <defence>+1</defence>
+                <damage>+5</damage>
+            </combat>
+
             <strength>1</strength>
             <load>1</load>
-        </weapon>
-
-        <weapon name="Maul">
-            <class>great</class>
-            <initiative>+8</initiative>
-            <attack>+6</attack>
-            <defence>+3</defence>
-            <damage>+14</damage>
-            <strength>5</strength>
-            <load>5</load>
-        </weapon>
-
-        <weapon name="Morningstar">
-            <class>single</class>
-            <initiative>+3</initiative>
-            <attack>+4</attack>
-            <defence>+3</defence>
-            <damage>+9</damage>
-            <strength>2</strength>
-            <load>2</load>
-        </weapon>
-
-        <weapon name="Poleaxe">
-            <class>longshaft</class>
-            <initiative>+15</initiative>
-            <attack>+6</attack>
-            <defence>+4</defence>
-            <damage>+13</damage>
-            <strength>5</strength>
-            <load>3</load>
+            <reach>1</reach>
         </weapon>
 
         <weapon name="Warhammer">
             <class>single</class>
-            <initiative>+6</initiative>
-            <attack>+3</attack>
-            <defence>+2</defence>
-            <damage>+12</damage>
+
+            <combat mode="Melee" importance="2">
+                <initiative>+6</initiative>
+                <attack>+3</attack>
+                <defence>+2</defence>
+                <damage>+12</damage>
+            </combat>
+
             <strength>3</strength>
             <load>3</load>
+            <reach>3</reach>
         </weapon>
 
         <weapon name="War flail">
             <class>flail</class>
-            <initiative>+9</initiative>
-            <attack>+6</attack>
-            <defence>+6</defence>
-            <damage>+10</damage>
+
+            <combat mode="Melee" importance="1">
+                <initiative>+9</initiative>
+                <attack>+6</attack>
+                <defence>+6</defence>
+                <damage>+10</damage>
+            </combat>
+
             <strength>3</strength>
             <load>3</load>
+            <reach>4</reach>
         </weapon>
 
 
-
-
-        <weapon name="Thrown axe">
+        <weapon name="Throwing axe">
             <class>thrown</class>
-            <initiative>+3</initiative>
-            <attack>+3</attack>
-            <damage>+9</damage>
-            <strength>3</strength>
-            <load>3</load>
-            <range>
-                <short>10</short>
-                <medium>20</medium>
-                <long>30</long>
-                <extreme>40</extreme>
-            </range>
-        </weapon>
 
-        <weapon name="Long bow">
-            <class>bow</class>
-            <initiative>+2</initiative>
-            <attack>+7</attack>
-            <damage>+12</damage>
-            <strength>3-5</strength>
-            <load>2</load>
-            <range>
-                <short>40</short>
-                <medium>80</medium>
-                <long>160</long>
-                <extreme>240</extreme>
-            </range>
+            <combat mode="Melee" importance="1">
+                <initiative>+3</initiative>
+                <attack>+1</attack>
+                <defence>+1</defence>
+                <damage>+4</damage>
+            </combat>
+
+            <combat mode="Thrown" importance="2">
+                <initiative>+2</initiative>
+                <attack>+2</attack>
+                <damage>+4</damage>
+                <range strength="true">
+                    <increment>10</increment>
+                    <short>3</short>
+                    <medium>6</medium>
+                    <long>9</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>1</load>
+            <reach>1</reach>
         </weapon>
 
         <weapon name="Short bow">
             <class>bow</class>
-            <initiative>+4</initiative>
-            <attack>+14</attack>
-            <damage>+7</damage>
+
+            <description>
+                <para>
+                    The short bow is a simple bow, about a metre in
+                    length. It is easy to pull, and most archers can
+                    comfortably exceed the maximum pull of the bow,
+                    so the strength of the archer is not factored into
+                    the penetrating power of the arrow.
+                </para>
+            </description>
+
+            <combat mode="Projectile" importance="3">
+                <initiative>+4</initiative>
+                <attack>+10</attack>
+                <damage>20</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>30</short>
+                    <medium>60</medium>
+                    <long>120</long>
+                </range>
+            </combat>
+
             <strength>2</strength>
             <load>1</load>
-            <range>
-                <short>25</short>
-                <medium>50</medium>
-                <long>100</long>
-                <extreme>150</extreme>
-            </range>
+            <reach>0</reach>
+        </weapon>
+
+        <weapon name="Long bow">
+            <class>bow</class>
+
+            <description>
+                <para>
+                    Unlike the short bow, the long bow is often composite in
+                    nature, being formed of two types of wood for maximum
+                    tension. Long bows are crafted according to the strength
+                    of the archer. A weaker archer will have great
+                    difficulty in drawing a high strength bow.
+                </para>
+            </description>
+
+            <combat mode="Projectile" importance="3">
+                <initiative>+2</initiative>
+                <attack>+7</attack>
+                <damage>+12</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>60</short>
+                    <medium>120</short>
+                    <long>240</medium>
+                </range>
+            </combat>
+
+            <strength>3</strength>
+            <load>2</load>
+            <reach>0</reach>
         </weapon>
 
         <weapon name="Thrown dagger">
             <class>thrown</class>
-            <initiative>+2</initiative>
-            <attack>+3</attack>
-            <damage>+3</damage>
+
+            <description>
+                <para>
+                    A dagger specially balanced for throwing.
+                </para>
+            </description>
+
+            <combat mode="Thrown" importance="3">
+                <initiative>+2</initiative>
+                <attack>+3</attack>
+                <damage>+3</damage>
+                <range strength="true">
+                    <increment>10</increment>
+                    <short>2</short>
+                    <medium>5</medium>
+                    <long>10</long>
+                </range>
+            </combat>
+
             <strength>2</strength>
             <load>1</load>
-            <range>
-                <short>5</short>
-                <medium>15</medium>
-                <long>20</long>
-                <extreme>30</extreme>
-            </range>
+            <reach>1</reach>
         </weapon>
 
         <weapon name="Thrown knife">
             <class>thrown</class>
-            <initiative>+2</initiative>
-            <attack>+3</attack>
-            <damage>+2</damage>
+
+            <combat mode="Thrown" importance="3">
+                <initiative>+2</initiative>
+                <attack>+3</attack>
+                <damage>+2</damage>
+                <range strength="true">
+                    <increment>10</increment>
+                    <short>2</short>
+                    <medium>5</medium>
+                    <long>10</long>
+                </range>
+            </combat>
+
             <strength>1</strength>
             <load>0.25</load>
-            <range>
-                <short>5</short>
-                <medium>15</medium>
-                <long>20</long>
-                <extreme>30</extreme>
-            </range>
+            <reach>0</reach>
         </weapon>
 
         <weapon name="Sling">
             <class>thrown</class>
-            <initiative>+1</initiative>
-            <attack>+8</attack>
-            <damage>+7</damage>
+
+            <combat mode="Projectile" importance="2">
+                <initiative>+1</initiative>
+                <attack>+8</attack>
+                <damage>+7</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>20</short>
+                    <medium>40</medium>
+                    <long>60</long>
+                </range>
+            </combat>
+
             <strength>2</strength>
             <load>0</load>
-            <range>
-                <short>20</short>
-                <medium>40</medium>
-                <long>60</long>
-                <extreme>100</extreme>
-            </range>
-        </weapon>
-
-        <weapon name="Thrown spear">
-            <class>thrown</class>
-            <initiative>+5</initiative>
-            <attack>+5</attack>
-            <damage>+9</damage>
-            <strength>2</strength>
-            <load>2</load>
-            <range>
-                <short>15</short>
-                <medium>25</medium>
-                <long>35</long>
-                <extreme>50</extreme>
-            </range>
+            <reach>0</reach>
         </weapon>
 
         <weapon name="Javelin">
             <class>thrown</class>
-            <initiative>+6</initiative>
-            <attack>+7</attack>
-            <damage>+7</damage>
+
+            <combat mode="Thrown" importance="2">
+                <initiative>+6</initiative>
+                <attack>+7</attack>
+                <damage>+7</damage>
+
+                <range strength="true">
+                    <increment>15</increment>
+                    <short>3</short>
+                    <medium>6</medium>
+                    <long>9</long>
+                </range>
+            </combat>
+
             <strength>2</strength>
             <load>2</load>
-            <range>
-                <short>15</short>
-                <medium>30</medium>
-                <long>45</long>
-                <extreme>60</extreme>
-            </range>
+            <reach>3</reach>
         </weapon>
 
         <weapon name="Light crossbow">
             <class>crossbow</class>
-            <initiative>+4</initiative>
-            <attack>+11</attack>
-            <damage>15</damage>
+
+            <combat mode="Projectile" importance="2">
+                <initiative>+4</initiative>
+                <attack>+11</attack>
+                <damage>15</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>15</short>
+                    <medium>30</medium>
+                    <long>60</long>
+                </range>
+            </combat>
+
             <strength>2</strength>
             <load>2</load>
-            <range>
-                <short>15</short>
-                <medium>30</medium>
-                <long>60</long>
-                <extreme>120</extreme>
-            </range>
+            <reach>0</reach>
         </weapon>
 
         <weapon name="Medium crossbow">
