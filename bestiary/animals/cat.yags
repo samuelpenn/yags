@@ -1,0 +1,205 @@
+<?xml version = '1.0' ?>
+<?xml-stylesheet href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<!--
+    $Revision: 1.1 $
+    $Date: 2003-11-01 23:37:12 $
+
+    Bestiary containing information on domestic cats.
+-->
+
+<bestiary>
+    <beast name="Cat">
+        <information>
+            <type>Animal</type>
+            <demeanor>Predator</demeanor>
+
+            <habitat climate="Any" terrain="Any" frequency="Varies"/>
+
+            <organisation group="Trained" number="Varies"/>
+
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                Domestic cats tend to be small, and actually not that well
+                domesticated (at least not as much as dogs are).
+            </short>
+
+            <movement>
+                <walk normal="10" max="5"/>
+            </movement>
+
+            <physical>
+                <para>
+                    Domestic cats vary greatly in colour and size, though
+                    are generally on the small size. They see well in the
+                    dark, and unlike dogs, rely more on their vision than
+                    their sense of smell.
+                </para>
+            </physical>
+
+            <social>
+                <para>
+                </para>
+            </social>
+        </description>
+
+        <attributes size="1" soak="12">
+            <attribute name="strength" score="1"/>
+            <attribute name="stamina" score="3"/>
+            <attribute name="agility" score="5"/>
+            <attribute name="dexterity" score="1"/>
+            <attribute name="perception" score="4"/>
+            <attribute name="intelligence" score="1"/>
+            <attribute name="charisma" score="2"/>
+            <attribute name="will" score="2"/>
+        </attributes>
+
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="7"/>
+                <skill name="Awareness" score="5"/>
+                <skill name="Brawl" score="5"/>
+                <skill name="Charm" score="0"/>
+                <skill name="Guile" score="0"/>
+                <skill name="Sleight" score="1"/>
+                <skill name="Stealth" score="7"/>
+                <skill name="Throw" score="0"/>
+            </group>
+
+            <group name="Skills" type="skills">
+                <skill name="Survival" score="4"/>
+                <skill name="Swim" score="1"/>
+            </group>
+        </skills>
+
+        <combat>
+            <combatstyle style="Bite and claw" skill="Brawl">
+                <initiative attribute="agility" bonus="-10"/>
+                <attack attribute="agility" bonus="-3"/>
+                <defence attribute="agility" bonus="-2"/>
+                <damage type="split" bonus="-3"/>
+            </combatstyle>
+
+            <armourstyle style="Base"/>
+        </combat>
+
+        <passions>
+            <passion name="Bravery" score="3"/>
+            <passion name="Ego" score="2"/>
+            <passion name="Restraint" score="2"/>
+            <passion name="Temperence" score="2"/>
+        </passions>
+
+        <advantages>
+            <advantage name="Animal"/>
+            <advantage name="Night vision" score="+2"/>
+            <advantage name="Good sense of smell" score="+1"/>
+            <advantage name="Good hearing" score="+1"/>
+
+            <advantage name="Ambush"/>
+        </advantages>
+    </beast>
+
+    <beast name="Wild cat">
+        <information>
+            <type>Animal</type>
+            <demeanor>Predator</demeanor>
+
+            <habitat climate="Any" terrain="Any" frequency="Varies"/>
+
+            <organisation group="Solitary" number="1-2"/>
+
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                Wild cats tend to be viscious versions of domestic cats.
+                Sometimes, they are half breeds, or just abandoned
+                domestic cats.
+            </short>
+
+            <movement>
+                <walk normal="10" max="5"/>
+            </movement>
+
+            <physical>
+                <para>
+                    Wild cats are a common predator, feeding off birds
+                    and small mammals, often near human settlements (where
+                    their typical prey has been pre gathered for them).
+                </para>
+            </physical>
+
+            <social>
+                <para>
+                </para>
+            </social>
+        </description>
+
+        <attributes size="2" soak="12">
+            <attribute name="strength" score="1"/>
+            <attribute name="stamina" score="3"/>
+            <attribute name="agility" score="5"/>
+            <attribute name="dexterity" score="1"/>
+            <attribute name="perception" score="4"/>
+            <attribute name="intelligence" score="1"/>
+            <attribute name="charisma" score="1"/>
+            <attribute name="will" score="2"/>
+        </attributes>
+
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="6"/>
+                <skill name="Awareness" score="5"/>
+                <skill name="Brawl" score="6"/>
+                <skill name="Charm" score="0"/>
+                <skill name="Guile" score="0"/>
+                <skill name="Sleight" score="1"/>
+                <skill name="Stealth" score="7"/>
+                <skill name="Throw" score="0"/>
+            </group>
+
+            <group name="Skills" type="skills">
+                <skill name="Survival" score="5"/>
+                <skill name="Swim" score="1"/>
+            </group>
+        </skills>
+
+        <combat>
+            <combatstyle style="Bite and claw" skill="Brawl">
+                <initiative attribute="agility" bonus="-10"/>
+                <attack attribute="agility" bonus="-3"/>
+                <defence attribute="agility" bonus="-2"/>
+                <damage type="split" bonus="-2"/>
+            </combatstyle>
+
+            <armourstyle style="Base"/>
+        </combat>
+
+        <passions>
+            <passion name="Bravery" score="3"/>
+            <passion name="Ego" score="2"/>
+            <passion name="Restraint" score="2"/>
+            <passion name="Temperence" score="2"/>
+        </passions>
+
+        <advantages>
+            <advantage name="Animal"/>
+            <advantage name="Night vision" score="+2"/>
+            <advantage name="Good sense of smell" score="+1"/>
+            <advantage name="Good hearing" score="+1"/>
+
+            <advantage name="Ambush"/>
+            <advantage name="Killing blow"/>
+        </advantages>
+    </beast>
+
+
+</bestiary>

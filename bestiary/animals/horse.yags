@@ -4,8 +4,8 @@
     type="text/xsl"?>
 
 <!--
-    $Revision: 1.2 $
-    $Date: 2003-10-31 23:23:00 $
+    $Revision: 1.3 $
+    $Date: 2003-11-01 23:37:12 $
 
     Bestiary containing information on horses.
 -->
@@ -29,7 +29,88 @@
     </beast>
 
     <!-- Riding horse -->
-    <beast name="Horse, Riding">
+    <beast name="Pony">
+        <information>
+            <type>Animal</type>
+            <demeanor>Herd</demeanor>
+
+            <habitat climate="Temperate" terrain="Forest" frequency="Rare"/>
+            <habitat climate="Temperate" terrain="Mountain" frequency="Rare"/>
+            <habitat climate="Temperate" terrain="Plains" frequency="Uncommon"/>
+
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <aka>Palfrey</aka>
+            <short>
+                Ponies are small or immature horses.
+            </short>
+
+            <movement>
+                <walk normal="15" max="5"/>
+            </movement>
+        </description>
+
+        <attributes size="6" soak="12">
+            <attribute name="strength" score="4"/>
+            <attribute name="stamina" score="3"/>
+            <attribute name="agility" score="3"/>
+            <attribute name="dexterity" score="1"/>
+            <attribute name="perception" score="3"/>
+            <attribute name="intelligence" score="1"/>
+            <attribute name="charisma" score="1"/>
+            <attribute name="will" score="1"/>
+        </attributes>
+
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="3"/>
+                <skill name="Awareness" score="4"/>
+                <skill name="Brawl" score="2"/>
+                <skill name="Charm" score="0"/>
+                <skill name="Guile" score="0"/>
+                <skill name="Sleight" score="1"/>
+                <skill name="Stealth" score="2"/>
+                <skill name="Throw" score="0"/>
+            </group>
+
+            <group name="Misc" type="skills">
+                <skill name="Survival" score="2"/>
+                <skill name="Swim" score="2"/>
+            </group>
+        </skills>
+
+        <combat>
+            <combatstyle style="Kick" skill="Brawl">
+                <initiative attribute="agility" bonus="+3"/>
+                <attack attribute="agility" bonus="+2"/>
+                <defence attribute="agility" bonus="+1"/>
+                <damage type="split" bonus="+6"/>
+            </combatstyle>
+        </combat>
+
+        <passions>
+            <passion name="Bravery" score="2"/>
+            <passion name="Temperence" score="2"/>
+            <passion name="Restraint" score="2"/>
+            <passion name="Ego" score="2"/>
+        </passions>
+
+        <advantages>
+            <advantage name="Animal"/>
+            <advantage name="Acute sense of smell" score="+2"/>
+            <advantage name="Acute sense of hearing" score="+1"/>
+            <advantage name="Brontophobia"/>
+            <advantage name="Phobia (blood)"/>
+            <advantage name="Extra encumbrance" score="+2"/>
+        </advantages>
+    </beast>
+
+
+    <!-- Riding horse -->
+    <beast name="Riding horse">
         <information>
             <type>Animal</type>
             <demeanor>Herd</demeanor>
@@ -58,7 +139,7 @@
         </description>
 
         <attributes size="7" soak="15">
-            <attribute name="strength" score="7" half="3"/>
+            <attribute name="strength" score="5"/>
             <attribute name="stamina" score="4"/>
             <attribute name="agility" score="3"/>
             <attribute name="dexterity" score="1"/>
@@ -91,7 +172,7 @@
                 <initiative attribute="agility" bonus="+3"/>
                 <attack attribute="agility" bonus="+4"/>
                 <defence attribute="agility" bonus="+1"/>
-                <damage type="split" bonus="+6"/>
+                <damage type="split" bonus="+3"/>
             </combatstyle>
         </combat>
 
@@ -108,12 +189,13 @@
             <advantage name="Acute sense of hearing" score="+1"/>
             <advantage name="Brontophobia"/>
             <advantage name="Phobia (blood)"/>
+            <advantage name="Extra encumbrance" score="+2"/>
         </advantages>
     </beast>
 
 
     <!-- Light war horse -->
-    <beast name="Horse, Light War">
+    <beast name="Light war horse">
         <information>
             <type>Animal</type>
             <demeanor>Herd</demeanor>
@@ -148,7 +230,7 @@
         </description>
 
         <attributes size="8" soak="15">
-            <attribute name="strength" score="8" half="4"/>
+            <attribute name="strength" score="6"/>
             <attribute name="stamina" score="4"/>
             <attribute name="agility" score="4"/>
             <attribute name="dexterity" score="1"/>
@@ -182,7 +264,7 @@
                 <initiative attribute="agility" bonus="+4"/>
                 <attack attribute="agility" bonus="+3"/>
                 <defence attribute="agility" bonus="+1"/>
-                <damage type="split" bonus="+7"/>
+                <damage type="split" bonus="+3"/>
             </combatstyle>
         </combat>
 
@@ -197,11 +279,12 @@
             <advantage name="Animal"/>
             <advantage name="Acute sense of smell" score="+2"/>
             <advantage name="Acute sense of hearing" score="+1"/>
+            <advantage name="Extra encumbrance" score="+3"/>
         </advantages>
     </beast>
 
     <!-- Heavy war horse -->
-    <beast name="Horse, Heavy War">
+    <beast name="Heavy war horse">
         <information>
             <type>Animal</type>
             <demeanor>Herd</demeanor>
@@ -237,7 +320,7 @@
 
 
         <attributes size="10" soak="15">
-            <attribute name="strength" score="10" half="5"/>
+            <attribute name="strength" score="7"/>
             <attribute name="stamina" score="5"/>
             <attribute name="agility" score="3"/>
             <attribute name="dexterity" score="1"/>
@@ -271,7 +354,7 @@
                 <initiative attribute="agility" bonus="+4"/>
                 <attack attribute="agility" bonus="+3"/>
                 <defence attribute="agility" bonus="+1"/>
-                <damage type="split" bonus="+7"/>
+                <damage type="split" bonus="+3"/>
             </combatstyle>
         </combat>
 
@@ -286,6 +369,7 @@
             <advantage name="Animal"/>
             <advantage name="Acute sense of smell" score="+2"/>
             <advantage name="Acute sense of hearing" score="+1"/>
+            <advantage name="Extra encumbrance" score="+3"/>
         </advantages>
     </beast>
 
@@ -328,9 +412,9 @@
 
 
         <attributes size="10" soak="15">
-            <attribute name="strength" score="11" half="5"/>
+            <attribute name="strength" score="7"/>
             <attribute name="stamina" score="5"/>
-            <attribute name="agility" score="3"/>
+            <attribute name="agility" score="2"/>
             <attribute name="dexterity" score="1"/>
             <attribute name="perception" score="3"/>
             <attribute name="intelligence" score="1"/>
@@ -360,7 +444,7 @@
                 <initiative attribute="agility" bonus="+4"/>
                 <attack attribute="agility" bonus="+3"/>
                 <defence attribute="agility" bonus="+1"/>
-                <damage type="split" bonus="+7"/>
+                <damage type="split" bonus="+2"/>
             </combatstyle>
         </combat>
 
@@ -377,6 +461,7 @@
             <advantage name="Acute sense of hearing" score="+1"/>
             <advantage name="Brontophobia"/>
             <advantage name="Phobia (blood)"/>
+            <advantage name="Extra encumbrance" score="+3"/>
         </advantages>
     </beast>
 
