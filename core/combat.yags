@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.48 $</version>
-            <date>$Date: 2004-03-14 22:49:45 $</date>
+            <version>$Revision: 1.49 $</version>
+            <date>$Date: 2004-04-10 16:39:42 $</date>
         </cvsinfo>
 
         <license>
@@ -106,6 +106,13 @@
                         damage going on stuns.
                     </entry>
                     
+                    <entry term="Ineffective damage">
+                        As stun damage, but the number of stuns applied is
+                        halved (rounding down). Stun attacks may be reduced
+                        to ineffective damage, but no attack does
+                        ineffective as standard.
+                    </entry>
+                    
                     <entry term="Fatigue">
                         Fatigue is a measure of how tired a creature is.
                         Unlike wounds and stuns, the amount of fatigue a
@@ -120,14 +127,16 @@
                     </entry>
 
                     <entry term="Damage">
-                        Damage is done when one creature hits
-                        another. Often, damage induces wounds or
-                        stuns in the target. An attack will
-                        inflict either <term>wounds</term>,
-                        <term>stuns</term> or <term>mixed</term>
-                        damage which is split between stuns and
-                        wounds. Many animals cause mixed damage
-                        with claw and bite attacks.
+                        Damage is done when one creature hits another.
+                        Often, damage induces wounds or stuns in the target.
+                        An attack will inflict either <term>wounds</term>,
+                        <term>stuns</term> or <term>mixed</term> damage
+                        which is split between stuns and wounds. Many
+                        animals cause mixed damage with claw and bite
+                        attacks. It is also possible to cause
+                        <term>ineffective</term> damage, which is treated as
+                        stuns, but the number of levels caused is halved
+                        before application (rounding down).
                     </entry>
 
                     <entry term="Load">
@@ -402,7 +411,11 @@
                 </para>
 
                 <sect3>
-                    <title>Basic Properties</title>
+                    <title>Weapon attributes</title>
+                    
+                    <para>
+                        The following apply to all weapons.
+                    </para>
 
                     <termlist>
                         <entry term="Initiative">
@@ -431,13 +444,7 @@
                             includes the type of damage done - either stun,
                             mixed or wounds.
                         </entry>
-                    </termlist>
-                </sect3>
-
-                <sect3>
-                    <title>Other Properties</title>
-
-                    <termlist>
+                        
                         <entry term="Load">
                             The load of a weapon represents how heavy it
                             is to wield. A weapon that is being used adds
@@ -460,6 +467,79 @@
                             attack and defence. Two points below, this
                             penalty is -15. Weaker characters cannot use the
                             weapon at all.
+                        </entry>
+                    </termlist>
+                </sect3>
+                
+                <sect3>
+                    <title>Special properties</title>
+                    
+                    <para>
+                        Some weapons have special properties which affect
+                        how it is used, or how effective it is in a given
+                        situation. By default, a weapon will have none of
+                        the following properties.
+                    </para>
+                    
+                    <termlist>    
+                        <entry term="Light">
+                            Light weapons aren't very effective at getting
+                            through armour for their size. If the total
+                            armour bonus of the target is greater than the
+                            damage bonus of the weapon, then the weapon will
+                            do damage of one worse type (i.e. wounds become
+                            mixed, mixed becomes stuns, stuns become
+                            ineffective).
+                        </entry>
+                        
+                        <entry term="Heavy">
+                            A heavy weapon is good at getting through
+                            armour relative to its size. Against light
+                            armour, heavy weapons use the 'half armour'
+                            column for figuring the soak of the target.
+                        </entry>
+                        
+                        <entry term="Impaling">
+                            Impaling weapons are good at getting through
+                            some types of armour such as mail and cloth.
+                            Against impaling weapons, such armour only
+                            gives half protection.
+                        </entry>
+                        
+                        <entry term="Crushing">
+                            Crushing weapons are good at causing knockback,
+                            and get a +5 bonus to damage for purposes of
+                            knockback. This increases the chance of causing
+                            stun damage, even if the attack didn't get
+                            through the target's armour.
+                        </entry>
+                        
+                        <entry term="Two handed">
+                            The weapon is designed to be used two handed.
+                        </entry>
+                        
+                        <entry term="Throwable">
+                            The weapon is designed to be thrown as a missile
+                            weapon. Though any melee weapon can be thrown,
+                            throwable weapons have better ranges.
+                        </entry>
+                        
+                        <entry term="Blocking">
+                            A blocking weapon can be used as a shield. When
+                            used as a shield, weapon attributes are not
+                            halved as they would be if the weapon was simply
+                            treated as a second weapon. The weapon's damage
+                            bonus is ignored however.
+                        </entry>
+                        
+                        <entry term="Weak">
+                            The weapon is poorly made and is more likely to
+                            break.
+                        </entry>
+                        
+                        <entry term="Strong">
+                            The weapon is well made, and less likely to
+                            break compared to similar weapons.
                         </entry>
                     </termlist>
                 </sect3>
@@ -489,11 +569,11 @@
                         </entry>
 
                         <entry target="2">
-                            Short sword, club.
+                            Short sword, club, shield.
                         </entry>
 
                         <entry target="3">
-                            Long sword, bastard sword, axe.
+                            Broad sword, bastard sword, long sword, axe.
                         </entry>
 
                         <entry target="4">
@@ -501,35 +581,36 @@
                         </entry>
 
                         <entry target="5">
-                            Long spear.
+                            Long spear or other pole arm.
                         </entry>
                     </targetlist>
 
                     <para>
-                        A warrior with a longer reach weapon is at an advantage
-                        when defending against a shorter weapon. If the weapon
-                        of the defender is at least two reach categories longer,
-                        and the defender makes an <e>excellent defence</e>, then
-                        they get an <e>automatic strike</e> against the
-                        attacker.
+                        A warrior with a longer reach weapon is at an
+                        advantage when defending against a shorter weapon.
+                        If the weapon of the defender is at least two reach
+                        categories longer, and the defender makes an
+                        <e>excellent defence</e>, then they get an
+                        <e>automatic strike</e> against the attacker.
                     </para>
 
                     <para>
-                        If either the attacker or defender is acting defensively,
-                        then no automatic strike is gained.
+                        If either the attacker or defender is acting
+                        defensively, then no automatic strike is gained.
                     </para>
 
                     <sect4>
                         <title>Reach in a Charge</title>
 
                         <para>
-                            In a charge attack, the longest weapon always strikes
-                            first. The person with the longest reach weapon gets
-                            a <e>free strike</e> against the opponent before
-                            the main attack. However, though this always applies
-                            to the attacker, the defender must be prepared to
-                            receive the charge in order to receive this bonus,
-                            if it applies to them.
+                            In a charge attack, the longest weapon always
+                            strikes first. The person with the longest reach
+                            weapon gets a <e>free strike</e> against the
+                            opponent before the main attack. However, though
+                            this always applies to the attacker, the
+                            defender must be prepared to receive the charge
+                            in order to receive this bonus, if it applies
+                            to them.
                         </para>
                     </sect4>
 
@@ -537,26 +618,31 @@
                         <title>Unarmed attacks</title>
 
                         <para>
-                            An attacker who does not have any real weapons is at
-                            a disadvantage against a defender with a real weapon.
-                            A real weapon is anything which does more than
-                            <e>stun</e> damage, or has a reach greater than zero
-                            and isn't part of the attacker's body.
+                            An attacker who does not have any real weapons
+                            is at a disadvantage against a defender with a
+                            real weapon. A real weapon is anything which
+                            does more than <e>stun</e> damage, or has a
+                            reach greater than zero and isn't part of the
+                            attacker's body.
                         </para>
 
                         <para>
-                            If an attack is made (e.g. with a fist or kick, or
-                            a sap, but not a knife) against a defender with a
-                            sword, then an <e>excellent defence</e> results in
-                            an <e>automatic strike</e> against the attacker.
+                            If an attack is made (e.g. with a fist or kick,
+                            or a sap, but not a knife) against a defender
+                            with a sword, then an <e>excellent defence</e>
+                            results in an <e>automatic strike</e> against
+                            the attacker. Note that most animals don't have
+                            <e>real</e> weapons according to his definition,
+                            so are vulnerable to automatic strikes.
                         </para>
 
                         <para>
                             If the conditions for much greater reach, and
                             unarmed attacks are both met in the same attack
-                            (i.e. a punch against anyone with a short sword or
-                            longer), then only a <e>good defence</e> is
-                            required in order to get an <e>automatic strike</e>.
+                            (i.e. a punch against anyone with a short sword
+                            or longer), then only a <e>good defence</e> is
+                            required in order to get an <e>automatic
+                            strike</e>.
                         </para>
                     </sect4>
                 </sect3>
@@ -565,10 +651,10 @@
                     <title>Weapon statistics</title>
 
                     <para>
-                        There are a variety of different weapons, all with their
-                        own advantages and disadvantages. The table lists the
-                        most common weapons, together with the statistics which
-                        are required in combat.
+                        There are a variety of different weapons, all with
+                        their own advantages and disadvantages. The table
+                        lists the most common weapons, together with the
+                        statistics which are required in combat.
                     </para>
 
                     <import-weaponlist href="xml/arms.yags" 
