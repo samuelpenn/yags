@@ -1,329 +1,210 @@
 <grimoire convocation="Fyvria">
 <preface>
-Fyvria
-Fyvrianism is the magic of the earth, of green and growing, of pale and dying 
-things, of the cycles of growth and decay that underlie the natural world. The 
-base of Fyvria is fertile earth, where life swarms in its endless struggle to 
-survive and prosper.
-
-Change
-
-Guidelines
-5: Change the speed of growth of a plant (x100)
-5: Prevent a wound from going bad.
-5: Infect a wound.
-10: Cause a wound. Half effect gives damage to be soaked.
-10: Accelerate plant growth by x1,000. Most plants will starve.
-15: Change the speed of growth of an animal by x10
-15: Expand or shrink the size of a plant.
-20: Accelerate plant growth by x10,000. This will starve a plant very quickly.
-30: Change the speed of growth of an animal by x100
+Fyvrianism is the magic of the earth, of green and growing, of pale and dying
+things, of the cycles of growth and decay that underlie the natural world.
+The base of Fyvria is fertile earth, where life swarms in its endless
+struggle to survive and prosper.
 </preface>
 
-
-<spell name="Balm of Gresan" level="25" convocation="fyvria">
-<frequency>Common</frequency>
-<level complex="I">10 + 5T (wounds)+ 5E (bonus)</level>
-<target>3 wounds or less</target>
-<effect>0 bonus</effect>
-<range>-1 bonus / 1m</range>
-<resist>Stamina + 1 / 1m</resist>
-<description>
-When cast on an injured target, provides the effects of a first aid roll. It 
-cannot be cast on the same wounds more than once a day, but can be cast on 
-wounds which have been tended to with a mundane healing attempt. Only works on 
-wounds of three levels or less in severity.
-</description>
-<notes>
-Each 5 levels placed into target affects up to one wound level. Each five 
-levels placed into the effect give a bonus of +1 to the healing roll, though 
-the basic version of the spell has no such bonus. A concentration version of 
-the spell would allow a different person to be healed each round.
-</notes>
-</spell>
-
-
-<spell name="Figure of Aestras" level="25" convocation="fyvria">
-<frequency>Common</frequency>
-<level complex="I">10 + 3T (size)</level>
-<target>Size 5</target>
-<range>-1 size / 1m</range>
-<resist>Stamina + 1 / 1m</resist>
-<description>
-Cause a single plant to grow in a chosen configuration. The spell 
-is cast, and the new desired shape is immediately imprinted on the plant, 
-which will continue to grow into that shape at normal speed, unless something 
-happens in the future to change things.
-</description>
-<notes>
-The results can only be what the plant could possibly achieve through 
-natural growth. Each three levels of target affects a plant up to a size of 
-one.
-</notes>
-</spell>
-
-
-
-<spell name="Putrid Hand" level="20" convocation="fyvria">
-<frequency>Common</frequency>
-<level complex="I">5 + 5 (conc) + 5T (size) + 5E (speed)</level>
-<concentration/>
-<target>Size 2</target>
-<effect>10 x decay speed</effect>
-<range>-1 size / 1m</range>
-<resist>Stamina + 1 / 1m</resist>
-<description>
-Causes rotting organic matter up to size 2 to start rotting at a 
-much accelerated pace, up to 10 times faster. Undead corpses get a stamina 
-roll 
-to resist the spell, but are otherwise still affected.
-</description>
-<notes>
-Every 5 levels of target will affect one size point of matter. 
-Every 5 levels of effect will increase the rate of decay by a factor of 10, so 
-5 levels 
-is 10 times faster, 10 levels if 100 times faster.
-</notes>
-</spell>
-
-
-
-<spell name="Verdant Hand" level="30" convocation="fyvria">
-<frequency>Common</frequency>
-<level complex="I">5 + 5 (conc) + 2T (size) + 10E (speed)</level>
-<concentration/>
-<target>Siz 10</target>
-<effect>10 x growth speed</effect>
-<range>-1 size / 1m</range>
-<resist>Stamina + 1 / 1m</resist>
-<description>
-Greatly accelerates the normal growth of a living thing, by a factor of 10. 
-The target requires an equal increase in sustenance as it did previously, 
-else it will die. Mental capacity is not affected. The target may die of age 
-as a result of this spell. If the size of the target exceeds the maximum size 
-which can be affected by the spell, then the spell ends.
-</description>
-<notes>
-Every two levels of target affects one point of size of plant or creature. 
-Every ten points of effect increases the rate of growth by a factor of 10, so 
-10 levels multiplies growth by x10, and 20 levels multiplies by x100.
-</notes>
-</spell>
-
-
-<spell name="Eye of Perfection" level="45" convocation="fyvria">
-<frequency>Common</frequency>
-<level complex="II">20 + T5 (size)+ 5E (information)</level>
-<target>Size 50</target>
-<effect>3 levels of knowledge</effect>
-<range>-1 knowledge / 5m</range>
-<resist>Will + 1 / 5m</resist>
-<description>
-Analyses the health of a single living creature, providing the caster with 
-knowledge up to level three (one a scale of 1 (basic) to 5 (complete 
-knowledge)). 
-Any plant or animal up to size 10 can be examined with this spell.
-</description>
-<notes>
-Each level of target affects up to 5 size points of creature or plant. Every 
-five levels 
-of effect, will grant one level of knowledge about the target, up to a maximum 
-of five.
-</notes>
-</spell>
-
-
-
-<spell name="Hand of Iliam" level="40" convocation="fyvria">
-<frequency>Common</frequency>
-<level complex="II">10 + 5T (wounds)</level>
-<target>Wounds up to level 6</target>
-<range>-1 body level / 1m</range>
-<resist>Stamina + 1 / 1m</resist>
-<description>
-Prevents a wound of up to six body levels from becoming infected. It 
-prevents bleeding and worsening of the wound, though does not heal it. The 
-wound is considered to be stabalised however. If the wounds are greater than 
-six body levels in severity, then the spell has no effect.
-</description>
-<notes>
-Each 5 levels of effect will help one level of wound. A concentration 
-version of the spell would allow one target to be enchanted each round.
-</notes>
-</spell>
-
-
-
-<spell name="Syncope of Shalor" level="45" convocation="fyvria">
-<frequency>Common</frequency>
-<level complex="II">15 + 5E (fatigue)</level>
-<effect>6 fatigue levels</effect>
-<range>-1 fatigue / 10m</range>
+<spell name="Verdant Hand" level="10" convocation="fyvria">
+<level complex="I">5 + 10 effect</level>
+<range>Touch</range>
 <resist>Stamina + 1 / 5m</resist>
+<duration>Day</duration>
+<boost>+10 Years worth of growth</boost>
+<boost>+20 All plants in near</boost>
+<boost>+40 All plants in short</boost>
 <description>
-Causes a single target to gain 6 fatigue levels if they fail 
-their stamina resistance roll. Fatigue levels gained is reduced by 
-range.
+Greatly accelerates the normal growth of a living plant, causing it to
+undergo a month of growth over the course of the day. Food and water
+requirement for the plant are increased by a similar amount.
 </description>
-<notes>
-Every 5 levels of effect gives one fatigue level to the target. A 
-concentration version of the spell would keep on adding fatigue each 
-round, though would have no effect beyond unconsciousness.
-</notes>
 </spell>
 
 
-
-
-<spell name="Takara's Curse" level="50" convocation="fyvria">
-<frequency>Common</frequency>
-<level complex="II">25 + 2T (size) + 5E (disease)</level>
-<target>Size 5</target>
-<effect>Level 3 infection</effect>
-<range>-1 infection / 5m</range>
-<resist>Stamina + 1 / 5m</resist>
+<spell name="Putrid Hand" level="10" convocation="fyvria">
+<range>Touch</range>
+<resist>Stamina</resist>
+<duration>Concentration</duration>
+<boost>+10 Affects up to size 10</boost>
+<boost>+20 Range near</boost>
+<boost>+40 1000 x decay speed</boost>
 <description>
-Causes a single open wound to become infected with a level 3 infection 
-(equivalent to a serious wound infection, which could be fatal if not 
-stopped in time).
+Causes dead organic matter up to size five to begin rotting at a greatly
+accelerated rate. While the spell is in effect, the material will decay at
+100 times normal speed. Undead corpses get a will roll to resist the spell,
+but are otherwise still affected.
 </description>
-<notes>
-Each two points of target effects a creature of size 1, and each five 
-levels of effect cause one level of infection (maximum five).
-</notes>
 </spell>
 
-
-
-
-<spell name="Balm of Herl" level="80" convocation="fyvria">
-<frequency>Common</frequency>
-<level complex="III">35 + 3T (size) + 10E (infection)</level>
-<target>Size 5</target>
-<effect>Transfer level 3 infection</effect>
-<range>-1 level / 1m</range>
-<resist>Stamina + 1 / 1m</resist>
+<spell name="Figure of Aestras" level="10" convocation="fyvria">
+<range>Touch</range>
+<resist>Will</resist>
+<duration>Lifetime</duration>
+<boost>+10 Range near</boost>
+<boost>+20 Unnatural shapes possible</boost>
+<boost>+40 All plants in range can be affected</boost>
 <description>
-Transfers a disease, infection or other natural ailment (not a 
-wound) up to severity 3 from one living creature to another living creature. 
-Both make stamina 
-rolls to resist, and the spell fails unless they are both failed. Neither 
-creature can be larger than size 5. The spell range is the total distance 
-between the caster and the first target, and the caster and the second target. 
-If the infection is worse than level 3, then the spell fails.
+Cause a single plant to grow in a chosen configuration. The magic lasts for
+the lifetime of the plant, gradually shaping it into its desired form.
 </description>
-<notes>
-Every 3 levels of target affect one size of creature. Every 10 levels of 
-effect 
-can transfer one level of infection.
-</notes>
 </spell>
 
-
-
-
-<spell name="Favrin's Bar" level="65" convocation="fyvria">
-<frequency>Common</frequency>
-<level complex="III">25 + 3T (size) + 25E (growth)</level>
-<target>Size 15</target>
-<effect>25% growth</effect>
-<range>-1% / 5m</range>
-<resist>Stamina + 1 / 5m</resist>
+<spell name="Balm of Gresan" level="10" convocation="fyvria">
+<range>Touch</range>
+<resist>Stamina</resist>
+<duration>Special</duration>
+<boost>+10 Gives +6 bonus</boost>
+<boost>+20 Gives +9 bonus</boost>
+<boost>+40 Allows a second first aid roll</boost>
 <description>
-An enchantment which causes wood to expand, primarily across the grain. The 
-effect is most dramatic with green or living wood. Seasoned wood expands by 
-25%, green wood by twice this and living wood by four times the base. The wood 
-is generally weakened by the change, which occurs over the course of about 
-five seconds. The wood will return to roughly it's original size over the 
-course of the next day. If the spell is cast on already expanded wood, the 
-growth will be calculated from its natural size.
+When cast on an injured target, gives +3 to the first aid roll. Does not
+grant a second first aid roll for the target if one has previously been made.
 </description>
-<notes>
-Each level of effect gives 1% volume increase for seasoned wood, twice this 
-for green wood, and four times this for living wood. Every 3 levels of target 
-will affect something of base size of one.
-</notes>
 </spell>
 
 
-
-<spell name="Nurture of Isla" level="65" convocation="fyvria">
-<level complex="III">40 + 5E (bonus)</level>
-<effect>+5 to healing roll</effect>
-<range>-1 / 1m</range>
-<resist>Stamina + 1 / 5m</resist>
+<spell name="Hand of Iliam" level="30" convocation="fyvria">
+<range>Touch</range>
+<resist>Stamina</resist>
+<duration>Momentary</duration>
+<boost>+15 Heals already infected wounds</boost>
+<boost>+30 Automatically heals a body level</boost>
 <description>
-A spell to increase the healing rate of a wound suffered by a 
-living creature. They get a +5 bonus for their next natural healing roll. Only 
-one casting of this spell will work on a target at any one time.
+Prevents a touched wound from becoming infected. It stops bleeding and any
+potential worsening of the wound. If the wound is already infected, then it
+has no effect. Can be considered similar to a first aid attempt on the wound,
+though there is no chance of healing a body level. Note that the magic only
+seals and cleans the wound and does not have any long term effect beyond
+this. If the wound is reopened it may possibly be infected, though it is
+unlikely.
 </description>
-<notes>
-Each 5 levels of effect give a +1 bonus to the next natural healing 
-roll only (at the end of the week).
-</notes>
-<frequency>Common</frequency>
 </spell>
 
-
-
-<spell name="Power of Sharadorn" level="80" convocation="fyvria">
-<level complex="III">25 + 5 conc + 50E (bonus)</level>
-<effect>+1 to attribute</effect>
-<range>-1 bonus / 1m</range>
-<resist>Stamina + 1 / 5m</resist>
+<spell name="Takara's Curse" level="30" convocation="fyvria">
+<range>Near</range>
+<resist>Stamina 20</resist>
+<duration>Momentary</duration>
+<boost>+15 Resist of 25</boost>
+<boost>+30 Resist of 30</boost>
+<boost>+60 Resist of 35</boost>
 <description>
-A spell to temporarily increase one of the target's physical attributes 
-(strength, stamina, agility or dexterity) by one point. It cannot 
-be combined with any other attribute enhancing spell (including itself, even 
-if different spells are affecting different attributes).
+Causes a single open wound to become infected. If the spell is not resisted,
+then the target must make a stamina roll each day at difficulty 20, modified
+by normal wound penalty. Failure means the wound worsens by one level. The
+wound remains infected until the target dies, or the wound is purged of the
+infection.
 </description>
-<notes>
-Each fifty points of effect give a bonus of +1. A spell to reverse the effect 
-would be a similar level, though would be a permanent effect (so no  
-concentration component would be needed). A version of the spell which gives 
-multiple bonuses can be split across more than one attribute.
-</notes>
-<frequency>Common</frequency>
 </spell>
 
-
-
-
-<spell name="Dream of Galega" level="110" convocation="fyvria">
-<level complex="IV">50 + 5T (size) + 10E (bonus)</level>
-<target>Up to size 6</target>
-<effect>+3 bonus</effect>
-<range>-1 bonus / 1m</range>
-<resist>Stamina + 1 / 5m</resist>
+<spell name="Favrin's Bar" level="60" convocation="fyvria">
+<range>Reach</range>
+<resist>Stamina</resist>
+<duration>Momentary</duration>
+<boost>+20 Gives 30% base increase</boost>
+<boost>+40 Size 24</boost>
+<boost>+80 Can affect a complex structure</boost>
 <description>
-Causes a single living creature up to size 6 to fall into a deep slumber, 
-which lasts until they are either wakened, or they die of dehydration. Each 
-night they sleep, they get a natural healing roll at a +3 bonus.
+An enchantment which causes a single item of wood to expand, primarily across
+the grain. The effect is most dramatic with green or living wood. Seasoned
+wood expands by 15%, green wood by 30% and living wood by 60%. The wood is
+generally weakened by the change. A target up to size 12 can be affected.
 </description>
-<notes>
-Each five levels of target affects a size one creature. Every ten points of 
-effect gives a +1 bonus to the healing rolls.
-</notes>
-<frequency>Common</frequency>
 </spell>
 
-
-
-
-<spell name="Mankor's Curse" level="120" convocation="fyvria">
-<level complex="IV">50 + 25 effect</level>
-<range>-1 / 5m</range>
-<resist>Stamina + 1 / 5m</resist>
-<description>A spell to induce a unique wasting disease in a single creature. 
-The victim suffers -10 to all healing (including first aid) and fatigue 
-recovery rolls. If cast multiple times on a target, then only the worst effect 
-applies.</description>
-<notes>Each five points of effect reduce healing rolls by two.</notes>
-<frequency>Common</frequency>
+<spell name="Nurture of Isla" level="60" convocation="fyvria">
+<range>Touch</range>
+<resist>Stamina</resist>
+<duration>Special</duration>
+<boost>+20 Bonus is +15</boost>
+<boost>+40 Bonus is +20</boost>
+<description>
+A spell to increase the healing rate of a wound suffered by a living
+creature. They get a +12 bonus for their next natural healing roll. Only one
+casting of this spell will work on a target at any one time.
+</description>
 </spell>
 
+<spell name="Power of Sharadorn" level="60" convocation="fyvria">
+<range>Self</range>
+<resist>Stamina</resist>
+<duration>Concentration</duration>
+<boost>+20 Range reach</boost>
+<boost>+40 Increase two attributes</boost>
+<boost>+80 Affect everyone in reach</boost>
+<description>
+A spell to temporarily increase one of the caster's physical attributes
+(strength, stamina, agility or dexterity) by one point. It cannot be combined
+with any other attribute enhancing spell (including itself, even if different
+spells are affecting different attributes).
+</description>
+</spell>
 
+<spell name="Dream of Galega" level="100" convocation="fyvria">
+<range>Touch</range>
+<resist>Stamina</resist>
+<description>
+Causes a single living creature to fall into a deep slumber. Each night they
+sleep, they get one natural healing roll (instead of getting one at the end
+of each week). The creature will naturally awaken the morning after they
+become fully healed. This spell can be combined with spells such as Nurture
+of Isla.
+</description>
+</spell>
+
+<spell name="Mankor's Curse" level="100" convocation="fyvria">
+<range>Near</range>
+<resist>Stamina</resist>
+<duration>Momentary</duration>
+<boost>+25 Penalty is -20</boost>
+<boost>+50 Range is medium</boost>
+<boost>+100 Affects all designated creatures in near of target</boost>
+<description>
+A spell to induce a unique wasting disease in a single creature. The victim
+suffers -10 to all healing (including first aid) and fatigue recovery rolls
+(including sleep). If cast multiple times on a target, then only the worst
+effect applies.
+</description>
+</spell>
+
+<spell name="Eye of Perfection" level="30" convocation="fyvria">
+<range>Touch</range>
+<resist>Will</resist>
+<duration>Momentary</duration>
+<boost>+15 Know two worst injuries</boost>
+<boost>+30 Know all things about the target</boost>
+<description>
+Analyses the health of a single living creature, informing the caster of the
+nature of the worst injury the target is suffering from.
+</description>
+</spell>
+
+<spell name="Syncope of Shalor" level="30"  convocation="fyvria">
+<range>Near</range>
+<resist>Stamina</resist>
+<duration>Momentary</duration>
+<boost>+15 Size 12</boost>
+<boost>+30 Range short</boost>
+<boost>+60 Up to size 25 targets</boost>
+<description>
+Causes a single target up to size 6 to fall asleep if they fail their stamina
+resistance roll. Higher castings of this spell may affect multiple targets up
+to the total size that may be affected.
+ </description>
+</spell>
+
+<spell name="Balm of Herl" level="60" convocation="fyvria">
+<range>Touch</range>
+<resist>Stamina</resist>
+<duration>Momentary</duration>
+<boost>+20 Range is near</boost>
+<boost>+40 Size 9</boost>
+<boost>+80 Range is short</boost>
+<description>
+Transfers a disease, infection or other natural ailment (not a wound) from
+one living creature to another living creature. Both make stamina rolls to
+resist, and the spell fails unless they are both failed. Neither creature can
+be greater than size 6.
+</description>
+</spell>
 </grimoire>
-
-
-
