@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2003-03-23 21:47:16 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2003-05-18 16:11:18 $</date>
         </cvsinfo>
         
         <license>
@@ -52,67 +52,34 @@
         </sect1>
         
         <sect1>
-            <title>Feats</title>
-            
+            <title>Combat Maneouvres</title>
+
             <para>
-                A <e>feat</e> is a particular type of action used with a
-                skill. Currently, feats are only used with combat skills.
-                Feats generally replace <e>special attacks</e>.
+                Each of the different combat skills has a number of skill
+                specialisations associated with them, which may be learnt
+                in order to perform special combat manouevres above and
+                beyond standard actions.
             </para>
-            
+
             <para>
-                A feat is a sub skill - it needs to be developed indepently
-                of the main skill, but the cost is a flat one point per
-                level of skill. To raise a feat from zero to five costs
-                only five points. However, a feat can never be raised to
-                higher than the main skill, and may be limited to a level
-                lower than that.
+                Each maneouvre is a skill specialisation, and starts at a
+                level of zero. None of the combat skills have a default
+                specialisation, so all of them have to be learnt if they
+                are to be used.
             </para>
-            
+
             <sect2>
-                <title>Learning Feats</title>
-                
-                <para>
-                    How easy it is to learn a feat depends on the type of
-                    feat in question, and the campaign. Some feats may be
-                    unique to a particular school of fighting, while others
-                    may be common to everyone.
-                </para>
-                
-                <para>
-                    As far as game mechanics goes, a feat has a rating, from
-                    zero downwards. This gives the highest level the feat
-                    can be learnt to relative to the main skill. If someone
-                    has a skill of 6, a -0 feat can be learnt up to 6,
-                    whilst a -4 feat can only be learnt up to 2. A feat can
-                    only be used if it is known at a level of 1+, so a -4
-                    feat can only be used (and learnt) by someone with a
-                    main skill of at least 5.
-                </para>
-                
-                <para>
-                    Whenever a level is gained in a skill, one free point is
-                    gained to place in a feat used by that skill. Experience
-                    points from other sources can also be used to raise
-                    feats, and experience can be gained in feats at GM
-                    discretion. At high skill levels, it may be more likely
-                    to gain experience in a feat, rather than in the main
-                    skill.
-                </para>
-            </sect2>
-            
-            <sect2>
-                <title>Feat Descriptions</title>
-                
+                <title>Specilisation Manouevres</title>
+
                 <sect3>
-                    <title>Common Melee Feats</title>
-                    
+                    <title>Common Melee Manouevres</title>
+
                     <para>
-                        These feats are available to all melee fighting
-                        styles. Each feat is unique to each style of
-                        fighting, so may need to be taken multiple times.
+                        These specialisations are available to all melee
+                        fighting styles. Each feat is unique to each style
+                        of fighting, so may need to be taken multiple times.
                     </para>
-                    
+
                     <termlist sort="true">
                         <entry term="Aggressive fighting -0">
                             Fighting aggressively. The attack becomes
@@ -120,29 +87,30 @@
                             and damage, whilst a -5 penalty is suffered on
                             any defence rolls.
                         </entry>
-                        
+
                         <entry term="Defensive fighting -0">
                             Fighting defensively. The attack becomes
                             <e>slow</e>, and a +5 bonus is gained to defence
                             rolls, whilst a -5 penalty is suffered on any
                             attack rolls.
                         </entry>
-                        
+
                         <entry term="Off hand attack -1">
                             If a person is fighting with a melee weapon in
                             their <e>off-hand</e>, then they need to use
                             this feat. Does not apply to the <e>Brawl</e>
                             skill.
                         </entry>
-                        
+
                         <entry term="Quick draw -0">
                             If a weapon is not ready at the start of a
                             combat, it may be readied and used to attack in
                             the first round, but the attack is considered
-                            <e>slow</e>. With the quick draw feat, the
-                            weapon can be drawn and used as normal.
+                            <e>slow</e>. If this specialisation is used
+                            instead of the main skill, the attack is
+                            considered to happen at normal speed.
                         </entry>
-                        
+
                         <entry term="Disarm -2">
                             A disarm attack is made against the opponent's
                             weapon, in an attempt to remove it from their
@@ -153,7 +121,7 @@
                             weapon. A successful attack means that the
                             weapon has been disarmed.
                         </entry>
-                        
+
                         <entry term="Killing blow -4">
                             A <e>Killing blow</e> attack is always
                             <e>slow</e>. If it succeeds, and does at least
@@ -162,7 +130,7 @@
                             then the <e>killing blow</e> does nothing
                             special.
                         </entry>
-                        
+
                         <entry term="Ambush -1">
                             An ambush is a surprise attack against a totally
                             unsuspecting foe. The target must be at ease,
@@ -172,15 +140,15 @@
                         </entry>
                     </termlist>
                 </sect3>
-                
+
                 <sect3>
-                    <title>Common Missile Feats</title>
-                    
+                    <title>Common Missile Manouevres</title>
+
                     <para>
-                        These feats are available to all missile fighting
-                        styles.
+                        These are available to all missile fighting
+                        styles (bow, crossbow and throw).
                     </para>
-                    
+
                     <termlist sort="true">
                         <entry term="Killing blow -4">
                             A <e>Killing blow</e> attack is always
@@ -190,7 +158,7 @@
                             then the <e>killing blow</e> does nothing
                             special.
                         </entry>
-                        
+
                         <entry term="Ambush -1">
                             An ambush is a surprise attack against a totally
                             unsuspecting foe. The target must be at ease,
@@ -200,29 +168,29 @@
                         </entry>
                     </termlist>
                 </sect3>
-                
+
                 <sect3>
                     <title>Weapon and Shield Feats</title>
-                    
+
                     <termlist sort="true">
                         <entry term="Shield wall -0">
                         </entry>
-                        
+
                         <entry term="Shield bash -1">
                         </entry>
-                        
+
                         <entry term="Weapon catch -2">
                         </entry>
                     </termlist>
                 </sect3>
-                
+
                 <sect3>
                     <title>Great Weapon Feats</title>
-                    
+
                     <termlist sort="true">
                         <entry term="Continuous defence -2">
                         </entry>
-                        
+
                         <entry term="Long defence -2">
                         </entry>
                     </termlist>

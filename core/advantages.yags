@@ -12,12 +12,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.3 $</version>
-            <date>$Date: 2002-12-15 14:53:51 $</date>
+            <version>$Revision: 1.4 $</version>
+            <date>$Date: 2003-05-18 16:11:18 $</date>
         </cvsinfo>
 
         <license>
-            <year>2002</year>
+            <year>2003</year>
             <holder>Samuel Penn</holder>
             <url>http://www.bifrost.demon.co.uk/comp/yagsbook/fdl.html</url>
             <text>
@@ -40,30 +40,66 @@
             <title>Advantages and Disadvantages</title>
 
             <para>
-                Edges and flaws modify a characters attributes under
-                certain circumstances. They give either a +1 (if an
-                edge) or a -1 (if a flaw) to the attribute for purposes
-                of that roll. Only a single edge (the best one) can
-                apply in any given situation. Likewise, only a single
-                flaw (the worst) will apply. However, if an edge and
-                a flaw overlap, they will cancel each other.
+                Advantages and disadvantages modify the character in some
+                way, either physically, or through some quirk of their
+                background. Advantages may be purchased out of the initial
+                starting points for the character. Disadvantages have a
+                negative cost, and allow the player to select more skills,
+                attributes or advantages for the character than they would
+                normally.
+            </para>
+
+            <para>
+                Advantages and disadvantages are optional, and none need to
+                be taken by a player.
+            </para>
+
+            <para>
+                There are three types of advantages - <e>edges and flaws</e>,
+                <e>background</e> and <e>miscellaneous</e>.
             </para>
 
             <sect2>
-                <title>Edges</title>
+                <title>Edges and Flaws</title>
 
-                <import-advantages href="options/edges.xml" type="edge"/>
-            </sect2>
+                <para>
+                    Edges and flaws modify the character's attributes under
+                    certain situations. They normally give either a +1 bonus
+                    (if an edge), or a -1 penalty (if a flaw) to the
+                    attribute before multiplication with the skill.
+                </para>
 
-            <sect2>
-                <title>Flaws</title>
-                
-                <import-advantages href="options/edges.xml" type="flaw"/>
+                <para>
+                    A character with <e>Empathy</e>, a charisma of 3 and a
+                    charm of 4, would normally have an ability total of 12
+                    (3 x 4), but if they were trying to calm a person
+                    (which is when empathy kicks in), they would get +1 to
+                    charisma, giving them a total of 16 (4 x 4).
+                </para>
+
+                <para>
+                    Only a single edge or flaw applies at any given time,
+                    regardless of how many are applicable. If an edge and
+                    a flaw both apply, they cancel. If more than one edge,
+                    or more than one flaw applies, take the highest.
+                </para>
+
+                <sect3>
+                    <title>Edges</title>
+
+                    <import-advantages href="options/edges.xml" type="edge"/>
+                </sect3>
+
+                <sect3>
+                    <title>Flaws</title>
+
+                    <import-advantages href="options/edges.xml" type="flaw"/>
+                </sect3>
             </sect2>
 
             <sect2>
                 <title>Background</title>
-                
+
                 <para>
                     Advantages and disadvantages which affect the
                     character's background cannot be bought after
@@ -73,35 +109,16 @@
 
                 <import-advantages href="options/background.xml" type="background"/>
             </sect2>
-            
-            <sect2>
-                <title>Personality Disadvantages</title>
-                
-                <para>
-                    These disadvantages generally affect the personality
-                    of the character, and have no direct effect on the game
-                    except according to how they are roleplayed.
-                </para>
-                
-                <para>
-                    For this reason, it is important that they <e>are</e>
-                    roleplayed by the player. If a roll is ever required
-                    to resist one of these disadvantages, then treat it
-                    as a -2 flaw to will.
-                </para>
-
-                <import-advantages href="options/personality.xml" type="disadvantage"/>
-            </sect2>
 
             <sect2>
-                <title>Other Advantages</title>
+                <title>Miscellaneous Advantages</title>
 
                 <import-advantages href="options/advantages.xml" type="advantage"/>
 
             </sect2>
 
             <sect2>
-                <title>Other Disadvantages</title>
+                <title>Miscellaneous Disadvantages</title>
 
                 <import-advantages href="options/advantages.xml" type="disadvantage"/>
             </sect2>

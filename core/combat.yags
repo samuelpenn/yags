@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.24 $</version>
-            <date>$Date: 2003-05-16 19:59:00 $</date>
+            <version>$Revision: 1.25 $</version>
+            <date>$Date: 2003-05-18 16:11:18 $</date>
         </cvsinfo>
 
         <license>
@@ -996,7 +996,7 @@
                             20 roll each minute in order to remain alive.
                             Failure means death. A roll must be made
                             until the character receives first aid which
-                            stabalises theircondition.
+                            stabalises their condition.
                         </para>
                     </sect4>
                 </sect3>
@@ -1262,7 +1262,7 @@
                         Covers the head, neck and shoulders. May be worn
                         under a helm.
                     </entry>
-        
+
                     <entry term="Greaves">
                         Covers the legs. Values given are for a set of
                         greaves, one for each leg.
@@ -1325,51 +1325,76 @@
                     on the wounded character.
                 </para>
 
-                <table>
-                    <title>First aid Difficulties</title>
+                <para>
+                    The base difficulty to successfully first aid a
+                    character's stuns is zero. To tend to a character's
+                    wounds, the base difficulty is 10. In both cases, the
+                    difficulty is modified upwards by the character's
+                    total stun and wound penalties.
+                </para>
 
-                    <colspec colwidth="2cm"/>
-                    <colspec colwidth="2cm"/>
-                    <colspec colwidth="1.5cm"/>
-                    <thead>
-                        <row>
-                            <entry>Stuns</entry>
-                            <entry>Wounds</entry>
-                            <entry>Target</entry>
-                        </row>
-                    </thead>
-                    <tbody>
-                        <row><entry>Bruised</entry><entry>--</entry><entry>0</entry></row>
-                        <row><entry>Dazed</entry><entry>--</entry><entry>5</entry></row>
-                        <row><entry>Bloodied</entry><entry>--</entry><entry>10</entry></row>
-                        <row><entry>Battered</entry><entry>Hurt</entry><entry>10</entry></row>
-                        <row><entry>Beaten</entry><entry>Light</entry><entry>15</entry></row>
-                        <row><entry>Oblivious</entry><entry>Medium</entry><entry>15</entry></row>
-                        <row><entry>--</entry><entry>Serious</entry><entry>20</entry></row>
-                        <row><entry>--</entry><entry>Critical</entry><entry>20</entry></row>
-                        <row><entry>--</entry><entry>Fatal</entry><entry>25</entry></row>
-                    </tbody>
-                </table>
+                <para>
+                    For example, a battered (-6) and lightly wounded (-1)
+                    character would be difficulty 7 to first aid their
+                    stuns, and 17 to first aid their wounds.
+                </para>
 
                 <para>
                     A character may first aid themselves - as long as they
-                    are conscious - but they suffer all their wound penalties.
-                    If the first aid roll exceeds the target difficulty by
-                    10 or more, then not only is the wound stabilised, but 
-                    one injury level is immediately healed.
+                    are conscious - but they suffer all their wound
+                    penalties to their skill roll (as well as them adding
+                    to the difficulty of the task).
                 </para>
 
-                <para>
-                    If a character is both wounded and stunned, a separate
-                    roll is needed for each. It takes one minute to perform
-                    first aid on a person. First aid may be attempted as 
-                    many times as required, until it succeeds.
-                </para>
+                <sect3>
+                    <title>Tending to Stuns</title>
 
-                <para>
-                    A character who is fatally wounded gets a first aid 
-                    roll before they roll to see if they die.
-                </para>
+                    <para>
+                        A successful first aid attempt against stuns will
+                        heal one level of stun immediately, plus a further
+                        level for every full 10 points the healer rolled
+                        above the difficulty.
+                    </para>
+
+                    <para>
+                        Stuns do not need to be stabalised, so there is no
+                        penalty from failing to have first aid performed as
+                        long as the character is only stunned.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Tending to Wounds</title>
+
+                    <para>
+                        A successful first aid attempt against wounds will
+                        stabalise the wound, preventing it from becoming
+                        infected or worsening. If the roll was at least 10
+                        points higher than the difficulty, then a single
+                        wound level is immediately healed.
+                    </para>
+
+                    <para>
+                        A character who is fatally wounded, does not have
+                        to roll to see if they die while the first aid
+                        attempt is in progress. However, if the first aid
+                        fails (at the end of the minute it takes), then
+                        the character has to start rolling again as per
+                        normal.
+                    </para>
+
+                    <para>
+                        If a wound is not successfully first aided within
+                        an hour, then there is a chance that it becomes
+                        infected and worsens. The character makes a stamina
+                        roll at difficulty 20, modified by wound penalties.
+                        Failure means that the wound is infected, and
+                        worsens by one level. Each day thereafter, until
+                        first aid is successfully attempted, another roll
+                        is needed, with each failure worsening the wound
+                        each time.
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
@@ -1379,21 +1404,11 @@
                     <title>Recovering from stuns</title>
 
                     <para>
-                        Natural healing can only take place once an injury
-                        has been stabilised with a successful first aid roll.
-                        A stunned character who is bruised or dazed gets a 
-                        stamina roll every hour at a target difficulty of 20.
-                        Success means that one stun is recovered. If the
-                        character spends the time resting, then the 
-                        difficulty is reduced to 15.
-                    </para>
-
-                    <para>
-                        More serious stun injuries are recovered each night.
-                        A similar stamina roll is made after a night's rest,
-                        with success recovering one level of stun. The
-                        severity of the stuns do not affect the recovery 
-                        difficulty.
+                        Stuns are healed after a night's rest. Each morning,
+                        the character makes a stamina roll at difficulty 10,
+                        modified by their current wound and stun penalties.
+                        Success means that one stun level is healed, and each
+                        10 above the difficulty heals a further stun level.
                     </para>
                 </sect3>
 
@@ -1401,10 +1416,10 @@
                     <title>Recovering from wounds</title>
 
                     <para>
-                        A wounded character who is hurt or lightly wounded
-                        gets a stamina roll after a full night's rest. The
-                        stamina difficulty is 20, and success means one 
-                        wound level is recovered.
+                        Wounds heal naturally after a week. Each week, the
+                        character gets a stamina roll at difficulty 20,
+                        modified by their total stun and wound penalties.
+                        On a success, a single level of wound is healed.
                     </para>
 
                     <para>
@@ -1412,25 +1427,6 @@
                         roll at the end of each week. The difficulty
                         depends on the severity of the injury.
                     </para>
-
-                    <table>
-                        <title>Recovering from wounds</title>
-
-                        <colspec colwidth="2cm"/>
-                        <colspec colwidth="1.5cm"/>
-                        <thead>
-                            <row>
-                                <entry>Wounds</entry>
-                                <entry>Target</entry>
-                            </row>
-                        </thead>
-                        <tbody>
-                            <row><entry>Medium</entry><entry>20</entry></row>
-                            <row><entry>Serious</entry><entry>25</entry></row>
-                            <row><entry>Critical</entry><entry>30</entry></row>
-                            <row><entry>Fatal</entry><entry>35</entry></row>
-                        </tbody>
-                    </table>
 
                     <para>
                         If the character fumbles their stamina roll, then
@@ -1452,7 +1448,7 @@
 
                     <para>
                         A patient can look after themselves, though they
-                        suffer wounds penalties to do so.
+                        suffer wound and stun penalties to do so.
                     </para>
                 </sect3>
 
@@ -1483,7 +1479,7 @@
                         loose the temporary fatigue after 35 minutes, but
                         would need a night of rest to loose the rest.
                     </para>
-                    
+
                     <para>
                         Permanent fatigue is recovered after a night of
                         rest. Four hours of sleep will remove all temporary
@@ -1518,9 +1514,9 @@
 
                     <para>
                         All characters have some ability with the
-                        <emphasis>Throw</emphasis> talent, which is the
-                        ranged equivalent of the <emphasis>
-                        Brawl</emphasis> skill. Thrown spears, javelins,
+                        <e>Throw</e> talent, which is the
+                        ranged equivalent of the <e>Brawl</e> skill.
+                        Thrown spears, javelins,
                         bottles, slings and axes are covered under this
                         skill. This actually covers the majority of
                         missile combat.
@@ -1775,7 +1771,7 @@
                         ambush may be performed. This grants no bonuses
                         to the attack, but the total soak of the target
                         is halved. Furthermore, the attack counts
-                        as a <emphasis>killing blow</emphasis>. An
+                        as a <e>killing blow</e>. An
                         ambusher cannot defend during the round, and
                         such an attack is always considered to be slow.
                     </para>
@@ -2063,7 +2059,7 @@
 
                     <para>
                         Finally, a berserker gets extra wound and stun
-                        levels. These are temporary and are lost at the 
+                        levels. These are temporary and are lost at the
                         end of the battle. One extra wound and stun level
                         is gained per two full levels of advantage. The
                         first level is an extra hurt and bruised
@@ -2202,7 +2198,7 @@
                         against 40 after one minute, against 35 after two
                         minutes, then 30 after three minutes etc. Once 0
                         or less has been reached, no further rolls are
-                        required and the poison is considered to have 
+                        required and the poison is considered to have
                         finished its work.
                     </para>
 
