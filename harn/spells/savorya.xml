@@ -70,14 +70,17 @@
                     <entry>40</entry>
                     <entry>
                     Knowledge of a person's morals, in regard to whether
-                    they are good or evil is obtained.
+                    they are good (generous, helpful) or evil (selfish,
+                    spiteful) is obtained. This reading is probably the
+                    most unreliable.
                     </entry>
                 </row>
                 <row>
                     <entry>50</entry>
                     <entry>
-                    If the target has any leanings towards Law or Chaos,
-                    then this can be determined.
+                    If the target has any leanings towards Law (trustworthy,
+                    consistent) or Chaos (treacherous, random), then this
+                    can be determined.
                     </entry>
                 </row>
                 <row>
@@ -199,6 +202,20 @@
         </description>
     </spell>
 
+    <spell name="Perception of the Spirit" level="0" convocation="savorya">
+        <range>Touch</range>
+        <resist>Will</resist>
+        <duration>Momentary</duration>
+        <boost>+25 Range is reach</boost>
+        <boost>+50 Range is near</boost>
+        <description>
+            <para>
+                Detects the current aura of the target, according
+                to the aura chart. Roll a d20 + 10 * (rank-1) to find the
+                detail of aura detected.
+            </para>
+        </description>
+    </spell>
 
     <spell name="Alvid's Mote" level="10" convocation="savorya">
         <range>Touch</range>
@@ -402,42 +419,54 @@
     </spell>
 
     <spell name="Talesien's Eye" level="30" convocation="savorya">
-        <range>Touch</range>
-        <resist>Will</resist>
-        <duration>Momentary</duration>
-        <boost>+15 Range reach</boost>
-        <boost>+30 Roll die + 20</boost>
+        <range>Reach</range>
+        <resist>Ego</resist>
+        <duration>Concentration</duration>
+        <boost>+15 Range near</boost>
+        <boost>+30 Range short</boost>
         <boost>+60 Roll die + 30</boost>
         <description>
             <para>
                 A spell by which the caster can determine the aural nature
-                of a target. Roll 10 + a die to determine how much detail is
+                of a target. Roll d20 + 20 to determine how much detail is
                 learned. See the aura detail chart for information on what
                 difficulties will give what information.
+            </para>
+
+            <para>
+                The target of the spell can be changed each round, if
+                desired, or the ongoing aura of the target can be
+                monitored.
             </para>
         </description>
     </spell>
 
     <spell name="Usela's Perception" level="30" convocation="savorya">
-        <range>Touch</range>
-        <resist>Will</resist>
-        <duration>Momentary</duration>
-        <boost>+15 Range reach</boost>
-        <boost>+30 Roll die + 20</boost>
+        <range>Reach</range>
+        <resist>Ego</resist>
+        <duration>Concentration</duration>
+        <boost>+15 Range near</boost>
+        <boost>+30 Range short</boost>
         <boost>+60 Roll die + 30</boost>
         <description>
             <para>
                 A spell which allows the caster to read the emotions of the
-                target creature. Roll 10 + d20 to determine how much detail
+                target creature. Roll d20 +20 to determine how much detail
                 is learned. See the emotion detail chart for information on
                 what difficulties will give what information.
+            </para>
+
+            <para>
+                The target of the spell can be changed each round, if
+                desired, or the ongoing aura of the target can be
+                monitored.
             </para>
         </description>
     </spell>
 
     <spell name="Pains of Worry" level="30" convocation="savorya">
         <range>Touch</range>
-        <resist>Will</resist>
+        <resist>Ego</resist>
         <duration>Concentration</duration>
         <boost>+15 Range is reach</boost>
         <boost>+30 Range is near</boost>
@@ -448,7 +477,7 @@
                 taunts at them while the spell is maintained. It is a fear
                 of something unknown, a fear which cannot be named. The
                 target gains a personality trait of 'fear of everything'
-                at +2. Will checks at difficulty 20 are required in order
+                at +2. Ego checks at difficulty 20 are required in order
                 for the target to initiate new endeavours.
             </para>
         </description>
@@ -457,7 +486,7 @@
     <spell name="Amil's Agreement" level="60" convocation="savorya">
         <range>Eye</range>
         <duration>Concentration</duration>
-        <resist>Will</resist>
+        <resist>Ego</resist>
         <boost>+15 Bind target to a grudging agreement</boost>
         <boost>+30 Bind target to an unwilling agreement</boost>
         <boost>+60 Force agreement</boost>
@@ -513,10 +542,11 @@
         <boost>+15 Range short</boost>
         <description>
             <para>
-                An enchantment which stimulates an existing phobia, mania or any psyche
-                complex in a victim. If successful, the victim's most acute psyche attribute
-                is stimulated; a victim with arachniphobia, for example, will see spiders
-                where none exist, or many spiders where only a few exist, and so on.
+                An enchantment which stimulates an existing phobia, mania
+                or any psyche complex in a victim. If successful, the
+                victim's most acute psyche attribute is stimulated; a victim
+                with arachniphobia, for example, will see spiders where none
+                exist, or many spiders where only a few exist, and so on.
             </para>
         </description>
     </spell>
@@ -537,12 +567,12 @@
     </spell>
 
     <spell name="Wisdom of Usela" level="60" convocation="savorya">
-        <range>None</range>
+        <range>Self</range>
         <resist>None</resist>
         <description>
             <para>
-                This is a higher level version of Violet Eye, which allows single word
-                answers to questions. Otherwise it is the same.
+                This is a higher level version of Violet Eye, which allows
+                single word answers to questions. Otherwise it is the same.
             </para>
         </description>
     </spell>
@@ -562,15 +592,34 @@
 
     <spell name="Faroh's Touch" level="90" convocation="savorya">
         <range>Near</range>
-        <resist>Will</resist>
+        <resist>Ego</resist>
         <duration>Sleep</duration>
         <boost>+15 Range short</boost>
         <boost>+60 Shift passion by 10 points</boost>
         <description>
             <para>
-                This spell creates or weakens an emotion in the target, changing it by as
-                much as four points in either direction. No emotion can be taken beyond
-                +/-5. The change lasts until the target next sleeps.
+                This spell creates or weakens an emotion in the target,
+                changing it by as much as four points in either direction.
+                No emotion can be taken beyond +/-5. The change lasts until
+                the target next sleeps.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Precious Desire" level="90" convocation="savorya">
+        <range>Near</range>
+        <resist>Temperence</resist>
+        <duration>Sleep</duration>
+        <description>
+            <para>
+                Creates in the target a desire for some material object,
+                which can be seen by the target when the spell is cast.
+                The target develops an irrational desire to possess the
+                item. The actions of the target are determined by their
+                personality and morals, but an honest knight will
+                probably not resort to theft or murder to obtain it,
+                but they may make a fool of themselves trying to
+                purchase or otherwise obtain the item.
             </para>
         </description>
     </spell>
@@ -583,11 +632,12 @@
         <boost>+60 Affects all senses</boost>
         <description>
             <para>
-                An enchantment that permits the caster to experience the sensations of the
-                target. The caster declares a specific sense (eyesight, hearing, olfactory or
-                touch), and thereafter the caster experiences the target's sensations for
-                that sense. As long as the spell is maintained, the distance between target
-                and caster is irrelevant.
+                An enchantment that permits the caster to experience the
+                sensations of the target. The caster declares a specific
+                sense (eyesight, hearing, olfactory or touch), and
+                thereafter the caster experiences the target's sensations
+                for that sense. As long as the spell is maintained, the
+                distance between target and caster is irrelevant.
             </para>
         </description>
     </spell>
@@ -605,7 +655,7 @@
                 so that she will follow the caster's orders; it is normally used
                 on animals or people.
             </para>
-            
+
             <para>
                 Spirit Block creates a bond between caster and his victim. He can
                 read surface thoughts and emotions, direct her actions and ask
@@ -621,7 +671,7 @@
 
     <spell name="Bolt of Mintora" level="120" convocation="savorya">
         <range>Touch</range>
-        <resist>Will</resist>
+        <resist>Ego</resist>
         <duration>Momentary</duration>
         <boost>+15 Range is near</boost>
         <boost>+30 Everyone within near can be affected</boost>
@@ -964,6 +1014,7 @@
         <duration>Concentration</duration>
         <resist>Will</resist>
         <boost>+15 Range is near</boost>
+        <boost>+30 Can affect up to three targets</boost>
         <boost>+60 Can affect all target's within range</boost>
         <description>
             <para>
