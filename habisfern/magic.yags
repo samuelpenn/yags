@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2004-07-26 21:39:32 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2004-09-12 21:22:27 $</date>
         </cvsinfo>
 
         <license>
@@ -175,6 +175,162 @@
                     </skillequation>
                     against a target of 5 x level of the cantrip.
                 </para>
+            </sect2>
+        </sect1>
+        
+        <sect1>
+            <title>Using Magic</title>
+            
+            <para>
+                The following section describes the cantrips which may be
+                learnt by a wizard. They all follow the same pattern, which
+                is described here.
+            </para>
+            
+            <spell name="Example Cantrip" level="1" type="any">
+                <time>1 round</time>
+                <range>-1/2m</range>
+                <duration>Concentration</duration>
+                <area>-1/m radius</area>
+                <target>-5/extra</target>
+                <resist>Resistance</resist>
+                
+                <prerequisite>Another Spell</prerequisite>
+                
+                <description>
+                    <para>
+                        A description for an example cantrip. This is a
+                        simple cantrip for simple people.
+                    </para>
+                </description>
+            </spell>
+            
+            <para>
+                The name of the spell followed by its level. The wizard
+                must have a skill in the Word at least equal to the level
+                of the spell before learning it. The base difficulty to
+                case the spell is equal to its level x 5. The casting roll
+                is performed using Will x Word.
+            </para>
+            
+            <para>
+                The <s>effect</s> of the cantrip is a measure of how powerful
+                it is. The effect may be damage, a skill bonus or modifier
+                on some roll. The effect is the difference between the
+                caster's roll and the level of the cantrip. As long as the
+                effect is zero or positive, the cantrip was cast.
+            </para>
+            
+            <para>
+                The statistics block which immediately follows the cantrip's
+                name gives some modifiers to either the casting roll, or
+                the effect. These are not the same. A long range does not
+                make the cantrip harder to cast, but it may mean that the
+                effectiveness of the cantrip is reduced to zero before it
+                reaches the target. The cantrip is still cast, but fizzles
+                out before achieving anything.
+            </para>
+            
+            <itemlist order="strict">
+                <item name="Time">
+                    The time to cast the cantrip. Most cantrips have a
+                    casting time of 1 round. In such a case, casting the
+                    cantrip is a slow action.
+                </item>
+                
+                <item name="Range">
+                    By default, a cantrip has a range of Self, which means
+                    that it only affects the caster. Ranged cantrips have
+                    a penalty given for the range. -1/5m means that there
+                    is a -1 penalty to the cantrip's effect per 5m of
+                    range to the target. If there are multiple targets,
+                    then calculate the range to each target seperately.
+                </item>
+                
+                <item name="Duration">
+                    How long the cantrip lasts. This is normally either
+                    Momentary (a jet of flame appears, burns the target,
+                    then vanishes) or Concentration (as long as the
+                    wizard concentrates on that spell). Other durations
+                    will be obvious or explained in the description.
+                </item>
+                
+                <item name="Resist">
+                    If the target gets a resistence roll, this is given
+                    here. The resist roll of the target reduces the effect
+                    of the cantrip. If a passion is given, then it is rolled
+                    with Will. Damage effects are nearly always resisted
+                    with Soak. If no 'resist' is given, then the target
+                    cannot resist the cantrip.
+                </item>
+                
+                <item name="Area">
+                    If an area is given, then the cantrip affects an area.
+                    The size of the area is chosen at casting time, and
+                    the penalty comes off the casting roll.
+                </item>
+                
+                <item name="Radius">
+                    If a radius is given (Area and Radius will not be given
+                    for the same Cantrip) then this means the cantrip has
+                    an area of effect centred on the target, and spreading
+                    out in a sphere or circle. The effect of the spell is
+                    reduced by the amount given here.
+                </item>
+                
+                <item name="Target">
+                    A cantrip normally affects one target. If something
+                    like '-5/extra' is given, then there is a -5 to the
+                    casting roll per target beyond the first. If a scale
+                    is given ('-5/extra dozen') then the first dozen is
+                    affected for free, and each extra dozen has a penalty.
+                    A target may alternatively give a volume or Size.
+                    Again this comes off the casting roll.
+                </item>
+                
+                <item name="Prerequisite">
+                    If a prerequisite is given, then the Wizard must have
+                    learnt that spell before learning this one.
+                </item>
+            </itemlist>
+            
+            <sect2>
+                <title>Effect</title>
+                
+                <para>
+                    The cantrip's <e>effect</e> is normally described in
+                    the cantrip description. If it isn't, and there isn't
+                    a direct relationship between the effect number and
+                    the result (e.g. the game result is not quantifiable
+                    as a number), then the effect gives an indication of
+                    how well the cantrip works.
+                </para>
+                
+                <targetlist bold="true">
+                    <valueLabel>Quality of effect</valueLabel>
+                    <targetLabel>Effect</targetLabel>
+                    
+                    <item target="0-4" value="Normal.">
+                        The result of the cantrip is the minimum needed
+                        to be considered a success. It will give only basic
+                        information, or cause only minimal changes.
+                    </item>
+                    
+                    <item target="5-9" value="Good.">
+                        The result is respectable, and gives a decent level
+                        of information, or has a significant affect on the
+                        world.
+                    </item>
+                    
+                    <item target="10-14" value="Excellent.">
+                    </item>
+                    
+                    <item target="15-19" value="Superb.">
+                    </item>
+                    
+                    <item target="20+" value="Fantastic.">
+                    </item>
+                </targetlist>
             </sect2>
         </sect1>
 

@@ -2,12 +2,12 @@
 
 <!--
     Spirit cantrips.
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2004-07-26 21:39:18 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2004-09-12 21:22:27 $
 -->
 <grimoire name="Spirit">
 
-    <spell name="Sense Spirit" level="1" type="spirit">
+    <spell name="Sense Mind" level="1" type="spirit">
         <range>-1/m</range>
         <duration>Concentration</duration>
         <resist>Ego</resist>
@@ -36,14 +36,15 @@
         <resist>Ego</resist>
         <target>-5/extra</target>
         
-        <prerequisite>Sense Spirit</prerequisite>
+        <prerequisite>Sense Mind</prerequisite>
 
         <description>
             <para>
                 The wizard must be able to see the targets to be effected.
                 If the wizard beats the resistence roll of the target,
                 then they get a glimpse of the target's aura. The amount
-                they beat them by governs how much detail they see.
+                they beat them by governs how much detail they see. Roll
+                a d20 and add the effect of the spell.
             </para>
             
             <targetlist>
@@ -57,13 +58,245 @@
                 
                 <item target="5" value="State.">
                     The rough state of mind of the target - strong emotions
-                    such as fear, love, excitement etc will show through.
+                    such as fear, love, excitement etc will show through if
+                    they are currently active.
                 </item>
                 
                 <item target="10" value="Passions.">
+                    The strongest emotion currently in force will be known.
+                </item>
+                
+                <item target="15" value="Self.">
+                    The wizard will see the target how they view themselves,
+                    which may give clues to their personality, job or set
+                    of skills. An off duty warrior in civilian clothes may
+                    appear as an armed and armoured warrior for instance.
+                </item>
+                
+                <item target="20" value="God.">
+                    The patron god of the target is known.
+                </item>
+                
+                <item target="25" value="Morality.">
+                    A vague indication of the morality of the target is
+                    known. This is especially vague since it can be very
+                    subjective.
                 </item>
             </targetlist>
         </description>
     </spell>
+    
+    <spell name="Empathy" level="5" type="spirit">
+        <range>-1/m</range>
+        <duration>Concentration</duration>
+        <target>-5/extra</target>
+        
+        <prerequisite>Sense Aura</prerequisite>
+        
+        <description>
+            <para>
+                The wizard is able to know the emotional state of mind
+                of the target. They can scan the surface thoughts, and get
+                an idea of what the target is thinking. However, any
+                knowledge gained is purely emotion - there are no words
+                behind the thoughts transferred.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Soul Sight" level="7" type="spirit">
+        <range>-1/5m</range>
+        <duration>Concentration</duration>
+        
+        <prerequisite>Empathy</prerequisite>
+        
+        <description>
+            <para>
+                Read surface thoughts of target.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Dream Watch" level="7" type="spirit">
+        <range>-1/m</range>
+        <duration>Concentration</duration>
+        
+        <prerequisite>Empathy</prerequisite>
+        
+        <description>
+            <para>
+                View a person's dreams as they dream them.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Dream Walk" level="9" type="spirit">
+        <range>-1/m</range>
+        <duration>Sleep</duration>
+        
+        <prerequisite>Dream Watch</prerequisite>
+        
+        <description>
+            <para>
+                Walk in the target's dreams, influencing them and
+                communicating with the target.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Sending" level="9" type="spirit">
+        <range>-1/1km</range>
+        <duration>Concentration</duration>
+        
+        <prerequisite>Dream Watch</prerequisite>
+        
+        <description>
+            <para>
+                Send a message to someone in their dreams.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Living Nightmare" level="12" type="spirit">
+        <range>-1/100m</range>
+        <duration>Sleep</duration>
+        <target>-3/extra</target>
+        
+        <prerequisite>Dream Walk</prerequisite>
+        
+        <description>
+            <para>
+                Turn a dream into a terror which may haunt the dreamer.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Waking Dream" level="15" type="spirit">
+        <range>-1/100m</range>
+        <duration>Sleep</duration>
+        <target>-3/extra</target>
+        
+        <prerequisite>Living Nightmare</prerequisite>
+        
+        <description>
+            <para>
+                The nightmares and fears of the target's come alive and
+                affect them when they are awake.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Emote" level="1" type="spirit">
+        <range>-1/m</range>
+        <duration>Concentration</duration>
+        <target>-5/extra</target>
+        
+        <description>
+            <para>
+                The wizard can project his emotions to the target,
+                allowing them to know the wizard's state of mind. The
+                projection does not affect the mind of the target in any
+                way, except by letting them know the information. The
+                target effectively gets a <e>Sense aura</e> roll, adding
+                the effect of this spell.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Impress" level="3" type="spirit">
+        <range>-1/m</range>
+        <duration>Concentration</duration>
+        <target>-5/extra</target>
+        
+        <prerequisite>Emote</prerequisite>
+        
+        <description>
+            <para>
+                Affect a person's emotions. Bonus to charisma rolls.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Memory" level="5" type="spirit">
+        <range>-1/m</range>
+        <duration>Concentration</duration>
+        
+        <prerequisite>Impress</prerequisite>
+        
+        <description>
+            <para>
+                Affect a person's memories, changing them.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Suggestion" level="7" type="spirit">
+        <range>-1/5m</range>
+        <duration>Momentary</duration>
+        
+        <prerequisite>Memory</prerequisite>
+        
+        <description>
+            <para>
+                Affect a person's thoughts, and suggest courses of actions
+                to them.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Desire" level="9" type="spirit">
+        <range>-1/m</range>
+        <duration>Momentary</duration>
+        
+        <prerequisite>Suggestion</prerequisite>
+        
+        <description>
+            <para>
+                Implant a strong desire in someone for something. This is
+                a long term effect.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Geas" level="12" type="spirit">
+        <range>-1/m</range>
+        <duration>Momentary</duration>
+        
+        <prerequisite>Desire</prerequisite>
+        
+        <description>
+            <para>
+                Person suffers if they fail to do something.
+            </para>
+        </description>
+    </spell>
 
+    <spell name="Greater  Geas" level="15" type="spirit">
+        <range>-1/m</range>
+        <duration>Momentary</duration>
+        
+        <prerequisite>Geas</prerequisite>
+        
+        <description>
+            <para>
+                Person dies if they fail to do something.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Fear" level="5" type="spirit">
+        <range>-1/5m</range>
+        <duration>Concentration</duration>
+        <target>-5/doubling</target>
+        
+        <prerequisite>Impress</prerequisite>
+        
+        <description>
+            <para>
+                Instill fear in the target.
+            </para>
+        </description>
+    </spell>
+    
+        
 </grimoire>
