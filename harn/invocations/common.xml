@@ -84,10 +84,43 @@ his god, making the necessary sacrifices. At the end of the
 day, one point of luck is gained, up to a maximum based on
 the priest's invocation roll.
 
-    Roll    Max    Roll    Max    Roll    Max
-    10    1    25    4    50    7
-    15    2    30    5    60    8
-    20    3    40    6    +20    +1
+<table>
+    <colspec colwidth="1.5cm"/>
+    <colspec colwidth="2.5cm"/>
+    <colspec colwidth="1.5cm"/>
+    <colspec colwidth="2cm"/>
+    <thead>
+        <row>
+            <entry>Target</entry>
+            <entry>Max luck</entry>
+            <entry>Target</entry>
+            <entry>Max luck</entry>
+
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>10</entry><entry>1</entry>
+            <entry>40</entry><entry>6</entry>
+        </row>
+        <row>
+            <entry>15</entry><entry>2</entry>
+            <entry>50</entry><entry>7</entry>
+        </row>
+        <row>
+            <entry>20</entry><entry>3</entry>
+            <entry>60</entry><entry>8</entry>
+        </row>
+        <row>
+            <entry>25</entry><entry>4</entry>
+            <entry>80</entry><entry>9</entry>
+        </row>
+        <row>
+            <entry>30</entry><entry>5</entry>
+            <entry>100</entry><entry>10</entry>
+        </row>
+    </tbody>
+</table>
 </description>
 </invocation>
 
@@ -181,13 +214,59 @@ conversation.
 Allows the priest to perceive a lie when talking to someone.
 The target person must have been baptised in the religion of
 the priest.
+<table>
+    <colspec colwidth="2cm"/>
+    <colspec colwidth="6cm"/>
+    <thead>
+        <row>
+            <entry>Target</entry>
+            <entry>Knowledge</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>20</entry>
+            <entry>
+            It is known if the target speaks mostly lies.
+            </entry>
+        </row>
+        <row>
+            <entry>25</entry>
+            <entry>
+            It is known if the target speaks a lie of
+            commission, but the exact lie is not known.
+            </entry>
+        </row>
+        <row>
+            <entry>30</entry>
+            <entry>
+            It is known what lies were said.
+            </entry>
+        </row>
+        <row>
+            <entry>35</entry>
+            <entry>
+            Priest also knows if a lie of omission was made,
+            but not what it was.
+            </entry>
+        </row>
+        <row>
+            <entry>40</entry>
+            <entry>
+            Priest knows how something is a lie - the degree
+            of the lie, and possibly a hint at the truth.
+            </entry>
+        </row>
+        <row>
+            <entry>50</entry>
+            <entry>
+            Priest knows why a lie was said, or why a fact was
+            missed out.
+            </entry>
+        </row>
+    </tbody>
+</table>
 
-    20    It is known if someone speaks mostly lies.
-    25    It is known if someone speaks a lie of commission, but the exact lie is not known.
-    30    It is known what lies were said.
-    35    Priest knows if a lie of omission was made.
-    40    Priest knows how something is a lie.
-    50    Priest knows why a lie was said/not said.
 </description>
 </invocation>
 
@@ -197,12 +276,25 @@ the priest.
 <range>Self</range>
 <difficulty>20</difficulty>
 <cost>High/immediate/5</cost>
+<boost difficulty="40">
+The priest may ask one broad question. The answer may be
+detailed, but there is no guarentee that it will be what
+the priest wants. However, it will generally be what the
+god wants the priest to know.
+</boost>
+<boost difficulty="60">
+The priest may talk with the deity about one subject.
+Only questions relating to the desires of the deity 
+will be answered.
+</boost>
 <description>
-Priest tries to discover the will of the deity.
-    20    The answer to a specific yes/no question is made known to the priest.
-    40    The priest may ask one broad question.
-    60    The priest may talk with the deity about one subject. Only questions relating to the desires of the deity will be answered.
+Priest tries to discover the will of the deity. This may only
+be used at most once a month. It does not give knowledge of
+mortal matters, unless it directly concerns the diety or their
+priests. The basic invocation gives an answer to a specific
+yes or no question.
 </description>
+
 </invocation>
 
 <invocation religion="Common" rank="2">
@@ -211,17 +303,18 @@ Priest tries to discover the will of the deity.
 <range>Hearing</range>
 <difficulty>20</difficulty>
 <cost>High/1</cost>
+<duration>Until blessed</duration>
+<resist>Will</resist>
+<boost difficulty="30">Three attributes are reduced.</boost>
+<boost difficulty="40">All attributes are reduced.</boost>
+<boost difficulty="50">Target also looses all luck.</boost>
 <description>
 The priest attempts to invoke the displeasure of the god on
 a single victim, who must be able to hear the priest make the
-curse, and must know that it was directed at them.
-
-    20    Victim suffers -1 to a single attribute, to a minimum of one.
-    30    Victim suffers -1 to three attributes.
-    40    Victim suffers -1 to all attributes.
-    50    As well as all attributes being reduced, victim is stripped of all luck.
-
-The curse lasts until the victim receives a blessing.
+curse, and must know that it was directed at them. A single
+attribute, chosen by the priest, is reduced by one point, down
+to a minimum of one. The curse lasts until the victim receives
+a blessing from a priest.
 </description>
 </invocation>
 
@@ -231,6 +324,8 @@ The curse lasts until the victim receives a blessing.
 <range>Special</range>
 <difficulty>40</difficulty>
 <cost>V. high/immediate/3</cost>
+<boost difficulty="60">Summon a greater servant</boost>
+<boost difficulty="80">Summon a major servant</boost>
 <description>
 The priest attempts to summon a servant of their deity. The
 servant will appear at the end of the invocation, and will be
@@ -238,11 +333,9 @@ willing to listen to the priest, and may carry out the priest's
 wishes if they coincide with those of the servant. If the
 wishes of the priest are at odds with those of the servant,
 the servant may become hostile.
-
-    40    Summon a lesser servant of the deity.
-    60    Summon a greater servant of the deity.
-    80    Summons a major servant of the deity.
-
+<br/>
+Normally, a lesser servant of the deity is summoned.
+<br/>
 Alternatively, the servant may be asked three yes/no questions.
 The servant is not omniscient.
 </description>
@@ -319,7 +412,7 @@ Seeks to banish a possessing spirit from a victim.
 <difficulty>30</difficulty>
 <cost>High/immediate</cost>
 <description>
-The priests soul temporarily departs their body, which is left
+The priest's soul temporarily departs their body, which is left
 in a state of metabolic suspension.
 </description>
 </invocation>
