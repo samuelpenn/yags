@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.34 $</version>
-            <date>$Date: 2003-11-30 00:14:12 $</date>
+            <version>$Revision: 1.35 $</version>
+            <date>$Date: 2003-12-08 22:02:11 $</date>
         </cvsinfo>
 
         <license>
@@ -370,6 +370,32 @@
             </sect2>
 
             <sect2>
+                <title>Techniques</title>
+
+                <para>
+                    A <e>technique</e> is a special type of manouevre that
+                    can be performed if it has been learnt. Techniques are
+                    considered to be advantages, and are bought as such.
+                    A technique has a requirement of a given level in a
+                    given skill before it can be learnt however.
+                </para>
+
+                <para>
+                    A technique is normally used instead of a normal attack
+                    or defence action. Some techniques apply automatically
+                    (such as <e>ground fighting</e> or <e>mounted combat</e>)
+                    if the situation warrents it. In this case, they apply
+                    as well as the action, and the action may be another
+                    technique.
+                </para>
+
+                <para>
+                    If a technique has a skill requirement of zero, then it
+                    can be used by anyone, and does not need to be learnt.
+                </para>
+            </sect2>
+
+            <sect2>
                 <title>Weapons</title>
 
                 <para>
@@ -450,6 +476,103 @@
                             weapon at all.
                         </entry>
                     </termlist>
+                </sect3>
+
+                <sect3>
+                    <title>Reach</title>
+
+                    <para>
+                        <e>Reach</e> is a measure of the effective length of a
+                        weapon - the longer its reach, the more space it is
+                        possible to put between the attacker and defender. In
+                        open terrain, the weapon with the longest reach has the
+                        advantage. In close combat, in a confined space, a
+                        longer reach weapon may be a liability.
+                    </para>
+
+                    <targetlist targetFirst="true">
+                        <targetLabel>Reach</targetLabel>
+                        <valueLabel>Examples</valueLabel>
+
+                        <entry target="0">
+                            Fist, knife.
+                        </entry>
+
+                        <entry target="1">
+                            Kick, dagger, hand axe.
+                        </entry>
+
+                        <entry target="2">
+                            Short sword, club.
+                        </entry>
+
+                        <entry target="3">
+                            Long sword, bastard sword, battle axe.
+                        </entry>
+
+                        <entry target="4">
+                            Great sword, quarterstaff, short spear.
+                        </entry>
+
+                        <entry target="5">
+                            Long spear.
+                        </entry>
+                    </targetlist>
+
+                    <para>
+                        A warrior with a longer reach weapon is at an advantage
+                        when defending against a shorter weapon. If the weapon
+                        of the defender is at least two reach categories longer,
+                        and the defender makes an <e>excellent defence</e>, then
+                        they get an <e>automatic strike</e> against the
+                        attacker.
+                    </para>
+
+                    <para>
+                        If either the attacker or defender is acting defensively,
+                        then no automatic strike is gained.
+                    </para>
+
+                    <sect4>
+                        <title>Reach in a Charge</title>
+
+                        <para>
+                            In a charge attack, the longest weapon always strikes
+                            first. The person with the longest reach weapon gets
+                            a <e>free strike</e> against the opponent before
+                            the main attack. However, though this always applies
+                            to the attacker, the defender must be prepared to
+                            receive the charge in order to receive this bonus,
+                            if it applies to them.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Unarmed attacks</title>
+
+                        <para>
+                            An attacker who does not have any real weapons is at
+                            a disadvantage against a defender with a real weapon.
+                            A real weapon is anything which does more than
+                            <e>stun</e> damage, or has a reach greater than zero
+                            and isn't part of the attacker's body.
+                        </para>
+
+                        <para>
+                            If an attack is made (e.g. with a fist or kick, or
+                            a sap, but not a knife) against a defender with a
+                            sword, then an <e>excellent defence</e> results in
+                            an <e>automatic strike</e> against the attacker.
+                        </para>
+
+                        <para>
+                            If the conditions for much greater reach, and
+                            unarmed attacks are both met in the same attack
+                            (i.e. a punch against anyone with a short sword or
+                            longer), then only a <e>good defence</e> is
+                            required in order to get an <e>automatic strike</e>.
+                        </para>
+                    </sect4>
                 </sect3>
 
                 <sect3>
@@ -774,8 +897,32 @@
                                 <entry>-40</entry>
                                 <entry>-20</entry>
                             </row>
+                            <row>
+                                <entry>5</entry>
+                                <entry>-60</entry>
+                                <entry>-30</entry>
+                            </row>
+                            <row>
+                                <entry>6</entry>
+                                <entry>-80</entry>
+                                <entry>-40</entry>
+                            </row>
                         </tbody>
                     </table>
+
+                    <para>
+                        A character is normally restricted to defending
+                        against a maximum of three opponents in a single
+                        round. A character with a shield may defend against
+                        four opponents. Certain techniques allow defence
+                        against up to six opponents.
+                    </para>
+
+                    <para>
+                        Note that the penalty is per opponent, not per
+                        attack, so all attacks from a single opponent can be
+                        defended against without penalty.
+                    </para>
                 </sect3>
             </sect2>
 
@@ -785,8 +932,8 @@
                 <para>
                     A character can be assumed to be able to move five times
                     their agility in metres per round and still make an
-                    attack. Each metre they move
-                    before attacking, they have a -1 penalty to initiative.
+                    attack. Each metre they move before attacking, they have
+                    a -1 penalty to initiative.
                 </para>
             </sect2>
         </sect1>
@@ -832,10 +979,10 @@
                 on the damage type of the weapon - wounds, stuns or split
                 damage.
             </para>
-            
+
             <sect2>
                 <title>Knockdown</title>
-                
+
                 <para>
                     Every creature has a <e>knockdown</e> score, which is
                     the amount of damage a creature can stand in one blow
@@ -844,24 +991,19 @@
                     damage, so it is possible to knock someone to the floor,
                     even if you don't get through their armour.
                 </para>
-                
+
                 <para>
-                    The knockdown score for a person or creature is equal
-                    to their <skillequation><attribute>strength</attribute>
-                    <skill>10</skill><bonus>10</bonus></skillequation>
-                    For an average human, this
-                    is equal to 40. If a blow equals or exceeds this value,
-                    then the creature receives one stun regardless of their
-                    soak. They must then make an
-                    <skillequation><attribute>agility</attribute>
-                    <skill>brawl</skill></skillequation> roll to remain
-                    standing.
+                    The knockdown score for a character is 10 x strength + 10.
+                    For an average human, this is 40. If a single blow equals
+                    or exceeds this value, then they suffer one stun, and
+                    are considered immediately <e>unsteady</e>.
                 </para>
 
                 <para>
-                    The brawl roll is at a target difficulty of 20 plus
-                    the amount the damage was over the character's
-                    knockdown.
+                    An agility brawl roll is then required, otherwise they
+                    are immediately prone. The brawl roll is at a target
+                    difficulty of 20 plus the amount the damage was over
+                    the character's knockdown.
                 </para>
             </sect2>
 
@@ -1851,366 +1993,62 @@
         </sect1>
 
         <sect1>
+            <title>Environment</title>
+
+            <para>
+                The environment can affect how a combat is fought.
+            </para>
+
+            <sect2>
+                <title>Darkness</title>
+
+                <para>
+                    Darkness covers any situation where one combatent cannot
+                    see another, due to lack of light, blindness, fog, smoke
+                    and the like.
+                </para>
+
+                <para>
+                    In these situations, a character has to use senses other
+                    than sight, and their ability to do this is based on
+                    <e>Perception</e>. When under the effects of darkness,
+                    the <e>Agility</e> and <e>Dexterity</e> of the character
+                    are capped to their modified <e>Perception</e>. The
+                    modifier depends on the degree of darkness.
+                </para>
+
+                <targetlist targetFirst="false" bold="true">
+                    <targetLabel>Penalty</targetLabel>
+                    <valueLabel>Darkness</valueLabel>
+
+                    <entry target="-1" value="Dim.">
+                        Twilight or other poor lighting conditions.
+                    </entry>
+                    <entry target="-2" value="Dark.">
+                        Night, with full moon and clear sky.
+                    </entry>
+                    <entry target="-3" value="Very dark.">
+                        Night, just with starlight.
+                    </entry>
+                    <entry target="-4" value="Pitch black.">
+                        No light at all, underground or in a closed room.
+                    </entry>
+                </targetlist>
+
+                <para>
+                    A character with <e>night vision</e> has +1 to
+                    Perception for all levels of darkness other than pitch
+                    black (though this only applies if it is dark, not in
+                    fog or smoke). <e>Situational awareness</e>, and edges
+                    which give bonuses to hearing also affect perception
+                    for the purpose of this.
+                </para>
+            </sect2>
+        </sect1>
+
+        <sect1>
             <title>Advanced Combat</title>
 
-            <sect2>
-                <title>Special Attacks</title>
-
-                <para>
-                    Instead of making a normal attack, before initiative
-                    is determined, a character can opt to make one special
-                    attack. Unless noted otherwise, these are available to
-                    all forms of attack, and all types of weapons. In some
-                    cases, special attacks can be combined, but only if it
-                    is specifically noted.
-                </para>
-
-                <para>
-                    If two actions are combined, and both modify the
-                    initiative, then the slowest initiative is used. For
-                    example, aiming allows a fast attack the following
-                    round, and can be combined with killing blow, which
-                    is a slow attack. A round is spent aiming, then the
-                    following round a slow killing blow attack is made.
-                </para>
-
-                <sect3>
-                    <title>Aggressive</title>
-
-                    <para>
-                        An all out melee attack is made, giving a +5 bonus
-                        to attack and damage rolls, but a -10 to defence.
-                        This attack is considered to be fast.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Aimed Shot</title>
-
-                    <para>
-                        Only applicable for missile attacks. If an entire
-                        round is spent aiming, then +1 is added to the
-                        attacker's perception for the attack, which
-                        occurs as a fast attack the following round. This
-                        attack may be combined with killing blows or
-                        ambush actions.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Ambush</title>
-
-                    <para>
-                        If the target is unaware of the attack, then an
-                        ambush may be performed. This grants no bonuses
-                        to the attack, but the total soak of the target
-                        is halved. Furthermore, the attack counts
-                        as a <e>killing blow</e>. An
-                        ambusher cannot defend during the round, and
-                        such an attack is always considered to be slow.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Cleaving Attack</title>
-
-                    <para>
-                        A cleaving attack is always slow, and also gives
-                        a -10 penalty to the attack roll, or -5 if a two
-                        handed weapon is being used. If the attack is
-                        successful, the armour (not soak) of the target
-                        is halved. Such an attack can only be performed
-                        in melee.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Defensive</title>
-
-                    <para>
-                        If the round is spent fighting defensively, then
-                        a +5 bonus to defence rolls is gained, and a -10
-                        penalty to attack rolls. Any attacks made are slow,
-                        and only melee actions can be performed.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Disarm</title>
-
-                    <para>
-                        This is a melee attack, which can be perform with
-                        a melee weapon against a melee weapon. It cannot
-                        be used against shields, and suffers -10 against
-                        a weapon which is being used two handed. A weapon
-                        attack roll is made at -10, versus the defence
-                        roll as per normal (though no defence penalty is
-                        suffered from fighting multiple opponents for this
-                        roll only). On success, the defender is off
-                        balance and looses attack and defence bonuses
-                        from that weapon for the rest of the round (it is
-                        possible that this has no effect). A second
-                        oppossed roll is made, with the dexterity of the
-                        attack and defender. If the attack equals or
-                        exceeds the defender, then the defender has been
-                        disarmed.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Feint</title>
-
-                    <para>
-                        No attack is made this turn (but character can
-                        defend as normal), and a +5 bonus to attack and
-                        initiative is gained next turn, as long as the
-                        same opponent is being fought. Only possible in
-                        melee, and during the following round, any other
-                        special attack can be used. Further, special
-                        attacks which automatically go last,
-                        instead act at normal initiative.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Killing blow</title>
-
-                    <para>
-                        A killing blow is a slow attack, and the character
-                        suffers a -10 penalty to the attack roll. If the
-                        attack is successful, and at least two full
-                        categories of damage are caused, the target is
-                        instantly killed. If performed with a weapon doing
-                        stun or mixed damage, the target is knocked out
-                        instead.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Subduing Attack</title>
-
-                    <para>
-                        Any attack with a melee weapon can be turned into
-                        a subduing attack, causing stun damage instead of
-                        wounds or mixed damage.
-                    </para>
-                </sect3>
-
-            </sect2>
-
-            <sect2>
-                <title>Counter strikes</title>
-
-                <para>
-                    Counter strikes are secondary attacks made against
-                    an attacker as part of a defence. They represent
-                    punches, kicks, shield bashes and similar actions
-                    that occur as part of a melee - effectively 'dirty
-                    fighting'.
-                </para>
-
-                <para>
-                    A counter strike is a free action that does not need
-                    to be declared before hand. However, two requirements
-                    must be met in order for a counter strike to be made.
-                    The first is that the character must have already
-                    acted this round (i.e. it must be after their
-                    initiative), and secondly, they must have made a
-                    successful defence against an attacker by at least
-                    ten points. If these two requirements have been met,
-                    then a counter strike may be made against the
-                    attacker (for a counter strike, the strike is made
-                    by the defender against the attacker).
-                </para>
-
-                <para>
-                    The defender (the character making the counter strike)
-                    makes a brawling attack, with penalties equal to those
-                    they had for the defence roll (including those for
-                    defending against multiple opponents). The attacker
-                    makes a brawl defence roll, and if he succeeds, then
-                    the counter strike fails. Note that the brawl defence
-                    suffers penalties for performing multiple defences,
-                    i.e. if the attacker was already defending against two
-                    people, then his defence would be at -10. The brawl
-                    defence is considered a 'free' defence, but does suffer
-                    the penalties for other defences.
-                </para>
-
-                <para>
-                    A successful counter strike results in a brawling
-                    (stun) damage roll. The counter striker may use the
-                    damage bonus of their weapon or shield (depending on
-                    where the initial attack came from), though the
-                    damage is always considered to be stun damage.
-                </para>
-
-                <para>
-                    If the counter striker is attacking aggresively,
-                    or is in a berserk rage, or performing any similar
-                    action which gives a penalty to defence rolls, then
-                    this penalty does not apply to the counter strike.
-                    However, the attack bonus is not gained for the
-                    counter strike attack either.
-                </para>
-            </sect2>
-
-            <sect2>
-                <title>Berserkers</title>
-
-                <para>
-                    Berserkers are mad warriors who show little concern
-                    for their own survival. Fueled up on bloodlust,
-                    religious fervour or drugs, they are able to shrug
-                    aside injuries, and fight with a strength and
-                    ferocity not normally possible.
-                </para>
-
-                <para>
-                    Being a berserker is considered an advantage,
-                    and only characters who have purchased it at
-                    character generation may go berserk.
-                </para>
-
-                <sect3>
-                    <title>The berserker advantage</title>
-
-                    <para>
-                        The advantage is purchased to a level, from one
-                        upwards. Normally six is the maximum, though higher
-                        levels may be possible through divine inspiration
-                        or magic.
-                    </para>
-
-                    <para>
-                        If may be possible to increase the level of this
-                        advantage over time, though it may not be improved
-                        with experience. Being a berserker is a mind set
-                        which is difficult to learn.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Going berserk</title>
-
-                    <para>
-                        Going berserk is relatively easy, as long as there
-                        is a reason to fight. No roll is necessary - if there
-                        is a fight at hand, and the character wants to go 
-                        berserk, then they can do, and they gain all the 
-                        bonuses thereof.
-                    </para>
-
-                    <para>
-                        If there is no-one to fight, then entering a berserk
-                        rage is not possible. There must be the promise of 
-                        blood letting in the very near future.
-                    </para>
-
-                    <sect4>
-                        <title>Not going berserk</title>
-
-                        <para>
-                            If a berserker gets involved in a fight in which
-                            they do not want to go berserk, then a will check 
-                            is required in order to restrain themselves.
-                            Failure means that they go berserk, getting any
-                            bonuses and penalties associated with that.
-                        </para>
-
-                        <para>
-                            The difficulty to avoid going berserk is based on
-                            the size of the fight. The bigger and more heroic
-                            the fight, the harder it is to resist going
-                            berserk. The character rolls will x 4, at a
-                            penalty of 5 x berserker level.
-                        </para>
-
-                        <targetlist targetFirst="true" bold="true">
-                            <title>Resisting Going Berserk</title>
-
-                            <targetLabel>Target</targetLabel>
-                            <valueLabel>Situation</valueLabel>
-
-                            <entry target="0" value="Friendly">
-                                A small, friendly fight.
-                            </entry>
-
-                            <entry target="5" value="Inferior foe">
-                                The foe is obviously inferior, and easy
-                                to defeat.
-                            </entry>
-
-                            <entry target="10" value="Mildly inferior">
-                                The foe is relatively easy to beat.
-                            </entry>
-
-                            <entry target="15" value="Similar">
-                                Foe is a challenge.
-                            </entry>
-
-                            <entry target="20" value="Superior">
-                                Foe is superier.
-                            </entry>
-
-                            <entry target="25" value="Greatly superior">
-                                Foe is greatly superior.
-                            </entry>
-                        </targetlist>
-
-                        <para>
-                            Whether a foe is inferior or superior, depends
-                            on the skill of the foe, as well as numerical
-                            superiority.
-                        </para>
-                    </sect4>
-                </sect3>
-
-                <sect3>
-                    <title>Effects of berserk combat</title>
-
-                    <para>
-                        A berserk warrior must fight the nearest foe to
-                        them, and may never use missile weapons. If 
-                        there is not a foe in range, then they must
-                        close with the enemy as quickly as possible. 
-                        A berserker may never fight defensively.
-                    </para>
-
-                    <para>
-                        The level of the berserker advantage adds to the
-                        attack, initiative and damage rolls of the 
-                        berserker. It also subtracts from the
-                        berserker's defence rolls.
-                    </para>
-
-                    <para>
-                        Any wound, stun or fatigue penalties are reduced
-                        by the level of the advantage. Rolls to stay 
-                        alive and conscious get a bonus equal
-                        to the advantage.
-                    </para>
-
-                    <para>
-                        Finally, a berserker gets extra wound and stun
-                        levels. These are temporary and are lost at the
-                        end of the battle. One extra wound and stun level
-                        is gained per two full levels of advantage. The
-                        first level is an extra hurt and bruised
-                        level. The second is an extra light
-                        and dazed level. The third is an extra
-                        medium and bloodied level.
-                    </para>
-
-                    <para>
-                        The real level is lost first when the character is
-                        injured, and the temporary level is lost second.
-                        At the end of the fight, the temporary levels go 
-                        away, as do any wounds or stuns in them.
-                    </para>
-                </sect3>
-
-            </sect2>
 
             <sect2>
                 <title>Mounted combat</title>
