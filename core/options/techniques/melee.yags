@@ -4,60 +4,132 @@
     General melee combat techniques.
     
     Author:  Samuel Penn
-    Version: $Revision: 1.5 $
-    Date:    $Date: 2004-07-04 21:46:17 $
+    Version: $Revision: 1.6 $
+    Date:    $Date: 2004-08-25 20:29:26 $
     
  -->
 
 <advantages>
 
-    <advantage name="Finesse" type="technique">
-        <cost points="3"/>
+    <advantage name="Beat" type="technique">
+        <cost points="2"/>
         <skill name="Any melee weapon"/>
+        <prerequisite>Improved attack</prerequisite>
         
         <description>
-            <para>
-                The character is trained in defensive manouevres of
-                misdirection and finesse. This technique can only be used
-                with a <e>defensive stance</e> to either make a feint, or
-                disarm a foe.
+            <para role="descriptive">
+                A beat is an attack on a foe's weapon or shield, in an
+                attempt to knock it out of the way (or even disarm it)
+                ready for a follow up attack the following round.
             </para>
-            
+ 
             <para>
-                If a feint is declared against an attacker, the character's
-                attack comes immediately after the attackers. If the defence
-                is successful, then the character gains a bonus to attack
-                equal to however many points the defence roll was made by.
+                Cannot use a defensive stance, and must be declared before
+                the attack is made. The attack is made as normal, but the
+                defender does not get any weapon bonuses for their defence
+                roll. On a successful attack, immediately make a contest of
+                strength rolls, adding the initiative bonus of each
+                weapon. A weapon gains +3 if it is heavy, -3 if light,
+                and +5 if it is a shield. The attacker gets +2 for each
+                rank of success (good, excellent, superb) of the attack roll.
             </para>
-            
+
             <para>
-                For a disarm, no attack is made, and defence roll is at -5.
-                On a successful defence, there is an immediate contest of
-                dexterity based initiative. If the defender gets a good
-                success, the attacker is disarmed. If the defender looses,
-                then the attacker gets an automatic strike.
+                If the strength attack wins, then the defender's next
+                attack or defence roll is at a penalty equal to how much
+                the attacker won by. If the attacker gets an excellent
+                success, then the defender is disarmed.
+            </para>
+        </description>
+    </advantage> 
+
+    <advantage name="Stunning attack" type="technique">
+        <cost points="4"/>
+        <skill name="Any melee weapon"/>
+        <prerequisite>Improved attack</prerequisite>
+
+        <description>
+            <para role="descriptive">
+                Uses the force of the blow to try and knock the target
+                from their feet, or at least unsteady them ready for a
+                follow up attack.
+            </para>
+
+            <para>
+                Aggressive, declared. Attack as normal, but the first
+                level of any wounds caused is taken as a stun. Knockdown
+                is at +5.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Fast defence" type="technique">
-        <cost points="5"/>
+    <advantage name="Finesse" type="technique">
+        <cost points="2"/>
+        <skill name="Any melee weapon"/>
+        
+        <description>
+            <para role="descriptive">
+                Enables the character to trade hitting power for finesse.
+                The blow isn't as direct, but has more chance of getting
+                through any defences.
+            </para>
+            
+            <para>
+                If finesse is declared for an attack, then damage can be
+                used in order to increase the chance of hitting. For
+                each +1 bonus to their attack roll, the attacker gets a
+                -1 penalty to damage. The bonus/penalty cannot be greater
+                than the skill score of the character.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Disarm" type="technique">
+        <cost points="2"/>
         <skill name="Any melee weapon"/>
         <prerequisite>Finesse</prerequisite>
+
+        <description>
+            <para role="descriptive">
+                An attempt to knock the foe's weapon from their hand,
+                or at least to prevent them from attacking or
+                defending with it.
+             </para>
+
+             <para>
+                 Defensive stance. When a disarm is declared, the disarm
+                 is performed in response to an attack, so can only
+                 be used against an attacker. An excellent defence
+                 is required. If successful, then a disarm can be
+                 attempted.
+             </para>
+ 
+             <para>
+                 Both make a contested dexterity skill roll, with no
+                 weapon bonuses. If the character looses, then the
+                 opponent gets an automatic strike. If the disarm
+                 is successful, 
+             </para>
+        </description>
+    </advantage>
+
+    <advantage name="Improved defence" type="technique">
+        <cost points="2"/>
+        <skill name="Any melee weapon"/>
         
         <description>
             <para>
                 Automatic, defensive stance. The character can defend
-                against up to one extra opponent. They also gain +10 to
-                defence rolls rather than +5.
+                against up to one extra opponent, and they gain +5 to
+                defence rolls when defending against multiple attacks.
             </para>
         </description>
     </advantage>
 
     <advantage name="Counter strike" type="technique">
-        <cost points="7"/>
+        <cost points="6"/>
         <skill name="Any melee weapon"/>
-        <prerequisite>Fast defence</prerequisite>
+        <prerequisite>Improved defence</prerequisite>
         
         <description>
             <para>
@@ -69,7 +141,7 @@
     </advantage>
     
     <advantage name="Whirlwind defence" type="technique">
-        <cost points="9"/>
+        <cost points="8"/>
         <skill name="Any melee weapon"/>
         <prerequisite>Counter strike</prerequisite>
         
@@ -84,22 +156,8 @@
     
     
     
-    <advantage name="Beat" type="technique">
-        <cost points="3"/>
-        <skill name="Any melee weapon"/>
-        
-        <description>
-            <para>
-                Aggressive stance, if declared attack a foe's weapon using
-                brute force to knock it out of the way or disarm them. On
-                a successful attack, make contested strength initiative
-                checks. If the character wins, the foe is disarmed.
-            </para>
-        </description>
-    </advantage>
-    
-    <advantage name="Fast attack" type="technique">
-        <cost points="5"/>
+    <advantage name="Improved attack" type="technique">
+        <cost points="2"/>
         <skill name="All melee"/>
         
         <description>
@@ -111,9 +169,9 @@
     </advantage>
     
     <advantage name="Mighty blow" type="technique">
-        <cost points="7"/>
+        <cost points="6"/>
         <skill name="Any melee"/>
-        <prerequisite>Fast attack</prerequisite>
+        <prerequisite>Improved attack</prerequisite>
         
         <description>
             <para>
@@ -125,9 +183,9 @@
     </advantage>
     
     <advantage name="Deadly blow" type="technique">
-        <cost points="7"/>
+        <cost points="6"/>
         <skill name="Any melee weapon"/>
-        <prerequisite>Fast attack</prerequisite>
+        <prerequisite>Improved attack</prerequisite>
         
         <description>
             <para>
@@ -140,7 +198,7 @@
     </advantage>
     
     <advantage name="Overwhelming attack" type="technique">
-        <cost points="9"/>
+        <cost points="8"/>
         <skill name="Any melee weapon"/>
         <prerequisite>Mighty blow</prerequisite>
         
@@ -201,7 +259,7 @@
     </advantage>
     
     <advantage name="Combat ambush" type="technique">
-        <cost points="5"/>
+        <cost points="4"/>
         <skill name="Any melee"/>
         <prerequisite>Ambush</prerequisite>
         
@@ -231,7 +289,7 @@
     </advantage>
     
     <advantage name="Quickdraw" type="technique">
-        <cost points="5"/>
+        <cost points="4"/>
         <skill name="Any weapon skill"/>
         <prerequisite>Finesse</prerequisite>
         
@@ -253,7 +311,7 @@
     <advantage name="Double attack" type="technique">
         <cost points="10"/>
         <skill name="All melee"/>
-        <prerequisite>Fast attack</prerequisite>
+        <prerequisite>Improved attack</prerequisite>
         
         <description>
             <para>
