@@ -24,8 +24,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.63 $</version>
-            <date>$Date: 2004-10-26 21:31:43 $</date>
+            <version>$Revision: 1.64 $</version>
+            <date>$Date: 2004-11-29 22:32:18 $</date>
         </cvsinfo>
 
         <license>
@@ -107,7 +107,8 @@
 
                     <item name="Mixed damage">
                         Mixed damage is half stuns, half wounds with odd
-                        damage going on stuns.
+                        damage going on stuns. Many animals and light
+                        bludgeoning weapons cause mixed damage.
                     </item>
                     
                     <item name="Ineffective damage">
@@ -121,24 +122,19 @@
                         Fatigue is a measure of how tired a creature is.
                         Unlike wounds and stuns, the amount of fatigue a
                         creature can handle is based on their stamina.
-                        Fatigue can be recovered with a short rest, though
-                        a more extreme form of fatigue - exhaustion - can
-                        only be recovered with a night's sleep. Exhaustion
-                        is normally only gained through sleep deprivation
-                        and long term physical activity (e.g. walking
-                        for several hours).
+                        Fatigue can be recovered with a short rest.
+                    </item>
+                    
+                    <item name="Exhaustion">>
+                        Exhaustion is similar to fatigue, but can only be
+                        recovered with sleep. It is gained from long term
+                        physical activity such as hiking or heavy labour.
                     </item>
 
                     <item name="Damage">
-                        Damage is done when one creature hits another.
-                        An attack will inflict either wounds,
-                        stuns or mixed damage
-                        which is split between stuns and wounds. Many
-                        animals cause mixed damage with claw and bite
-                        attacks. It is also possible to cause
-                        ineffective damage, which is treated as
-                        stuns, but the number of levels caused is halved
-                        before application (rounding down).
+                        Damage normally causes either stuns or wounds.
+                        It is reduced by a creature's soak before being
+                        applied.
                     </item>
 
                     <item name="Load">
@@ -262,7 +258,7 @@
                     
                     <para>
                         Unlike all the other weapon skills, the brawling
-                        skill is based on agility.
+                        attack and defence are based on agility.
                     </para>
                 </sect3>
 
@@ -372,7 +368,11 @@
                     <title>Bow</title>
 
                     <para>
-                        Covers the user of the short and long bow.
+                        Covers the use of the short and long bow for
+                        ranged combat. A character without any skill
+                        cannot default to <e>throw</e>, and must spend
+                        a full round aiming or have all range penalties
+                        doubled.
                     </para>
                 </sect3>
 
@@ -380,7 +380,10 @@
                     <title>Crossbow</title>
 
                     <para>
-                        Covers the use of all types of crossbow.
+                        Covers the use of all types of crossbow. Does
+                        not default to <e>throw</e>. A character without
+                        any skill takes twice as long to load a crossbow
+                        but can fire it normally.
                     </para>
                 </sect3>
             </sect2>
@@ -416,21 +419,21 @@
                         <item name="Initiative">
                             This represents the speed, reach and tactical
                             advantage provided by the weapon. A good
-                            initiative is represented by the highest
-                            initiative going first in a combat.
+                            initiative is represented by acting first in
+                            a combat.
                         </item>
 
                         <item name="Attack">
-                            This provides a bonus to hit the target. It is a
-                            measure of accuracy and also weight, since a
-                            heavy weapon can be harder to deflect.
+                            This provides a bonus to hit the target. It is
+                            a measure of accuracy and also weight and
+                            reach.
                         </item>
 
                         <item name="Defence">
                             This adds to the character's defence roll. It
                             represents parrying, but also how good the
-                            weapon is at keeping the enemy at a safe
-                            distance.
+                            weapon is at keeping the enemy away from the
+                            user.
                         </item>
 
                         <item name="Damage">
@@ -479,10 +482,8 @@
                     <itemlist order="sort">    
                         <item name="Light">
                             Light weapons aren't very effective at getting
-                            through armour for their size. If the total
-                            armour bonus of the target is greater than the
-                            damage bonus of the weapon, then the weapon will
-                            do damage of one worse type (i.e. wounds become
+                            through armour. Against heavy armour, they do
+                            damage of one worse type (i.e. wounds become
                             mixed, mixed becomes stuns, stuns become
                             ineffective).
                         </item>
@@ -510,7 +511,9 @@
                         </item>
                         
                         <item name="Two handed">
-                            The weapon is designed to be used two handed.
+                            The weapon is designed to be used two handed,
+                            and can be used with the <e>great weapons</e>
+                            fighting style.
                         </item>
                         
                         <item name="Throwable">
@@ -794,7 +797,9 @@
                         they are waiting for, and what they will do
                         when it happens. Declarations such as
                         <e>I'll hit him if he moves</e>
-                        are perfectly valid.
+                        are perfectly valid. If he hasn't moved by the end
+                        of the round however, then the character does not
+                        get any action.
                     </para>
 
                     <sect4>
@@ -984,8 +989,9 @@
 
                 <para>
                     If the defender is not defending, then the target
-                    difficulty is 15. If the defender is defending,
-                    then they make a defence roll.
+                    difficulty is 15 (assuming a medium sized target). 
+                    If the defender is defending, then they make a
+                    defence roll.
                 </para>
 
                 <para>
@@ -1465,7 +1471,7 @@
                     <para>
                         The following round, the character may opt to try
                         and remove the recently gained fatigue level by
-                        limiting their actions. A brawl x stamina check is
+                        limiting their actions. A stamina x brawl check is
                         made, and if successful, the fatigue can be removed
                         at the beginning of the round.
                     </para>
@@ -1480,11 +1486,12 @@
                         </item>
 
                         <item target="30" value="Defend.">
-                            The character only defends that round, taking
-                            the normal stance and not moving.
+                            The character only defends that round, using
+                            the normal or defensive stance and not taking
+                            any actions other than defence.
                         </item>
                         
-                        <item target="40" value="Defensive.">
+                        <item target="40" value="Seni-active.">
                             The character takes the normal stance and
                             attacks without any techniques, and does not
                             move more than basic move.
