@@ -10,22 +10,68 @@
 
         <description>
             <para>
-                Ignite flamable material.
+                Ignites targeted flamable material. An intense, momentary
+                heat is applied to the targets, which has a chance of
+                igniting them if they are flammable. For the item affected,
+                roll d20 + effect of the spell. If the required target for
+                the type of material is achieved, then the item bursts into
+                flames.
             </para>
+
+            <para>
+                If the affected item is larger than the size targetted by
+                the spell, then only a portion of the item is affected. Fire
+                spreads though, so the entire item may be consumed anyway.
+            </para>
+
+            <para>
+                Only the surface of the item is affected by the initial
+                spell, though the fire may spread inwards naturally.
+            </para>
+
+            <targetlist>
+                <valueLabel>Type of material</valueLabel>
+                <targetLabel>Target</targetLabel>
+
+                <entry target="5" value="Flammable oil"/>
+                <entry target="10" value="Dry paper"/>
+                <entry target="15" value="Paper, dry wood, hair"/>
+                <entry target="20" value="Wood, cloth"/>
+                <entry target="25" value="Flesh"/>
+                <entry target="30" value="Wet wood"/>
+            </targetlist>
         </description>
     </spell>
 
-    <spell name="Warm" level="2" type="fire">
-        <range>Self</range>
+    <spell name="Warm" level="1" type="fire">
+        <range>-5/m</range>
         <duration>Concentration</duration>
         <target>-5/m radius</target>
-        <effect>+1C/1</effect>
+        <effect>+2C/1</effect>
         <resist>Ego</resist>
 
         <description>
             <para>
-                Gently warm a target up to a specified maximum. Warms the
-                air around a target, rather than the target itself.
+                Gently warm the target area up to a maximum of human body
+                temperature. By default, the area is centred on the caster,
+                but the target can be placed elsewhere. The temperature can
+                not be raised by more than the effect of the spell. The
+                spell will warm the air, as well as physical objects. The
+                temperature changes at a rate of 50% the difference between
+                the current temperature and the spell temperature per
+                minute the spell is in effect.
+            </para>
+
+            <para>
+                With no target radius specified, the effect halves every
+                fifty centimetres from the target point. If a radius is
+                specified, the halving is per radius of the target area.
+            </para>
+
+            <para>
+                If there is a wind, then warmed air will be continually
+                carried away and replaced by colder air. Even in still air,
+                warmer air will rise.
             </para>
         </description>
     </spell>
@@ -40,7 +86,8 @@
         <description>
             <para>
                 Enables the targets to react quicker, giving a bonus to
-                initiative.
+                initiative. Each level of effect gives a +1 bonus to the
+                target's initiative rolls whilst the spell is in effect.
             </para>
         </description>
     </spell>
@@ -50,12 +97,120 @@
         <range>-5/m</range>
         <duration>Concentration</duration>
         <target>-5/extra target</target>
-        <effect>+2% movement/1</effect>
+        <effect>+1 base move/5</effect>
         <resist>Ego</resist>
 
         <description>
             <para>
                 Increases movement speed of the target.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Resist Fire" level="3" type="fire">
+        <prerequisite>Warm</prerequisite>
+        <range>-5/m</range>
+        <duration>Concentration</duration>
+        <target>-5/extra target</target>
+        <effect>+1 soak/1</effect>
+        <resist>Ego</resist>
+
+        <description>
+            <para>
+                Increases the soak of the targets versus fire and heat.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Burning Motes" level="3" type="fire">
+        <prerequisite>Ignite</prerequisite>
+        <range>-1/m</range>
+        <duration>Momentary</duration>
+        <target>-5/target</target>
+        <effect>+1/1</effect>
+        <resist>Stamina</resist>
+
+        <description>
+            <para>
+                Creates a swarm of bright burning sparks to appear around
+                the caster, and to fly towards the designated targets. Each
+                target must make a stamina roll versus the level of effect.
+                Failure leaves the target blinded and confused, giving -1
+            </para>
+
+            <para>
+                The motes also do fire damage equal to half the effect. All
+                such damage is stun damage.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Heat" level="5" type="fire">
+        <prerequisite>Warm</prerequisite>
+        <range>-1/1m</range>
+        <duration>Concentration</duration>
+        <target>-5/1m radius</target>
+        <effect>+3C/1</effect>
+        <resist>Ego</resist>
+
+        <description>
+            <para>
+                Similar to <e>Warm</e>, but there is no limit to how high
+                the temperature can be raised.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Ashen Path" level="5" type="fire">
+        <prerequisite>Ignite</prerequisite>
+        <description>
+            <para>
+                Destroy plant life around the caster as he walks.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Breath of the Forge" level="7" type="fire">
+        <prerequisite>Heat</prerequisite>
+        <description>
+            <para>
+                Creates an intensely hot wind which blows from the caster
+                in the specified direction, in a 30 degree arc. The range
+                can be doubled by halving the arc.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Whither" level="7" type="fire">
+        <prerequisite>Ashen Path</prerequisite>
+        <prerequisite>Heat</prerequisite>
+
+        <description>
+            <para>
+                Destroys all plant life in a large area.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Fiery Aura" level="9" type="fire">
+        <prerequisite>Resist Fire</prerequisite>
+        <prerequisite>Burning Motes</prerequisite>
+
+        <description>
+            <para>
+                Creates a flaming aura which surrounds but does not harm
+                the caster.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Boiling Rain" level="9" type="fire">
+        <prerequisite>Heat</prerequisite>
+        <prerequisite>Burning Motes</prerequisite>
+
+        <description>
+            <para>
+                Rain in a large area is changed to boiling water.
             </para>
         </description>
     </spell>
