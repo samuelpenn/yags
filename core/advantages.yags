@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
-<?xml-stylesheet href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl" type="text/xsl"?>
+<?xml-stylesheet
+        href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+        type="text/xsl"?>
 
 <article>
     <header>
@@ -17,14 +19,14 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.16 $</version>
-            <date>$Date: 2004-07-11 20:55:35 $</date>
+            <version>$Revision: 1.17 $</version>
+            <date>$Date: 2004-07-17 15:54:12 $</date>
         </cvsinfo>
 
         <license>
             <year>2004</year>
             <holder>Samuel Penn</holder>
-            <url>http://www.bifrost.demon.co.uk/comp/yagsbook/fdl.html</url>
+            <url>http://www.glendale.org.uk/yags/core/fdl.html</url>
             <text>
                 Permission is granted to copy, distribute and/or
                 modify this document under the terms of the GNU
@@ -144,12 +146,32 @@
                 known as soon as the character has a skill of at least one,
                 at no cost.
             </para>
+
+            <sect2>
+                <title>Talent Related Techniques</title>
+                
+                <para>
+                    The following techniques are based off one of the eight
+                    talent skills. They can be learnt by anyone who has the
+                    relevant skill at a suitable level.
+                </para>
+                
+                <import-advantages
+                            href="options/techniques/talents.yags"
+                            type="technique"/>
+            </sect2>
             
-            <para>
-                Many techniques are combat orientated, though some are
-                bardic, magical or craft related.
-            </para>
-            
+            <sect2>
+                <title>General Skill Techniques</title>
+                
+                <para>
+                    The following techniques are based off general skills.
+                </para>
+                <import-advantages
+                            href="options/techniques/skills.yags"
+                            type="technique"/>
+            </sect2>
+                        
             <sect2>
                 <title>Combat Techniques</title>
 
@@ -200,17 +222,6 @@
                 </sect3>
             </sect2>
             
-            <sect2>
-                <title>Bardic Techniques</title>
-                
-                <para>
-                    Bards are taught a range of semi-magical abilities which
-                    work through song and music. They have power over the
-                    minds of men, and sometimes over nature itself.
-                </para>
-                
-                <import-advantages href="options/bardic.yags" type="technique"/>
-            </sect2>
         </sect1>
         
     </body>
