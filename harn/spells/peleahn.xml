@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
 
 <grimoire convocation="Peleahn">
+    <preface>
+        <para>
+            Peleahn is the convocation of heat, fire and energy. It can
+            be used to burn, to invigorate and to hasten.
+        </para>
+    </preface>
 
     <spell name="Zyrgin's Heat" level="10" convocation="peleahn">
         <range>Reach</range>
@@ -23,15 +29,15 @@
         <resist>Will; Soak</resist>
         <duration>Concentration</duration>
         <boost>+10 Range near</boost>
-        <boost>+20 Does +10 damage</boost>
+        <boost>+20 Does +10 stun damage</boost>
+        <boost>+40 Has the brightness of daylight</boost>
         <description>
             <para>
-                Summons a ball of ethereal fire, which appears at the point
+                Summons a ball of fire, which appears at the point
                 specified. Placing it on a sentient creature allows a will
-                roll to resist the spell. Once summoned, the ethereal fire
-                provides light and heat, though it only effects sentient
-                creatures. If it is touched, it causes +5 fatigue damage.
-                It has the brightness of a torch.
+                roll to resist the spell each round. Once summoned, the
+                fire provides light and heat. If it is touched, it causes +5
+                stun damage each round. It has the brightness of a torch.
             </para>
         </description>
     </spell>
@@ -41,12 +47,16 @@
         <resist>Will</resist>
         <duration>Concentration</duration>
         <boost>+10 Range is reach</boost>
-        <boost>+20 Range is near</boost>
+        <boost>+20 Size affected is up to six</boost>
+        <boost>+40 Range is near</boost>
         <description>
             <para>
                 Warms an item up to size 3 by a few degrees. Each round the
-                spell is concentrated on, the object will approach human body
-                temperature.
+                spell is concentrated on, the object will approach human
+                body temperature. If cast upon a living creature, that
+                creature is protected from cold in most circumstances
+                (freezing water will probably drain heat quicker than this
+                spell can replenish it, but still air won't).
             </para>
         </description>
     </spell>
@@ -62,10 +72,10 @@
         <description>
             <para>
                 Hastens the actions of a creature, enabling them to move 50%
-                quicker than normal. This also gives a base +3 bonus to attack,
-                defence and damage, and four times this (+12) to initiative.
-                However, fatigue rolls must be made every round of combat. The
-                spell will affect a creature up to size 6.
+                quicker than normal. This also gives a base +3 bonus to
+                attack, defence and damage, and four times this (+12) to
+                initiative. However, fatigue rolls must be made every round
+                of combat. The spell will affect a creature up to size 6.
             </para>
         </description>
     </spell>
@@ -100,6 +110,22 @@
             </para>
         </description>
     </spell>
+    
+    <spell name="Flame of Ariondh" level="30" convocation="peleahn">
+        <range>Near</range>
+        <resist>Soak</resist>
+        <duration>Momentary</duration>
+        <boost>+15 Range is short</boost>
+        <boost>+30 Damage is +20</boost>
+        <boost>+60 Damage is +25</boost>
+        <description>
+            <para>
+                Creates a dart of fire which shoots forth at a specified
+                target, hitting at +3 with the Shek-Pvar's throw skill.
+                If it hits, it does +15 stun damage.
+            </para>
+        </description>
+    </spell>
 
     <spell name="Eyes of Niyar" level="60" convocation="peleahn">
         <range>Self</range>
@@ -130,11 +156,11 @@
             <para>
                 The spell causes a flame to appear in the caster's hand,
                 which can then by thrown at a target as a bolt of fire.
-                The flame can be held for as long as the spell is concentrated
-                on, but ends when the bolt is thrown. If the bolt hits, then
-                it does +25 damage to the target. The caster uses her throw
-                skill, and the target may dodge. The flame is made of ethereal
-                fire, and has an attack bonus of +6.
+                The flame can be held for as long as the spell is
+                concentrated on, but ends when the bolt is thrown. If
+                the bolt hits, then it does +25 damage to the target.
+                The caster uses her throw skill, and the target may dodge.
+                The Shek-Pvar an attack bonus of +6.
             </para>
         </description>
     </spell>
@@ -149,9 +175,9 @@
         <boost>+60 12 darts</boost>
         <description>
             <para>
-                Creates three darts of ethereal fire which shoot forth
+                Creates three darts of fire which shoot forth
                 towards a single, or multiple, targets, hitting with the
-                caster's throw skill at +6, doing +18 stun damage. Each
+                caster's throw skill at +6, doing +20 stun damage. Each
                 target beyond the first gives a -3 penalty to all throw
                 rolls. Against the same target, there is one dodge roll
                 and one attack roll.
@@ -202,12 +228,12 @@
         <resist>Soak</resist>
         <duration>Momentary</duration>
         <boost>+15 Range is short, attack is 50.</boost>
-        <boost>+30 Damage is +40</boost>
+        <boost>+30 Damage is +35</boost>
         <description>
             <para>
                 Causes fiery tendrals to shoot from the caster's hands, over
                 a sixty degree arc out to the range of the spell. Anyone caught
-                by the flames suffers +30 damage. The flames hit with an attack
+                by the flames suffers +25 damage. The flames hit with an attack
                 of 40 (no roll), and can only be dodged. The defence gets a
                 bonus equal to the range (e.g. +10 at 10m).
             </para>
@@ -229,7 +255,7 @@
                 be forever pacing, running or otherwise being energetic. They
                 will be unable to sleep properly. Each day, the target's body
                 temperature will rise as if they suffer from a fever. The
-                strength of the illness is 40, and has a time of Day/5. The
+                strength of the illness is 40, and has a time of Day/-5. The
                 effects of the illness are fever / fever / coma / coma / death.
                 A creature up to size 9 can be affected.
             </para>
@@ -276,6 +302,24 @@
         </description>
     </spell>
 
+    <spell name="Fire Swarm of Ariondh" level="120" convocation="peleahn">
+        <range>Short</range>
+        <resist>Soak</resist>
+        <duration>Momentary</duration>
+        <boost>+15 Range is medium</boost>
+        <boost>+30 18 darts</boost>
+        <boost>+60 24 darts</boost>
+        <description>
+            <para>
+                Creates a dozen flaming darts which swarm towards one or
+                more targets. If multiple targets are selected, then each
+                extra target beyond the first gives a -3 penalty to hit.
+                Each dart does +25 stun damage. and has an attack bonus
+                of +12. Darts fired against the same target each count as
+                a seperate attack, so multiple defences are required.
+            </para>
+        </description>
+    </spell>
 
     <spell name="Pilum of Fire" level="120" convocation="peleahn">
         <range>Short</range>
@@ -283,12 +327,12 @@
         <duration>Momentary</duration>
         <boost>+20 Range is medium</boost>
         <boost>+40 Bolt can be split into multiple bolts, splitting the damage as desired</boost>
-        <boost>+80 Damage is +65</boost>
+        <boost>+80 Damage is +50</boost>
         <description>
             <para>
-                Causes a bolt of fire to form and strike at the target, using
-                the caster's throw skill at +12. If it hits, the bolt does
-                +50 fire damage to the target.
+                Causes a bolt of fire to form and strike at the target,
+                using the caster's throw skill at +12. If it hits, the
+                bolt does +40 fire damage to the target.
             </para>
         </description>
     </spell>
@@ -318,14 +362,14 @@
         <duration>Concentration</duration>
         <resist>Soak</resist>
         <boost>+20 Range is medium</boost>
-        <boost>+40 Damage is +60</boost>
+        <boost>+40 Damage is +50</boost>
         <boost>+80 Range is far</boost>
         <description>
             <para>
                 This spell creates a burning tower of ethereal fire, vaguely
                 humanoid in shape. It can be moved around within range of the
                 spell, being used to burn targets as desired. The fiend attacks
-                with the caster's throw skill at +16, and does +50 damage,
+                with the caster's throw skill at +16, and does +40 damage,
                 halving worn armour because of its tendency to totally envelop
                 the target. It effectively has +20 soak and 5 body levels
                 against water based attacks. It can be moved at 100m/round.
@@ -349,7 +393,7 @@
                 Creates a small ball of fire which appears in the caster's
                 hand, and which can then be thrown out to the range of the
                 spell, using the caster's throw skill at +20. On hitting a
-                solid target, it explodes over a 15m radius area, doing +70
+                solid target, it explodes over a 15m radius area, doing +45
                 damage.
             </para>
         </description>

@@ -31,20 +31,6 @@
         </para>
     </preface>
 
-    <spell name="Attune" level="0" convocation="neutral">
-        <range>Touch</range>
-        <duration>Special</duration>
-        <description>
-            <para>
-                This spell is used to create a bond of affinity between
-                the caster and an object or enchantment. Attunement is
-                the first step towards controlling an enchantment or
-                object, and is not actually an end in itself. It will
-                only work on enchantments of equal or lower rank.
-            </para>
-        </description>
-    </spell>
-
     <spell name="Abort" level="0" convocation="neutral">
         <range>Near</range>
         <resist>Will</resist>
@@ -59,6 +45,25 @@
                 or lower rank than the Abort, then the spell may be aborted,
                 assuming the target spellcaster fails an opposed will check. The
                 abort must be cast before the target spell is finished.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Break Attunement" level="0" convocation="neutral">
+        <range>Touch</range>
+        <resist>Will x Ego</resist>
+        <duration>Momentary</duration>
+        <boost>+25 Range is reach</boost>
+        <boost>+50 Range is near</boost>
+        <boost>+100 Break all attunements on target Shek-Pvar</boost>
+        <description>
+            <para>
+                Breaks an attunement between an item or spell and the
+                Shek-Pvar. The <e>Break</e> must be equal or higher rank
+                than the <e>Attune</e>. If this spell is cast against an
+                <e>Attune</e> between another Shek-Pvar and the item,
+                both must be touched, and the Shek-Pvar gets an Ego roll
+                to resist.
             </para>
         </description>
     </spell>
@@ -219,15 +224,16 @@
         <description>
             <para>
                 Opens a minor artifact ready for storing spells into it.
-                The artifact must have had 'focus' cast on it previously.
-                An opened artifact can have spells placed into it with
-                the use of Store.
+                The artifact must have had <e>Focus</e> cast on it
+                previously. An opened artifact can have spells placed
+                into it with the use of <e>Store</e>.
             </para>
         </description>
     </spell>
 
     <spell name="Store" level="0" convocation="neutral">
         <range>Touch</range>
+        <time>1 Minute</time>
         <duration>Special</duration>
         <description>
             <para>
@@ -237,6 +243,15 @@
                 rank of the Store. Only the basic spell is stored - any
                 effects of options are ignored. The spell to be stored
                 cannot have a casting time longer than a round.
+            </para>
+            
+            <para>
+                Spells placed into an artifact in this way are layered,
+                and released in reverse order of storage (first in, last
+                out) when the item is used. Because of this, minor
+                artifacts nearly always store only one type of spell,
+                though this is not necessary. However, all stored spells
+                must be of the same convocation as the item.
             </para>
         </description>
     </spell>

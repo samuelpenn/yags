@@ -458,7 +458,7 @@
 
     <spell name="Galra's Enchantment" level="30" convocation="savorya">
         <range>Self</range>
-        <resist>Will</resist>
+        <resist>Will x Ego</resist>
         <duration>Concentration</duration>
         <boost>+15 Range touch</boost>
         <description>
@@ -468,6 +468,25 @@
                 the target suffers a penalty equal to the bonus for
                 a duration equal to twice the time they were under the
                 effect of the spell.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Lullaby of Medina" level="30" convocation="savorya">
+        <range>Reach</range>
+        <resist>Will x Ego</resist>
+        <duration>Concentration</duration>
+        <boost>+15 Range near</boost>
+        <boost>+30 Affects up to three targets</boost>
+        <boost>+60 Affects up to twelve targets</boost>
+        <description>
+            <para>
+                If the target fails their ego roll, then they gain one
+                level of long term fatigue. Each round the spell is
+                maintained, another resistence roll is allowed else
+                another point of fatigue is gained. The spell will
+                stop affecting a target as soon as they resist, or if
+                they move out of range.
             </para>
         </description>
     </spell>
@@ -727,9 +746,9 @@
         <range>Touch</range>
         <resist>Ego</resist>
         <duration>Momentary</duration>
-        <boost>+15 Range is near</boost>
-        <boost>+30 Everyone within near can be affected</boost>
-        <boost>+60 Caster can choose who it affects, within near</boost>
+        <boost>+20 Range is near</boost>
+        <boost>+40 Everyone within near can be affected</boost>
+        <boost>+80 Caster can choose who it affects, within near</boost>
         <description>
             <para>
                 This spell causes shock and confusion in the mind of the target.
@@ -742,36 +761,63 @@
     </spell>
 
     <spell name="Jerila's Zone" level="120" convocation="savorya">
-        <range>Near</range>
-        <resist>Will</resist>
+        <range>Self</range>
+        <area>Near</area>
+        <resist>Will x Ego</resist>
         <duration>Concentration</duration>
-        <boost>+15 The caster can move within the zone.</boost>
-        <boost>+30 Caster can release targets by touching them.</boost>
-        <boost>+60 The sphere can be moved, at a metre per round.</boost>
+        <boost>+20 The caster can move within the zone.</boost>
+        <boost>+40 Caster can release targets by touching them.</boost>
+        <boost>+80 The sphere can be moved, at a metre per round.</boost>
         <description>
             <para>
-                This spell creates confusion in the affected area. All creatures
-                must make a will roll or suffer the effects of the spell. Those
-                affected will tend to act randomly, if at all. The zone is centred
-                on the caster, and if she moves, the spell is broken. If new targets
-                come within the zone, they must make a will roll to avoid being
-                affected. Once a creature as resisted, they do not need to roll again,
+                This spell creates confusion in the affected area. All
+                creatures must make an ego roll or suffer the effects of
+                the spell. Those affected will tend to act randomly, if at
+                all. The zone is centred on the caster, and if she moves,
+                the spell is broken. If new targets come within the zone,
+                they must make a will roll to avoid being affected. Once a
+                creature has resisted, they do not need to roll again,
                 even if they leave and re-enter the zone.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Cloak of Slumber" level="120" convocation="savorya">
+        <range>Near</range>
+        <area>Near</area>
+        <resist>Will x Ego</resist>
+        <duration>Concentration</duration>
+        <boost>+20 Gain three fatigue</boost>
+        <boost>+40 Range is short</boost>
+        <boost>+80 Gain four fatigue</boost>
+        <description>
+            <para>
+                All targets within the area of the spell are affected
+                unless they make an ego roll to resist. On failure,
+                and each round that they fail, they gain two long term
+                fatigue levels.
+            </para>
+            
+            <para>
+                The spell ends when they fall asleep, succeed in a roll
+                to resist, or move out of the area.
             </para>
         </description>
     </spell>
 
     <spell name="Arrow of Utern" level="160" convocation="savorya">
-        <range>Near</range>
-        <resist>Will</resist>
+        <range>Short</range>
+        <resist>Stamina x Ego</resist>
         <duration>Momentary</duration>
-        <boost>+20 Range is short.</boost>
+        <boost>+20 Range is medium.</boost>
         <boost>+40 Affects all within range.</boost>
         <boost>+80 Caster can choose who within range is affected.</boost>
         <description>
             <para>
-                The target of this spell suffers powerful mental shock if they fail
-                their will roll. The victim suffers +40 fatigue damage.
+                The target of this spell suffers powerful mental shock if
+                they fail their ego roll. The victim suffers seven stuns,
+                automatically loosing their next attack and dropping
+                anything held.
             </para>
         </description>
     </spell>
@@ -1047,17 +1093,16 @@
 
     <spell name="Calspeth's Arrow" level="60" convocation="savorya">
         <author>Schmunk</author>
-        <range>Reach</range>
+        <range>Near</range>
         <duration>Momentary</duration>
-        <resist>Stamina soak</resist>
-        <boost>+15 Range is near</boost>
+        <resist>Stamina x Ego</resist>
         <boost>+30 Can affect all targets within range</boost>
-        <boost>+60 Can affect a number of specified groups up to intelligence</boost>
+        <boost>+60 Can choose which targets to affect</boost>
         <description>
             <para>
                 Causes mental and physical shock in the target, overloading
                 their nervous system to cause pain and trauma. The target
-                receives stuns unless they soak the caster's ego roll.
+                receives two stuns unless they resist the spell.
             </para>
         </description>
     </spell>
@@ -1072,7 +1117,7 @@
         <boost>+60 Can affect all target's within range</boost>
         <description>
             <para>
-                Causes complete blindess in affected targets. Effect lasts
+                Causes complete blindness in affected targets. Effect lasts
                 while the caster concentrates.
             </para>
         </description>
@@ -1080,17 +1125,23 @@
 
     <spell name="Burning Nerves of Fire" level="90" convocation="savorya">
         <range>Near</range>
-        <duration>Momentary</duration>
-        <resist>Stamina</resist>
+        <duration>Concentration</duration>
+        <resist>Stamina x Ego</resist>
         <boost>+15 Range is short</boost>
-        <boost>+30 Will roll is at +15</boost>
-        <boost>+60 Will roll is at +20</boost>
+        <boost>+30 Penalty is -15</boost>
+        <boost>+60 Penalty is -25</boost>
         <description>
             <para>
                 Affects the target's mind such that they believe themselves
-                to be burning up from the inside. The pain causes stun
-                damage, which must be soaked with a stamina roll against
-                the caster's ego roll at +10.
+                to be burning up from the inside. The pain causes three
+                stuns initially, then one extra stun each round the spell
+                is maintained. Further, each round of pain puts the target
+                at an additional -10 penalty to all actions.
+            </para>
+            
+            <para>
+                The spell ends if the target resists the spell, or moves
+                out of range.
             </para>
         </description>
     </spell>
