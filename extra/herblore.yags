@@ -15,8 +15,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.8 $</version>
-            <date>$Date: 2003-06-14 22:00:28 $</date>
+            <version>$Revision: 1.9 $</version>
+            <date>$Date: 2003-10-26 21:49:59 $</date>
         </cvsinfo>
 
         <license>
@@ -168,6 +168,11 @@
                             becoming infected.
                         </entry>
 
+                        <entry term="High">
+                            The creature gains a more positive outlook on
+                            life, feeling good about themselves and others.
+                        </entry>
+
                         <entry term="Wakefulness">
                             The herb instills energy and vigor into a person
                             keeping them awake when otherwise they would
@@ -197,6 +202,14 @@
                             totally blind. Other skills which rely on sight
                             (such as combat) have their attribute reduced by
                             one as well.
+                        </entry>
+
+                        <entry term="Clumsy">
+                            Creature looses some coordination, loosing -1 to
+                            dexterity and agility. If this occurs multiple
+                            time, then there is a further -1 each time, to a
+                            minimum of zero (when the creature is probably
+                            incapable of moving).
                         </entry>
 
                         <entry term="Coma">
@@ -238,6 +251,18 @@
                             worse. Agility and dexterity are reduced to one
                             while severe cramps are being suffered, and
                             movement is quartered.
+                        </entry>
+
+                        <entry term="Uninhibited">
+                            The creature looses inhibitions they might of
+                            had, reacting on a more instinctive level. The
+                            creature has a modified to Will, which is either
+                            positive or negative depending on the situation,
+                            but always increases the chance of a creature
+                            doing something (it will add for a bravery roll
+                            to face up to a threat, but subtract from
+                            restraint or temperence rolls to resist getting
+                            into a fight or lusting after someone).
                         </entry>
 
                         <entry term="Weakness">
@@ -468,6 +493,39 @@
             <title>Common Herbs</title>
 
             <sect2>
+                <title>Intoxicants</title>
+
+                <herb name="Alcohol">
+                    <frequency>Common</frequency>
+                    <toxicity>III</toxicity>
+
+                    <application label="">
+                        <strength>15</strength>
+                        <time modifier="-10">5mn</time>
+                        <extradose>+3</extradose>
+                        <effects>
+                            <effect>Happy</effect>
+                            <effect>Uninhibited</effect>
+                            <effect>Clumsy</effect>
+                            <effect>Uninhibited</effect>
+                            <effect>Weakness</effect>
+                            <effect>Nausea</effect>
+                            <effect>Coma</effect>
+                            <effect>Death</effect>
+                        </effects>
+                    </application>
+
+                    <description>
+                        <para>
+                            Alcohol is a very common drug, which is used by
+                            a very large proportion of the population for
+                            entertainment.
+                        </para>
+                    </description>
+                </herb>
+            </sect2>
+
+            <sect2>
                 <title>Classic Real World Poisons</title>
 
                 <herb name="Arsenic">
@@ -486,7 +544,11 @@
                         </effects>
                     </application>
 
-
+                    <description>
+                        <para>
+                            Arsenic is one of the oldest poisons.
+                        </para>
+                    </description>
                 </herb>
 
             </sect2>

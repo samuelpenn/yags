@@ -12,8 +12,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.13 $</version>
-            <date>$Date: 2003-09-20 22:23:07 $</date>
+            <version>$Revision: 1.14 $</version>
+            <date>$Date: 2003-10-26 21:49:59 $</date>
         </cvsinfo>
 
         <license>
@@ -64,31 +64,30 @@
             </para>
 
             <para>
-                Finally, this article describes the core rules for
-                designing a basic Yags character. A fantasy setting
-                is assumed. For character options relating to a
-                particular setting, see the articles for character
-                generation in that setting.
+                These core rules assume a low tech game world, of the sort
+                found in fantasy games.
             </para>
 
             <sect2>
-                <title>A Points Based Generation System</title>
+                <title>Points and Packages</title>
 
                 <para>
-                    Characters in Yags are designed with a points
-                    based system, with no random determination. The
-                    sort of character that comes out of the process
-                    should be reasonably competent, though not
-                    necessarily heroic.
+                    A character in <e>Yags</e> is designed with a points
+                    based system, with no random determination. However,
+                    not all characters will be necessarily equal in
+                    capability. The main concept is that of a <e>package</e>
+                    which describes what the character has been doing up
+                    until the point the player starts playing him. Packages
+                    provide a set of skills, and a rough background, which
+                    are up to the player to flesh out and complete.
                 </para>
 
                 <para>
-                    By default, a character will begin at age 16. Being
-                    older is considered to be a disadvantage, which gives
-                    extra points to spend on advantages and skills. This
-                    means that older characters are more experienced
-                    and capable than younger characters. However, no
-                    points are gained beyond the age of 30.
+                    Most packages assume the character is 16 years old. The
+                    player can choose to begin at an older age (up to 25),
+                    in which case they gain more points. Older characters
+                    are more experienced and more capable than younger
+                    ones in <e>Yags</e>.
                 </para>
             </sect2>
         </sect1>
@@ -97,105 +96,77 @@
             <title>Building a Character</title>
 
             <para>
-                The player begins with 30 points to spend on the
-                character. The character starts with basic attributes
-                and skills, which may be bought up with the character
-                points, or entirely new skills or advantages may be
-                purchased.
+                Initially, a character has all attributes at three, and all
+                talents at two. Further, he has both the <e>Area Lore</e>
+                and <e>Speak own language</e> skills at four. Lastly, all
+                the character's passions are at a level of four.
+            </para>
+
+            <character name="The Basic Character" display="template">
+                <attributes size="5" soak="12">
+                    <attribute name="strength" score="3"/>
+                    <attribute name="stamina" score="3"/>
+                    <attribute name="agility" score="3"/>
+                    <attribute name="dexterity" score="3"/>
+                    <attribute name="perception" score="3"/>
+                    <attribute name="intelligence" score="3"/>
+                    <attribute name="charisma" score="3"/>
+                    <attribute name="will" score="3"/>
+                </attributes>
+
+                <skills>
+                    <group name="Talents" type="talents">
+                        <skill name="Athletics" score="2"/>
+                        <skill name="Awareness" score="2"/>
+                        <skill name="Brawl" score="2"/>
+                        <skill name="Charm" score="2"/>
+                        <skill name="Guile" score="2"/>
+                        <skill name="Sleight" score="2"/>
+                        <skill name="Stealth" score="2"/>
+                        <skill name="Throw" score="2"/>
+                    </group>
+
+                    <group name="Knowledges" type="skills">
+                        <skill name="Speak own language" score="4"/>
+                        <skill name="Area lore" score="4"/>
+                    </group>
+                </skills>
+
+                <passions>
+                    <passion name="Bravery" score="4"/>
+                    <passion name="Ego" score="4"/>
+                    <passion name="Restraint" score="4"/>
+                    <passion name="Temperence" score="4"/>
+                </passions>
+            </character>
+
+            <para>
+                The basic character can then be given a <e>package</e>. The
+                package provides basic skills that a character would have
+                gained whilst training for their profession. Not all
+                packages are equal in the number of skills that they
+                provide.
             </para>
 
             <para>
-                An <e>average</e> character will have the majority of
-                these points spent on skills. More abnormal characters
-                will tend to spend the points on attributes and
-                advantages. The latter makes for more interesting and
-                specialised characters which are better destined to
-                become heroes.
+                Lastly, the player has ten points with which to customise
+                the character. These points can be used to buy up attributes
+                or skills, or to buy advantages. Up to a further ten points
+                can be purchased by taking disadvantages.
             </para>
 
-            <sect2>
-                <title>Basic Abilities</title>
+            <para>
+                The most efficient way to get further skills however is by
+                buying <e>age</e>, which is a disadvantage, though it does
+                not count towards the ten point disadvantage limit. Each
+                year of age gives a further two points to spend.
+            </para>
 
-                <para>
-                    Before spending any character points, every player
-                    character will begin with a basic set of skills and
-                    attributes. These skills are about what a character
-                    would have at the age of 12, before they start on the
-                    path towards learning a profession. Skills and abilities
-                    learnt up until the age of 16 are considered to come
-                    from the 30 points the player chooses to spend.
-                </para>
-
-                <aside>
-                    <para>
-                        Some advantages and disadvantages (such as social
-                        class for example) are obviously gained when the
-                        character is born, rather than during adolesence.
-                        The suggestion that the base starting skills
-                        represent a twelve year old is meant as a rough
-                        approximation for skill ability, and acts to
-                        neatly seperate childhood from adolesence.
-                    </para>
-                </aside>
-                
-                <para>
-                    A character begins with all attributes at a score
-                    of three, representing average ability in all areas.
-                    All talents begin at two, giving familiarity with
-                    the core skills.
-                </para>
-
-                <para>
-                    Further, each character begins being able to speak
-                    their own language at a score of 4, and to have an area
-                    lore of 4.
-                </para>
-
-                <para>
-                    Finally, the character will have the four passions
-                    (bravery, ego, restraint and temperence) at a score of
-                    four.
-                </para>
-
-
-                <character name="Starting abilities" display="template">
-                    <attributes size="5" soak="12">
-                        <attribute name="strength" score="3"/>
-                        <attribute name="stamina" score="3"/>
-                        <attribute name="agility" score="3"/>
-                        <attribute name="dexterity" score="3"/>
-                        <attribute name="perception" score="3"/>
-                        <attribute name="intelligence" score="3"/>
-                        <attribute name="charisma" score="3"/>
-                        <attribute name="will" score="3"/>
-                    </attributes>
-
-                    <skills>
-                        <group name="Talents" type="talents">
-                            <skill name="Athletics" score="2"/>
-                            <skill name="Awareness" score="2"/>
-                            <skill name="Brawl" score="2"/>
-                            <skill name="Charm" score="2"/>
-                            <skill name="Guile" score="2"/>
-                            <skill name="Sleight" score="2"/>
-                            <skill name="Stealth" score="2"/>
-                            <skill name="Throw" score="2"/>
-                        </group>
-                        
-                        <group name="Knowledges" type="skills">
-                            <skill name="Speak own language" score="4"/>
-                            <skill name="Area lore" score="4"/>
-                        </group>
-                    </skills>
-
-                    <passions>
-                        <passion name="Bravery" score="4"/>
-                        <passion name="Ego" score="4"/>
-                        <passion name="Restraint" score="4"/>
-                        <passion name="Temperence" score="4"/>
-                    </passions>
-                </character>
-            </sect2>
+            <para>
+                In total, a player could have 38 points to customise their
+                character with, assuming ten points of disadvantages and
+                nine years of age.
+            </para>
 
             <sect2>
                 <title>Spending the Points</title>
@@ -211,10 +182,8 @@
                 <para>
                     An attribute can be bought down to two, which gives
                     an extra nine character points. No attribute can be
-                    lowered below two however. Five is the maximum score
-                    any attribute can be taken to during character
-                    generation. Bringing an attribute down is considered
-                    to be a disadvantage.
+                    lowered below two however. Lowered attributes do not
+                    count towards the ten point limit of disadvantages.
                 </para>
 
             </sect2>
@@ -271,26 +240,6 @@
                 </para>
             </sect2>
         </sect1>
-        
-        <sect1>
-            <title>Normal People</title>
-
-            <para>
-                The type of characters which will come out of the process
-                given above will be suitable to start down the path meant
-                for heroes. By far the majority of people will not be as
-                talented.
-            </para>
-            
-            <para>
-                Normal people can be generated as for PCs, but with less
-                character points. An average person has about 20 character
-                points with which to play with. An unexceptional
-                adolescent, may have 10 points.
-            </para>
-
-        </sect1>
-
     </body>
 
 </article>

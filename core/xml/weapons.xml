@@ -4,8 +4,8 @@
 <!--
     Weapon list for Yags.
 
-    Version: $Revision: 1.4 $
-    Date:    $Date: 2003-08-09 10:09:18 $
+    Version: $Revision: 1.5 $
+    Date:    $Date: 2003-10-26 21:49:59 $
  -->
 <equipment>
     <weaponlist>
@@ -51,6 +51,14 @@
         <weapon name="Broad axe">
             <class>great</class>
 
+            <description>
+                <para>
+                    A large two handed axe with a single broad blade. This
+                    weapon is quite heavy and difficult to use, but is very
+                    effective at getting through armour.
+                </para>
+            </description>
+
             <combat mode="Melee" importance="2">
                 <initiative>+8</initiative>
                 <attack>+7</attack>
@@ -70,7 +78,16 @@
         </weapon>
 
         <weapon name="Club">
+            <class>brawl</class>
             <class>single</class>
+
+            <description>
+                <para>
+                    Often, a club is not much more than a shaft of wood,
+                    maybe with some metal on one end to weight it. It is
+                    considered to be a simple weapon.
+                </para>
+            </description>
 
             <combat mode="Melee" importance="3">
                 <initiative>+3</initiative>
@@ -147,7 +164,7 @@
             <class>great</class>
             <class>single</class>
 
-            <combat mode="Melee" importance="2"/>
+            <combat mode="Melee" importance="2">
                 <initiative>+10</initiative>
                 <attack>+7</attack>
                 <defence>+5</defence>
@@ -487,8 +504,8 @@
                 <range>
                     <increment>25</increment>
                     <short>60</short>
-                    <medium>120</short>
-                    <long>240</medium>
+                    <medium>120</medium>
+                    <long>240</long>
                 </range>
             </combat>
 
@@ -497,7 +514,7 @@
             <reach>0</reach>
         </weapon>
 
-        <weapon name="Thrown dagger">
+        <weapon name="Throwing dagger">
             <class>thrown</class>
 
             <description>
@@ -506,7 +523,7 @@
                 </para>
             </description>
 
-            <combat mode="Thrown" importance="3">
+            <combat mode="Thrown" importance="1">
                 <initiative>+2</initiative>
                 <attack>+3</attack>
                 <damage>+3</damage>
@@ -523,10 +540,10 @@
             <reach>1</reach>
         </weapon>
 
-        <weapon name="Thrown knife">
+        <weapon name="Throwing knife">
             <class>thrown</class>
 
-            <combat mode="Thrown" importance="3">
+            <combat mode="Thrown" importance="2">
                 <initiative>+2</initiative>
                 <attack>+3</attack>
                 <damage>+2</damage>
@@ -606,32 +623,41 @@
 
         <weapon name="Medium crossbow">
             <class>crossbow</class>
-            <initiative>+3</initiative>
-            <attack>+12</attack>
-            <damage>22</damage>
+
+            <combat mode="Projectile" importance="3">
+                <initiative>+3</initiative>
+                <attack>+12</attack>
+                <damage>22</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>40</short>
+                    <medium>80</medium>
+                    <long>160</long>
+                </range>
+            </combat>
+
             <strength>3</strength>
             <load>3</load>
-            <range>
-                <short>20</short>
-                <medium>40</medium>
-                <long>80</long>
-                <extreme>160</extreme>
-            </range>
         </weapon>
 
         <weapon name="Heavy crossbow">
             <class>crossbow</class>
-            <initiative>+2</initiative>
-            <attack>+9</attack>
-            <damage>30</damage>
+
+            <combat mode="Projectile" importance="2">
+                <initiative>+2</initiative>
+                <attack>+9</attack>
+                <damage>30</damage>
+                <range>
+                    <increment>15</increment>
+
+                    <short>60</short>
+                    <medium>120</medium>
+                    <long>240</long>
+                </range>
+            </combat>
+
             <strength>3</strength>
             <load>4</load>
-            <range>
-                <short>20</short>
-                <medium>40</medium>
-                <long>80</long>
-                <extreme>160</extreme>
-            </range>
         </weapon>
 
 
