@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.8 $</version>
-            <date>$Date: 2004-12-27 21:22:25 $</date>
+            <version>$Revision: 1.9 $</version>
+            <date>$Date: 2004-12-29 22:52:28 $</date>
         </cvsinfo>
 
         <license>
@@ -229,8 +229,9 @@
                 The name of the spell followed by its level. The wizard
                 must have a skill in the Word at least equal to the level
                 of the spell before learning it. The base difficulty to
-                cast the cantrip is equal to its level x 5. The casting
-                roll is performed using Will x Word.
+                cast the cantrip is always 10 however, and is not affected
+                by the level of the cantrip. Casting a cantrip is rolled
+                with will x word.
             </para>
             
             <para>
@@ -385,8 +386,13 @@
 
                 <import-spells href="spells/spirit.yags" type="spirit"/>
             </sect2>
+            
+            <sect2>
+                <title>Water</title>
+                
+                <import-spells href="spells/water.yags" type="water"/>
+            </sect2>
         </sect1>
-
     </body>
 
 </article>

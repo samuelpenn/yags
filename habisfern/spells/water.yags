@@ -2,81 +2,115 @@
 
 <!--
     Water cantrips.
-    Version: $Revision: 1.2 $
-    Date:    $Date: 2004-12-27 21:22:25 $
+    Version: $Revision: 1.3 $
+    Date:    $Date: 2004-12-29 22:52:28 $
 -->
 <grimoire name="Water">
+
+    <!--
+        Following are the core spells. Various other threads split off from
+        this one.
+     -->
     <spell name="Wet" level="1" type="water">
-        <range>-5/m</range>
-        <duration>Concentration</duration>
+        <range>-1/m</range>
+        <duration>Momentary</duration>
         <radius>-1/m</radius>
 
         <description>
             <para>
-                Cause the area specified to be covered by a thin
-                film of water. The water is obtained from the air,
-                so the amount gained depends on the humidity.
+                Cause the area specified to be covered by a thin film of
+                water. The water is obtained from the air, so the amount
+                amount gained depends on the humidity. Reduce success by
+                one level to three levels for dry air, increase for moist
+                air. The air will be dryer after the cantrip has made the
+                change.
             </para>
-        </description>
-    </spell>
-
-    <spell name="Extinguish" level="3" type="water">
-        <range>-1/m</range>
-        <duration>Momentary</duration>
-        <target>-5/extra fire</target>
-        <effect>+2/1</effect>
-
-        <prerequisite>Wet</prerequisite>
-
-        <description>
+            
+            <targetlist targetFirst="true">
+                <valueLabel>Level of wetness</valueLabel>
+                <targetLabel>Effect</targetLabel>
+                
+                <item target="0-9" value="Moist.">
+                    Surface is moist. There will be no free standing water.
+                    Candles go out, other fires unaffected.
+                </item>
+                
+                <item target="10-19" value="Wet.">
+                    Droplets of water cover surfaces, clothing is
+                    completely soaked. Small fires dimmed and may go out.
+                </item>
+                
+                <item target="20-29" value="Saturated.">
+                    A millimetre of water covers all impermeable surfaces,
+                    other items drip with water. Small fires go out,
+                    medium fires reduced, larger fires cause a lot of
+                    steam.
+                </item>
+                
+                <item target="30+" value="Flooded.">
+                    Several millimetres of water covers everything. Double
+                    amount of water each level beyond this.
+                </item>
+            </targetlist>
+            
             <para>
-                Extinguishes the specified fires. Each fire suffers an
-                attack as if taking damage, with each level of damage
-                reducing its size by one. Assume a fire has a soak of
-                2 per point of size. Some of the heat is also removed
-                from the fuel, so there is less chance of the fire
-                immediately re-igniting back to full size.
+                Targets do not get any resistence. Only surfaces open to
+                the air from the point of view of the caster are affected.
             </para>
         </description>
     </spell>
 
     <spell name="Mist" level="3" type="water">
         <duration>Concentration</duration>
-        <area>-1/5m radius</area>
+        <radius>-1/5m</radius>
 
         <prerequisite>Wet</prerequisite>
 
         <description>
             <para>
-                Creates a mist over an area which causes a soft rain to
-                dampen everything with fresh water. The amount of water
-                depends on the humidity of the air.
+                Creates a mist over an area which obscures vision and
+                causes everything to become damp. Once concentration has
+                ceased, the mist will dissipate normally. Sound is also
+                muffled in the mist, often more effectively than vision.
             </para>
+            
+            <targetlist targetFirst="true">
+                <valueLabel>Thickness</valueLabel>
+                <targetLabel>Effect</targetLabel>
+                
+                <item target="0-9" value="Light.">
+                    A light mist, vision is reduced to 250m (which may mean
+                    no effect if the mist isn't this extensive). Surfaces
+                    become moist (see the Wet cantrip) after a minute.
+                </item>
+                
+                <item target="10-19" value="Moderate.">
+                    Vision is reduced to 100m.
+                </item>
+                
+                <item target="20-29" value="Heavy.">
+                    Vision is reduced to 25m.
+                </item>
+                
+                <item target="30-39" value="Thick.">
+                    Vision is reduced to 10m.
+                </item>
+                
+                <item target="40+" value="Very thick.">
+                    An unnatural mist that reduces vision to 1m.
+                </item>
+            </targetlist>
         </description>
     </spell>
     
-    <spell name="Rain" level="5" type="water">
-        <duration>Concentration</duration>
-        <area>-1/10m</area>
-        
-        <prerequisite>Mist</prerequisite>
-        
-        <description>
-            <para>
-                It starts to rain over the area specified, centred on the
-                caster. The amount of rain will depend on the effectiveness
-                of the spell, and is modified by general humidity.
-            </para>
-        </description>
-    </spell>
     
-    <spell name="Flood" level="7" type="water">
+    <spell name="Flood" level="5" type="water">
         <range>-1/5m</range>
         <duration>Concentration</duration>
         <target>10 tonnes, -2/x2</target>
         <effect>+100% volume/+5</effect>
         
-        <prerequisite>Rain</prerequisite>
+        <prerequisite>Mist</prerequisite>
         
         <description>
             <para>
@@ -86,14 +120,47 @@
                 be in range of the spell when cast, but stays flooded
                 even if it passes out of range later.
             </para>
+            
+            <para>
+                If the caster stands in (or near) a stream, then as soon
+                as enough water has flowed past to exceed the target of
+                the cantrip, further water will not be <e>flooded</e>.
+            </para>
         </description>
     </spell>
+    
+    
+    <spell name="Water's Embrace" level="7" type="water">
+        <range>-1/5m</range>
+        <duration>Concentration</duration>
+        <target>-5/extra</target>
+        <resist>Strength x Swim</resist>
+        
+        <prerequisite>Flood</prerequisite>
+        
+        <description>
+            <para>
+                A body of water can be made to such down an object or
+                creature within it, or reject that object, enabling it to
+                float on the surface. If being forced down, a creature
+                can resist with a swim check, failure means that they are
+                totally submerged and may begin to drown.
+            </para>
+            
+            <para>
+                A creature expelled from water may crawl across the surface
+                or even attempt to walk, requiring an athletics check to
+                remain standing, especially in rough sea.
+            </para>
+        </description>
+    </spell>
+    
     
     <spell name="Control Water" level="9" type="water">
         <duration>Concentration</duration>
         <radius>-1/10m radius</radius>
         
-        <prerequisite>Flood</prerequisite>
+        <prerequisite>Water's Embrace</prerequisite>
         
         <description>
             <para>
@@ -117,11 +184,102 @@
         <description>
             <para>
                 The caster's body changes to a water like substance.
-                It can move through water at will, and slowley on
+                It can move through water at will, and slowly on
                 land. It tends to stick together.
             </para>
         </description>
     </spell>
+    
+    <spell name="Sea's Wrath" level="15" type="water">
+        <duration>Concentration</duration>
+        
+        <prerequisite>Body of Water</prerequisite>
+        
+        <description>
+            <para>
+                Summon a tidal wave.
+            </para>
+        </description>
+    </spell>
+    
+    <!--
+        Extingiush thread. Adds cancelling heat and light.
+    -->
+    
+    <spell name="Extinguish" level="3" type="water">
+        <range>-1/5m</range>
+        <duration>Momentary</duration>
+        <radius>-1/m</radius>
+
+        <prerequisite>Wet</prerequisite>
+
+        <description>
+            <para>
+                All fires within the effect of the cantrip are extinguished.
+                The effect governs how big a fire can be affected. Larger
+                fires may dim briefly, but will generally burn back to
+                full strength pretty quickly.
+            </para>
+            
+            <targetlist targetFirst="true">
+                <item target="0-9" value="Torches.">
+                </item>
+                
+                <item target="10-19" value="Camp fires.">
+                </item>
+                
+                <item target="20-29" value="Medium fires.">
+                </item>
+                
+                <item target="30-39" value="Large fires.">
+                </item>
+                
+                <item target="40+" value="House fires.">
+                </item>
+            </targetlist>
+        </description>
+    </spell>
+
+    <spell name="Darkness" level="5" type="water">
+        <range>-1/5m</range>
+        <radius>-1/m</radius>
+        
+        <prerequisite>Extinguish</prerequisite>
+        
+        <description>
+            <para>
+                Each level of effect causes one level of darkness.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Blind" level="5" type="water">
+        <prerequisite>Darkness</prerequisite>
+    </spell>
+
+    
+    <!--
+        Weather thread. Rain, snow etc.
+    -->
+    
+        
+    <spell name="Rain" level="5" type="water">
+        <duration>Concentration</duration>
+        <area>-1/10m</area>
+        
+        <prerequisite>Mist</prerequisite>
+        
+        <description>
+            <para>
+                It starts to rain over the area specified, centred on the
+                caster. The amount of rain will depend on the effectiveness
+                of the spell, and is modified by general humidity.
+            </para>
+        </description>
+    </spell>
+    
+    
+    
     
     <spell name="Breathe Water" level="3" type="water">
         <range>-1/5m</range>
@@ -137,40 +295,7 @@
         </description>
     </spell>
     
-    <spell name="Drown" level="5" type="water">
-        <range>-1/5m</range>
-        <duration>Concentration</duration>
-        <target>-5/extra</target>
-        <resist>Strength x Swim</resist>
-        
-        <prerequisite>Breathe Water</prerequisite>
-        
-        <description>
-            <para>
-                The target, if in water, is sucked down beneath the
-                surface in an attempt to drown them.
-            </para>
-        </description>
-    </spell>
-    
-    <spell name="Float" level="5" type="water">
-        <range>-1/5m</range>
-        <duration>Concentration</duration>
-        <target>-5/extra</target>
-        <resist>Strength x Swim</resist>
-        
-        <prerequisite>Breathe Water</prerequisite>
-        
-        <description>
-            <para>
-                The target is forced to the surface if they are in water.
-                They will float on the surface of water as if they were
-                made of air. They may attempt an athletics check to walk
-                on water if desired, though this is difficult in all but
-                the calmest of water.
-            </para>
-        </description>
-    </spell>
+
     
     
     <spell name="Cold" level="3" type="water">
@@ -210,11 +335,4 @@
         <prerequisite>Breath of Winter</prerequisite>
     </spell>
     
-    <spell name="Gloom" level="3" type="water">
-        <prerequisite>Wet</prerequisite>
-    </spell>
-    
-    <spell name="Blind" level="5" type="water">
-        <prerequisite>Gloom</prerequisite>
-    </spell>
 </grimoire>
