@@ -1,8 +1,24 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet href="/usr/share/web/xsl/html/equipment.xsl" type="text/xsl"?>
 
+<!--
+    Weapon list for Yags.
+
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2003-06-01 20:12:30 $
+ -->
 <equipment>
     <weaponlist>
+        <!--
+            Weapon list. All weapons are included, with full details.
+            Weapons have the following meta-information.
+            source:
+            importance: 0=little, 1=detailed, 2=common, 3=always
+
+            Importance is used when creating weapon lists. High
+            importance weapons are always listed, low importance
+            weapons are only given in the most complete lists.
+         -->
         <weapon name="Axe">
             <description>
                 A battle axe for single handed use.
@@ -10,18 +26,18 @@
 
             <class>single</class>
 
-            <melee>
+            <combat mode="Melee" importance="3">
                 <initiative>+6</initiative>
                 <attack>+4</attack>
                 <defence>+3</defence>
                 <damage>+12</damage>
-            </melee>
+            </combat>
 
-            <missile>
+            <combat mode="Thrown" importance="2">
                 <initiative>+5</initiative>
                 <attack>+3</attack>
                 <damage>+10</damage>
-            </missile>
+            </combat>
 
             <strength>3</strength>
             <load>3</load>
@@ -31,18 +47,18 @@
         <weapon name="Broad axe">
             <class>great</class>
 
-            <melee>
+            <combat mode="Melee" importance="2">
                 <initiative>+8</initiative>
                 <attack>+7</attack>
                 <defence>+4</defence>
                 <damage>+17</damage>
-            </melee>
+            </combat>
 
-            <missile>
+            <combat mode="Thrown" importance="1">
                 <initiative>+0</initiative>
                 <attack>+2</attack>
                 <damage>+14</damage>
-            </missile>
+            </combat>
 
             <strength>6</strength>
             <load>6</load>
@@ -51,10 +67,20 @@
 
         <weapon name="Club">
             <class>single</class>
-            <initiative>+3</initiative>
-            <attack>+2</attack>
-            <defence>+3</defence>
-            <damage type="split">+5</damage>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+3</initiative>
+                <attack>+2</attack>
+                <defence>+3</defence>
+                <damage type="split">+5</damage>
+            </combat>
+
+            <combat mode="Thrown" importance="0">
+                <initiative>+2</initiative>
+                <attack>+0</attack>
+                <damage type="split">+4</damage>
+            </combat>
+
             <strength>2</strength>
             <load>2</load>
             <reach>1</reach>
@@ -63,10 +89,20 @@
         <weapon name="Dagger">
             <class>brawl</class>
             <class>single</class>
-            <initiative>+4</initiative>
-            <attack>+2</attack>
-            <defence>+3</defence>
-            <damage>+4</damage>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+4</initiative>
+                <attack>+2</attack>
+                <defence>+3</defence>
+                <damage>+4</damage>
+            </combat>
+
+            <combat mode="Thrown" importance="3">
+                <initiative>+5</initiative>
+                <attack>+3</attack>
+                <damage>+4</damage>
+            </combat>
+
             <strength>1</strength>
             <load>1</load>
             <reach>0</reach>
@@ -74,42 +110,69 @@
 
         <weapon name="Fist">
             <class>brawl</class>
-            <initiative>+0</initiative>
-            <attack>+0</attack>
-            <defence>+0</defence>
-            <damage type="stun">+0</damage>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+0</initiative>
+                <attack>+0</attack>
+                <defence>+0</defence>
+                <damage type="stun">+0</damage>
+            </combat>
+
             <strength>0</strength>
             <load>0</load>
         </weapon>
+
+
         <weapon name="Battle sword">
             <class>great</class>
-            <initiative>+12</initiative>
-            <attack>+8</attack>
-            <defence>+6</defence>
-            <damage>+16</damage>
+
+            <combat mode="Melee" importance="2">
+                <initiative>+12</initiative>
+                <attack>+8</attack>
+                <defence>+6</defence>
+                <damage>+16</damage>
+            </combat>
+
             <strength>6</strength>
             <load>7</load>
         </weapon>
+
         <weapon name="Bastard sword">
             <class>great</class>
             <class>single</class>
-            <initiative>+10</initiative>
-            <attack>+7</attack>
-            <defence>+5</defence>
-            <damage>+14</damage>
+
+            <combat mode="Melee" importance="2"/>
+                <initiative>+10</initiative>
+                <attack>+7</attack>
+                <defence>+5</defence>
+                <damage>+14</damage>
+            </combat>
+
             <strength>4</strength>
             <load>6</load>
         </weapon>
+
         <weapon name="Knife">
             <class>brawl</class>
             <class>single</class>
-            <initiative>+2</initiative>
-            <attack>+1</attack>
-            <defence>+2</defence>
-            <damage type="split">+2</damage>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+2</initiative>
+                <attack>+1</attack>
+                <defence>+2</defence>
+                <damage type="split">+2</damage>
+            </combat>
+
+            <combat mode="Thrown" importance="3">
+                <initiative>+3</initiative>
+                <attack>+2</attack>
+                <damage type="split">+2</damage>
+            </combat>
+
             <strength>1</strength>
             <load>0.5</load>
         </weapon>
+
         <weapon name="Long spear">
             <class>longshaft</class>
             <initiative>+15</initiative>
@@ -119,6 +182,7 @@
             <strength>5</strength>
             <load>3</load>
         </weapon>
+
         <weapon name="Light lance">
             <class>longshaft</class>
             <initiative>+12</initiative>
@@ -128,6 +192,7 @@
             <strength>5</strength>
             <load>3</load>
         </weapon>
+
         <weapon name="Heavy lance">
             <class>longshaft</class>
             <initiative>+12</initiative>
@@ -137,6 +202,7 @@
             <strength>6</strength>
             <load>3</load>
         </weapon>
+
         <weapon name="Broad sword">
             <class>single</class>
             <initiative>+6</initiative>
