@@ -6,7 +6,7 @@
 <article
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="yagsbook.xsd">
-    
+
 
     <header>
         <title>Advanced Combat</title>
@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.6 $</version>
-            <date>$Date: 2003-07-02 20:24:08 $</date>
+            <version>$Revision: 1.7 $</version>
+            <date>$Date: 2003-07-05 21:26:58 $</date>
         </cvsinfo>
         
         <license>
@@ -226,175 +226,214 @@
 
                 <sect3>
                     <title>Unsteady</title>
+
+                    <para>
+                        An unsteady character is one who has lost their
+                        footing in some way, though has not fallen totally
+                        prone. A character may be unsteady after a trip
+                        manouevre against them, knockback or similar
+                        attacks.  An unsteady character cannot move a
+                        distance greater than 3m in a round.
+                    </para>
+
+                    <para>
+                        A character is at -5 to all actions whilst
+                        unsteady. A character may become steady automatically
+                        at the start of the round, though doing so makes
+                        them <e>slow</e> that round.  A character may also
+                        spend an action to automatically steady themselves,
+                        though the action cannot then be used to do anything
+                        else.
+                    </para>
+
+                    <para>
+                        Alternatively, a character can attempt to steady
+                        themselves at the start of their action, whilst
+                        still performing their action. A
+                        <skillequation>
+                            <attribute>agility</attribute>
+                            <skill>brawl</skill>
+                            <die/>
+                        </skillequation>
+                        roll is made, at a target of 20. Success means that
+                        they have steadied themselves, and can proceed to
+                        act normally. Failure means that they are still
+                        <e>unsteady</e>, and loose their action.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Prone</title>
+
+                    <para>
+                        A <e>prone</e> character has fallen to the ground.
+                        They cannot move, and perform other actions at -10.
+                        It is also impossible to use any weapon that
+                        requires space behind them (a spear could be used
+                        as a quarterstaff, but not to thrust with).
+                    </para>
+
+                    <para>
+                        A character who has just fallen prone looses any
+                        remaining defences or actions for the rest of the
+                        round, unless a
+                        <skillequation>
+                            <attribute>agility</attribute>
+                            <skill>brawl</skill>
+                            <die/>
+                        </skillequation>
+                        roll of target 20 is made when they fall.
+                    </para>
                 </sect3>
 
             </sect2>
         </sect1>
 
         <sect1>
-            <title>Actions</title>
-
-            <para>
-                There are a number of different options a character can
-                take when involved in combat. Generally, one option is
-                performed each round, and this effects the actions
-                performed by the character.
-            </para>
-
-        </sect1>
-        
-        <sect1>
-            <title>Combat Maneouvres</title>
-
-            <para>
-                Each of the different combat skills has a number of skill
-                specialisations associated with them, which may be learnt
-                in order to perform special combat manouevres above and
-                beyond standard actions.
-            </para>
-
-            <para>
-                Each maneouvre is a skill specialisation, and starts at a
-                level of zero. None of the combat skills have a default
-                specialisation, so all of them have to be learnt if they
-                are to be used.
-            </para>
+            <title>Fighting Styles</title>
 
             <sect2>
-                <title>Specilisation Manouevres</title>
+                <title>Brawling</title>
+
+                <para>
+                    Brawling makes use of the <e>Brawl</e> skill, which
+                    is always used with <e>agility</e>. Brawl attacks
+                    generally consist of punches and kicks, though small
+                    weapons (such as knives, short clubs and daggers) can
+                    be used at no penalty. Animals use the <e>brawling</e>
+                    style when attacking with teeth, claws and horns.
+                </para>
+
+                <para>
+                    Brawling can also be used with any weapon, though there
+                    are penalties which are described later. Special attacks
+                    specific to other fighting styles cannot be used when
+                    using the brawling style with those weapons.
+                </para>
 
                 <sect3>
-                    <title>Common Melee Manouevres</title>
+                    <title>Grab (0)</title>
 
                     <para>
-                        These specialisations are available to all melee
-                        fighting styles. Each feat is unique to each style
-                        of fighting, so may need to be taken multiple times.
+                        The <e>grab</e> is a special brawling attack which
+                        can be used by anyone. It involves reaching out and
+                        grabbing hold of the defender, rather than causing
+                        damage. Success means that another move can be
+                        immediately applied - either a <e>trip</e>,
+                        <e>hold</e> or <e>grapple</e>.
                     </para>
-
-                    <termlist sort="true">
-                        <entry term="Aggressive fighting -0">
-                            Fighting aggressively. The attack becomes
-                            <e>fast</e>, and a +5 bonus is gained to attack
-                            and damage, whilst a -5 penalty is suffered on
-                            any defence rolls.
-                        </entry>
-
-                        <entry term="Defensive fighting -0">
-                            Fighting defensively. The attack becomes
-                            <e>slow</e>, and a +5 bonus is gained to defence
-                            rolls, whilst a -5 penalty is suffered on any
-                            attack rolls.
-                        </entry>
-
-                        <entry term="Off hand attack -1">
-                            If a person is fighting with a melee weapon in
-                            their <e>off-hand</e>, then they need to use
-                            this feat. Does not apply to the <e>Brawl</e>
-                            skill.
-                        </entry>
-
-                        <entry term="Quick draw -0">
-                            If a weapon is not ready at the start of a
-                            combat, it may be readied and used to attack in
-                            the first round, but the attack is considered
-                            <e>slow</e>. If this specialisation is used
-                            instead of the main skill, the attack is
-                            considered to happen at normal speed.
-                        </entry>
-
-                        <entry term="Disarm -2">
-                            A disarm attack is made against the opponent's
-                            weapon, in an attempt to remove it from their
-                            hand. An attack is made, and the
-                            opponent gets a defence roll at no penalty for
-                            the number of defences being made, at a bonus
-                            equal to the <e>initiative</e> bonus of the
-                            weapon. A successful attack means that the
-                            weapon has been disarmed.
-                        </entry>
-
-                        <entry term="Killing blow -4">
-                            A <e>Killing blow</e> attack is always
-                            <e>slow</e>. If it succeeds, and does at least
-                            a light wound, then the defender is killed
-                            outright. If the defender has no vital organs,
-                            then the <e>killing blow</e> does nothing
-                            special.
-                        </entry>
-
-                        <entry term="Ambush -1">
-                            An ambush is a surprise attack against a totally
-                            unsuspecting foe. The target must be at ease,
-                            i.e. not in combat. A successful ambush attack
-                            ignores armour, and counts as a <e>killing
-                            blow</e>.
-                        </entry>
-                    </termlist>
-                </sect3>
-
-                <sect3>
-                    <title>Common Missile Manouevres</title>
 
                     <para>
-                        These are available to all missile fighting
-                        styles (bow, crossbow and throw).
+                        A grab is declared, and the attack rolled as normal.
+                        Success means that the attacker has grabbed hold of
+                        the defender. An excellent attack means that the
+                        attacker may have grabbed with both hands, which
+                        gives a +5 bonus in the followup.
                     </para>
 
-                    <termlist sort="true">
-                        <entry term="Killing blow -4">
-                            A <e>Killing blow</e> attack is always
-                            <e>slow</e>. If it succeeds, and does at least
-                            a light wound, then the defender is killed
-                            outright. If the defender has no vital organs,
-                            then the <e>killing blow</e> does nothing
-                            special.
-                        </entry>
+                    <para>
+                        The attacker now has the option to immediately
+                        follow up on the attack.
+                    </para>
 
-                        <entry term="Ambush -1">
-                            An ambush is a surprise attack against a totally
-                            unsuspecting foe. The target must be at ease,
-                            i.e. not in combat. A successful ambush attack
-                            ignores armour, and counts as a <e>killing
-                            blow</e>.
-                        </entry>
-                    </termlist>
-                </sect3>
+                    <sect4>
+                        <title>No followup</title>
 
-                <sect3>
-                    <title>Weapon and Shield Feats</title>
+                        <para>
+                            If no followup is chosen, then all the attacker
+                            is doing is preventing the defender from moving
+                            away. The defender has the option to make an
+                            immediate attempt to break the grab. The attack
+                            makes a
+                            <skillequation>
+                                <attribute>strength</attribute>
+                                <skill>brawl</skill>
+                                <die/>
+                            </skillequation>
+                            roll against a similar roll by the defender,
+                            though the defender has the option of using
+                            their agility rather than strength. The attacker
+                            has a +5 bonus if they grabbed with both hands.
+                        </para>
 
-                    <termlist sort="true">
-                        <entry term="Shield wall -0">
-                        </entry>
+                        <para>
+                            Success on the part of the defender means that
+                            the grab has been broken.
+                        </para>
+                    </sect4>
 
-                        <entry term="Shield bash -1">
-                        </entry>
+                    <sect4>
+                        <title>Trip</title>
 
-                        <entry term="Weapon catch -2">
-                        </entry>
-                    </termlist>
-                </sect3>
+                        <para>
+                            The attacker may choose to followup a successful
+                            <e>grab</e> with a <e>trip</e>. The aim of this
+                            is to place the defender in a prone position on
+                            the floor, possibly causing damage at the same
+                            time. A <e>trip</e> may be an actual trip, or
+                            a push or throw attack.
+                        </para>
 
-                <sect3>
-                    <title>Great Weapon Feats</title>
+                        <para>
+                            The attacker and defender each make a
+                            <skillequation>
+                                <attribute>strength</attribute>
+                                <skill>brawl</skill>
+                                <die/>
+                            </skillequation>
+                            roll. The attacker gets a +5 bonus if they have
+                            a two hand grab on the defender. They also get
+                            a further +5 bonus if they go down with the
+                            defender. The defender may choose to substitute
+                            agility for strength.
+                        </para>
 
-                    <termlist sort="true">
-                        <entry term="Continuous defence -2">
-                        </entry>
+                        <para>
+                            A successful attack will result in the defender
+                            being <e>unsteady</e>. A good attack will leave
+                            the defender <e>prone</e>. An excellent attack
+                            gives the attacker of also causing damage. The
+                            attacker makes a pure strength damage roll,
+                            which the defender soaks without armour. The
+                            damage is always stun damage.
+                        </para>
 
-                        <entry term="Long defence -2">
-                        </entry>
-                    </termlist>
+                        <para>
+                            Alternatively, an excellent attack may place
+                            the defender on a specific location on the floor
+                            within 1m of the attacker. If this location
+                            can cause damage, then it is an automatic hit
+                            which may be soaked as normal.
+                        </para>
+
+                        <para>
+                            In any case, the grab is now considered to be
+                            broken, even if the attacker went down as well.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Hold</title>
+
+                        <para>
+                            The <e>hold</e> followup to a grab is an attempt
+                            to get the defender into an armlock (or similar
+                            hold) and prevent them from acting.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Grapple</title>
+
+                        <para>
+                            A <e>grapple</e> followup attempts to wrestle
+                            the defender to the ground, whilst keeping hold
+                            of them and engaging in (very) close combat.
+                        </para>
+                    </sect4>
                 </sect3>
             </sect2>
         </sect1>
 
-        <sect1>
-            <title>Missile Combat</title>
-
-            <para>
-            </para>
-        </sect1>
     </body>
 </article>
