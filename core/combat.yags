@@ -14,7 +14,7 @@
             <year>2001</year>
             <holder>Samuel Penn</holder>
         </copyright>
-        <releaseinfo role="meta">$Revision: 1.4 $</releaseinfo>
+        <releaseinfo role="meta">$Revision: 1.5 $</releaseinfo>
     </referenceinfo>
     <revhistory>
         <revision>
@@ -235,7 +235,7 @@ effective it is.
 The initiative of a weapon represents how quickly it can be
 brought to use. In a round, character's with a high initiative
 act before those with lower initiatives. Long weapons can grant
-a high initiative since they provide a tatical advantage for
+a high initiative since they provide a tactical advantage for
 their user. 
 </para>
 
@@ -597,7 +597,7 @@ defend against more than four attacks in a round.
 
 <para>
 A character can be assumed to be able to move 25m in a round and
-still make an attack. Each metre they move before attcking, they 
+still make an attack. Each metre they move before attacking, they 
 have a -1 penalty to initiative. It is assumed that this is rounded 
 to the nearest 5m, just for simplicity.
 </para>
@@ -727,11 +727,314 @@ reach this state.
 
 <sect3><title>Fatal Wounds</title>
 <para>
-If a character becomes fatally wounded, 
+If a character becomes fatally wounded, then they must immediately
+make a stamina roll at difficulty 30 or fall unconscious. If they
+fail by more than 10, then the result is immediate death.
+</para>
+
+<para>
+If the d20 roll is 3 or less, then the character dies regardless of
+the final total.
+</para>
+
+<sect4><title>Beyond Fatal</title>
+<para>
+If a character suffers damage that takes them beyond <emphasis>
+fatally wounded</emphasis>, then they are considered to be at
+fatal, but the initial stamina difficulty is raised by 5 for each
+wound level beyond fatal they were taken. For example, if someone
+is seriously wounded, and suffers four extra wound levels, they
+will become fatally wounded, and need to make a stamina roll at
+difficulty 40 to remain conscious.
+</para>
+
+<para>
+Damage such as this only affects the initial stamina roll, and does
+not affect further rolls to remain conscious and alive later on.
+For all other purposes, there are no shades of fatal wounds.
+</para>
+</sect4>
+
+<sect4><title>Surviving Fatal wounds</title>
+<para>
+Unless they receive suitable medical attention, a fatally wounded
+character will die eventually. If the character is still conscious,
+they must make another stamina roll at the end of each round at
+a target difficulty of 30 to remain conscious. Again, if the roll
+fails by 10 or more, then the character dies.
+</para>
+
+<para>
+An unconscious character must make a difficulty 20 roll each minute
+in order to remain alive. Failure means death. A roll must be made
+until the character receives first aid which stabalises their
+condition.
+</para>
+</sect4>
+
+</sect3>
+
+</sect2>
+
+
+<sect2><title>Stuns</title>
+
+<para>
+Unlike wounds, stuns are short term and generally non-fatal. Stun
+damage is caused by attacks which bruise or scratch such as fists,
+chair legs and staffs. It is possible to kill someone with stun
+damage, though it is unlikely.
+</para>
+
+<para>
+Unlike wounds, stun damage is not cumulative. If a character receives
+a number of stuns greater than the stun levels they currently have,
+then they become stunned to that level. The stuns are not added to
+the stuns they already have.
+</para>
+
+<para>
+If a character receives at least one or more stuns which do not exceed
+their current stun level, then they gain one stun.
+</para>
+
+<para>
+Similar to wounds, a character suffers penalties from being stunned.
+The penalties are on a similar scale for wound penalties, and a
+character who is both wounded and stunned suffers both sets of
+penalties.
+</para>
+
+<para>
+<table><title>Penalties due to Stuns</title>
+    <colspec colwidth="2cm"/>
+    <colspec colwidth="1.5cm"/>
+    <colspec colwidth="1.5cm"/>
+    <colspec colwidth="3cm"/>
+    <thead>
+        <row>
+            <entry>Damage</entry>
+            <entry>Stuns</entry>
+            <entry>Penalty</entry>
+            <entry>Description</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1 - 5</entry>
+            <entry>1</entry>
+            <entry>+0</entry>
+            <entry>Bruised</entry>
+        </row>
+        <row>
+            <entry>6 - 10</entry>
+            <entry>2</entry>
+            <entry>-1</entry>
+            <entry>Dazed</entry>
+        </row>
+        <row>
+            <entry>11 - 15</entry>
+            <entry>3</entry>
+            <entry>-3</entry>
+            <entry>Bloodied</entry>
+        </row>
+        <row>
+            <entry>16-20</entry>
+            <entry>4</entry>
+            <entry>-6</entry>
+            <entry>Battered</entry>
+        </row>
+        <row>
+            <entry>21 - 25</entry>
+            <entry>5</entry>
+            <entry>-10</entry>
+            <entry>Beaten</entry>
+        </row>
+        <row>
+            <entry>26 - 30</entry>
+            <entry>6</entry>
+            <entry>-15</entry>
+            <entry>Oblivious</entry>
+        </row>
+    </tbody>
+</table>
+</para>
+
+<para>
+Once a character becomes <emphasis>oblivious</emphasis>, they 
+must make a stamina roll of difficulty 30 or fall unconscious.
+Every stun they receive after this requires another stamina
+roll, plus the character suffers a single wound.
+</para>
+
+<sect3><title>Excess stun damage</title>
+<para>
+If the number of stuns suffered in a single attack takes the
+character beyond the <emphasis>oblivious</emphasis> threshold,
+then the excess stuns become wounds, and add to the character's
+current wound total.
+</para>
+
+<para>
+A stamina roll is also required in order to remain conscious.
+The target difficulty is increased by 5 for each excess stun.
 </para>
 </sect3>
 
 </sect2>
+
+<sect2><title>Mixed damage</title>
+<para>
+Some weapons have a damage type of <emphasis>Mixed</emphasis>,
+which causes both stun and wound damage. On a scale of
+severity, it isn't as deadly as wound damage, but is worse than
+stun damage.
+</para>
+
+<para>
+Mixed damage is split equally between stuns and wounds, with any
+remainder going on stuns (so one level of mixed damage is equivalent
+to a single stun).
+</para>
+
+<para>
+All stuns from mixed damage are cumulative. If a character receives
+three levels of mixed damage, he suffers two stuns and one wound.
+If that character already has two stuns and two wounds, he will now
+have four stuns and three wounds.
+</para>
+</sect2>
+
+</sect1>
+
+
+<sect1><title>Healing and First aid</title>
+
+<sect2><title>First aid</title>
+<para>
+After a character has become injured, it may be necessary for
+first aid to be applied to the wounds in order for them to heal.
+Fresh wounds need to be stabilised, a process which requires another
+character to make an intelligence x first aid roll on the wounded
+character.
+</para>
+
+<para>
+<table><title>First aid Difficulties</title>
+    <colspec colwidth="2cm"/>
+    <colspec colwidth="2cm"/>
+    <colspec colwidth="1.5cm"/>
+    <thead>
+        <row>
+            <entry>Stuns</entry>
+            <entry>Wounds</entry>
+            <entry>Target</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row><entry>Bruised</entry><entry>--</entry><entry>0</entry></row>
+        <row><entry>Dazed</entry><entry>--</entry><entry>5</entry></row>
+        <row><entry>Bloodied</entry><entry>--</entry><entry>10</entry></row>
+        <row><entry>Battered</entry><entry>Hurt</entry><entry>10</entry></row>
+        <row><entry>Beaten</entry><entry>Light</entry><entry>15</entry></row>
+        <row><entry>Oblivious</entry><entry>Medium</entry><entry>15</entry></row>
+        <row><entry>--</entry><entry>Serious</entry><entry>20</entry></row>
+        <row><entry>--</entry><entry>Critical</entry><entry>20</entry></row>
+        <row><entry>--</entry><entry>Fatal</entry><entry>25</entry></row>
+    </tbody>
+</table>
+</para>
+
+<para>
+A character may first aid themselves - as long as they are conscious -
+but they suffer all their wound penalties. If the first aid roll exceeds
+the target difficulty by 10 or more, then not only is the wound
+stablised, but one injury level is immediately healed.
+</para>
+
+<para>
+If a character is both wounded and stunned, a seperate roll is needed for
+each. It takes one minute to perform first aid on a person. First aid may
+be attempted as many times as required, until it succeeds.
+</para>
+
+<para>
+A character who is fatally wounded gets a first aid roll before they roll
+to see if they die.
+</para>
+</sect2>
+
+<sect2><title>Natural healing</title>
+
+<sect3><title>Recovering from stuns</title>
+<para>
+Natural healing can only take place once an injury has been stabilised
+with a successful first aid roll. A stunned character who is bruised or
+dazed gets a stamina roll every hour at a target difficulty of 20.
+Success means that one stun is recovered. If the character spends the
+time resting, then the difficulty is reduced to 15. 
+</para>
+
+<para>
+More serious stun injuries are recovered each night. A similar stamina
+roll is made after a night's rest, with success recovering one level
+of stun. The severity of the stuns do not affect the recovery difficulty.
+</para>
+</sect3>
+
+<sect3><title>Recovering from wounds</title>
+<para>
+A wounded character who is hurt or lightly wounded gets a stamina
+roll after a full night's rest. The stamina difficulty is 20, and
+success means one wound level is recovered.
+</para>
+
+<para>
+A more seriously wounded character gets a recovery roll at the end
+of each week. The difficulty depends on the severity of the injury.
+</para>
+
+<para>
+<table><title>Recovering from wounds</title>
+    <colspec colwidth="2cm"/>
+    <colspec colwidth="1.5cm"/>
+    <thead>
+        <row>
+            <entry>Wounds</entry>
+            <entry>Target</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row><entry>Medium</entry><entry>20</entry></row>
+        <row><entry>Serious</entry><entry>25</entry></row>
+        <row><entry>Critical</entry><entry>30</entry></row>
+        <row><entry>Fatal</entry><entry>35</entry></row>
+    </tbody>
+</table>
+</para>
+
+<para>
+If the character fumbles their stamina roll, then their injury
+worsens, and they gain an extra wound level. A character who is
+already fatally wounded will die.
+</para>
+
+<para>
+It is not actually possible for a person with average or worse
+stamina to recover from being fatally wounded alone. Someone
+with the first aid skill can grant a bonus if they spend time
+looking after the wounded person. An intelligence x first aid
+skill roll is made, and a bonus of +1 per full 5 rolled is
+added to the patient's stamina roll.
+</para>
+
+<para>
+A patient can look after themselves, though they suffer wounds
+penalties to do so.
+</para>
+</sect3>
+</sect2>
+
 </sect1>
 
 </article>
