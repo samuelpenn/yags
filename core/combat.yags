@@ -24,8 +24,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.62 $</version>
-            <date>$Date: 2004-10-12 09:09:28 $</date>
+            <version>$Revision: 1.63 $</version>
+            <date>$Date: 2004-10-26 21:31:43 $</date>
         </cvsinfo>
 
         <license>
@@ -100,9 +100,9 @@
                     </item>
 
                     <item name="Stuns">
-                        Stuns are non-serious injuries which result in pain
-                        and bruises, which rarely kill. Excessive stun
-                        damage will result in wounds being caused.
+                        Stuns are non-serious injuries which rarely kill,
+                        being generally limited to stuns and bruises.
+                        Excessive stun damage may lead to wounds however.
                     </item>
 
                     <item name="Mixed damage">
@@ -121,18 +121,16 @@
                         Fatigue is a measure of how tired a creature is.
                         Unlike wounds and stuns, the amount of fatigue a
                         creature can handle is based on their stamina.
-                        There are two types of fatigue - temporary and
-                        permanent. Temporary fatigue is more common in
-                        combat, and can be recovered with a short rest.
-                        Permanent fatigue can only be recovered after a
-                        good nights sleep, but is only gained through
-                        sleep deprivation or after several hours of
-                        physical effort.
+                        Fatigue can be recovered with a short rest, though
+                        a more extreme form of fatigue - exhaustion - can
+                        only be recovered with a night's sleep. Exhaustion
+                        is normally only gained through sleep deprivation
+                        and long term physical activity (e.g. walking
+                        for several hours).
                     </item>
 
                     <item name="Damage">
                         Damage is done when one creature hits another.
-                        Often, damage induces wounds or stuns in the target.
                         An attack will inflict either wounds,
                         stuns or mixed damage
                         which is split between stuns and wounds. Many
@@ -144,7 +142,7 @@
                     </item>
 
                     <item name="Load">
-                        A character can carry a load equal to four times
+                        A character can carry a load equal to the square of
                         their strength without penalty. Weapons, armour
                         and equipment carried add to load.
                     </item>
@@ -158,7 +156,7 @@
                     </item>
 
                     <item name="Stance">
-                        Stance determines how a combatent is fighting, the
+                        Stance determines how a combatant is fighting, the
                         most common being normal, aggressive and defensive.
                         Prone and unsteady are two stances which a character
                         can be forced into.
@@ -168,7 +166,7 @@
                         An extra attack which may be taken immediately
                         against a given opponent. The opponent gets a free
                         defence roll, at the same penalty as other defence
-                        rolls that round if multiple defences have been
+                        rolls that round if multiple defenses have been
                         declared.
                     </item>
 
@@ -180,7 +178,7 @@
                     </item>
 
                     <item name="Unsteady">
-                        An unsteady combatent is one who is down on
+                        An unsteady combatant is one who is down on
                         their knees, or otherwise does not have secure
                         footing. It is a half way state between prone
                         and normal posture.
@@ -189,8 +187,8 @@
                     <item name="Prone">
                         A prone person is down on the floor, and
                         unable to act effectively. Attacks and defence are
-                        possible from such a position, but they are
-                        difficult.
+                        possible from such a position, but they are at
+                        penalty.
                     </item>
                     
                     <item name="Grappled">
@@ -203,9 +201,9 @@
                     </item>
 
                     <item name="Combat bonuses">
-                        The four statistics, initiative, attack,
-                        defence and damage which a weapon gives
-                        as a bonus when used in combat.
+                        The four statistics which define the bonuses a
+                        weapon provides to skill and damage rolls in combat
+                        (initiative, attack, defence and damage).
                     </item>
                 </itemlist>
             </sect2>
@@ -261,6 +259,11 @@
                         (or the natural bonuses of the creature) add to
                         the combat rolls.
                     </para>
+                    
+                    <para>
+                        Unlike all the other weapon skills, the brawling
+                        skill is based on agility.
+                    </para>
                 </sect3>
 
                 <sect3>
@@ -270,6 +273,12 @@
                         A fighting style involving a single melee weapon,
                         such as a dagger, sword or mace. Most one handed
                         weapons can be used with this style.
+                    </para>
+                    
+                    <para>
+                        The single weapon skill is based on dexterity,
+                        though defence may be based on agility at the
+                        option of the character.
                     </para>
                 </sect3>
 
@@ -343,7 +352,7 @@
                         They can be used with or without a shield. They
                         have the advantage that when used defensively,
                         the defence bonus is +10 (rather than +5). If
-                        used aggresively, then the attack bonus is +10
+                        used aggressively, then the attack bonus is +10
                         (rather than +5).
                     </para>
                 </sect3>
@@ -438,7 +447,7 @@
                         </item>
 
                         <item name="Reach">
-                            The reach of the weapon is how far foward it can
+                            The reach of the weapon is how far forward it can
                             be effectively used. Reach gives an advantage
                             against shorter weapons, though can be difficult
                             to use well in confined spaces.
@@ -525,7 +534,8 @@
                         
                         <item name="Blocking">
                             A blocking weapon can be used as a shield. When
-                            used as a shield, weapon attributes are not
+                            used as a shield (using the weapon and shield
+                            style), weapon attributes are not
                             halved as they would be if the weapon was simply
                             treated as a second weapon. The weapon's damage
                             bonus is ignored however.
@@ -593,7 +603,7 @@
                         advantage when defending against a shorter weapon.
                         If the weapon of the defender is at least two reach
                         categories longer, and the defender makes an
-                        <e>excellent defence</e>, then they get an
+                        <e>good defence</e>, then they get an
                         <e>automatic strike</e> against the attacker.
                     </para>
 
@@ -661,7 +671,7 @@
                         <para>
                             If an attack is made (e.g. with a fist or kick,
                             or a sap, but not a knife) against a defender
-                            with a sword, then an <e>excellent defence</e>
+                            with a sword, then an <e>good defence</e>
                             results in an <e>automatic strike</e> against
                             the attacker. Note that most animals don't have
                             <e>real</e> weapons according to his definition,
@@ -672,8 +682,8 @@
                             If the conditions for much greater reach, and
                             unarmed attacks are both met in the same attack
                             (i.e. a punch against anyone with a short sword
-                            or longer), then only a <e>good defence</e> is
-                            required in order to get an <e>automatic
+                            or longer), then only a <e>moderate defence</e>
+                            is required in order to get an <e>automatic
                             strike</e>.
                         </para>
                     </sect4>
@@ -762,7 +772,7 @@
                     <title>Determine Actions</title>
 
                     <para>
-                        At the start of each round, all combatents declare
+                        At the start of each round, all combatants declare
                         their actions simultaneously. Since a round is five
                         seconds, there is generally time to notice what
                         everyone else is doing before committing. If someone
@@ -853,7 +863,7 @@
                                 they are grappling. All combat rolls are
                                 made using the <e>brawl</e> skill. If a
                                 weapon is being used, then all rolls for
-                                that weapon are made at -10 per point of
+                                that weapon are made at -5 per point of
                                 reach of the weapon. Shields cannot be used.
                             </item>
                         </itemlist>
@@ -871,16 +881,21 @@
                     </sect4>
 
                     <sect4>
-                        <title>Declaring Defences</title>
+                        <title>Declaring Defenses</title>
 
                         <para>
                             A character may defend against any number
                             of opponents, though there are penalties
                             if more than one defence is performed.
-                            Since defences are being declared, it is
+                            Since defenses are being declared, it is
                             necessary for a character to know who is
-                            attacking them that round, so defences are
+                            attacking them that round, so defenses are
                             declared after all attacks.
+                        </para>
+                        
+                        <para>
+                            A single defence will protect against all
+                            attacks from a single opponent.
                         </para>
                     </sect4>
                 </sect3>
@@ -915,8 +930,12 @@
                         
                         <para>
                             If initiative is fumbled by rolling a 1, then
-                            the character gains one level of temporary
-                            fatigue. Their initiative occurs as normal.
+                            the character gains one level of fatigue, but
+                            their action continues as normal. At this
+                            point, the character can decide to 'abort' to
+                            a less stressful activity in order to remove
+                            that fatigue - see 'Gaining Fatigue' below for
+                            how this works.
                         </para>
                     </sect4>
                 </sect3>
@@ -1015,7 +1034,7 @@
                     <para>
                         Some techniques and abilities allow further
                         opponents to be defended against, but the maximum
-                        is six, unless specifically stated otherwise.
+                        is six.
                     </para>
                 </sect3>
             </sect2>
@@ -1446,8 +1465,9 @@
                     <para>
                         The following round, the character may opt to try
                         and remove the recently gained fatigue level by
-                        limiting their actions. A stamina check is made,
-                        and if successful, the fatigue can be removed.
+                        limiting their actions. A brawl x stamina check is
+                        made, and if successful, the fatigue can be removed
+                        at the beginning of the round.
                     </para>
 
                     <targetlist>
@@ -1460,12 +1480,14 @@
                         </item>
 
                         <item target="30" value="Defend.">
-                            The character takes the defensive stance, and
-                            makes no attacks.
+                            The character only defends that round, taking
+                            the normal stance and not moving.
                         </item>
                         
                         <item target="40" value="Defensive.">
-                            The character takes the defensive stance.
+                            The character takes the normal stance and
+                            attacks without any techniques, and does not
+                            move more than basic move.
                         </item>
                         
                         <item target="50" value="Active.">
@@ -1473,6 +1495,14 @@
                             and does not run that round.
                         </item>
                     </targetlist>
+                    
+                    <para>
+                        If a character fumbles an initiative roll, and gain
+                        a point of fatigue, they may abort their actions
+                        that round to one of the above. They may make an
+                        immediate check to try and remove the fatigue level
+                        before it is applied.
+                    </para>
                 </sect3>
             </sect2>
         </sect1>
@@ -1770,34 +1800,17 @@
 
                     <para>
                         The only way to recover from fatigue is through
-                        rest. Temporary fatigue can be recovered in a
-                        matter of minutes, whilst permanent fatigue can
-                        only be recovered with a good sleep.
+                        rest. For each level of fatigue or exhaustion a
+                        character has, it takes five minutes to recover
+                        one level of fatigue.
                     </para>
 
                     <para>
-                        For each level of fatigue a person has, it takes
-                        five minutes to recover one temporary level. If a
-                        person has four levels of temporary fatigue, then
-                        it takes 20 minutes of rest to loose the first level,
-                        then 15 minutes for the next level, 10 minutes for
-                        the third level and finally 5 minutes for the last
-                        level.
-                    </para>
-
-                    <para>
-                        Permanent fatigue counts towards temporary fatigue,
-                        but can not be lost through simple rest. A person
-                        with two permanent fatigue and two temporary, could
-                        loose the temporary fatigue after 35 minutes, but
-                        would need a night of rest to loose the rest.
-                    </para>
-
-                    <para>
-                        Permanent fatigue is recovered after a night of
-                        rest. Four hours of sleep will remove all temporary
-                        fatigue automatically, and one point of permanent
-                        fatigue for every two points of stamina (rounded up).
+                        Exhaustion counts towards fatigue, but cannot be
+                        lost through a few minutes of rest. Four hours of
+                        good sleep with remove all fatigue and one point
+                        of exhaustion for every two points of stamina
+                        (rounded up).
                     </para>
                 </sect3>
             </sect2>
@@ -1863,6 +1876,12 @@
                         aimed in the previous round, then firing it is
                         considered a <e>fast</e> action.
                     </para>
+                    
+                    <para>
+                        A character can use the <e>throw</e> skill in place
+                        of the bow skill, but all range penalties are
+                        doubled and no techniques can be used.
+                    </para>
                 </sect3>
 
                 <sect3>
@@ -1892,6 +1911,12 @@
                         For medium crossbows, the difficulty is 15, for 
                         heavy crossbows the difficulty is 20. In each case,
                         a strength x 4 roll is required.
+                    </para>
+                    
+                    <para>
+                        The <e>throw</e> skill can be used instead when
+                        using a crossbow, but range penalties at targets
+                        greater than short range are doubled.
                     </para>
                 </sect3>
             </sect2>
@@ -2157,7 +2182,7 @@
                 <title>Darkness</title>
 
                 <para>
-                    Darkness covers any situation where one combatent cannot
+                    Darkness covers any situation where one combatant cannot
                     see another, due to lack of light, blindness, fog, smoke
                     and the like.
                 </para>
@@ -2356,7 +2381,7 @@
                     back of a mount, then they must make a agility riding
                     check at difficulty 15. One roll is required each round
                     that the character has declared any attacks or
-                    defences.
+                    defenses.
                 </para>
 
                 <para>
