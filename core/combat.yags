@@ -14,7 +14,7 @@
             <year>2001</year>
             <holder>Samuel Penn</holder>
         </copyright>
-        <releaseinfo role="meta">$Revision: 1.2 $</releaseinfo>
+        <releaseinfo role="meta">$Revision: 1.3 $</releaseinfo>
     </referenceinfo>
     <revhistory>
         <revision>
@@ -29,8 +29,8 @@
     </subjectset>
     <colourscheme>
         <colour>red</colour>
-        <darkcolour>#ffbb77</darkcolour>
-        <lightcolour>#ffddbb</lightcolour>
+        <darkcolour>#ff7777</darkcolour>
+        <lightcolour>#ffcccc</lightcolour>
     </colourscheme>
 </artheader>
 
@@ -380,17 +380,268 @@ The sequence of events in each round is as follows.
 </para>
 
 <para>
-Determine character actions. 
-Roll initiative. 
-Perform actions in decreasing order of initiative. 
-End of round book keeping. 
-Determine Actions 
-The first step in each round involves determining what each
-character or creature is going to be doing. 
+<orderedlist>
+	<listitem><para>
+	Determine character actions.
+	</para></listitem>
+	<listitem><para>
+	Roll initiative.
+	</para></listitem>
+	<listitem><para> 
+	Perform actions in decreasing order of initiative.
+	</para></listitem>
+	<listitem><para>
+	End of round book keeping.
+	</para></listitem>
+</orderedlist>
 </para>
+
+<sect3><title>Determine Actions</title>
+<para>
+The first step in each round involves determining what each
+character or creature is going to be doing. Since a round lasts
+five seconds, there is generally time to move as well as do
+something else, though full sprints will take up the entire
+round.
+</para>
+
+<para>
+If a character is performing an attack, then any special attacks
+must be declared at this point, before initiative is determined.
+</para>
+
+<para>
+Action determination is considered to be simultaneous for everyone.
+If a character wishes to 'wait' then they must declare what they
+are waiting for, and what they will do when it happens. Declarations
+such as <emphasis>I'll hit him if he moves</emphasis> are perfectly
+valid.
+</para>
+
+<para>
+It is not possible to wait until the end of the round - any waiting
+must be for a particular event. It is not possible to wait for a non
+event. For example, an archer might specify that they are waiting for
+someone to come through a door, and that they will shoot them when
+they do. If someone comes through the door, then they get an attack,
+otherwise they perform no action that round.
+</para>
+
+<para>
+However, a declaration to shoot someone if they come through the door,
+otherwise shoot someone else is not valid. The character will not know
+that someone is not going to come through the door until the round has
+ended, by which time it is too late.
+</para>
+
+<sect4><title>Declaring Attacks</title>
+<para>
+Only one attack may be declared each round by a character. The target
+of the attack must be specified, as well as whether the attack is
+a special attack of any kind. Many characters may attack a single
+target however, up to whatever is practical given the size of the
+target. Assume that four people can attack a man sized target, unless
+circumstances dictate otherwise.
+</para>
+</sect4>
+
+<sect4><title>Declaring Defences</title>
+<para>
+A character may defend against any number of opponents, though there
+are penalties if more than one defence is performed. Since defences
+are being declared, it is necessary for a character to know who is
+attacking them that round.
+</para>
+</sect4>
+</sect3>
+
+<sect3><title>Initiative</title>
+<para>
+Initiative determines who acts first, with higher initiatives going
+before lower ones. If the character is making an attack, then their
+initiative depends on their initiative derived from their weapon
+statistic. Most other actions can be derived from their brawling
+initiative (agility x brawl).
+</para>
+
+<para>
+Some special attacks will modify initiative. An aggressive attack
+gives a bonus, a killing blow will mean the character goes last.
+If the initiative roll is fumbled, then the character acts last.
+</para>
+
+<sect4><title>Who Goes Last?</title>
+<para>
+Several situations can result in a character <emphasis>going last
+</emphasis>. If more than one character is last, then actions are
+resolved in the following order.
+</para>
+
+<para>
+<orderedlist>
+	<listitem><para>
+	All those not going last act in order of initiative.
+	</para></listitem>
+	<listitem><para>
+	All those who are going last because they fumbled, or who are
+	going last because of a special attack but didn't fumble, act in
+	order of initiative.
+	</para></listitem>
+	<listitem><para>
+	All those who fumbled when they were already going last (e.g. because
+	they tried a killing blow or similar special attack), now act in order
+	of initiative.
+	</para></listitem>
+</orderedlist>
+</para>
+</sect4>
+</sect3>
+
+<sect3><title>Perform Actions</title>
+<para>
+Actions are performed.
+</para>
+</sect3>
+
+<sect3><title>End of Round</title>
+<para>
+At the end of each round, any general bookkeeping can be performed.
+If stamina rolls are needed to remain conscious, then they are made
+now.
+</para>
+</sect3>
 
 </sect2>
 
+
+<sect2><title>Making an Attack</title>
+<para>
+If a character chooses to make an attack on someone, then the target
+can choose either to defend themselves or not, though this decision
+must be made when actions are declared.
+</para>
+
+<para>
+The attacker makes an attack roll, using their attack rating as follows.
+</para>
+
+<para align="center">
+attribute x skill + weapon attack bonus + d20
+</para>
+
+<para>
+If the defender is not defending, then the target difficulty is 15.
+If the defender is defending, then they make a defence roll as
+follows.
+</para>
+
+<para>
+attribute x skill + weapon defence bonus + d20
+</para>
+
+<para>
+If the attack roll is equal to or greater than the defense roll,
+then the attack was a success.
+</para>
+
+<sect3><title>Multiple Opponents</title>
+<para>
+A defender who is having to defend against multiple opponents will
+be at a penalty to all their defence rolls. It can sometimes be
+better to not defend against all attacks, in order to at least have
+a chance at defending against some of them. It is not possible to
+defend against more than four attacks in a round.
+</para>
+
+<para>
+<table><title>Defending Against Multiple Opponents</title>
+    <colspec colwidth="3cm"/>
+    <colspec colwidth="2cm"/>
+    <colspec colwidth="2cm"/>
+    <thead>
+        <row>
+            <entry>Opponents</entry>
+            <entry>Defence</entry>
+            <entry>Attack</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1</entry>
+            <entry>0</entry>
+            <entry>0</entry>
+        </row>
+        <row>
+            <entry>2</entry>
+            <entry>-10</entry>
+            <entry>-5</entry>
+        </row>
+        <row>
+            <entry>3</entry>
+            <entry>-20</entry>
+            <entry>-10</entry>
+        </row>
+        <row>
+            <entry>4</entry>
+            <entry>-40</entry>
+            <entry>-20</entry>
+        </row>
+    </tbody>
+</table>
+</para>
+</sect3>
+</sect2>
+
+
+<sect2><title>Movement</title>
+
+<para>
+A character can be assumed to be able to move 25m in a round and
+still make an attack. Each metre they move before attcking, they 
+have a -1 penalty to initiative. It is assumed that this is rounded 
+to the nearest 5m, just for simplicity.
+</para>
+</sect2>
+
+</sect1>
+
+<sect1><title>Damage and Wounds</title>
+<para>
+A successful attack can result in damage and/or death to the defender.
+Damage is represented as either wounds or stuns - the former being
+by far the most deadly. Most weapons cause wounds, whilst punching
+someone will cause stun damage. Stuns are temporary, and even the
+worst stun damage will be recovered in a few days.
+</para>
+
+<para>
+Some attacks will cause a mixture of stuns and wounds. Animal attacks
+are often of this kind.
+</para>
+
+<para>
+Damage is measured in levels, and is calculated from the damage
+roll of the attacker and the soak roll of the defender. Soak,
+which includes basic toughness plus protective armour, reduces
+damage suffered from an attack.
+</para>
+
+<para>
+To find the damage, roll the strength x 4 + weapon damage bonus
+of the attacker, and subtract the base soak + armour soak roll
+of the defender. A typical human has a base soak of 12. A full
+suite of chain armour gives a further +13 soak, for a total of
+25. A typical human with a strength of 3 and using a sword has
+a damage of 3 x 4 + 12 = 24.
+</para>
+
+<sect2><title>Wounds</title>
+<para>
+Wounds represent damage that has a good chance of breaking the skin
+and affecting vital organs, or causing massive bleeding or broken
+bones.
+</para>
+</sect2>
 </sect1>
 
 </article>
