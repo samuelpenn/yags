@@ -12,8 +12,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2002-11-11 22:44:37 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2002-11-17 21:41:20 $</date>
         </cvsinfo>
 
         <license>
@@ -37,7 +37,7 @@
 
     <body>
         <sect1>
-            <title>Creating a Character</title>
+            <title>Characters</title>
 
             <para>
                 The Character is the player's representation within
@@ -62,7 +62,7 @@
                 system, and how skills and attributes work within
                 the game world.
             </para>
-            
+
             <para>
                 Finally, this article describes the core rules for
                 designing a basic Yags character. A fantasy setting
@@ -83,21 +83,16 @@
                 </para>
 
                 <para>
-                    Age does play a factor, in that the player may
-                    choose the age of their character, and this will
-                    affect how skilled the character is. Up to a point,
-                    there are few disadvantages with starting with an
-                    older character.
-                </para>
-
-                <para>
-                    Initially, all characters begin at the age of
-                    16. The process of generating an older character
-                    occurs after initial character generation.
+                    By default, a character will begin at age 16. Being
+                    older is considered to be a disadvantage, which gives
+                    extra points to spend on advantages and skills. This
+                    means that older characters are more experienced
+                    and capable than younger characters. However, no
+                    points are gained beyond the age of 30.
                 </para>
             </sect2>
         </sect1>
-        
+
         <sect1>
             <title>Building a Character</title>
 
@@ -109,34 +104,87 @@
                 purchased.
             </para>
 
+            <para>
+                An <e>average</e> character will have the majority of
+                these points spent on skills. More abnormal characters
+                will tend to spend the points on attributes and
+                advantages. The latter makes for more interesting,
+                specialised characters which are better destined to
+                become heroes.
+            </para>
+
             <sect2>
                 <title>Basic Abilities</title>
 
                 <para>
+                    Before spending any character points, every player
+                    character will begin with a basic set of skills and
+                    attributes. These represent a young adult (assumed
+                    age of 16) without any professional skills, but with
+                    those skills and abilities which would have been
+                    learnt in childhood by everyone.
+                </para>
+
+                <para>
                     A character begins with all attributes at a score
-                    of three, and all talents at a score of two. Further,
-                    the following skills are known by all characters:
-                    Speak own language 4, Area lore 2 and Folk lore 2.
+                    of three, representing average ability in all areas.
+                    All talents begin at two, giving familiarity with
+                    the core skills.
                 </para>
                 
                 <para>
-                    The character also begins with the passions Bravery,
-                    Ego, Restraint and Temperence all at four.
+                    Further, each character begins being able to speak
+                    their own language at a score of 4, and with area
+                    lore and folk lore skills both at 2.
+                </para>
+                
+                <para>
+                    Finally, the character will have the four passions
+                    at a score of four.
                 </para>
 
-                <para>
-                    All other skills and abilities have to be bought.
-                </para>
+                <character name="Starting abilities" display="template">
+                    <attributes size="5" soak="12">
+                        <attribute name="strength" score="3"/>
+                        <attribute name="stamina" score="3"/>
+                        <attribute name="agility" score="3"/>
+                        <attribute name="dexterity" score="3"/>
+                        <attribute name="perception" score="3"/>
+                        <attribute name="intelligence" score="3"/>
+                        <attribute name="charisma" score="3"/>
+                        <attribute name="will" score="3"/>
+                    </attributes>
 
-                <para>
-                    The obvious thing to buy is more skills. Any skill
-                    may be bought up to a maximum level of 4 (which
-                    costs 10 points).
-                </para>
+                    <skills>
+                        <group name="Talents" type="talents">
+                            <skill name="Athletics" score="2"/>
+                            <skill name="Awareness" score="2"/>
+                            <skill name="Brawl" score="2"/>
+                            <skill name="Charm" score="2"/>
+                            <skill name="Guile" score="2"/>
+                            <skill name="Sleight" score="2"/>
+                            <skill name="Stealth" score="2"/>
+                            <skill name="Throw" score="2"/>
+                        </group>
+                        
+                        <group name="Knowledges" type="skills">
+                            <skill name="Speak own language" score="4"/>
+                            <skill name="Area lore" score="2"/>
+                            <skill name="Folk lore" score="2"/>
+                        </group>
+                    </skills>
+
+                    <passions>
+                        <passion name="Bravery" score="4"/>
+                        <passion name="Ego" score="4"/>
+                        <passion name="Restraint" score="4"/>
+                        <passion name="Temperence" score="4"/>
+                    </passions>
+                </character>
             </sect2>
 
             <sect2>
-                <title>Attributes</title>
+                <title>Spending the Points</title>
 
                 <para>
                     Attributes may be bought up at three times normal
@@ -151,7 +199,7 @@
                     an extra nine character points. No attribute can be
                     lowered below two however.
                 </para>
-                
+
                 <para>
                     Advantages can be raised during the game, though
                     the cost is increased to five times normal cost.
@@ -194,48 +242,20 @@
                     allow the player to spend more points elsewhere.
                 </para>
             </sect2>
-            
+
             <sect2>
                 <title>Skills</title>
-                
+
                 <para>
                     A character will need to buy skills. Skills can be
                     bought up to a maximum level of four, whether they
                     are talents or normal skills.
                 </para>
-                
+
                 <para>
                     Depending on the character background, the GM may
                     restrict the purchase of certain skills.
                 </para>
-            </sect2>
-        </sect1>
-
-        <sect1>
-            <title>Advantages and Disadvantages</title>
-            
-            <para>
-                Edges and flaws modify a characters attributes under
-                certain circumstances. They give either a +1 (if an
-                edge) or a -1 (if a flaw) to the attribute for purposes
-                of that roll. Only a single edge (the best one) can
-                apply in any given situation. Likewise, only a single
-                flaw (the worst) will apply. However, if an edge and
-                a flaw overlap, they will cancel each other.
-            </para>
-
-            <sect2>
-                <title>Edges</title>
-
-                <import-advantages href="options/edges.xml" type="edge"/>
-            </sect2>
-
-            <sect2>
-                <title>Flaws</title>
-            </sect2>
-
-            <sect2>
-                <title>Background</title>
             </sect2>
         </sect1>
 
@@ -325,135 +345,6 @@
                         </tbody>
                     </table>
                 </sect3>
-
-                <sect3>
-                    <title>Languages</title>
-
-                    <para>
-                        Language skills are treated on a scale from
-                        one to four, and are not normally 'rolled'
-                        like other skills. Instead, the level of skill
-                        gives a guide to how much of a conversation a
-                        character can understand.
-                    </para>
-                    
-                    <termlist>
-                        <entry term="Level one">
-                            The character can recognise the language
-                            and knows a few words, but cannot put
-                            sentences together.
-                        </entry>
-                        
-                        <entry term="Level two">
-                            The character can understand and form basic
-                            sentences. The character can probably get by
-                            in the market or in an inn.
-                        </entry>
-                        
-                        <entry term="Level three">
-                            The character has a good grasp of the
-                            language and can hold a decent
-                            conversation. They will obviously still be
-                            a foreigner however, and many unusual words
-                            will be beyond their understanding.
-                        </entry>
-                        
-                        <entry term="Level four">
-                            The character is fluent in the language.
-                            If they are a foreigner, then they may
-                            still have an accent, but they will not
-                            have any problems communicating.
-                        </entry>
-
-                        <entry term="Level five and above">
-                            If the character is a non-native speaker,
-                            then they can speak without an accent. This
-                            level and beyond gives detailed knowledge of
-                            different dialects and really obscure words,
-                            but is not of use in everyday conversation.
-                        </entry>
-                    </termlist>
-
-                    <sect4>
-                        <title>Harnic Languages</title>
-
-                        <termlist>
-                            <entry term="Harnic">
-                                The language, in one dialect or another,
-                                spoken by the majority of Harnians.
-                            </entry>
-
-                            <entry term="Ivinian">
-                                Spoken by the Ivinians - the Northmen.
-                            </entry>
-
-                            <entry term="Orbaalese">
-                                The language spoken in Orbaal, a mixture
-                                of Ivinian, Harnic and Jarinese. Most
-                                Ivinians speak their own language to
-                                each other.
-                            </entry>
-        
-                            <entry term="Jarinese">
-                                An almost dead language, formerly used
-                                by the early Jarin settlers to Harn.
-                                Modern dialects of Jarinese are spoken
-                                by some tribes and by some stubborn Jarin.
-                            </entry>
-                            
-                            <entry term="Sindarin">
-                                Spoken by the Elven people of Harn.
-                            </entry>
-                            
-                            <entry term="Khuzdul">
-                                Spoken by Harnic Dwarves.
-                            </entry>
-                            
-                            <entry term="Gargun">
-                                The gargun have their own language,
-                                and each sub-race has its own variation.
-                                A skill with each sub-language is
-                                required, though other gargun languages
-                                can be spoken at the average of
-                                both skills (round down).
-                            </entry>
-                        </termlist>
-                    </sect4>
-                    
-                    <sect4>
-                        <title>Harnic Scripts</title>
-
-                        <para>
-                            The following scripts are used on Harn for
-                            written languages. A scribe skill is with a
-                            script, not with a spoken language.
-                        </para>
-
-                        <termlist>
-                            <entry term="Lakise">
-                                The script brought to Harn by human
-                                settlers from Lythia. Lakise is the
-                                principal form of writing on Harn
-                                today and remains almost identical to
-                                that still used in western Lythia.
-                            </entry>
-
-                            <entry term="Runix">
-                                The angular, stone-carving script,
-                                originated by the Khuzdul and still
-                                used by them. The Ivinians also use
-                                Runic. This script is common in Orbaal,
-                                and is known to many who have contact
-                                with the Khuzdul.
-                            </entry>
-
-                            <entry term="Selenian">
-                                The aesthetic, cursive script of the
-                                Sindarin.
-                            </entry>
-                        </termlist>
-                    </sect4>
-                </sect3>
             </sect2>
 
             <sect2>
@@ -528,655 +419,6 @@
                     It is suggested that characters are no more than
                     35 years old, for simple reasons of play balance.
                 </para>
-            </sect2>
-        </sect1>
-
-
-        <sect1>
-            <title>Skill Descriptions</title>
-
-            <sect2>
-                <title>Talents</title>
-
-                <para>
-                    Talents are skills which all characters have some
-                    experience with. They require no special training to
-                    learn, and are normally picked up during early
-                    childhood. They include basic physical skills, as
-                    well as social interaction.
-                </para>
-
-                <para>
-                    Each talent covers quite a broad area, and can often
-                    be used in place of other skills, though at a penalty.
-                    All player characters have at least two in each talent,
-                    and NPCs with lower skills will be rare.
-                </para>
-
-                <import-skills href="options/talents.xml"/>
-            </sect2>
-
-
-            <sect2>
-                <title>Knowledges</title>
-
-                <skill-list>
-                    <skill name="Pvaric lore" type="knowledge">
-                        <description>
-                            Knowledge of esoteric subjects, such as how magic
-                            works, the capability of magical artifacts and the like.
-                            Used mostly by members of the Shek-Pvar.
-                        </description>
-                    </skill>
-
-                    <skill name="Area lore" type="knowledge">
-                        <description>
-                            Knowledge of an area, including geographical and political
-                            knowledge. Area lore is used when checking to see if a
-                            character has heard of a person, place or organisation.
-                            The area covered will be based from a given place, so a
-                            character may have several area lore skills. It is based on
-                            intelligence.
-                        </description>
-                    </skill>
-
-                    <skill name="Chirurgury" type="knowledge">
-                        <description>
-                            Performing major operations on a wounded person. This
-                            requires some specialist tools (though rarely more complicated
-                            than sharp knives and tongs). It is generally only known by the
-                            Society of Physicians.
-                        </description>
-                    </skill>
-
-                    <skill name="Earthmaster Lore" type="knowledge">
-                        <description>
-                            Knowledge of the legends and facts about the ancient
-                            Earthmasters. Both the sites and artifacts of the
-                            Earthmasters is covered by this knowledge.
-                        </description>
-                    </skill>
-
-                    <skill name="First aid" type="knowledge">
-                        <description>
-                            Care and treatment of wounds to the extent of stopping
-                            bleeding, and preventing infection. General first aid
-                            checks are made with intelligence, though some tasks,
-                            such as removing an arrow from a wound, use dexterity.
-                        </description>
-                    </skill>
-
-                    <skill name="Faerie lore" type="knowledge">
-                        <description>
-                            Knowledge of the Other World, of faeries, spirits
-                            and beasts of supernatural nature. Based on intelligence.
-                        </description>
-                    </skill>
-
-                    <skill name="Folk lore" type="knowledge">
-                        <description>
-                            Knowledge of stories, myths and legends of a people.
-                            Generally, everyone has basic folk lore knowledge of
-                            their own culture.
-                        </description>
-                    </skill>
-
-                    <skill name="Genealogy" type="knowledge">
-                        <description>
-                            Knowledge of the family history of a given line, normally
-                            a noble house. Based on intelligence.
-                        </description>
-                    </skill>
-
-                    <skill name="Herb lore" type="knowledge">
-                        <description>
-                            Knowledge of herbs and their properties. Can be used
-                            to recognise, collect and prepare herbs and plants for
-                            use in remedies, poisons and potions. Based on intelligence.
-                        </description>
-                    </skill>
-
-                    <skill name="History" type="knowledge">
-                        <description>
-                            Knowledge of the past, especially the last few hundred
-                            years. Based on intelligence.
-                        </description>
-                    </skill>
-
-                    <skill name="Law" type="knowledge">
-                        <description>
-                            Knowledge and understanding of the law, and how to apply
-                            it in a given situation. Based on intelligence.
-                        </description>
-                    </skill>
-
-                    <skill name="Religion" type="knowledge">
-                        <description>
-                            Knowledge of a religion, including its gods, customs
-                            and rituals. Based on intelligence.
-                        </description>
-                    </skill>
-
-                    <skill name="Speak own" type="knowledge">
-                        <description>
-                            The ability to speak your own language. This defaults
-                            to four. Language skills are very rarely rolled.
-                        </description>
-                    </skill>
-
-                    <skill name="Streetwise" type="knowledge">
-                        <description>
-                            Knowledge of the seedier sides of civilisation, including
-                            being able to contact influential people, deal with the
-                            thieves guild, and understand how gangs and organised crime
-                            operates within a town or city.
-                        </description>
-                        <example target="10">Locate the best place to find contacts</example>
-                        <example target="15">Make contact with the local thieves guild safely</example>
-                        <example target="20">Get a basic understanding of the underworld in
-                        a city after a day of investigation</example>
-                    </skill>
-                </skill-list>
-            </sect2>
-
-
-            <sect2>
-                <title>Communication Skills</title>
-
-                <skill-list>
-                    <skill name="Etiquette" type="social">
-                        <description>
-                            Knowledge of manners and how to behave
-                            in polite company. Normally based on
-                            charisma to behave correctly, or intelligence
-                            for a specific knowledge.
-                        </description>
-                    </skill>
-
-                    <skill name="Gambling" type="social">
-                        <description>
-                            Knowledge of how to play games of chance. Guile is often
-                            also useful for bluffing and guessing what other people are up
-                            to. A guile roll can give a one-fifth bonus to the gambling skill
-                            roll. Normally based on intelligence.
-                        </description>
-                    </skill>
-
-                    <skill name="Lip reading" type="social">
-                        <description>
-                            The skill of reading lips. Each 10 rolled gives an
-                            equivalent point of language skill. There may be penalties
-                            for distance, or partial visibility.
-                        </description>
-                    </skill>
-
-                    <skill name="Orating" type="social">
-                        <description>
-                            The ability to give speeches to inspire passions in people.
-                            This skill is based on charisma.
-                        </description>
-                    </skill>
-
-                    <skill name="Play (instrument)" type="social">
-                        <description>
-                            The skill needed to play a musical instrument.
-                            There is a separate skill for each type of instrument.
-                            Possible types of instrument include string, percussion and wind.
-                        </description>
-                    </skill>
-
-                    <skill name="Poetry" type="social">
-                        <description>
-                            The knowledge of poems, and the ability to improvise new
-                            poems. Reciting a poem is charisma based, inventing a new
-                            poem is intelligence based.
-                        </description>
-                    </skill>
-
-                    <skill name="Sing" type="social">
-                        <description>
-                            The ability to sing well and in a way to entertain people.
-                            Includes knowledge of songs, and the ability to choose and
-                            improvise songs to fit an occasion. It is charisma based to
-                            sing well, intelligence based to choose or improvise a song.
-                        </description>
-                    </skill>
-
-                    <skill name="Teach" type="social">
-                        <description>
-                            The ability to teach another person, and train them in
-                            the use of a skill. See the Campaign section for details
-                            on training.
-                        </description>
-                    </skill>
-
-                    <skill name="Trade" type="social">
-                        <description>
-                            Covers a multitude of skills involved with trading, including
-                            bartering, and having some clue as to the value of goods.
-                        </description>
-                    </skill>
-                </skill-list>
-            </sect2>
-
-            <sect2>
-                <title>Cult Skills</title>
-
-                <para>
-                    Cult skills are only available to members of a
-                    given religion. In theory, they can be learned
-                    by anyone, but it is generally forbidden
-                    to teach them outside of the cult.
-                </para>
-
-                <skill-list>
-                    <skill name="Berserker" type="cult">
-                        <cult>Agrik</cult>
-                        <description>
-                            This skill is only known by the clerics and fighting
-                            orders of Agrik. It mimics the advantage of the same name. It
-                            is based on stamina, and each 10 points rolled gives an equivalence
-                            to one level of berserker advantage.
-                        </description>
-                    </skill>
-
-                    <skill name="Dream lore" type="cult">
-                        <cult>Siem</cult>
-                        <description>
-                            It is believed that dreams give glimpses of the inner
-                            mind of a person, and also of their future. The ability to
-                            understand dreams, and to garner useful knowledge from them is
-                            difficult to master. At worst though, someone with this skill
-                            can give impressive interpretations of a dream, if not entirely
-                            accurate. Based on intelligence, and taught by the priests of Siem.
-                        </description>
-                    </skill>
-
-                    <skill name="Erotic arts" type="cult">
-                        <cult>Halea</cult>
-                        <description>
-                            The skill of giving (and taking) pleasure to someone.
-                            It is unique to the priestesses of Halea, and a few favoured
-                            followers (mainly members of the guild of courtesans). Normally
-                            base on dexterity.
-                        </description>
-                    </skill>
-
-                    <skill name="Riddle lore" type="cult">
-                        <cult>Save-K'nor</cult>
-                        <description>
-                            This is the skill of solving riddles and puzzles, of
-                            understanding the links connecting broken facts. It is taught
-                            by the priests of Save-K'nor.
-                        </description>
-                    </skill>
-
-                    <skill name="Torture" type="cult">
-                        <cult>Agrik</cult>
-                        <description>
-                            A skill honed to perfection by the followers of Agrik.
-                            This gives knowledge of the 'ten thousand ways of pain'.
-                            It includes knowledge of anatomy, psychology and implements of
-                            torture. Normally based on intelligence.
-                        </description>
-                    </skill>
-                </skill-list>
-            </sect2>
-
-
-            <sect2>
-                <title>Wilderness Skills</title>
-
-                <skill-list>
-                    <skill name="Boating" type="wilderness">
-                        <description>
-                            Being able to use a small oared boat. Based on intelligence
-                            for judging travel conditions, strength for speed or dexterity
-                            for fine navigation.
-                        </description>
-                    </skill>
-
-                    <skill name="Falconry" type="wilderness">
-                        <description>
-                            The skill of training, caring for and hunting with falcons
-                            and similar birds of prey.
-                        </description>
-                    </skill>
-
-                    <skill name="Hunting" type="wilderness">
-                        <description>
-                            The skill of training, caring for and hunting with hounds.
-                        </description>
-                    </skill>
-
-                    <skill name="Ride" type="wilderness">
-                        <description>
-                            The ability to ride, normally a horse. A different skill
-                            is needed for different types of animals (horses and ponies
-                            would be the same skill, a Griffin another skill). As well as
-                            enabling you to remain mounted, it grants a bonus to combat
-                            skills when mounted.
-                        </description>
-                    </skill>
-
-                    <skill name="Survival" type="wilderness">
-                        <description>
-                            Knowledge of how to get by in the wilderness, from finding
-                            food, trapping animals, and moving at speed across country.
-                        </description>
-                    </skill>
-
-                    <skill name="Swim" type="wilderness">
-                        <description>
-                            The ability to move in water without drowning or panicking.
-                            Basically, a waterborne version of the athletics skill.
-                        </description>
-                    </skill>
-
-                    <skill name="Track" type="wilderness">
-                        <description>
-                            The ability to find, identify and follow tracks left by
-                            animals and people. To follow a single person across soft terrain
-                            is moderate difficulty. Muddy terrain, or a large number of people
-                            or creatures makes it easier. An opposed tracking roll can be
-                            used to hide tracks.
-                        </description>
-                    </skill>
-                </skill-list>
-            </sect2>
-
-
-            <sect2>
-                <title>Professional Skills</title>
-
-                <para>
-                    Professional skills will not often be learned by
-                    player characters, however they will be the most
-                    common skills known by people in the world.
-                </para>
-
-                <para>
-                    Each professional skill covers those tasks
-                    performed by someone who makes their living. As
-                    well as the actual obvious use of the skill, the
-                    skill can be used to evaluate the quality of raw
-                    materials and finished goods, estimate prices and
-                    set up and run a business based around the
-                    profession.
-                </para>
-
-                <para>
-                    Some skills are only taught as part of a guilded
-                    occupation. Learning them if the character is
-                    not apprenticed to a master will be difficult.
-                </para>
-
-                <skill-list>
-                    <skill name="Armoury" type="professional">
-                        <guilded/>
-                        <description>
-                            Making armour such as chain mail or ring mail, but also
-                            includes leather armour as well.
-                        </description>
-                    </skill>
-
-                    <skill name="Beekeeping" type="professional">
-                        <guilded/>
-                        <description>
-                            The keeping of bees, and the harvesting of honey from
-                            them.
-                        </description>
-                    </skill>
-
-                    <skill name="Blacksmithing" type="professional">
-                        <guilded/>
-                        <description>
-                            Metal working, including needles, horseshoes, tools
-                            and so on. It can be used to make knives and daggers, but
-                            anything larger requires the weaponsmithing skill.
-                        </description>
-                    </skill>
-
-                    <skill name="Bowyer" type="professional">
-                        <guilded/>
-                        <description>
-                            The making of bows and arrows.
-                        </description>
-                    </skill>
-
-                    <skill name="Brewing" type="professional">
-                        <description>
-                            Brewing beer and ale. This skill is generally the domain
-                            of the ale wives in small villages.
-                        </description>
-                    </skill>
-
-                    <skill name="Candlemaking" type="professional">
-                        <guilded/>
-                        <description>
-                            The making of candles.
-                        </description>
-                    </skill>
-
-                    <skill name="Carpentry" type="professional">
-                        <guilded/>
-                        <description>
-                            Crafting items out of wood, from chairs to houses.
-                        </description>
-                    </skill>
-
-                    <skill name="Clothier" type="professional">
-                        <guilded/>
-                        <description>
-                            Working with cloth, generally in the making of clothes.
-                            Can be used for making leather or padded armour if necessary,
-                            though this is not normally the domain of clothiers.
-                        </description>
-                    </skill>
-
-                    <skill name="Cooking" type="professional">
-                        <guilded/>
-                        <description>
-                            The preparing, preserving and cooking of food. Includes
-                            some knowledge of herbs.
-                        </description>
-                    </skill>
-
-                    <skill name="Copicing" type="professional">
-                        <guilded/>
-                        <description>
-                            The care and management of woodland. All manors will
-                            have someone skilled in this, and it is not uncommon for such
-                            a person to be a carpenter as well.
-                        </description>
-                    </skill>
-
-                    <skill name="Dairying" type="professional">
-                        <description>
-                            The making of cheese and other dairy products. Includes
-                            caring for and milking cows.
-                        </description>
-                    </skill>
-
-                    <skill name="Farming" type="professional">
-                        <description>
-                            The planting, caring for and harvesting of crops, the
-                            care and feeding of animals such as cows, sheep and chickens.
-                            The majority of people in rural areas will of course be farmers.
-                        </description>
-                    </skill>
-
-                    <skill name="Glassworking" type="professional">
-                        <guilded/>
-                        <description>
-                            The making of glassware, though this is a rare, and highly
-                            sought after, skill.
-                        </description>
-                    </skill>
-
-                    <skill name="Handicraft" type="professional">
-                        <description>
-                            The making of baskets, embroidery and other similar
-                            village hand crafts not covered by other professional skills.
-                        </description>
-                    </skill>
-
-                    <skill name="Jewelcraft" type="professional">
-                        <guilded/>
-                        <description>
-                            The crafting of jewelry and gems. Covers artistic
-                            skill, as well as knowledge of the values of such items.
-                        </description>
-                    </skill>
-
-                    <skill name="Masonry" type="professional">
-                        <guilded/>
-                        <description>
-                            The building of houses, bridges and other constructions
-                            out of stone.
-                        </description>
-                    </skill>
-
-                    <skill name="Milling" type="professional">
-                        <guilded/>
-                        <description>
-                            Running a mill, from the grinding of flour to the baking
-                            of the bread.
-                        </description>
-                    </skill>
-
-                    <skill name="Mining" type="professional">
-                        <guilded/>
-                        <description>
-                            Covers being able to locate new mines, and to construct
-                            and work them safely.
-                        </description>
-                    </skill>
-
-                    <skill name="Ostling" type="professional">
-                        <guilded/>
-                        <description>
-                            The care and training of horses.
-                        </description>
-                    </skill>
-
-                    <skill name="Potter" type="professional">
-                        <guilded/>
-                        <description>
-                            Pottery.
-                        </description>
-                    </skill>
-
-                    <skill name="Shipwright" type="professional">
-                        <guilded/>
-                        <description>
-                            Ship building.
-                        </description>
-                    </skill>
-
-                    <skill name="Tanning" type="professional">
-                        <guilded/>
-                        <description>
-                            Tanning.
-                        </description>
-                    </skill>
-
-                    <skill name="Thatching" type="professional">
-                        <description>
-                            Thatching.
-                        </description>
-                    </skill>
-
-                    <skill name="Weaponsmithing" type="professional">
-                        <guilded/>
-                        <description>
-                            The making of weapons, including spears, daggers,
-                            swords and axes. The making of bows and arrows is a different
-                            profession, which is covered by bowyer.
-                        </description>
-                    </skill>
-
-                    <skill name="Weaving" type="professional">
-                        <guilded/>
-                        <description>
-                            A profession which includes weaving and spindling.
-                        </description>
-                    </skill>
-                </skill-list>
-            </sect2>
-
-
-            <sect2>
-                <title>Combat Skills</title>
-
-                <para>
-                    See the combat chapter for a complete description
-                    of how these skills are used. Generally, a skill
-                    in a particular weapon is not necessary, just a
-                    style of fighting.
-                </para>
-
-                <skill-list>
-                    <skill name="Battle" type="combat">
-                        <description>
-                            Knowledge of tactics and strategy for planning, and fighting,
-                            large scale battles (anything with a dozen or more people a side).
-                            Combined with charisma, it is also used for leadership in battle.
-                        </description>
-                    </skill>
-
-                    <skill name="Bow" type="combat">
-                        <description>
-                            Using either a shortbow or longbow.
-                        </description>
-                    </skill>
-
-                    <skill name="Crossbow" type="combat">
-                        <description>
-                            Using any type of crossbow.
-                        </description>
-                    </skill>
-
-                    <skill name="Great weapon" type="combat">
-                        <description>
-                            Using a large weapon such as a great sword.
-                        </description>
-                    </skill>
-
-                    <skill name="Longshaft weapon" type="combat">
-                        <description>
-                            Fighting with a spear, quarterstaff, pike, lance
-                            or similar long shafted weapon. If the weapon is being
-                            used one handed, then a shield may be used as well. The
-                            lance can be used one handed with a shield from horseback.
-                        </description>
-                    </skill>
-
-                    <skill name="Single Weapon" type="combat">
-                        <description>
-                            Fighting with a single melee weapon and no shield.
-                        </description>
-                    </skill>
-
-                    <skill name="Two handed weapon" type="combat">
-                        <description>
-                            Fighting with a two handed weapon such as a great sword.
-                        </description>
-                    </skill>
-
-                    <skill name="Two weapons" type="combat">
-                        <description>
-                            Fighting with a weapon in each hand, such as with
-                            two swords for example.
-                        </description>
-                    </skill>
-
-                    <skill name="Weapon and shield" type="combat">
-                        <description>
-                            Fighting with a weapon and shield.
-                        </description>
-                    </skill>
-                </skill-list>
             </sect2>
         </sect1>
 
