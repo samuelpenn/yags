@@ -12,8 +12,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.4 $</version>
-            <date>$Date: 2003-09-28 21:27:46 $</date>
+            <version>$Revision: 1.5 $</version>
+            <date>$Date: 2003-10-19 17:12:26 $</date>
         </cvsinfo>
 
         <license>
@@ -78,7 +78,7 @@
                     freemen are the nobleman's servants and men-at-arms (or
                     at least, so it will be assumed), and they will often
                     be able to make use of the same advantages as the noble,
-                    however without the commitments that come with them.
+                    without many of the commitments that come with them.
                 </para>
 
                 <sect3>
@@ -172,24 +172,53 @@
             </sect2>
 
             <sect2>
-                <title>Professions</title>
+                <title>Character Packages</title>
+
+                <para>
+                    The character's social class determines what options are
+                    available to them in life. One of the following packages
+                    can be taken, which provides a default set of skills
+                    which the character will have to start with.
+                </para>
+
+                <para>
+                    A <e>package</e> does not cost anything - one (and only
+                    one) may be taken for free. Further skills may be taken
+                    to customise the character afterwards. It should be
+                    noted, that not all characters are equal.
+                </para>
+
+                <para>
+                    Once a package has been chosen, the player has 10 points
+                    to spend on customising the character. Further points
+                    can also be gained by starting older than 16 - each year
+                    beyond 16 gives a further 2 points, up to a maximum
+                    starting age of 25 (18pts) - with the <e>age</e>
+                    disadvantage.
+                </para>
 
                 <sect3>
-                    <title>Freeman</title>
+                    <title>Peasants</title>
 
-                    <import-character href="examples/freeman.yags" display="template"/>
+                    <import-character href="packages/peasants.yags" display="template"/>
+                </sect3>
+
+                <sect3>
+                    <title>Freemen</title>
+
+                    <import-character href="packages/freemen.yags" display="template"/>
                 </sect3>
 
                 <sect3>
                     <title>Low Noble</title>
 
-                    <import-character href="examples/lownoble.yags" display="template"/>
+                    <import-character href="packages/lownobles.yags" display="template"/>
                 </sect3>
 
                 <sect3>
                     <title>High Noble</title>
 
-                    <import-character href="examples/highnoble.yags" display="template"/>
+                    <import-character href="packages/highnobles.yags" display="template"/>
                 </sect3>
             </sect2>
 
@@ -198,7 +227,14 @@
 
                 <import-advantages href="options/advantages.yags" type="advantage"/>
             </sect2>
+
+            <sect2>
+                <title>Disadvantages</title>
+
+                <import-advantages href="options/advantages.yags" type="disadvantage"/>
+            </sect2>
         </sect1>
+
     </body>
 
 </article>
