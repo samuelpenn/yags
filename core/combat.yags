@@ -13,13 +13,13 @@
         <tagline>Yags</tagline>
 
         <author>
-            <fullname>Samuel Penns</fullname>
+            <fullname>Samuel Penn</fullname>
             <email>sam@bifrost.demon.co.uk</email>
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.19 $</version>
-            <date>$Date: 2002-08-26 11:40:22 $</date>
+            <version>$Revision: 1.20 $</version>
+            <date>$Date: 2002-11-23 17:06:10 $</date>
         </cvsinfo>
         
         <license>
@@ -49,8 +49,8 @@
                 This is a basic introduction to the <tm>Yags</tm>
                 combat system, and a description of low tech fighting,
                 using swords, bows and brawling. Modern day warfare
-                is covered in <em>Modern Combat</em> and futuristic
-                combat is covered in <em>Future Combat</em>.
+                is covered in <ref>Modern Combat</ref> and futuristic
+                combat is covered in <ref>Future Combat</ref>.
             </para>
 
             <para>
@@ -86,8 +86,8 @@
                         levels, which represent their health.
                         Most creatures have a number of body
                         levels equal to their size plus two.
-                        The extra two represent <bold>OK</bold>
-                        and <bold>Fatal</bold> which are at
+                        The extra two represent <term>OK</term>
+                        and <term>Fatal</term> which are at
                         either extreme of a living creature's
                         state of health.
                     </entry>
@@ -113,15 +113,15 @@
                         rarely kill, but a severe beating can
                         in theory inflict enough stuns to kill
                         a person, since excessive stuns translate
-                        into <bold>wounds</bold>.
+                        into <term>wounds</term>.
                     </entry>
 
                     <entry term="Damage">
                         Damage is done when one creature hits
                         another. Often, damage induces wounds or
                         stuns in the target. An attack will
-                        inflict either <bold>wounds</bold>,
-                        <bold>stuns</bold> or <bold>mixed</bold>
+                        inflict either <term>wounds</term>,
+                        <term>stuns</term> or <term>mixed</term>
                         damage which is split between stuns and
                         wounds. Many animals cause mixed damage
                         with claw and bite attacks.
@@ -222,7 +222,7 @@
                         have the advantage that when used defensively,
                         the defence bonus is +10 (rather than +5). If
                         used aggresively, then the attack bonus is +10
-                        (rather than +5). See the section of special
+                        (rather than +5). See the section on special
                         attacks for more information.
                     </entry>
                 </termlist>
@@ -492,7 +492,7 @@
                         wishes to 'wait' then they must declare what
                         they are waiting for, and what they will do
                         when it happens. Declarations such as
-                        <emphasis>I'll hit him if he moves</emphasis>
+                        <e>I'll hit him if he moves</e>
                         are perfectly valid.
                     </para>
 
@@ -509,7 +509,7 @@
                     </para>
 
                     <para>
-                        However, a declaration to shoot someone if they
+                        Further, a declaration to shoot someone if they
                         come through the door, otherwise shoot someone
                         else is not valid. The character will not know
                         that someone is not going to come through the
@@ -579,32 +579,49 @@
                     </para>
                     
                     <example>
-                        Alice has an initiative of 28, Bob has an initiative
-                        of 24 and Charles has an initiative of 22. Alice
-                        and Bob make normal attacks, but Charles makes
-                        an aggressive attack, which is always fast. When
-                        actions are resolved, fast actions go first, so
-                        Charles is first to act. Next, normal actions
-                        are performed, so Alice acts, followed by Bob.
-                        <br/>
-                        If Alice's action was also an aggressive attack,
-                        then she would be considered fast as well as Charles.
-                        When fast actions are resolved, they would be in
-                        order of Alice, then Charles. Bob would then act
-                        last, taking only a normal speed action.
+                        <para>
+                            Alice has an initiative of 28, Bob has an
+                            initiative of 24 and Charles has an initiative
+                            of 22. Alice and Bob make normal attacks, but
+                            Charles makes an aggressive attack, which is
+                            always fast. When actions are resolved, fast
+                            actions go first, so Charles is first to act.
+                            Next, normal actions are performed, so Alice
+                            acts, followed by Bob.
+                        </para>
+
+                        <para>
+                            If Alice's action was also an aggressive attack,
+                            then she would be considered fast as well as
+                            Charles. When fast actions are resolved, they
+                            would be in order of Alice, then Charles. Bob
+                            would then act last, taking only a normal speed
+                            action.
+                        </para>
                     </example>
 
-                    <para>
-                        If initiative is fumbled, then the character acts
-                        in the next speed category down, so a normal action
-                        becomes slow, and a slow action becomes very slow.
-                    </para>
-                    
+                    <sect4>
+                        <title>Fumbling initiative</title>
+                        
+                        <para>
+                            If initiative is fumbled, by rolling a 1,
+                            then two things occur. First, the character
+                            acts in the next speed category down, so a
+                            normal action becomes slow, and a slow action
+                            becomes very slow.
+                        </para>
+                        
+                        <para>
+                            Secondly, the person becomes fatigued, gaining
+                            one level of temporary fatigue.
+                        </para>
+                    </sect4>
+
                     <sect4>
                         <title>Reactions</title>
 
                         <para>
-                            A reaction is in response to anothers action.
+                            A reaction is in response to another's action.
                             Some special attack types are considered to
                             be reactions. In this case, the reacting
                             character acts immediately after the action
@@ -614,12 +631,11 @@
                         <para>
                             Normally, a reaction can only be used if the
                             character's action would normally occur before
-                            the event. However. it is delayed until after
+                            the event. However, it is delayed until after
                             the event. A reaction can be carried over until
                             the next round.
                         </para>
                     </sect4>
-
                 </sect3>
 
                 <sect3>
