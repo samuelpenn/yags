@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.26 $</version>
-            <date>$Date: 2004-05-31 12:40:17 $</date>
+            <version>$Revision: 1.27 $</version>
+            <date>$Date: 2004-06-05 19:48:00 $</date>
         </cvsinfo>
 
         <license>
@@ -211,8 +211,45 @@
                     </tbody>
                 </table>
                 
+            </sect2>
+
+            <sect2>
+                <title>Attributes</title>
+                
+                <para>
+                    Attributes are the basic characteristics of all creatures
+                    in <e>Yags</e>. There are eight primary attribues -
+                    strength, stamina, agility, dexterity, perception,
+                    intelligence, charisma and will - and two secondary
+                    attributes - size and luck.
+                </para>
+                
+                <para>
+                    Attributes measure broad natural talent for a character or
+                    creature. Attributes are not fixed, and can develop with
+                    time (especially during childhood and adolesence). A
+                    character who uses dexterity based skills a lot will
+                    probably develop their dexterity as well as the skills
+                    they are using.
+                </para>
+
+                <para>
+                    Primary attributes have an average value of three for an
+                    adult human, and will generally range between two and
+                    four. The minimum value is always one. Values above five
+                    are exceptional, though not unheard of.
+                </para>
+
+                <para>
+                    An attribute of zero indicates that a creature has
+                    no ability in that area, and cannot even attempt
+                    tasks which would require it. No creature will
+                    ever have an attribute below zero, and humans
+                    never have attributes below one.
+                </para>
+                
                 <sect3>
-                    <title>Attributes</title>
+                    <title>Attribute Levels</title>
                     
                     <targetlist targetFirst="true" bold="true">
                         <targetLabel>Cost</targetLabel>
@@ -252,13 +289,19 @@
                         
                         <item target="+27" value="5 (Very high).">
                             Such characters are well above average, being in
-                            the top 0.1% of the population. This is the starting
-                            maximum for player characters in many campaigns.
+                            the top 0.1% of the population. This is the
+                            starting maximum for player characters in many
+                            campaigns, and is normally the natural maximum
+                            for people who haven't had an opportunity to
+                            develop the attribute.
                         </item>
                         
                         <item target="+45" value="6 (Exceptional).">
                             One in a hundred thousand people would have an
                             ability this high. They are truly exceptional.
+                            Only those who have had an opportunity to
+                            develop and use their talent will generally have
+                            a score this high.
                         </item>
                         
                         <item target="+66" value="7 (Incredible).">
@@ -266,38 +309,10 @@
                         </item>
                         
                         <item target="+90" value="8 (Legendary).">
-                            One in a billion.
+                            One in a billion people.
                         </item>
-                    </targetlist>
-                    
+                    </targetlist>                    
                 </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Attributes</title>
-
-                <para>
-                    Attributes are the basic characteristics of all
-                    creatures in Yags. There are eight primary attributes -
-                    strength, stamina, agility, dexterity, perception,
-                    intelligence, charisma and will. There are also two
-                    secondary attributes - size and luck.
-                </para>
-
-                <para>
-                    Primary attributes have an average value of three for an
-                    adult human, and will generally range between two and
-                    four. The minimum value is one, the values above five
-                    are legendary.
-                </para>
-
-                <para>
-                    An attribute of zero indicates that a creature has
-                    no ability in that area, and cannot even attempt
-                    tasks which would require it. No creature will
-                    ever have an attribute below zero, and humans
-                    never have attributes below one.
-                </para>
 
                 <sect3>
                     <title>Primary Attributes</title>
@@ -427,43 +442,51 @@
                 </para>
 
                 <sect3>
-                    <title>Example Skill Levels</title>
+                    <title>Skill Levels</title>
 
-                    <itemlist order="strict">
-                        <item name="Unfamiliar (0)">
+                    <targetlist targetFirst="true" bold="true">
+                        <targetLabel>Cost</targetLabel>
+                        <valueLabel>Skill</valueLabel>
+                        
+                        <item target="0" value="0 (Unfamiliar).">
                             No ability in the skill. Most skills can still
                             be used (though are zero) except for knowledges,
                             which cannot even be attempted.
                         </item>
 
-                        <item name="Minimal (1)">
+                        <item target="1" value="1 (Minimal).">
                             Minimal knowledge of the skill, but it is still
                             dwarfed by blind luck.
                         </item>
 
-                        <item name="Basic (2)">
+                        <item target="3" value="2 (Basic).">
                             A basic understanding of the core principles of
                             the skill, and should be able to manage easy
                             tasks.
                         </item>
 
-                        <item name="Competent (3)">
+                        <item target="6" value="3 (Competent).">
                             Not quite up to professional quality, but can
                             handle anything within normal bounds.
                         </item>
 
-                        <item name="Professional (4-5)">
+                        <item target="10" value="4 (Professional).">
                             Professionals will have at least this level, and
                             can make a career of it. Many professionals will
                             not exceed this level, especially if their job
                             is not at all taxing.
                         </item>
+                        
+                        <item target="15" value="5 (Professional)."/>
+                        
 
-                        <item name="Seasoned (6-7)">
+                        <item target="21" value="6 (Seasoned).">
                             Extensive experience with the skill, both in
                             theory and practise. Skills above this level
                             will be rare.
                         </item>
+                        
+                        <item target="28" value="7 (Seasoned)."/>
 
                         <item name="Exceptional (8-9)">
                             This level of skill is rare, and normally
@@ -499,7 +522,7 @@
                             skills can go, but skills of this level should
                             be avoided if at all possible.
                         </item>
-                    </itemlist>
+                    </targetlist>
                 </sect3>
 
                 <sect3>
