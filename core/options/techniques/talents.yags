@@ -4,8 +4,8 @@
     Techniques for the basic talents. Non-combat orientated.
     
     Author:  Samuel Penn
-    Version: $Revision: 1.3 $
-    Date:    $Date: 2004-09-19 20:56:02 $
+    Version: $Revision: 1.4 $
+    Date:    $Date: 2004-10-19 17:44:06 $
     
  -->
 
@@ -39,13 +39,13 @@
         </description>
     </advantage>
     
-    <advantage name="Heavy drinker" type="technique">
-        <cost points="2"/>
-        <skill name="Carousing"/>
+    <advantage name="Climbing" type="technique">
+        <cost points="3"/>
+        <skill name="Athletics"/>
+        
         <description>
             <para>
-                Gain a +1 bonus to stamina rolls to avoid intoxication
-                when drinking alcohol or similar substances.
+                Double movement whilst climbing.
             </para>
         </description>
     </advantage>
@@ -83,14 +83,28 @@
         Charm.
      -->
     <advantage name="Seduction" type="technique">
-        <cost points="3"/>
+        <cost points="4"/>
         <skill name="Charm"/>
+
         <description>
             <para>
                 The character is experienced in talking people into going
-                to bed with them. When trying to interest someone in sex
-                (even if just to grab their attention) then the character
-                gains a +1 bonus to their charisma.
+                to bed with them. Any circumstance penalties are halved.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Carousing" type="technique">
+        <cost points="3"/>
+        <skill name="Charm"/>
+        
+        <description>
+            <para>
+                The character is a party animal, and gets on very well
+                with people in a party environment. Any circumstance
+                penalties such as the character not being welcome, or
+                people the character wants to talk to being busy, are
+                halved.
             </para>
         </description>
     </advantage>
@@ -103,32 +117,39 @@
         <skill name="Guile"/>
         <description>
             <para>
-                Disguising yourself.
+                When the character is trying to disguise themselves,
+                any circumstance penalties are halved, and get a choice
+                of using either intelligence or charisma.
             </para>
         </description>
     </advantage>
     
-    <advantage name="Taunt" type="technique">
-        <cost points="3"/>
+    <advantage name="Intimidation" type="technique">
+        <cost points="2"/>
         <skill name="Guile"/>
         
         <description>
             <para>
-                This technique enables the character to effectively use
-                insults and taunts to get someone to act rashly, generally
-                in a violent manner.
-                The bard may use taunts and insults to try
-                and make a person behave rashly. The bard
-                makes a contest of skills of his
-                charisma x guile versus the target's will x
-                restraint. On success the target becomes far
-                more likely to seek immediate redress for
-                the insults. In combat, they are likely to
-                use aggressive rather than defensive stances.
+                When the character is trying to intimidate someone,
+                they may use charisma instead of strength. Also, any
+                circumstance penalties are halved.
             </para>
         </description>
     </advantage>
-
+    
+    <advantage name="Presence" type="technique">
+        <cost points="6"/>
+        <skill name="Guile"/>
+        
+        <prerequisite>Intimidation</prerequisite>
+        
+        <description>
+            <para>
+                The character can intimidate people just be the way
+                they look.
+            </para>
+        </description>
+    </advantage>
     <!--
         Sleight.
      -->

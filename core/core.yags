@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.32 $</version>
-            <date>$Date: 2004-09-19 20:56:02 $</date>
+            <version>$Revision: 1.33 $</version>
+            <date>$Date: 2004-10-19 17:44:06 $</date>
         </cvsinfo>
 
         <license>
@@ -66,27 +66,64 @@
             </para>
 
             <sect2>
-                <title>Dice Conventions</title>
-
+                <title>Task Resolution</title>
+                
                 <para>
-                    The only type of die that is used is the d20. When
-                    making an ability check, roll ability + d20. If the roll
-                    is greater or equal to a target number, then the ability
-                    test was a success.
+                    Whenever a task is attempted within Yags, an ability
+                    check is required. This consists of rolling 1d20 and
+                    adding the character's ability score. This is compared
+                    against the task's difficulty, and if the roll is
+                    equal or higher, the attempt was a success. A
+                    <e>moderate</e> difficulty (challenging for a skilled
+                    person) is considered to be 20.
+                </para>
+                
+                <para>
+                    A character's ability score is either equal to their
+                    <skillequation>
+                        <attribute>attribute</attribute>
+                        <skill>4</skill>
+                    </skillequation>
+                    for a pure attribute check, or
+                    <skillequation>
+                        <attribute>attribute</attribute>
+                        <skill>skill</skill>
+                    </skillequation>
+                    when a skill check is required. An attribute of 3 is
+                    considered human average, and a skill of 4 is taken to
+                    be professional level.
+                </para>
+                
+                <para>
+                    Sometimes, a skill contest is called for between two or
+                    more characters. In this case, each character makes a
+                    roll as above, and whoever gets highest wins.
                 </para>
 
                 <sect3>
-                    <title>Automatic failure</title>
+                    <title>A roll of 1</title>
 
                     <para>
                         Under a stressful situation, then a roll of '1' on
-                        the die represents automatic failure or a fumble. In
-                        some situations, the chance of a fumble may be
+                        the die represents automatic failure or a fumble.
+                        In some situations, the chance of a fumble may be
                         higher than this (e.g., a roll of 1-3 might be a
                         fumble).
                     </para>
                 </sect3>
-
+                
+                <sect3>
+                    <title>A roll of 20</title>
+                    
+                    <para>
+                        Normally, a roll of 20 on the die is nothing
+                        special. If a character rolls a 20 when making a
+                        contested skill check against another character,
+                        and their skill level is higher than the second
+                        character's, then they automatically win.
+                    </para>
+                </sect3>
+                
                 <sect3>
                     <title>Taking care</title>
 
@@ -1238,33 +1275,55 @@
                     person, this is 5m/round.
                 </para>
                 
-                <para>
-                    A character can <e>run</e> at triple this speed. This
-                    represents a reasonable jog which the character can
-                    keep up for a long period of time. For an average
-                    person, this is 15m/round.
-                </para>
+                <sect3>
+                    <title>Running</title>
                 
-                <para>
-                    A character can opt to <e>sprint</e>, which enables
-                    them to move five times their base move. For an
-                    average person, this is 25m/round. At this speed, a
-                    person could do the hundred metres in 20 seconds.
-                </para>
+                    <para>
+                        A character can <e>run</e> at triple this speed. This
+                        represents a reasonable jog which the character can
+                        keep up for a long period of time. For an average
+                        person, this is 15m/round.
+                    </para>
+                    
+                    <para>
+                        If running for a long time, the character will gain
+                        one fatigue every stamina x athletics minutes. An
+                        average person with no training would gain a point
+                        of fatigue every six minutes, eventually stopping
+                        from fatigue after 30 minutes.
+                    </para>
+                </sect3>
                 
-                <para>
-                    An <e>all out sprint</e> precludes any other actions
-                    (such as fighting, including any defence rolls) and
-                    has to be done in a more or less straight line
-                    (a gentle curve, such as on a running track, would be
-                    okay). They can add the square root of
-                    <skillequation>
-                        <attribute>agility</attribute>
-                        <skill>athletics</skill>
-                        <die/>
-                    </skillequation>
-                    to their <e>sprint</e> speed.
-                </para>
+                <sect3>
+                    <title>Sprinting</title>
+                
+                    <para>
+                        A character can opt to <e>sprint</e>, which enables
+                        them to move five times their base move. For an
+                        average person, this is 25m/round. At this speed, a
+                        person could do the hundred metres in 20 seconds.
+                    </para>
+                </sect3>
+                
+                <sect3>
+                    <title>All Out Sprint</title>
+                
+                    <para>
+                        An <e>all out sprint</e> precludes any other actions
+                        (such as fighting, including any defence rolls) and
+                        has to be done in a more or less straight line
+                        (a gentle curve, such as on a running track, would be
+                        okay). They can add the square root of
+                        <skillequation>
+                            <attribute>agility</attribute>
+                            <skill>athletics</skill>
+                            <die/>
+                        </skillequation>
+                        to their <e>sprint</e> speed. An average person will
+                        move 29m/round, running the 100m in about 17 seconds.
+                    </para>
+                </sect3>
+                    
             </sect2>
             
             <sect2>
