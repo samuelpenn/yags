@@ -16,37 +16,19 @@
         <skill name="Brawl"/>
         <description>
             <para>
-                <e>Grapple</e> is an attempt to restrain someone. A normal
-                brawl attack is made, at a -5 penalty. Success means that
-                the defender has been grabbed. A second roll is immediately
-                made to see if the attacker can keep hold of the defender.
+                A brawl attack is made at a -5 penalty in order to grab
+                the defender (no damage is done). The defender can
+                immediately try to break free, by forcing an opposed
+                strength/brawl check, though the defender has the option
+                of using their agility instead of strength.
             </para>
 
             <para>
-                Both attacker and defender roll
-                <skillequation>
-                    <attribute>strength</attribute>
-                    <skill>brawl</skill>
-                    <die/>
-                </skillequation>
-                though the defender has the option of using agility instead
-                of strength. If the attacker is again successful, then both
-                opponents are grappling. Whilst grappling, neither can move,
-                and both suffer a -10 penalty per point of reach of any
-                weapon that is used. Neither can use a shield.
-            </para>
-
-            <para>
-                Either opponent can try to break the grapple on an attack
-                action, by using opposed agility/brawl as above. The
-                person trying to break the grapple always has the option
-                of using either strength or agility.
-            </para>
-
-            <para>
-                A grappled character can only defend against attacks by
-                the person who has grappled them. Both can use attack
-                actions to attack each other as normal.
+                Whilst characters are grappling, neither can move, and both
+                suffer a -10 penalty per point of reach of any weapon that
+                is used. Neither can use a shield, and they can only
+                defend against each other's attacks. Both can attack each
+                other freely, or try to break the grapple as above.
             </para>
         </description>
     </advantage>
@@ -93,7 +75,7 @@
                 using strength or agility. Success for the attacker
                 leaves the defender <e>unsteady</e>, whilst a good
                 success will leave them <e>prone</e>, and can optionally
-                cause stun damage as well - the attacke makes a damage
+                cause stun damage as well - the attacker makes a damage
                 roll as normal.
             </para>
 
@@ -120,39 +102,12 @@
             </para>
 
             <para>
-                The defender has the choice of oppossed strength or
-                dexterity skill checks. If the attack wins, then the
+                The defender has the choice of opposed strength or
+                dexterity skill checks. If the attacker wins, then the
                 defender has been disarmed.
             </para>
         </description>
     </advantage>
-
-    <advantage name="Fient" type="manouevre">
-        <cost points="0"/>
-        <skill name="Single weapon"/>
-        <skill name="Weapon and shield"/>
-        <skill name="Two weapons"/>
-        <skill name="Great weapon"/>
-        <skill name="Longshaft weapon"/>
-        <skill name="Brawl"/>
-        <description>
-            <para>
-                This manouevre is intended to force the defender off their
-                guard, allowing a follow up strike at greater effectiveness.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Shield bash" type="manouevre">
-        <cost points="0"/>
-        <skill name="Weapon and shield"/>
-        <description>
-            <para>
-                Bash with the shield.
-            </para>
-        </description>
-    </advantage>
-
 
     <!--
         The following are special unarmed manouevres which must be learnt
@@ -197,35 +152,6 @@
         </description>
     </advantage>
 
-    <advantage name="Killing blow" type="manouevre">
-        <cost points="6"/>
-        <skill name="Single weapon"/>
-        <skill name="Weapon and shield"/>
-        <skill name="Two weapons"/>
-        <skill name="Great weapon"/>
-        <skill name="Longshaft weapon"/>
-        <description>
-            <para>
-                Kill someone with a single blow. Slow attack, -15 to hit.
-                Size x stamina roll of 15 + 5 x wounds or die.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Aimed blow" type="manouevre">
-        <cost points="4"/>
-        <skill name="Single weapon"/>
-        <skill name="Weapon and shield"/>
-        <skill name="Two weapons"/>
-        <skill name="Great weapon"/>
-        <skill name="Longshaft weapon"/>
-        <description>
-            <para>
-                Halves armour. Slow attack, -10 to hit.
-            </para>
-        </description>
-    </advantage>
-
     <advantage name="Deadly punch" type="manouevre">
         <cost points="6"/>
         <skill name="Brawl"/>
@@ -253,14 +179,39 @@
         </description>
     </advantage>
 
-    <advantage name="Ambush" type="manouevre">
-        <cost points="2"/>
-        <skill name="Brawl"/>
+
+    <advantage name="Killing blow" type="manouevre">
+        <cost points="6"/>
         <skill name="Single weapon"/>
         <skill name="Weapon and shield"/>
-        <skill name="Great weapon"/>
         <skill name="Two weapons"/>
+        <skill name="Great weapon"/>
         <skill name="Longshaft weapon"/>
+        <description>
+            <para>
+                Kill someone with a single blow. Slow attack, -15 to hit.
+                Size x stamina roll of 15 + 5 x wounds or die.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Cleave" type="manouevre">
+        <cost points="4"/>
+        <skill name="Single weapon"/>
+        <skill name="Weapon and shield"/>
+        <skill name="Two weapons"/>
+        <skill name="Great weapon"/>
+        <skill name="Longshaft weapon"/>
+        <description>
+            <para>
+                Halves armour. Slow attack, -10 to hit.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Ambush" type="manouevre">
+        <cost points="2"/>
+        <skill name="All"/>
         <description>
             <para>
                 When initiated against someone who is not expecting an
