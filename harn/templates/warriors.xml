@@ -1088,6 +1088,221 @@
 </character-template>
 
 
+<character-template name="Thardic Legionaire (Light Infantry)">
+    <description>
+        <background>
+            <para>
+            The Thardic light infantry are trained as skirmish troops,
+            to harrass the enemy with bow fire. They are not expected
+            to fight in close combat, though are trained with both the
+            spear and short sword in case of this.
+            </para>
+            <para>
+            Legionaires normally sign up at age 16, and are given
+            six months of intensive training. They stay in the legion
+            full time until they are 20, at which point they may join
+            the reserves, serving for 3 months out of every year
+            until the age of 40. Twenty years of service will mean
+            that the legionaire is entitled to land.
+            </para>
+        </background>
+    </description>
+
+    <attributes points="48">
+        <attribute name="strength" score="4" weight="6"/>
+        <attribute name="stamina" score="4" weight="6"/>
+        <attribute name="agility" score="3" weight="3"/>
+        <attribute name="dexterity" score="4" weight="6"/>
+        <attribute name="perception" score="2" weight="2"/>
+        <attribute name="intelligence" score="2" weight="2"/>
+        <attribute name="charisma" score="2" weight="1"/>
+        <attribute name="will" score="3" weight="3"/>
+    </attributes>
+
+    <advantages points="10">
+        <advantage name="attributes" score="+3" cost="+3"/>
+        <advantage name="experience" score="+6" cost="+3"/>
+        <advantage name="brave" score="+3" cost="+2"/>
+        <advantage name="status (legionaire)" cost="+2"/>
+
+        <advantage name="duty (legion)" cost="-3"/>
+        <advantage name="loyal" target="legion" score="+3" cost="-2"/>
+        <advantage name="code of honour (legion)" cost="-2"/>
+        <advantage name="odious personal habit (swearing)" cost="-3"/>
+    </advantages>
+
+    <skills>
+    	<group name="Talents" type="talents">
+			<skill name="Athletics" score="2"/>
+			<skill name="Awareness" score="3"/>
+			<skill name="Brawl" score="2"/>
+			<skill name="Charm" score="1"/>
+			<skill name="Guile" score="1"/>
+			<skill name="Sleight" score="1"/>
+			<skill name="Stealth" score="3"/>
+			<skill name="Throw" score="2"/>
+		</group>
+
+		<group name="Common Knowledges" type="knowledges">
+			<skill name="Area lore" score="2"/>
+			<skill name="Folk lore" score="2"/>
+			<skill name="Speak own" score="4"/>
+		</group>
+    </skills>
+
+    <skills age="16">
+    	<group name="Talents" type="talents">
+        	<skill name="Athletics" score="4"/>
+     	</group>
+
+        <group name="Misc" type="skills">
+        	<skill name="Bow" score="4"/>
+            <skill name="Single weapon" score="4"/>
+            <skill name="Heraldry" score="1"/>
+            <skill name="Survival" score="2"/>
+            <skill name="First aid" score="1"/>
+            <skill name="Battle" score="2"/>
+            <skill name="Bowyer" score="1"/>
+        </group>
+    </skills>
+
+    <skills age="21">
+    	<group name="Misc" type="skills">
+        	<skill name="Bow" score="5"/>
+            <skill name="Survival" score="3"/>
+            <skill name="First aid" score="2"/>
+        </group>
+    </skills>
+
+    <skills age="25">
+    	<group name="Talents" type="talents">
+        	<skill name="Stealth" score="4"/>
+     	</group>
+
+        <group name="Misc" type="skills">
+            <skill name="Survival" score="4"/>
+     	</group>
+    </skills>
+
+    <equipment>
+    	<item name="Short bow"/>
+        <item name="Soft leather trousers"/>
+        <item name="Hard leather jacket"/>
+        <item name="Metal helm"/>
+        <item name="Short sword"/>
+        <item name="Spear"/>
+        <cash value="12d"/>
+	</equipment>
+</character-template>
+
+
+
+<character-template name="Thardic Legionaire (Heavy Infantry)">
+    <description>
+        <background>
+            <para>
+            The Thardic heavy infantry and trained to fight in
+            formation, holding the line against the enemy. They
+            are expected to man fortifications, patrol the Republic's
+            borders, and engage the enemy in close combat.
+            </para>
+            <para>
+            Legionaires normally sign up at age 16, and are given
+            six months of intensive training. They stay in the legion
+            full time until they are 20, at which point they may join
+            the reserves, serving for 3 months out of every year
+            until the age of 40. Twenty years of service will mean
+            that the legionaire is entitled to land.
+            </para>
+        </background>
+    </description>
+
+    <attributes points="48">
+        <attribute name="strength" score="4" weight="6"/>
+        <attribute name="stamina" score="4" weight="6"/>
+        <attribute name="agility" score="3" weight="3"/>
+        <attribute name="dexterity" score="4" weight="6"/>
+        <attribute name="perception" score="2" weight="2"/>
+        <attribute name="intelligence" score="2" weight="2"/>
+        <attribute name="charisma" score="2" weight="1"/>
+        <attribute name="will" score="3" weight="3"/>
+    </attributes>
+
+    <advantages>
+        <advantage name="attributes" score="+3" cost="+3"/>
+        <advantage name="experience" score="+6" cost="+3"/>
+        <advantage name="brave" score="+3" cost="+2"/>
+        <advantage name="status (legionaire)" cost="+2"/>
+
+        <advantage name="duty (legion)" cost="-3"/>
+        <advantage name="loyal" target="legion" score="+3" cost="-2"/>
+        <advantage name="code of honour (legion)" cost="-2"/>
+        <advantage name="odious personal habit (swearing)" cost="-3"/>
+    </advantages>
+
+    <skills>
+    	<group name="Talents" type="talents">
+			<skill name="Athletics" score="3"/>
+			<skill name="Awareness" score="2"/>
+			<skill name="Brawl" score="3"/>
+			<skill name="Charm" score="2"/>
+			<skill name="Guile" score="1"/>
+			<skill name="Sleight" score="1"/>
+			<skill name="Stealth" score="1"/>
+			<skill name="Throw" score="2"/>
+		</group>
+
+		<group name="Common Knowledges" type="knowledges">
+			<skill name="Area lore" score="2"/>
+			<skill name="Folk lore" score="2"/>
+			<skill name="Speak own" score="4"/>
+		</group>
+    </skills>
+
+    <skills age="16">
+    	<group name="Talents" type="talents">
+        	<skill name="Athletics" score="4"/>
+            <skill name="Brawl" score="4"/>
+     	</group>
+
+        <group name="Misc" type="skills">
+            <skill name="Weapon and shield" score="5"/>
+            <skill name="Heraldry" score="2"/>
+            <skill name="Survival" score="2"/>
+            <skill name="First aid" score="2"/>
+            <skill name="Battle" score="2"/>
+            <skill name="Ride" score="1"/>
+        </group>
+    </skills>
+
+    <skills age="21">
+    	<group name="Talents" type="talents">
+        	<skill name="Awareness" score="3"/>
+     	</group>
+
+    	<group name="Misc" type="skills">
+        	<skill name="Battle" score="4"/>
+        </group>
+    </skills>
+
+    <skills age="25">
+    	<group name="Misc" type="skills">
+            <skill name="Battle" score="5"/>
+            <skill name="First aid" score="3"/>
+     	</group>
+    </skills>
+
+    <equipment>
+        <item name="Soft leather trousers"/>
+        <item name="Soft leather jacket"/>
+        <item name="Metal helm"/>
+        <item name="Broad sword"/>
+        <item name="Chain hauberk"/>
+        <item name="Chain trousers"/>
+        <item name="Tower shield"/>
+        <cash value="12d"/>
+	</equipment>
+</character-template>
 
 
 
