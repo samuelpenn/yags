@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+
+<!--
+    Modern skills, mostly sciences and engineering skills.
+
+    Version: $Revision: 1.1 $
+    Author: Samuel Penn
+-->
+
+<skill-list>
+    <skill name="Science" type="science">
+        <description>
+            <para>
+                Science covers basic scientific knowledge, logical reasoning
+                and ballony detection. Most Western schools will teach
+                <e>science</e> to some degree. The skill provides basic
+                knowledge of the various sciences, an understanding of the
+                philosophy of science, and the ability to tell the
+                difference between a scientific theory and dodgy
+                pseudo-science.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Mathematics" type="science">
+        <description>
+            <para>
+                Mathematics is the knowledge of advanced mathematics.
+                Simple arithmetic is considered to be basic intelligence.
+                Mathematics covers geometry, algebra, set theory,
+                probability and other branches of mathematics. Most
+                children with a Western education will have some
+                knowledge of Mathematics after leaving school, though
+                it's likely to be only a couple of points.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Physics" type="science">
+        <prerequisite name="Science" score="2"/>
+        <prerequisite name="Mathematics" score="2"/>
+        <default name="Science"/>
+
+        <description>
+            <para>
+                Physics is a particular branch of <e>Science</e>, concerned
+                with forces and motion, energy and matter at the smallest
+                scales.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Chemistry" type="science">
+        <prerequisite name="Science" score="2"/>
+        <prerequisite name="Mathematics" score="2"/>
+        <default name="Science"/>
+
+        <description>
+            <para>
+                Chemistry is a particular branch of <e>Science</e>, which
+                is concerned with the study of chemicals and elements.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Biology" type="science">
+        <prerequisite name="Science" score="2"/>
+        <prerequisite name="Mathematics" score="2"/>
+        <default name="Science"/>
+
+        <description>
+            <para>
+                Biology is a particular branch of <e>Science</e>, and
+                covers the study of living things.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Astronomy" type="science">
+        <default name="Astrophysics"/>
+
+        <description>
+            <para>
+                This is concerned with the study of stars and planets,
+                their motions, positions and general behaviour. It does
+                not provide full detail on their formation and physical
+                makeup (that is left to <e>Astrophysics</e>).
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Astrophysics" type="science">
+        <prerequisite name="Physics" score="4"/>
+        <prerequisite name="Astronomy" score="2"/>
+        <default name="Astronomy"/>
+
+        <description>
+            <para>
+                Astrophysics deals with the makeup and behaviour of stars
+                and planets from the point of view of physics. It is not
+                concerned with particular stars (that is <e>Astronomy</e>)
+                but with the underlaying physics behind them.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Biochemistry" type="science">
+        <prerequisite name="Biology" score="4"/>
+        <prerequisite name="Chemistry" score="4"/>
+        <default name="Biology"/>
+        <default name="Chemistry"/>
+
+        <description>
+            <para>
+                This is the study of the chemicals of life.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Botany" type="science">
+        <default name="Biology"/>
+
+        <description>
+            <para>
+                This is the study of plants.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Zoology" type="science">
+        <default name="Biology"/>
+
+        <description>
+            <para>
+                This is the study of animals.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Anthropology" type="science">
+        <description>
+            <para>
+                This is the study of Homonids.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Ecology" type="science">
+        <prerequisite name="Botany" score="4"/>
+        <prerequisite name="Zoology" score="4"/>
+
+        <default name="Bontany"/>
+        <default name="Zoology"/>
+        <description>
+            <para>
+                This is knowledge of ecosystems, of the relationships
+                between plants and animals living together in balance.
+            </para>
+        </description>
+    </skill>
+</skill-list>
+
