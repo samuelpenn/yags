@@ -140,16 +140,6 @@
         </description>
     </advantage>
 
-    <advantage name="Heavy armour" type="technique">
-        <cost points="4"/>
-        <skill name="All melee"/>
-        <description>
-            <para>
-                Gain a +1 bonus to strength for purposes of encumberance.
-            </para>
-        </description>
-    </advantage>
-
     <advantage name="Stealth armour" type="technique">
         <cost points="3"/>
         <skill name="Stealth"/>
@@ -187,8 +177,49 @@
             </para>
         </description>
     </advantage>
+    
+    <advantage name="Heavy armour" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        
+        <description>
+            <para>
+                Automatic. Character gets an effective +1 to their strength
+                for calculating encumberance under all circumstances.
+            </para>
+        </description>
+    </advantage>
+    
+    
 
     <!-- Weapon techniques -->
+    
+    
+    <advantage name="Improved attack" type="technique">
+        <cost points="3"/>
+        <skill name="All melee"/>
+        
+        <description>
+            <para>
+                When using the <e>aggressive stance</e>, damage rolls also
+                gain a +5 bonus.  Automatic use.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Improved defence" type="technique">
+        <cost points="3"/>
+        <skill name="All melee"/>
+        
+        <description>
+            <para>
+                When using the <e>defensive stance</e>, the character can,
+                defend against up to five opponents, and the defence bonus
+                is +10 rather than +5. Automatic use.
+            </para>
+        </description>
+    </advantage>
+    
 
     <advantage name="Ambush" type="technique">
         <cost points="2"/>
@@ -204,7 +235,8 @@
             </para>
 
             <para>
-                <e>Ambush</e> is a slow attack.
+                <e>Ambush</e> is a slow attack, and the ambusher is
+                considered to be using the <e>focussed stance</e>.
             </para>
         </description>
     </advantage>
@@ -215,63 +247,58 @@
         <description>
             <para>
                 A feigned attack which tries to catch the defender off
-                guard before making the final strike. Slow attack, gives
-                +5 to attack roll.
+                guard before making the final strike. It requires the
+                <e>normal stance</e>, but attack is at +5 and it is slow.
             </para>
         </description>
     </advantage>
-
-    <advantage name="Pin" type="technique">
-        <cost points="2"/>
-        <skill name="Single weapon"/>
-        <skill name="Weapon and shield"/>
-        <skill name="Two weapons"/>
-        <skill name="Great weapon"/>
-        <skill name="Longshaft weapon"/>
-        <description>
-            <para>
-                Pin the opponent's weapon out of the way. Can be done with
-                a weapon or shield. If using a single weapon, then further
-                attacks must be brawling. Slow attack at +5. ????
-            </para>
-        </description>
-    </advantage>
-
+    
     <advantage name="Disarm" type="technique">
         <cost points="4"/>
         <skill name="Single weapon"/>
         <skill name="Weapon and shield"/>
         <skill name="Two weapons"/>
         <skill name="Great weapon"/>
+        <prerequisite>Feint</prerequisite>
+        
         <description>
             <para>
-                This manouevre allows the attacker to disarm their foe,
-                removing the defender's weapon from their hand. An attack
-                is made at -10. Success means that the defender cannot
-                attack with that weapon that round (if their action has
-                already occured this round, then they suffer no penalty).
+                Aggressive stance, slow, attack at -10. If successful,
+                the defender's weapon is attacked, and the defender is
+                unable to use it for the rest of the round. Both then
+                make an opposed weapon skill check (the attack uses
+                dexterity, the defender can use strength or dexterity).
+                If the attacker wins, then the defender is disarmed.
             </para>
-
+        </description>
+    </advantage>
+    
+    <advantage name="Quickdraw" type="technique">
+        <cost points="5"/>
+        <skill name="Any weapon skill"/>
+        <prerequisite>Feint</prerequisite>
+        
+        <description>
             <para>
-                Oppossed roll between attacker and defender. Each chooses
-                either strength x skill or dexterity x skill. If the
-                attacker wins, then the defender has been disarmed.
+                Normal stance. The character can draw a weapon and
+                attack without penalty in the same round. No other
+                techniques can be used however.
             </para>
         </description>
     </advantage>
 
 
-    <advantage name="Cleave" type="technique">
+    <advantage name="Half sword" type="technique">
         <cost points="4"/>
         <skill name="Single weapon"/>
-        <skill name="Weapon and shield"/>
-        <skill name="Two weapons"/>
         <skill name="Great weapon"/>
         <skill name="Longshaft weapon"/>
+        <prerequisite>Improved attack</prerequisite>
+        
         <description>
             <para>
-                Halves armour (not soak). Slow attack, -10 to hit. May be
-                performed with any cutting or piercing weapon.
+                Normal stance, slow. Requires two hands, regardless of the
+                weapon. Halves armour (not soak).
             </para>
         </description>
     </advantage>
@@ -283,10 +310,27 @@
         <skill name="Two weapons"/>
         <skill name="Great weapon"/>
         <skill name="Longshaft weapon"/>
+        <prerequisite>Improved attack</prerequisite>
+        
         <description>
             <para>
-                Kill someone with a single blow. Slow attack, -15 to hit.
-                Size x stamina roll of 15 + 5 x wounds or die.
+                Aggressive stance, slow, -10 to attack. If damage is caused,
+                then the target must make a size x stamina roll of 15 +
+                5 x wounds caused, or immediately be slain. If the attacker
+                is causing mixed or stun damage, then the defender is instead
+                rendered unconscious.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Mighty blow" type="technique">
+        <cost points="8"/>
+        <skill name="Any melee"/>
+        <prerequisite>Killing blow</prerequisite>
+        
+        <description>
+            <para>
+                Aggressive stance, automatic. Damage is +10 rather than +5.
             </para>
         </description>
     </advantage>
@@ -295,17 +339,14 @@
     <advantage name="Double attack" type="technique">
         <cost points="10"/>
         <skill name="All melee"/>
+        <prerequisite>Improved attack</prerequisite>
+        
         <description>
             <para>
-                The attack can attack twice, each time at a -15
-                penalty to skill. The first attack is fast, the
+                Aggressive stance. The attacker can attack twice, each time
+                at a -15 penalty to skill. The first attack is fast, the
                 second attack is slow, but both happen at the same
                 initiative.
-            </para>
-
-            <para>
-                This does not affect defence, but no other manouevre
-                can be combined with this.
             </para>
         </description>
     </advantage>
@@ -314,16 +355,13 @@
         <cost points="15"/>
         <skill name="All melee"/>
         <prerequisite>Double attack</prerequisite>
+        
         <description>
             <para>
-                The attacker can attack three times, each time at a -30
-                penalty to skill. The first attack is fast, the
-                second attack is normal, and the third attack is slow.
-            </para>
-
-            <para>
-                This does not affect defence, but no other manouevre
-                can be combined with this.
+                Aggressive stance. The attacker can attack three times,
+                each time at a -30 penalty to skill. The first attack is
+                fast, the second attack is normal, and the third attack
+                is slow.
             </para>
         </description>
     </advantage>
@@ -345,6 +383,8 @@
     <advantage name="Greater pull" type="technique">
         <cost points="8"/>
         <skill name="Bow"/>
+        <prerequisite>Improved pull</prerequisite>
+        
         <description>
             <para>
                 Similar to, and stacks with, <e>improved pull</e>. The
@@ -373,6 +413,8 @@
     <advantage name="Mounted archery" type="technique">
         <cost points="5"/>
         <skill name="Ride"/>
+        <prerequisite>Mounted combat</prerequisite>
+        
         <description>
             <para>
                 A character with <e>mounted archery</e> does not suffer the

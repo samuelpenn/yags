@@ -17,8 +17,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.12 $</version>
-            <date>$Date: 2004-01-07 16:16:19 $</date>
+            <version>$Revision: 1.13 $</version>
+            <date>$Date: 2004-02-22 21:37:38 $</date>
         </cvsinfo>
 
         <license>
@@ -114,19 +114,6 @@
             </sect2>
 
             <sect2>
-                <title>Combat Techniques</title>
-
-                <para>
-                    The following advantages are special actions which can
-                    be performed in combat. In order to have one, it is
-                    necessary to have one of the listed skills at a level
-                    at least equal to the cost of the technique.
-                </para>
-
-                <import-advantages href="options/techniques.yags" type="technique"/>
-            </sect2>
-
-            <sect2>
                 <title>Background</title>
 
                 <para>
@@ -147,8 +134,54 @@
                 <title>Miscellaneous Disadvantages</title>
 
                 <import-advantages href="options/advantages.yags" type="disadvantage"/>
+            </sect2>               
+        </sect1>
+        
+        <sect1>
+            <title>Techniques</title>
+            
+            <para>
+                <e>Techniques</e> are a special form of advantages which may
+                always be purchased after character generation. Each technique
+                is tied to one or more skills, and represents a special usage
+                of that skill.
+            </para>
+            
+            <para>
+                A technique has a cost associated with it, and may only be
+                purchased once the level of the skill is equal to the cost
+                of the technique. If a technique is associated with several
+                skills, then as long as one skill has reached the desired
+                level, then the technique may be purchased. However, the
+                technique can only be used with those skills which are of
+                sufficient level. As soon as a lower level skill is raised to
+                the required level, then the technique may be used with it
+                at no extra cost.
+            </para>
+            
+            <para>
+                If a technique has a cost of zero, then it is automatically
+                known as soon as the character has a skill of at least one,
+                at no cost.
+            </para>
+            
+            <para>
+                Many techniques are combat orientated, though some are
+                bardic, magical or craft related.
+            </para>
+            
+            <sect2>
+                <title>Combat Techniques</title>
+
+                <para>
+                    The following advantages are special actions which can
+                    be performed in combat.
+                </para>
+
+                <import-advantages href="options/techniques.yags" type="technique"/>
             </sect2>
         </sect1>
+        
     </body>
 
 </article>
