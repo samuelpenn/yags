@@ -1,0 +1,685 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl" type="text/xsl"?>
+
+<article>
+    <header>
+        <title>Bestiary</title>
+        <tagline>Yags 0.7</tagline>
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@bifrost.demon.co.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2003-10-27 22:19:32 $</date>
+        </cvsinfo>
+
+        <license>
+            <year>2002</year>
+            <holder>Samuel Penn</holder>
+            <url>http://www.bifrost.demon.co.uk/comp/yagsbook/fdl.html</url>
+            <text>
+                Permission is granted to copy, distribute and/or
+                modify this document under the terms of the GNU
+                Free Documentation License, Version 1.1 or any
+                later version published by the Free Software
+                Foundation; with no invariant sections, with no
+                Front-Cover Texts, and with no Back-Cover Texts.
+                A copy of the license is included in the section
+                entitled "GNU Free Documentation License".
+            </text>
+        </license>
+
+        <style name="combat"/>
+    </header>
+
+
+    <body>
+        <sect1>
+            <title>Bestiary</title>
+
+            <para>
+                A bestiary is a book describing beasts.
+            </para>
+            
+            <sect2>
+                <title>Sentient or Sapient?</title>
+                
+                <para>
+                    This article will often differentiate between sapient
+                    and sentient creatures. Since the meaning of these terms
+                    is not always correctly understood, they are described
+                    here, to avoid any confusion.
+                </para>
+                
+                <para>
+                    A sentient creature is one that can perceive their
+                    environment, and act upon those perceptions. A human is
+                    sentient, but so is a dog, a fly or even an earthworm.
+                    Sentient covers pretty much all animals, and possibly
+                    some plants. Generally, it doesn't include constructs.
+                </para>
+                
+                <para>
+                    Sapience is far rarer, and describes high level
+                    reasoning ability. In the real world, the only animals
+                    known definitely to be sapient are humans. Whether
+                    animals such as dolphins and chimpanzees are is open to
+                    debate.
+                </para>
+            </sect2>
+        </sect1>
+
+
+        <sect1>
+            <title>Creature Statistics</title>
+
+            <para>
+                Meanings for some of the attributes.
+            </para>
+
+            <sect2>
+                <title>Creature Type</title>
+
+                <para>
+                    The creature type defines the broad class of creature,
+                    which gives some indication to its form and properties.
+                </para>
+
+                <termlist sort="true">
+                    <entry term="Humanoid">
+                        A human, or human like creature. A natural, bipedal
+                        creature with some degree of sapience.
+                    </entry>
+
+                    <entry term="Monster">
+                        A generic term for an unnatural, possibly magical,
+                        creature which does not fit into the natural
+                        ecology.
+                    </entry>
+
+                    <entry term="Animal">
+                        Animals are non-sapient natural creatures.
+                    </entry>
+
+                    <entry term="Construct">
+                        Constructs are unliving, artificially created. They
+                        do not require sleep or food (at least not in the
+                        way it is normally needed by living creatures). They
+                        are often mindless, and have no vital organs.
+                    </entry>
+
+                    <entry term="Demon">
+                        A demon is an outerplaner creature, magical in
+                        nature. Demons are not necessarily evil, though
+                        will generally have a mindset and goals quite
+                        different from that of humanity.
+                    </entry>
+                    
+                    <entry term="Elemental">
+                        Elementals are magical constructs inhabited by a
+                        spirit, clothed in material such as rock, earth,
+                        water or air. They have no need of food or sleep,
+                        and have no vital organs. They do however have
+                        free will. They suffer fatigue, but have twice the
+                        normal number of wound and stun levels.
+                    </entry>
+                    
+                    <entry term="Vermin"> 
+                        Vermin are natural creatures with a tendency to
+                        swarm. They are small and numerous.
+                    </entry>
+
+                    <entry term="Plant">
+                        Plant based creatures may be natural or magical,
+                        and may have unique properties.
+                    </entry>
+                    
+                    <entry term="Undead">
+                        Undead are the walking dead. They have no vital
+                        organs, and have no need of food or sleep. They
+                        ignore fatigue, and have double the normal number
+                        of wound and stun levels for their size.
+                    </entry>
+                    
+                    <entry term="Ethereal">
+                        Ethereals have no physical body, and cannot be
+                        harmed by physical weapons. Likewise, they cannot
+                        affect the physical world, but may be able to
+                        strike at the spirit or soul of living creatures.
+                    </entry>
+                </termlist>
+            </sect2>
+
+            <sect2>
+                <title>Size</title>
+
+                <para>
+                    The size rating of a creature gives a rough indication
+                    of how big it is. An average adult human is considered
+                    to be size five - and very few adult humans will
+                    differ from this norm.
+                </para>
+
+                <para>
+                    The smallest possible size is zero - about the size
+                    of a robin or similar bird - something that fits
+                    easily into one hand. Creatures any smaller are also
+                    size zero, but are very rarely worth bothering about.
+                    There is no upper limit on size, and scaling is non
+                    linear.
+                </para>
+
+                <para>
+                    In game terms, a creature's size directly affects how
+                    many body levels it has, and also affects some combat
+                    statistics.
+                </para>
+
+                <para>
+                    Size ranges are classified according to the following
+                    chart. The descriptive names simply give an indication
+                    of the rough size of the beast.
+                </para>
+
+                <targetlist targetFirst="true" bold="true">
+                    <targetLabel>Size</targetLabel>
+                    <valueLabel>Description</valueLabel>
+
+                    <entry target="0" value="Diminutive">
+                        About 10cm long or tall, diminutive creatures are
+                        the smallest that can be comfortably handled in
+                        Yags. Any creature smaller than Tiny is Diminutive,
+                        so technically it covers mice and insects.
+                    </entry>
+
+                    <entry target="1" value="Tiny">
+                        A small cat or dog - about 30cm long or tall.
+                    </entry>
+
+                    <entry target="2-3" value="Small">
+                        Small creatures range from 60cm (sized 2) to 90cm
+                        (size 3) in length or height. A large dog would be
+                        size 3.
+                    </entry>
+
+                    <entry target="4-6" value="Medium">
+                        Medium creatures cover the range of adult humans,
+                        from about 130cm tall (size 4) to 210cm tall
+                        (size 6). A size 5 creature is about 170cm long
+                        or tall. Bulk also affects this as much as height
+                        or length.
+                    </entry>
+
+                    <entry target="7-10" value="Large">
+                        Large creatures are about as big as most things get,
+                        with elephants, whales and dinosaurs being bigger
+                        than this in the real world. Dimensions can range
+                        from about 250cm to 5m in length or height.
+                    </entry>
+
+                    <entry target="11-15" value="Huge">
+                        Huge creatures are extremely rare, at least in the
+                        real world, ranging from about 6m to 10m in length.
+                    </entry>
+
+                    <entry target="16-21" value="Enormous">
+                        Dimensions range from 11m to 16m in length.
+                    </entry>
+
+                    <entry target="22-28" value="Gigantic">
+                        Up to about 23m in length. The largest dinosaurs and
+                        whales fit into this category.
+                    </entry>
+
+                    <entry target="29-36" value="Colossal">
+                        Up to about 31m in length.
+                    </entry>
+
+                    <entry target="37+" value="Titanic">
+                        Anything about 31m or longer is considered to be
+                        Titanic in proportions. This is the largest size
+                        category normally available.
+                    </entry>
+                </targetlist>
+                
+                <sect3>
+                    <title>Very Small Strength</title>
+                    
+                    <para>
+                        <e>Diminutive</e> and <e>Tiny</e> creatures tend to
+                        be considerably weaker than a human, however, even
+                        a creature with a strength of zero could conceivably
+                        beat an adult human in contest of strength, simply
+                        by rolling high on the die.
+                    </para>
+                    
+                    <para>
+                        Yags is designed to handle creatures this small, and
+                        requires an extra couple of rules to bring things
+                        closer to reality.
+                    </para>
+                    
+                    <para>
+                        <e>Tiny</e> creatures will often be considered to be
+                        <e>weak</e>. This is a creature disadvantage, and
+                        has the effect of halving all strength related rolls,
+                        including damage.
+                    </para>
+                    
+                    <para>
+                        <e>Very weak</e> creatures fifth all strength rolls.
+                    </para>
+                </sect3>
+
+            </sect2>
+            
+            <sect2>
+                <title>Demeanor</title>
+                
+                <para>
+                    A beast's demeanour is a rough guide to its behaviour.
+                    Mostly, the descriptions given below deal with how a
+                    creature will act if it is threatened, hungry or just
+                    surprised. Intelligent beasts have far more complex
+                    behaviour patterns than animals, so really this applies
+                    to animals only. Intelligent creatures will nearly
+                    always have a demeanor of <e>Selfish</e>.
+                </para>
+
+                <termlist sort="true">
+                    <entry term="Predator">
+                        A predator is a carnivorous hunter, who will stalk
+                        and kill prey for food. Creatures it does not
+                        consider prey it will generally ignore, unless it
+                        feels threatened. If the prey it attacks puts up
+                        a good fight, then it will generally retreat before
+                        it can be seriously injured, unless it is already
+                        very hungry.
+                    </entry>
+
+                    <entry term="Scavenger">
+                        A scavenger seeks food that is either already dead,
+                        or looks like it is about to become dead. It will
+                        avoid healthy food, and patiently wait for injured
+                        food to weaken rather than risk injury by attacking
+                        something still able to put up an effective defence.
+                    </entry>
+
+                    <entry term="Herd">
+                        Herd animals are generally passive, but can get
+                        aggressive if threatened. Normal reaction to danger
+                        is for the herd to run, though animals with suitable
+                        defensive abilities may turn and fight if running is
+                        not seen as a viable option.
+                    </entry>
+
+                    <entry term="Violent">
+                        Violent beasts are very rare, and are generally
+                        unnatural, magical or insane types. A violent beast
+                        will attack for no reason other than because it
+                        enjoys killing. It will often fight until heavily
+                        injured, and persue prey that flees.
+                    </entry>
+
+                    <entry term="Passive">
+                        Passive creatures have a poor sense of danger, and
+                        are unable to defend themselves. They may run from
+                        danger, but danger is often not noticed until
+                        something is actually attacking them. It is possible
+                        to walk up to such beasts, without scaring them.
+                    </entry>
+
+                    <entry term="Unintelligent">
+                        Unintelligent beasts are generally constructs. They
+                        have no free will, and no sense of self
+                        preservation. Depending on their programming, they
+                        may defend themselves if attacked, and will always
+                        fight to the death unless specifically programmed
+                        not to. Some plants may be unintelligent - they
+                        may have the ability to grab and hold prey, but will
+                        have no concept of fleeing.
+                    </entry>
+
+                    <entry term="Selfish">
+                        Sapient creatures are often selfish. They will act
+                        in their own best interest (though what their best
+                        interest is will not always be obvious, or simple).
+                        They will generally be suspicious of things they
+                        do not know, but only attack if they feel threatened
+                        or they think they will get something from it.
+                    </entry>
+
+                    <entry term="Aggressive">
+                        Aggressive creatures are prone to violence, though
+                        are not as extreme as <e>violent</e> creatures are.
+                        They are easily provoked, but unless they are
+                        hunting food, they will not bother giving chase to
+                        those that flee.
+                    </entry>
+                </termlist>
+
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Combat</title>
+
+            <para>
+                Beasts tend to have a wide variety of ways in which to
+                defend themselves.
+            </para>
+
+            <sect2>
+                <title>Combat Modifiers</title>
+
+                <para>
+                    Creatures of a certain size will tend to have similar
+                    modifiers to their basic combat scores - things such
+                    as initiative, attack and defence. Damage is never
+                    modified upwards by size, since it comes straight off
+                    strength, which goes up with size anyway.
+                </para>
+
+                <para>
+                    Large creatures get bonuses in combat simply because
+                    their attacks have greater reach, are harder to parry,
+                    and are dangerous enough to keep attackers at bay.
+                </para>
+
+                <table>
+                    <thead>
+                        <row>
+                            <entry>Size</entry>
+                            <entry>Initiative</entry>
+                            <entry>Attack</entry>
+                            <entry>Defence</entry>
+                            <entry>Damage</entry>
+                        </row>
+                    </thead>
+
+                    <tbody>
+                        <row>
+                            <entry>Diminutive</entry>
+                            <entry>-15</entry>
+                            <entry>-9</entry>
+                            <entry>-5</entry>
+                            <entry>-10</entry>
+                        </row>
+                        <row>
+                            <entry>Tiny</entry>
+                            <entry>-10</entry>
+                            <entry>-6</entry>
+                            <entry>-2</entry>
+                            <entry>-5</entry>
+                        </row>
+                        <row>
+                            <entry>Small</entry>
+                            <entry>-5</entry>
+                            <entry>-3</entry>
+                            <entry>+0</entry>
+                            <entry>+0</entry>
+                        </row>
+                        <row>
+                            <entry>Medium</entry>
+                            <entry>+0</entry>
+                            <entry>+0</entry>
+                            <entry>+0</entry>
+                            <entry>+0</entry>
+                        </row>
+                        <row>
+                            <entry>Large</entry>
+                            <entry>+2</entry>
+                            <entry>+3</entry>
+                            <entry>+2</entry>
+                            <entry>+0</entry>
+                        </row>
+                        <row>
+                            <entry>Huge</entry>
+                            <entry>+5</entry>
+                            <entry>+6</entry>
+                            <entry>+4</entry>
+                            <entry>+0</entry>
+                        </row>
+                        <row>
+                            <entry>Enormous</entry>
+                            <entry>+10</entry>
+                            <entry>+9</entry>
+                            <entry>+6</entry>
+                            <entry>+0</entry>
+                        </row>
+                        <row>
+                            <entry>Gigantic</entry>
+                            <entry>+15</entry>
+                            <entry>+12</entry>
+                            <entry>+8</entry>
+                            <entry>+0</entry>
+                        </row>
+                        <row>
+                            <entry>Colossal</entry>
+                            <entry>+20</entry>
+                            <entry>+15</entry>
+                            <entry>+10</entry>
+                            <entry>+0</entry>
+                        </row>
+                        <row>
+                            <entry>Titanic</entry>
+                            <entry>+25</entry>
+                            <entry>+18</entry>
+                            <entry>+12</entry>
+                            <entry>+0</entry>
+                        </row>
+                    </tbody>
+                </table>
+                
+                
+                <sect3>
+                    <title>Damage</title>
+                    
+                    <para>
+                        There are three types of damage in Yags - stun,
+                        wounds and mixed. Wound damage is the most deadly,
+                        and is caused by weapons capable of penetrating
+                        deep into a target (such as swords and spears).
+                        Claws and bites from animals is rarely this deadly,
+                        and as such most animals will do either stun or
+                        mixed (a mixture of stuns and wounds) damage.
+                    </para>
+                    
+                    <para>
+                        However, whilst the blow from a whale's tail may
+                        be considered stun damage by other whales, to a
+                        small human, such damage can be deadly.
+                    </para>
+                    
+                    <para>
+                        If the attacking creature is two size categories
+                        larger than the defender, then all damage is
+                        shifted up a category in severity. Stun damage
+                        becomes mixed, and mixed becomes wound.
+                    </para>
+
+                    <para>
+                        If the attacker is four size categories larger than
+                        the defender, then all damage is wound damage.
+                        A gigantic creature always does wound damage to a
+                        medium sized foe.
+                    </para>
+                    
+                    <para>
+                        There is an exception to this, in that some very
+                        large creatures might have attacks which aren't
+                        considered quite so large. A huge bulbous beast
+                        with lots of writhing tentacles might be colossal
+                        in total proportions, but each tentacle might only
+                        count as a large attack. If this is the case, then
+                        this will be mentioned in the creature description.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Base Soak</title>
+                
+                <para>
+                    By default, all medium sized creatures have a
+                    basic soak of 12. Larger or smaller creatures
+                    can change this however. A huge creature may not
+                    be totally immune to damage from normal sized
+                    weapons, but they may be too small to do anything
+                    other than superficial cuts, which aren't worth
+                    even a single wound level.
+                </para>
+                
+                <targetlist bold="true">
+                    <targetLabel>Soak</targetLabel>
+                    <valueLabel>Creature Size</valueLabel>
+
+                    <entry target="3" value="Diminutive"/>
+                    <entry target="6" value="Tiny"/>
+                    <entry target="9" value="Small"/>
+                    <entry target="12" value="Medium"/>
+                    <entry target="15" value="Large"/>
+                    <entry target="18" value="Huge"/>
+                    <entry target="21" value="Enormous"/>
+                    <entry target="25" value="Gigantic"/>
+                    <entry target="30" value="Colossal"/>
+                    <entry target="35" value="Titanic"/>
+                </targetlist>
+                
+                <para>
+                    Large creatures will tend to have strengths of
+                    a suitable value in order to injure creatures
+                    of a similar size.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Natural Armour</title>
+
+                <para>
+                    Some creatures, especially the larger ones,
+                    will have natural armour which helps them soak
+                    damage. Natural armour ranges in protection
+                    from +0 up to +9, though a creature may have
+                    more than one type of natural armour, all of
+                    which will stack. For example, a bear has both
+                    thick fur and a tough hide.
+                </para>
+
+                <targetlist targetFirst="true" bold="true">
+                    <title>Examples of Hide Armour</title>
+
+                    <targetLabel>Soak</targetLabel>
+                    <valueLabel>Description</valueLabel>
+
+                    <entry target="0-2" value="Thin">
+                    </entry>
+
+                    <entry target="3-5" value="Medium">
+                    </entry>
+                    <entry target="6-7" value="Thick">
+                    </entry>
+                    <entry target="8-9" value="Very thick">
+                    </entry>
+                </targetlist>
+
+                <targetlist targetFirst="true" bold="true">
+                    <title>Examples of Fur Armour</title>
+
+                    <targetLabel>Soak</targetLabel>
+                    <valueLabel>Description</valueLabel>
+
+                    <entry target="0-2" value="Thin">
+                    </entry>
+
+                    <entry target="3-5" value="Medium">
+                    </entry>
+                    <entry target="6-7" value="Thick">
+                    </entry>
+                    <entry target="8-9" value="Very thick">
+                    </entry>
+                </targetlist>
+
+            </sect2>
+            
+            <sect2>
+                <title>Multiple Attacks</title>
+
+                <para>
+                    It is normal in Yags for creatures to be only able
+                    to make a single attack in a round. In most cases
+                    this holds true, and all attacks are collapsed into
+                    a single attack and damage roll. A wolf may attack
+                    with its teeth and claws, but these are counted as
+                    a single attack, directed at a single target.
+                </para>
+
+                <para>
+                    Some creatures may have several options open to them.
+                    An eagle could bite someone annoying it. It could
+                    also swoop down and rake with its claws. However, it
+                    cannot do both at the same time.
+                </para>
+
+                <para>
+                    For some things though, this breaks down, especially
+                    where fantasy beasts are concerned. A large dragon
+                    could bite someone in front of them, knock others
+                    down with its tail, and maybe stun those around it
+                    with its wings. Subsuming all of these into a single
+                    attack wouldn't work, and yet all should be possible
+                    each round.
+                </para>
+                
+                <para>
+                    To this end, some creatures are capable of attacking
+                    multiple creatures simultaneously. There are two
+                    methods this can be done - area attacks, and
+                    independent attacks. Independent attacks simply allow
+                    the beast to attack two or more times with different
+                    types of attack (a bite and a tail bash for instance).
+                    Area attacks are a single attack which threatens
+                    everyone in an area - a single tail swipe may knock
+                    over several people if the beast is huge.
+                </para>
+                
+                <sect3>
+                    <title>Area attacks</title>
+
+                    <para>
+                        An area attack is directed at a single area, and
+                        any targets within that area are affected. Tail
+                        swipes, tramples and pounce attacks are all
+                        examples of possible area attacks from a large
+                        creature. Generally, only huge creatures
+                        or bigger can make an area attack.
+                    </para>
+                    
+                    <para>
+                        When a beast makes an area attack, all people
+                        in the area are potential targets. The beast
+                        makes a single attack roll, which everyone gets
+                        to defend against. Those that succeed fend off,
+                        or dodge, the attack. Anyone who is hit takes
+                        damage - in each case a seperate damage roll
+                        is made.
+                    </para>
+                </sect3>
+            </sect2>
+
+        </sect1>
+        
+        <sect1>
+            <title>Advantages</title>
+            
+            <para>
+                Beasts have a number of advantages available to them.
+            </para>
+            
+            <import-advantages href="advantages.xml" type="advantage"/>
+        </sect1>
+    </body>
+</article>
+
