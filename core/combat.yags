@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.25 $</version>
-            <date>$Date: 2003-05-18 16:11:18 $</date>
+            <version>$Revision: 1.26 $</version>
+            <date>$Date: 2003-08-09 11:53:47 $</date>
         </cvsinfo>
 
         <license>
@@ -1592,43 +1592,159 @@
             </sect2>
 
             <sect2>
+                <title>Size of Target</title>
+
+                <para>
+                    As for melee combat, there is a base difficulty needed
+                    to hit a target. Unlike in melee combat though, this is
+                    modified by the range to the target, and environmental
+                    factors such as wind and visibility.
+                </para>
+
+                <para>
+                    For a human sized target, the base difficulty is 15, as
+                    for melee combat. For smaller or larger targets, the
+                    difficulty changes however.
+                </para>
+
+                <targetlist bold="true" targetFirst="false">
+                    <targetLabel>Difficulty</targetLabel>
+                    <valueLabel>Size of target</valueLabel>
+
+                    <entry value="Diminutive" target="30">
+                        Size 0, which is about 10cm in length.
+                    </entry>
+
+                    <entry value="Tiny" target="25">
+                        Size 1, about 30cm in length. A small cat.
+                    </entry>
+
+                    <entry value="Small" target="20">
+                        Sizes 2 - 3. Cats and dogs, 60cm to 90cm in length.
+                    </entry>
+
+                    <entry value="Medium" target="15">
+                        Sizes 4 - 6, from 130cm to 210cm in length or height.
+                    </entry>
+
+                    <entry value="Large" target="10">
+                        Sizes 7 - 10, from 2m to 5m in length. Includes
+                        lions, horses and the like.
+                    </entry>
+
+                    <entry value="Huge" target="5">
+                        Sizes 11 - 15, up to 10m in length. Elephants,
+                        houses and the like.
+                    </entry>
+
+                    <entry value="Enormous" target="0">
+                        Sizes 16 - 21, up to 16m in length. Dinosaurs.
+                    </entry>
+
+                    <entry value="Gigantic" target="-5">
+                        Sizes 22 - 28, up to 23m in length. The largest
+                        dinosaurs and whales are gigantic.
+                    </entry>
+
+                    <entry value="Colossal" target="-10">
+                        Sizes 29 - 36, up to 31m in length.
+                    </entry>
+
+                    <entry value="Titanic" target="-15">
+                        Sizes 37+. Anything larger.
+                    </entry>
+                </targetlist>
+
+                <para>
+                    The very largest creatures are very difficult to miss at
+                    close ranges. Groups of smaller creatures also count as
+                    being of a larger size.
+                </para>
+            </sect2>
+
+            <sect2>
                 <title>Missile Ranges</title>
 
                 <para>
-                    There are a number of range categories which are defined
-                    for all missile weapons. These are short, medium, long
-                    and extreme. Ranges are given in metres, and cover any
-                    distance up to and including the range given for a
-                    particular weapon.
+                    There are two range factors to take into account - the
+                    <e>range increment</e> of the weapon, and the <e>range
+                    category</e> it is being fired at.
                 </para>
 
-                <table>
-                    <title>Range Categories</title>
+                <sect3>
+                    <title>Range Increment</title>
 
-                    <colspec colwidth="1.5cm"/>
-                    <colspec colwidth="1.5cm"/>
-                    <colspec colwidth="1.5cm"/>
-                    <thead>
-                        <row>
-                            <entry>Range</entry>
-                            <entry>Attack</entry>
-                            <entry>Damage</entry>
-                        </row>
-                    </thead>
-                    <tbody>
-                        <row><entry>Short</entry><entry>+0</entry><entry>+0</entry></row>
-                        <row><entry>Medium</entry><entry>-5</entry><entry>+0</entry></row>
-                        <row><entry>Long</entry><entry>-15</entry><entry>-5</entry></row>
-                        <row><entry>Extreme</entry><entry>-30</entry><entry>-10</entry></row>
-                    </tbody>
-                </table>
+                    <para>
+                        The range increment is a measure of how accurate the
+                        weapon is at range. It is given as a distance, and
+                        each multiple of this distance gives a +5 modifier
+                        to the target difficulty.
+                    </para>
 
-                <para>
-                    The range modifier subtracts from the attacker's
-                    attack roll, making it harder to hit targets at longer
-                    range. At long and extreme range, the damage of a
-                    ranged attack is also reduced.
-                </para>
+                    <para>
+                        A long bow has a range increment of 25m. Targets
+                        less than 25m away have no modifier. Targets which
+                        are 25m or further away have +5 to the difficulty,
+                        50m or further have +10 etc.
+                    </para>
+
+                    <para>
+                        Shooting a long bow against a <e>Colossal</e> target
+                        at 200m, would be difficulty 30 (-10 for size, + 40
+                        for the range).
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Range Category</title>
+
+                    <para>
+                        The range category is either <e>short</e>,
+                        <e>medium</e> or <e>long</e>. A weapon cannot hit
+                        targets beyond long range. The range category
+                        affects the performance of the weapon, though not
+                        the difficulty to hit. In most cases, this is just
+                        the damage the weapon does.
+                    </para>
+
+                    <targetlist>
+                        <targetLabel>Damage</targetLabel>
+                        <valueLabel>Range category</valueLabel>
+
+                        <entry value="Short" target="+0"/>
+                        <entry value="Medium" target="-5"/>
+                        <entry value="Long" target="-10"/>
+                    </targetlist>
+
+                    <para>
+                        Weapons such as bows, crossbows, hurled weapons and
+                        slings must be aimed on a ballistic trajectory to
+                        hit targets at medium or long range. Targets at
+                        short range can be hit on a more or less flat
+                        trajectory. So, for example, it is not possible to
+                        fire at long range down a low corridor.
+                    </para>
+
+                    <para>
+                        At medium range, there must be ample height available
+                        equal to one quarter the range. At long range, half
+                        the range is needed in height. Firing a long bow at
+                        a target 200m away, requires 100m of height, since
+                        this is at long range.
+                    </para>
+
+                    <para>
+                        Because of the angle the short will come down at, it
+                        is not possible to fire through narrow gaps, such as
+                        a window or arrow slit at long range - the archer
+                        can hit the window, but not someone behind the
+                        window. At medium range, it is possible to hit
+                        someone immediately behind a window or similar gap,
+                        but it would not be possible to fire through a
+                        window to hit someone on the other side of the room.
+                    </para>
+                </sect3>
+
             </sect2>
 
             <sect2>
