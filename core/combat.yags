@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.40 $</version>
-            <date>$Date: 2004-01-07 14:04:17 $</date>
+            <version>$Revision: 1.41 $</version>
+            <date>$Date: 2004-01-07 21:33:00 $</date>
         </cvsinfo>
 
         <license>
@@ -589,7 +589,7 @@
                         are required in combat.
                     </para>
 
-                    <import-weaponlist href="xml/arms.xml" importance="3" style="list"/>
+                    <import-weaponlist href="xml/arms.yags" importance="3" style="list"/>
 
                     <para>
                         The four ability modifiers - initiative, attack, defence and
@@ -940,10 +940,16 @@
                 <title>Movement</title>
 
                 <para>
-                    A character can be assumed to be able to move five times
-                    their agility in metres per round and still make an
-                    attack. Each metre they move before attacking, they have
-                    a -1 penalty to initiative.
+                    A character or creature may move before making an
+                    attack. They can move up to a number of metres equal to
+                    one fifth their agility x size (round to nearest)
+                    without penalty.
+                </para>
+
+                <para>
+                    They can move triple this, but all actions are slow,
+                    or up to five times this at a further -10 to all
+                    actions (including initiative).
                 </para>
             </sect2>
         </sect1>
