@@ -2,50 +2,99 @@
 <character-templates>
 
 <character-template name="Silken Voice">
-<description>
-The only clerical order of the Church of Halea. It is a female order noted for its comely members. The mother house of the order deals with the sale and #rental# of pleasure slaves, highly trained in the erotic arts. The trade in slaves is a significant source of revenue for Halea's church.
-Members of the Silken Voice are considered acolytes until age 21. There are two paths a priestess can follow, either concentrating on the giving of pleasure, or to take an interest in financial matters. Eventually, most will take the second path as they become too old for the former.
-Particularly attractive acolytes will begin training in the erotic/entertainment arts from 12 or 13.
-</description>
+	<description>
+	The only clerical order of the Church of Halea. It is a female
+	order noted for its comely members. The mother house of the
+	order deals with the sale and #rental# of pleasure slaves,
+	highly trained in the erotic arts. The trade in slaves is a
+	significant source of revenue for Halea's church.
+	Members of the Silken Voice are considered acolytes until age
+	21. There are two paths a priestess can follow, either
+	concentrating on the giving of pleasure, or to take an interest
+	in financial matters. Eventually, most will take the second path
+	as they become too old for the former.
+	Particularly attractive acolytes will begin training in the
+	erotic/entertainment arts from 12 or 13.
+	</description>
 
-Attributes (48 points)
-Strength    2    Perception    3
-Stamina    3    Intelligence    3
-Agility    3    Charisma    5
-Dexterity    3    Will    3
-Advantages and Disadvantages (20 points)
-+6 attributes        +3 appearance
-+2 literate        +3 beautiful voice (+3)
-+2 social status (clerical order)
-+4 extra experience (8 pts)
--9 non-combatant (-6)    -4 combat paralysis
--2 sexually tantalising    -4 lustful (+4)
--1 love (Halea +3)
-Talents (24 points)
-Athletics    2    Guile    3
-Awareness    2    Sleight    2
-Brawl    1    Stealth    1
-Charm    3    Throw    1
-Common Knowledges (fixed)
-Area lore    2    Folk lore    2
-Speak own    4    Scribe own    4
-Skills for age:    16    21    25    30
-Religion (Halea)    4
-Charm    4                
-Erotic arts*    3    4        
-Trade    2    3        4
-Sing    3
-Play (instrument)    2
-Cult Invocations
-Sardura's Vision    2        3
-Dulcia's Song    2            3
-Ectasy        1    2    3
-Silver tongue            3
-Free Invocations
-Baptism 2; Blessing 2; Commune 2; Liturgy 2;
-Marriage 2; Passage of the Soul 2
-Equipment
-None.
+	<attributes points="48">
+		<strength score="2"/>
+		<stamina score="3"/>
+		<agility score="3"/>
+		<dexterity score="3"/>
+		<perception score="3"/>
+		<intelligence score="3"/>
+		<charisma score="5"/>
+		<will score="3"/>
+	</attributes>
+
+	<advantages points="20">
+		<advantage name="attributes" cost="+6"/>
+		<advantage name="appearance" score="+3" cost="+3"/>
+		<advantage name="literate" cost="+2"/>
+		<advantage name="social status" target="priest" cost="+2"/>
+		<advantage name="experience" score="+8" cost="+4"/>
+		<advantage name="beautiful voice" score="+3" cost="+3"/>
+		<advantage name="non-combatant" score="-6" cost="-9"/>
+		<advantage name="combat paralysis" cost="-4"/>
+		<advantage name="sexually tantalising" cost="-2"/>
+		<advantage name="lustful" score="+4" cost="-4"/>
+		<advantage name="love" score="+3" target="Halea" cost="-1"/>
+	</advantages>
+
+	<skills>
+		<group name="Talents" type="talents">
+			<skill name="Athletics" score="2"/>
+			<skill name="Awareness" score="2"/>
+			<skill name="Brawl" score="1"/>
+			<skill name="Charm" score="3"/>
+			<skill name="Guile" score="3"/>
+			<skill name="Sleight" score="2"/>
+			<skill name="Stealth" score="1"/>
+			<skill name="Throw" score="1"/>
+		</group>
+
+		<group name="Common Knowledges" type="knowledges">
+			<skill name="Area lore" score="2"/>
+			<skill name="Folk lore" score="2"/>
+			<skill name="Speak own" score="4"/>
+			<skill name="Scribe own" score="4"/>
+		</group>
+
+		<group name="Skills to age 16" type="age16">
+			<skill name="Religion (Halea)" score="4"/>
+			<skill name="Charm" score="4"/>
+			<skill name="Erotic arts" score="3"/>
+			<skill name="Play instrument" score="2"/>
+			<skill name="Sing" score="3"/>
+			<skill name="Trade" score="2"/>
+			<skill name="Blessing" score="2"/>
+			<skill name="Sardura's Vision" score="2"/>
+			<skill name="Dulcia's Song" score="2"/>
+			<skill name="Ectasy" score="1"/>
+		</group>
+
+		<group name="Skills to age 21" type="age21">
+			<skill name="Erotic arts" score="4"/>
+			<skill name="Trade" score="3"/>
+			<skill name="Ectasy" score="2"/>
+			<skill name="Silver tongue" score="3"/>
+		</group>
+
+		<group name="Skills to age 25" type="age25">
+			<skill name="Ectasy" score="3"/>
+			<skill name="Sardura's Vision" score="3"/>
+		</group>
+
+		<group name="Skills to age 30" type="age30">
+			<skill name="Trade" score="4"/>
+			<skill name="Dulcia's Song" score="2"/>
+		</group>
+
+	</skills>
+
+	<equipment>
+	</equipment>
 
 </character-template>
 </character-templates>
