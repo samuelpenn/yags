@@ -3,7 +3,7 @@
 <!--
     List of knowledge available to characters.
 
-    Version: $Revision: 1.1 $
+    Version: $Revision: 1.2 $
     Author: Samuel Penn
 -->
 
@@ -61,13 +61,51 @@
         </description>
     </skill>
 
+    <!-- First aid -->
     <skill name="First aid" type="knowledge">
         <description>
-            Care and treatment of wounds to the extent of stopping
-            bleeding, and preventing infection. General first aid
-            checks are made with intelligence, though some tasks,
-            such as removing an arrow from a wound, use dexterity.
+            <para>
+                Care and treatment of wounds to the extent of stopping
+                bleeding, and preventing infection. General first aid
+                checks are made with intelligence, though some tasks,
+                such as removing an arrow from a wound, use dexterity.
+            </para>
+
+            <para>
+                A first aid check may be made after someone has become
+                injured, though only one first aid roll is allowed for
+                a single set of injuries. A new first aid roll cannot
+                be made until the subject has received more injuries.
+            </para>
+
+            <para>
+                A successful first aid check will stabalise a wound and
+                allow it to begin healing naturally. Failure to perform
+                first aid on a subject means that nightly healing rolls
+                are not possible, and weekly checks are at +10 to the
+                target difficulty.
+            </para>
+            
+            <para>
+                If the subject is both stunned and wounded, seperate
+                first aid rolls are required. If the first aid check is
+                10 or more points above the target required, then one
+                level of stun or wound is also healed immediately. A
+                character may try to first aid themselves, though they
+                suffer all the normal penalties for being injured.
+            </para>
         </description>
+
+        <examples>
+            <example target="0">First aid a bruised (1 stun) subject</example>
+            <example target="5">First aid a dazed (2 stuns) subject</example>
+            <example target="10">First aid a bloodied or battered (3-4 stuns) subject</example>
+            <example target="10">First aid a beaten or oblivious (5-6 stuns) subject</example>
+            <example target="10">First aid a hurt (1 wound) subject</example>
+            <example target="15">First aid light or medium (2-3) wounds</example>
+            <example target="20">First aid serious or critical (4-5) wounds</example>
+            <example target="25">First aid fatal (6) wounds</example>
+        </examples>
     </skill>
 
     <skill name="Faerie lore" type="knowledge">
