@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.54 $</version>
-            <date>$Date: 2004-05-31 12:40:17 $</date>
+            <version>$Revision: 1.55 $</version>
+            <date>$Date: 2004-06-18 21:46:03 $</date>
         </cvsinfo>
 
         <license>
@@ -1054,7 +1054,7 @@
 
                 <para>
                     Every creature has a <e>knockdown</e> score, which is
-                    the amount of damage a creature can stand in one blow
+                    the amount of damage a creature can suffer in one blow
                     and still remain standing. Knockdown calculation is
                     performed before armour and soak is subtracted from the
                     damage, so it is possible to knock someone to the floor,
@@ -1389,7 +1389,7 @@
                 </para>
 
                 <para>
-                    There are types of fatigue - temporary and permanent.
+                    There are two types of fatigue - temporary and permanent.
                     Unless stated otherwise, all fatigue gained is temporary
                     and can be lost with a short rest.
                 </para>
@@ -1407,6 +1407,8 @@
                     It is suggested that fatigue is kept track of on the
                     character sheet by crossing off temporary fatigue levels
                     with a single line, and permanent fatigue with a cross.
+                    Permanent fatigue is always <e>first</e> on the line,
+                    and last to be lost.
                 </para>
             </sect2>
         </sect1>
@@ -1417,7 +1419,7 @@
 
             <para>
                 The effectiveness of armour against weapons is complicated
-                and greatly simplified for <e>Yags</e>. There are no hit
+                but greatly simplified for <e>Yags</e>. There are no hit
                 locations, so an armour's effectiveness is a mixture of
                 its strength and how much of the body it covers. When
                 armour is chosen, it is chosen a piece at a time rather
@@ -1458,8 +1460,9 @@
                 <para>
                     A full set of armour can consist of several parts, and a
                     character can mix and match according to preference and
-                    finances. Generally, armour cannot be layered - it is
-                    not possible to wear two chain hauberks at the same time.
+                    finances. Unless otherwise stated, armour cannot be
+                    layered - it is not possible to wear two chain hauberks
+                    at the same time.
                 </para>
 
                 <para>
@@ -1477,7 +1480,7 @@
                     </item>
 
                     <item name="Vest">
-                        Covers the torso and shouldres.
+                        Covers the torso and shoulders.
                     </item>
 
                     <item name="Trousers">
@@ -1505,7 +1508,10 @@
                     
                     <item name="Vambraces">
                         Protects the arms. As for greaves, values given
-                        assume a set of vambraces.
+                        assume a complete set of vambraces. However, if
+                        vambraces are worn on only one arm, the full
+                        armour bonus is still gained as long as the other
+                        arm is fully protected by a shield.
                     </item>
                 </itemlist>
 
@@ -1788,7 +1794,9 @@
                         and firing the bow. This is considered to be a
                         slow action. If the bow was already loaded in a
                         previous round, then an attack action occurs on
-                        a normal initiative.
+                        a normal initiative. If the bow was loaded and
+                        aimed in the previous round, then firing it is
+                        considered a <e>fast</e> action.
                     </para>
                 </sect3>
 
@@ -1890,7 +1898,8 @@
                 <para>
                     The very largest creatures are very difficult to miss at
                     close ranges. Groups of smaller creatures also count as
-                    being of a larger size.
+                    being of a larger size (but aiming for the group will
+                    mean that a random individual is hit).
                 </para>
             </sect2>
 
