@@ -45,15 +45,25 @@
         }
 
         table.attributes tr.label td {
+            font-size: 8pt;
             font-weight: bold;
-            width: 20mm;
+            width: 15mm;
         }
 
         table.attributes tr.value td {
-            border: 2pt solid black;
-            height: 7mm;
+            border: 1pt solid black;
+            height: 5mm;
         }
-        
+
+        table.attributes tr.label td.hidden {
+            width: 5mm;
+        }
+
+        table.attributes tr.value td.hidden {
+            border: none;
+            height: 5mm;
+        }
+
         table.skills {
             position: absolute;
             top: 55mm;
@@ -112,12 +122,23 @@
             background-color: #ffeeee;
             border-bottom: 1pt solid black;
         }
-        
+
         table.armour {
             position: absolute;
             left: 70mm;
             top: 143mm;
             background-color: #ffdddd;
+            font-size: 8pt;
+        }
+
+        table.armour th {
+            text-align: left;
+        }
+
+        table.armour td {
+            height: 24pt;
+            background-color: #ffeeee;
+            border-bottom: 1pt solid black;
         }
     </style>
 
@@ -157,6 +178,10 @@
                 <td>Intelligence</td>
                 <td>Charisma</td>
                 <td>Will</td>
+                <td class="hidden"/>
+                <td>Luck</td>
+                <td>Soak</td>
+                <td>Encum.</td>
             </tr>
             <tr class="value">
                 <td/>
@@ -165,6 +190,10 @@
                 <td/>
                 <td/>
                 <td/>
+                <td/>
+                <td/>
+                <td/>
+                <td class="hidden"/>
                 <td/>
                 <td/>
                 <td/>
@@ -344,9 +373,13 @@
                 <th style="width: 40mm;">Armour</th>
                 <th style="width: 20mm;">Load</th>
                 <th style="width: 20mm;">Soak</th>
+                <th style="width: 20mm;">Half soak</th>
             </tr>
+            <tr><td/><td/><td/><td/></tr>
+            <tr><td/><td/><td/><td/></tr>
+            <tr><td/><td/><td/><td/></tr>
         </table>
-        
+
         <table class="wounds">
         </table>
 
