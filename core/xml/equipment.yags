@@ -1,0 +1,797 @@
+<?xml version="1.0"?>
+
+<!--
+    Categories
+
+    Adventuring     The sort of things only adventurers have.
+    Shady           Thieves/assassins tools and the like.
+    Food            Food and drink.genre
+
+    Legality
+    0               Illegal
+    5               Totally mundane
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+ -->
+<equipment>
+    <item name="10' pole">
+        <category>Adventuring</category>
+        <importance>3</importance>
+        <availability>2</availability>
+        <techlevel>1</techlevel>
+
+        <short>A 10' long pole designed for prodding things.</short>
+
+        <description>
+            <para>
+                The stereotypical item of adventuring gear. A 10' long
+                pole about two inches thick, used for checking for traps
+                or prodding icky things.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>wood</material>
+
+        <dimensions>
+            <length>300</length>
+            <width>5</width>
+            <height>5</height>
+        </dimensions>
+
+        <cost>1</cost>
+    </item>
+
+    <item name="Egg (chicken)">
+        <category>Food</category>
+        <importance>2</importance>
+
+        <availability>1</availability>
+        <techlevel>1</techlevel>
+
+        <short>A fresh chicken egg.</short>
+
+        <description>
+            <para>
+                A single raw egg, ready to be cooked for a meal.
+            </para>
+        </description>
+
+        <weight>50</weight>
+        <material>animal</material>
+
+        <cost>1</cost>
+
+    </item>
+
+    <item name="Vegetables">
+        <category>Food</category>
+        <importance>2</importance>
+
+        <availability>1</availability>
+
+        <short>One meal of fresh vegetables.</short>
+
+        <description>
+            <para>
+                A mixture of fresh vegetables, enough for one meal.
+            </para>
+        </description>
+
+        <weight>50</weight>
+        <material>plant</material>
+
+        <cost>1</cost>
+    </item>
+
+    <item name="Flask of wine" quality="1">
+        <category>Food</category>
+        <importance>1</importance>
+
+        <availability>1</availability>
+
+        <short>A flask of poor quality wine.</short>
+
+        <description>
+            <para>
+                A flask of cheap wine which is not particularly
+                tasty.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>liquid</material>
+
+        <cost>5</cost>
+    </item>
+
+    <item name="Flask of wine" quality="2">
+        <category>Food</category>
+        <importance>2</importance>
+
+        <availability>2</availability>
+
+        <short>A flask of average quality wine.</short>
+
+        <description>
+            <para>
+                A flask of wine which is okay, but nothing special.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>liquid</material>
+
+        <cost>15</cost>
+    </item>
+
+    <item name="Flask of wine" quality="3">
+        <category>Food</category>
+        <importance>2</importance>
+
+        <availability>2</availability>
+
+        <short>A flask of good quality wine.</short>
+
+        <description>
+            <para>
+                A flask of good wine.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>liquid</material>
+
+        <cost>30</cost>
+    </item>
+
+    <item name="Flask of wine" quality="4">
+        <category>Food</category>
+        <importance>3</importance>
+
+        <availability>3</availability>
+
+        <short>A flask of fine quality wine.</short>
+
+        <description>
+            <para>
+                A flask of excellent wine, of vintage stock. It tastes
+                exellent, but is quite expensive.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>liquid</material>
+
+        <cost>100</cost>
+    </item>
+
+    <item name="Flask of wine" quality="5">
+        <category>Food</category>
+        <importance>1</importance>
+
+        <availability>4</availability>
+
+        <short>A flask of exellent quality wine.</short>
+
+        <description>
+            <para>
+                A flask of superb wine.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>liquid</material>
+
+        <cost>500</cost>
+    </item>
+
+    <item name="Loaf of bread">
+        <category>Food</category>
+        <importance>3</importance>
+
+        <availability>1</availability>
+
+        <short>A fresh loaf of bread.</short>
+
+        <description>
+            <para>
+                A pretty standard loaf of bread.
+            </para>
+        </description>
+
+        <weight>400</weight>
+        <material>food</material>
+
+        <cost>2</cost>
+    </item>
+
+    <item name="Fresh meat">
+        <category>Food</category>
+        <importance>3</importance>
+
+        <availability>1</availability>
+
+        <short>One portion of fresh meat.</short>
+
+        <description>
+            <para>
+                A portion of fresh meat for a single meal. Normally
+                accompanied with bread and/or vegetables.
+            </para>
+        </description>
+
+        <weight>100</weight>
+        <material>animal</material>
+
+        <cost>20</cost>
+    </item>
+
+    <item name="Pint of ale">
+        <category>Food</category>
+        <importance>3</importance>
+
+        <availability>1</availability>
+
+        <short>A pint of strong ale.</short>
+
+        <description>
+            <para>
+                A pint of good strong ale.
+            </para>
+        </description>
+
+        <weight>800</weight>
+        <material>liquid</material>
+
+        <cost>2</cost>
+    </item>
+
+    <item name="Pint of bear">
+        <category>Food</category>
+        <importance>3</importance>
+
+        <availability>1</availability>
+
+        <short>A pint of bear.</short>
+
+        <description>
+            <para>
+                A pint of good beer.
+            </para>
+        </description>
+
+        <weight>800</weight>
+        <material>liquid</material>
+
+        <cost>2</cost>
+    </item>
+
+    <item name="Pint of mead">
+        <category>Food</category>
+        <importance>3</importance>
+
+        <availability>2</availability>
+
+        <short>A pint of mead.</short>
+
+        <description>
+            <para>
+                A pint of good mead.
+            </para>
+        </description>
+
+        <weight>800</weight>
+        <material>liquid</material>
+
+        <cost>4</cost>
+    </item>
+
+    <item name="Bell, small hand">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>2</availability>
+
+        <short>A small bronze hand bell.</short>
+
+        <description>
+            <para>
+                A small bronze hand bell, of the sort often used by
+                watchmen and guards to sound for aid.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>metal</material>
+
+        <cost>50</cost>
+    </item>
+
+    <item name="Chain, light">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>3</availability>
+
+        <short>A metre length of light chain.</short>
+
+        <description>
+            <para>
+                A one metre length of chain, useful for light loads
+                or securing animals. Normally made of iron. Longer
+                lengths of chain can be bought, this is just the cost
+                per metre.
+            </para>
+        </description>
+
+        <dimensions>
+            <length>100</length>
+            <width>1</width>
+            <height>1</height>
+        </dimensions>
+
+        <weight>2000</weight>
+        <material>metal</material>
+
+        <cost>300</cost>
+    </item>
+
+    <item name="Chain, heavy">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>4</availability>
+
+        <short>A metre length of heavy chain.</short>
+
+        <description>
+            <para>
+                A one metre length of chain, designed for heavy loads
+                such as securing large creatures, ships or heavy loads.
+                This is the price and weight per metre.
+            </para>
+        </description>
+
+        <dimensions>
+            <length>100</length>
+            <width>3</width>
+            <height>3</height>
+        </dimensions>
+
+        <weight>5000</weight>
+        <material>metal</material>
+
+        <cost>2000</cost>
+    </item>
+
+    <item name="Glass bottle">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>4</availability>
+
+        <short>A small glass bottle with a cork stopper.</short>
+
+        <description>
+            <para>
+                A fragile glass bottle, designed to hold a liquid or
+                powder. It can be sealed shut with a cork.
+            </para>
+        </description>
+
+        <dimensions>
+            <length>20</length>
+            <width>5</width>
+            <height>5</height>
+        </dimensions>
+
+        <weight>100</weight>
+        <material>glass</material>
+
+        <cost>5000</cost>
+    </item>
+
+    <item name="Padlock" quality="1">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>3</availability>
+
+        <short>A poor quality padlock.</short>
+
+        <description>
+            <para>
+                A poor quality padlock, designed to keep a door or chest
+                shut. Requires a relatively big key, and can be quite easy
+                to pick. Often it is easier to just break it though, by
+                either hitting it very hard, or levering it open.
+            </para>
+        </description>
+
+        <weight>250</weight>
+        <material>iron</material>
+
+        <cost>2000</cost>
+
+        <device xmlns="http://yagsbook.sourceforge.net/xml/d20">
+            <difficulty>20</difficulty>
+            <hardness>3</hardness>
+            <hitpoints>5</hitpoints>
+            <break>20</break>
+        </device>
+
+        <device xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <difficulty>15</difficulty>
+            <soak>10</soak>
+            <toughness>1</toughness>
+            <break>30</break>
+        </device>
+    </item>
+
+    <item name="Padlock" quality="2">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>4</availability>
+
+        <short>An average quality padlock.</short>
+
+        <description>
+            <para>
+                A padlock of average quality, of the sort used to keep
+                a door or chest locked shut.
+            </para>
+        </description>
+
+        <weight>300</weight>
+        <material>iron</material>
+
+        <cost>5000</cost>
+
+        <device xmlns="http://yagsbook.sourceforge.net/xml/d20">
+            <difficulty>25</difficulty>
+            <hardness>3</hardness>
+            <hitpoints>6</hitpoints>
+            <break>22</break>
+        </device>
+
+        <device xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <difficulty>20</difficulty>
+            <soak>12</soak>
+            <toughness>1</toughness>
+            <break>33</break>
+        </device>
+    </item>
+
+    <item name="Padlock" quality="3">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>3</availability>
+
+        <short>A good quality padlock.</short>
+
+        <description>
+            <para>
+                A good quality padlock.
+            </para>
+        </description>
+
+        <weight>300</weight>
+        <material>iron</material>
+
+        <cost>10000</cost>
+
+        <device xmlns="http://yagsbook.sourceforge.net/xml/d20">
+            <difficulty>30</difficulty>
+            <hardness>4</hardness>
+            <hitpoints>7</hitpoints>
+            <break>20</break>
+        </device>
+
+        <device xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <difficulty>25</difficulty>
+            <soak>12</soak>
+            <toughness>1</toughness>
+            <break>35</break>
+        </device>
+    </item>
+
+    <item name="Hourglass">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>4</availability>
+
+        <short>An hourglass, used to keep track of time.</short>
+
+        <description>
+            <para>
+                Made of glass, within a wooden frame, it is about
+                twenty centimetres tall and capable of timing events
+                for about 30 minutes.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>glass</material>
+
+        <cost>30000</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Magnifying glass">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>5</availability>
+
+        <short>A small glass lens with a wooden handle.</short>
+
+        <description>
+            <para>
+                This lens is about 5cm in diameter, and has a useful
+                magnification of about x2. It is liable to fracture
+                if dropped.
+            </para>
+        </description>
+
+        <dimensions>
+            <length>15</length>
+            <width>6</width>
+            <height>6</height>
+        </dimensions>
+
+        <weight>100</weight>
+        <material>glass</material>
+
+        <cost>20000</cost>
+
+        <properties>
+            <special/>
+        </properties>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/d20">
+            <skill>Appraise</skill>
+            <bonus>+2</bonus>
+            <notes>
+                Gives a bonus to appraise checks on small items.
+            </notes>
+        </tool>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Mechanical</skill>
+            <bonus>+3</bonus>
+            <notes>
+                Gives a bonus to disable traps and open locks.
+            </notes>
+        </tool>
+    </item>
+
+    <item name="Merchant's scale">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>4</availability>
+
+        <short>A weighing device.</short>
+
+        <weight>500</weight>
+        <material>metal</material>
+
+        <cost>1000</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Mirror, small metal">
+        <category>Adventuring</category>
+
+        <availability>4</availability>
+
+        <short>A highly polished peice of metal.</short>
+
+        <weight>100</weight>
+        <material>bronze</material>
+
+        <cost>1000</cost>
+    </item>
+
+    <item name="Perfume" quality="1">
+        <category>Fashion</category>
+        <importance>1</importance>
+
+        <availability>3</availability>
+
+        <short>A small vial of poor quality perfume.</short>
+
+        <weight>100</weight>
+        <material>liquid</material>
+
+        <cost>10</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Perfume" quality="2">
+        <category>Fashion</category>
+        <importance>2</importance>
+
+        <availability>4</availability>
+
+        <short>A small vial of perfume.</short>
+
+        <weight>100</weight>
+        <material>liquid</material>
+
+        <cost>200</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Perfume" quality="3">
+        <category>Fashion</category>
+        <importance>2</importance>
+
+        <availability>5</availability>
+
+        <short>A small vial of good quality perfume.</short>
+
+        <weight>50</weight>
+        <material>liquid</material>
+
+        <cost>1000</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Soap">
+        <category>Fashion</category>
+        <importance>2</importance>
+
+        <availability>3</availability>
+
+        <short>A bar of soap.</short>
+
+        <weight>250</weight>
+        <material>solid</material>
+
+        <cost>4</cost>
+    </item>
+
+    <item name="Scroll case">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>4</availability>
+
+        <short>A tube for holding scrolls.</short>
+
+        <weight>250</weight>
+        <material>wood</material>
+
+        <cost>8</cost>
+    </item>
+
+    <item name="Sewing needle">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>1</availability>
+
+        <short>A small bone sewing needle.</short>
+
+        <weight>5</weight>
+        <material>bone</material>
+
+        <cost>5</cost>
+    </item>
+
+    <item name="Signal whistle">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>5</availability>
+
+        <short>A small iron whistle.</short>
+
+        <weight>5</weight>
+        <material>iron</material>
+
+        <cost>100</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Signet ring">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>3</availability>
+
+        <short>A ring with a pattern embossed upon it.</short>
+
+        <weight>5</weight>
+        <material>silver</material>
+
+        <cost>200</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Spyglass">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>6</availability>
+
+        <short>An iron tube with two lenses in it.</short>
+
+        <weight>500</weight>
+        <material>iron</material>
+
+        <cost>20000</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Water clock">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>5</availability>
+
+        <short>A clock which works by timing the drips of water.</short>
+
+        <weight>5000</weight>
+        <material>glass</material>
+
+        <cost>20000</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Writing ink (vial)">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>4</availability>
+
+        <short>A clay vial of writing ink.</short>
+
+        <weight>50</weight>
+        <material>clay</material>
+
+        <cost>40</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+</equipment>
