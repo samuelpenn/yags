@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.25 $</version>
-            <date>$Date: 2004-01-05 23:20:09 $</date>
+            <version>$Revision: 1.26 $</version>
+            <date>$Date: 2004-05-31 12:40:17 $</date>
         </cvsinfo>
 
         <license>
@@ -46,9 +46,9 @@
             <title>Yags</title>
 
             <para>
-                <s>Yags is Another Game System</s>, one that is meant to
+                Yags is Another Game System, one that is meant to
                 be generic and modular. It does not attempt to be another
-                <tm>GURPS</tm> of one size fits all. Each article can be
+                GURPS of one size fits all. Each article can be
                 replaced with campaign specific articles more suited to
                 a given background.
             </para>
@@ -99,7 +99,7 @@
             </sect2>
 
             <sect2>
-                <title>Ability Costs</title>
+                <title>Ability Levels and Costs</title>
 
                 <para>
                     Attributes and skills, which are explained
@@ -210,6 +210,67 @@
                         </row>
                     </tbody>
                 </table>
+                
+                <sect3>
+                    <title>Attributes</title>
+                    
+                    <targetlist targetFirst="true" bold="true">
+                        <targetLabel>Cost</targetLabel>
+                        <valueLabel>Attribute</valueLabel>
+                        
+                        <item target="-18" value="0 (None).">
+                            Character has no or minimal rateable ability in
+                            that attribute.
+                        </item>
+                        
+                        <item target="-15" value="1 (Cripple).">
+                            Character is considered to be crippled in that
+                            attribute. They are either very dumb, sickly weak
+                            or sociophobic for instance. They will be in the
+                            bottom 0.1% of the population.
+                        </item>
+                        
+                        <item target="-9" value="2 (Poor).">
+                            Character is noticeably below average in their
+                            ability. They are in the bottom 5% of the
+                            population for that attribute. This is the starting
+                            minimum for player characters.
+                        </item>
+                        
+                        <item target="0" value="3 (Average).">
+                            Character is considered to be average. 90% of the
+                            population will fit into this category for any
+                            given attribute.
+                        </item>
+                        
+                        <item target="+12" value="4 (High).">
+                            Character is considered to be of well above average
+                            ability in the attribute, in the top 5% of the
+                            population. They will be noticeably better than
+                            average people.
+                        </item>
+                        
+                        <item target="+27" value="5 (Very high).">
+                            Such characters are well above average, being in
+                            the top 0.1% of the population. This is the starting
+                            maximum for player characters in many campaigns.
+                        </item>
+                        
+                        <item target="+45" value="6 (Exceptional).">
+                            One in a hundred thousand people would have an
+                            ability this high. They are truly exceptional.
+                        </item>
+                        
+                        <item target="+66" value="7 (Incredible).">
+                            One in ten million people.
+                        </item>
+                        
+                        <item target="+90" value="8 (Legendary).">
+                            One in a billion.
+                        </item>
+                    </targetlist>
+                    
+                </sect3>
             </sect2>
 
             <sect2>
@@ -241,79 +302,79 @@
                 <sect3>
                     <title>Primary Attributes</title>
 
-                    <termlist sort="false">
-                        <entry term="Strength">
+                    <itemlist order="strict">
+                        <item name="Strength">
                             Strength measures a creature's ability to hurt,
                             break and lift things.
-                        </entry>
+                        </item>
 
-                        <entry term="Stamina">
+                        <item name="Stamina">
                             Stamina is a measure of endurance and fitness.
                             It is used to stay alive when badly injured, and
                             determines how much fatigue can be resisted.
-                        </entry>
+                        </item>
 
-                        <entry term="Agility">
+                        <item name="Agility">
                             Quickness and acrobatic ability are measured by
                             agility. It is also used for brawling, but not
                             melee or missile weapons.
-                        </entry>
+                        </item>
 
-                        <entry term="Dexterity">
+                        <item name="Dexterity">
                             The dexterity of a character defines their
                             hand-eye coordination, sleight-of-hand,
                             and skill with melee weapons. Pick pockets
                             and warriors need a good dexterity.
-                        </entry>
+                        </item>
 
-                        <entry term="Perception">
+                        <item name="Perception">
                             Perception is a measure of general alertness
                             and sensory ability. High perception creatures
                             have good senses (vision, hearing) and
                             observational ability.
-                        </entry>
+                        </item>
 
-                        <entry term="Intelligence">
+                        <item name="Intelligence">
                             Intelligence is a measure of wit, cunning,
                             memory and intuition. Intelligence is used to
                             know things, to study and for logic.
-                        </entry>
+                        </item>
 
-                        <entry term="Charisma">
+                        <item name="Charisma">
                             Charisma is the raw ability to get on with
                             people. High charisma characters will make
                             friends easily.
-                        </entry>
+                        </item>
 
-                        <entry term="Will">
+                        <item name="Will">
                             Strength of will is used to overcome base
                             instincts, such as fear and lust. High will
                             characters are more resistent to magic, and are
                             also less gullible.
-                        </entry>
-                    </termlist>
+                        </item>
+                    </itemlist>
                 </sect3>
 
                 <sect3>
                     <title>Secondary Attributes</title>
 
-                    <termlist sort="false">
-                        <entry term="Size">
+                    <itemlist order="strict">
+                        <item name="Size">
                             Size defaults to five for adult humans, with
                             most adults ranging from four to six. Size
                             governs how much damage a creature can soak
                             up. A blue whale is about size 100. It cannot
                             be raised with experience.
-                        </entry>
+                        </item>
 
-                        <entry term="Luck">
+                        <item name="Luck">
                             Luck is a measure of good fortune, and defaults
                             to zero for characters. It can be raised like
                             primary attributes. It has the special feature
                             of being 'spent' on a temporary basis to allow
                             rerolls of a bad result.
-                        </entry>
-                    </termlist>
+                        </item>
+                    </itemlist>
                 </sect3>
 
                 <sect3>
@@ -368,77 +429,77 @@
                 <sect3>
                     <title>Example Skill Levels</title>
 
-                    <termlist sort="false">
-                        <entry term="Unfamiliar (0)">
+                    <itemlist order="strict">
+                        <item name="Unfamiliar (0)">
                             No ability in the skill. Most skills can still
                             be used (though are zero) except for knowledges,
                             which cannot even be attempted.
-                        </entry>
+                        </item>
 
-                        <entry term="Minimal (1)">
+                        <item name="Minimal (1)">
                             Minimal knowledge of the skill, but it is still
                             dwarfed by blind luck.
-                        </entry>
+                        </item>
 
-                        <entry term="Basic (2)">
+                        <item name="Basic (2)">
                             A basic understanding of the core principles of
                             the skill, and should be able to manage easy
                             tasks.
-                        </entry>
+                        </item>
 
-                        <entry term="Competent (3)">
+                        <item name="Competent (3)">
                             Not quite up to professional quality, but can
                             handle anything within normal bounds.
-                        </entry>
+                        </item>
 
-                        <entry term="Professional (4-5)">
+                        <item name="Professional (4-5)">
                             Professionals will have at least this level, and
                             can make a career of it. Many professionals will
                             not exceed this level, especially if their job
                             is not at all taxing.
-                        </entry>
+                        </item>
 
-                        <entry term="Seasoned (6-7)">
+                        <item name="Seasoned (6-7)">
                             Extensive experience with the skill, both in
                             theory and practise. Skills above this level
                             will be rare.
-                        </entry>
+                        </item>
 
-                        <entry term="Exceptional (8-9)">
+                        <item name="Exceptional (8-9)">
                             This level of skill is rare, and normally
                             denotes those of 'elite' caliber, or those
                             pushed to the edge of their craft. Unnamed NPCs
                             will not have skills higher than this.
-                        </entry>
+                        </item>
 
-                        <entry term="Master (10-12)">
+                        <item name="Master (10-12)">
                             This level of skill is had by someone who has
                             spent much time and effort to master their craft
                             (as opposed to those who merely have much
                             experience). They are rare, and not randomly
                             encountered.
-                        </entry>
+                        </item>
 
-                        <entry term="Legendary (13-15)">
+                        <item name="Legendary (13-15)">
                             Extreme dedication, and much practise and real
                             world experience, is needed to achieve this
                             level of skill. Only a few people ever attain
                             this level, and they will generally be famous
                             within their craft.
-                        </entry>
+                        </item>
 
-                        <entry term="Mythical (16-19)">
+                        <item name="Mythical (16-19)">
                             This is about the limit of human achievement.
                             Those with this ability will be rare across all
                             of history.
-                        </entry>
+                        </item>
 
-                        <entry term="Superhuman (20+)">
+                        <item name="Superhuman (20+)">
                             Technically, there is no upper bound on how high
                             skills can go, but skills of this level should
                             be avoided if at all possible.
-                        </entry>
-                    </termlist>
+                        </item>
+                    </itemlist>
                 </sect3>
 
                 <sect3>
@@ -458,59 +519,59 @@
                         <valueLabel>Type of Task</valueLabel>
                         <targetLabel>Target</targetLabel>
 
-                        <entry target="10" value="Very easy.">
+                        <item target="10" value="Very easy.">
                             Such a task can be achieved by a
                             person with little or no skill with
                             a good chance of success. A
                             professional will always succeed.
-                        </entry>
-                        <entry target="15" value="Easy.">
+                        </item>
+                        <item target="15" value="Easy.">
                             Anyone with a small amount of skill
                             will be able to achieve this with a
                             good chance of success, though it will
                             be difficult for someone without any
                             training at all.
-                        </entry>
-                        <entry target="20" value="Moderate.">
+                        </item>
+                        <item target="20" value="Moderate.">
                             Such tasks can be achieved without difficulty
                             by a professional in ideal conditions. Those
                             without proper training can find it difficult
                             however.
-                        </entry>
-                        <entry target="25" value="Challenging.">
+                        </item>
+                        <item target="25" value="Challenging.">
                             People with less than professional
                             level of skill will find it hard to
                             succeed, and it is out of league of
                             someone with only basic familiarity.
-                        </entry>
-                        <entry target="30" value="Difficult.">
+                        </item>
+                        <item target="30" value="Difficult.">
                             Such tasks require a highly skilled
                             person. Anyone with less than
                             professional competence will always
                             fail, and even professionals will be
                             hard pressed.
-                        </entry>
-                        <entry target="40" value="Very difficult.">
+                        </item>
+                        <item target="40" value="Very difficult.">
                             A master of the skill can achieve such tasks
                             with confidence, others will fail. About the
                             highest level of difficulty under normal
                             circumstances.
-                        </entry>
-                        <entry target="50" value="Extreme.">
+                        </item>
+                        <item target="50" value="Extreme.">
                             A very difficult task under poor conditions.
-                        </entry>
-                        <entry target="60" value="Heroic.">
+                        </item>
+                        <item target="60" value="Heroic.">
                             Truly heroic.
-                        </entry>
-                        <entry target="75" value="Sheer folly.">
+                        </item>
+                        <item target="75" value="Sheer folly.">
                             Someone with superhuman level of skill will be
                             hard pressed to achieve this difficulty.
-                        </entry>
-                        <entry target="100" value="Absurd.">
+                        </item>
+                        <item target="100" value="Absurd.">
                             Well beyond what most people could achieve.
                             Above average attributes are required to have
                             even a chance of success.
-                        </entry>
+                        </item>
                     </targetlist>
 
                     <para>
@@ -598,44 +659,44 @@
                         <valueLabel>Examples</valueLabel>
                         <targetLabel>Score</targetLabel>
 
-                        <entry target="1" value="Very low.">
+                        <item target="1" value="Very low.">
                             Flees from the slightest danger, even when
                             friends and family are in danger.
-                        </entry>
-                        <entry target="2" value="Low.">
+                        </item>
+                        <item target="2" value="Low.">
                             Obviously cowardly, stays at the back in fights
                             and only faces up to danger when absolutely
                             necessary.
-                        </entry>
-                        <entry target="3" value="Poor.">
+                        </item>
+                        <item target="3" value="Poor.">
                             Tends to be cautious, avoiding danger when
                             possible, and prefering to cut and run when
                             things are going badly.
-                        </entry>
-                        <entry target="4" value="Normal.">
-                        </entry>
-                        <entry target="5" value="Above average.">
+                        </item>
+                        <item target="4" value="Normal.">
+                        </item>
+                        <item target="5" value="Above average.">
                             A bit braver than normal.
-                        </entry>
-                        <entry target="6" value="High.">
+                        </item>
+                        <item target="6" value="High.">
                             Obviously brave, sometimes overconfident in the
                             face of danger.
-                        </entry>
-                        <entry target="7" value="Exceptional.">
+                        </item>
+                        <item target="7" value="Exceptional.">
                             Rarely shows fear except in unsual circumstances.
-                        </entry>
-                        <entry target="8" value="Highly exceptional.">
+                        </item>
+                        <item target="8" value="Highly exceptional.">
                             Steadfast and heroic, remaing cool under fire.
-                        </entry>
-                        <entry target="9" value="Superb.">
+                        </item>
+                        <item target="9" value="Superb.">
                             Rarely, if ever, startled by anything. Rarely
                             takes the danger of a task into account, only
                             whether it can be done or not.
-                        </entry>
-                        <entry target="10+" value="Extreme.">
+                        </item>
+                        <item target="10+" value="Extreme.">
                             Doesn't ever think about danger. Can appear to
                             be suicidal at times.
-                        </entry>
+                        </item>
                     </targetlist>
                 </sect3>
 
@@ -659,39 +720,39 @@
                         <valueLabel>Examples</valueLabel>
                         <targetLabel>Score</targetLabel>
 
-                        <entry target="1" value="Very low.">
+                        <item target="1" value="Very low.">
                             Incredibly insecure, always listening to others
                             rather than thinking for themselves. They are
                             easy to fool and dominate.
-                        </entry>
-                        <entry target="2" value="Low.">
+                        </item>
+                        <item target="2" value="Low.">
                             Insecure, tending to listen to others rather
                             than making up their own mind. Prefers not to
                             speak out, especially in front of strangers.
-                        </entry>
-                        <entry target="3" value="Poor.">
+                        </item>
+                        <item target="3" value="Poor.">
                             Tends to be shy, only putting forward suggestions
                             they are absolutely sure about. Tends to take
                             others at face value.
-                        </entry>
-                        <entry target="4" value="Normal.">
-                        </entry>
-                        <entry target="5" value="Above average.">
+                        </item>
+                        <item target="4" value="Normal.">
+                        </item>
+                        <item target="5" value="Above average.">
                             Tends to be outspoken and confident.
-                        </entry>
-                        <entry target="6" value="High.">
+                        </item>
+                        <item target="6" value="High.">
                             Confident about their own opinions, and not
                             afraid to speak their mind where necessary.
-                        </entry>
-                        <entry target="7" value="Exceptional.">
-                        </entry>
-                        <entry target="8" value="Highly exceptional.">
-                        </entry>
-                        <entry target="9" value="Superb.">
-                        </entry>
-                        <entry target="10+" value="Extreme.">
+                        </item>
+                        <item target="7" value="Exceptional.">
+                        </item>
+                        <item target="8" value="Highly exceptional.">
+                        </item>
+                        <item target="9" value="Superb.">
+                        </item>
+                        <item target="10+" value="Extreme.">
                             Megalomaniac.
-                        </entry>
+                        </item>
                     </targetlist>
                 </sect3>
 
@@ -724,46 +785,46 @@
                         <valueLabel>Examples</valueLabel>
                         <targetLabel>Score</targetLabel>
 
-                        <entry target="1" value="Very low.">
+                        <item target="1" value="Very low.">
                             Very angry and vengeful person. Will take offence
                             at minor sleights. Will strike out at someone
                             given any poortunity. If sees an opportunity for
                             revenge, will take it regardless of the
                             consequences.
-                        </entry>
-                        <entry target="2" value="Low.">
+                        </item>
+                        <item target="2" value="Low.">
                             Very hot headed, likely to explode without
                             warning. Will seek revenge, but willing to wait
                             a short while if doing so would be better.
-                        </entry>
-                        <entry target="3" value="Poor.">
+                        </item>
+                        <item target="3" value="Poor.">
                             Gets angry quickly, though this isn't immediately
                             obvious. Tends to harbour grudges.
-                        </entry>
-                        <entry target="4" value="Normal.">
+                        </item>
+                        <item target="4" value="Normal.">
                             Normal.
-                        </entry>
-                        <entry target="5" value="Above average.">
+                        </item>
+                        <item target="5" value="Above average.">
                             Quite calm, though will get angry if things are
                             going wrong.
-                        </entry>
-                        <entry target="6" value="High.">
+                        </item>
+                        <item target="6" value="High.">
                             Generally very calm, will tend to shrug off
                             insults. May start getting ratty if tired or
                             under stress however.
-                        </entry>
-                        <entry target="7" value="Exceptional.">
+                        </item>
+                        <item target="7" value="Exceptional.">
                             It takes a lot to upset the person.
-                        </entry>
-                        <entry target="8" value="Highly exceptional.">
+                        </item>
+                        <item target="8" value="Highly exceptional.">
                             Apparently impervious to insults and sleights.
-                        </entry>
-                        <entry target="9" value="Superb.">
+                        </item>
+                        <item target="9" value="Superb.">
                             Almost ultra calm.
-                        </entry>
-                        <entry target="10+" value="Extreme.">
+                        </item>
+                        <item target="10+" value="Extreme.">
                             Ultra calm, unaffected by anger.
-                        </entry>
+                        </item>
                     </targetlist>
                 </sect3>
 
@@ -795,58 +856,58 @@
                         <valueLabel>Examples</valueLabel>
                         <targetLabel>Score</targetLabel>
 
-                        <entry target="1" value="Very low.">
+                        <item target="1" value="Very low.">
                             Will indulge to excess at every opportunity,
                             even when totally inappropriate.
-                        </entry>
-                        <entry target="2" value="Low.">
+                        </item>
+                        <item target="2" value="Low.">
                             Will try to indulge often, even when others
                             think it is inappropriate. Will probably be
                             considered a drunk, and/or a womaniser.
                             May sometimes be drunk on duty.
-                        </entry>
-                        <entry target="3" value="Poor.">
+                        </item>
+                        <item target="3" value="Poor.">
                             Will seek reason to indulge, but generally
                             won't do so unless others are doing the same.
                             Will generally resist when there is good reason
                             to (such as when at work).
-                        </entry>
-                        <entry target="4" value="Normal.">
-                        </entry>
-                        <entry target="5" value="Above average.">
+                        </item>
+                        <item target="4" value="Normal.">
+                        </item>
+                        <item target="5" value="Above average.">
                             Will tend to indulge lightly when being
                             sociable, but prefer to avoid excess unless
                             there is a very good reason.
-                        </entry>
-                        <entry target="6" value="High.">
+                        </item>
+                        <item target="6" value="High.">
                             Will try to find excuses not to indulge, and
                             tend only to do so after some pressure, or if
                             there is a very good reason. It will be very
                             rare to indulge excessivly.
-                        </entry>
-                        <entry target="7" value="Exceptional.">
+                        </item>
+                        <item target="7" value="Exceptional.">
                             Will try to avoid situations where indulgence
                             is common, and will rarely indulge, and generally
                             then only lightly.
-                        </entry>
-                        <entry target="8" value="Highly exceptional.">
+                        </item>
+                        <item target="8" value="Highly exceptional.">
                             Disapproving of others indulging, and will ensure
                             that never indulges except in rare, very
                             appropriate, situations.
-                        </entry>
-                        <entry target="9" value="Superb.">
+                        </item>
+                        <item target="9" value="Superb.">
                             Actively avoids anything which may be considered
                             fun, such as alcohol, sex or drugs. It will be
                             obvious to anyone who knows the character that
                             they never get involved in such things. Will try
                             not to enjoy anything, even taking care to eat
                             only what is required, and no more.
-                        </entry>
-                        <entry target="10+" value="Extreme.">
+                        </item>
+                        <item target="10+" value="Extreme.">
                             Paragon of virtue, never touches alcohol or drugs,
                             considers the body to be their temple. Will avoid
                             anything considered to be enjoyment.
-                        </entry>
+                        </item>
                     </targetlist>
 
                 </sect3>
@@ -889,34 +950,34 @@
                     <targetLabel>Target</targetLabel>
                     <valueLabel>Type of situation</valueLabel>
 
-                    <entry target="10" value="Very easy.">
+                    <item target="10" value="Very easy.">
                         Very few people would be tempted by this. A
                         person would need to be very weak willed, or
                         very prone to that passion in order to fail
                         to resist.
-                    </entry>
+                    </item>
 
-                    <entry target="15" value="Easy.">
+                    <item target="15" value="Easy.">
                         Few people would fall to this, though slightly
                         below average will, or slightly susceptible
                         people would fail. A passion of 2, and normal
                         will, gives about 55% chance of resisting.
                         Normal people have 90% chance of resisting.
-                    </entry>
+                    </item>
 
-                    <entry target="20" value="Moderate.">
+                    <item target="20" value="Moderate.">
                         Most people will find this a challenge to
                         resist. A decent bribe with little chance of
                         come back, a dallience with no obvious long
                         term risk, or something that's somewhat
                         dangerous but with a good chance of success.
-                    </entry>
+                    </item>
 
-                    <entry target="25" value="Challenging.">
+                    <item target="25" value="Challenging.">
                         A bit worse than moderate, and 60% will fail.
-                    </entry>
+                    </item>
 
-                    <entry target="30" value="Difficult.">
+                    <item target="30" value="Difficult.">
                         The majority of people will fail this.
                         Something with a good chance of death with
                         little benefit gained, a really good sexual
@@ -925,7 +986,7 @@
                         a lot of money for doing nothing, or a chance
                         to kick an enemy when he's down really hard
                         with no risk.
-                    </entry>
+                    </item>
                 </targetlist>
 
                 <sect3>
@@ -947,31 +1008,31 @@
                         <valueLabel>Situation</valueLabel>
                         <targetLabel>Target</targetLabel>
 
-                        <entry target="10" value="Harmless.">
+                        <item target="10" value="Harmless.">
                             Not showing fear to a bully who is unlikely to
                             cause serious harm. Standing up to a bully who
                             probably outclasses the character.
-                        </entry>
+                        </item>
 
-                        <entry target="15">
+                        <item target="15">
                             Not showing fear when there is the risk of
                             serious harm.
-                        </entry>
+                        </item>
 
-                        <entry target="20">
+                        <item target="20">
                             A situation which is risky and dangerous,
                             with a high chance of death. Diving into a
                             turbulent river to save someone, or standing
                             your ground against ravening hordes.
-                        </entry>
+                        </item>
 
-                        <entry target="25">
-                        </entry>
+                        <item target="25">
+                        </item>
 
-                        <entry target="30">
+                        <item target="30">
                             Facing a supernatural entity for the first
                             time.
-                        </entry>
+                        </item>
                     </targetlist>
                 </sect3>
             </sect2>
@@ -1114,27 +1175,27 @@
                     <targetLabel>Target</targetLabel>
                     <valueLabel>Situation</valueLabel>
 
-                    <entry target="5">
+                    <item target="5">
                         Something which is very likely to happen
                         regardless of the intervention of the fates.
-                    </entry>
+                    </item>
 
-                    <entry target="10">
+                    <item target="10">
                         Something which is likely to happen.
-                    </entry>
+                    </item>
 
-                    <entry target="15">
+                    <item target="15">
                         Something unlikely to happen.
-                    </entry>
+                    </item>
 
-                    <entry target="20">
+                    <item target="20">
                         Something very unlikely to happen.
-                    </entry>
+                    </item>
 
-                    <entry target="25">
+                    <item target="25">
                         Such an event is incredibly unlikely, and if
                         it does happen, it may seem suspicious.
-                    </entry>
+                    </item>
                 </targetlist>
             </sect2>
 
