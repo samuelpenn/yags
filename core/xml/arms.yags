@@ -4,8 +4,8 @@
 <!--
     List of low tech weapons and armour for Yags.
 
-    Version: $Revision: 1.7 $
-    Date:    $Date: 2004-04-24 18:55:47 $
+    Version: $Revision: 1.8 $
+    Date:    $Date: 2004-04-24 22:10:06 $
  -->
 <equipment>
     <weaponlist>
@@ -875,99 +875,178 @@
         </weapon>
     </weaponlist>
 
-
+    <!--
+        List of available armour.
+     -->
     <armourlist>
         <armour name="Quilted jacket">
+            <description>
+                <para>
+                    A heavy jacket of padded cloth.
+                </para>
+            </description>
+            
             <protection>+3</protection>
             <load>1</load>
+            <weight>1</weight>
+            
+            <properties>
+                <light/>
+            </properties>
         </armour>
 
         <armour name="Quilted vest">
             <protection>+2</protection>
             <load>0.5</load>
+            <weight>0.5</weight>
+            
+            <properties>
+                <light/>
+            </properties>
         </armour>
 
         <armour name="Quilted leggings">
             <protection>+2</protection>
             <load>0.5</load>
+            <weight>0.5</weight>
+            
+            <properties>
+                <light/>
+            </properties>
         </armour>
 
         <armour name="Soft leather trousers">
             <protection>+2</protection>
             <load>0.5</load>
+            <weight>0.5</weight>
             <notes>Can be worn under chain or ring leggings, or greaves.</notes>
+            
+            <properties>
+                <light/>
+            </properties>
         </armour>
 
         <armour name="Soft leather jacket">
             <protection>+2</protection>
             <load>0.5</load>
+            <weight>0.5</weight>
             <notes>Can be worn under chain or ring mail, or cuirass and vambraces.</notes>
+            
+            <properties>
+                <light/>
+            </properties>
         </armour>
 
         <armour name="Hard leather jacket">
             <protection>+4</protection>
             <load>2</load>
+            <weight>2</weight>
+            
+            <properties>
+                <light/>
+            </properties>
         </armour>
 
         <armour name="Hard leather vest">
             <protection>+3</protection>
             <load>1</load>
+            <weight>1</weight>
+            
+            <properties>
+                <light/>
+            </properties>
         </armour>
 
         <armour name="Kurbal cuirass">
             <protection>+1</protection>
             <load>0.5</load>
+            <weight>0.5</weight>
             <notes>Can be worn over soft leather.</notes>
+            
+            <properties>
+                <light/>
+            </properties>
         </armour>
 
         <armour name="Kurbal greaves">
             <protection>+1</protection>
             <load>0.25</load>
             <notes>Can be worn over soft leather.</notes>
+            <properties>
+                <light/>
+            </properties>
         </armour>
 
         <armour name="Kurbal vambraces">
             <protection>+1</protection>
             <load>0.25</load>
             <notes>Can be worn over soft leather.</notes>
+            <properties>
+                <light/>
+            </properties>
         </armour>
 
         <armour name="Fur jacket">
             <protection>+4</protection>
             <load>2</load>
+            <properties>
+                <light/>
+            </properties>
         </armour>
 
         <armour name="Fur trousers">
             <protection>+3</protection>
             <load>2</load>
+            <properties>
+                <light/>
+            </properties>
         </armour>
 
         <armour name="Metal helm">
             <protection>+1</protection>
             <load>0.5</load>
+            <properties>
+                <heavy/>
+            </properties>
         </armour>
 
         <armour name="Chain habergeon">
             <protection>+5</protection>
             <load>3</load>
             <property>heavy</property>
+            <properties>
+                <mail/>
+                <heavy/>
+            </properties>
         </armour>
 
         <armour name="Chain hauberk">
             <protection>+8</protection>
             <load>4</load>
             <property>heavy</property>
+            <properties>
+                <mail/>
+                <heavy/>
+            </properties>
         </armour>
 
         <armour name="Chain leggings">
             <protection>+5</protection>
             <load>3</load>
+            <properties>
+                <mail/>
+                <heavy/>
+            </properties>
         </armour>
 
         <armour name="Chain coif">
             <protection>+1</protection>
             <load>0.5</load>
             <notes>Often worn under a helm.</notes>
+            <properties>
+                <mail/>
+                <heavy/>
+            </properties>
         </armour>
 
         <armour name="Ring habergeon">
@@ -975,6 +1054,10 @@
             <load>4</load>
             <property>heavy</property>
             <notes>Can be worn over soft leather.</notes>
+            <properties>
+                <mail/>
+                <heavy/>
+            </properties>
         </armour>
 
         <armour name="Ring hauberk">
@@ -982,20 +1065,32 @@
             <load>5</load>
             <property>heavy</property>
             <notes>Can be worn over soft leather.</notes>
+            <properties>
+                <mail/>
+                <heavy/>
+            </properties>
         </armour>
 
         <armour name="Ring leggings">
             <protection>+5</protection>
             <load>4</load>
             <notes>Can be worn over soft leather.</notes>
+            <properties>
+                <mail/>
+                <heavy/>
+            </properties>
         </armour>
 
         <armour name="Ring coif">
             <protection>+1</protection>
             <load>1</load>
             <notes>Often worn under a helm.</notes>
+            <properties>
+                <mail/>
+                <heavy/>
+            </properties>
         </armour>
-
+<!--
         <armour name="Plate cuirass">
             <protection>+3</protection>
             <load>1.5</load>
@@ -1020,32 +1115,6 @@
             <notes>Can be worn over mail and/or soft leather. Cannot
             be combined with a cuirass.</notes>
         </armour>
-
-        <armour name="Padded armour">
-            <item name="Padded jacket"/>
-            <item name="Soft leather trousers"/>
-        </armour>
-
-        <armour name="Leather armour">
-            <item name="Hard leather jacket"/>
-            <item name="Soft leather trousers"/>
-            <item name="Metal helm"/>
-        </armour>
-
-        <armour name="Half chain">
-            <item name="Soft leather jacket"/>
-            <item name="Soft leather trousers"/>
-            <item name="Chain vest"/>
-            <item name="Metal helm"/>
-        </armour>
-
-        <armour name="Full chain">
-            <item name="Soft leather jacket"/>
-            <item name="Soft leather trousers"/>
-            <item name="Chain hauberk"/>
-            <item name="Chain trousers"/>
-            <item name="Chain coif"/>
-            <item name="Metal helm"/>
-        </armour>
+ -->
     </armourlist>
 </equipment>
