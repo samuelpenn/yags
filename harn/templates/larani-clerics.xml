@@ -1,28 +1,35 @@
 <?xml version="1.0"?>
+
 <character-templates>
 
 <character-template name="Order of Hyvrik">
 
     <description>
-    The Order of Hyvrik is the Larani clerical order which sponsors
-    the fighting order Checkered Shield. The order is very wealthy,
-    holding vast estates throughout Kanday.
-    <br/>
-    Most members of the Order are temple priests, trained in the
-    teachings of their goddess, and to some extent in war, so that
-    they are at least able to defend themselves and their parish
-    from danger.
+		<background>
+			<para>
+			The Order of Hyvrik is the Larani clerical order which sponsors
+			the fighting order Checkered Shield. The order is very wealthy,
+			holding vast estates throughout Kanday.
+			</para>
+			<para>
+			Most members of the Order are temple priests, trained in the
+			teachings of their goddess, and to some extent in war, so that
+			they are at least able to defend themselves and their parish
+			from danger. However, fighting is generally left to others unless
+			absolutely necessary.
+			</para>
+		</background>
     </description>
 
 	<attributes points="48">
-		<strength score="3" weight="6"/>
-		<stamina score="3" weight="3"/>
-		<agility score="2" weight="1"/>
-		<dexterity score="3" weight="3"/>
-		<perception score="3" weight="3"/>
-		<intelligence score="3" weight="6"/>
-		<charisma score="4" weight="9"/>
-		<will score="4" weight="9"/>
+		<attribute name="strength" score="3" weight="6"/>
+		<attribute name="stamina" score="3" weight="3"/>
+		<attribute name="agility" score="2" weight="1"/>
+		<attribute name="dexterity" score="3" weight="3"/>
+		<attribute name="perception" score="3" weight="3"/>
+		<attribute name="intelligence" score="3" weight="6"/>
+		<attribute name="charisma" score="4" weight="9"/>
+		<attribute name="will" score="4" weight="9"/>
 	</attributes>
 
 	<advantages points="14">
@@ -54,13 +61,20 @@
 			<skill name="Speak own" score="4" weight="0"/>
 			<skill name="Scribe own" score="4" weight="0"/>
 		</group>
+	</skills>
 
-		<group name="Skills at age 16" type="age16">
+	<skills age="16">
+		<group name="Misc" type="skills">
 			<skill name="Religion (Larani)" score="4" weight="3"/>
 			<skill name="Weapon and shield" score="3" weight="3"/>
 			<skill name="First aid" score="2" weight="3"/>
             <skill name="Ride" score="2" weight="3"/>
             <skill name="Law" score="2" weight="6"/>
+
+            <skill name="Etiquette" score="0" weight="3"/>
+		</group>
+
+		<group name="Larani" type="invocations">
 			<skill name="Blessing" score="2" weight="3"/>
 			<skill name="Banner of Mendiz" score="2" weight="1"/>
 			<skill name="Larani's Shield" score="1" weight="1"/>
@@ -70,57 +84,66 @@
             <skill name="Passage to Tirithor" score="1" weight="3"/>
             <skill name="Curse of the Reluctant Warrior" score="1" weight="3"/>
             <skill name="Courage of Mendiz" score="1" weight="1"/>
-            <skill name="Etiquette" score="0" weight="3"/>
 		</group>
-        
-        <group name="Skills at age 21" type="age21">
-            <skill name="Weapon and shield" score="4"/>
-            <skill name="Law" score="3"/>
+	</skills>
+
+	<skills age="21">
+        <group name="Misc" type="skills">
+            <skill name="Law" score="4"/>
             <skill name="Etiquette" score="1"/>
         </group>
+	</skills>
 
-		<group name="Skills at age 25" type="age25">
+	<skills age="25">
+		<group name="Larani" type="invocations">
             <skill name="Passage to Tirithor" score="3"/>
             <skill name="Curse of the Reluctant Warrior" score="3"/>
 		</group>
+	</skills>
 
-		<group name="Skills at age 30" type="age30">
-			<skill name="Law" score="4"/>
-            <skill name="Blessing" score="3"/>
+	<skills age="30">
+		<group name="Misc" type="skills">
             <skill name="First aid" score="3"/>
+		</group>
+
+		<group name="Larani" type="invocations">
+			<skill name="Blessing" score="4"/>
 		</group>
 	</skills>
 
 	<equipment>
-		<item name="Broad sword"/>
-		<item name="Shield"/>
-		<item name="Half chain"/>
         <item name="Larani robes"/>
 	</equipment>
 </character-template>
 
+
 <character-template name="Order of Hyvrik Warrior">
 
     <description>
-    The Order of Hyvrik is the Larani clerical order which sponsors
-    the fighting order Checkered Shield. The order is very wealthy,
-    holding vast estates throughout Kanday.
-    <br/>
-    Most members of the Order are temple priests, trained in the
-    teachings of their goddess, and to some extent in war, so that
-    they are at least able to defend themselves and their parish
-    from danger.
+		<background>
+			<para>
+			The Order of Hyvrik is the Larani clerical order which sponsors
+			the fighting order Checkered Shield. The order is very wealthy,
+			holding vast estates throughout Kanday.
+			</para>
+			<para>
+			Most members of the Order are temple priests, trained in the
+			teachings of their goddess, and to some extent in war, so that
+			they are at least able to defend themselves and their parish
+			from danger.
+			</para>
+		</background>
     </description>
 
 	<attributes points="48">
-		<strength score="4" weight="6"/>
-		<stamina score="3" weight="3"/>
-		<agility score="2" weight="1"/>
-		<dexterity score="3" weight="3"/>
-		<perception score="3" weight="3"/>
-		<intelligence score="3" weight="6"/>
-		<charisma score="4" weight="9"/>
-		<will score="4" weight="9"/>
+		<attribute name="strength" score="4" weight="6"/>
+		<attribute name="stamina" score="3" weight="3"/>
+		<attribute name="agility" score="2" weight="1"/>
+		<attribute name="dexterity" score="3" weight="3"/>
+		<attribute name="perception" score="3" weight="3"/>
+		<attribute name="intelligence" score="3" weight="6"/>
+		<attribute name="charisma" score="4" weight="9"/>
+		<attribute name="will" score="4" weight="9"/>
 	</attributes>
 
 	<advantages points="18">
@@ -152,13 +175,19 @@
 			<skill name="Speak own" score="4" weight="0"/>
 			<skill name="Scribe own" score="4" weight="0"/>
 		</group>
+	</skills>
 
-		<group name="Skills at age 16" type="age16">
+	<skills age="16">
+		<group name="Misc" type="skills">
 			<skill name="Religion (Larani)" score="4" weight="3"/>
 			<skill name="Weapon and shield" score="3" weight="3"/>
 			<skill name="First aid" score="2" weight="3"/>
             <skill name="Ride" score="2" weight="3"/>
             <skill name="Law" score="2" weight="6"/>
+            <skill name="Etiquette" score="0" weight="3"/>
+		</group>
+
+		<group name="Larani" type="invocations">
 			<skill name="Blessing" score="2" weight="3"/>
 			<skill name="Banner of Mendiz" score="2" weight="1"/>
 			<skill name="Larani's Shield" score="1" weight="1"/>
@@ -168,21 +197,26 @@
             <skill name="Passage to Tirithor" score="1" weight="3"/>
             <skill name="Curse of the Reluctant Warrior" score="1" weight="3"/>
             <skill name="Courage of Mendiz" score="1" weight="1"/>
-            <skill name="Etiquette" score="0" weight="3"/>
 		</group>
-        
-        <group name="Skills at age 21" type="age21">
+	</skills>
+
+	<skills age="21">
+        <group name="Misc" type="skills">
             <skill name="Weapon and shield" score="4"/>
             <skill name="Law" score="3"/>
             <skill name="Etiquette" score="1"/>
         </group>
+	</skills>
 
-		<group name="Skills at age 25" type="age25">
+	<skills age="25">
+		<group name="Larani" type="invocations">
             <skill name="Passage to Tirithor" score="3"/>
             <skill name="Curse of the Reluctant Warrior" score="3"/>
 		</group>
+	</skills>
 
-		<group name="Skills at age 30" type="age30">
+	<skills age="30">
+		<group name="Misc" type="skills">
 			<skill name="Law" score="4"/>
             <skill name="Blessing" score="3"/>
             <skill name="First aid" score="3"/>

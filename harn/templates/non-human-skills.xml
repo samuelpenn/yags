@@ -1,7 +1,31 @@
 <?xml version="1.0"?>
 <character-templates>
 
-<character-template name="Sindarin basic skills">
+<character-template name="Sindarin Starting Skills">
+	<description>
+		<background>
+			<para>
+			Sindarin begin the game much older than human characters, generally
+			in the region of 50 to 150 years. Older Sindarin are possible,
+			but it's difficult to rationalise a Sindarin of this age being
+			of 'beginning character' capability.
+			</para>
+			<para>
+			The Sindarin character's age should be chosen by the player, and
+			it has no effect on the number of skill points gained. Sindarin
+			are a fickle lot, and how much a Sindarin has learnt is as much
+			a factor of their mood for the last few decades, as it is of their
+			age.
+			</para>
+			<para>
+			Sindarin player characters have a further 10 experience points
+			to place on skills on their choice. If they wish to buy further
+			experience with advantages, this is possible, though at double
+			normal cost. Sindarin characters start with a lot of skills, though
+			not much flexibility.
+			</para>
+		</background>
+	</description>
 
 	<skills>
 		<group name="Talents" type="talents">
@@ -22,8 +46,10 @@
 			<skill name="Scribe own" score="4"/>
 			<skill name="Speak Harnic" score="4"/>
 		</group>
+	</skills>
 
-		<group name="Other skills" type="age16">
+	<skills age="50+">
+		<group name="Misc" type="skills">
 			<skill name="Bow" score="3"/>
 			<skill name="Dance" score="2"/>
 			<skill name="Herb lore" score="2"/>
@@ -32,12 +58,27 @@
 			<skill name="Single weapon" score="3"/>
 			<skill name="Survival" score="2"/>
 		</group>
-
 	</skills>
 
 </character-template>
 
-<character-template name="Khuzdul basic skills">
+<character-template name="Khuzdul Starting Skills">
+
+	<description>
+		<background>
+			<para>
+			Khuzdul player characters will start the game somewhere between
+			50 and 100 years of age. Khuzdul live well into their third century,
+			sometimes longer, so this is considered to be a young adult.
+			</para>
+			<para>
+			Characters get a further 10 experience points to spend on other
+			skills. There is no modification of experience for age. Khuzdul
+			characters may buy extra experience with advantages, at the normal
+			rates.
+			</para>
+		</background>
+	</description>
 
 	<skills>
 		<group name="Talents" type="talents">
@@ -50,7 +91,7 @@
 			<skill name="Stealth" score="1"/>
 			<skill name="Throw" score="2"/>
 		</group>
-		
+
 		<group name="Common Knowledges" type="knowledges">
 			<skill name="Area lore" score="2"/>
 			<skill name="Folk lore (Khuzdul)" score="3"/>
@@ -59,16 +100,10 @@
 			<skill name="Speak Harnic" score="4"/>
 			<skill name="History (Khuzdul)" score="2"/>
 		</group>
-    Trade                3
-    Weapon and Shield    3
-    Armourer            3
-    Blacksmith            3
-    Glassworking        3
-    Jewelcraft            3
-    Mining            5
-    Weaponsmith        3
+	</skills>
 
-		<group name="Other skills" type="age16">
+	<skills age="50+">
+		<group name="Misc" type="skills">
 			<skill name="Trade" score="3"/>
 			<skill name="Weapon and shield" score="3"/>
 			<skill name="Armourer" score="2"/>

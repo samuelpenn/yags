@@ -3,27 +3,42 @@
 <character-template name="Eight Demons Clerical Order">
 
 	<description>
+		<background>
+		<para>
 		A female only clerical order, infamous for sexual torture,
-		mutilation and the sacrifice of male captives. The sponsor
+		mutilation and the sacrifice of male captives. They sponsor
 		the fighting order Cohorts of Gashang.
+		</para>
+		<para>
+		Eight Demons clerics are considered capable of taking up
+		duties at the age of 21, and player characters should not
+		start younger than this.
+		</para>
+		<para>
+		Eight Demons are rarely seen outside of their temples, and
+		especially not 'roughing it' away from civilisation. They
+		enjoy the intrigues of city life, as well as the torture
+		chambers of their temple.
+		</para>
+		</background>
 	</description>
 
 	<attributes points="48">
-		<strength score="3"/>
-		<stamina score="4"/>
-		<agility score="2"/>
-		<dexterity score="3"/>
-		<perception score="2"/>
-		<intelligence score="3"/>
-		<charisma score="4"/>
-		<will score="3"/>
+		<attribute name="strength" score="3"/>
+		<attribute name="stamina" score="4"/>
+		<attribute name="agility" score="2"/>
+		<attribute name="dexterity" score="3"/>
+		<attribute name="perception" score="2"/>
+		<attribute name="intelligence" score="3"/>
+		<attribute name="charisma" score="4"/>
+		<attribute name="will" score="3"/>
 	</attributes>
 
 	<advantages points="10">
 		<advantage name="attributes" cost="+2"/>
 		<advantage name="literate" cost="+2"/>
-		<advantage name="social status" cost="+2"/>
-		<advantage name="experience" cost="+3"/>
+		<advantage name="social status (cleric)" cost="+2"/>
+		<advantage name="experience (6 xp)" cost="+3"/>
 		<advantage name="fanatic" score="+3"
 					target="Agrik" cost="-3"/>
 		<advantage name="deviant" score="+4"
@@ -32,43 +47,73 @@
 
 	<skills>
 		<group name="Talents" type="talents">
-			<skill name="Athletics" score="1"/>
-			<skill name="Awareness" score="2"/>
-			<skill name="Brawl" score="3"/>
-			<skill name="Charm" score="2"/>
-			<skill name="Guile" score="3"/>
-			<skill name="Sleight" score="2"/>
-			<skill name="Stealth" score="1"/>
-			<skill name="Throw" score="1"/>
+			<skill name="Athletics" score="1" weight="1"/>
+			<skill name="Awareness" score="2" weight="3"/>
+			<skill name="Brawl" score="3" weight="1"/>
+			<skill name="Charm" score="2" weight="6"/>
+			<skill name="Guile" score="3" weight="6"/>
+			<skill name="Sleight" score="2" weight="3"/>
+			<skill name="Stealth" score="1" weight="1"/>
+			<skill name="Throw" score="1" weight="1"/>
 		</group>
 
 		<group name="Common Knowledges" type="knowledges">
-			<skill name="Area lore" score="2"/>
-			<skill name="Folk lore" score="2"/>
-			<skill name="Speak own" score="4"/>
-			<skill name="Scribe own" score="4"/>
+			<skill name="Area lore" score="2" weight="1"/>
+			<skill name="Folk lore" score="2" weight="1"/>
+			<skill name="Speak own" score="4" weight="0"/>
+			<skill name="Scribe own" score="4" weight="0"/>
+		</group>
+	</skills>
+
+	<skills age="16">
+		<group name="Talents" type="talents">
+			<skill name="Charm" score="3" weight="3"/>
 		</group>
 
-		<group name="Skills at age 21" type="age21">
-			<skill name="Religion (Agrik)" score="4"/>
+		<group name="Misc" type="skills">
+			<skill name="Religion (Agrik)" score="4" weight="3"/>
+			<skill name="Torture" score="4" weight="6"/>
+			<skill name="First aid" score="2" weight="3"/>
+			<skill name="Herb lore" score="0" weight="3"/>
+		</group>
+
+
+		<group name="Agrik" type="invocations">
+			<skill name="Blessing" score="2" weight="3"/>
+			<skill name="Ak-Syt's Peace" score="2" weight="6"/>
+			<skill name="Emyn's Cut" score="2" weight="6"/>
+			<skill name="Shield of Amanya" score="1" weight="3"/>
+		</group>
+	</skills>
+
+	<skills age="21">
+		<group name="Misc" type="skills">
 			<skill name="Torture" score="5"/>
-			<skill name="Single weapon" score="4"/>
-			<skill name="First aid" score="1"/>
-			<skill name="Blessing" score="2"/>
-			<skill name="Ak-Syt's Peace" score="2"/>
-			<skill name="Emyn's Cut" score="2"/>
-			<skill name="Shield of Amanya" score="1"/>
+			<skill name="First aid" score="3"/>
 		</group>
 
-		<group name="Skills at age 25" type="age25">
-			<skill name="Ak-Syt's Peace" score="3"/>
-			<skill name="Emyn's Cut" score="3"/>
+		<group name="Agrik" type="invocations">
 			<skill name="Shield of Amanya" score="2"/>
 		</group>
+	</skills>
 
-		<group name="Skills at age 30" type="age30">
-			<skill name="First aid" score="2"/>
-			<skill name="Herb lore" score="1"/>
+	<skills age="25">
+		<group name="Talents" type="talents">
+			<skill name="Stealth" score="2"/>
+		</group>
+
+		<group name="Agrik" type="invocations">
+			<skill name="Ak-Syt's Peace" score="3"/>
+			<skill name="Emyn's Cut" score="3"/>
+		</group>
+	</skills>
+
+	<skills age="30">
+		<group name="Misc" type="skills">
+			<skill name="Herb lore" score="2"/>
+		</group>
+
+		<group name="Agrik" type="invocations">
 			<skill name="Ak-Syt's Peace" score="4"/>
 			<skill name="Shield of Amanya" score="3"/>
 		</group>
@@ -81,28 +126,36 @@
 	</equipment>
 </character-template>
 
+
+
 <character-template name="Fuming Gate Clerical Order">
 	<description>
+		<background>
 		A clerical order based in Golotha. It sponsors the Copper Hook
 		fighting order.
+		<br/>
+		Clerics of the Fuming Gate are normally considered ready to take
+		up duties at the age of 21. Player character clerics of the
+		Fuming Gate should be at least 21 years old.
+		</background>
 	</description>
 
 	<attributes points="48">
-		<strength score="3"/>
-		<stamina score="3"/>
-		<agility score="3"/>
-		<dexterity score="3"/>
-		<perception score="2"/>
-		<intelligence score="3"/>
-		<charisma score="4"/>
-		<will score="3"/>
+		<attribute name="strength" score="3"/>
+		<attribute name="stamina" score="3"/>
+		<attribute name="agility" score="3"/>
+		<attribute name="dexterity" score="3"/>
+		<attribute name="perception" score="2"/>
+		<attribute name="intelligence" score="3"/>
+		<attribute name="charisma" score="4"/>
+		<attribute name="will" score="3"/>
 	</attributes>
 
 	<advantages points="6">
 		<advantage name="attributes" cost="+1"/>
 		<advantage name="literate" cost="+2"/>
 		<advantage name="social status" cost="+2"/>
-		<advantage name="experience" cost="+1"/>
+		<advantage name="experience (2 xp)" cost="+1"/>
 		<advantage name="fanatic" score="+3"
                 target="Agrik" cost="-3"/>
         <advantage name="deviant" score="+3"
@@ -128,21 +181,48 @@
 			<skill name="Speak own" score="4"/>
 			<skill name="Scribe own" score="4"/>
 		</group>
+	</skills>
 
-        <group name="Skills for age 21" type="age21">
+	<skills age="16">
+		<group name="Misc" type="skills">
             <skill name="Religion (Agrik)" score="4"/>
-            <skill name="Torture" score="4"/>
-            <skill name="Single weapon" score="4"/>
+            <skill name="Torture" score="3"/>
+            <skill name="Single weapon" score="3"/>
+		</group>
+
+		<group name="Agrik" type="invocations">
             <skill name="Blessing" score="2"/>
             <skill name="Ak-Syt's Peace" score="2"/>
             <skill name="Shield of Amanya" score="2"/>
-            <skill name="Emyn's Cut" score="2"/>
-        </group>
+            <skill name="Emyn's Cut" score="1"/>
+		</group>
+	</skills>
 
-		<group name="Skills for age 25" type="age25">
+	<skills age="21">
+        <group name="Misc" type="skills">
+            <skill name="Torture" score="4"/>
+            <skill name="Single weapon" score="4"/>
 		</group>
 
-		<group name="Skills for age 30" type="age30">
+		<group name="Agrik" type="invocations">
+            <skill name="Emyn's Cut" score="2"/>
+        </group>
+	</skills>
+
+	<skills age="25">
+		<group name="Misc" type="skills">
+			<skill name="Law" score="2"/>
+			<skill name="Torture" score="5"/>
+		</group>
+	</skills>
+
+	<skills age="30">
+		<group name="Misc" type="skills">
+			<skill name="Law" score="4"/>
+		</group>
+
+		<group name="Agrik" type="invocations">
+			<skill name="Shield of Amanya" score="3"/>
 		</group>
     </skills>
 

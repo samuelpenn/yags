@@ -4,36 +4,42 @@
 <character-template name="Priest of Morgath">
 
     <description>
-    Priests of Morgath are nasty.            
+		<background>
+			<para>
+			Priests of Morgath are generally subtle, keeping a low
+			profile in regions where their religion is outlawed. They
+			will have contacts with the underworld, and those who are
+			also nobles will have a network of contacts of their own.
+			</para>
+		</background>
     </description>
 
 	<attributes points="48">
-		<strength score="2" weight="1"/>
-		<stamina score="2" weight="1"/>
-		<agility score="2" weight="1"/>
-		<dexterity score="3" weight="3"/>
-		<perception score="3" weight="3"/>
-		<intelligence score="3" weight="3"/>
-		<charisma score="4" weight="6"/>
-		<will score="4" weight="6"/>
+		<attribute name="strength" score="2" weight="1"/>
+		<attribute name="stamina" score="2" weight="1"/>
+		<attribute name="agility" score="2" weight="1"/>
+		<attribute name="dexterity" score="3" weight="3"/>
+		<attribute name="perception" score="3" weight="3"/>
+		<attribute name="intelligence" score="3" weight="3"/>
+		<attribute name="charisma" score="4" weight="6"/>
+		<attribute name="will" score="4" weight="6"/>
 	</attributes>
 
-	<advantages points="14">
+	<advantages points="4">
 		<advantage name="attributes" cost="-1"/>
 		<advantage name="literate" cost="+2"/>
 		<advantage name="social status" cost="+2"/>
-		<advantage name="experience" core="10pts" cost="+5"/>
 	</advantages>
 
 	<skills>
 		<group name="Talents" type="talents">
 			<skill name="Athletics" score="2" weight="1"/>
-			<skill name="Awareness" score="2" weight="1"/>
+			<skill name="Awareness" score="3" weight="6"/>
 			<skill name="Brawl" score="2" weight="1"/>
-			<skill name="Charm" score="3" weight="6"/>
-			<skill name="Guile" score="3" weight="6"/>
+			<skill name="Charm" score="1" weight="3"/>
+			<skill name="Guile" score="2" weight="3"/>
 			<skill name="Sleight" score="1" weight="1"/>
-			<skill name="Stealth" score="1" weight="1"/>
+			<skill name="Stealth" score="3" weight="6"/>
 			<skill name="Throw" score="1" weight="1"/>
 		</group>
 
@@ -43,48 +49,49 @@
 			<skill name="Speak own" score="4" weight="0"/>
 			<skill name="Scribe own" score="4" weight="0"/>
 		</group>
+	</skills>
 
-		<group name="Skills at age 16" type="age16">
+	<skills age="16">
+		<group name="Misc" type="skills">
 			<skill name="Religion (Morgath)" score="4" weight="3"/>
-			<skill name="Weapon and shield" score="3" weight="3"/>
-			<skill name="First aid" score="2" weight="3"/>
-            <skill name="Ride" score="2" weight="3"/>
-            <skill name="Law" score="2" weight="6"/>
+			<skill name="Herb lore" score="3" weight="3"/>
+			<skill name="Streetwise" score="3" weight="3"/>
+		</group>
+
+		<group name="Morgath" type="invocations">
 			<skill name="Blessing" score="2" weight="3"/>
-			<skill name="Banner of Mendiz" score="2" weight="1"/>
-			<skill name="Larani's Shield" score="1" weight="1"/>
-			<skill name="Light of Dolithor" score="1" weight="1"/>
-            <skill name="Valamin's Insight" score="2" weight="3"/>
-            <skill name="Fast of the Tirannon" score="1" weight="1"/>
-            <skill name="Passage to Tirithor" score="1" weight="3"/>
-            <skill name="Curse of the Reluctant Warrior" score="1" weight="3"/>
-            <skill name="Courage of Mendiz" score="1" weight="1"/>
-            <skill name="Etiquette" score="0" weight="3"/>
+			<skill name="Speak with Dead" score="1"/>
+			<skill name="Heart of Darkness" score="1"/>
+			<skill name="Necrosy" score="2"/>
 		</group>
-        
-        <group name="Skills at age 21" type="age21">
-            <skill name="Weapon and shield" score="4"/>
-            <skill name="Law" score="3"/>
-            <skill name="Etiquette" score="1"/>
-        </group>
+	</skills>
 
-		<group name="Skills at age 25" type="age25">
-            <skill name="Passage to Tirithor" score="3"/>
-            <skill name="Curse of the Reluctant Warrior" score="3"/>
+	<skill age="21">
+		<group name="Morgath" type="invocations">
+			<skill name="Speak with Dead" score="2"/>
+			<skill name="Heart of Darkness" score="3">
+			<skill name="Necrosy" score="3"/>
 		</group>
+	</skill>
 
-		<group name="Skills at age 30" type="age30">
-			<skill name="Law" score="4"/>
+	<skill age="25">
+		<group name="Morgath" type="invocations">
+			<skill name="Heart of Darkness" score="4"/>
+			<skill name="Necrosy" score="4"/>
+		</group>
+	</skill>
+
+	<skill age="30">
+		<group name="Morgath" type="invocations">
+			<skill name="Speak with Dead" score="4"/>
             <skill name="Blessing" score="3"/>
-            <skill name="First aid" score="3"/>
 		</group>
 	</skills>
 
 	<equipment>
-		<item name="Broad sword"/>
-		<item name="Shield"/>
-		<item name="Half chain"/>
-        <item name="Larani robes"/>
+        <item name="Ceremonial robes"/>
+		<item name="Standard clothes"/>
+		<item name="Ceremonial knife"/>
 	</equipment>
 </character-template>
 
