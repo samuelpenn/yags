@@ -2,8 +2,8 @@
 
 <!--
     Bardic Techniques.
-    Version: $Revision: 1.4 $
-    Date:    $Date: 2004-07-11 20:55:35 $
+    Version: $Revision: 1.5 $
+    Date:    $Date: 2004-09-26 13:55:28 $
  -->
 
 <advantages>
@@ -25,9 +25,8 @@
     </advantage>
 
     <advantage name="Song of Dread" type="technique">
-        <cost points="4"/>
+        <cost points="3"/>
         <skill name="Perform"/>
-        <prerequisite>Song of Battle</prerequisite>
         
         <description>
             <para>
@@ -46,7 +45,7 @@
     </advantage>
     
     <advantage name="Song of War" type="technique">
-        <cost points="6"/>
+        <cost points="5"/>
         <skill name="Perform"/>
         <prerequisite>Song of Battle</prerequisite>
         
@@ -60,7 +59,7 @@
     </advantage>
     
     <advantage name="Song of Terror" type="technique">
-        <cost points="8"/>
+        <cost points="5"/>
         <skill name="Perform"/>
         <prerequisite>Song of Dread</prerequisite>
         
@@ -74,7 +73,7 @@
     </advantage>
     
     <advantage name="Song of Fury" type="technique">
-        <cost points="9"/>
+        <cost points="7"/>
         <skill name="Perform"/>
         <prerequisite>Song of War</prerequisite>
         
@@ -89,19 +88,37 @@
     </advantage>
     
     <advantage name="Song of Sleep" type="technique">
-        <cost points="2"/>
+        <cost points="3"/>
         <skill name="Perform"/>
         
         <description>
+            <para>
+                All listeners must make a contested Ego check against
+                the bard's charisma x perform or gain a level of fatigue
+                per success level the bard obtains. A check must be
+                made every five minutes, and listeners are penalised
+                by fatigue and injury penalties. If listeners are
+                physically active (e.g. combat), they can double
+                their roll. 
+            </para>
         </description>
     </advantage>
     
-    <advantage name="Song of Love" type="technique">
-        <cost points="4"/>
+    <advantage name="Song of Entrancement" type="technique">
+        <cost points="5"/>
         <skill name="Perform"/>
         <prerequisite>Song of Sleep</prerequisite>
         
         <description>
+            <para>
+                The bard is able to sway the minds of listeners more
+                effectively, using emotion laden song rather than
+                rational discourse. Listeners must be actively
+                listening, and get an ego (or other passion) check
+                to resist the bard's charisma x perform. Each level of
+                success that the bard gets sways an emotion by
+                one level.
+            </para<
         </description>
     </advantage>
 
@@ -117,18 +134,10 @@
         </description>
     </advantage>
 
-    <advantage name="Entrancement" type="technique">
-        <cost points="5"/>
-        <skill name="Perform"/>
-
-        <description>
-        </description>
-    </advantage>
-
     <advantage name="Suggestion" type="technique">
         <cost points="7"/>
         <skill name="Perform"/>
-        <prerequisite>Entrancement</prerequisite>
+        <prerequisite>Song of Entrancement</prerequisite>
 
         <description>
         </description>
