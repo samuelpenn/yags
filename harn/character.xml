@@ -14,8 +14,8 @@
     </author>
 
     <referenceinfo>
-        <cvsversion>$Revision: 1.6 $</cvsversion>
-        <cvsdate>$Date: 2001-12-16 22:15:52 $</cvsdate>
+        <cvsversion>$Revision: 1.7 $</cvsversion>
+        <cvsdate>$Date: 2001-12-27 21:10:45 $</cvsdate>
         <copyright>
             <year>2001</year>
             <holder>Samuel Penn</holder>
@@ -23,7 +23,7 @@
         </copyright>
     </referenceinfo>
     
-    <displayscheme>
+    <displayscheme name="character">
         <colour>green</colour>
         <darkcolour>#aaffaa</darkcolour>
         <lightcolour>#ddffdd</lightcolour>
@@ -260,24 +260,63 @@ or which affect the starting state of the character.
 
 <sect4><title>Social Class</title>
 <para>
-A character is assumed to be a freeman (ceorl) unless this advantage
+A character is assumed to be a freeman unless this advantage
 is taken. The main effect of social rank within the game is to
-determine the  weregild of the character. A person's weregild
-is a measure of how much their oath is worth in a court of law.
+determine the  weregild of the character.
 </para>
+
+<table>
+	<colspec colwidth="7cm"/>
+	<colspec colwidth="1cm"/>
+	<thead>
+		<row>
+			<entry>Social class</entry>
+			<entry>Cost</entry>
+		</row>
+	</thead>
+	<tbody>
+		<row><entry>Outlaw</entry><entry>-6</entry></row>
+		<row><entry>Slave</entry><entry>-4</entry></row>
+		<row><entry>Serf</entry><entry>-2</entry></row>
+		<row><entry>Freeman (default for PCs)</entry><entry>0</entry></row>
+		<row><entry>Guilded</entry><entry>+1</entry></row>
+		<row><entry>Clergy</entry><entry>+2</entry></row>
+		<row><entry>Landless noble</entry><entry>+3</entry></row>
+		<row><entry>Landowning noble</entry><entry>+5</entry></row>
+		<row><entry>High noble</entry><entry>+10</entry></row>
+	</tbody>
+</table>
 </sect4>
 
 <sect4><title>Wealth</title>
 <para>
-The starting wealth of a character is determined from their social
-class. A person has an amount of money put aside equal to one
-twentieth their weregild.
+The wealth of a character is normally related to their social class,
+though this is not always the case. A very successful merchant could
+be very rich, but they will still be a mere guilded freeman, of lower
+rank than a poor nobleman.
 </para>
 
 <para>
-A character may start with more than the normal wealth. Each point
-of advantage (up to a maximum of 5) doubles the starting money
-of a character.
+A typical freeman will own 100 + d20 x 5 pence in goods and property.
+Most of this will be property - a house, with a small plot of land,
+some chickens and maybe a cow. 10% of this may be cash, or other easily
+exchangable goods. Cashing in property will be difficult, since there
+won't be anyone able to afford it, except for the local lord who will
+probably figure he can just move in anyway for free once the character
+has vanished off 'adventuring'.
+</para>
+
+<para>
+The character templates should give an idea as to how much wealth a
+character begins with. A mercanary will have a sword and armour in
+place of land, a merchant may have a small shop, or a caravan and
+some mules.
+</para>
+
+<para>
+If a character is to start with more than the norm, then it costs one
+point of advantage to increase the amount of wealth by a multiple.
+One point will double starting wealth, 2 points will triple it etc.
 </para>
 </sect4>
 
@@ -445,16 +484,7 @@ whether they are +3, +4 or +5 levels.
 </para>
 
 <para>
-Cruel: Character delights in the suffering of others.
-Curiosity: Character's curiosity often gets them into trouble.
-Love: Character has a strong love for another person, and they
-want to be with them, and make them happy.
-Meddler: Character enjoys meddling in the affairs of others.
-Personal hatred: Character has a strong hatred for a single person.
-Rare phobia: Character has a fear of some relatively rare thing,
-such as spiders, enclosed spaces or heights.
-Sensitive: Character is overly sensitive about some subject, be
-it suffering, abuse, foul language or whatever.
+<import-advantages href="options/minor-passions.xml"/>
 </para>
 </sect3>
 
@@ -465,40 +495,13 @@ on whether they are +3, +4 or +5.
 </para>
 
 <para>
-Brave: Character is brave, possibly foolhardy.
-Unfazable: Character never acts surprised, and takes everything
-in her stride. It doesn't mean that she's brave, she just always
-seem to do everything (even running away) with style.
+<import-advantages href="options/lesser-passions-adv.xml" type="passion"/>
 </para>
 </sect3>
 
 <sect3><title>Lesser Passions (Disadvantages)</title>
 <para>
-Coward: Favours personal safety over honour.
-Egotist: Character is a self centred, selfish bastard.
-Hatred: Has a strong dislike for a given group of people, and
-will neither trust nor befriend them.
-Impulsive: Character acts first, think later.
-Intolerant: Looks down on those who behave or look differently
-to the character.
-Loyalty: Has sworn his loyalty to another person, or a cause.
-It is a two way affair, so they may loose his loyalty if they
-act wrongly.
-Lustful: Character has a strong desire for sex, simply for the
-physical pleasure it gives.
-Manic: Character is full of boundless energy, cheerfulness and
-enthusiasm. However controlling the enthusiasm usefully can be
-a problem.
-Overconfidence: Character is overconfident.
-Paranoid: Trust no one.
-Uncommon phobia: Character has an irrational fear of relatively
-uncommon things, such as music, loud noises, death or blood.
-Violent: Character is prone to resorting to physical violence
-if they don't get their own way, are insulted or otherwise upset.
-Weakness: Character has a weakness for something such as alcohol,
-money or women. People may frown upon his activities, but only
-for the amount of time they spend pursuing them, not for what
-they are.
+<import-advantages href="options/lesser-passions-dis.xml" type="passion"/>
 </para>
 </sect3>
 
@@ -509,21 +512,7 @@ on whether they are +3, +4 or +5.
 </para>
 
 <para>
-Common phobia: Character has a phobia of a common thing, such
-as the opposite sex, the open air or darkness.
-Death wish: Character no longer has a reason for living, and seeks
-only to end his life in some suitably heroic way.
-Depression: Character lacks energy and enthusiasm, and easily
-gives up if the going gets tough.
-Deviant: Character has a craving for something most people consider
-unhealthy - illicit drugs, sadism or deviant sexual practises.
-If anyone found out, at best she'd loose any reputation she might
-of had.
-Driving goal: Character has a mission in life which will not be
-easy to accomplish.
-Fanatic: Character is fanatically loyal to a person or a cause.
-Unlike loyalty, his devotion cannot be shaken, whatever the focus
-of his passion does.
+<import-advantages href="options/greater-passions-dis.xml" type="passion"/>
 </para>
 </sect3>
 </sect2>
@@ -1084,7 +1073,7 @@ all start at a level of 2.
 </para>
 
 <para>
-<skilllist>
+<skill-list>
 	<skill name="Athletics" type="talent">
 		<description>
 			Gymnastic and acrobatic feats are covered by this skill,
@@ -1126,7 +1115,7 @@ all start at a level of 2.
 			<example target="x10 range">Vision under starlight</example>
 		</examples>
 	</skill>
-	
+
 	<skill name="Brawl" type="talent">
 		<description>
 			A general purpose combat skill covering dodging, punching
@@ -1134,17 +1123,24 @@ all start at a level of 2.
 			section.
 		</description>
 	</skill>
-	
+
 	<skill name="Charm" type="talent">
 		<description>
-			Your ability to be nice to people, or at least make them
+			The ability to be nice to people, or at least make them
 			think that you are. Calming people down, inciting them to riot,
 			or simply trying to impress them would use this skill. Generally
 			used with charisma, though can be used with will for organising
 			others.
 		</description>
+		<example target="15">Give a good impression</example>
+		<example target="20">Flirt successfully with someone (add appearance
+		to ability roll)</example>
+		<example target="20">Warm the heart of a guard</example>
+		<example target="-10">Other person is friendly</example>
+		<example target="+10">Other person is unfriendly</example>
+		<example target="+20">Other person is actively hostile</example>
 	</skill>
-	
+
 	<skill name="Guile" type="talent">
 		<description>
 			The ability to use deceit and deception in social situations,
@@ -1158,7 +1154,7 @@ all start at a level of 2.
 			detecting subterfuge in others.
 		</description>
 	</skill>
-	
+
 	<skill name="Sleight" type="talent">
 		<description>
 			Sleight of hand, from filching items on a market stall,
@@ -1166,7 +1162,7 @@ all start at a level of 2.
 			which requires a great deal of fine dexterity.
 		</description>
 	</skill>
-	
+
 	<skill name="Stealth" type="talent">
 		<description>
 			Moving quietly, hiding, and generally not being seen
@@ -1181,7 +1177,7 @@ all start at a level of 2.
 			accuracy. Based on perception.
 		</description>
 	</skill>
-</skilllist>
+</skill-list>
 </para>
 
 </sect2>
@@ -1190,12 +1186,12 @@ all start at a level of 2.
 <sect2><title>Knowledges</title>
 
 <para>
-<skilllist>
-	<skill name="Arcane lore" type="knowledge">
+<skill-list>
+	<skill name="Pvaric lore" type="knowledge">
 		<description>
 			Knowledge of esoteric subjects, such as how magic
 			works, the capability of magical artifacts and the like.
-			Used mostly by members of the Guild of Arcane Lore.
+			Used mostly by members of the Shek-Pvar.
 		</description>
 	</skill>
 	
@@ -1288,10 +1284,23 @@ all start at a level of 2.
 	<skill name="Speak own" type="knowledge">
 		<description>
 			The ability to speak your own language. This defaults
-			to four.
+			to four. Language skills are very rarely rolled.
 		</description>
 	</skill>
-</skilllist>
+
+	<skill name="Streetwise" type="knowledge">
+		<description>
+			Knowledge of the seedier sides of civilisation, including
+			being able to contact influential people, deal with the
+			thieves guild, and understand how gangs and organised crime
+			operates within a town or city.
+		</description>
+		<example target="10">Locate the best place to find contacts</example>
+		<example target="15">Make contact with the local thieves guild safely</example>
+		<example target="20">Get a basic understanding of the underworld in
+		a city after a day of investigation</example>
+	</skill>
+</skill-list>
 </para>
 </sect2>
 
@@ -1305,7 +1314,7 @@ for a specific knowledge.
 </para>
 
 <para>
-<skilllist>
+<skill-list>
 	<skill name="Gambling" type="social">
 		<description>
 			Knowledge of how to play games of chance. Guile is often
@@ -1337,7 +1346,7 @@ for a specific knowledge.
 			Possible types of instrument include string, percussion and wind.
 		</description>
 	</skill>
-	
+
 	<skill name="Poetry" type="social">
 		<description>
 			The knowledge of poems, and the ability to improvise new
@@ -1369,7 +1378,7 @@ for a specific knowledge.
 			bartering, and having some clue as to the value of goods.
 		</description>
 	</skill>
-</skilllist>
+</skill-list>
 </para>
 </sect2>
 
@@ -1381,7 +1390,7 @@ to teach them outside of the cult.
 </para>
 
 <para>
-<skilllist>
+<skill-list>
 	<skill name="Berserker" type="cult">
 		<cult>Agrik</cult>
 		<description>
@@ -1432,14 +1441,14 @@ to teach them outside of the cult.
 			torture. Normally based on intelligence.
 		</description>
 	</skill>
-</skilllist>
+</skill-list>
 </para>
 </sect2>
 
 
 <sect2><title>Wilderness Skills</title>
 <para>
-<skilllist>
+<skill-list>
 	<skill name="Boating" type="wilderness">
 		<description>
 			Being able to use a small oared boat. Based on intelligence
@@ -1494,7 +1503,7 @@ to teach them outside of the cult.
 			used to hide tracks.
 		</description>
 	</skill>
-</skilllist>
+</skill-list>
 </para>
 </sect2>
 
@@ -1512,9 +1521,13 @@ skill, the skill can be used to evaluate the quality of raw materials
 and finished goods, estimate prices and set up and run a business
 based around the profession.
 </para>
+<para>
+Some skills are only taught as part of a guilded occupation. Learning
+them if the character is not apprenticed to a master will be difficult.
+</para>
 
 <para>
-<skilllist>
+<skill-list>
 	<skill name="Armoury" type="professional">
 		<guilded/>
 		<description>
@@ -1612,8 +1625,8 @@ based around the profession.
 	<skill name="Glassworking" type="professional">
 		<guilded/>
 		<description>
-			The making of glassware, though this is a rare,
-			and highly sought after, skill.
+			The making of glassware, though this is a rare, and highly
+			sought after, skill.
 		</description>
 	</skill>
 	
@@ -1705,7 +1718,7 @@ based around the profession.
 			A profession which includes weaving and spindling.
 		</description>
 	</skill>
-</skilllist>
+</skill-list>
 </para>
 </sect2>
 
@@ -1717,7 +1730,7 @@ skills are used. Generally, a skill in a particular weapon is
 not necessary, just a style of fighting.
 </para>
 
-<para><skilllist>
+<para><skill-list>
 	<skill name="Battle" type="combat">
 		<description>
 			Knowledge of tactics and strategy for planning, and fighting,
@@ -1762,100 +1775,35 @@ not necessary, just a style of fighting.
 			Fighting with a weapon and shield.
 		</description>
 	</skill>
-</skilllist></para>
+</skill-list></para>
 
 </sect2>
 
 </sect1>
 
 
-<sect1><title>Sindarin Starting Skills</title>
-<para>
-Sindarin begin the game much older than human characters, generally
-in the region of 50 to 150 years. Older Sindarin are possible,
-but it's difficult to rationalise a Sindarin of this age being
-of 'beginning character' capability.
-</para>
+<sect1><title>Non-Human Starting Skills</title>
 
-<para>
-The Sindarin character's age should be chosen by the player, and
-it has no effect on the number of skill points gained. Sindarin
-are a fickle lot, and how much a Sindarin has learnt is as much
-a factor of their mood for the last few decades, as it is of their
-age.
-</para>
+<import-character-template href="templates/non-human-skills.xml"/>
 
-<para>
-Sindarin Common Knowledges
-    Speak Own (Sindarin)    4
-    Read/Write Sindarin    4
-    Speak other language    4
-    Area lore (Evael)        3
-    Folk lore (Sindarin)    3
-Sindarin Talents
-    Athletics    2    Guile        2
-    Awareness    4    Sleight    2
-    Brawl    2    Stealth    4
-    Charm    2    Throw    2
-Sindarin Beginning Skills
-    Bow                3
-    Dance            2
-    Herb lore            2
-    Poetry            3
-    Sing                2
-    Single weapon        3
-    Survival            2
-</para>
-
-<para>
-Sindarin player characters have a further 10 experience points
-to place on skills on their choice. If they wish to buy further
-experience with advantages, this is possible, though at double
-normal cost. Sindarin characters start with a lot of skills, though
-not much flexibility.
-</para>
 </sect1>
 
-<sect1><title>Khuzdul Starting Skills</title>
-<para>
-Khuzdul player characters will start the game somewhere between
-70 and 100 years of age. Khuzdul live well into their third century,
-sometimes longer, so this is considered to be a young adult.
-</para>
+<sect1><title>Character Templates</title>
 
-<para>
-Khuzdul Common Knowledges
-    Speak Own (Khuzdul)    4
-    Read/Write Khuzdul    4
-    Speak other language    4
-    Read/Write other        2
-    Area lore            2
-    Folk lore (Khuzdul)    3
-    History (Khuzdul)    2
+<sect2><title>Common Folk</title>
+<import-character-template href="templates/commonfolk.xml"/>
+</sect2>
 
-Khuzdul Talents
-    Athletics    3    Guile        1
-    Awareness    2    Sleight    2
-    Brawl    3    Sneak    1
-    Charm    1    Throw    2
 
-Khuzdul Beginning Skills
-    Trade                3
-    Weapon and Shield    3
-    Armourer            3
-    Blacksmith            3
-    Glassworking        3
-    Jewelcraft            3
-    Mining            5
-    Weaponsmith        3
-</para>
+<sect2><title>Warriors</title>
+<import-character-template href="templates/warriors.xml"/>
+</sect2>
 
-<para>
-Characters get a further 10 experience points to spend on other
-skills. There is no modification of experience for age. Khuzdul
-characters may buy extra experience with advantages, at the normal
-rates.
-</para>
+<sect2><title>Guilded Occupations</title>
+<import-character-template href="templates/guilded.xml"/>
+</sect2>
+
 </sect1>
+
 
 </article>
