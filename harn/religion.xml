@@ -13,7 +13,7 @@
             <year>2001</year>
             <holder>Samuel Penn</holder>
         </copyright>
-        <releaseinfo role="meta">$Revision: 1.5 $</releaseinfo>
+        <releaseinfo role="meta">$Revision: 1.6 $</releaseinfo>
     </referenceinfo>
     <revhistory>
         <revision>
@@ -96,6 +96,7 @@ It can range from a share of the crops, the loss of a valuable
 item, or the sacrifice of an animal, or even a person.
 </para>
 
+<sect4><title>Material Cost</title>
 <para>
 The material cost the sacrifice is given with the invocation 
 description, and is rated from low, to very high. This is
@@ -118,27 +119,39 @@ sacrificed can be used.
 </para>
 
 <para>
-Low: A days earnings.
+Low: A token amount, generally amounting to half a day's
+earnings.
 </para>
 
 <para>
-Moderate: A weeks earnings.
+Moderate: Two days earnings.
 </para>
 
 <para>
-High: A months earnings.
+High: A weeks earnings.
 </para>
 
 <para>
-Very high: A years earnings.
+Very high: A months earnings.
 </para>
+</sect4>
 
+<sect4><title>Spiritual Cost</title>
 <para>
 Some invocations have a spiritual cost as well. This cost is
 in luck points, which must be paid immediately. This is shown
 as /x after the material cost, where x is the number of luck
 points.
 </para>
+
+<para>
+This loss of luck is normally temporary, though if the invocation
+was used in a way the god is not happy with, it will be permanent.
+Generally, use of an invocation in a way that goes directly against
+the god's wishes will be forbidden, whilst unnecessary use of their
+power will result in luck being lost.
+</para>
+</sect4>
 </sect3>
 
 <sect3><title>Effects of an Invocation</title>
@@ -219,6 +232,148 @@ Any religious ritual which allows a priest to divine the
 aura of a person uses the following guide for use of their
 ritual skill.
 </para>
+
+<para>
+<table>
+    <colspec colwidth="1.5cm"/>
+    <colspec colwidth="6.5cm"/>
+    <thead>
+        <row>
+            <entry>Target</entry>
+            <entry>Information gained from Aura</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>10</entry>
+            <entry>
+            The bloodline or basic nature of the target is known.
+            Whether someone is Human, Sindarin, Faerie or an
+            elemental or demonoic spirit is known.
+            </entry>
+        </row>
+        <row>
+            <entry>20</entry>
+            <entry>
+            Elemental and divine affinities, if any. Shek-Pvar who
+            are attuned to an element will have an aura tainted by
+            that element. Priests of a god are also bound to their
+            god, and this affects their aura.
+            </entry>
+        </row>
+        <row>
+            <entry>30</entry>
+            <entry>
+            The physical and mental well being of the target is
+            known. Roughly how exhausted, injured and hungry the
+            target is can be determined, as well as their primary
+            emotions.
+            </entry>
+        </row>
+        <row>
+            <entry>40</entry>
+            <entry>
+            Knowledge of a person's morals, in regard to whether
+            they are good or evil is obtained.
+            </entry>
+        </row>
+        <row>
+            <entry>50</entry>
+            <entry>
+            If the target has any leanings towards Law or Chaos,
+            then this can be determined.
+            </entry>
+        </row>
+        <row>
+            <entry>60</entry>
+            <entry>
+            The religion of the target, even if they are not a
+            priest. Also given, is a general guide to how
+            strongly they follow the ideals of their faith.
+            </entry>
+        </row>
+    </tbody>
+</table>
+</para>
+
+</sect2>
+
+<sect2><title>Divine Intervention</title>
+<para>
+Invocations are not the only way in which a god may aid one
+of their followers. They are heavy on ritual and ceremony,
+and can only be used by those who are part of the mainstream
+church (since they will not be taught to anyone else).
+</para>
+
+
+<para>
+Any follower of a god however may call for divine intervention.
+Divine aid takes a round to be called for, though the character
+may perform other actions whilst doing so. However, the call
+for divine intervention must be made vocally, in a loud, clear
+voice. The name of the god must be invoked, and the nature of
+the request must be stated.
+</para>
+
+<para>
+Assuming that the request does not go against the morals of the
+god, then there is a chance that the god will intervene on
+behalf of their follower. The character spends a number of points
+of luck, and rolls for intervention as follows.
+
+<skillequation>
+    <attribute>luck spent</attribute>
+    <constant>5</constant>
+    <die/>
+</skillequation>
+
+The luck spent is always lost permanently, regardless of the
+outcome. The target number that must be obtained depends on how
+worthy the request is.
+</para>
+
+<para>
+<table>
+    <colspec colwidth="1.5cm"/>
+    <colspec colwidth="6.5cm"/>
+    <thead>
+        <row>
+            <entry>Target</entry>
+            <entry>Worthiness of request</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>20</entry>
+            <entry>
+            Very worthy.
+            </entry>
+        </row>
+        <row>
+            <entry>30</entry>
+            <entry>
+            Worthy.
+            </entry>
+        </row>
+        <row>
+            <entry>40</entry>
+            <entry>
+            Neutral.
+            </entry>
+        </row>
+        <row>
+            <entry>50</entry>
+            <entry>
+            Unworthy.
+            </entry>
+        </row>
+    </tbody>
+</table>
+</para>
+
+
+
 </sect2>
 
 <sect2><title>Priest Characters</title>
@@ -383,7 +538,9 @@ being very, very good in bed.
 <sect3><title>Silken Voice (Halea)</title>
 
 <para>
-<import-character-template href="templates/silkenvoice.xml" name="Silken Voice"/>
+<import-character-template href="templates/silkenvoice.xml" name="Silken Voice (Temptress)"/>
+<br/>
+<import-character-template href="templates/silkenvoice.xml" name="Silken Voice (Merchant)"/>
 </para>
 
 </sect3>
@@ -464,85 +621,12 @@ Law; weapon and shield; ride; lance; guile; battle.
 
 <sect3><title>Order of Hyvrik (Larani)</title>
 
-The Larani clerical order which sponsors the fighting-order
-Checkered Shield. The order is very wealthy, holding vast
-estates throughout Kanday. This template describes a fighting
-member of the order, trained to some extent to defend the weak
-and helpless and oppression.
+<para>
+<import-character-template href="templates/larani-clerics.xml" name="Order of Hyvrik"/>
+<br/>
+<import-character-template href="templates/larani-clerics.xml" name="Order of Hyvrik Warrior"/>
+</para>
 
-Non-Martial Member of Hyvrik
-Attributes (48 points)
-Strength    3    Perception    3
-Stamina    3    Intelligence    3
-Agility    2    Charisma    4
-Dexterity    3    Will    4
-Advantages and Disadvantages (14 points)
-+5 attributes        +2 literate
-+2 social status (clerical order)
-+5 exceptional training (10 points)
--3 terrible liar (-3)
--6 duty (aiding the church)
--4 loyalty (Larani, +4)
--1 sensitive (+3, suffering of the weak)
-Talents (24 points)
-Athletics    2    Guile    3
-Awareness    2    Sleight    1
-Brawl    2    Stealth    1
-Charm    3    Throw    1
-Common Knowledges (fixed)
-Area lore    2    Folk lore    2
-Speak own    4    Scribe    4
-Skills for age:        21    25    30
-Religion (Larani)        4        5
-Weapon and shield        2
-Ride        3
-Law        4        5    
-First aid        3    4
-Cult Invocations
-Blessing        2
-Banner of Mendiz        2
-Larani's Shield        1    2
-Light of Dolithor        1    2
-Valamin's Insight        2
-Fast of the Tirannon        1        
-Passage to Tirithor        2        
-Equipment
-Priestly garb, riding horse.
-Martial Member of Hyvrik
-Attributes (48 points)
-Strength    4    Perception    2
-Stamina    3    Intelligence    3
-Agility    2    Charisma    4
-Dexterity    3    Will    4
-Advantages and Disadvantages (15 points)
-+6 attributes        +2 literate
-+2 social status (clerical order)
-+5 exceptional training (10 points)
--2 terrible liar (-2)
--6 duty (aiding the church)
--4 loyalty (Larani, +4)
--3 driving goal (wipe out Agrik, +3)
-Talents (24 points)
-Athletics    2    Guile    3
-Awareness    2    Sleight    1
-Brawl    2    Stealth    1
-Charm    3    Throw    1
-Common Knowledges (fixed)
-Area lore    2    Folk lore    2
-Speak own    4    Scribe    4
-Skills for age:        21    25    30
-Religion (Larani)        4    
-Weapon and shield        5
-Ride        4
-Law        2            
-Cult Invocations
-Blessing        2
-Banner of Mendiz        2    4    
-Courage of Mendiz        2        3
-Larani's Shield        2        4
-Valamin's Insight            1    
-Equipment
-Half chain, broad sword, shield, helm, riding horse.
 </sect3>
 </sect2>
 </sect1>
