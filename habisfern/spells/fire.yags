@@ -307,6 +307,8 @@
 
         <description>
             <para>
+                Cause a fire to give off a thick cloud of smoke which
+                burns everything it comes into contact with.
             </para>
         </description>
     </spell>
@@ -435,14 +437,31 @@
         All these cantrips are combat related.
      -->
 
+    <spell name="Flame" level="1" type="fire">
+        <range>Self</range>
+        <duration>Concentration</duration>
+
+        <prerequisite>Ignite</prerequisite>
+
+        <summary>Creates a flame in the palm of the hand.</summary>
+
+        <description>
+            <para>
+                A free burning flame is created in the caster's hand.
+                The flame can be used to ignite material, strike at
+                someone to cause damage, or even thrown.
+            </para>
+        </description>
+    </spell>
+
     <spell name="Burning Motes" level="3" type="fire">
-        <range>-1/m</range>
+        <range>-3/m</range>
         <duration>Momentary</duration>
         <target>-5/extra target</target>
         <effect>-1/1</effect>
         <resist>Stamina</resist>
 
-        <prerequisite>Ignite</prerequisite>
+        <prerequisite>Flame</prerequisite>
 
         <description>
             <para>
@@ -571,8 +590,6 @@
         </description>
     </spell>
 
-    <spell name="Smoke Fog" level="5" type="fire">
-    </spell>
 
 
 
