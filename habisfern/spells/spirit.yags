@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<!--
+    Spirit cantrips.
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2004-07-26 21:39:18 $
+-->
+<grimoire name="Spirit">
+
+    <spell name="Sense Spirit" level="1" type="spirit">
+        <range>-1/m</range>
+        <duration>Concentration</duration>
+        <resist>Ego</resist>
+
+        <description>
+            <para>
+                Detects any minds out to the range of the spell, providing
+                a rough direction and range (5m, 10m, 20m, 40m etc). Unless
+                the target is magically shrouded, the difficulty is 20 for
+                animals and 10 for human like intelligence. More powerful
+                minds may be easier to detect.
+            </para>
+            
+            <para>
+                The wizard can try to concentrate on a single mind, this
+                action taking a round. The target gets an Ego roll to
+                resist this, but if the Wizard succeeds, they can identify
+                the mind if they have encountered it before.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Sense Aura" level="3" type="spirit">
+        <range>-1/m</range>
+        <duration>Concentration</duration>
+        <resist>Ego</resist>
+        <target>-5/extra</target>
+        
+        <prerequisite>Sense Spirit</prerequisite>
+
+        <description>
+            <para>
+                The wizard must be able to see the targets to be effected.
+                If the wizard beats the resistence roll of the target,
+                then they get a glimpse of the target's aura. The amount
+                they beat them by governs how much detail they see.
+            </para>
+            
+            <targetlist>
+                <valueLabel>Detail seen</valueLabel>
+                <targetLabel>Effect</targetLabel>
+                
+                <item target="0" value="Type.">
+                    Type of mind detected, human, animal, elder, as well
+                    as whether they are male or female, young or old.
+                </item>
+                
+                <item target="5" value="State.">
+                    The rough state of mind of the target - strong emotions
+                    such as fear, love, excitement etc will show through.
+                </item>
+                
+                <item target="10" value="Passions.">
+                </item>
+            </targetlist>
+        </description>
+    </spell>
+
+</grimoire>
