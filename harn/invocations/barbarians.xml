@@ -218,7 +218,8 @@
 	<range>Self</range>
 	<cost>Low/1</cost>
 	<duration>Day per 5 rolled</duration>
-	
+	<difficulty>10</difficulty>
+    
 	<description>
 	Shaman is unaffected by thirst or hunger while the invocation
 	lasts. The shaman cannot use this more than once a month.
@@ -227,9 +228,109 @@
 
 <invocation religion="Gozyda" rank="1">
     <name>Feast of the Victor I</name>
+    <time>8 hours</time>
+    <range>Touch</range>
+    <duration>Indefinite</duration>
+    <difficulty>20</difficulty>
+    <cost>None</cost>
+    <boost difficulty="30">Quality is three</boost>
+    <boost difficulty="50">Quality is four</boost>
     
     <description>
+    This ritual is used to prepare the body of a sapient ready for a
+    cannibal feast. With it, a part of the body's soul is shared out
+    to those who partake in the feast, granting them the skill of the
+    consumed person. Each person gets to make a single roll to improve
+    a skill, as per the training rules, at a quality of two. A skill
+    cannot be improved if the consumed did not have a better skill than
+    the eater.
+    <br>
+    The body must be fresh, since the level of skills available will
+    deteriate quite quickly over time.
     </description>
 </invocation>
 
+
+<invocation religion="Gozyda" rank="1">
+    <name>Beastfriend</name>
+    <time>1 round</time>
+    <range>Horizon</range>
+    <duration>Sleep</duration>
+    <difficulty>10</difficulty>
+    <cost>Low/1</cost>
+    <resist>Will</resist>
+    
+    <description>
+    Calls an animal within range which will be friendly. Unless the
+    animals True Name is used. The animal will approach close enough
+    to be touched, helping a shaman in distress is need be. Communication
+    with the animal is not granted, but it will be friendly until it
+    next sleeps.
+    <br>
+    Unless a specific animal is asked for, the nearest will be
+    chosen. The type of animal - either by species or capabilities -
+    may be specified. For example, 'an animal I can ride', or
+    'a sparrow' are possible requests.
+    </description>
+</invocation>
+
+
+<invocation religion="Gozyda" rank="1">
+    <name>Voice of Darkness</name>
+    <time>1 round</round>
+    <range>Near</range>
+    <duration>Momentary</duration>
+    <cost>Low/1</cost>
+    <difficulty>15</difficulty>
+    <resist>Will</resist>
+    <boost difficulty="25"/>Range is short (50m)</boost>
+    <boost difficulty="40" cost="2"/>Range is medium (100m)</boost>
+    
+    <description>
+    The priest utters a bloodcurdling shriek - the sound of a soul
+    being ripped from a living body. Anyone within range must make
+    a will check, or flee. Those who fail by 10 or more, faint.
+    </description>
+</invocation>
+
+<invocation religion="Gozyda" rank="1">
+    <name>True Arrow</name>
+    <time>1 minute</time>
+    <range>Touch</range>
+    <duration>Sunset</duration>
+    <difficulty>10</difficulty>
+    <cost>Low/1</cost>
+    <boost difficulty="20">Damage bonus is +2</boost>
+    <boost difficulty="40">Damage bonus is +3</boost>
+    
+    <difficulty>
+    Blesses a quiver of arrows, giving them a +1 bonus to damage.
+    The invocation ends after the arrows have been used, or the
+    next sunset.
+    </difficulty>
+</invocation>
+
+
+<invocation religion="Gozyda" rank="1">
+    <name>True Blade</name>
+    <time>1 round</time>
+    <range>Touch</range>
+    <duration>Battle</duration>
+    <difficulty>10</difficulty>
+    <cost>Low/2</cost>
+    <boost difficulty="20">Attack bonus is  also +1</boost>
+    <boost difficulty="30">Attack bonus is also +3</boost>
+    
+    <difficulty>
+    Blesses one weapon for a single blow, doubling that weapon's
+    damage bonus.
+    </difficulty>
+</invocation>
+
+
+
+
+    
 </invocations>
+
+
