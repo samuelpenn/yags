@@ -9,6 +9,86 @@
     <!--
         Advantages.
      -->
+    <advantage name="Keen hearing" type="advantage">
+        <cost points="+4"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character has very good hearing, and gains a bonus
+                of +1 to their perception when making hearing based
+                perception checks.
+            </para>
+        </description>
+        <forbiddon>Poor hearing</forbiddon>
+    </advantage>
+    
+    <advantage name="Keen vision" type="advantage">
+        <cost points="+4"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                Gain a bonus to vision rolls to see things at a distance.
+                Any perception roll where the character is not working at
+                close range (e.g. looking for a trap) they get +1 to their
+                perception attribute.
+            </para>
+        </description>
+        <forbiddon>Poor vision</forbiddon>
+    </advantage>
+
+    <advantage name="Musical affinity" type="advantage">
+        <cost points="+2"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character has a natural talent with music, and gains
+                a +1 bonus to charisma or intelligence when playing a
+                musical instrument or composing for one.
+            </para>
+        </description>
+        <forbiddon>Can't sing</forbiddon>
+    </advantage>
+    
+    <advantage name="Night vision" type="advantage">
+        <cost points="+2"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                Character gains +1 to their perception in darkness. This
+                comes into play whenever the character has a penalty to
+                perception because of darkness, or if other actions are
+                capped to their perception because of darkness.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Beautiful" type="advantage">
+        <cost points="+3"/>
+        <cost points="+9"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character is very good looking, and gets a bonus to
+                charisma when trying to charm members of a compatible sex.
+                There are two levels to this advantage, the second level
+                giving +2 to Charisma instead of +1.
+            </para>
+        </description>
+        <forbiddon>Ugly</forbiddon>
+    </advantage>
+
+    <advantage name="Beautiful voice" type="edge">
+        <cost points="+3"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character has a very clear and pleasant voice, getting
+                a +1 bonus to charisma when singing, orating or reading
+                poetry.
+            </para>
+        </description>
+        <forbiddon>Can't sing</forbiddon>
+    </advantage>
 
     <advantage name="Language talent" type="advantage">
         <cost points="+6"/>
@@ -85,6 +165,17 @@
             </para>
         </description>
     </advantage>
+    
+    <advantage name="Empathy" type="advantage">
+        <cost points="+5"/>
+        <description>
+            <para>
+                The character is very good at telling if someone is lying.
+                They get an automatic +1 to their charisma or perception
+                when detecting a lie.
+            </para>
+        </description>
+    </advantage>
 
 
     <!--
@@ -133,16 +224,6 @@
             The character cannot act in the first round of combat, due
             to fear and indecision. If they have surprise, then they
             gain no advantage from the surprise.
-        </description>
-    </advantage>
-
-    <advantage name="Eunuch" type="disadvantage">
-        <cost points="-2"/>
-        <description>
-            Available only to male characters. This may be due to
-            an accident, or through choice on the part of someone.
-            The character has no interest in sex. There may be a
-            social stigma related to this if people find out.
         </description>
     </advantage>
 
@@ -305,4 +386,282 @@
             strength above three.
         </description>
     </advantage>
+    
+    <advantage name="Light drinker" type="disadvantage">
+        <cost points="-2"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                Character has a penalty of -1 to stamina rolls to resist
+                the effects of alchohol and similar intoxicants.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Bad hangovers" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character suffers from very bad hangovers the morning
+                after a night of drinking. All penalties and effects of a
+                hangover are doubled.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Non-combatant" type="disadvantage">
+        <cost points="-4"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character is not used to, and greatly dislikes, real
+                combat. They don't like hurting people or getting hurt,
+                the smell of blood or the clash of steel. They may be
+                skilled at martial arts for sporting events, but when
+                it comes to fighting in anger, their nature lets them
+                down. In a real combat, they suffer a penalty of -1 to
+                agility, dexterity and perception.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Absent minded" type="disadvantage">
+        <cost points="-5"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character has a poor memory, and probably has a
+                reputation of being forgetful. The problem mainly
+                manifests itself when trying to remember everyday
+                mundane things, such as locking the front door,
+                putting out the fire or packing food for a journey.
+                At inconvenient moments, the GM will secretly make an
+                intelligence check for the character to see if they
+                remembered doing something important.
+            </para>
+            
+            <para>
+                If the <e>player</e> ever forgets something, then
+                excuses of "but my character would have remembered" can
+                be safely ignored by the GM.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Animal enmity" type="disadvantage">
+        <cost points="-2"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character does not get on well with animals.
+                The Reaction of animals to the character is always one
+                level worse than it would be otherwise.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Big mouth" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character has a habit of spurting out the wrong thing
+                at the worst possible time. If the player makes any snide
+                comments, asides or other such utterences whilst a social
+                situation is being roleplayed, then their character said
+                it out loud.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Gullible" type="disadvantage">
+        <cost points="-5"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character is particularly gullible. They cannot tell
+                if someone is lying, and tend to take things at face
+                value. They may well understand the concept of lying, and
+                might be very good at it themselves, but can't spot when
+                others are doing it.
+            </para>
+            
+            <para>
+                Normally the character will automatically any attempts to
+                detect lying. In really obvious situations, they can have
+                a roll but the final result is halved.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Clumsy" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character is particularly clumsy, and has a tendancy
+                to bump into things, stumble over their own feet and
+                generally lack any grace or finesse of movement. If trying
+                to move stealthily, they are doomed to failure.
+            </para>
+             
+            <para>
+                If there is anything they can knock, bump or tread on
+                which will make a noise then they automatically fail
+                at any stealth attempts. In ideal situations, they can
+                make a stealth roll but the result is halved.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Heavy sleeper" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character is very bad at waking from sleep. If they
+                are sleeping, then they can only be awakened with lots
+                of physical discomfort (cold water, a kick, vigerous
+                shaking for a whole round), and are then at -1 to all
+                attributes for the next minute.
+            </para>
+            
+            <para>
+                If dozing, then all perception rolls are quartered, as
+                for normal people who are in deep sleep.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="No direction sense" type="disadvantage">
+        <cost points="-2"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character really has no sense of direction and can
+                get lost getting out of bed. Except in the most simple
+                of situations (when their rolls are halved), they will
+                automatically fail any navigation attempts.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Obese" type="disadvantage">
+        <cost points="-4"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character is greatly overweight, and suffers a
+                penalty to athletics, brawl and stealth rolls, as well
+                as stamina for purposes of fatigue (including the number
+                of fatigue levels the character has) and strength for
+                purposes of encumbrence.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Poor vision" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character has very poor eyesight, and suffers a
+                penalty of -1 to their perception for all vision based
+                skill checks (including missile attacks).
+            </para>
+        </description>
+        <forbiddon>Keen vision</forbiddon>
+    </advantage>
+
+    <advantage name="Poor hearing" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character has very poor hearing, and suffers a
+                penalty of -1 to their perception for all hearing based
+                perception checks.
+            </para>
+        </description>
+        <forbiddon>Keen hearing</forbiddon>
+        <forbiddon>Combat awareness</forbiddon>
+    </advantage>
+    
+    <advantage name="Repellent" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                People who would otherwise find this character sexually
+                attractive are instead repelled. Any attempts to seduce
+                such people will always fail. When the character first
+                meets someone so affected, then any reaction results
+                are always at one level worse.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Ugly" type="disadvantage">
+        <cost points="-3"/>
+        <description>
+            <para>
+                The character is not attractive to look at. When first
+                meeting people, reaction results will be at one level
+                worse than normal. At other times, the character may
+                suffer a -1 to their charisma if their appearance could
+                affect such rolls.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Shy" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character is uncomfortable if strangers are taking
+                an interest in what they are doing. They suffer a -1 to
+                their attribute if performing some task in front of
+                people, or if trying to socialise with strangers.
+            </para>
+            
+            <para>
+                If the character is really stressed, such as in the
+                middle of combat, then the penalty doesn't apply since
+                they'll be too worried to care.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Terrible liar" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+        <description>
+            <para>
+                The character is a really bad liar. If the character ever
+                tries to lie, then they will generally fail. Really easy
+                lies may allow them a skill check, though the result will
+                be halved.
+            </para>
+            
+            <para>
+                A <e>terrible liar</e> lying to a <e>gullible</e> person
+                would be a very painful event to watch.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Uninspiring" type="disadvantage">
+        <cost points="-2"/>
+        <genre>Common</genre>
+        <description>
+            The character has an  uninspiring personality, to the
+            point of being utterly forgettable. They suffer a penalty
+            when trying to impress people.
+        </description>
+    </advantage>
+    
 </advantages>

@@ -17,8 +17,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.15 $</version>
-            <date>$Date: 2004-03-15 08:33:22 $</date>
+            <version>$Revision: 1.16 $</version>
+            <date>$Date: 2004-07-11 20:55:35 $</date>
         </cvsinfo>
 
         <license>
@@ -61,8 +61,22 @@
             </para>
 
             <para>
-                There are three types of advantages - <e>edges and flaws</e>,
-                <e>background</e> and <e>miscellaneous</e>.
+                There is another type of advantage known as a
+                <e>technique</e>. Techniques are based on a skill, and can
+                only be taken once that skill has reached a certain level.
+                At that point, the technique may be purchased with
+                experience points.
+            </para>
+            
+            <para>
+                Apart from techniques, advantages and disadvantages can
+                only be taken at character generation time. After initial
+                character generation, advantages and disadvantages can
+                only be modified by actions within the game, not by
+                spending experience. Characters who gain contacts within
+                the game don't have to pay points for them, and a character
+                that goes on a diet doesn't need to buy off 'obese' in
+                order to loose the penalties.
             </para>
 
             <sect2>
@@ -75,43 +89,6 @@
                 </para>
             </sect2>
 
-            <sect2>
-                <title>Edges and Flaws</title>
-
-                <para>
-                    Edges and flaws modify the character's attributes under
-                    certain situations. They normally give either a +1 bonus
-                    (if an edge), or a -1 penalty (if a flaw) to the
-                    attribute before multiplication with the skill.
-                </para>
-
-                <para>
-                    A character with <e>Empathy</e>, a charisma of 3 and a
-                    charm of 4, would normally have an ability total of 12
-                    (3 x 4), but if they were trying to calm a person
-                    (which is when empathy kicks in), they would get +1 to
-                    charisma, giving them a total of 16 (4 x 4).
-                </para>
-
-                <para>
-                    Only a single edge or flaw applies at any given time,
-                    regardless of how many are applicable. If an edge and
-                    a flaw both apply, they cancel. If more than one edge,
-                    or more than one flaw applies, take the highest.
-                </para>
-
-                <sect3>
-                    <title>Edges</title>
-
-                    <import-advantages href="options/edges.yags" type="edge"/>
-                </sect3>
-
-                <sect3>
-                    <title>Flaws</title>
-
-                    <import-advantages href="options/edges.yags" type="flaw"/>
-                </sect3>
-            </sect2>
 
             <sect2>
                 <title>Background</title>
@@ -121,19 +98,22 @@
                     background cannot be bought after character generation.
                 </para>
 
-                <import-advantages href="options/background.yags" type="background"/>
+                <import-advantages href="options/background.yags"
+                                   type="background"/>
             </sect2>
 
             <sect2>
                 <title>Miscellaneous Advantages</title>
 
-                <import-advantages href="options/advantages.yags" type="advantage"/>
+                <import-advantages href="options/advantages.yags"
+                                   type="advantage"/>
             </sect2>
 
             <sect2>
                 <title>Miscellaneous Disadvantages</title>
 
-                <import-advantages href="options/advantages.yags" type="disadvantage"/>
+                <import-advantages href="options/advantages.yags"
+                                   type="disadvantage"/>
             </sect2>               
         </sect1>
         
