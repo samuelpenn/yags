@@ -4,14 +4,102 @@
     General melee combat techniques.
     
     Author:  Samuel Penn
-    Version: $Revision: 1.4 $
-    Date:    $Date: 2004-03-14 22:49:45 $
+    Version: $Revision: 1.5 $
+    Date:    $Date: 2004-07-04 21:46:17 $
     
  -->
 
 <advantages>
-    <advantage name="Improved attack" type="technique">
+
+    <advantage name="Finesse" type="technique">
         <cost points="3"/>
+        <skill name="Any melee weapon"/>
+        
+        <description>
+            <para>
+                The character is trained in defensive manouevres of
+                misdirection and finesse. This technique can only be used
+                with a <e>defensive stance</e> to either make a feint, or
+                disarm a foe.
+            </para>
+            
+            <para>
+                If a feint is declared against an attacker, the character's
+                attack comes immediately after the attackers. If the defence
+                is successful, then the character gains a bonus to attack
+                equal to however many points the defence roll was made by.
+            </para>
+            
+            <para>
+                For a disarm, no attack is made, and defence roll is at -5.
+                On a successful defence, there is an immediate contest of
+                dexterity based initiative. If the defender gets a good
+                success, the attacker is disarmed. If the defender looses,
+                then the attacker gets an automatic strike.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Fast defence" type="technique">
+        <cost points="5"/>
+        <skill name="Any melee weapon"/>
+        <prerequisite>Finesse</prerequisite>
+        
+        <description>
+            <para>
+                Automatic, defensive stance. The character can defend
+                against up to one extra opponent. They also gain +10 to
+                defence rolls rather than +5.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Counter strike" type="technique">
+        <cost points="7"/>
+        <skill name="Any melee weapon"/>
+        <prerequisite>Fast defence</prerequisite>
+        
+        <description>
+            <para>
+                If declared, uses the <e>defensive stance</e> at -10. For
+                the first excellent defence made that round, defender gets
+                a free strike against that attacker.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Whirlwind defence" type="technique">
+        <cost points="9"/>
+        <skill name="Any melee weapon"/>
+        <prerequisite>Counter strike</prerequisite>
+        
+        <description>
+            <para>
+                If declared, uses defensive stance at -10, and the character
+                cannot make any normal attacks. For each excellent defence
+                made against an attacker, a free strike can be made.
+            </para>
+        </description>
+    </advantage>
+    
+    
+    
+    <advantage name="Beat" type="technique">
+        <cost points="3"/>
+        <skill name="Any melee weapon"/>
+        
+        <description>
+            <para>
+                Aggressive stance, if declared attack a foe's weapon using
+                brute force to knock it out of the way or disarm them. On
+                a successful attack, make contested strength initiative
+                checks. If the character wins, the foe is disarmed.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Fast attack" type="technique">
+        <cost points="5"/>
         <skill name="All melee"/>
         
         <description>
@@ -22,19 +110,52 @@
         </description>
     </advantage>
     
-    <advantage name="Improved defence" type="technique">
-        <cost points="3"/>
-        <skill name="All melee"/>
+    <advantage name="Mighty blow" type="technique">
+        <cost points="7"/>
+        <skill name="Any melee"/>
+        <prerequisite>Fast attack</prerequisite>
         
         <description>
             <para>
-                When using the <e>defensive stance</e>, the character can,
-                defend against up to five opponents, and the defence bonus
-                is +10 rather than +5. Automatic use.
+                Aggressive, -10 to attack and uses one defence. On a
+                successful hit, foe's armour is halved for that attack
+                (or reduced to zero if already halved or impaled).
             </para>
         </description>
     </advantage>
-
+    
+    <advantage name="Deadly blow" type="technique">
+        <cost points="7"/>
+        <skill name="Any melee weapon"/>
+        <prerequisite>Fast attack</prerequisite>
+        
+        <description>
+            <para>
+                Aggressive, -10 to attack and uses one defence. If an
+                excellent attack is made, and the defender is successfully
+                wounded, then they must make a size x stamina roll at a
+                target of 10 + 5 x wounds caused or die.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Overwhelming attack" type="technique">
+        <cost points="9"/>
+        <skill name="Any melee weapon"/>
+        <prerequisite>Mighty blow</prerequisite>
+        
+        <description>
+            <para>
+                Aggressive, automatic. If the target is wounded with a
+                wounding attack, then they suffer a stun as well. On an
+                excellent attack, they must make a strength check equal
+                to 10 + 5 x wounds caused or fall prone.
+            </para>
+        </description>
+    </advantage>
+    
+    
+    
     <advantage name="Shield wall" type="technique">
         <cost points="2"/>
         <skill name="Weapon and shield"/>
@@ -46,7 +167,8 @@
                 wall. The character must be fighting with a shield along
                 side allies. The character's own attack and defence rolls
                 are unmodified, but their ally on their shield side gains a
-                defensive bonus equal to the characters skill score.
+                defensive bonus equal to the characters skill level as long
+                as their ally also has this technique.
             </para>
             
             <para>
@@ -59,15 +181,16 @@
 
     <advantage name="Ambush" type="technique">
         <cost points="2"/>
-        <skill name="All"/>
+        <skill name="Any melee"/>
+        
         <description>
             <para>
                 When initiated against someone who is not expecting an
                 attack (any attack, so cannot be done against someone
                 in combat, even if they are fighting someone else),
-                then an <e>ambush</e> ignores all armour. If
-                <e>Killing Blow</e> or <e>Deadly punch</e> is known,
-                then they may be combined with the <e>ambush</e>.
+                then an <e>ambush</e> ignores all armour. May be combined
+                with other techniques which cause special effects on
+                an attack (such as deadly blow).
             </para>
 
             <para>
@@ -76,35 +199,33 @@
             </para>
         </description>
     </advantage>
-
-    <advantage name="Feint" type="technique">
-        <cost points="2"/>
-        <skill name="All"/>
-        <description>
-            <para>
-                A feigned attack which tries to catch the defender off
-                guard before making the final strike. It is always a
-                <e>slow</e> attack, but is at +5.
-            </para>
-        </description>
-    </advantage>
     
-    <advantage name="Disarm" type="technique">
-        <cost points="3"/>
-        <skill name="Single weapon"/>
-        <skill name="Weapon and shield"/>
-        <skill name="Two weapons"/>
-        <skill name="Great weapon"/>
-        <prerequisite>Feint</prerequisite>
+    <advantage name="Combat ambush" type="technique">
+        <cost points="5"/>
+        <skill name="Any melee"/>
+        <prerequisite>Ambush</prerequisite>
         
         <description>
             <para>
-                Attack at -10. If successful,
-                the defender's weapon is attacked, and the defender is
-                unable to use it for the rest of the round. Both then
-                make an opposed weapon skill check (the attack uses
-                dexterity, the defender can use strength or dexterity).
-                If the attacker wins, then the defender is disarmed.
+                As <e>Ambush</e>, but may be made any time the defender is
+                not aware of the attacker, even if the defender is otherwise
+                in combat. Slow attack, using <e>focused stance</e>. May be
+                combined with other techniques as per <e>ambush</e>.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Sudden death" type="technique">
+        <cost points="8"/>
+        <skill name="Any melee"/>
+        <prerequisite>Combat ambush</prerequisite>
+        
+        <description>
+            <para>
+                Automatic, aggressive or normal stance. As <e>Ambush</e>,
+                but may be made any time the defender is not defending 
+                against the character, regardless of whether they are aware
+                of the character's attack.
             </para>
         </description>
     </advantage>
@@ -112,7 +233,7 @@
     <advantage name="Quickdraw" type="technique">
         <cost points="5"/>
         <skill name="Any weapon skill"/>
-        <prerequisite>Feint</prerequisite>
+        <prerequisite>Finesse</prerequisite>
         
         <description>
             <para>
@@ -125,53 +246,14 @@
     </advantage>
 
 
-    <advantage name="Half sword" type="technique">
-        <cost points="3"/>
-        <skill name="Great weapon"/>
-        <prerequisite>Improved attack</prerequisite>
-        
-        <description>
-            <para>
-                Requires two hands, regardless of the weapon, and is
-                always a <e>slow</e> attack. Halves armour (not soak).
-            </para>
-        </description>
-    </advantage>
 
-    <advantage name="Killing blow" type="technique">
-        <cost points="6"/>
-        <skill name="Any melee"/>
-        <prerequisite>Improved attack</prerequisite>
-        
-        <description>
-            <para>
-                The attack is at -15. If damage is caused, then the target
-                must make a size x stamina roll of 15 + 5 x wounds caused,
-                or immediately be slain. If the attacker is causing mixed
-                or stun damage, then the defender is instead rendered
-                unconscious.
-            </para>
-        </description>
-    </advantage>
     
-    <advantage name="Mighty blow" type="technique">
-        <cost points="7"/>
-        <skill name="Any melee"/>
-        <prerequisite>Killing blow</prerequisite>
-        
-        <description>
-            <para>
-                When using the <e>aggressive stance</e>, the damage bonus
-                is +10 rather than +5. Automatic.
-            </para>
-        </description>
-    </advantage>
 
 
     <advantage name="Double attack" type="technique">
         <cost points="10"/>
         <skill name="All melee"/>
-        <prerequisite>Improved attack</prerequisite>
+        <prerequisite>Fast attack</prerequisite>
         
         <description>
             <para>
