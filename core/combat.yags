@@ -14,7 +14,7 @@
             <year>2001</year>
             <holder>Samuel Penn</holder>
         </copyright>
-        <releaseinfo role="meta">$Revision: 1.3 $</releaseinfo>
+        <releaseinfo role="meta">$Revision: 1.4 $</releaseinfo>
     </referenceinfo>
     <revhistory>
         <revision>
@@ -635,12 +635,102 @@ suite of chain armour gives a further +13 soak, for a total of
 a damage of 3 x 4 + 12 = 24.
 </para>
 
+<para>
+If the damage roll is higher than the soak roll, then damage
+of some kind has been caused. For every five points (or part
+thereof) higher, one level of injury is suffered by the target.
+The effects of these injury levels depends on the damage type
+of the weapon - wounds, stuns or split damage.
+</para>
+
 <sect2><title>Wounds</title>
 <para>
 Wounds represent damage that has a good chance of breaking the skin
 and affecting vital organs, or causing massive bleeding or broken
-bones.
+bones. Every injury level causes one wound, and wounds are
+cumulative from one attack to the next. If a person takes two
+wounds from one attack, and three wounds from a second attack
+the following round, they have a total of five wounds.
 </para>
+
+<para>
+<table><title>Penalties due to Wounds</title>
+    <colspec colwidth="2cm"/>
+    <colspec colwidth="1.5cm"/>
+    <colspec colwidth="1.5cm"/>
+    <colspec colwidth="3cm"/>
+    <thead>
+        <row>
+            <entry>Damage</entry>
+            <entry>Wounds</entry>
+            <entry>Penalty</entry>
+            <entry>Description</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>1 - 5</entry>
+            <entry>1</entry>
+            <entry>+0</entry>
+            <entry>Hurt</entry>
+        </row>
+        <row>
+            <entry>6 - 10</entry>
+            <entry>2</entry>
+            <entry>-1</entry>
+            <entry>Light</entry>
+        </row>
+        <row>
+            <entry>11 - 15</entry>
+            <entry>3</entry>
+            <entry>-3</entry>
+            <entry>Medium</entry>
+        </row>
+        <row>
+            <entry>16-20</entry>
+            <entry>4</entry>
+            <entry>-6</entry>
+            <entry>Serious</entry>
+        </row>
+        <row>
+            <entry>21 - 25</entry>
+            <entry>5</entry>
+            <entry>-10</entry>
+            <entry>Critical</entry>
+        </row>
+        <row>
+            <entry>26 - 30</entry>
+            <entry>6</entry>
+            <entry>-15</entry>
+            <entry>Fatal</entry>
+        </row>
+    </tbody>
+</table>
+</para>
+
+<para>
+Each level of wound gives a penalty, as shown in the <emphasis>
+Penalties due to Wounds</emphasis> table. The penalty is to all
+actions performed by the character while at that wound level.
+</para>
+
+<sect3><title>Critical Wounds</title>
+<para>
+If a character becomes critically wounded (-10 penalty), then
+they must make an immediate stamina x 4 roll at difficulty 20.
+Failure means that they fall unconscious at the end of the round.
+It may be assumed that civilians and non-professional warriors
+either fall unconscious, or retreat from battle when their wounds
+reach this state.
+</para>
+</sect3>
+
+<sect3><title>Fatal Wounds</title>
+<para>
+If a character becomes fatally wounded, 
+</para>
+</sect3>
+
 </sect2>
 </sect1>
 
