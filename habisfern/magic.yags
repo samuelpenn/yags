@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.10 $</version>
-            <date>$Date: 2005-02-03 18:55:23 $</date>
+            <version>$Revision: 1.11 $</version>
+            <date>$Date: 2005-02-26 23:04:49 $</date>
         </cvsinfo>
 
         <license>
@@ -119,10 +119,10 @@
                     whilst he sleeps, making it unhealthy for a wizard to
                     use magic just before bedtime.
                 </para>
-                
+
                 <sect3>
                     <title>Corruption</title>
-                    
+
                     <para>
                         Some magic also leads to corruption of the Wizard.
                         There is a quicker, faster way to powerful magic,
@@ -130,7 +130,7 @@
                         side is shunned by civilised wizards, and is
                         banned in most countries.
                     </para>
-                    
+
                     <para>
                         Each Word has its own dark side. For example, for
                         <e>Earth</e> it is necromancy. The runes for the
@@ -197,16 +197,16 @@
                 </para>
             </sect2>
         </sect1>
-        
+
         <sect1>
             <title>Using Magic</title>
-            
+
             <para>
                 The following section describes the cantrips which may be
                 learnt by a wizard. They all follow the same pattern, which
                 is described here.
             </para>
-            
+
             <spell name="Example Cantrip" level="1" type="any">
                 <time>1 round</time>
                 <range>-1/2m</range>
@@ -214,9 +214,9 @@
                 <area>-1/m radius</area>
                 <target>-5/extra</target>
                 <resist>Resistance</resist>
-                
+
                 <prerequisite>Another Spell</prerequisite>
-                
+
                 <description>
                     <para>
                         A description for an example cantrip. This is a
@@ -224,7 +224,7 @@
                     </para>
                 </description>
             </spell>
-            
+
             <para>
                 The name of the spell followed by its level. The wizard
                 must have a skill in the Word at least equal to the level
@@ -233,7 +233,7 @@
                 by the level of the cantrip. Casting a cantrip is rolled
                 with will x word.
             </para>
-            
+
             <para>
                 The <s>effect</s> of the cantrip is a measure of how powerful
                 it is. The effect may be damage, a skill bonus or modifier
@@ -241,7 +241,7 @@
                 caster's roll and the level of the cantrip. As long as the
                 effect is zero or positive, the cantrip was cast.
             </para>
-            
+
             <para>
                 The statistics block which immediately follows the cantrip's
                 name gives some modifiers to either the casting roll, or
@@ -251,14 +251,14 @@
                 reaches the target. The cantrip is still cast, but fizzles
                 out before achieving anything.
             </para>
-            
+
             <itemlist order="strict">
                 <item name="Time">
                     The time to cast the cantrip. Most cantrips have a
                     casting time of 1 round. In such a case, casting the
                     cantrip is a slow action.
                 </item>
-                
+
                 <item name="Range">
                     By default, a cantrip has a range of Self, which means
                     that it only affects the caster. Ranged cantrips have
@@ -267,7 +267,7 @@
                     range to the target. If there are multiple targets,
                     then calculate the range to each target seperately.
                 </item>
-                
+
                 <item name="Duration">
                     How long the cantrip lasts. This is normally either
                     Momentary (a jet of flame appears, burns the target,
@@ -275,22 +275,18 @@
                     wizard concentrates on that spell). Other durations
                     will be obvious or explained in the description.
                 </item>
-                
+
                 <item name="Resist">
                     If the target gets a resistence roll, this is given
-                    here. The resist roll of the target reduces the effect
-                    of the cantrip. If a passion is given, then it is rolled
-                    with Will. Damage effects are nearly always resisted
-                    with Soak. If no 'resist' is given, then the target
-                    cannot resist the cantrip.
+                    here. May be will, stamina, soak or some other stat.
                 </item>
-                
+
                 <item name="Area">
                     If an area is given, then the cantrip affects an area.
                     The size of the area is chosen at casting time, and
                     the penalty comes off the casting roll.
                 </item>
-                
+
                 <item name="Radius">
                     If a radius is given (Area and Radius will not be given
                     for the same Cantrip) then this means the cantrip has
@@ -298,7 +294,7 @@
                     out in a sphere or circle. The effect of the spell is
                     reduced by the amount given here.
                 </item>
-                
+
                 <item name="Target">
                     A cantrip normally affects one target. If something
                     like '-5/extra' is given, then there is a -5 to the
@@ -308,16 +304,16 @@
                     A target may alternatively give a volume or Size.
                     Again this comes off the casting roll.
                 </item>
-                
+
                 <item name="Prerequisite">
                     If a prerequisite is given, then the Wizard must have
                     learnt that spell before learning this one.
                 </item>
             </itemlist>
-            
+
             <sect2>
                 <title>Effect</title>
-                
+
                 <para>
                     The cantrip's <e>effect</e> is normally described in
                     the cantrip description. If it isn't, and there isn't
@@ -326,29 +322,29 @@
                     as a number), then the effect gives an indication of
                     how well the cantrip works.
                 </para>
-                
+
                 <targetlist bold="true">
                     <valueLabel>Quality of effect</valueLabel>
                     <targetLabel>Effect</targetLabel>
-                    
+
                     <item target="0-9" value="Normal.">
                         The result of the cantrip is the minimum needed
                         to be considered a success. It will give only basic
                         information, or cause only minimal changes.
                     </item>
-                    
+
                     <item target="10-19" value="Good.">
                         The result is respectable, and gives a decent level
                         of information, or has a significant affect on the
                         world.
                     </item>
-                    
+
                     <item target="20-29" value="Excellent.">
                     </item>
-                    
+
                     <item target="30-39" value="Superb.">
                     </item>
-                    
+
                     <item target="40-49" value="Fantastic.">
                     </item>
 
@@ -356,10 +352,52 @@
                     </item>
                 </targetlist>
             </sect2>
-            
+
+            <sect2>
+                <title>Resistance</title>
+
+                <para>
+                    Many cantrips don't provide any chance to resist the
+                    magic. The best way to avoid or reduce the effects of
+                    the spell is to not be targetted, stop the wizard
+                    from concentrating on the magic, or use some physical
+                    means of avoiding the effects. Physical effects created
+                    with magic are non-magical - there is no concept of
+                    'magic resistance' for example that can protect you
+                    from such magic. A jet of fire created with magic is
+                    exactly identical to a jet of fire created via any
+                    other means.
+                </para>
+
+                <para>
+                    Magic which causes direct damage will generally provide
+                    a soak roll. The damage from the effect of the spell
+                    adds a d20, and this is reduced by the target's soak
+                    roll. Some magic may bypass soak altogether - this is
+                    generally the case when the damage is internal.
+                </para>
+
+                <para>
+                    Other resistance checks may be based on attributes or
+                    skills. Sometimes it adds to some existing difficulty,
+                    so though the magic cannot be resisted, a normal skill
+                    check is made against the situation caused by the
+                    magic.
+                </para>
+
+                <para>
+                    Direct resistance rolls reduce the effect of the spell.
+                    A check is made against a target of 20, and if
+                    successful, the effect of the magic on the target is
+                    reduced by one level. For each full 5 points above this
+                    on the resistance roll, the magic is reduced by another
+                    level.
+                </para>
+            </sect2>
+
             <sect2>
                 <title>Fatigue</title>
-                
+
                 <para>
                     A wizard may try to push themselves beyond their normal
                     limits when casting a cantrip, in order to get a more
@@ -383,16 +421,16 @@
 
                 <import-spells href="spells/fire.yags" type="fire"/>
             </sect2>
-            
+
             <sect2>
                 <title>Spirit</title>
 
                 <import-spells href="spells/spirit.yags" type="spirit"/>
             </sect2>
-            
+
             <sect2>
                 <title>Water</title>
-                
+
                 <import-spells href="spells/water.yags" type="water"/>
             </sect2>
         </sect1>

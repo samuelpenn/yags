@@ -2,8 +2,8 @@
 
 <!--
     Fire cantrips.
-    Version: $Revision: 1.12 $
-    Date:    $Date: 2005-02-06 16:10:40 $
+    Version: $Revision: 1.13 $
+    Date:    $Date: 2005-02-26 23:04:49 $
 -->
 
 <grimoire name="Fire">
@@ -17,7 +17,7 @@
 
         <para>
             Those who know Fire get to add their Fire score to any resistences
-            against heat or flame/ including for soak and the effect level
+            against heat or flame, including for soak and the effect level
             of spells.
         </para>
     </preface>
@@ -121,7 +121,6 @@
         <range>-1/1m</range>
         <duration>Concentration</duration>
         <target>+3/size</target>
-        <resist>Stamina</resist>
 
         <prerequisite>Warm</prerequisite>
 
@@ -201,7 +200,7 @@
         <area>+1/20m radius</area>
 
         <prerequisite>Burning Wind</prerequisite>
-        
+
         <summary>Kills plant life in a large area.</summary>
 
         <description>
@@ -211,6 +210,41 @@
                 on the level of success. Plant life withers and dies as
                 if suffering from severe drought.
             </para>
+
+            <targetlist targetFirst="true">
+                <targetLabel>Success</targetLabel>
+                <valueLable>Effect</valueLabel>
+
+                <item target="Moderate">
+                    All grass shrivels and dies within a minute.
+                </item>
+
+                <item target="Good">
+                    Grass shrivels and dies in a few rounds, flowers and
+                    shrubs die in a minute.
+                </item>
+
+                <item target="Excellent">
+                    Grass dies immediately, flowers and shrubs in a few
+                    rounds and bushes in a minute.
+                </item>
+
+                <item target="Superb">
+                    Grass, flowers and shrubs die immediately, bushes take
+                    a few rounds and small trees about a minute.
+                </item>
+
+                <item target="Fantastic">
+                    Anything smaller than a small tree dies immediately,
+                    small trees take a few rounds and larger trees about
+                    a minute.
+                </item>
+
+                <item target="Amazing">
+                    Large trees take a few rounds to die and collapse,
+                    anything smaller shrivels within a round.
+                </item>
+            </targetList>
         </description>
     </spell>
 
@@ -220,7 +254,7 @@
         <radius>+1/50m</radius>
 
         <prerequisite>Whither</prerequisite>
-        
+
         <summary>Warms a large region for a day.</summary>
 
         <description>
@@ -239,14 +273,18 @@
         <target>+3/size</target>
 
         <prerequisite>Ignite</prerequisite>
-        
+
         <summary>Make a fire take on recognisable shapes.</summary>
 
         <description>
             <para>
                 Causes an existing fire to take on a specific shape,
                 such as that of a face or image. The flames will not
-                extend beyond the normal bounds of the fire.
+                extend beyond the normal bounds of the fire. A moderate
+                success will shape the fire into natural forms - thinner,
+                taller, darker, brighter. Better successes may form
+                unnatural shapes, such as faces or colours. Doesn't
+                affect burn rate or heat.
             </para>
         </description>
     </spell>
@@ -279,7 +317,7 @@
         <target>+3/size</target>
 
         <prerequisite>Resist Fire</prerequisite>
-        
+
         <summary>Change how a fire burns.</summary>
 
         <description>
@@ -297,16 +335,44 @@
         <range>+1/5m</range>
         <radius>+1/3m</radius>
         <duration>Concentration</duration>
+        <resist>Stamina</resist>
 
         <prerequisite>Resist Fire</prerequisite>
-        
+
         <summary>Fill an area with smoke.</summary>
 
         <description>
             <para>
                 Cause a fire to give off thick smoke which fills an area
-                choking and obscuring anyone caught within.
+                choking and obscuring anyone caught within. Vision is
+                obscured and fatigue is gained for each level of success
+                beyond moderate.
             </para>
+
+            <targetlist targetFirst="true">
+                <targetLabel>Success</targetLabel>
+                <valueLabel>Results</valueLabel>
+
+                <item target="Moderate">
+                    Light smoke, vision is limited to 20m. May cause
+                    some coughing and irritated eyes.
+                </item>
+
+                <item target="Good">
+                    Moderate smoke, vision is limited to 5m and gain
+                    a fatigue each round spent in the area.
+                </item>
+
+                <item target="Excellent">
+                    Thick smoke, vision is limited to 2m, gain a fatigue
+                    each round spent in the area.
+                </item>
+
+                <item target="Superb">
+                    Vision is limited to 1m, and two fatigue is gained
+                    each round whilst in the area.
+                </item>
+            </targetlist>
         </description>
     </spell>
 
@@ -316,7 +382,7 @@
         <duration>Concentration</duration>
 
         <prerequisite>Smoke</prerequisite>
-        
+
         <summary>Fill an area with burning smoke.</summary>
 
         <description>
@@ -340,9 +406,9 @@
         <duration>Concentration</duration>
         <target>-5/extra target</target>
         <effect>+1 initiative/1</effect>
-        
+
         <prerequisite>Ignite</prerequisite>
-        
+
         <summary>Increases perception and initiative.</summary>
 
         <description>
@@ -363,7 +429,7 @@
         <resist>Ego</resist>
 
         <prerequisite>Alertness</prerequisite>
-        
+
         <summary>Increases base movemet.</summary>
 
         <description>
@@ -380,7 +446,7 @@
         <target>-20/extra person</target>
 
         <prerequisite>Quicken</prerequisite>
-        
+
         <summary>Increases agility and dexterity.</summary>
 
         <description>
@@ -399,7 +465,7 @@
         <duration>Concentration</duration>
 
         <prerequisite>Alertness</prerequisite>
-        
+
         <summary>Caster can see heat.</summary>
 
         <description>
@@ -417,7 +483,7 @@
         <duration>Concentration</duration>
 
         <prerequisite>Fire Sight</prerequisite>
-        
+
         <summary>Scry a distant fire.</summary>
 
         <description>
@@ -461,7 +527,7 @@
         <resist>Soak</resist>
 
         <prerequisite>Flame</prerequisite>
-        
+
         <summary>Create a swarm of burning sparks.</summary>
 
         <description>
@@ -481,7 +547,7 @@
         <resist>Soak</resist>
 
         <prerequisite>Burning Motes</prerequisite>
-        
+
         <summary>Create a spear of flame to burn someone.</summary>
 
         <description>
@@ -501,7 +567,7 @@
         <target>-10/extra ring</target>
 
         <prerequisite>Flaming Spear</prerequisite>
-        
+
         <summary>Create a ring of fire around caster.</summary>
 
         <description>
@@ -524,7 +590,7 @@
         <target>-5/extra</target>
 
         <prerequisite>Ring of Fire</prerequisite>
-        
+
         <summary>Engulf the caster in flames.</summary>
 
         <description>
@@ -556,7 +622,7 @@
         <duration>Concentration</duration>
 
         <prerequisite>Engulf</prerequisite>
-        
+
         <summary>Change the caster into fire.</summary>
 
         <description>
