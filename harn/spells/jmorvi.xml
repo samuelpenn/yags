@@ -31,16 +31,33 @@ is cast, it may detect a companion's sword.
 
 <spell name="Ward of Sirik" level="10" convocation="jmorvi">
 <range>Touch</range>
-<resist>Will</resist>
-<duration>Concentration</duration>
-<boost>+10 Soak is tripled</boost>
-<boost>+20 Duration Ward</boost>
+<duration>Ward</duration>
+<boost>+10 Can affect mostly metallic objects</boost>
+<boost>+20 Target can be size 5</boost>
+<boost>+40 Target can be size 10</boost>
 <description>
-An enchantment to temporarily protect a wholly metallic object from 
-physical damage. The enchantment lies dormant until it is invoked. 
-The Ward is invoked by the first event which could cause damage to 
-the object. Once invoked, the enchantment is dispelled (even if the 
-duration is concentration). It doubles the soak of the object. 
+This ward protects a wholly metallic object of up to size 3 
+from harm. It grants a +15 to soak the next time significant 
+damage (i.e. a soak roll is required) is suffered. The ward 
+then terminates. If it is placed on armour, it only grants 
+one third the protection to the wearer. This ward cannot be 
+stacked with other wards.
+</description>
+</spell>
+
+
+<spell name="Greater Ward of Sirik" level="30" convocation="jmorvi">
+<range>Touch</range>
+<duration>Ward</duration>
+<boost>+15 Can affect mostly metallic objects</boost>
+<boost>+30 Target can be size 10</boost>
+<boost>+60 Soak increased by 30</boost>
+<description>
+This ward will protect a wholly metallic object up to size 5 
+from harm. The next time the object is harmed, its soak is 
+raised by +30. If the ward is placed on armour, then one third 
+of this bonus is granted to the wearer. This ward cannot be 
+stacked with any other ward.
 </description>
 </spell>
 
@@ -86,7 +103,7 @@ other weapon enhancing magic, including rune magic.
 <boost>+30 Object can be made to shatter</boost>
 <description>
 An enchantment which causes a wholly metallic object to resonate 
-and grow warmer. Thismakes the object difficult to use and 
+and grow warmer. This makes the object difficult to use and 
 justifies an immediate penalty of at least 10. The object cannot 
 weight more than 5kg.
 </description>
@@ -103,6 +120,20 @@ to increase its damage. It cannot be combined with any other
 enchantment. The weapon does +2 damage.
 </description>
 </spell>
+
+<spell name="Sirik's Protection" level="60" convocation="jmorvi">
+<range>Touch</range>
+<duration>Ward</duration>
+<boost>+15 Can affect mostly Jmorvin objects</boost>
+<description>
+This spell affects any metallic, stone or crystalline objects 
+of up to size 5. It is a ward which grants a +10 bonus to 
+soak next time the object is harmed. If the object is being 
+used as armour, the wearer gains a +3 bonus to their soak. 
+</description>
+</spell>
+
+
 
 <spell name="Fist of Kuhan" level="90" convocation="jmorvi">
 <range>Self</range>
@@ -130,13 +161,38 @@ metal which is less dense.
 </description>
 </spell>
 
+<spell name="Skin of the Rock" level="90" convocation="jmorvi">
+<range>Self</range>
+<duration>Ward</duration>
+<boost>+15 Range is touch</boost>
+<boost>+60 Bonus is +10</boost>
+<description>
+This spell harden's the skin of the caster, giving her a +5 
+bonus to soak. The ward comes into affect the next time the 
+caster is injured, and then terminates. It cannot be combined 
+with other wards on the same target. 
+</description>
+</spell>
+
+
+<spell name="Myrthil's Shield" level="90" convocation="jmorvi">
+<range>Self</range>
+<duration>Concentration</duration>
+<boost>+15 Range is touch</boost>
+<description>
+Grants the caster a +1 to their soak while the spell is being 
+maintained. This spell can be stacked with itself. 
+</description>
+</spell>
+
+
 <spell name="Tharasin's Ward" level="120" convocation="jmorvi">
 <time>8 hours</time>
 <range>Touch</range>
 <resist>Will</resist>
 <duration>Momentary</duration>
-<boost>+20 Adds +3 soak</boost>
-<boost>+40 Can affect mostly metal armour</boost>
+<boost>+20 Can affect mostly metal armour</boost>
+<boost>+40 Adds +3 soak</boost>
 <description>
 An enchantment to increase the soak of wholly metallic armour. 
 The soak of such armour is increased by 1. This cannot be 
