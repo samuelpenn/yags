@@ -4,8 +4,8 @@
 <!--
     List of low tech weapons and armour for Yags.
 
-    Version: $Revision: 1.6 $
-    Date:    $Date: 2004-03-15 08:35:03 $
+    Version: $Revision: 1.7 $
+    Date:    $Date: 2004-04-24 18:55:47 $
  -->
 <equipment>
     <weaponlist>
@@ -44,6 +44,11 @@
             <strength>1</strength>
             <load>1</load>
             <reach>1</reach>
+            
+            <properties>
+                <heavy/>
+                <throwable/>
+            </properties>
         </weapon>
 
         <weapon name="Battle axe">
@@ -68,6 +73,10 @@
             <strength>3</strength>
             <load>3</load>
             <reach>3</reach>
+            
+            <properties>
+                <heavy/>
+            </properties>
         </weapon>
 
         <weapon name="Broad axe">
@@ -96,6 +105,7 @@
 
             <properties>
                 <twohanded/>
+                <heavy/>
             </properties>
         </weapon>
 
@@ -145,6 +155,11 @@
             <strength>1</strength>
             <load>1</load>
             <reach>1</reach>
+            
+            <properties>
+                <impaling/>
+                <light/>
+            </properties>
         </weapon>
 
         <weapon name="Fist">
@@ -162,6 +177,10 @@
             <strength>0</strength>
             <load>0</load>
             <reach>0</reach>
+            
+            <properties>
+                <light/>
+            </properties>
         </weapon>
 
         <weapon name="Scramasax">
@@ -216,6 +235,7 @@
             <strength>4</strength>
             <load>4</load>
             <reach>3</reach>
+            
             <properties>
                 <twohanded/>
             </properties>
@@ -244,6 +264,9 @@
             <strength>3</strength>
             <load>4</load>
             <reach>3</reach>
+            
+            <properties>
+            </properties>
         </weapon>
 
         <weapon name="Great sword">
@@ -271,8 +294,11 @@
             <load>6</load>
             <reach>4</reach>
             <weight>1.5</weight>
+            
             <properties>
                 <twohanded/>
+                <heavy/>
+                <strong/>
             </properties>
         </weapon>
 
@@ -292,8 +318,12 @@
             <strength>1</strength>
             <load>0.5</load>
             <reach>0</reach>
+            <weight>0.25</weight>
+            
             <properties>
                 <light/>
+                <throwable/>
+                <weak/>
             </properties>
         </weapon>
 
@@ -312,9 +342,11 @@
             <strength>5</strength>
             <load>3</load>
             <reach>5</reach>
+            <weight>2</weight>
 
             <properties>
                 <twohanded/>
+                <impaling/>
             </properties>
         </weapon>
 
@@ -334,9 +366,11 @@
             <strength>3</strength>
             <load>3</load>
             <reach>2</reach>
+            <weight>2</weight>
 
             <properties>
                 <crushing/>
+                <heavy/>
             </properties>
         </weapon>
 
@@ -356,6 +390,11 @@
             <strength>4</strength>
             <load>2</load>
             <reach>4</reach>
+            <weight>2</weight>
+            
+            <properties>
+                <twohanded/>
+            </properties>
         </weapon>
 
         <weapon name="Round shield">
@@ -374,6 +413,7 @@
             <strength>2</strength>
             <load>3</load>
             <reach>2</reach>
+            <weight>3</weight>
 
             <properties>
                 <blocking/>
@@ -396,6 +436,7 @@
             <strength>2</strength>
             <load>2</load>
             <reach>2</reach>
+            <weight>1.5</weight>
 
             <properties>
                 <blocking/>
@@ -418,6 +459,7 @@
             <strength>1</strength>
             <load>1</load>
             <reach>1</reach>
+            <weight>0.5</weight>
 
             <properties>
                 <blocking/>
@@ -447,6 +489,7 @@
             <strength>2</strength>
             <load>2</load>
             <reach>2</reach>
+            <weight>1</weight>
 
             <properties>
                 <impaling/>
@@ -464,13 +507,21 @@
                 <attack>+3</attack>
                 <defence>+2</defence>
                 <damage>+9</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>10</short>
+                    <medium>30</medium>
+                    <long>50</long>
+                </range>
             </combat>
 
             <strength>2</strength>
             <load>2</load>
             <reach>4</reach>
+            <weight>1</weight>
 
             <properties>
+                <missile/>
                 <impaling/>
             </properties>
         </weapon>
@@ -494,6 +545,12 @@
                 <attack>+5</attack>
                 <defence>+3</defence>
                 <damage>+11</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>10</short>
+                    <medium>20</medium>
+                    <long>30</long>
+                </range>
             </combat>
 
             <strength>3</strength>
@@ -501,7 +558,10 @@
             <reach>4</reach>
 
             <properties>
+                <missile/>
                 <impaling/>
+                <heavy/>
+                <twohanded/>
             </properties>
         </weapon>
 
@@ -512,7 +572,7 @@
             <class>single</class>
 
             <combat>
-                <initiative>+6</initiative>
+                <initiative>+4</initiative>
                 <attack>+3</attack>
                 <defence>+2</defence>
                 <damage>+12</damage>
@@ -521,6 +581,7 @@
             <strength>3</strength>
             <load>3</load>
             <reach>3</reach>
+            <weight>3</weight>
 
             <properties>
                 <crushing/>
@@ -542,6 +603,7 @@
             <strength>3</strength>
             <load>3</load>
             <reach>4</reach>
+            <weight>3</weight>
 
             <properties>
                 <crushing/>
@@ -571,9 +633,15 @@
             <strength>2</strength>
             <load>1</load>
             <reach>1</reach>
+            
+            <properties>
+                <missile/>
+                <heavy/>
+            </properties>
         </weapon>
 
         <weapon name="Short bow">
+            <category>Bows</category>
             <class>bow</class>
 
             <description>
@@ -601,9 +669,16 @@
             <strength>2</strength>
             <load>1</load>
             <reach>0</reach>
+            <weight>1</weight>
+            
+            <properties>
+                <missile/>
+                <impaling/>
+            </properties>
         </weapon>
 
         <weapon name="Long bow">
+            <category>Bows</category>
             <class>bow</class>
 
             <description>
@@ -631,6 +706,12 @@
             <strength>3</strength>
             <load>2</load>
             <reach>0</reach>
+            <weight>1</weight>
+            
+            <properties>
+                <missile/>
+                <impaling/>
+            </properties>
         </weapon>
 
 
@@ -652,6 +733,13 @@
             <strength>1</strength>
             <load>0.25</load>
             <reach>0</reach>
+            <weight>0.25</weight>
+            
+            <properties>
+                <missile/>
+                <weak/>
+                <light/>
+            </properties>
         </weapon>
 
         <weapon name="Sling">
@@ -672,9 +760,16 @@
             <strength>2</strength>
             <load>0</load>
             <reach>0</reach>
+            <weight>0.1</weight>
+            
+            <properties>
+                <missile/>
+                <light/>
+            </properties>
         </weapon>
 
         <weapon name="Javelin">
+            <category>Spears</category>
             <class>thrown</class>
 
             <combat mode="Thrown" importance="2">
@@ -693,6 +788,14 @@
             <strength>2</strength>
             <load>2</load>
             <reach>3</reach>
+            <weight>0.5</weight>
+            
+            <properties>
+                <missile/>
+                <impaling/>
+                <light/>
+                <weak/>
+            </properties>
         </weapon>
 
         <weapon name="Light crossbow">
@@ -713,6 +816,11 @@
             <strength>2</strength>
             <load>2</load>
             <reach>0</reach>
+            
+            <properties>
+                <missile/>
+                <impaling/>
+            </properties>
         </weapon>
 
         <weapon name="Medium crossbow">
@@ -732,6 +840,12 @@
 
             <strength>3</strength>
             <load>3</load>
+            <reach>0</reach>
+            
+            <properties>
+                <missile/>
+                <impaling/>
+            </properties>
         </weapon>
 
         <weapon name="Heavy crossbow">
@@ -752,6 +866,12 @@
 
             <strength>3</strength>
             <load>4</load>
+            <reach>0</reach>
+            
+            <properties>
+                <missile/>
+                <impaling/>
+            </properties>
         </weapon>
     </weaponlist>
 
