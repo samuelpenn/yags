@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.55 $</version>
-            <date>$Date: 2004-06-18 21:46:03 $</date>
+            <version>$Revision: 1.56 $</version>
+            <date>$Date: 2004-08-09 21:02:23 $</date>
         </cvsinfo>
 
         <license>
@@ -1045,7 +1045,7 @@
                 damage of some kind has been caused. For every five points
                 (or part thereof) higher, one level of injury is suffered
                 by the target. The effects of these injury levels depends
-                on the damage type of the weapon - wounds, stuns or split
+                on the damage type of the weapon - wounds, stuns or mixed
                 damage.
             </para>
 
@@ -1206,7 +1206,9 @@
                         </para>
                     </sect4>
 
-                    <sect4><title>Surviving Fatal wounds</title>
+                    <sect4>
+                        <title>Surviving Fatal wounds</title>
+
                         <para>
                             Unless they receive suitable medical attention,
                             a fatally wounded character will die eventually.
@@ -1251,7 +1253,7 @@
                 <para>
                     If a character receives at least one or more stuns
                     which do not exceed their current stun level, but are
-                    at least half their current number of stuns, then the
+                    at least half their current number of stuns, then
                     they gain one stun.
                 </para>
 
@@ -1418,14 +1420,10 @@
             <title>Armour</title>
 
             <para>
-                The effectiveness of armour against weapons is complicated
-                but greatly simplified for <e>Yags</e>. There are no hit
-                locations, so an armour's effectiveness is a mixture of
-                its strength and how much of the body it covers. When
-                armour is chosen, it is chosen a piece at a time rather
-                than as a whole suit. The total protective bonus of each
-                item of armour is added together to give the total soak
-                bonus of the whole suit.
+                There are no hit locations, so the protection given by
+                armour is averaged over the whole body. Armour is
+                chosen in a piecemeal fashion, with the protective
+                bonus of each item being totalled.
             </para>
 
             <para>
@@ -1445,7 +1443,8 @@
                 Against heavy armour, any weapon that counts as <e>light</e>
                 will do damage of the next less effective type (wounds
                 become mixed for instance) unless the damage bonus of the
-                weapon is greater than the protective value of the armour.
+                weapon is greater than the protective value of the armour
+                (not including base soak).
             </para>
             
             <para>
