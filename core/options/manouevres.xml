@@ -6,6 +6,99 @@
 
 <advantages>
 
+    <advantage name="Grapple" type="manouevre">
+        <cost points="0"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                <e>Grapple</e> is an attempt to restrain someone. A normal
+                brawl attack is made, at a -5 penalty. Success means that
+                the defender has been grabbed. A second roll is immediately
+                made to see if the attacker can keep hold of the defender.
+            </para>
+
+            <para>
+                Both attacker and defender roll
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <skill>brawl</skill>
+                    <die/>
+                </skillequation>
+                though the defender has the option of using agility instead
+                of strength. If the attacker is again successful, then both
+                opponents are grappling. Whilst grappling, neither can move,
+                and both suffer a -10 penalty per point of reach of any
+                weapon that is used. Neither can use a shield.
+            </para>
+
+            <para>
+                Either opponent can try to break the grapple on an attack
+                action, by using opposed agility/brawl as above. The
+                person trying to break the grapple always has the option
+                of using either strength or agility.
+            </para>
+
+            <para>
+                A grappled character can only defend against attacks by
+                the person who has grappled them. Both can use attack
+                actions to attack each other as normal.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Trip" type="manouevre">
+        <cost points="0"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                A brawling attack is made at -10, success means that a
+                damage roll is made, plus there is a chance that the
+                defender is knocked from their feet. The attacker makes
+                a second brawl attack immediately, using strength
+                instead of agility. The defender defends with either
+                strength or agility, and uses either athletics or brawl
+                to try and remain standing.
+            </para>
+
+            <para>
+                Success on the part of the attacker means that the
+                defender is <e>unsteady</e>. A good success means that
+                they are <e>prone</e>. The defender gets a bonus of +10
+                for each leg beyond two that they have (and -10 if they
+                have only one leg). Penalties for being lame also apply.
+            </para>
+
+            <para>
+                If opponents are grappling each other, a trip attempt
+                gets a +5 bonus, but the attacker goes down with the
+                defender unless a superb success is achieved.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Throw" type="manouevre">
+        <cost points="2"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                A <e>slow</e> attack at -5, success results in a temporary
+                hold, as if the defender has been grappled. Immediately
+                after success, both attacker and defender make oppossed
+                brawl checks, with the defender able to choose between
+                using strength or agility. Success for the attacker
+                leaves the defender <e>unsteady</e>, whilst a good
+                success will leave them <e>prone</e>, and can optionally
+                cause stun damage as well - the attacke makes a damage
+                roll as normal.
+            </para>
+
+            <para>
+                An excellent success enables the attacker to place the
+                defender wherever they want, within 2m of the attacker.
+            </para>
+        </description>
+    </advantage>
+
     <advantage name="Disarm" type="manouevre">
         <cost points="0"/>
         <skill name="Single weapon"/>
@@ -129,7 +222,7 @@
         <skill name="Longshaft weapon"/>
         <description>
             <para>
-                The attack can attack twice, each time at a -20
+                The attack can attack twice, each time at a -15
                 penalty to skill. The first attack is fast, the
                 second attack is slow, but both happen at the same
                 initiative.
@@ -152,7 +245,7 @@
         <skill name="Longshaft weapon"/>
         <description>
             <para>
-                The attack can attack three times, each time at a -40
+                The attack can attack three times, each time at a -30
                 penalty to skill. The first attack is fast, the
                 second attack is normal, and the third attack is slow.
             </para>
