@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+
+<!--
+    Brawling and unarmed combat techniques.
+    
+    Author:  Samuel Penn
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2004-03-14 15:35:48 $
+    
+ -->
+
+ <advantages>
+     <advantage name="Grapple" type="technique">
+        <cost points="0"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                An <e>aggressive</e> brawl attack is made to grab the
+                defender without doing damage. The attack is at normal
+                speed, with no bonus to the attack roll. If successful,
+                the defender has the immediate opportunity to try and
+                break free by making a
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <attribute>agility</attribute>
+                    <skill>brawl</skill>
+                </skillequation>
+                roll against the attackers
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <skill>brawl</skill>
+                </skillequation>
+                roll to keep hold. If the defender succeeds then the
+                grapple attempt is broken. On success, both are
+                considered to be <e>grappled</e>.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Trip" type="technique">
+        <cost points="0"/>
+        <skill name="Brawl"/>
+        
+        <description>
+            <para>
+                A trip requires an <e>aggressive stance</e>, and is an
+                attempt to place the defender on the floor, by throwing
+                or tripping them. A
+                <skillequation>
+                    <attribute>agility</attribute>
+                    <attribute>strength</attribute>
+                    <skill>brawl</skill>
+                    <penalty>5</penalty>
+                </skillequation>
+                roll is made, and on success no damage is done, but the
+                defender is considered to be <e>unsteady</e>. A second
+                opposed roll is immediately made, with the attacker
+                using
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <skill>brawl</skill>
+                </skillequation>
+                against the defender's
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <attribute>agility</attribute>
+                    <skill>brawl</skill>
+                    <skill>athletics</skill>
+                </skillequation>.
+                Success by the attacker means that the defender is now
+                <e>prone</e>. If the two are already <e>grappled</e>,
+                then the first attack roll is not necessary.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Throw" type="technique">
+        <cost points="2"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                A <e>slow</e> attack at -5, success results in a temporary
+                hold, as if the defender has been grappled. Immediately
+                after success, both attacker and defender make oppossed
+                brawl checks, with the defender able to choose between
+                using strength or agility. Success for the attacker
+                leaves the defender <e>unsteady</e>, whilst a good
+                success will leave them <e>prone</e>, and can optionally
+                cause stun damage as well - the attacker makes a damage
+                roll as normal.
+            </para>
+
+            <para>
+                An excellent success enables the attacker to place the
+                defender wherever they want, within 2m of the attacker.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Unarmed combat" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                The character is trained in fighting with no weapons against
+                armed foes. Doing so is still not suggested, but the
+                <e>automatic strike</e> that the armed defender gets is
+                a <e>free strike</e> instead.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Stunning attack" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                A bare handed attack against a target's vitals. It is a slow
+                attack, at -10. If damage is caused, the target must make a
+                size x stamina roll of 20 + stuns x 5, or be <e>prone</e>,
+                and at a further -10 for one round per stun caused.
+            </para>
+        </description>
+    </advantage>
+
+    
+ </advantages>

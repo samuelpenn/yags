@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+
+<!--
+    Melee combat techniques.
+    
+    Author:  Samuel Penn
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2004-03-14 15:35:48 $
+    
+ -->
+
+<advantages>
+    <advantage name="Improved attack" type="technique">
+        <cost points="3"/>
+        <skill name="All melee"/>
+        
+        <description>
+            <para>
+                When using the <e>aggressive stance</e>, damage rolls also
+                gain a +5 bonus.  Automatic use.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Improved defence" type="technique">
+        <cost points="3"/>
+        <skill name="All melee"/>
+        
+        <description>
+            <para>
+                When using the <e>defensive stance</e>, the character can,
+                defend against up to five opponents, and the defence bonus
+                is +10 rather than +5. Automatic use.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Shield wall" type="technique">
+        <cost points="2"/>
+        <skill name="Weapon and shield"/>
+        <skill name="Longshaft weapon"/>
+
+        <description>
+            <para>
+                The character is trained in fighting as part of a shield
+                wall. The character must be fighting with a shield along
+                side allies, and must be fighting with a <e>defensive</e>
+                stance. The character's own attack and defence rolls are
+                unmodified, but their ally on their shield side gains a
+                defensive bonus equal to the characters skill score.
+            </para>
+        </description>
+    </advantage>
+    
+
+    <advantage name="Ambush" type="technique">
+        <cost points="2"/>
+        <skill name="All"/>
+        <description>
+            <para>
+                When initiated against someone who is not expecting an
+                attack (any attack, so cannot be done against someone
+                in combat, even if they are fighting someone else),
+                then an <e>ambush</e> ignores all armour. If
+                <e>Killing Blow</e> or <e>Deadly punch</e> is known,
+                then they may be combined with the <e>ambush</e>.
+            </para>
+
+            <para>
+                <e>Ambush</e> is a slow attack, and the ambusher is
+                considered to be using the <e>focussed stance</e>.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Feint" type="technique">
+        <cost points="2"/>
+        <skill name="All"/>
+        <description>
+            <para>
+                A feigned attack which tries to catch the defender off
+                guard before making the final strike. It requires the
+                <e>normal stance</e>, but attack is at +5 and it is slow.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Disarm" type="technique">
+        <cost points="4"/>
+        <skill name="Single weapon"/>
+        <skill name="Weapon and shield"/>
+        <skill name="Two weapons"/>
+        <skill name="Great weapon"/>
+        <prerequisite>Feint</prerequisite>
+        
+        <description>
+            <para>
+                Aggressive stance, slow, attack at -10. If successful,
+                the defender's weapon is attacked, and the defender is
+                unable to use it for the rest of the round. Both then
+                make an opposed weapon skill check (the attack uses
+                dexterity, the defender can use strength or dexterity).
+                If the attacker wins, then the defender is disarmed.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Quickdraw" type="technique">
+        <cost points="5"/>
+        <skill name="Any weapon skill"/>
+        <prerequisite>Feint</prerequisite>
+        
+        <description>
+            <para>
+                Normal stance. The character can draw a weapon and
+                attack without penalty in the same round. No other
+                techniques can be used however.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Half sword" type="technique">
+        <cost points="4"/>
+        <skill name="Single weapon"/>
+        <skill name="Great weapon"/>
+        <skill name="Longshaft weapon"/>
+        <prerequisite>Improved attack</prerequisite>
+        
+        <description>
+            <para>
+                Normal stance, slow. Requires two hands, regardless of the
+                weapon. Halves armour (not soak).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Killing blow" type="technique">
+        <cost points="6"/>
+        <skill name="Single weapon"/>
+        <skill name="Weapon and shield"/>
+        <skill name="Two weapons"/>
+        <skill name="Great weapon"/>
+        <skill name="Longshaft weapon"/>
+        <prerequisite>Improved attack</prerequisite>
+        
+        <description>
+            <para>
+                Aggressive stance, slow, -10 to attack. If damage is caused,
+                then the target must make a size x stamina roll of 15 +
+                5 x wounds caused, or immediately be slain. If the attacker
+                is causing mixed or stun damage, then the defender is instead
+                rendered unconscious.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Mighty blow" type="technique">
+        <cost points="8"/>
+        <skill name="Any melee"/>
+        <prerequisite>Killing blow</prerequisite>
+        
+        <description>
+            <para>
+                Aggressive stance, automatic. Damage is +10 rather than +5.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Double attack" type="technique">
+        <cost points="10"/>
+        <skill name="All melee"/>
+        <prerequisite>Improved attack</prerequisite>
+        
+        <description>
+            <para>
+                Aggressive stance. The attacker can attack twice, each time
+                at a -15 penalty to skill. The first attack is fast, the
+                second attack is slow, but both happen at the same
+                initiative.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Triple attack" type="technique">
+        <cost points="15"/>
+        <skill name="All melee"/>
+        <prerequisite>Double attack</prerequisite>
+        
+        <description>
+            <para>
+                Aggressive stance. The attacker can attack three times,
+                each time at a -30 penalty to skill. The first attack is
+                fast, the second attack is normal, and the third attack
+                is slow.
+            </para>
+        </description>
+    </advantage>
+</advantages>
