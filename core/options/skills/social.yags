@@ -4,12 +4,14 @@
     List of social skills. These are generally available in all genres.
     Crosslinked with standard skill techniques.
 
-    Version: $Revision: 1.2 $
+    Version: $Revision: 1.3 $
     Author: Samuel Penn
 -->
 
 <skill-list techniques="options/techniques/skills.yags">
     <skill name="Etiquette" type="social">
+        <default>Charm</default>
+
         <description>
             <para>
                 Etiquette is a knowledge of good manners and social
@@ -26,10 +28,28 @@
                 based on intelligence, but may use charisma (especially
                 for courtly flirting or flattery).
             </para>
+            
+            <para>
+                Defaults to <e>Charm</e>.
+            </para>
+        </description>
+    </skill>
+    
+    <skill name="Intimidation" type="social">
+        <default>Guile</default>
+        
+        <description>
+            <para>
+                Being able to scare people, either with threats of simple
+                physical violence, or by more subtle means. Can either be
+                based on strength or charisma.
+            </para>
         </description>
     </skill>
     
     <skill name="Politics" type="social">
+        <default>Guile</default>
+
         <description>
             <para>
                 The skill of dealing with the intrigues of a political
@@ -50,6 +70,8 @@
     </skill>
 
     <skill name="Streetwise" type="social">
+        <default>Guile</default>
+
         <description>
             <para>
                 <e>Streetwise</e> is similar to <e>intrigue</e>, though is
@@ -62,6 +84,8 @@
     </skill>
 
     <skill name="Gambling" type="social">
+        <default>Guile</default>
+
         <description>
             <para>
                 Knowledge of how to play games of chance. Used with charisma
@@ -116,6 +140,8 @@
     </skill>
 
     <skill name="Perform" type="social">
+        <default>Charm</default>
+
         <description>
             <para>
                 A skill which covers many forms of social skills,
@@ -197,6 +223,8 @@
     </skill>
 
     <skill name="Dance" type="social">
+        <default>Athletics</default>
+
         <description>
             <para>
                 The ability to dance gracefully and to music. Used with
@@ -239,13 +267,17 @@
 
     <skill name="Teach" type="social">
         <description>
-            The ability to teach another person, and train them in
-            the use of a skill. See the Campaign section for details
-            on training.
+            <para>
+                The ability to teach another person, and train them in
+                the use of a skill. See the Campaign section for details
+                on training.
+            </para>
         </description>
     </skill>
 
     <skill name="Trade" type="social">
+        <default>Guile</default>
+
         <description>
             <para>
                 Covers a multitude of skills involved with trading,
@@ -254,8 +286,5 @@
             </para>
         </description>
     </skill>
-
-    
-    
 
 </skill-list>

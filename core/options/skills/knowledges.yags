@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+
+<!--
+    List of knowledge available to characters.
+
+    Version: $Revision: 1.1 $
+    Author: Samuel Penn
+-->
+
+<skill-list>
+    <!-- Knowledges -->
+
+    <!-- Area lore -->
+    <skill name="Area lore" type="knowledge">
+        <description>
+            <para>
+                Knowledge of a given area, including geographical and
+                political knowledge. The <e>Area lore</e> skill is used
+                when checking to see if a character has heard of a person,
+                place or organisation. Area lore is nearly always based on
+                intelligence.
+            </para>
+
+            <para>
+                There is an area lore skill for each area, normally an area
+                the size of a country, with the same culture. An area lore
+                skill can give knowledge of surrounding areas, though such
+                knowledge will be prejudiced by the beliefs of the original
+                area the skill is for.
+            </para>
+        </description>
+
+        <examples>
+            <example target="10">
+                Knowledge that everyone knows, such as who the ruler is,
+                to names of major cities.
+            </example>
+        </examples>
+    </skill>
+    
+    <skill name="Alchemy" type="knowledge">
+        <description>
+            <para>
+                Basic, primitive, knowledge of chemicals and herbs. How to
+                mix things to get a funny smell or a particular colour.
+            </para>
+        </description>
+    </skill>
+    
+    <skill name="Astrology" type="knowledge">
+        <description>
+            <para>
+                Knowledge of the heavens, and how they affect the day to
+                day life of mortals.
+            </para>
+        </description>
+    </skill>
+    
+    <skill name="Beast lore" type="knowledge">
+        <description>
+            <para>
+                Knowledge of animals, how to recognise them and what
+                their behaviours are.
+            </para>
+        </description>
+    </skill>
+
+    <!-- Chirurgury -->
+    <skill name="Chirurgury" type="knowledge">
+        <prerequisite>First aid</prerequisite>
+        <default>First aid</default>
+        
+        <description>
+            <para>
+                Performing major operations on a wounded person. This
+                requires some specialist tools (though rarely more complicated
+                than sharp knives and tongs).
+            </para>
+        </description>
+    </skill>
+    
+    <skill name="Dream lore" type="knowledge">
+        <description>
+            <para>
+                Interpreting dreams.
+            </para>
+        </description>
+    </skill>
+
+    <!-- First aid -->
+    <skill name="First aid" type="knowledge">
+        <description>
+            <para>
+                Provides care and treatment of wounds to stop bleeding and
+                prevent infection. Once a wound has been successfully
+                first aided, it may begin healing naturally. First aid
+                checks are generally made with intelligence. First aid can
+                also be used to treat stuns.
+            </para>
+
+            <para>
+                To treat a character's wounds, the base difficulty is 10.
+                This is modified upwards by the total of the character's
+                stun and wound penalties (a fatally wounded character (-15)
+                would be difficulty 25 to treat). Success means that the
+                wounds will begin healing naturally. If the roll was made
+                by 10 or more, then one level of wound is also healed.
+            </para>
+            
+            <para>
+                Stuns are a base difficulty of zero to first aid, again
+                modified by total stun and wound penalties. Success heals
+                one stun, and each 10 over that heals another level of
+                stuns. Stuns do not need to be treated before they begin
+                healing.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Vetinary" type="knowledge">
+        <description>
+            <para>
+                First aid for animals. The <e>first aid</e> skill may be
+                substituted, though it takes twice as long, and no wounds
+                and no more than one stun can be healed immediately,
+                regardless of the roll.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Faerie lore" type="knowledge">
+        <description>
+            Knowledge of the Other World, of faeries, spirits
+            and beasts of supernatural nature. Based on intelligence.
+        </description>
+    </skill>
+
+    <skill name="Heraldry" type="knowledge">
+        <description>
+            <para>
+                Knowledge of heraldic arms, flags and other symbols. A
+                person skilled in heraldry can recognise nobles, understand
+                and describe the code of heraldic arms, and make guesses
+                as to who someone is allied with based on their coat of
+                arms. Based on intelligence.
+            </para>
+            
+            <para>
+                <e>Area lore</e> may be substituted, though all rolls are
+                halved and it can only be used for recognition.
+            </para>
+        </description>
+        
+        <examples>
+            <example target="10">
+                Recognise a major personality based on their arms,
+                such as a principle member of the royal family, or a
+                major duke or earl. Recognise that someone belongs to
+                a major noble house.
+            </example>
+            
+            <example target="20">
+                Recognise a very important person, such as a duke or
+                earl, or a secondary member of the royal family.
+            </example>
+            
+            <example target="30">
+                Recognise an important land owner, such as a powerful
+                baron.
+            </example>
+            
+            <example target="40">
+                Recognise a baron or other low ranking land owner.
+            </example>
+            
+            <example target="50">
+                Recognise someone really obscure.
+            </example>
+        </examples>
+    </skill>
+
+    <skill name="Herb lore" type="knowledge">
+        <description>
+            <para>
+                Knowledge of herbs and their properties. Can be used
+                to recognise, collect and prepare herbs and plants for
+                use in remedies, poisons and potions. Based on intelligence.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="History" type="knowledge">
+        <description>
+            <para>
+                Knowledge of the past, especially the last few hundred
+                years. Based on intelligence.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Law" type="knowledge">
+        <description>
+            Knowledge and understanding of the law, and how to apply
+            it in a given situation. Based on intelligence.
+        </description>
+    </skill>
+    
+    <skill name="Legend lore" type="knowledge">
+        <description>
+            <para>
+                Knowledge of legends and stories of heroes, places and
+                artifacts.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Religion" type="knowledge">
+        <description>
+            <para>
+                There are many <e>religion</e> skills, one for each god or
+                cult. Knowledge of other gods and religions can be provided
+                by a single religion skill (though the amount depends on
+                hoe much contact that religion has with the others), but
+                such knowledge will be biased by the point of view of the
+                source of the skill.
+            </para>
+            
+            <para>
+                The skill gives knowledge of the god, customs and rituals,
+                as well as political and social aspects of the religion.
+                <e>Techniques</e> may be available for particular cults,
+                which may be secret knowledges or supernatural abilities.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Speak own" type="knowledge">
+        <description>
+            The ability to speak your own language. This defaults
+            to four. Language skills are very rarely rolled.
+        </description>
+    </skill>
+
+</skill-list>
+
