@@ -14,8 +14,8 @@
     </author>
     
     <referenceinfo>
-        <cvsversion>$Revision: 1.6 $</cvsversion>
-        <cvsdate>$Date: 2002-04-03 14:07:23 $</cvsdate>
+        <cvsversion>$Revision: 1.7 $</cvsversion>
+        <cvsdate>$Date: 2002-04-07 09:38:49 $</cvsdate>
         <copyright>
             <year>2001</year>
             <holder>Samuel Penn</holder>
@@ -66,7 +66,18 @@ their ability is found, and 1d20 is rolled and added to it.
 A fumble normally occurs on an ability roll if the total die 
 roll is 1. Under some situations which warrant extra chances of 
 a fumble, a roll of 2 (or even higher) may cause a fumble to 
-occur.
+occur. The number that constitutes a fumble is known as the
+fumble chance.
+</para>
+</sect3>
+
+<sect3><title>Taking care</title>
+<para>
+If desired, a character can be more careful when performing an action.
+If the situation is non-stressful, and the character has a chance to
+think about what they are doing and take their time, then the die roll
+is considered to be zero - but no fumble occurs. This allows a character
+to perform trivial actions with no chance of error.
 </para>
 </sect3>
 </sect2>
@@ -213,10 +224,8 @@ to improve attributes through training.
 <sect3><title>Strength</title>
 <para>
 The strength of a character is a measure of their physical 
-toughness and ability to hurt, break and lift things independent 
-of their size. Strength is most often used in combat, where it 
-helps a character to both absorb damage, and to do it to other 
-people.
+toughness and ability to hurt, break and lift things. Strength is most often used in melee combat, where it is used to measure how damaging
+a blow is.
 </para>
 </sect3>
 
@@ -226,9 +235,8 @@ A character's stamina is a measure of their physical endurance,
 fitness and general ability to cope with fatigue and physical 
 pain. Strength and agility will allow a character to run fast, 
 but stamina is what keeps them running after everyone else has 
-collapsed from exhaustion. Though it is strength which is used 
-to resist damage, stamina is used to stay alive and conscious 
-once damage has been taken.
+collapsed from exhaustion. Stamina is also used to stay alive and
+conscious when damage has been taken.
 </para>
 </sect3>
 
@@ -307,7 +315,7 @@ small humans may have a size of 6 or 4 respectively.
 The size attribute affects the amount of damage a 
 creature can sustain (the number of body levels it has), 
 and a few other combat statistics. Generally, it can be 
-assumed to be 5 for most characters.
+assumed to be 5 for most human characters.
 </para>
 </sect3>
 </sect2>
@@ -319,6 +327,7 @@ be gained with experience and training. Unless otherwise
 specified during character generation, all skills 
 default to a score of zero.
 </para>
+
 <para>
 When a skill is used, it is multiplied with a given 
 attribute, to give the character's final ability score. 
@@ -327,15 +336,17 @@ themselves, they are always multiplied together first.
 There are some exceptions though, where the attribute 
 is used by itself, multiply its value by four.
 </para>
+
 <para>
 To make a skill check, the character's ability score is 
 found, and 1d20 is rolled and added to it.
 </para>
+
 <para>
 A skill of four is considered to be professional level, 
 and someone with an average attribute of three and a 
 skill at four would be able to accomplish moderate tasks 
-with ease.
+with a good chance of success.
 </para>
 
 <sect3><title>Example Skill Levels</title>
@@ -519,53 +530,77 @@ resist such fears.
 </para>
 
 <para>
-Passions are represented by four traits. These are treated like skills,
+Passions are represented by three traits. These are treated like skills,
 in that they can be improved after character generation. Each trait
 represents a character's control over that aspect of their personality.
-The higher the passion trait, then the higher the chance of the
-character resisting that passion.
 </para>
 
 <para>
-The four traits are Anger, Fear, Greed and Lust. Each defaults to four,
-but can be purchased higher or lower with advantages and disadvantages.
-Each of these is the ability to resist that passion, so a high Fear
-trait would be had by a brave warrior.
+The three traits are Bravery, Restraint and Temperence. Each defaults
+to four, but can be purchased higher or lower with advantages and
+disadvantages.
 </para>
 
 <sect2><title>The Four Traits</title>
 
-<sect3><title>Anger</title>
 <para>
-A character's ability to control anger enables him to resist taunting,
-to not let blind range control his actions. A character with a low score
-is easily provoked, and can find himself in fights he didn't want to get
-in. It will be difficult to resist the opportunity to attack a hated
-enemy, or to speak out against someone who is not liked.
+Temperence - resisting physical pleasure (sex, alcohol, luxury).
+Bravery - resisting fear and panic.
+Restraint - remaining calm, ignoring insults, not giving in to hatred.
+</para>
+
+<sect3><title>Bravery</title>
+<para>
+Bravery is a measure of a character's willingness to face danger,
+to do their duty when their instincts tell them to flee. Bravery
+does not mean that a character is stupid and won't flee when the
+cause is pointless, but turning your back on the enemy to run can
+often be worse than standing and fighting.
+</para>
+
+<para>
+Bravery checks are required when facing superior foes, when facing
+supernatural horror, or simply when going into a situation where
+danger is expected but unseen. Overcoming phobias also require a
+bravery check.
 </para>
 </sect3>
 
-<sect3><title>Fear</title>
+<sect3><title>Restraint</title>
 <para>
-Fear is used to face danger without flinching. A character with a good
-fear score can remain cool in the face of danger. This does not make them
-foolhardy, and does not prevent them from retreating, but they will doso in an organised manner.
+Restraint is a measure of a character's ability to resist responding
+to a situation she might otherwise feel needs response. Taunts or
+insults can be used against those with low restraint to force them
+into a weaker position. Failing a restraint check means that the
+character gives in to her anger and hatred.
+</para>
+
+<para>
+Restraint checks may be required if a character is insulted, or if they
+see an opportunity to attack a hated foe for example. A compassionate
+character may be moved to aid another, even if it means giving up on
+an important quest, or putting themselves and their friends in danger.
 </para>
 </sect3>
 
-<sect3><title>Greed</title>
+<sect3><title>Temperence</title>
 <para>
-Greed covers the desire for wealth and comfort, often at the expense of
-other people.
+Temperence is a measure of a character's strength of will against
+temptation, in particular that of physical pleasure. Resisting the
+seductive charms of a beautiful woman, the chance to indulge in
+heavy feasting and drinking, or the opportunity of quick riches
+because of bribes or otherwise requires a temperence check.
+</para>
+
+<para>
+Temperence covers a multitude of sins, and there are plenty of
+advantages and disadvatages which effect specific ones. A temperate
+character may be seen as staid and boring by his peers. The other
+extreme leads to a reputation of unreliability and gluttony.
 </para>
 </sect3>
-
-<sect3><title>Lust</title>
-<para>
-</para>
-</sect3>
-
 </sect2>
+
 
 <sect2><title>Passion Checks</title>
 
@@ -647,14 +682,15 @@ be purchased at character generation.
 
 <para>
 For example, a character with love (family) as a minor passion would get
-a +1 to will if rolling a fear check when defending them. If she had a
-will of 3, and a Fear passion of 4, she would have an ability score of
+a +1 to will if rolling a bravery check when defending them. If she had a
+will of 3, and a Bravery passion of 4, she would have an ability score of
 (3+1) x 4 or 16, rather than the normal 12.
 </para>
 
 </sect2>
 
 </sect1>
+
 
 
 
