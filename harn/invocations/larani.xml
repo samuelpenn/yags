@@ -4,13 +4,14 @@
 
 <invocation religion="Larani" rank="1">
 <name>Banner of Mendiz I</name>
-<time>1 round</time>
+<time>Instant</time>
 <range>Short (50m)</range>
 <difficulty>10</difficulty>
 <cost>Low/1</cost>
 <duration>Combat</duration>
 <resist>Bravery</resist>
 <boost difficulty="30" cost="2">Medium range (100m)</boost>
+<boost difficulty="50" cost="3">Far range (200m)</boost>
 <description>
 Causes an immediate morale check for everyone except the priest
 within range, though Laranian's get a +10 bonus. Failure causes
@@ -21,7 +22,7 @@ rout. This invocation can only be called on once per battle.
 
 <invocation religion="Larani" rank="1">
 <name>Courage of Mendiz I</name>
-<time>1 round</time>
+<time>Instant</time>
 <range>Touch</range>
 <difficulty>10</difficulty>
 <cost>Low</cost>
@@ -39,7 +40,7 @@ Does not stack with similar invocations or spells.
 
 <invocation religion="Larani" rank="1">
 <name>Curse of the Reluctant Warrior I</name>
-<time>1 round</time>
+<time>Instant</time>
 <range>Near (15m)</range>
 <difficulty>20</difficulty>
 <cost>Low/1</cost>
@@ -74,7 +75,7 @@ subject does eat or drink, the invocation is ended.
 <difficulty>10</difficulty>
 <cost>Low/1</cost>
 <duration>Combat</duration>
-<boost difficulty="20" cost="1">Range is near</boost>
+<boost difficulty="20" cost="1">All within Near can be affected</boost>
 <description>
 Subject's defence is increased by one fifth the invocation roll
 as long as they are using a shield. This is increased by 50% if
@@ -106,8 +107,11 @@ starlight, moonlight, twilight, daylight and very bright.
 <difficulty>10</difficulty>
 <cost>Low/1</cost>
 <description>
-An invocation to cure infection. An infection of severity 1 per
-five rolled is immediately cured.
+An invocation to cure infection. At the base difficulty, an infection
+of severity 1 is immediately cured (infections are rated from 1 to 5).
+Each five rolled above this, an extra level of infection is cured.
+Infections higher than that cured by be unaffected, reduced or slowed,
+depending on circumstances. Multiple uses have no effect however.
 </description>
 </invocation>
 
@@ -117,9 +121,13 @@ five rolled is immediately cured.
 <range>Self</range>
 <difficulty>10</difficulty>
 <cost>Low/immediate/2</cost>
+<boost difficulty="20">Grants a feeling as to best action</boost>
+<boost difficulty="40">A more detailed answer</boost>
+<boost difficulty="60">A very detailed answer</boost>
 <description>
 Offers insight when the priest is unsure about what to do. This
-only applies to moral quandaries.
+only applies to moral quandaries. At the basic level, a feeling
+of the consequences of possible actions is given.
 </description>
 </invocation>
 
@@ -130,6 +138,7 @@ only applies to moral quandaries.
 <difficulty>10</difficulty>
 <cost>Low/1</cost>
 <boost difficulty="25" cost="2">Heals three wound levels</boost>
+<boost difficulty="40" cost="3">Heals all wounds and stuns</boost>
 <description>
 Stops bloodloss and heals one wound level on the person touched.
 Alternatively, it can cure all stuns the person suffers from.
@@ -139,7 +148,7 @@ Can be performed once a day on a single person.
 
 <invocation religion="Larani" rank="2">
 <name>Blessing of the Winged Lion II</name>
-<time>1 round</time>
+<time>Instant</time>
 <range>Touch</range>
 <difficulty>10</difficulty>
 <cost>Low/1</cost>
@@ -152,7 +161,7 @@ equal to twice the invocation roll.
 
 <invocation religion="Larani" rank="2">
 <name>Endurance of St. Amrathas II</name>
-<time>1 round</time>
+<time>Instant</time>
 <range>Touch</range>
 <difficulty>20</difficulty>
 <cost>Low/1</cost>
@@ -194,7 +203,7 @@ increased by two fifths the invocation roll.
 
 <invocation religion="Larani" rank="2">
 <name>Knight's Peace II</name>
-<time>1 round</time>
+<time>Instant</time>
 <range>Short (50m)</range>
 <difficulty>20</difficulty>
 <cost>Low</cost>
@@ -208,8 +217,8 @@ will try to surrender, or if that fails, fight.
 </description>
 </invocation>
 
-<invocation religion="Larani" rank="2">
-<name>Oathbinder II</name>
+<invocation religion="Larani" rank="3">
+<name>Oathbinder III</name>
 <time>1 day</time>
 <range>Touch</range>
 <difficulty>30</difficulty>
@@ -226,7 +235,7 @@ have a penalty equal to twice this.
 
 <invocation religion="Larani" rank="2">
 <name>Orthas' Faith II</name>
-<time>1 round</time>
+<time>Instant</time>
 <range>Near</range>
 <difficulty>20</difficulty>
 <cost>Moderate/2</cost>
@@ -238,19 +247,65 @@ roll to attack and initiative rolls for the duration of the combat.
 </invocation>
 
 <invocation religion="Larani" rank="2">
-<name>Protection of Angcaradina II</name>
+    <name>Protection of Angcaradina II</name>
+    <time>1 round</time>
+    <range>Self</range>
+    <difficulty>15</difficulty>
+    <cost>Low/2</cost>
+    <duration>Combat</duration>
+    <boost difficulty="20">
+        Invocation can be layed upon another touched
+    </boost>
+    <boost difficulty="30" cost="3">
+        Invocation can be layed upon all those within Near (15m)
+    </boost>
+    <description>
+        Protects the priest from harm, granting a bonus to soak equal
+        to one fifth the invocation roll. The priests armour and clothes
+        (or skin, if they have none of the former) takes on a blood red
+        hue. Against fire damage (ethereal or natural), the bonus is
+        twice this.
+    </description>
 </invocation>
 
 <invocation religion="Larani" rank="2">
-<name>Red Robes Flowing II</name>
+    <name>Red Robes Flowing II</name>
+    <time>Instant</time>
+    <range>Near</range>
+    <difficulty>25</difficulty>
+    <cost>Low/2</cost>
+    <duration>Combat</duration>
+    <description>
+        Causes all adherents in range to go berserk.
+    </description>
 </invocation>
 
 <invocation religion="Larani" rank="2">
-<name>Valamin's Sleep II</name>
+    <name>Valamin's Sleep II</name>
+    <time>Instant</time>
+    <range>Near</range>
+    <difficulty>20</difficulty>
+    <cost>Low/2</cost>
+    <duration>1 hour</duration>
+    <description>
+        Causes the target to fall asleep, if they fail their will check.
+    </description>
 </invocation>
 
 <invocation religion="Larani" rank="3">
-<name>Larani's Charge III</name>
+    <name>Larani's Charge III</name>
+    <time>1 round</time>
+    <range>Near</range>
+    <difficulty>20</difficulty>
+    <cost>Moderate/4</cost>
+    <duration>Next mounted charge</duration>
+    <description>
+        All mounted Laranians within range are given a bonus to initiative,
+        attack, damage and soak for their next mounted charge only. The
+        bonus is equal to two fifths the invocaton roll. Further, the
+        recipients of the charge attack must make a bravery check of 25 in
+        order to stand their ground.
+    </description>
 </invocation>
 
 </invocations>
