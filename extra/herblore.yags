@@ -15,8 +15,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.7 $</version>
-            <date>$Date: 2003-06-07 21:49:55 $</date>
+            <version>$Revision: 1.8 $</version>
+            <date>$Date: 2003-06-14 22:00:28 $</date>
         </cvsinfo>
 
         <license>
@@ -384,10 +384,31 @@
                     <title>Effects</title>
 
                     <para>
-                        One or more effects will be listed for each herb. The
-                        first effect comes into play as soon as a stamina roll
-                        is failed. If multiple effects are listed, then the next
-                        effect along kicks in when the next stamina check is failed.
+                        One or more effects will be listed for each herb.
+                        The first effect comes into play as soon as a
+                        stamina roll is failed. If multiple effects are
+                        listed, then the next effect along kicks in when
+                        the next stamina check is failed.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Application</title>
+
+                    <para>
+                        Many herbs have several applications, allowing them
+                        to be tailored to fit the occasion. At one dosage, a
+                        herb may heal, at another, it may kill. Similarly,
+                        different dosages may allow a poison to have a slow
+                        effect over time, making it harder to detect and
+                        counter.
+                    </para>
+
+                    <para>
+                        The latter type of poison is given to the target
+                        cumulatively over a long period. Only poisons which
+                        remain in the system can be administered in this
+                        way.
                     </para>
                 </sect3>
             </sect2>
@@ -453,7 +474,7 @@
                     <frequency>Common</frequency>
                     <toxicity>V</toxicity>
 
-                    <usage label="Poison">
+                    <application label="Fast Poison">
                         <strength>20</strength>
                         <time modifier="-1">30mn</time>
                         <effects>
@@ -463,7 +484,7 @@
                             <effect>Coma</effect>
                             <effect>Death</effect>
                         </effects>
-                    </usage>
+                    </application>
 
 
                 </herb>
