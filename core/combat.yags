@@ -1,160 +1,168 @@
 <?xml version="1.0"?>
-<?xml-stylesheet href="http://www.bifrost.demon.co.uk/xsl/fo/yagsbook.xsl" type="text/xsl"?>
+<?xml-stylesheet href="/usr/share/web/xsl/html/yagsbook/yagsbook.xsl" type="text/xsl"?>
 
-<article> 
-<header>
-    <title>Combat</title>
-    <tagline>Yags</tagline>
-    <uri>yags/core/combat</uri>
-    <format>System</format>
-    <author>
-        <firstname>Samuel</firstname>
-        <surname>Penn</surname>
-        <email>sam@bifrost.demon.co.uk</email>
-    </author>
 
-    <referenceinfo>
-        <cvsversion>$Revision: 1.14 $</cvsversion>
-        <cvsdate>$Date: 2002-04-07 09:40:04 $</cvsdate>
-        <copyright>
+
+<article
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="yagsbook.xsd">
+    
+
+    <header>
+        <title>Combat</title>
+        <tagline>Yags</tagline>
+
+        <author>
+            <fullname>Samuel</fullname>
+            <email>sam@bifrost.demon.co.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.15 $</version>
+            <date>$Date: 2002-06-19 21:02:04 $</date>
+        </cvsinfo>
+        
+        <license>
             <year>2001</year>
             <holder>Samuel Penn</holder>
-            <licence>Copyright</licence>
-        </copyright>
-    </referenceinfo>
-    
-    <displayscheme name="combat">
-        <colour>#ff0000</colour>
-        <darkcolour>#ff7777</darkcolour>
-        <lightcolour>#ffcccc</lightcolour>
-    </displayscheme>
-</header>
+            <url>http://www.gnu.org/licenses/fdl.html</url>
+            <text>
+                Permission is granted to copy, distribute and/or
+                modify this document under the terms of the GNU
+                Free Documentation License, Version 1.1 or any
+                later version published by the Free Software
+                Foundation; with no invariant sections, with no
+                Front-Cover Texts, and with no Back-Cover Texts.
+                A copy of the license is included in the section
+                entitled "GNU Free Documentation License".
+            </text>
+        </license>
 
-<sect1><title>Combat</title>
-<para>
-These rules cover combat in a low technology setting. What is 
-covered includes unarmed combat, melee weapons such as swords 
-and spears, and missile weapons such as bows and slings. Rules 
-for firearms are covered in Modern Combat.
-</para>
+        <style name="combat"/>
+    </header>
 
-<para>
-It is assumed that the reader has read both the Introduction
-and the Character articles. 
-</para>
+    <body>
+        <sect1>
+            <title>Basic Combat</title>
 
-<sect2><title>General Terminology</title>
-<para>
-The following terms are used frequently within these rules,
-so they are described up front. A full description of how they
-are used will be given later.
-</para>
+            <para>
+                This is a basic introduction to the <tm>Yags</tm>
+                combat system, and a description of low tech fighting,
+                using swords, bows and brawling. Modern day warfare
+                is covered in <em>Modern Combat</em> and futuristic
+                combat is covered in <em>Future Combat</em>.
+            </para>
 
-<sect3><title>Round</title>
-<para>
-A round is a unit of time, averaging about five seconds. Each
-round, a character has chance to perform a single action -
-normally an attack or a move. Five seconds is actually quite
-a long time in a melee fight, so a fair degree of latitude is
-allowed as regards to what can be accomplished. However, only
-a single attack may ever be made.
-</para>
-</sect3>
+            <para>
+                <note>It is assumed that the reader has read both the
+                Introduction and the Character articles.</note>
+            </para>
 
-<sect3><title>Body Levels</title>
-<para>
-Every creature has a number of body levels, which represent
-their health. Most creatures have a number of body levels equal
-to their size plus two. The extra two represent 'OK' and 'Fatal'
-which are at either extreme of a living creature's state of
-health.
-</para>
-</sect3>
+            <sect2>
+                <title>General Terminology</title>
 
-<sect3><title>Soak</title>
-<para>
-Soak is how good a creature is at resisting (soaking) damage.
-An adult human will usually have a base soak of 12. Any armour
-worn adds to this.
-</para>
-</sect3>
+                <para>
+                    The following terms are used frequently within
+                    these rules, so they are described up front. A
+                    full description of how they are used will be
+                    given later.
+                </para>
 
-<sect3><title>Wounds</title>
-<para>
-Wounds are serious injuries which have a good chance of causing
-death. They often puncture the skin, resulting in bleeding and
-possible the loss of vital organs.
-</para>
-</sect3>
+                <para>
+                    <termlist sort="true">
+                        <entry term="Round">
+                            A round is a unit of time, averaging
+                            about five seconds. Each round, a
+                            character has chance to perform a
+                            single action - normally an attack or
+                            a move. Five seconds is actually quite
+                            a long time in a melee fight, so a fair
+                            degree of latitude is allowed as regards
+                            to what can be accomplished. However,
+                            only a single attack may ever be made.
+                        </entry>
 
-<sect3><title>Stuns</title>
-<para>
-Stuns are non-serious injuries which result in bruises and
-pain. They will rarely kill, but a severe beating can in theory
-inflict enough stuns to kill a person.
-</para>
-</sect3>
+                        <entry term="Body Levels">
+                            Every creature has a number of body
+                            levels, which represent their health.
+                            Most creatures have a number of body
+                            levels equal to their size plus two.
+                            The extra two represent <bold>OK</bold>
+                            and <bold>Fatal</bold> which are at
+                            either extreme of a living creature's
+                            state of health.
+                        </entry>
 
-<sect3><title>Damage</title>
-<para>
-Damage is done when one creature hits another. Often, damage
-induces wounds or stuns in the target. There are three types of
-damage.
-</para>
+                        <entry term="Soak">
+                            Soak is how good a creature is at
+                            resisting (soaking) damage. An adult
+                            human will usually have a base soak of
+                            12. Any armour worn adds to this.
+                        </entry>
 
-<sect4><title>Stun Damage</title>
-<para>
-Stun damage is caused by unarmed attacks such as a punch or pick.
-Such damage is recovered quickly, and very rarely kills.
-</para>
-</sect4>
+                        <entry term="Wounds">
+                            Wounds are serious injuries which have
+                            a good chance of causing death. They
+                            often puncture the skin, resulting in
+                            bleeding and possible the loss of vital
+                            organs.
+                        </entry>
 
-<sect4><title>Heavy Damage</title>
-<para>
-Heavy damage is caused by many creatures as well as weapons such
-as clubs or staves. It can kill, though much of the damage caused
-is short term bruises and stuns.
-</para>
-</sect4>
+                        <entry term="Stuns">
+                            Stuns are non-serious injuries which
+                            result in bruises and pain. They will
+                            rarely kill, but a severe beating can
+                            in theory inflict enough stuns to kill
+                            a person, since excessive stuns translate
+                            into <bold>wounds</bold>.
+                        </entry>
 
-<sect4><title>Wound Damage</title>
-<para>
-Deadly damage kills. Most man made weapons will cause deadly
-damage, as do some animals (those with sharp talons and teeth).
-Any attack capable of penetrating deeply into the body will
-likely do deadly damage.
-</para>
-</sect4>
-</sect3>
+                        <entry term="Damage">
+                            Damage is done when one creature hits
+                            another. Often, damage induces wounds or
+                            stuns in the target. An attack will
+                            inflict either <bold>wounds</bold>,
+                            <bold>stuns</bold> or <bold>mixed</bold>
+                            damage which is split between stuns and
+                            wounds. Many animals cause mixed damage
+                            with claw and bite attacks.
+                        </entry>
 
-<sect3><title>Load</title>
-<para>
-A character's load is a measure of how much they are carrying.
-Each weapon and piece of armour has a load associated with it.
-If the total load is greater than the character's strength x 4,
-then they are considered to be encumbered and at penalty. 
-</para>
-</sect3>
+                        <entry term="Load">
+                            A character's load is a measure of how
+                            much they are carrying. Each weapon and
+                            piece of armour has a load associated
+                            with it. If the total load is greater
+                            than the character's strength x 4, then
+                            they are considered to be encumbered and
+                            at penalty.
+                        </entry>
 
-<sect3><title>Special Attack</title>
-<para>
-A special attack is chosen before initiative is determined, and
-can have a modifier on how a character attacks, and also on the
-results of the attack. Individual special attacks are described
-later, but include such things as killing blow or aimed shot.
-They are very useful, and players should be aware of their
-options. 
-</para>
-</sect3>
-</sect2>
+                        <entry term="Special Attack">
+                            A special attack is chosen before
+                            initiative is determined, and can have
+                            a modifier on how a character attacks,
+                            and also on the results of the attack.
+                            Individual special attacks are described
+                            later, but include such things as killing
+                            blow or aimed shot. They are very useful,
+                            and players should be aware of their
+                            options.
+                        </entry>
+                    </termlist>
+                </para>
+            </sect2>
 
-<sect2><title>Fighting Styles</title>
-<para>
-When a character or creature makes an attack, they do so using
-one of a number of different fighting styles. Each fighting
-style has its own skill, and is independent of the weapon being
-used.
-</para>
+            <sect2>
+                <title>Fighting Styles</title>
+
+                <para>
+                    When a character or creature makes an attack,
+                    they do so using one of a number of different
+                    fighting styles. Each fighting style has its
+                    own skill, and is independent of the weapon
+                    being used.
+                </para>
 
 <sect3><title>Brawling</title>
 <para>
@@ -173,7 +181,7 @@ The single weapon fighting style involves using a single one
 handed weapon to attack with. A shield cannot be used. Most
 weapons, other than shields and two handed weapons, can be used
 with this style, and only a single skill (single weapon) is
-needed to cover them all. 
+needed to cover them all.
 </para>
 </sect3>
 
@@ -182,7 +190,7 @@ needed to cover them all.
 This fighting style uses a combination of a one handed weapon
 and a shield, to give what is possibly the best combination.
 Any type of shield, and any one handed weapon can be used with
-this style. 
+this style.
 </para>
 </sect3>
 
@@ -190,7 +198,7 @@ this style.
 <para>
 The great weapon style allows use of a single weapon which
 requires two hands to use it. It suffers from lack of defence,
-but such weapons can be very good at cleaving through armour. 
+but such weapons can be very good at cleaving through armour.
 </para>
 </sect3>
 
@@ -1742,5 +1750,5 @@ size roll of 20 would need to be failed in order to die).
 </sect2>
 
 </sect1>
-
+    </body>
 </article>
