@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.20 $</version>
-            <date>$Date: 2002-11-23 17:06:10 $</date>
+            <version>$Revision: 1.21 $</version>
+            <date>$Date: 2002-12-13 19:30:47 $</date>
         </cvsinfo>
         
         <license>
@@ -55,7 +55,8 @@
 
             <para>
                 <note>It is assumed that the reader has read both the
-                Introduction and the Character articles.</note>
+                Introduction and the Character articles before reading
+                this article.</note>
             </para>
 
             <sect2>
@@ -86,8 +87,8 @@
                         levels, which represent their health.
                         Most creatures have a number of body
                         levels equal to their size plus two.
-                        The extra two represent <term>OK</term>
-                        and <term>Fatal</term> which are at
+                        The extra two represent <s>OK</s>
+                        and <s>Fatal</s> which are at
                         either extreme of a living creature's
                         state of health.
                     </entry>
@@ -104,7 +105,8 @@
                         a good chance of causing death. They
                         often puncture the skin, resulting in
                         bleeding and possible the loss of vital
-                        organs.
+                        organs. A creature can suffer a number of wounds
+                        equal to their body levels before dying.
                     </entry>
 
                     <entry term="Stuns">
@@ -113,7 +115,22 @@
                         rarely kill, but a severe beating can
                         in theory inflict enough stuns to kill
                         a person, since excessive stuns translate
-                        into <term>wounds</term>.
+                        into <s>wounds</s>. Once someone has stuns
+                        equal to their body levels, they are practically
+                        out of the fight.
+                    </entry>
+                    
+                    <entry term="Fatigue">
+                        Fatigue is a measure of how tired a creature is.
+                        Unlike wounds and stuns, the amount of fatigue a
+                        creature can handle is based on their stamina.
+                        There are two types of fatigue - temporary and
+                        permanent. Temporary fatigue is more common in
+                        combat, and can be recovered with a short rest.
+                        Permanent fatigue can only be recovered after a
+                        good nights sleep, but is only gained through
+                        sleep deprivation or after several hours of
+                        physical effort.
                     </entry>
 
                     <entry term="Damage">
@@ -1106,10 +1123,31 @@
                 </para>
 
                 <para>
-                    As for other types of <emphasis>damage</emphasis>,
+                    As for other types of <e>damage</e>,
                     fatigue is measured in levels, each level giving a
                     penalty to all actions. These levels range from 'OK' 
                     to 'Exhausted'.
+                </para>
+                
+                <para>
+                    There are types of fatigue - temporary and permanent.
+                    Unless stated otherwise, all fatigue gained is temporary
+                    and can be lost with a short rest.
+                </para>
+                
+                <para>
+                    All fatigue is recorded on the same track. If a person
+                    has two points of temporary fatigue and two points of
+                    permanent fatigue, then for purposes of everything save
+                    for recovery, they have four points of fatigue. For
+                    someone with a stamina of 3, this would give them a
+                    single -6 penalty, not two -1 penalties.
+                </para>
+                
+                <para>
+                    It is suggested that fatigue is kept track of on the
+                    character sheet by crossing off temporary fatigue levels
+                    with a single line, and permanent fatigue with a cross.
                 </para>
             </sect2>
         </sect1>
@@ -1383,6 +1421,42 @@
                     <para>
                         A patient can look after themselves, though they
                         suffer wounds penalties to do so.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Recovering from Fatigue</title>
+
+                    <para>
+                        The only way to recover from fatigue is through
+                        rest. Temporary fatigue can be recovered in a
+                        matter of minutes, whilst permanent fatigue can
+                        only be recovered with a good sleep.
+                    </para>
+
+                    <para>
+                        For each level of fatigue a person has, it takes
+                        five minutes to recover one temporary level. If a
+                        person has four levels of temporary fatigue, then
+                        it takes 20 minutes of rest to loose the first level,
+                        then 15 minutes for the next level, 10 minutes for
+                        the third level and finally 5 minutes for the last
+                        level.
+                    </para>
+
+                    <para>
+                        Permanent fatigue counts towards temporary fatigue,
+                        but can not be lost through simple rest. A person
+                        with two permanent fatigue and two temporary, could
+                        loose the temporary fatigue after 35 minutes, but
+                        would need a night of rest to loose the rest.
+                    </para>
+                    
+                    <para>
+                        Permanent fatigue is recovered after a night of
+                        rest. Four hours of sleep will remove all temporary
+                        fatigue automatically, and one point of permanent
+                        fatigue for every two points of stamina (rounded up).
                     </para>
                 </sect3>
             </sect2>
@@ -1788,11 +1862,11 @@
                 </para>
 
                 <para>
-                    If defender (the character making the counter strike)
+                    The defender (the character making the counter strike)
                     makes a brawling attack, with penalties equal to those
                     they had for the defence roll (including those for
                     defending against multiple opponents). The attacker
-                    must a brawl defence roll, and if he succeeds, then
+                    makes a brawl defence roll, and if he succeeds, then
                     the counter strike fails. Note that the brawl defence
                     suffers penalties for performing multiple defences,
                     i.e. if the attacker was already defending against two
