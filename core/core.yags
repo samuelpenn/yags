@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.35 $</version>
-            <date>$Date: 2004-12-04 17:36:57 $</date>
+            <version>$Revision: 1.36 $</version>
+            <date>$Date: 2004-12-27 11:17:57 $</date>
         </cvsinfo>
 
         <license>
@@ -325,10 +325,9 @@
                         </item>
                         
                         <item name="Move">
-                            A character's move is used in combat situations
-                            to determine how far the character can move in
-                            a round. It is equal to one third their size x
-                            agility (rounded to nearest whole number).
+                            A character's move determines how quickly they
+                            can run, both in combat and over long distance.
+                            It is equal to size + strength + agility + 1.
                         </item>
                     </itemlist>
                 </sect3>
@@ -461,6 +460,26 @@
                             of history.
                         </item>
                     </targetlist>
+                </sect3>
+                
+                <sect3>
+                    <title>Talents<title>
+                    
+                    <para>
+                        The skills available to characters will vary from
+                        genre to genre, but Yags has eight core skills,
+                        called <e>talents</e>, which all characters know to
+                        a limited extent. Normally, all starting characters
+                        will have a score of 2 in each talent.
+                    </para>
+                    
+                    <para>
+                        The eight talents are athletics; awareness; brawl;
+                        charm; guile; sleight; stealth and throw. The
+                        skills article describes them in full detail. They
+                        represent basic skills which everyone picks up in
+                        childhood.
+                    </para>
                 </sect3>
 
                 <sect3>
@@ -1224,29 +1243,31 @@
                 <title>Combat Move</title>
                 
                 <para>
-                    A character can move a distance in metres equal to
-                    their <e>move</e> score each round of combat (which is
-                    about five seconds) without any penalty. This is also
-                    considered to be normal walking speed. For an average
-                    person, this is 5m/round.
+                    A character can move a distance in metres equal to half
+                    their <e>move</e> score (round down) each round of
+                    combat without any penalty. For an average person, this
+                    is 6m/round. This is normally considered a free action.
                 </para>
                 
                 <sect3>
                     <title>Running</title>
                 
                     <para>
-                        A character can <e>run</e> at triple this speed. This
-                        represents a reasonable jog which the character can
-                        keep up for a long period of time. For an average
-                        person, this is 15m/round.
+                        A character can <e>run</e> at their full move each
+                        round. For an average human, this is 12m/round.
+                        This is effectively a light jog, and can kept up
+                        over long distance. Moving this far in combat
+                        counts as an action, and restricts what else the
+                        character can do - see the combat article for full
+                        details.
                     </para>
                     
                     <para>
                         If running for a long time, the character will gain
-                        one fatigue every stamina x athletics minutes. An
-                        average person with no training would gain a point
-                        of fatigue every six minutes, eventually stopping
-                        from fatigue after 30 minutes.
+                        one point of fatigue every stamina x athletics
+                        minutes. A character with a stamina of 3 and an
+                        athletics of 2, will gain one point of fatigue
+                        every 6 minutes.
                     </para>
                 </sect3>
                 
@@ -1254,39 +1275,43 @@
                     <title>Sprinting</title>
                 
                     <para>
-                        A character can opt to <e>sprint</e>, which enables
-                        them to move five times their base move. For an
-                        average person, this is 25m/round. At this speed, a
-                        person could do the hundred metres in 20 seconds.
+                        A character can <e>sprint</e> at a speed equal to
+                        twice their move score plus their athletics score
+                        each round. For a typical adult with a move of 12
+                        and an athletics score of 2, this would be
+                        26m/round. Basically, a person could run the 100m
+                        in just under 20s.
                     </para>
-                </sect3>
-                
-                <sect3>
-                    <title>All Out Sprint</title>
-                
-                    <para>
-                        An <e>all out sprint</e> precludes any other actions
-                        (such as fighting, including any defence rolls) and
-                        has to be done in a more or less straight line
-                        (a gentle curve, such as on a running track, would be
-                        okay). They can add the square root of
-                        <skillequation>
-                            <attribute>agility</attribute>
-                            <skill>athletics</skill>
-                            <die/>
-                        </skillequation>
-                        to their <e>sprint</e> speed. An average person will
-                        move 29m/round, running the 100m in about 17 seconds.
-                    </para>
-                </sect3>
                     
+                    <para>
+                        A sprinting character gains a point of fatigue
+                        every round.
+                    </para>
+                </sect3>                
             </sect2>
             
             <sect2>
                 <title>Overland Movement</title>
                 
                 <para>
-                    
+                    Overland movement is where round to round movement
+                    isn't important, but distance travelled over the course
+                    of an entire day is. A day is divided into six
+                    <e>watches</e> of 4 hours each.
+                </para>
+                
+                <para>
+                    In good conditions over average terrain, a character
+                    can be expected to travel a distance in kilometres
+                    equal to their move score each watch. This equates
+                    to about 3km/h. A character will gain one fatigue each
+                    watch when moving at this speed.
+                </para>
+                
+                <para>
+                    Modifiers to this (weather, type of terrain etc) are
+                    possible, but aren't described here. See the wilderness
+                    article for full details.
                 </para>
             </sect2>
             
@@ -1315,17 +1340,17 @@
                     </item>
                     
                     <item target="2" value="Moderately (x3).">
-                        Character has a -2 penalty to move and a -1 penalty
+                        Character has a -3 penalty to move and a -1 penalty
                         to agility.
                     </item>
                     
                     <item target="3" value="Heavily (x6).">
-                        Character has a -3 penalty to move, a -2 penalty
+                        Character has a -6 penalty to move, a -2 penalty
                         to agility and a -1 penalty to dexterity.
                     </item>
                     
                     <item target="4" value="Greatly (x10).">
-                        Character has a -4 penalty to move, a -3 to agility
+                        Character has a -10 penalty to move, a -3 to agility
                         and a -1 to dexterity.
                     </item>
                     
@@ -1337,7 +1362,10 @@
                 
                 <para>
                     Each level of encumbrance gives a character a -5
-                    penalty to all rolls to resist fatigue.
+                    penalty to all rolls to resist fatigue. A character
+                    always has a minimum move of 1, until they become
+                    over encumbered. Agility and dexterity can never
+                    be reduced below zero.
                 </para>
             </sect2>
         </sect1>
