@@ -3,11 +3,16 @@
 <!--
     List of core skills. These are generally available in all genres.
 
-    Version: $Revision: 1.12 $
+    Version: $Revision: 1.13 $
     Author: Samuel Penn
 -->
 
 <skill-list>
+
+    <!--
+        Social skills.
+     -->
+
     <skill name="Etiquette" type="social">
         <description>
             <para>
@@ -26,12 +31,128 @@
                 for courtly flirting or flattery).
             </para>
         </description>
+    </skill>
+    
+    <skill name="Intrigue" type="social">
+        <description>
+            <para>
+                The skill of dealing with the intrigues of a political
+                court. With it, it is possible to find out relationships
+                within the court, and to obtain information from people, or
+                even to spread information without it being obvious that
+                the plotter is trying to spread information.
+            </para>
+        </description>
 
         <examples>
-            <example target="10">How to greet a person correctly</example>
-            <example target="10">How to eat without embarassing yourself</example>
-            <example target="15">Choosing a suitable gift</example>
+            <example target="10">Detect broad allegiences in a group</example>
         </examples>
+    </skill>
+    
+    <skill name="Carousing" type="social">
+        <description>
+            <para>
+                The skill of surviving parties and similar social
+                gatherings. The character can blend into the crowd,
+                get to meet a particular person, find out information,
+                or draw attention to themselves.
+            </para>
+            
+            <para>
+                Used with charisma. Can default to <e>charm</e>, but that
+                only really helps once you've been introduced to someone.
+                Anything to do with making use of the social structure
+                of the party is halved if <e>charm</e> is used.
+            </para>
+        </description>
+        
+        <examples>
+            <example target="10">
+                Survive without getting a bad reputation (for being a
+                bore, making a social gaffe or trying to flirt with the
+                wrong person).
+            </example>
+            
+            <example target="20">
+                Character may get invited to the next party. If desired,
+                people will remember the character. Can get to talk or
+                flirt with most people at the party.
+            </example>
+            
+            <example target="30">
+                Character can either be well noted or totally overlooked
+                (being known as 'that guy who sat in the corner and said
+                nothing' is not necessarily being overlooked.). Can get to
+                talk or flirt with anyone.
+            </example>
+            
+            <example target="50">
+                Can get to talk or flirt with anyone, successfully.
+            </example>
+        </examples>
+    </skill>
+    
+
+    <skill name="Intimidation" type="social">
+        <description>
+            <para>
+                Making threats in order to scare someone. Can be used with
+                either <e>strength</e> or <e>charisma</e>. The former
+                requires the visible threat of physical force to back it up,
+                the latter requires some believable threat.
+            </para>
+
+            <para>
+                It is an opposed intimidation roll versus the target's will
+                and bravery, modified by circumstance. A moderate success
+                will cause the target to pause to think, a good success to
+                back off, and an excellent success to run. Note that most
+                people will decide to back down anyway if they are facing
+                an obviously dangerous threat, regardless of how brave they
+                are and regardless of the result of any intimidation.
+            </para>
+
+            <para>
+                <e>Guile</e> may be used in place of <e>Intimidation</e>,
+                though the roll is halved.
+            </para>
+        </description>
+
+        <examples>
+            <example target="-30">
+                Intimidator is in a position of great weakness.
+            </example>
+            <example target="-20">
+                Intimidator is in an obviously weak position.
+            </example>
+            <example target="-10">
+                Intimidator seems to be in a weak position.
+            </example>
+            <example target="+0">
+                Intimidator and target are about matched.
+            </example>
+            <example target="+10">
+                Intimidator seems to have the advantage.
+            </example>
+            <example target="+20">
+                Intimidator obviously is stronger.
+            </example>
+            <example target="+30">
+                Intimidator overwhelms the target.
+            </example>
+        </examples>
+    </skill>
+
+    <skill name="Streetwise" type="social">
+        <description>
+            <para>
+                <e>Streetwise</e> is similar to <e>intrigue</e>, though is
+                more suited to life amongst the criminal classes. With it,
+                comes knowledge of how to survive on the street, how to
+                gain the trust of those who live on the wrong side of the
+                law, as well as how to find them in the first place.
+            </para>
+        </description>
     </skill>
 
     <skill name="Gambling" type="social">
@@ -216,83 +337,6 @@
         </description>
     </skill>
 
-    <skill name="Intrigue" type="social">
-        <description>
-            <para>
-                The skill of dealing with the intrigues of a political
-                court. With it, it is possible to find out relationships
-                within the court, and to obtain information from people, or
-                even to spread information without it being obvious that
-                the plotter is trying to spread information.
-            </para>
-        </description>
-
-        <examples>
-            <example target="10">Detect broad allegiences in a group</example>
-        </examples>
-    </skill>
-
-    <skill name="Intimidation" type="social">
-        <description>
-            <para>
-                Making threats in order to scare someone. Can be used with
-                either <e>strength</e> or <e>charisma</e>. The former
-                requires the visible threat of physical force to back it up,
-                the latter requires some believable threat.
-            </para>
-
-            <para>
-                It is an opposed intimidation roll versus the target's will
-                and bravery, modified by circumstance. A moderate success
-                will cause the target to pause to think, a good success to
-                back off, and an excellent success to run. Note that most
-                people will decide to back down anyway if they are facing
-                an obviously dangerous threat, regardless of how brave they
-                are and regardless of the result of any intimidation.
-            </para>
-
-            <para>
-                <e>Guile</e> may be used in place of <e>Intimidation</e>,
-                though the roll is halved.
-            </para>
-        </description>
-
-        <examples>
-            <example target="-30">
-                Intimidator is in a position of great weakness.
-            </example>
-            <example target="-20">
-                Intimidator is in an obviously weak position.
-            </example>
-            <example target="-10">
-                Intimidator seems to be in a weak position.
-            </example>
-            <example target="+0">
-                Intimidator and target are about matched.
-            </example>
-            <example target="+10">
-                Intimidator seems to have the advantage.
-            </example>
-            <example target="+20">
-                Intimidator obviously is stronger.
-            </example>
-            <example target="+30">
-                Intimidator overwhelms the target.
-            </example>
-        </examples>
-    </skill>
-
-    <skill name="Streetwise" type="social">
-        <description>
-            <para>
-                <e>Streetwise</e> is similar to <e>intrigue</e>, though is
-                more suited to life amongst the criminal classes. With it,
-                comes knowledge of how to survive on the street, how to
-                gain the trust of those who live on the wrong side of the
-                law, as well as how to find them in the first place.
-            </para>
-        </description>
-    </skill>
 
     <!--
         Wilderness skills.
