@@ -28,7 +28,7 @@
                     consist of a whirling mass of air and whatever else they
                     can whip up - normally dust.
                 </para>
-                
+
                 <para>
                     The larger elementals are towering dark tornados 30m
                     tall. They may reform themselves at will, though the
@@ -105,7 +105,7 @@
                     mixed or wound damage still applies). Its physical
                     attack is an area attack on anyone within its volume.
                 </para>
-                
+
                 <para>
                     Air elementals are immune to physical attacks unless
                     they somehow break up its structure. Even so, if
@@ -293,6 +293,165 @@
         </passions>
     </beast>
 
+    <!-- Fire Elemental -->
+    <beast name="Fire Elemental">
+        <information>
+            <type>Elemental</type>
+            <demeanor>Selfish</demeanor>
+
+            <origin>Harn</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                A burning column of fire. Summoned with Peleahn magic.
+            </short>
+
+            <physical>
+                <para>
+                    Fire elementals are the most visibly impressive of all
+                    the elemental types, at the largest size being huge
+                    columns of living fire, sprouting limbs of flame
+                    capable of burning anything in their path.
+                </para>
+
+                <para>
+                    A fire elemental is bright, noisy and not at all subtle.
+                    They will try and burn anything they come into contact
+                    with, though fires started in this way do not become
+                    part of the elemental.
+                </para>
+
+                <table>
+                    <colspec colwidth="10mm"/>
+                    <colspec colwidth="24mm"/>
+                    <colspec colwidth="8mm"/>
+                    <colspec colwidth="8mm"/>
+                    <colspec colwidth="8mm"/>
+                    <colspec colwidth="8mm"/>
+                    <colspec colwidth="8mm"/>
+                    <colspec colwidth="10mm"/>
+                    <thead>
+                        <row>
+                            <entry>Type</entry>
+                            <entry>Size</entry>
+                            <entry>Str</entry>
+                            <entry>Soak</entry>
+                            <entry>Init</entry>
+                            <entry>Atck</entry>
+                            <entry>Defn</entry>
+                            <entry>Dmg</entry>
+                        </row>
+                    </thead>
+
+                    <tbody>
+                        <row>
+                            <entry>I</entry><entry>2 (Small)</entry><entry>0</entry><entry>0</entry>
+                            <entry>+3</entry><entry>+3</entry><entry>+0</entry><entry>+3 (stun)</entry>
+                        </row>
+                        <row>
+                            <entry>II</entry><entry>4 (Medium)</entry><entry>1</entry><entry>4</entry>
+                            <entry>+6</entry><entry>+6</entry><entry>+2</entry><entry>+6 (mixed)</entry>
+                        </row>
+                        <row>
+                            <entry>III</entry><entry>6 (Medium)</entry><entry>1</entry><entry>8</entry>
+                            <entry>+10</entry><entry>+9</entry><entry>+4</entry><entry>+10 (mixed)</entry>
+                        </row>
+                        <row>
+                            <entry>IV</entry><entry>8 (Large)</entry><entry>2</entry><entry>12</entry>
+                            <entry>+15</entry><entry>+12</entry><entry>+6</entry><entry>+15</entry>
+                        </row>
+                        <row>
+                            <entry>V</entry><entry>10 (Large)</entry><entry>2</entry><entry>16</entry>
+                            <entry>+20</entry><entry>+15</entry><entry>+8</entry><entry>+21</entry>
+                        </row>
+                        <row>
+                            <entry>VI</entry><entry>12 (Huge)</entry><entry>3</entry><entry>20</entry>
+                            <entry>+30</entry><entry>+18</entry><entry>+10</entry><entry>+28</entry>
+                        </row>
+                        <row>
+                            <entry>VII</entry><entry>15 (Huge)</entry><entry>3</entry><entry>24</entry>
+                            <entry>+40</entry><entry>+21</entry><entry>+10</entry><entry>+36</entry>
+                        </row>
+                        <row>
+                            <entry>VIII</entry><entry>18 (Enormous)</entry><entry>4</entry><entry>28</entry>
+                            <entry>+50</entry><entry>+24</entry><entry>+12</entry><entry>+45</entry>
+                        </row>
+                    </tbody>
+                </table>
+
+                <para>
+                    Fire elementals are immune to most physical attacks,
+                    save for those that smother them, or water based
+                    attacks. Air attacks can also put them out, though
+                    their soak is doubled versus such. Throwing water
+                    at it will generally do +1 damage per litre of water
+                    each round.
+                </para>
+
+                <para>
+                    All the time there is more combustable material, the
+                    elemental will regenerate one body level per size
+                    category above tiny each round.
+                </para>
+
+                <para>
+                    Fire elemental shed a <e>lot</e> of heat. Anyone close
+                    to it automatically takes damage equal to half its
+                    normal attack damage each round. <e>Close</e> is
+                    within 1m for a small elemental, 2m for medium, 3m
+                    for large etc. If the damage is greater than +5,
+                    half that damage is applied out to another multiple
+                    of distance, and so on.
+                </para>
+                
+                <para>
+                    The core temperate of a fire elemental is approximately
+                    150C, +50C per rank.
+                </para>
+            </physical>
+
+            <tactics>
+                <para>
+                    A fire elemental has a brawl skill equal to its
+                    rank + 2. It cannot be parried except with a shield
+                    or a shield like weapon.
+                </para>
+            </tactics>
+        </description>
+
+        <attributes>
+            <attribute name="strength" score="**"/>
+            <attribute name="stamina" score="3"/>
+            <attribute name="agility" score="5"/>
+            <attribute name="dexterity" score="3"/>
+            <attribute name="perception" score="3"/>
+            <attribute name="intelligence" score="**"/>
+            <attribute name="charisma" score="1"/>
+            <attribute name="will" score="**"/>
+        </attributes>
+
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="7"/>
+                <skill name="Awareness" score="2"/>
+                <skill name="Brawl" score="2"/>
+                <skill name="Charm" score="1"/>
+                <skill name="Guile" score="1"/>
+                <skill name="Sleight" score="1"/>
+                <skill name="Stealth" score="5"/>
+                <skill name="Throw" score="1"/>
+            </group>
+        </skills>
+
+        <passions>
+            <passion name="Bravery" score="4"/>
+            <passion name="Ego" score="4"/>
+            <passion name="Restraint" score="4"/>
+            <passion name="Temperence" score="4"/>
+        </passions>
+    </beast>
 
 
     <!-- Water Elemental -->
