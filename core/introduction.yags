@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.27 $</version>
-            <date>$Date: 2004-06-05 19:48:00 $</date>
+            <version>$Revision: 1.28 $</version>
+            <date>$Date: 2004-06-07 20:40:29 $</date>
         </cvsinfo>
 
         <license>
@@ -96,121 +96,6 @@
                         is considered to be an automatic '10'.
                     </para>
                 </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Ability Levels and Costs</title>
-
-                <para>
-                    Attributes and skills, which are explained
-                    below, both progress in a similar way.
-                    Progression is 'bought' using points, both
-                    during character generation and later on with
-                    experience.
-                </para>
-
-                <table>
-                    <colspec colwidth="1cm"/>
-                    <colspec colwidth="1cm"/>
-                    <colspec colwidth="3.25cm"/>
-                    <colspec colwidth="3.25cm"/>
-                    <thead>
-                        <row>
-                            <entry>Score</entry>
-                            <entry>Cost</entry>
-                            <entry>Attribute</entry>
-                            <entry>Skill</entry>
-                        </row>
-                    </thead>
-                    <tbody>
-                        <row>
-                            <entry>0</entry><entry>0</entry>
-                            <entry>No ability</entry>
-                            <entry>No skill</entry>
-                        </row>
-                        <row>
-                            <entry>1</entry><entry>1</entry>
-                            <entry>Crippled</entry>
-                            <entry>Rudimentary</entry>
-                        </row>
-                        <row>
-                            <entry>2</entry><entry>3</entry>
-                            <entry>Poor</entry>
-                            <entry>Basic</entry>
-                        </row>
-                        <row>
-                            <entry>3</entry><entry>6</entry>
-                            <entry>Average</entry>
-                            <entry>Competent</entry>
-                        </row>
-                        <row>
-                            <entry>4</entry><entry>10</entry>
-                            <entry>High</entry>
-                            <entry>Professional level</entry>
-                        </row>
-                        <row>
-                            <entry>5</entry><entry>15</entry>
-                            <entry>Exceptional</entry>
-                            <entry></entry>
-                        </row>
-                        <row>
-                            <entry>6</entry><entry>21</entry>
-                            <entry>Legendary</entry>
-                            <entry>Seasoned</entry>
-                        </row>
-                        <row>
-                            <entry>7</entry><entry>28</entry>
-                            <entry>Mythical</entry>
-                            <entry></entry>
-                        </row>
-                        <row>
-                            <entry>8</entry><entry>36</entry>
-                            <entry>-</entry>
-                            <entry>Exceptional</entry>
-                        </row>
-                        <row>
-                            <entry>9</entry><entry>45</entry>
-                            <entry>-</entry>
-                            <entry></entry>
-                        </row>
-                        <row>
-                            <entry>10</entry><entry>55</entry>
-                            <entry>-</entry>
-                            <entry>Master</entry>
-                        </row>
-                        <row>
-                            <entry>11</entry><entry>66</entry>
-                            <entry>-</entry>
-                            <entry></entry>
-                        </row>
-                        <row>
-                            <entry>12</entry><entry>78</entry>
-                            <entry>-</entry>
-                            <entry></entry>
-                        </row>
-                        <row>
-                            <entry>13</entry><entry>91</entry>
-                            <entry>-</entry>
-                            <entry>Legendary</entry>
-                        </row>
-                        <row>
-                            <entry>14</entry><entry>105</entry>
-                            <entry>-</entry>
-                            <entry></entry>
-                        </row>
-                        <row>
-                            <entry>15</entry><entry>120</entry>
-                            <entry>-</entry>
-                            <entry></entry>
-                        </row>
-                        <row>
-                            <entry>16</entry><entry>136</entry>
-                            <entry>-</entry>
-                            <entry>Mythical</entry>
-                        </row>
-                    </tbody>
-                </table>
-                
             </sect2>
 
             <sect2>
@@ -405,22 +290,15 @@
                         <e>average</e> score accounts for
                         about 90% of the population.
                     </para>
-
+                    
                     <para>
-                        People with above average attributes will
-                        tend to be good at particular things, so if
-                        they had an opportunity to demonstrate this,
-                        they have a good chance of being in a
-                        profession which can make use of their
-                        abilities.
-                    </para>
-
-                    <para>
-                        Attributes of five and above are very rare. Newton
-                        and Feynman would probably have an intelligence of
-                        six for instance. Attributes of five should be
-                        reserved for elite units and heroes. Six or more
-                        just for a handful of heroes.
+                        People such as Newton or Hawking would probably have
+                        an intelligence score of eight. The best Olympic
+                        athletes in the modern world would probably have
+                        similar scores for physical attributes. For humans,
+                        scores above five are gained through lots of
+                        training and experience - they are not gained due to
+                        a chance of birth.
                     </para>
                 </sect3>
             </sect2>
@@ -488,39 +366,43 @@
                         
                         <item target="28" value="7 (Seasoned)."/>
 
-                        <item name="Exceptional (8-9)">
+                        <item target="36" value="8 (Exceptional).">
                             This level of skill is rare, and normally
                             denotes those of 'elite' caliber, or those
                             pushed to the edge of their craft. Unnamed NPCs
                             will not have skills higher than this.
                         </item>
+                        
+                        <item target="45" value="9 (Exceptional)."/>
 
-                        <item name="Master (10-12)">
+                        <item target="55" value="10 (Master).">
                             This level of skill is had by someone who has
                             spent much time and effort to master their craft
                             (as opposed to those who merely have much
                             experience). They are rare, and not randomly
                             encountered.
                         </item>
+                        
+                        <item target="66" value="11 (Master)."/>
+                        
+                        <item target="78" value="12 (Master)."/>
 
-                        <item name="Legendary (13-15)">
+                        <item target="91" value="13 (Legendary).">
                             Extreme dedication, and much practise and real
                             world experience, is needed to achieve this
                             level of skill. Only a few people ever attain
                             this level, and they will generally be famous
                             within their craft.
                         </item>
+                        
+                        <item target="105" value="14 (Legendary)."/>
+                        
+                        <item target="120" value="15 (Legendary)."/>
 
-                        <item name="Mythical (16-19)">
+                        <item target="136" value="16 (Mythical).">
                             This is about the limit of human achievement.
                             Those with this ability will be rare across all
                             of history.
-                        </item>
-
-                        <item name="Superhuman (20+)">
-                            Technically, there is no upper bound on how high
-                            skills can go, but skills of this level should
-                            be avoided if at all possible.
                         </item>
                     </targetlist>
                 </sect3>
