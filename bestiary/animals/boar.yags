@@ -4,8 +4,8 @@
     type="text/xsl"?>
 
 <!--
-    $Revision: 1.2 $
-    $Date: 2003-11-01 23:37:12 $
+    $Revision: 1.3 $
+    $Date: 2003-11-09 11:04:58 $
 
     Bestiary containing information on boars.
 -->
@@ -31,13 +31,13 @@
             </short>
 
             <image href="graphics/boar.jpg"/>
-            
+
             <movement>
                 <walk normal="10" max="4"/>
             </movement>
-            
+
             <scale length="1" width="1"/>
-            
+
             <physical>
                 <para>
                     Boars are wild pigs, with viscious tusks. They are
@@ -86,7 +86,7 @@
                 <initiative attribute="agility" bonus="+4"/>
                 <attack attribute="agility" bonus="+3"/>
                 <defence attribute="agility" bonus="+3"/>
-                <damage type="wound" bonus="+6"/>
+                <damage type="split" bonus="+6"/>
             </combatstyle>
 
             <combatstyle style="Trample" skill="Brawl">
@@ -114,8 +114,9 @@
         <advantages>
             <advantage name="Animal"/>
             <advantage name="Acute sense of smell" score="+2"/>
-            <advantage name="Acute sense of hearing" score="+2"/>
             <advantage name="Berserker" score="+2"/>
+
+            <advantage name="Gore" type="manouevre"/>
         </advantages>
     </beast>
 </bestiary>
