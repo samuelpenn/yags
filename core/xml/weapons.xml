@@ -4,8 +4,8 @@
 <!--
     Weapon list for Yags.
 
-    Version: $Revision: 1.2 $
-    Date:    $Date: 2003-06-01 20:12:30 $
+    Version: $Revision: 1.3 $
+    Date:    $Date: 2003-07-02 20:24:08 $
  -->
 <equipment>
     <weaponlist>
@@ -19,6 +19,7 @@
             importance weapons are always listed, low importance
             weapons are only given in the most complete lists.
          -->
+
         <weapon name="Axe">
             <description>
                 A battle axe for single handed use.
@@ -41,7 +42,7 @@
 
             <strength>3</strength>
             <load>3</load>
-            <reach>2</reach>
+            <reach>3</reach>
         </weapon>
 
         <weapon name="Broad axe">
@@ -62,7 +63,7 @@
 
             <strength>6</strength>
             <load>6</load>
-            <reach>2</reach>
+            <reach>3</reach>
         </weapon>
 
         <weapon name="Club">
@@ -83,7 +84,7 @@
 
             <strength>2</strength>
             <load>2</load>
-            <reach>1</reach>
+            <reach>2</reach>
         </weapon>
 
         <weapon name="Dagger">
@@ -105,7 +106,7 @@
 
             <strength>1</strength>
             <load>1</load>
-            <reach>0</reach>
+            <reach>1</reach>
         </weapon>
 
         <weapon name="Fist">
@@ -120,6 +121,7 @@
 
             <strength>0</strength>
             <load>0</load>
+            <reach>0</reach>
         </weapon>
 
 
@@ -135,6 +137,7 @@
 
             <strength>6</strength>
             <load>7</load>
+            <reach>3</reach>
         </weapon>
 
         <weapon name="Bastard sword">
@@ -150,6 +153,7 @@
 
             <strength>4</strength>
             <load>6</load>
+            <reach>3</reach>
         </weapon>
 
         <weapon name="Knife">
@@ -171,47 +175,66 @@
 
             <strength>1</strength>
             <load>0.5</load>
+            <reach>0</reach>
         </weapon>
 
         <weapon name="Long spear">
             <class>longshaft</class>
-            <initiative>+15</initiative>
-            <attack>+4</attack>
-            <defence>+4</defence>
-            <damage>+11</damage>
+
+            <combat mode="Melee" importance="2">
+                <initiative>+15</initiative>
+                <attack>+4</attack>
+                <defence>+4</defence>
+                <damage>+11</damage>
+            </combat>
+
             <strength>5</strength>
             <load>3</load>
         </weapon>
 
         <weapon name="Light lance">
             <class>longshaft</class>
-            <initiative>+12</initiative>
-            <attack>+2</attack>
-            <defence>+2</defence>
-            <damage>+13</damage>
-            <strength>5</strength>
+
+            <combat mode="Melee" importance="2">
+                <initiative>+12</initiative>
+                <attack>+2</attack>
+                <defence>+2</defence>
+                <damage>+13</damage>
+            </combat>
+
+            <strength>2</strength>
             <load>3</load>
         </weapon>
 
         <weapon name="Heavy lance">
             <class>longshaft</class>
-            <initiative>+12</initiative>
-            <attack>+2</attack>
-            <defence>+2</defence>
-            <damage>+15</damage>
-            <strength>6</strength>
+
+            <combat mode="Melee" importance="2">
+                <initiative>+12</initiative>
+                <attack>+2</attack>
+                <defence>+2</defence>
+                <damage>+15</damage>
+            </combat>
+
+            <strength>3</strength>
             <load>3</load>
         </weapon>
 
         <weapon name="Broad sword">
             <class>single</class>
-            <initiative>+6</initiative>
-            <attack>+5</attack>
-            <defence>+5</defence>
-            <damage>+12</damage>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+6</initiative>
+                <attack>+5</attack>
+                <defence>+5</defence>
+                <damage>+12</damage>
+            </combat>
+
             <strength>3</strength>
             <load>4</load>
         </weapon>
+
+
         <weapon name="Mace">
             <class>single</class>
             <initiative>+5</initiative>
