@@ -6,6 +6,11 @@
 
 <advantages>
 
+    <!--
+        The following are standard brawling manouevres, which are free to
+        learn and use.
+     -->
+
     <advantage name="Grapple" type="manouevre">
         <cost points="0"/>
         <skill name="Brawl"/>
@@ -148,6 +153,50 @@
         </description>
     </advantage>
 
+
+    <!--
+        The following are special unarmed manouevres which must be learnt
+        before they can be used.
+    -->
+
+    <advantage name="Unarmed combat" type="manouevre">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                The character is trained in fighting with no weapons against
+                armed foes. Doing so is still not suggested, but the
+                <e>automatic strike</e> that the armed defender gets is
+                instead always a <e>free strike</e> instead.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Ground fighting" type="manouevre">
+        <cost points="4"/>
+        <skill name="All"/>
+        <description>
+            <para>
+                The character is trained to fight from a prone position.
+                Penalties to skill rolls when either <e>unsteady</e> or
+                <e>prone</e> or ignored, though other penalties (such as
+                not being able to move) still apply.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Power kick" type="manouevre">
+        <cost points="2"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                This is a <e>slow</e> attack which uses the feet instead of
+                the hands to attack with. The attack does extra damage equal
+                to the character's brawl skill, and has a reach of 1.
+            </para>
+        </description>
+    </advantage>
+
     <advantage name="Killing blow" type="manouevre">
         <cost points="6"/>
         <skill name="Single weapon"/>
@@ -183,7 +232,23 @@
         <description>
             <para>
                 Bare handed attack which does mixed damage, adding brawl
-                skill to the damage rolled.
+                skill to the damage rolled. Cannot be used with a weapon.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Stunning attack" type="manouevre">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                An attack which is designed to cripple a person, by aiming
+                for some sensitive and painful area, such as the kidneys or
+                groin. It is a slow attack, at -5, and a successful hit
+                which damages forces the target to make a size x stamina
+                roll of 20 + wounds x 5. Failure means that the target is
+                <e>unsteady</e> and at -10 to all actions for a number of
+                rounds equal to the number of wounds caused.
             </para>
         </description>
     </advantage>
@@ -214,12 +279,7 @@
 
     <advantage name="Double attack" type="manouevre">
         <cost points="8"/>
-        <skill name="Brawl"/>
-        <skill name="Single weapon"/>
-        <skill name="Weapon and shield"/>
-        <skill name="Great weapon"/>
-        <skill name="Two weapons"/>
-        <skill name="Longshaft weapon"/>
+        <skill name="All"/>
         <description>
             <para>
                 The attack can attack twice, each time at a -15
@@ -237,12 +297,7 @@
 
     <advantage name="Triple attack" type="manouevre">
         <cost points="12"/>
-        <skill name="Brawl"/>
-        <skill name="Single weapon"/>
-        <skill name="Weapon and shield"/>
-        <skill name="Great weapon"/>
-        <skill name="Two weapons"/>
-        <skill name="Longshaft weapon"/>
+        <skill name="All"/>
         <description>
             <para>
                 The attack can attack three times, each time at a -30
@@ -257,4 +312,33 @@
         </description>
     </advantage>
 
+    <!--
+        Special stuff, not directly applied to combat skills.
+     -->
+    <advantage name="Mounted combat" type="manouevre">
+        <cost points="3"/>
+        <skill name="Ride"/>
+        <description>
+            <para>
+                A character with <e>mounted combat</e> does not have to make
+                a <e>ride</e> check whenever they attack from horseback.
+                Further, they get a bonus equal to their <e>ride</e> skill
+                which applies to initiative, attack, defence and damage
+                rolls made when mounted. This only applies to melee combat.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Mounted archery" type="manouevre">
+        <cost points="5"/>
+        <skill name="Ride"/>
+        <description>
+            <para>
+                A character with <e>mounted archery</e> does not suffer the
+                doubling of effective range when using missile weapons from
+                the back of a moving mount. Further, they do not have to
+                make a <e>ride</e> roll in order to make a missile attack.
+            </para>
+        </description>
+    </advantage>
 </advantages>
