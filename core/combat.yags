@@ -20,12 +20,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.39 $</version>
-            <date>$Date: 2003-12-29 12:21:17 $</date>
+            <version>$Revision: 1.40 $</version>
+            <date>$Date: 2004-01-07 14:04:17 $</date>
         </cvsinfo>
 
         <license>
-            <year>2003</year>
+            <year>2004</year>
             <holder>Samuel Penn</holder>
             <url>http://www.gnu.org/licenses/fdl.html</url>
             <text>
@@ -148,6 +148,8 @@
                     <entry term="Stance">
                         Stance determines how a combatent is fighting, the
                         most common being normal, aggressive and defensive.
+                        Prone and unsteady are two stances which a character
+                        can be forced into.
                     </entry>
 
                     <entry term="Free strike">
@@ -230,7 +232,8 @@
                     attacks are slow, and all attack and defence rolls
                     fumble on a 1-2 rather than a 1 (unless brawl is being
                     used, in which case only fumble on a 1). No techniques
-                    can be used.
+                    can be used. An aggressive stance will enable the
+                    character to act with normal (not fast) initiative.
                 </para>
 
                 <para>
@@ -329,12 +332,11 @@
                 </sect3>
 
                 <sect3>
-                    <title>Flail weapon</title>
+                    <title>Chain weapon</title>
 
                     <para>
-                        Flails are a small category of weapon which are
-                        quite rare, consisting of a number of balls or
-                        rods, attached via chain or leather to a haft.
+                        Includes flails and other weapons consisting of
+                        weights connected by a chain or rope to a haft.
                         They can be used with or without a shield. They
                         have the advantage that when used defensively,
                         the defence bonus is +10 (rather than +5). If
@@ -726,6 +728,12 @@
                                 steadied themselves. This can be done
                                 automatically by spending an action, or an
                                 attempt may be made at the end of a round
+                            </entry>
+
+                            <entry term="Aiming">
+                                An aiming character is using a missile
+                                weapon to attack a ranged target. It is
+                                otherwise no different from a normal stance.
                             </entry>
                         </termlist>
                     </sect4>
@@ -1381,7 +1389,7 @@
                 <para>
                     A full set of armour can consist of several parts, and a
                     character can mix and match according to preference and
-                    finances. Generally, armour cannot be layered - it is 
+                    finances. Generally, armour cannot be layered - it is
                     not possible to wear two chain hauberks at the same time.
                 </para>
 
@@ -1458,12 +1466,19 @@
             </sect2>
 
             <sect2>
-                <title>Advantages of Armour</title>
+                <title>Armour statistics</title>
 
                 <para>
                     The total protection of all armour worn adds to the soak
-                    of the wearer.
+                    of the wearer. Likewise, the load of each piece of
+                    armour adds to the load carried by the character.
                 </para>
+
+                <para>
+                    A description of the common armour types is given below.
+                </para>
+
+                <import-armourlist href="xml/arms.yags"/>
             </sect2>
         </sect1>
 
@@ -1697,16 +1712,6 @@
                         both the minimum and maximum strength. A stronger 
                         bowman cannot use their full strength when
                         using the weapon.
-                    </para>
-                    
-                    <para>
-                        Longbows have the advantage that a skilled longbowman
-                        can manage a larger 'pull' then an unskilled one of
-                        equivalent strength (due to long hours spent
-                        exercising wrist and arm muscles). For every full
-                        four points of skill a longbowman has, then they
-                        get an effective +1 to their strength when using a
-                        longbow.
                     </para>
 
                     <para>
@@ -1943,6 +1948,14 @@
                         unless the defender has a shield, in which case
                         they get the defence bonus of the shield, but not
                         of any other weapon they are using.
+                    </para>
+
+                    <para>
+                        The main issue with defending against missile
+                        attacks is that the defender must be aware that
+                        they are being made. If a character is in the
+                        middle of a melee, then an awareness roll may be
+                        required to notice an archer taking aim.
                     </para>
                 </sect3>
 

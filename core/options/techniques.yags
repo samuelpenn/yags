@@ -259,7 +259,7 @@
 
     <advantage name="Double attack" type="technique">
         <cost points="10"/>
-        <skill name="All"/>
+        <skill name="All melee"/>
         <description>
             <para>
                 The attack can attack twice, each time at a -15
@@ -277,10 +277,11 @@
 
     <advantage name="Triple attack" type="technique">
         <cost points="15"/>
-        <skill name="All"/>
+        <skill name="All melee"/>
+        <prerequisite>Double attack</prerequisite>
         <description>
             <para>
-                The attack can attack three times, each time at a -30
+                The attacker can attack three times, each time at a -30
                 penalty to skill. The first attack is fast, the
                 second attack is normal, and the third attack is slow.
             </para>
@@ -288,6 +289,31 @@
             <para>
                 This does not affect defence, but no other manouevre
                 can be combined with this.
+            </para>
+        </description>
+    </advantage>
+
+    <!--
+        Missile techniques.
+     -->
+    <advantage name="Improved pull" type="technique">
+        <cost points="4"/>
+        <skill name="Bow"/>
+        <description>
+            <para>
+                Due to extensive training with arm muscles, the archer gets
+                +1 to their strength for purposes of using a longbow.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Greater pull" type="technique">
+        <cost points="8"/>
+        <skill name="Bow"/>
+        <description>
+            <para>
+                Similar to, and stacks with, <e>improved pull</e>. The
+                archer gets a +1 to their strength for using a longbow.
             </para>
         </description>
     </advantage>
