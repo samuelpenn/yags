@@ -14,12 +14,12 @@
             <year>2001</year>
             <holder>Samuel Penn</holder>
         </copyright>
-        <releaseinfo role="meta">$Revision: 1.5 $</releaseinfo>
+        <releaseinfo role="meta">$Revision: 1.6 $</releaseinfo>
     </referenceinfo>
     <revhistory>
         <revision>
             <revnumber>0.7.1</revnumber>
-            <date>14th October 2001</date>
+            <date>5th November 2001</date>
             <revremark>Docbook format</revremark>
         </revision>
     </revhistory>
@@ -237,30 +237,56 @@ brought to use. In a round, character's with a high initiative
 act before those with lower initiatives. Long weapons can grant
 a high initiative since they provide a tactical advantage for
 their user. 
-</para>
-
-<para>
-A character's initiative is: 
-    agility x skill + weapon initiative bonus 
+	<skillequation><title>Initiative</title>
+		<attribute>agility</attribute>
+		<skill>skill</skill>
+		<bonus>weapon initiative bonus</bonus>
+		<die/>
+	</skillequation>
 </para>
 </sect3>
 
-<sect3><title>Attack </title>
+<sect3><title>Attack</title>
 <para>
 The attack rating of a weapon gives a bonus to hit a target. 
-A character's brawling attack is: 
-	agility x skill + weapon attack bonus 
-A character's melee attack is: 
-	dexterity x skill + weapon attack bonus 
-A character's missile attack is: 
-	perception x skill + weapon attack bonus 
+The attacker's attack skill is rolled against the defender's
+defence skill.
+	<skillequation><title>Brawling attack</title>
+		<attribute>agility</attribute>
+		<skill>skill</skill>
+		<bonus>weapon attack bonus</bonus>
+		<die/>
+	</skillequation>
+
+	<skillequation><title>Melee attack</title>
+		<attribute>dexterity</attribute>
+		<skill>skill</skill>
+		<bonus>weapon attack bonus</bonus>
+		<die/>
+	</skillequation>
+
+	<skillequation><title>Missile attack</title>
+		<attribute>perception</attribute>
+		<skill>skill</skill>
+		<bonus>weapon attack bonus</bonus>
+		<die/>
+	</skillequation>
 </para>
 </sect3>
 
 <sect3><title>Defence</title>
 <para>
 The defence rating of a weapon adds to a characters parry or
-dodge attempts. 
+dodge attempts. Normally, defence is dexterity based if the
+character is using a melee weapon, or agility based if not.
+The single weapon combat style allows the character to choose
+whether to use agility or dexterity for defence.
+	<skillequation><title>Defence</title>
+		<attribute>dexterity</attribute>
+		<skill>skill</skill>
+		<bonus>weapon defence bonus</bonus>
+		<die/>
+	</skillequation>
 </para>
 </sect3>
 
@@ -268,6 +294,12 @@ dodge attempts.
 <para>
 The weapon damage adds to the strength of the user, and is
 unaffected by skill.
+	<skillequation><title>Weapon damage</title>
+		<attribute>strength</attribute>
+		<constant>4</constant>
+		<bonus>weapon damage bonus</bonus>
+		<die/>
+	</skillequation>
 </para>
 </sect3>
 
@@ -908,6 +940,131 @@ have four stuns and three wounds.
 </sect1>
 
 
+<sect1><title>Armour</title>
+<para>
+The purpose of armour is to keep someone alive by absorbing or
+deflecting the force of a blow away from them. In reality, the
+relationship between weapons and armour is complicated, having
+evolved during an arms race lasting several millenia. As a type
+of armour was developed to counter the weapons then in use, so
+the weapons changed to minimise the effects of the new armour.
+</para>
+
+<para>
+Realistically, it is not always possible to say that one type of
+armour is better at stopping damage than another type. The
+usefulness of armour depends on whether the attack crushes,
+slices or pierces, and there are complications within these as
+well. Yags however, delibrately ignores this. Armour has a
+single protection value which works equally against all types
+of armour.
+</para>
+
+<para>
+A further simplification is that there are no hit locations.
+The protection value of armour also takes into account how
+much of the body it covers. It is left to GMs to rule when
+an attack can avoid armour - generally this will only be
+possible against an unsuspecting foe.
+</para>
+
+<sect2><title>Choosing armour</title>
+<para>
+A full set of armour can consist of several parts, and a character
+can mix and match according to preference and finances. Generally,
+armour cannot be layered - it is not possible to wear two chain
+hauberks at the same time.
+</para>
+
+<para>
+Each item of armour has a protection value, and a load. The total
+load and protection of all worn items is totalled to give the
+final value. So, a character wearing soft leather trousers (with
+a protection of 2) and a soft leather jacket (also 2), would have
+a total armour protection of 4.
+</para>
+
+<para>
+<variablelist>
+    <varlistentry>
+        <term>Jacket</term>
+        <listitem>Covers the torso, arms and upper thighs.</listitem>
+    </varlistentry>
+    
+    <varlistentry>
+        <term>Vest</term>
+        <listitem>Covers the torso and shouldres.</listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term>Trousers</term>
+        <listitem>Covers the legs and lower abdomen.</listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term>Helm</term>
+        <listitem>Protects the head.</listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term>Hauberk</term>
+        <listitem>A term used to describe a chainmail jacket. May
+        cover the legs down to the knees.</listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term>Coif</term>
+        <listitem>Covers the head, neck and shoulders. May be
+        worn under a helm.</listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term>Greaves</term>
+        <listitem>Covers the legs. Values given are for a set of
+        greaves, one for each leg.</listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term>Vambraces</term>
+        <listitem>Protects the arms. As for greaves, values given
+        assume a set of vambraces.</listitem>
+    </varlistentry>
+
+</variablelist>
+</para>
+
+<sect3><title>Stacking Armour</title>
+<para>
+Normally, it is not possible to layer armour on top of other
+armour - if it is managed, only the highest protection value
+is applied. However, some types of armour are designed to
+layer, and in this case the protection values are added
+together.
+</para>
+
+<para>
+Soft leather armour can be worn underneath chain or plate
+armour. Plate armour such as greaves, vambraces and breastplates
+can be worn over chain armour. It is possible to wear plate
+over chain over leather.
+</para>
+
+<para>
+The other layering combination is that a helm can be worn over
+a chain mail coif.
+</para>
+</sect3>
+</sect2>
+
+<sect2><title>Advantages of Armour</title>
+<para>
+The total protection of all armour worn adds to the soak of the
+wearer.
+</para>
+</sect2>
+</sect1>
+
+
 <sect1><title>Healing and First aid</title>
 
 <sect2><title>First aid</title>
@@ -1036,5 +1193,100 @@ penalties to do so.
 </sect2>
 
 </sect1>
+
+<sect1><title>Missile Combat</title>
+<para>
+So far everything that has been covered has dealt with melee
+combat between antogonists who are in close combat. The rules
+for missile weapons are similar. Unless a difference is noted,
+assume that missle combat works the same way.
+</para>
+
+<sect2><title>Ranged combat skills</title>
+<para>
+As for melee combat, there are a number of different styles
+which make use of a particular skill.
+</para>
+
+<sect3><title>Thrown weapons</title>
+<para>
+All characters have some ability with the <emphasis>Throw</emphasis>
+talent, which is the ranged equivalent of the <emphasis>
+Brawl</emphasis> skill. Thrown spears, javelins, bottles and
+axes are covered under this skill. This actually covers the
+majority of missile combat.
+</para>
+</sect3>
+
+<sect3><title>Bow</title>
+<para>
+The bow, including both the longbow and shortbow, requires this
+skill. The bow can be quite a deadly weapon in the hands of a
+skilled professional, but can be difficult to use.
+</para>
+
+<para>
+Both longbows and shortbows are constructed for a given strength
+of user. A bow's strength rating is both the minimum and maximum
+strength. A stronger bowman cannot use their full strength when
+using the weapon.
+</para>
+</sect3>
+
+<sect3><title>Crossbow</title>
+<para>
+</para>
+</sect3>
+
+<sect3><title>Sling</title>
+<para>
+</para>
+</sect3>
+
+
+</sect2>
+
+<sect2><title>Missile Ranges</title>
+<para>
+There are a number of range categories which are defined for
+all missile weapons. These are short, medium, long and extreme.
+Ranges are given in metres, and cover any distance up to and
+including the range given for a particular weapon.
+</para>
+
+<para>
+<table><title>Range Categories</title>
+    <colspec colwidth="1.5cm"/>
+    <colspec colwidth="1.5cm"/>
+    <thead>
+        <row>
+            <entry>Range</entry>
+            <entry>Modifier</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row><entry>Short</entry><entry>+0</entry></row>
+        <row><entry>Medium</entry><entry>-10</entry></row>
+        <row><entry>Long</entry><entry>-20</entry></row>
+        <row><entry>Extreme</entry><entry>-30</entry></row>
+    </tbody>
+</table>
+</para>
+
+<para>
+The range modifier subtracts from the attackers attack roll,
+making it harder to hit targets at longer range.
+</para>
+
+</sect2>
+
+<sect2><title>Missile Attacks</title>
+</sect2>
+
+</sect1>
+
+<sect1><title>Special Attacks</title>
+</sect1>
+
 
 </article>
