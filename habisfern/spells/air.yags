@@ -2,41 +2,62 @@
 
 <!--
     Air cantrips.
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2004-02-01 00:01:28 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2005-02-03 18:55:23 $
 -->
 <grimoire name="Air">
     <spell name="Breeze" level="1" type="air">
         <range>-1/m</range>
         <duration>Concentration</duration>
-        <target>-5/size</target>
         <effect>+1/1</effect>
+		<resist>Strength</resist>
 
         <description>
             <para>
                 Creates a breeze that blows away from the caster. Any within
-                the breeze must make a strength roll to remain standing.
+                the breeze must make a strength check to remain standing.
             </para>
         </description>
     </spell>
 
-    <spell name="Know Weather" level="1" type="air">
+    <spell name="Know Weather" level="3" type="air">
+
+	    <prerequisite>Breeze</prerequisite>
+
+		<summary>Predict the weather.</summary>
+
         <description>
             <para>
-                Predict the weather.
+                Predict the weather over the course of a number of days
+				equal to the success level of the casting.
             </para>
         </description>
     </spell>
 
-    <spell name="Glow" level="1" type="air">
+    <spell name="Glow" level="3" type="air">
+		<range>-1/m</range>
+	    <duration>Concentration</duration>
+		<target>+5/size</target>
+
+	    <prerequisite>Breeze</prerequisite>
+
         <description>
             <para>
-                Soft glow placed on object.
+                Soft glow placed on object. The glow is steady and pure
+				white, though a level of success can be spent to change
+				the colour to something else. The amount of light given
+				out depends on the size of object affected.
             </para>
         </description>
     </spell>
 
-    <spell name="Scent" level="1" type="air">
+    <spell name="Scent" level="3" type="air">
+		<range>-1/m</range>
+	    <duration>Concentration</duration>
+		<target>+5/size</target>
+
+	    <prerequisite>Breeze</prerequisite>
+
         <description>
             <para>
                 Places a scent on an object, or masks an existing scent.

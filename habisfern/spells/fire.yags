@@ -1,52 +1,104 @@
 <?xml version="1.0"?>
 
 <grimoire name="Fire">
+    <preface>
+	    <para>
+		    The domain of fire includes all that is hot and combustable.
+			It represents speed, energy and vitality as well as the
+			burning flames of fire. It can enflame passions and cause
+			fevers.
+		</para>
+
+		<para>
+		    Those who know Fire get to add their Fire score to any resistences
+			against heat or flame/ including for soak and the effect level
+			of spells.
+		</para>
+
+		<para>
+		    When heating objects, use the following chart.
+		</para>
+
+		<targetlist>
+		    <valueLabel>Temperature</valueLabel>
+			<targetLabel>Level</targetLabel>
+
+			</item>
+		    <item target="+0" value="Comfortable.">
+			    A reasonable, comfortable temperature.
+			</item>
+		    <item target="+1" value="Warm.">
+			    Uncomfortably warm, an object will be too hot to
+				hold for long. If a living creature is heated to
+				this extent, then they will soon die, gaining a
+				point of exhaustion every hour, then gaining
+				wounds until they die.
+			</item>
+		    <item target="+2" value="Hot.">
+			    Too hot to touch, doing so wil burn living flesh.
+				Water will scaled, though not boil. If used to
+				heat a living creature, then exhaustion is gained
+				every minute.
+			</item>
+		    <item target="+3" value="Very hot.">
+			    Water will boil vigourosly, metal cannot be held,
+				highly flammable objects will burst into flame.
+				Living creatures gain exhuastion every round.
+			</item>
+		    <item target="+4" value="Scorching.">
+			    Most flammable objects will ignite, living flesh
+				will also begin to burn, causing a wound every
+				round and making the creature incapable of
+				coherant action. Metals will begin to glow.
+			</item>
+		    <item target="+5" value="Utterly hot.">
+			    Metals will glow brightly, and will be hot enough
+				to work. Living flesh will ignite causing two
+				wounds a round.
+			</item>
+		</targetlist>
+	</preface>
 
     <spell name="Ignite" level="1" type="fire">
-        <range>+5/m</range>
+        <range>-5/m</range>
         <duration>Momentary</duration>
         <target>+5/size</target>
-        <effect>+1 fire/1</effect>
-        <resist>Soak</resist>
+
+		<summary>Ignites flammable material</summary>
 
         <description>
             <para>
                 Ignites targeted flamable material. An intense, momentary
                 heat is applied to the targets, which has a chance of
-                igniting them if they are flammable. For the item affected,
-                roll d20 + effect of the spell. If the required target for
-                the type of material is achieved, then the item bursts into
-                flames.
+                igniting them if they are flammable. The degree of success
+				denotes the types of items which will burn.
             </para>
 
             <targetlist>
                 <valueLabel>Type of material</valueLabel>
-                <targetLabel>Target</targetLabel>
+                <targetLabel>Success</targetLabel>
 
-                <item target="0" value="Flammable">
+                <item target="Moderate" value="Flammable">
                     Oil, tinder.
                 </item>
 
-                <item target="5" value="Combustable">
+                <item target="Good" value="Combustable">
                     Paper.
                 </item>
 
-                <item target="10" value="">
+                <item target="Excellent" value="">
                     Wood chippings, cloth.
                 </item>
 
-                <item target="15" value="Burnable">
+                <item target="Superb" value="Burnable">
                     Wood.
                 </item>
 
-                <item target="20" value="Resistent">
+                <item target="Fantastic" value="Resistent">
                     Damp wood, flesh.
                 </item>
 
-                <item target="25" value="Very resistent">
-                </item>
-
-                <item target="30" value="Mostly inflammable">
+                <item target="Amazing" value="Very resistent">
                 </item>
             </targetlist>
 
@@ -73,13 +125,15 @@
         <range>-5/m</range>
         <duration>Concentration</duration>
         <radius>-5/m beyond 1m</radius>
-        <effect>+2C/1</effect>
-        
+        <effect>10C + 2C/1</effect>
+ 
         <prerequisite>Ignite</prerequisite>
+
+		<summary>Warms a volume of air.</summary>
 
         <description>
             <para>
-                Gently warms a spherical volume of matter up to a maximum
+                Gently warms a spherical volume of air up to a maximum
                 of the lowest of the cantrip effect, or human body
                 temperature. The effect halves each multiple of the
                 radius from the target point. Temperature changes occurs
@@ -102,10 +156,16 @@
         <effect>+1 soak/1</effect>
 
         <prerequisite>Warm</prerequisite>
+		 
+        <summary>Provides protection from fire.</summary>
         
         <description>
             <para>
                 Increases the soak of the targets versus fire and heat.
+				Range is to the furthest target to be protected at time
+				of casting. Also reduces the effect of any fire spells
+				that work according to the level of effect, such as
+				<e>Heat</e> or <e>Ignite</e>.
             </para>
         </description>
     </spell>
@@ -113,20 +173,18 @@
     <spell name="Heat" level="5" type="fire">
         <range>-1/1m</range>
         <duration>Concentration</duration>
-        <area>-5/1m radius</area>
-        <effect>+3C/1</effect>
+        <target>-3/size</target>
         <resist>Stamina</resist>
 
         <prerequisite>Warm</prerequisite>
-        
+
+		<summary>Heat a solid material to a high temperature.</summary>
+
         <description>
             <para>
-                Similar to <e>Warm</e>, but there is no limit to how high
-                the temperature can be raised. Creatures which are warmed
-                beyond body temperature suffer damage equal to +1/degree
-                about 39. It is soaked with stamina. Roll for damage each
-                minute (though damage will be sustained over the course
-                of that minute).
+			    This cantrip affects a single object which is quickly
+				heated to a high temperature. A standard success will
+				warm an object so that it is hot to touch.
             </para>
         </description>
     </spell>
@@ -139,6 +197,8 @@
         <effect>+1 mixed damage/1</effect>
         
         <prerequisite>Heat</prerequisite>
+
+		<summary>Creates a blast of hot wind that burns.</summary>
         
         <description>
             <para>
@@ -149,6 +209,19 @@
         </description>
     </spell>
 
+    <spell name="Whither" level="9" type="fire">
+	    <duration>Momentary</duration>
+	    <area>+1/10m radius</area>
+
+        <prerequisite>Burning Wind</prerequisite>
+
+        <description>
+            <para>
+                Destroys all plant life in a large area.
+            </para>
+        </description>
+    </spell>
+    
 
     <!--
         Begin the 'Alertness' thread.
@@ -413,16 +486,6 @@
 
 
 
-    <spell name="Whither" level="7" type="fire">
-        <prerequisite>Smoke Fog</prerequisite>
-
-        <description>
-            <para>
-                Destroys all plant life in a large area.
-            </para>
-        </description>
-    </spell>
-    
     <spell name="Boiling Rain" level="9" type="fire">
         <prerequisite>Whither</prerequisite>
 
