@@ -93,11 +93,11 @@ granting it a +10 bonus to soak against heat.
 <boost>+15 Range touch</boost>
 <boost>+30 Can tell apart objects of the same temperature</boost>
 <description>
-An enchantment which causes the eyes of the target to perceive 
-distinctions in heat instead of light. The subject perceives 
-gradations in temperature as variations in colour. The 
-enchanted eyes cannot see normally. This kind of infravision 
-does not allow one to distinguish objects of similar temperature. 
+An enchantment which causes the eyes of the target to perceive
+distinctions in heat instead of light. The subject perceives
+gradations in temperature as variations in colour. The
+enchanted eyes cannot see normally. This kind of infravision
+does not allow one to distinguish objects of similar temperature.
 </description>
 </spell>
 
@@ -124,13 +124,14 @@ does not allow one to distinguish objects of similar temperature.
 	<range>Near</range>
 	<resist>Soak</resist>
 	<duration>Momentary</duration>
+    <boost>+15 Range is short</boost>
 	<boost>+30 6 darts</boost>
-	<boost>+60 9 darts</boost>
+	<boost>+60 12 darts</boost>
 	<description>
 		Creates three darts of ethereal fire which shoot forth
 		towards a single, or multiple, targets, hitting with the
-		caster's throw skill at +6, doing +15 stun damage. Each
-		target beyond the first gives a -5 penalty to all throw
+		caster's throw skill at +6, doing +18 stun damage. Each
+		target beyond the first gives a -3 penalty to all throw
 		rolls. Against the same target, there is one dodge roll
 		and one attack roll.
 	</description>
@@ -145,12 +146,29 @@ does not allow one to distinguish objects of similar temperature.
 	<boost>+60 Range is short</boost>
 	<description>
 		Creates a small ball of fire in the caster's hand which may
-		be thrown (using his throw skill) at a target. On contact
+		be thrown (using his throw skill at +6) at a target. On contact
 		with a solid object, the ball explodes in a 1m radius ball
 		of flames, causing +15 damage.
 	</description>
 </spell>
 
+<spell name="Fires of Nep" level="60" convocation="peleahn">
+    <range>Medium</range>
+    <area>Short</range>
+    <duration>Momentary</duration>
+    <boost>+15 Two dozen droplets</boost>
+    <boost>+30 Range is far</boost>
+    <boost>+60 Area is Medium</boost>
+    <description>
+        A ball of fire arcs away from the caster, exploding over the
+        area designated. Flaming droplets rain down on the area
+        beneath, igniting any combustable material they land on. The
+        flare is as bright as daylight over the area, and there are
+        about a dozen flaming droplets with land randomly over the
+        area. If they hit someone, they will do +10 stun damage,
+        but its unlikely unless the spell is cast over a large crowed.
+    </description>
+</spell>
 
 <spell name="Arc of Fiery Ribbons" level="90" convocation="peleahn">
 	<range>Near</range>
@@ -205,17 +223,21 @@ does not allow one to distinguish objects of similar temperature.
 </spell>
 
 <spell name="Sea of Fire" level="90" convocation="peleahn">
-	<range>Short</range>
+	<range>Medium</range>
+    <area>Short</area>
 	<resist>Will</resist>
 	<duration>Momentary</duration>
-	<boost>+15 Range is medium</boost>
+	<boost>+15 Area is medium</boost>
 	<boost>+30 Can ignite a single material</boost>
 	<boost>+60 Duration concentration, fire can be terminated</boost>
 	<description>
 		Ignites flammable material within range. A single area may
 		be ignited, such as a field or wood. Anything easily flammable
 		in the area will ignite. Clothing or equipment on sentients
-		is protected by a will resist from the creature.
+		is protected by a will resist from the creature. Anyone caught
+        in the blaze will tend to suffer from +10 to +20 stun damage
+        each round (ignoring armour) from the flames, depending on the
+        amount of flammable material.
 	</description>
 </spell>
 
@@ -230,7 +252,7 @@ does not allow one to distinguish objects of similar temperature.
 	<description>
 		Causes a bolt of fire to form and strike at the target, using
 		the caster's throw skill at +12. If it hits, the bolt does
-		+50 ethereal fire damage to the target.
+		+50 fire damage to the target.
 	</description>
 </spell>
 
@@ -276,7 +298,11 @@ does not allow one to distinguish objects of similar temperature.
 	<resist>Soak</resist>
 	<boost>+25 Range is far</boost>
 	<boost>+50 Fireball can explode at any point on its path</boost>
-	<boost>+100 Fireball can explode at any point, and continues moving until it reaches the range of the spell, causing damage to all targets it passes over</boost>
+	<boost>
+        +100 Fireball can explode at any point, and continues moving
+        until it reaches the range of the spell, causing damage to
+        all targets it passes over
+    </boost>
 	<description>
 		Creates a small ball of fire which appears in the caster's
 		hand, and which can then be thrown out to the range of the
