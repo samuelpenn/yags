@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.30 $</version>
-            <date>$Date: 2003-11-15 21:29:59 $</date>
+            <version>$Revision: 1.31 $</version>
+            <date>$Date: 2003-11-24 13:09:57 $</date>
         </cvsinfo>
 
         <license>
@@ -68,26 +68,17 @@
 
                 <termlist sort="true">
                     <entry term="Round">
-                        A round is a unit of time, averaging
-                        about five seconds. Each round, a
-                        character has chance to perform a
-                        single action - normally an attack or
-                        a move. Five seconds is actually quite
-                        a long time in a melee fight, so a fair
-                        degree of latitude is allowed as regards
-                        to what can be accomplished. However,
-                        only a single attack may ever be made.
+                        A round is a unit of time, averaging about five
+                        seconds. Each round, a character has chance to
+                        perform a single action - normally an attack or a
+                        move.
                     </entry>
 
-                    <entry term="Body Levels">
-                        Every creature has a number of body
-                        levels, which represent their health.
-                        Most creatures have a number of body
-                        levels equal to their size plus two.
-                        The extra two represent <s>OK</s>
-                        and <s>Fatal</s> which are at
-                        either extreme of a living creature's
-                        state of health.
+                    <entry term="Body levels">
+                        Every creature has a number of body levels, which
+                        represent their ability to absorb damage. The number
+                        of body levels determines how many wounds and stuns
+                        a creature can take before it falls over.
                     </entry>
 
                     <entry term="Soak">
@@ -98,23 +89,20 @@
                     </entry>
 
                     <entry term="Wounds">
-                        Wounds are serious injuries which have
-                        a good chance of causing death. They
-                        often puncture the skin, resulting in
-                        bleeding and possible the loss of vital
-                        organs. A creature can suffer a number of wounds
-                        equal to their body levels before dying.
+                        Wounds are serious injuries which have a good chance
+                        of causing death. Most weapons cause wound damage.
                     </entry>
 
                     <entry term="Stuns">
-                        Stuns are non-serious injuries which
-                        result in bruises and pain. They will
-                        rarely kill, but a severe beating can
-                        in theory inflict enough stuns to kill
-                        a person, since excessive stuns translate
-                        into <s>wounds</s>. Once someone has stuns
-                        equal to their body levels, they are practically
-                        out of the fight.
+                        Stuns are non-serious injuries which result in pain
+                        and bruises, which rarely kill. Excessive stun
+                        damage will result in wounds being caused.
+                    </entry>
+
+                    <entry term="Mixed damage">
+                        Mixed damage is half stuns, half wounds. The first
+                        level is a wound, the second a stun, the third a
+                        wound etc. Often caused by animals.
                     </entry>
                     
                     <entry term="Fatigue">
@@ -142,25 +130,69 @@
                     </entry>
 
                     <entry term="Load">
-                        A character's load is a measure of how
-                        much they are carrying. Each weapon and
-                        piece of armour has a load associated
-                        with it. If the total load is greater
-                        than the character's strength x 4, then
-                        they are considered to be encumbered and
-                        at penalty.
+                        A character can carry a load equal to four times
+                        their strength without penalty. Weapons, armour
+                        and equipment carried add to load.
                     </entry>
 
-                    <entry term="Special Attack">
-                        A special attack is chosen before
-                        initiative is determined, and can have
-                        a modifier on how a character attacks,
-                        and also on the results of the attack.
-                        Individual special attacks are described
-                        later, but include such things as killing
-                        blow or aimed shot. They are very useful,
-                        and players should be aware of their
-                        options.
+                    <entry term="Technique">
+                        A technique is a special action taken during an
+                        attack, which either gives a bonus, or provides some
+                        special effect. Techniques are considered to be
+                        advantages, which must be learnt before they can be
+                        used.
+                    </entry>
+
+                    <entry term="Stance">
+                        Stance determines how a combatent is fighting, the
+                        most common being normal, aggressive and defensive.
+                    </entry>
+
+                    <entry term="Free strike">
+                        An extra attack which may be taken immediately
+                        against a given opponent. The opponent gets a free
+                        defence roll, at the same penalty as other defence
+                        rolls that round if multiple defences have been
+                        declared.
+                    </entry>
+
+                    <entry term="Automatic strike">
+                        An extra attack which may be taken immediately
+                        against a given opponent. The opponent does not get
+                        a defence roll, so the attack is against the base
+                        difficulty to hit the target.
+                    </entry>
+
+                    <entry term="Good success">
+                        A <e>good</e> success is one that is at least 5 above
+                        the target number required. Often described as a
+                        <e>good defence</e> or a <e>good attack</e>.
+                    </entry>
+
+                    <entry term="Excellent success">
+                        An <e>excellent</e> success is one that is at least 10
+                        above the target number required.
+                    </entry>
+
+                    <entry term="Superb success">
+                        A <e>superb</e> success is one that is at least 15 above
+                        the target number required. For example, a <e>superb
+                        defence</e> is 15 points higher than the attack it was
+                        defending against.
+                    </entry>
+
+                    <entry term="Unsteady">
+                        An <e>unsteady</e> combatent is one who is down on
+                        their knees, or otherwise does not have secure
+                        footing. It is a half way state between <e>prone</e>
+                        and normal posture.
+                    </entry>
+
+                    <entry term="Prone">
+                        A <e>prone</e> person is down on the floor, and
+                        unable to act effectively. Attacks and defence are
+                        possible from such a position, but they are
+                        difficult.
                     </entry>
                 </termlist>
             </sect2>
@@ -243,10 +275,10 @@
             </sect2>
 
             <sect2>
-                <title>Combat Statistics</title>
+                <title>Weapons</title>
 
                 <para>
-                    Each weapon has a number of statistics which
+                    Each weapon has a number of properties which
                     represents how effective it is. These give a bonus
                     to a character's skill checks in combat. All
                     bonuses are zero or positive - no weapon gives a
@@ -262,57 +294,41 @@
                     weapons are for a given type of creature.
                 </para>
 
-                <termlist>
-                    <entry term="Initiative">
-                        The initiative of a weapon represents how quickly
-                        it can be brought to use. In a round, character's
-                        with a high initiative act before those with lower
-                        initiatives. Long weapons can grant a high
-                        initiative since they provide a tactical advantage
-                        for their user.
-                    </entry>
+                <sect3>
+                    <title>Basic Properties</title>
 
-                    <entry term="Attack">
-                        The attack rating of a weapon gives a bonus to hit
-                        a target. The attacker's attack skill is rolled
-                        against the defender's defence skill.
-                    </entry>
+                    <termlist>
+                        <entry term="Initiative">
+                            This represents the speed, reach and tactical
+                            advantage provided by the weapon. A good
+                            initiative is represented by the highest
+                            initiative going first in a combat.
+                        </entry>
 
-                    <entry term="Defence">
-                        The defence rating of a weapon adds to a
-                        characters parry or dodge attempts. Normally,
-                        defence is dexterity based if the character is
-                        using a melee weapon, or agility based if not.
-                        The single weapon combat style allows the
-                        character to choose whether to use agility or
-                        dexterity for defence.
-                    </entry>
+                        <entry term="Attack">
+                            This provides a bonus to hit the target. It is a
+                            measure of accuracy and also weight, since a
+                            heavy weapon can be harder to deflect.
+                        </entry>
 
-                    <entry term="Damage">
-                        The weapon damage adds to the strength of the
-                        user, and is unaffected by skill.
-                    </entry>
-                </termlist>
+                        <entry term="Defence">
+                            This adds to the character's defence roll. It
+                            represents parrying, but also how good the
+                            weapon is at keeping the enemy at a safe
+                            distance.
+                        </entry>
 
-            </sect2>
-
-        </sect1>
-
-
-        <sect1>
-            <title>Weapons</title>
-
-            <para>
-                The arms race between arms and armour has led to the
-                development of many different ways of killing someone. These
-                differences are of a practical kind, not just of style.
-            </para>
-
-            <sect2>
-                <title>Weapon Properties</title>
+                        <entry term="Damage">
+                            The weapon's damage modifier adds to the damage
+                            done by the attacker. This property also
+                            includes the type of damage done - either stun,
+                            mixed or wounds.
+                        </entry>
+                    </termlist>
+                </sect3>
 
                 <sect3>
-                    <title>Common Properties</title>
+                    <title>Other Properties</title>
 
                     <termlist>
                         <entry term="Load">
@@ -355,21 +371,6 @@
                 The four ability modifiers - initiative, attack, defence and
                 damage add to the base ability for a character when they are
                 using that weapon.
-            </para>
-
-            <para>
-                The given strength is the minimum strength required to use the
-                weapon effectively. If this strength is not met, then the
-                character is at -5 to initiative, attack and defence per point
-                below. If the weapon is being used two handed, then add 50%
-                (round up) to the character's strength for this purpose only.
-            </para>
-
-            <para>
-                The weapon's load is a measure of how heavy it is. The load of
-                all weapons, armour and equipment being carried needs to be
-                totalled, and compared to the character's strength, to see if
-                they are encumbered. More on this later.
             </para>
 
             <sect2>
@@ -494,16 +495,13 @@
                 described here.
             </para>
 
-            <para>
-                All combat is divided into rounds, and each round is
-                broken into a number of different steps. Various book
-                keeping activities happen at the end of each round.
-            </para>
-
             <sect2>
                 <title>The Combat Round</title>
 
                 <para>
+                    All combat is divided into rounds, and each round is
+                    broken into a number of different steps. Various book
+                    keeping activities happen at the end of each round.
                     The sequence of events in each round is as follows.
                 </para>
 
@@ -515,7 +513,16 @@
                         Roll initiative.
                     </item>
                     <item>
-                        Perform actions in decreasing order of initiative.
+                        Perform all fast actions in decreasing
+                        order of initiative.
+                    </item>
+                    <item>
+                        Perform all normal actions in decreasing
+                        order of initiative.
+                    </item>
+                    <item>
+                        Perform all slow actions in decreasing order
+                        of initiative.
                     </item>
                     <item>
                         End of round book keeping.
@@ -526,18 +533,19 @@
                     <title>Determine Actions</title>
 
                     <para>
-                        The first step in each round involves
-                        determining what each character or creature
-                        is going to be doing. Since a round lasts
-                        five seconds, there is generally time to move
-                        as well as do something else, though a full
-                        sprint will take up the entire round.
+                        At the start of each round, all combatents declare
+                        their actions simultaneously. Since a round is five
+                        seconds, there is generally time to notice what
+                        everyone else is doing before committing. If someone
+                        takes a long time deciding on their action however,
+                        then they loose it for that round.
                     </para>
 
                     <para>
-                        If a character is performing an attack, then
-                        any special attacks must be declared at this
-                        point, before initiative is determined.
+                        If a character is performing an attack, then stance
+                        and techniques should be declared at this point.
+                        Once all attacks have been declared, characters can
+                        declare which attacks they are defending against.
                     </para>
 
                     <para>
