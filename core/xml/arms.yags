@@ -4,8 +4,8 @@
 <!--
     List of low tech weapons and armour for Yags.
 
-    Version: $Revision: 1.4 $
-    Date:    $Date: 2004-02-14 10:31:27 $
+    Version: $Revision: 1.5 $
+    Date:    $Date: 2004-02-21 21:16:54 $
  -->
 <equipment>
     <weaponlist>
@@ -22,7 +22,9 @@
 
         <weapon name="Hand axe">
             <category>Axes</category>
+            <importance>3</importance>
             <class>single</class>
+
 
             <description>
                 <para>
@@ -32,23 +34,11 @@
                 </para>
             </description>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+3</initiative>
                 <attack>+2</attack>
                 <defence>+1</defence>
                 <damage>+5</damage>
-            </combat>
-
-            <combat mode="Thrown" importance="3">
-                <initiative>+2</initiative>
-                <attack>+1</attack>
-                <damage>+4</damage>
-                <range strength="true">
-                    <increment>5</increment>
-                    <short>3</short>
-                    <medium>6</medium>
-                    <long>10</long>
-                </range>
             </combat>
 
             <strength>1</strength>
@@ -58,6 +48,9 @@
 
         <weapon name="Battle axe">
             <category>Axes</category>
+            <importance>3</importance>
+            <class>single</class>
+
             <description>
                 <para>
                     An axe designed for single handed user. It has a single
@@ -65,9 +58,7 @@
                 </para>
             </description>
 
-            <class>single</class>
-
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+6</initiative>
                 <attack>+4</attack>
                 <defence>+3</defence>
@@ -81,6 +72,7 @@
 
         <weapon name="Broad axe">
             <category>Axes</category>
+            <importance>2</importance>
             <class>great</class>
 
             <description>
@@ -91,7 +83,7 @@
                 </para>
             </description>
 
-            <combat mode="Melee" importance="2">
+            <combat>
                 <initiative>+8</initiative>
                 <attack>+7</attack>
                 <defence>+4</defence>
@@ -101,11 +93,15 @@
             <strength>6</strength>
             <load>6</load>
             <reach>3</reach>
-            <property>two handed</property>
+
+            <properties>
+                <twohanded/>
+            </properties>
         </weapon>
 
         <weapon name="Club">
             <category>Clubs</category>
+            <importance>3</importance>
             <class>brawl</class>
             <class>single</class>
 
@@ -117,7 +113,7 @@
                 </para>
             </description>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+3</initiative>
                 <attack>+2</attack>
                 <defence>+3</defence>
@@ -127,15 +123,19 @@
             <strength>2</strength>
             <load>2</load>
             <reach>2</reach>
-            <property>light</property>
+
+            <properties>
+                <light/>
+            </properties>
         </weapon>
 
         <weapon name="Dagger">
             <category>Knives</category>
+            <importance>3</importance>
             <class>brawl</class>
             <class>single</class>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+4</initiative>
                 <attack>+2</attack>
                 <defence>+3</defence>
@@ -148,9 +148,11 @@
         </weapon>
 
         <weapon name="Fist">
+            <category>Natural</category>
+            <importance>3</importance>
             <class>brawl</class>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+0</initiative>
                 <attack>+0</attack>
                 <defence>+0</defence>
@@ -164,6 +166,7 @@
 
         <weapon name="Scramasax">
             <category>Swords</category>
+            <importance>3</importance>
             <class>single</class>
 
             <description>
@@ -173,7 +176,7 @@
                 </para>
             </description>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+4</initiative>
                 <attack>+4</attack>
                 <defence>+3</defence>
@@ -183,10 +186,15 @@
             <strength>2</strength>
             <load>2</load>
             <reach>2</reach>
+
+            <properties>
+                <weak/>
+            </properties>
         </weapon>
 
         <weapon name="Long sword">
             <category>Swords</category>
+            <importance>3</importance>
             <class>single</class>
 
             <description>
@@ -198,7 +206,7 @@
                 </para>
             </description>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+7</initiative>
                 <attack>+6</attack>
                 <defence>+4</defence>
@@ -208,11 +216,14 @@
             <strength>4</strength>
             <load>4</load>
             <reach>3</reach>
-            <property>two handed</property>
+            <properties>
+                <twohanded/>
+            </properties>
         </weapon>
 
-        <weapon name="Battle sword">
+        <weapon name="Broad sword">
             <category>Swords</category>
+            <importance>3</importance>
             <class>single</class>
 
             <description>
@@ -223,7 +234,7 @@
                 </para>
             </description>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+5</initiative>
                 <attack>+5</attack>
                 <defence>+5</defence>
@@ -237,6 +248,7 @@
 
         <weapon name="Great sword">
             <category>Swords</category>
+            <importance>2</importance>
             <class>great</class>
 
             <description>
@@ -248,7 +260,7 @@
                 </para>
             </description>
 
-            <combat mode="Melee" importance="2">
+            <combat>
                 <initiative>+12</initiative>
                 <attack>+8</attack>
                 <defence>+6</defence>
@@ -259,37 +271,38 @@
             <load>6</load>
             <reach>3</reach>
             <weight>1.5</weight>
-            <property>two handed</property>
+            <properties>
+                <twohanded/>
+            </properties>
         </weapon>
 
         <weapon name="Knife">
             <category>Knives</category>
+            <importance>3</importance>
             <class>brawl</class>
             <class>single</class>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+2</initiative>
                 <attack>+1</attack>
                 <defence>+2</defence>
                 <damage type="mixed">+2</damage>
             </combat>
 
-            <combat mode="Thrown" importance="3">
-                <initiative>+3</initiative>
-                <attack>+0</attack>
-                <damage type="mixed">+2</damage>
-            </combat>
-
             <strength>1</strength>
             <load>0.5</load>
             <reach>0</reach>
-            <property>light</property>
+            <properties>
+                <light/>
+            </properties>
         </weapon>
 
         <weapon name="Long spear">
+            <category>Spear</category>
+            <importance>3</importance>
             <class>longshaft</class>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+15</initiative>
                 <attack>+4</attack>
                 <defence>+4</defence>
@@ -299,15 +312,19 @@
             <strength>5</strength>
             <load>3</load>
             <reach>5</reach>
-            <property>two handed</property>
+
+            <properties>
+                <twohanded/>
+            </properties>
         </weapon>
 
 
         <weapon name="Mace">
             <category>Clubs</category>
+            <importance>3</importance>
             <class>single</class>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+5</initiative>
                 <attack>+3</attack>
                 <defence>+3</defence>
@@ -317,13 +334,19 @@
             <strength>3</strength>
             <load>3</load>
             <reach>2</reach>
+
+            <properties>
+                <crushing/>
+            </properties>
         </weapon>
 
         <weapon name="Quarterstaff">
+            <category>Spear</category>
+            <importance>2</importance>
             <class>longshaft</class>
             <class>great</class>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+9</initiative>
                 <attack>+5</attack>
                 <defence>+9</defence>
@@ -337,9 +360,10 @@
 
         <weapon name="Round shield">
             <category>Shields</category>
+            <importance>3</importance>
             <class>shield</class>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+0</initiative>
                 <attack>+2</attack>
                 <defence>+7</defence>
@@ -350,13 +374,18 @@
             <strength>2</strength>
             <load>3</load>
             <reach>2</reach>
+
+            <properties>
+                <blocking/>
+            </properties>
         </weapon>
 
         <weapon name="Small shield">
             <category>Shields</category>
+            <importance>2</importance>
             <class>shield</class>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+0</initiative>
                 <attack>+2</attack>
                 <defence>+4</defence>
@@ -367,12 +396,18 @@
             <strength>2</strength>
             <load>2</load>
             <reach>2</reach>
+
+            <properties>
+                <blocking/>
+            </properties>
         </weapon>
 
         <weapon name="Buckler">
+            <category>Shields</category>
+            <importance>1</importance>
             <class>shield</class>
 
-            <combat mode="Melee" importance="1">
+            <combat>
                 <initiative>+0</initiative>
                 <attack>+0</attack>
                 <defence>+3</defence>
@@ -383,10 +418,17 @@
             <strength>1</strength>
             <load>1</load>
             <reach>1</reach>
+
+            <properties>
+                <blocking/>
+                <light/>
+                <weak/>
+            </properties>
         </weapon>
 
         <weapon name="Short sword">
             <category>Swords</category>
+            <importance>2</importance>
             <class>single</class>
 
             <description>
@@ -395,7 +437,7 @@
                 </para>
             </description>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+5</initiative>
                 <attack>+4</attack>
                 <defence>+3</defence>
@@ -405,14 +447,19 @@
             <strength>2</strength>
             <load>2</load>
             <reach>2</reach>
+
+            <properties>
+                <impaling/>
+            </properties>
         </weapon>
 
         <weapon name="Spear">
             <category>Spears</category>
+            <importance>3</importance>
             <class>single</class>
             <class>longshaft</class>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+9</initiative>
                 <attack>+3</attack>
                 <defence>+2</defence>
@@ -422,10 +469,16 @@
             <strength>2</strength>
             <load>2</load>
             <reach>4</reach>
+
+            <properties>
+                <impaling/>
+            </properties>
         </weapon>
 
         <weapon name="War spear">
             <category>Spears</category>
+            <importance>2</importance>
+
             <class>single</class>
             <class>longshaft</class>
 
@@ -436,7 +489,7 @@
                 </para>
             </description>
 
-            <combat mode="Melee" importance="3">
+            <combat>
                 <initiative>+9</initiative>
                 <attack>+5</attack>
                 <defence>+3</defence>
@@ -446,14 +499,19 @@
             <strength>3</strength>
             <load>3</load>
             <reach>4</reach>
+
+            <properties>
+                <impaling/>
+            </properties>
         </weapon>
 
 
         <weapon name="Warhammer">
             <category>Clubs</category>
+            <importance>2</importance>
             <class>single</class>
 
-            <combat mode="Melee" importance="2">
+            <combat>
                 <initiative>+6</initiative>
                 <attack>+3</attack>
                 <defence>+2</defence>
@@ -463,13 +521,18 @@
             <strength>3</strength>
             <load>3</load>
             <reach>3</reach>
+
+            <properties>
+                <crushing/>
+            </properties>
         </weapon>
 
         <weapon name="War flail">
             <category>Flails</category>
+            <importance>1</importance>
             <class>flail</class>
 
-            <combat mode="Melee" importance="1">
+            <combat>
                 <initiative>+9</initiative>
                 <attack>+6</attack>
                 <defence>+6</defence>
@@ -479,14 +542,21 @@
             <strength>3</strength>
             <load>3</load>
             <reach>4</reach>
+
+            <properties>
+                <crushing/>
+                <chain/>
+                <heavy/>
+            </properties>
         </weapon>
 
 
         <weapon name="Throwing axe">
             <category>Axes</category>
+            <importance>2</importance>
             <class>thrown</class>
 
-            <combat mode="Thrown" importance="2">
+            <combat>
                 <initiative>+2</initiative>
                 <attack>+2</attack>
                 <damage>+4</damage>
