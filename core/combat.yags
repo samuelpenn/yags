@@ -14,7 +14,7 @@
             <year>2001</year>
             <holder>Samuel Penn</holder>
         </copyright>
-        <releaseinfo role="meta">$Revision: 1.6 $</releaseinfo>
+        <releaseinfo role="meta">$Revision: 1.7 $</releaseinfo>
     </referenceinfo>
     <revhistory>
         <revision>
@@ -28,7 +28,7 @@
         <subject>Combat</subject>
     </subjectset>
     <colourscheme>
-        <colour>red</colour>
+        <colour>#ff0000</colour>
         <darkcolour>#ff7777</darkcolour>
         <lightcolour>#ffcccc</lightcolour>
     </colourscheme>
@@ -945,7 +945,7 @@ have four stuns and three wounds.
 The purpose of armour is to keep someone alive by absorbing or
 deflecting the force of a blow away from them. In reality, the
 relationship between weapons and armour is complicated, having
-evolved during an arms race lasting several millenia. As a type
+evolved during an arms race lasting several millennia. As a type
 of armour was developed to counter the weapons then in use, so
 the weapons changed to minimise the effects of the new armour.
 </para>
@@ -955,7 +955,7 @@ Realistically, it is not always possible to say that one type of
 armour is better at stopping damage than another type. The
 usefulness of armour depends on whether the attack crushes,
 slices or pierces, and there are complications within these as
-well. Yags however, delibrately ignores this. Armour has a
+well. Yags however, deliberately ignores this. Armour has a
 single protection value which works equally against all types
 of armour.
 </para>
@@ -1106,11 +1106,11 @@ character.
 A character may first aid themselves - as long as they are conscious -
 but they suffer all their wound penalties. If the first aid roll exceeds
 the target difficulty by 10 or more, then not only is the wound
-stablised, but one injury level is immediately healed.
+stabilised, but one injury level is immediately healed.
 </para>
 
 <para>
-If a character is both wounded and stunned, a seperate roll is needed for
+If a character is both wounded and stunned, a separate roll is needed for
 each. It takes one minute to perform first aid on a person. First aid may
 be attempted as many times as required, until it succeeds.
 </para>
@@ -1197,9 +1197,9 @@ penalties to do so.
 <sect1><title>Missile Combat</title>
 <para>
 So far everything that has been covered has dealt with melee
-combat between antogonists who are in close combat. The rules
+combat between antagonists who are in close combat. The rules
 for missile weapons are similar. Unless a difference is noted,
-assume that missle combat works the same way.
+assume that missile combat works the same way.
 </para>
 
 <sect2><title>Ranged combat skills</title>
@@ -1212,7 +1212,7 @@ which make use of a particular skill.
 <para>
 All characters have some ability with the <emphasis>Throw</emphasis>
 talent, which is the ranged equivalent of the <emphasis>
-Brawl</emphasis> skill. Thrown spears, javelins, bottles and
+Brawl</emphasis> skill. Thrown spears, javelins, bottles, slings and
 axes are covered under this skill. This actually covers the
 majority of missile combat.
 </para>
@@ -1235,14 +1235,11 @@ using the weapon.
 
 <sect3><title>Crossbow</title>
 <para>
+Crossbows have their own skill. They are easier to use for the
+unskilled user, but don't have the accuracy at long range compared
+to the long bow.
 </para>
 </sect3>
-
-<sect3><title>Sling</title>
-<para>
-</para>
-</sect3>
-
 
 </sect2>
 
@@ -1258,34 +1255,354 @@ including the range given for a particular weapon.
 <table><title>Range Categories</title>
     <colspec colwidth="1.5cm"/>
     <colspec colwidth="1.5cm"/>
+    <colspec colwidth="1.5cm"/>
     <thead>
         <row>
             <entry>Range</entry>
-            <entry>Modifier</entry>
+            <entry>Attack</entry>
+            <entry>Damage</entry>
         </row>
     </thead>
     <tbody>
-        <row><entry>Short</entry><entry>+0</entry></row>
-        <row><entry>Medium</entry><entry>-10</entry></row>
-        <row><entry>Long</entry><entry>-20</entry></row>
-        <row><entry>Extreme</entry><entry>-30</entry></row>
+        <row><entry>Short</entry><entry>+0</entry><entry>+0</entry></row>
+        <row><entry>Medium</entry><entry>-5</entry><entry>+0</entry></row>
+        <row><entry>Long</entry><entry>-15</entry><entry>-5</entry></row>
+        <row><entry>Extreme</entry><entry>-30</entry><entry>-10</entry></row>
     </tbody>
 </table>
 </para>
 
 <para>
-The range modifier subtracts from the attackers attack roll,
-making it harder to hit targets at longer range.
+The range modifier subtracts from the attacker's attack roll,
+making it harder to hit targets at longer range. At long and
+extreme range, the damage of a ranged attack is also reduced.
 </para>
 
 </sect2>
 
 <sect2><title>Missile Attacks</title>
+<para>
+If a character declares an attack with a missile weapon, then
+they roll initiative as per melee combat, and act in standard
+initiative order.
+</para>
+
+<sect3><title>Defending with a missile weapon</title>
+<para>
+One problem with missile weapons is that it is not possible to
+parry with them. If the weapon has an equivalent melee defence
+total, then use the defence total for that (i.e. a thrown
+dagger is treated as a melee dagger for defence), otherwise it
+is not possible to parry with a missile weapon. Instead, the
+character must perform a brawling defence (agility x brawl),
+with no modifier for the weapon being used.
+</para>
+
+<para>
+Once a thrown weapon has been thrown, any defence bonuses are
+lost.
+</para>
+</sect3>
+
+<sect3><title>Defending against missile attacks</title>
+<para>
+Missile attacks can be dodged, but not parried unless the defender
+has a shield, in which case they get the defence bonus of the
+shield, but not of any other weapon they are using.
+</para>
+</sect3>
+
+<sect3><title>Firing into melee</title>
+<para>
+Firing into a melee combat is rarely a good idea, but sometimes
+it is done anyway. If the target of a missile attack is in close
+combat with anyone else, then the fumble chance of the attack
+is increased by two for each extra person. Firing into a melee
+involving six people, would give a +10 to the fumble chance, 
+meaning the attacker has a chance of hitting the wrong target if
+the d20 rolls less than 12.
+</para>
+
+<para>
+The chance of fumbling can be modified if the target is much larger
+or smaller than the obstructions. This is left for the GM to
+decide, but if two humans are fighting a 20m long dragon, then it
+is suggested that no penalty is applied.
+</para>
+
+<para>
+A fumble in this situation means that a random target is hit. It
+is possible to hit the 'right' random target. Chance of hitting
+each target should be based on size, and ideally distance from
+the intended target. In reality, just assigning equal chance to
+everyone is good enough.
+</para>
+
+<para>
+If someone is wrestling with the intended target, add +5 to +15
+to the fumble chance, depending on how bad a shot it is. In all
+cases, a luck point can be spent before hand to negate, or at
+least reduce, the chance of hitting a friend.
+</para>
+</sect3>
+
 </sect2>
 
 </sect1>
 
-<sect1><title>Special Attacks</title>
+<sect1><title>Advanced Combat</title>
+
+<sect2><title>Special Attacks</title>
+<para>
+Instead of making a normal attack, before initiative is determined,
+a character can opt to make one special attack. Unless noted
+otherwise, these are available to all forms of attack, and all
+types of weapons. In some cases, special attacks can be combined,
+but only if it is specifically noted.
+</para>
+
+<sect3><title>Aimed Shot</title>
+<para>
+Only applicable for missile attacks. If an entire round is spent
+aiming, then +1 is added to the attacker's perception for the
+attack. Spending more than a round aiming does not give further
+bonuses, but a <emphasis>killing blow</emphasis> or <emphasis>
+ambush</emphasis> may be performed.
+</para>
+</sect3>
+
+<sect3><title>Aggressive</title>
+<para>
+An all out attack is made, giving a +5 bonus to the attack and
+initiative rolls, but a -10 penalty to all defence rolls. May 
+only be performed with melee attacks.
+</para>
+</sect3>
+
+<sect3><title>Ambush</title>
+<para>
+If the target is unaware of the attack, then an ambush may be
+performed. This grants no bonuses to the attack, but the total
+soak of the target is halved. Furthermore, then attack counts
+as a <emphasis>killing blow</emphasis>. An ambusher cannot
+defend during the round, and such an attack is always considered
+to be slow.
+</para>
+</sect3>
+
+<sect3><title>Cleaving Attack</title>
+<para>
+A cleaving attack is always slow, and also gives a -10 penalty
+to the attack roll, or -5 if a two handed weapon is being used.
+If the attack is successful, the armour (not soak) of the target
+is halved. Such an attack can only be performed in melee.
+</para>
+</sect3>
+
+<sect3><title>Defensive</title>
+<para>
+If the round is spent fighting defensively, then a +5 bonus
+to defence rolls is gained, and a -10 penalty to initiative
+and attack rolls. Missile combat is not possible.
+</para>
+</sect3>
+
+<sect3><title>Feint</title>
+<para>
+No attack is made this turn (but character can defend as normal),
+and a +5 bonus to attack and initiative is gained next turn, as
+long as the same opponent is being fought. Only possible in
+melee, and during the following round, any other special attack
+can be used.
+</para>
+</sect3>
+
+<sect3><title>Killing blow</title>
+<para>
+A killing blow is a slow attack, and the character suffers a -10
+penalty to the attack roll. If the attack is successful, and at
+least two full categories of damage are caused, the target is
+instantly killed. If performed with a weapon doing stun or mixed
+damage, the target is knocked out instead.
+</para>
+</sect3>
+
+<sect3><title>Subduing Attack</title>
+<para>
+Any attack with a melee weapon can be turned into a subduing
+attack, causing stun damage instead of wounds or mixed damage.
+</para>
+</sect3>
+
+</sect2>
+
+<sect2><title>Berserkers</title>
+<para>
+Berserkers are mad warriors who show little concern for their own
+survival. Fueled up on bloodlust, religious fervour or drugs, they
+are able to shrug aside injuries, and fight with a strength and
+ferocity not normally possible.
+</para>
+
+<para>
+Being a berserker is considered an <emphasis>advantage</emphasis>,
+and only characters who have purchased it at character generation
+may <emphasis>go berserk</emphasis>.
+</para>
+
+<sect3><title>The berserker advantage</title>
+<para>
+The advantage is purchased to a level, from one upwards. Normally
+six is the maximum, though higher levels may be possible through
+divine inspiration or magic.
+</para>
+
+<para>
+If may be possible to increase the level of this advantage over
+time, though it may not be improved with experience. Being a
+berserker is a mind set which is difficult to learn.
+</para>
+</sect3>
+
+<sect3><title>Going berserk</title>
+<para>
+Going berserk is relatively easy, as long as there is a reason to
+fight. No roll is necessary - if there is a fight at hand, and
+the character wants to go berserk, then they can do, and they gain
+all the bonuses thereof.
+</para>
+
+<para>
+If there is no-one to fight, then entering a berserk rage is not
+possible. There must be the promise of blood letting in the very
+near future.
+</para>
+
+<sect4><title>Not going berserk</title>
+<para>
+If a berserker gets involved in a fight in which they do not want
+to go berserk, then a will check is required in order to restrain
+themselves. Failure means that they go berserk, getting all the
+bonuses and penalties associated with that.
+</para>
+
+<para>
+The difficulty to avoid going berserk is based on the size of the
+fight. The bigger and more heroic the fight, the harder it is to
+resist going berserk. The character rolls will x 4, at a penalty
+of 5 x berserker level.
+</para>
+
+<para>
+<table><title>Resisting Going Berserk</title>
+    <colspec colwidth="5cm"/>
+    <colspec colwidth="1.5cm"/>
+    <thead>
+        <row>
+            <entry>Type of fight</entry>
+            <entry>Target</entry>
+        </row>
+    </thead>
+    <tbody>
+        <row>
+            <entry>A small, friendly fight</entry>
+            <entry>0</entry>
+        </row>
+        <row>
+            <entry>Against greatly inferior foe</entry>
+            <entry>5</entry>
+        </row>
+        <row>
+            <entry>Against mildly inferior foe</entry>
+            <entry>10</entry>
+        </row>
+        <row>
+            <entry>Against similar foe</entry>
+            <entry>15</entry>
+        </row>
+        <row>
+            <entry>Against superior foe</entry>
+            <entry>20</entry>
+        </row>
+        <row>
+            <entry>Against greatly superior foe</entry>
+            <entry>25</entry>
+        </row>
+    </tbody>
+</table>
+</para>
+
+<para>
+Whether a foe is inferior or superior, depends on the skill of the
+foe, as well as numerical superiority.
+</para>
+</sect4>
+</sect3>
+
+<sect3><title>Effects of berserk combat</title>
+<para>
+A berserk warrior must fight the nearest foe to them, and may never
+use missile weapons. If there is not a foe in range, then they must
+close with the enemy as quickly as possible. A berserker may never
+fight defensively.
+</para>
+
+<para>
+The level of the berserker advantage adds to the attack, initiative
+and damage rolls of the berserker. It also subtracts from the
+berserker's defence rolls.
+</para>
+
+<para>
+Any wound, stun or fatigue penalties are reduced by the level of
+the advantage. Rolls to stay alive and conscious get a bonus equal
+to the advantage.
+</para>
+
+<para>
+Finally, a berserker gets extra wound and stun levels. These are
+temporary and are lost at the end of the battle. One extra wound
+and stun level is gained per two full levels of advantage. The first
+level is an extra <emphasis>hurt</emphasis> and <emphasis>bruised
+</emphasis> level. The second is an extra <emphasis>light</emphasis>
+and <emphasis>dazed</emphasis> level. The third is an extra
+<emphasis>medium</emphasis> and <emphasis>bloodied</emphasis> level.
+</para>
+
+<para>
+The real level is lost first when the character is injured, and the
+temporary level is lost second. At the end of the fight, the
+temporary levels go away, as do any wounds or stuns in them.
+</para>
+</sect3>
+
+</sect2>
+
+<sect2><title>Mounted combat</title>
+<para>
+Fighting from horse back can be tricky, but for a skilled rider it
+can be a big advantage. If the rider has a riding skill less than
+four, then an agility based riding check is required whenever an
+attack is made, against a target of 15. A rider with a skill of
+four or more does not have to make this roll.
+</para>
+
+<para>
+Failure of the riding roll means that the character becomes unstable,
+and must make a second roll at the same difficulty to remain on the
+horse. If the rider is not using saddle and stirrups, then both
+difficulties are increased by 5.
+</para>
+
+<para>
+The character's ride skill adds to all initiative, attack, defence
+and damage rolls made while on horseback. For example, a rider with
+a skill of 5, gets +5 to all these rolls. No other bonuses due to
+being on higher ground etc are gained. The bonuses do apply when
+fighting another mounted warrior.
+</para>
+</sect2>
+
 </sect1>
 
 
