@@ -14,7 +14,7 @@
             <year>2001</year>
             <holder>Samuel Penn</holder>
         </copyright>
-        <releaseinfo role="meta">$Revision: 1.3 $</releaseinfo>
+        <releaseinfo role="meta">$Revision: 1.4 $</releaseinfo>
     </referenceinfo>
     <revhistory>
         <revision>
@@ -545,19 +545,40 @@ as part of the Sindarin package.
 </para>
 
 <para>
-Immortal: Sindarin are immortal. They can be killed, but will
-not die of old age. A Sindarin will appear to reach adulthood
-(late teens, in human terms) after about fifty years. After about
-two hundred years they will appear to be about 30, at which point
-they stop aging.
-</para>
+<advantage name="Immortal" type="advantage">
+	<description>
+	Sindarin are immortal. They can be killed, but will
+	not die of old age. A Sindarin will appear to reach adulthood
+	(late teens, in human terms) after about fifty years. After about
+	two hundred years they will appear to be about 30, at which point
+	they stop aging.
+	</description>
+</advantage>
 
-<para>
-Immunity to disease: Sindarin are immune to disease.
-Hardy convalescence: All Sindarin have this at +6.
-Need no sleep: Sindarin do not need to sleep, at least not in
-the human sense of the word.
-Night vision: All Sindarin have this at +6.
+<advantage name="Immunity to disease" type="advantage">
+	<description>
+	Sindarin are immune to disease. No normal disease may affect them.
+	</description>
+</advantage>
+
+<advantage name="Hardy convalescence" type="advantage">
+	<description>
+	All Sindarin have this at +6.
+	</description>
+</advantage>
+
+<advantage name="Need no sleep" type="advantage">
+	<description>
+	Sindarin do not need to sleep, at least not in
+	the human sense of the word.
+	</description>
+</advantage>
+
+<advantage name="Night vision" type="advantage">
+	<description>
+	All Sindarin have this at +6.
+	</description>
+</advantage>
 </para>
 </sect3>
 
@@ -575,19 +596,31 @@ is because Sindarin have no reason to hurry about anything.
 </para>
 
 <para>
-Lazy: All Sindarin have the lazy passion at +3.
-Distracted: Sindarin find it very difficult to concentrate on one
-particular task for any great period of time. They can contemplate
-the shape of a tree for months on end, but this is more of a subconscious
-reflex. Getting around to, say, do some training or read a book
-is something they have a lot of difficulty with. First off, all
-study rolls are at a straight -10, making Sindarin slower learners
-than humans. Secondly, if a Sindarin tries to spend more than
-a week in training or study, they must make a will check at difficulty
-20. Each following week, another check must be made at a cumulative
-+5 to the difficulty. Failure means that they must spend twice
-the time spent training doing 'elvish stuff'. This often precludes
-more training, travel or work.
+<advantage name="Lazy" type="passion">
+	<description>
+	All Sindarin have the lazy passion at +3.
+	</description>
+</advantage>
+
+<advantage name="Distracted" type="disadvantage">
+	<description>
+	Sindarin are very different in outlook to humans, a fact brought
+	on by their immortal lifespan. They have a great interest in the
+	contemplation of nature, of philosophy and meditation. They do not
+	take well to the sort of intensive study and training that humans
+	seem so keep on.
+	<br/>
+	If a Sindarin spends more than a week in study or training, then
+	they suffer a -1 penalty to the quality of the source. There is
+	a further cumulative -1 for each successive week of study. A
+	Sindarin will be at -4 penalty for her fifth week of study.
+	<br/>
+	If a break is taken from study, the penalty is reduced by one for
+	every two weeks that pass without study. The Sindarin finds her
+	mind drifting onto other things, and must spend time fulfilling
+	her inner desires before continuing with such intensive study.
+	</description>
+</advantage>
 </para>
 </sect3>
 
@@ -598,23 +631,39 @@ not obtained for free) each of the following.
 </para>
 
 <para>
-Appearance: Sindarin must take a positive appearance.
-</para>
+<advantage name="Appearance" type="advantage">
+	<description>
+	Sindarin must take a positive appearance.
+	</description>
+</advantage>
 
-<para>
-Beautiful voice: Sindarin must take at least one level of this
-advantage.
+<advantage name="Beautiful voice" type="advantage">
+	<description>
+	Sindarin must take at least one level of this advantage.
+	</description>
+</advantage>
 </para>
 </sect3>
 
 <sect3><title>Optional Sindarin Advantages</title>
 <para>
-Lithe (+2): Sindarin have, on average, a higher agility than humans.
-This advantage gives them +1 to their agility, up to a maximum
-of five. Can only be taken once.
-Perceptive (+2): Sindarin have, on average, better senses than
-humans. This advantage gives them a +1 to their perception. Can
-only be taken once.
+<advantage name="Lithe" type="advantage">
+	<cost points="+2"/>
+	<description>
+	Sindarin have, on average, a higher agility than humans.
+	This advantage gives them +1 to their agility, up to a maximum
+	of five. Can only be taken once.
+	</description>
+</advantage>
+
+<advantage name="Perceptive" type="advantage">
+	<cost points="+2"/>
+	<description>
+	Sindarin have, on average, better senses than humans. This
+	advantage gives them a +1 to their perception. Can only be
+	taken once.
+	</description>
+</advantage>
 </para>
 </sect3>
 </sect2>
@@ -632,21 +681,69 @@ and are gained free.
 </para>
 
 <para>
-Possessive: Khuzdul tend to be very possessive. Though not exactly
-greedy, they are very frugal and acquisitive. They have the possessive
-passion at +3.
-Loyalty (clan): Khuzdul are extremely loyal to their clan, and
-have a loyalty of +4 towards the clan as a whole.
-Code of Honour (dwarven): A Khuzdul will never forget a friend,
-or foe. They will defend their freedom and possessions to the
-death. A dwarf can be killed, but never conquered.
-Hatred (Gargun): After the actions of Lothrim the Foulspawner,
-dwarves have a strong hatred for all orcs. They have this passion
-at +3.
-Distrust (Sindarin): The Khuzdul do not trust the Sindarin, and
-are still upset with them. They have this at +2.
-Required Advantages
-Brave: Dwarves must take this at least at +3.
+<advantage name="Possessive" type="passion">
+	<cost>
+		<passion degree="negminor"/>
+	</cost>
+	<description>
+	Khuzdul tend to be very possessive. Though not exactly
+	greedy, they are very frugal and acquisitive. They have the
+	possessive passion at +3.
+	</description>
+</advantage>
+
+<advantage name="Loyalty (clan)" type="passion">
+	<cost>
+		<passion degree="neglesser"/>
+	</cost>
+	<description>
+	Khuzdul are extremely loyal to their clan, and have a loyalty
+	of +4 towards the clan as a whole.
+	</description>
+</advantage>
+
+<advantage name="Code of Honour (dwarven)" type="disadvantage">
+	<description>
+	A Khuzdul will never forget a friend, or foe. They will defend
+	their freedom and possessions to the death. A dwarf can be killed,
+	but never conquered. This does not make them stupid. They will
+	surrender and retreat, but it is never permanent.
+	</description>
+</advantage>
+
+<advantage name="Hatred (Gargun)" type="passion">
+	<cost>
+		<passion degree="neglesser"/>
+	</cost>
+	<description>
+	After the actions of Lothrim the Foulspawner, dwarves have a
+	strong hatred for all orcs. They have this passion at +3.
+	</description>
+</advantage>
+
+<advantage name="Distrust (Sindarin)" type="passion">
+	<cost>
+		<passion degree="neglesser"/>
+	</cost>
+	<description>
+	The Khuzdul do not trust the Sindarin, and are still upset with
+	them over their betrayel during the battles with Lothrim. They
+	have this at +2.
+	</description>
+</advantage>
+</para>
+</sect3>
+
+<sect3><title>Required Advantages</title>
+<para>
+<advantage name="Brave" type="passion">
+	<description>
+	Dwarves must take this at least at +3.
+	</description>
+</advantage>
+</para>
+</sect3>
+
 Required Disadvantages
 Stubborn: Dwarves must take this at least at +3.
 </para>
@@ -654,13 +751,21 @@ Stubborn: Dwarves must take this at least at +3.
 
 <sect3><title>Optional Khuzdul Advantages</title>
 <para>
-Enduring (+2): Khuzdul tend to have a higher stamina than humans.
-This advantage gives +1 to stamina, up to a maximum of five.
-</para>
+<advantage name="Enduring" type="advantage">
+	<cost points="+2"/>
+	<description>
+	Khuzdul tend to have a higher stamina than humans. This advantage
+	gives +1 to stamina, up to a maximum of five.
+	</description>
+</advantage>
 
-<para>
-Strong willed (+2): Khuzdul are very strong willed, and this advantage
-gives +1 to will, up to a maximum of five.
+<advantage name="Strong willed" type="advantage">
+	<cost points="+2"/>
+	<description>
+	Khuzdul are very strong willed, and this advantage gives +1 to
+	will, up to a maximum of five.
+	</description>
+</advantage>
 </para>
 </sect3>
 </sect2>
@@ -730,9 +835,17 @@ village. This knowledge is represented by the following three
 starting skills, which default to the following scores.
 </para>
 
-Speak own language    4
-Area lore            2
-Folk lore            2
+<para>
+<table>
+	<colspec width="5cm"/>
+	<colspec width="2cm"/>
+	<tbody>
+		<row><entry>Speak own language</entry><entry>4</entry></row>
+		<row><entry>Area lore</entry><entry>2</entry></row>
+		<row><entry>Folk lore</entry><entry>2</entry></row>
+	</tbody>
+</table>
+</para>
 </sect3>
 
 <sect3><title>Languages</title>
@@ -796,32 +909,101 @@ can understand.
 
 <sect4><title>Harnic Languages</title>
 <para>
-Harnic: The language, in one dialect or another, spoken by the
-majority of Harnians.
-Ivinian: Spoken by the Ivinians.
-Orbaalese: The language spoken in Orbaal, a mixture of Ivinian,
-Harnic and Jarinese. Most Ivinians speak their own language to
-each other.
-Jarinese: an almost dead language, formerly used by the early
-Jarin settlers to Harn. Modern dialects of Jarinese are spoken
-by some tribes and by some stubborn Jarin.
-Sindarin: Spoken by the Sindarin of Harn.
-Khuzdul: Spoken by the Khuzdul.
-Gargun: The gargun have their own language, and each sub-race
-has its own variation. A skill with each sub-language is required,
-though other gargun languages can be spoken at the average of
-both skills (round down).
-Harnic Scripts
+<variablelist>
+	<varlistentry>
+		<term>Harnic</term>
+		<listitem>
+			The language, in one dialect or another, spoken by the
+			majority of Harnians.
+		</listitem>
+	</varlistentry>
+	
+	<varlistentry>
+		<term>Ivinian</term>
+		<listitem>
+			Spoken by the Ivinians.
+		</listitem>
+	</varlistentry>
+
+	<varlistentry>
+		<term>Orbaalese</term>
+		<listitem>
+			The language spoken in Orbaal, a mixture of Ivinian,
+			Harnic and Jarinese. Most Ivinians speak their own language to
+			each other.
+		</listitem>
+	</varlistentry>
+	
+	<varlistentry>
+		<term>Jarinese</term>
+		<listitem>
+			An almost dead language, formerly used by the early Jarin
+			settlers to Harn. Modern dialects of Jarinese are spoken
+			by some tribes and by some stubborn Jarin.
+		</listitem>
+	</varlistentry>
+	
+	<varlistentry>
+		<term>Sindarin</term>
+		<listitem>
+			Spoken by the Sindarin of Harn.
+		</listitem>
+	</varlistentry>
+	
+	<varlistentry>
+		<term>Khuzdul</term>
+		<listitem>
+			Spoken by the Khuzdul.
+		</listitem>
+	</varlistentry>
+	
+	<varlistentry>
+		<term>Gargun</term>
+		<listitem>
+			The gargun have their own language, and each sub-race
+			has its own variation. A skill with each sub-language is required,
+			though other gargun languages can be spoken at the average of
+			both skills (round down).
+		</listitem>
+	</varlistitem>
+</variablelist>
+</para>
+</sect4>
+
+<sect4><title>Harnic Scripts</title>
+<para>
 The following scripts are used on Harn for written languages.
 A read/write skill is with a script, not with a spoken language.
-Lakise: The script brought to Harn by human settlers from Lythia.
-Lakise is the principal form of writing on Harn today and remains
-almost identical to that still used in western Lythia.
-Runic: The angular, stone-carving script, originated by the Khuzdul
-and still used by them. The Ivinians also use Runic. This script
-is common in Orbaal, and is known to many who have contact with
-the Khuzdul.
-Selenian: The aesthetic, cursive script of the Sindarin.
+</para>
+
+<para>
+<variablelist>
+	<varlistentry>
+		<term>Lakise</term>
+		<listitem>
+			The script brought to Harn by human settlers from Lythia.
+			Lakise is the principal form of writing on Harn today and
+			remains almost identical to that still used in western Lythia.
+		</listitem>
+	</varlistentry>
+	
+	<varlistentry>
+		<term>Runic</term>
+		<listitem>
+			The angular, stone-carving script, originated by the Khuzdul
+			and still used by them. The Ivinians also use Runic. This script
+			is common in Orbaal, and is known to many who have contact with
+			the Khuzdul.
+		</listitem>
+	</varlistentry>
+	
+	<varlistentry>
+		<term>Selenian</term>
+		<listitem>
+			The aesthetic, cursive script of the Sindarin.
+		</listitem>
+	</varlistentry>
+</variablelist>
 </para>
 </sect4>
 </sect3>
@@ -1198,27 +1380,56 @@ to teach them outside of the cult.
 
 <para>
 <skilllist>
-Berserker: This skill is only known by the clerics and fighting
-orders of Agrik. It mimics the advantage of the same name. It
-is based on stamina, and each 10 points rolled gives an equivalence
-to one level of berserker advantage.
-Dream lore: It is believed that dreams give glimpses of the inner
-mind of a person, and also of their future. The ability to understand
-dreams, and to garner useful knowledge from them is difficult to
-master. At worst though, someone with this skill can give impressive
-interpretations of a dream, if not entirely accurate. Based on
-intelligence, and taught by the priests of Siem.
-Erotic arts: The skill of giving (and taking) pleasure to someone.
-It is unique to the priestesses of Halea, and a few favoured followers
-(mainly members of the guild of courtesans). Normally base on
-dexterity.
-Riddle lore: This is the skill of solving riddles and puzzles,
-of understanding the links connecting broken facts. It is taught
-by the priests of Save-K'nor.
-Torture: A skill honed to perfection by the followers of Agrik.
-This gives knowledge of the 'ten thousand ways of pain'. It includes
-knowledge of anatomy, psychology and implements of torture. Normally
-based on intelligence.
+	<skill name="Berserker" type="cult">
+		<cult>Agrik</cult>
+		<description>
+			This skill is only known by the clerics and fighting
+			orders of Agrik. It mimics the advantage of the same name. It
+			is based on stamina, and each 10 points rolled gives an equivalence
+			to one level of berserker advantage.
+		</description>
+	</skill>
+	
+	<skill name="Dream lore" type="cult">
+		<cult>Siem</cult>
+		<description>
+			It is believed that dreams give glimpses of the inner
+			mind of a person, and also of their future. The ability to
+			understand dreams, and to garner useful knowledge from them is
+			difficult to master. At worst though, someone with this skill
+			can give impressive interpretations of a dream, if not entirely
+			accurate. Based on intelligence, and taught by the priests of Siem.
+		</description>
+	</skill>
+	
+	<skill name="Erotic arts" type="cult">
+		<cult>Halea</cult>
+		<description>
+			The skill of giving (and taking) pleasure to someone.
+			It is unique to the priestesses of Halea, and a few favoured
+			followers (mainly members of the guild of courtesans). Normally
+			base on dexterity.
+		</description>
+	</skill>
+	
+	<skill name="Riddle lore" type="cult">
+		<cult>Save-K'nor</cult>
+		<description>
+			This is the skill of solving riddles and puzzles, of
+			understanding the links connecting broken facts. It is taught
+			by the priests of Save-K'nor.
+		</description>
+	</skill>
+	
+	<skill name="Torture" type="cult">
+		<cult>Agrik</cult>
+		<description>
+			A skill honed to perfection by the followers of Agrik.
+			This gives knowledge of the 'ten thousand ways of pain'.
+			It includes knowledge of anatomy, psychology and implements of
+			torture. Normally based on intelligence.
+		</description>
+	</skill>
 </skilllist>
 </para>
 </sect2>
@@ -1227,26 +1438,60 @@ based on intelligence.
 <sect2><title>Wilderness Skills</title>
 <para>
 <skilllist>
-Boating: Being able to use a small oared boat. Based on intelligence
-for judging travel conditions, strength for speed or dexterity
-for fine navigation.
-Falconry: The skill of training, caring for and hunting with falcons
-and similar birds of prey.
-Hunting: The skill of training, caring for and hunting with hounds.
-Ride: The ability to ride, normally a horse. A different skill
-is needed for different types of animals (horses and ponies would
-be the same skill, a griffon another skill). As well as enabling
-you to remain mounted, it grants a bonus to combat skills when
-mounted.
-Survival: Knowledge of how to get by in the wilderness, from finding
-food, trapping animals, and moving at speed across country.
-Swim: The ability to move in water without drowning or panicking.
-Basically, a waterborne version of the athletics skill.
-Track: The ability to find, identify and follow tracks left by
-animals and people. To follow a single person across soft terrain
-is moderate difficulty. Muddy terrain, or a large number of people
-or creatures makes it easier. An opposed tracking roll can be
-used to hide tracks.
+	<skill name="Boating" type="wilderness">
+		<description>
+			Being able to use a small oared boat. Based on intelligence
+			for judging travel conditions, strength for speed or dexterity
+			for fine navigation.
+		</description>
+	</skill>
+	
+	<skill name="Falconry" type="wilderness">
+		<description>
+			The skill of training, caring for and hunting with falcons
+			and similar birds of prey.
+		</description>
+	</skill>
+	
+	<skill name="Hunting" type="wilderness">
+		<description>
+			The skill of training, caring for and hunting with hounds.
+		</description>
+	</skill>
+	
+	<skill name="Ride" type="wilderness">
+		<description>
+			The ability to ride, normally a horse. A different skill
+			is needed for different types of animals (horses and ponies
+			would be the same skill, a griffon another skill). As well as 
+			enabling you to remain mounted, it grants a bonus to combat
+			skills when mounted.
+		</description>
+	</skill>
+	
+	<skill name="Survival" type="wilderness">
+		<description>
+			Knowledge of how to get by in the wilderness, from finding
+			food, trapping animals, and moving at speed across country.
+		</description>
+	</skill>
+	
+	<skill name="Swim" type="wilderness">
+		<description">
+			The ability to move in water without drowning or panicking.
+			Basically, a waterborne version of the athletics skill.
+		</description>
+	</skill>
+	
+	<skill name="Track" type="wilderness">
+		<description>
+			The ability to find, identify and follow tracks left by
+			animals and people. To follow a single person across soft terrain
+			is moderate difficulty. Muddy terrain, or a large number of people
+			or creatures makes it easier. An opposed tracking roll can be
+			used to hide tracks.
+		</description>
+	</skill>
 </skilllist>
 </para>
 </sect2>
@@ -1268,52 +1513,196 @@ based around the profession.
 
 <para>
 <skilllist>
-Armoury: Making armour such as chain mail or ring mail, but also
-includes leather armour as well.
-Beekeeping: The keeping of bees, and the harvesting of honey from
-them.
-Blacksmithing: Metal working, including needles, horseshoes, tools
-and so on. It can be used to make knives and daggers, but anything
-larger requires the weaponsmithing skill.
-Bowyer: The making of bows and arrows.
-Brewing: Brewing beer and ale. This skill is generally the domain
-of the ale wives in small villages.
-Candlemaking: The making of candles.
-Carpentry: Crafting items out of wood, from chairs to houses.
-Clothier: Working with cloth, generally in the making of clothes.
-Can be used for making leather or padded armour if necessary,
-though this is not normally the domain of clothiers.
-Cooking: The preparing, preserving and cooking of food. Includes
-some knowledge of herbs.
-Copicing: The care and management of woodland. All manors will
-have someone skilled in this, and it is not uncommon for such
-a person to be a carpenter as well.
-Dairying: The making of cheese and other dairy products. Includes
-caring for and milking cows.
-Farming: The planting, caring for and harvesting of crops, the
-care and feeding of animals such as cows, sheep and chickens.
-The majority of people in rural areas will of course be farmers.
-Glassworking: The making of glassware, though this is a rare,
-and highly sought after, skill.
-Handicraft: The making of baskets, embroidery and other similar
-village hand crafts not covered by other professional skills.
-Jewelcraft: The crafting of jewellery and gems. Covers artistic
-skill, as well as knowledge of the values of such items.
-Masonry: The building of houses, bridges and other constructions
-out of stone.
-Milling: Running a mill, from the grinding of #our to the baking
-of the bread.
-Mining: Covers being able to locate new mines, and to construct
-and work them safely.
-Ostling: The care and training of horses.
-Potter: Pottery.
-Shipwright: Ship building.
-Tanning: Tanning.
-Thatching: Thatching.
-Weaponsmithing: The making of weapons, including spears, daggers,
-swords and axes. The making of bows and arrows is a different
-profession, which is covered by bowyer.
-Weaving: A profession which includes weaving and spindling.
+	<skill name="Armoury" type="professional">
+		<guilded/>
+		<description>
+			Making armour such as chain mail or ring mail, but also
+			includes leather armour as well.
+		</description>
+	</skill>
+	
+	<skill name="Beekeeping" type="professional">
+		<guilded/>
+		<description>
+			The keeping of bees, and the harvesting of honey from
+			them.
+		</description>
+	</skill>
+	
+	<skill name="Blacksmithing" type="professional">
+		<guilded/>
+		<description>
+			Metal working, including needles, horseshoes, tools
+			and so on. It can be used to make knives and daggers, but
+			anything larger requires the weaponsmithing skill.
+		</description>
+	</skill>
+	
+	<skill name="Bowyer" type="professional">
+		<guilded/>
+		<description>
+			The making of bows and arrows.
+		</description>
+	</skill>
+	
+	<skill name="Brewing" type="professional">
+		<description>
+			Brewing beer and ale. This skill is generally the domain
+			of the ale wives in small villages.
+		</description>
+	</skill>
+	
+	<skill name="Candlemaking" type="professional">
+		<guilded/>
+		<description>
+			The making of candles.
+		</description>
+	</skill>
+	
+	<skill name="Carpentry" type="professional">
+		<guilded/>
+		<description>
+			Crafting items out of wood, from chairs to houses.
+		</description>
+	</skill>
+	
+	<skill name="Clothier" type="professional">
+		<guilded/>
+		<description>
+			Working with cloth, generally in the making of clothes.
+			Can be used for making leather or padded armour if necessary,
+			though this is not normally the domain of clothiers.
+		</description>
+	</skill>
+	
+	<skill name="Cooking" type="professional">
+		<guilded/>
+		<description>
+			The preparing, preserving and cooking of food. Includes
+			some knowledge of herbs.
+		</description>
+	</skill>
+	
+	<skill name="Copicing" type="professional">
+		<guilded/>
+		<description>
+			The care and management of woodland. All manors will
+			have someone skilled in this, and it is not uncommon for such
+			a person to be a carpenter as well.
+		</description>
+	</skill>
+	
+	<skill name="Dairying" type="professional">
+		<description>
+			The making of cheese and other dairy products. Includes
+			caring for and milking cows.
+		</description>
+	</skill>
+	
+	<skill name="Farming" type="professional">
+		<description>
+			The planting, caring for and harvesting of crops, the
+			care and feeding of animals such as cows, sheep and chickens.
+			The majority of people in rural areas will of course be farmers.
+		</description>
+	</skill>
+	
+	<skill name="Glassworking" type="professional">
+		<guilded/>
+		<description>
+			The making of glassware, though this is a rare,
+			and highly sought after, skill.
+		</description>
+	</skill>
+	
+	<skill name="Handicraft" type="professional">
+		<description>
+			The making of baskets, embroidery and other similar
+			village hand crafts not covered by other professional skills.
+		</description>
+	</skill>
+	
+	<skill name="Jewelcraft" type="professional">
+		<guilded/>
+		<description>
+			The crafting of jewellery and gems. Covers artistic
+			skill, as well as knowledge of the values of such items.
+		</description>
+	</skill>
+	
+	<skill name="Masonry" type="professional">
+		<guilded/>
+		<description>
+			The building of houses, bridges and other constructions
+			out of stone.
+		</desription>
+	</skill>
+	
+	<skill name="Milling" type="professional">
+		<guilded/>
+		<description>
+			Running a mill, from the grinding of #our to the baking
+			of the bread.
+		</description>
+	</skill>
+	
+	<skill name="Mining" type="professional">
+		<guilded/>
+		<description>
+			Covers being able to locate new mines, and to construct
+			and work them safely.
+		</description>
+	</skill>
+	
+	<skill name="Ostling" type="professional">
+		<guilded/>
+		<description>
+			The care and training of horses.
+		</description>
+	</skill>
+	
+	<skill name="Potter" type="professional">
+		<guilded/>
+		<description>
+			Pottery.
+		</description>
+	</skill>
+	
+	<skill name="Shipwright" type="professional">
+		<guilded/>
+		<description>
+			Ship building.
+		</description>
+	</skill>
+	
+	<skill name="Tanning" type="professional">
+		<guilded/>
+		<description>
+			Tanning.
+		</description>
+	</skill>
+	
+	<skill name="Thatching" type="professional">
+		<description>
+			Thatching.
+		</description>
+	</skill>
+	
+	<skill name="Weaponsmithing" type="professional">
+		<guilded/>
+		<description>
+			The making of weapons, including spears, daggers,
+			swords and axes. The making of bows and arrows is a different
+			profession, which is covered by bowyer.
+		</description>
+	</skill>
+	
+	<skill name="Weaving" type="professional">
+		<guilded/>
+		<description>
+			A profession which includes weaving and spindling.
+		</description>
+	</skill>
 </skilllist>
 </para>
 </sect2>
@@ -1327,17 +1716,50 @@ not necessary, just a style of fighting.
 </para>
 
 <para><skilllist>
-Battle: Knowledge of tactics and strategy for planning, and #ghting,
-large scale battles (anything with a dozen or more people a side).
-Combined with charisma, it is also used for leadership in battle.
-Bow: Using a bow.
-Great weapon: Using a large weapon such as a great sword.
-Single Weapon: Fighting with a single melee weapon and no shield.
-Two handed weapon: Fighting with a two handed weapon such as a
-great sword.
-Two weapons: Fighting with a weapon in each hand, such as with
-two swords for example.
-Weapon and shield: Fighting with a weapon and shield.
+	<skill name="Battle" type="combat">
+		<description>
+			Knowledge of tactics and strategy for planning, and fighting,
+			large scale battles (anything with a dozen or more people a side).
+			Combined with charisma, it is also used for leadership in battle.
+		</description>
+	</skill>
+	
+	<skill name="Bow" type="combat">
+		<description>
+			Using either a shortbow or longbow.
+		</description>
+	</skill>
+	
+	<skill name="Great weapon" type="combat">
+		<description>
+			Using a large weapon such as a great sword.
+		</description>
+	</skill>
+	
+	<skill name="Single Weapon" type="combat">
+		<description>
+			Fighting with a single melee weapon and no shield.
+		</description>
+	</skill>
+	
+	<skill name="Two handed weapon" type="combat">
+		<description>
+			Fighting with a two handed weapon such as a great sword.
+		</description>
+	</skill>
+	
+	<skill name="Two weapons" type="combat">
+		<description>
+			Fighting with a weapon in each hand, such as with
+			two swords for example.
+		</description>
+	</skill>
+	
+	<skill name="Weapon and shield" type="combat">
+		<description>
+			Fighting with a weapon and shield.
+		</description>
+	</skill>
 </skilllist></para>
 
 </sect2>
@@ -1346,15 +1768,22 @@ Weapon and shield: Fighting with a weapon and shield.
 
 
 <sect1><title>Sindarin Starting Skills</title>
+<para>
 Sindarin begin the game much older than human characters, generally
 in the region of 50 to 150 years. Older Sindarin are possible,
 but it's difficult to rationalise a Sindarin of this age being
 of 'beginning character' capability.
+</para>
+
+<para>
 The Sindarin character's age should be chosen by the player, and
 it has no effect on the number of skill points gained. Sindarin
 are a fickle lot, and how much a Sindarin has learnt is as much
 a factor of their mood for the last few decades, as it is of their
 age.
+</para>
+
+<para>
 Sindarin Common Knowledges
     Speak Own (Sindarin)    4
     Read/Write Sindarin    4
@@ -1374,15 +1803,25 @@ Sindarin Beginning Skills
     Sing                2
     Single weapon        3
     Survival            2
+</para>
+
+<para>
 Sindarin player characters have a further 10 experience points
 to place on skills on their choice. If they wish to buy further
 experience with advantages, this is possible, though at double
 normal cost. Sindarin characters start with a lot of skills, though
 not much flexibility.
-Khuzdul Starting Skills
+</para>
+</sect1>
+
+<sect1><title>Khuzdul Starting Skills</title>
+<para>
 Khuzdul player characters will start the game somewhere between
 70 and 100 years of age. Khuzdul live well into their third century,
 sometimes longer, so this is considered to be a young adult.
+</para>
+
+<para>
 Khuzdul Common Knowledges
     Speak Own (Khuzdul)    4
     Read/Write Khuzdul    4
@@ -1397,12 +1836,8 @@ Khuzdul Talents
     Awareness    2    Sleight    2
     Brawl    3    Sneak    1
     Charm    1    Throw    2
-</sect1>
 
-
-<sect1><title>Khuzdul Beginning Skills</title>
-All Khuzdul player characters begin the game with the following
-set of skills.
+Khuzdul Beginning Skills
     Trade                3
     Weapon and Shield    3
     Armourer            3
@@ -1411,11 +1846,14 @@ set of skills.
     Jewelcraft            3
     Mining            5
     Weaponsmith        3
+</para>
 
+<para>
 Characters get a further 10 experience points to spend on other
 skills. There is no modification of experience for age. Khuzdul
 characters may buy extra experience with advantages, at the normal
 rates.
+</para>
 </sect1>
 
 </article>
