@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.21 $</version>
-            <date>$Date: 2002-12-13 19:30:47 $</date>
+            <version>$Revision: 1.22 $</version>
+            <date>$Date: 2002-12-16 16:23:18 $</date>
         </cvsinfo>
         
         <license>
@@ -814,6 +814,38 @@
                 on the damage type of the weapon - wounds, stuns or split
                 damage.
             </para>
+            
+            <sect2>
+                <title>Knockdown</title>
+                
+                <para>
+                    Every creature has a <e>knockdown</e> score, which is
+                    the amount of damage a creature can stand in one blow
+                    and still remain standing. Knockdown calculation is
+                    performed before armour and soak is subtracted from the
+                    damage, so it is possible to knock someone to the floor,
+                    even if you don't get through their armour.
+                </para>
+                
+                <para>
+                    The knockdown score for a person or creature is equal
+                    to their <skillequation><attribute>strength</attribute>
+                    <skill>10</skill><bonus>10</bonus></skillequation>
+                    For an average human, this
+                    is equal to 40. If a blow equals or exceeds this value,
+                    then the creature receives one stun regardless of their
+                    soak. They must then make an
+                    <skillequation><attribute>agility</attribute>
+                    <skill>brawl</skill></skillequation> roll to remain
+                    standing.
+                </para>
+                
+                <para>
+                    The brawl roll is at a target difficulty of 20 plus
+                    the amount the damage was over the character's
+                    knockdown.
+                </para>
+            </sect2>
 
             <sect2>
                 <title>Wounds</title>
@@ -886,8 +918,8 @@
 
                 <para>
                     Each level of wound gives a penalty, as shown in the
-                    <emphasis>Penalties due to Wounds</emphasis> table.
-                    The penalty is to all actions performed by the character 
+                    <e>Penalties due to Wounds</e> table.
+                    The penalty is to all actions performed by the character
                     while at that wound level.
                 </para>
 
@@ -923,27 +955,27 @@
 
                         <para>
                             If a character suffers damage that takes them
-                            beyond <emphasis>fatally wounded</emphasis>,
+                            beyond <e>fatally wounded</e>,
                             then they are considered to be at fatal, but
                             the initial stamina difficulty is raised by 5
                             for each wound level beyond fatal they were
                             taken. For example, if someone is seriously
                             wounded, and suffers four extra wound levels,
                             they will become fatally wounded, and need
-                            to make a stamina roll at difficulty 30 to 
+                            to make a stamina roll at difficulty 30 to
                             remain alive, and 40 to remain conscious.
                         </para>
 
                         <para>
-                            The fumble chance is raised by 1 for each 
+                            The fumble chance is raised by 1 for each
                             wound beyond fatal that they are taken.
                         </para>
 
                         <para>
                             Damage such as this only affects the initial
-                            stamina roll, and does not affect further 
+                            stamina roll, and does not affect further
                             rolls to remain conscious and alive later on.
-                            For all other purposes, there are no shades 
+                            For all other purposes, there are no shades
                             of fatal wounds.
                         </para>
                     </sect4>
@@ -954,16 +986,16 @@
                             a fatally wounded character will die eventually.
                             If the character is still conscious, they
                             must make another stamina roll at the end of
-                            each round at a target difficulty of 30 to 
+                            each round at a target difficulty of 30 to
                             remain conscious. Again, if the roll
                             fails by 10 or more, then the character dies.
                         </para>
 
                         <para>
                             An unconscious character must make a difficulty
-                            20 roll each minute in order to remain alive. 
+                            20 roll each minute in order to remain alive.
                             Failure means death. A roll must be made
-                            until the character receives first aid which 
+                            until the character receives first aid which
                             stabalises theircondition.
                         </para>
                     </sect4>
@@ -977,7 +1009,7 @@
                 <para>
                     Unlike wounds, stuns are short term and generally
                     non-fatal. Stun damage is caused by attacks which
-                    bruise or scratch such as fists, chair legs and 
+                    bruise or scratch such as fists, chair legs and
                     staffs. It is possible to kill someone with stun
                     damage, though it is unlikely.
                 </para>
@@ -985,21 +1017,21 @@
                 <para>
                     Unlike wounds, stun damage is not cumulative. If a
                     character receives a number of stuns greater than
-                    the stun levels they currently have, then they become 
+                    the stun levels they currently have, then they become
                     stunned to that level. The stuns are not added to
                     the stuns they already have.
                 </para>
 
                 <para>
                     If a character receives at least one or more stuns
-                    which do not exceed their current stun level, then 
+                    which do not exceed their current stun level, then
                     they gain one stun.
                 </para>
 
                 <para>
                     Similar to wounds, a character suffers penalties
                     from being stunned. The penalties are on a similar
-                    scale for wound penalties, and a character who is 
+                    scale for wound penalties, and a character who is
                     both wounded and stunned suffers both sets of
                     penalties.
                 </para>
