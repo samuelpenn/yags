@@ -1,0 +1,111 @@
+<?xml version = '1.0' ?>
+<?xml-stylesheet
+    href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<!--
+    $Revision: 1.1 $
+    $Date: 2003-11-15 22:56:28 $
+
+    Bestiary containing information on elephants.
+-->
+
+<bestiary>
+
+    <!-- Basic deer information -->
+    <beast name="Elephant" primary="true">
+        <information>
+            <type>Animal</type>
+            <demeanor>Selfish</demeanor>
+
+            <habitat climate="Warm" terrain="Plain" frequency="Uncommon"/>
+
+            <organisation group="Herd" number="15-30"/>
+
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                In the real world, the largest living land animal.
+            </short>
+
+            <movement>
+                <walk normal="10" max="5"/>
+            </movement>
+
+            <scale length="2" width="1"/>
+
+            <physical>
+                <para>
+                    The elephant ranges in height from 3m to 5m, and can
+                    weigh more than six tonnes.
+                </para>
+            </physical>
+
+            <social>
+                <para>
+                    Elephants live in herds.
+                </para>
+            </social>
+        </description>
+
+        <attributes size="25" soak="21">
+            <attribute name="strength" score="35" half="8"/>
+            <attribute name="stamina" score="4"/>
+            <attribute name="agility" score="1"/>
+            <attribute name="dexterity" score="1"/>
+            <attribute name="perception" score="4"/>
+            <attribute name="intelligence" score="1"/>
+            <attribute name="charisma" score="2"/>
+            <attribute name="will" score="2"/>
+        </attributes>
+
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="6"/>
+                <skill name="Awareness" score="5"/>
+                <skill name="Brawl" score="2"/>
+                <skill name="Charm" score="1"/>
+                <skill name="Guile" score="0"/>
+                <skill name="Sleight" score="1"/>
+                <skill name="Stealth" score="3"/>
+                <skill name="Throw" score="1"/>
+            </group>
+
+            <group name="Misc" type="skills">
+                <skill name="Survival" score="4"/>
+                <skill name="Swim" score="2"/>
+            </group>
+        </skills>
+
+        <combat>
+            <combatstyle style="Kick" skill="Brawl">
+                <primary>None</primary>
+                <initiative attribute="agility" bonus="+10"/>
+                <attack attribute="agility" bonus="+12"/>
+                <defence attribute="agility" bonus="+9"/>
+                <damage type="stun" bonus="+1"/>
+            </combatstyle>
+
+            <armourstyle style="Base"/>
+
+            <armourstyle style="Natural">
+                <armour name="Hide" protection="+3"/>
+            </armourstyle>
+        </combat>
+
+        <passions>
+            <passion name="Bravery" score="2"/>
+            <passion name="Ego" score="2"/>
+            <passion name="Restraint" score="2"/>
+            <passion name="Temperence" score="2"/>
+        </passions>
+
+        <advantages>
+            <advantage name="Animal"/>
+        </advantages>
+    </beast>
+
+</bestiary>
