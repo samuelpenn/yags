@@ -1,18 +1,20 @@
 <?xml version="1.0"?>
 <character-templates>
 
-<character-template name="Silken Voice">
+<character-template name="Silken Voice (Temptress)">
 	<description>
 	The only clerical order of the Church of Halea. It is a female
 	order noted for its comely members. The mother house of the
-	order deals with the sale and #rental# of pleasure slaves,
+	order deals with the sale and rental of pleasure slaves,
 	highly trained in the erotic arts. The trade in slaves is a
 	significant source of revenue for Halea's church.
+	<br/>
 	Members of the Silken Voice are considered acolytes until age
 	21. There are two paths a priestess can follow, either
 	concentrating on the giving of pleasure, or to take an interest
 	in financial matters. Eventually, most will take the second path
 	as they become too old for the former.
+	<br/>
 	Particularly attractive acolytes will begin training in the
 	erotic/entertainment arts from 12 or 13.
 	</description>
@@ -61,40 +63,140 @@
 			<skill name="Scribe own" score="4"/>
 		</group>
 
-		<group name="Skills to age 16" type="age16">
+		<group name="Skills at age 16" type="age16">
 			<skill name="Religion (Halea)" score="4"/>
-			<skill name="Charm" score="4"/>
-			<skill name="Erotic arts" score="3"/>
-			<skill name="Play instrument" score="2"/>
-			<skill name="Sing" score="3"/>
-			<skill name="Trade" score="2"/>
-			<skill name="Blessing" score="2"/>
-			<skill name="Sardura's Vision" score="2"/>
-			<skill name="Dulcia's Song" score="2"/>
-			<skill name="Ectasy" score="1"/>
-		</group>
-
-		<group name="Skills to age 21" type="age21">
 			<skill name="Erotic arts" score="4"/>
-			<skill name="Trade" score="3"/>
+			<skill name="Dance" score="3"/>
+			<skill name="Sing" score="1"/>
+			<skill name="Charm" score="4"/>
+			<skill name="Blessing" score="2"/>
+			<skill name="Silver Tongue" score="1"/>
+			<skill name="Dulcia's Song" score="1"/>
 			<skill name="Ectasy" score="2"/>
-			<skill name="Silver tongue" score="3"/>
 		</group>
 
-		<group name="Skills to age 25" type="age25">
+		<group name="Skills at age 21" type="age21">
 			<skill name="Ectasy" score="3"/>
-			<skill name="Sardura's Vision" score="3"/>
+            <skill name="Erotic arts" score="5"/>
 		</group>
 
-		<group name="Skills to age 30" type="age30">
-			<skill name="Trade" score="4"/>
-			<skill name="Dulcia's Song" score="2"/>
+		<group name="Skills at age 25" type="age25">
+			<skill name="Ectasy" score="4"/>
+			<skill name="Silver Tongue" score="2"/>
+            <skill name="Dulcia's Song" score="2"/>
+		</group>
+
+		<group name="Skills at age 30" type="age30">
+			<skill name="Trade" score="2"/>
+            <skill name="Blessing" score="3"/>
+			<skill name="Dulcia's Song" score="3"/>
+            <skill name="Play instrument" score="1"/>
 		</group>
 
 	</skills>
 
 	<equipment>
+        <item name="Several sets of high quality clothes"/>
+        <item name="Makeup and perfume"/>
+        <item name="Cheap jewellry"/>
 	</equipment>
 
 </character-template>
+
+
+<character-template name="Silken Voice (Merchant)">
+	<description>
+	Whilst some members of the Silken Voice are trained in the
+    arts of pleasure and entertainment, just as important are
+    those who's interest turns to business and the generation
+    of wealth.
+	<br/>
+	All members of the Silken Voice are expected to know some
+    of both facets of the worship of Halea, but most specialise
+    in one or the other.
+	</description>
+
+	<attributes points="48">
+		<strength score="2"/>
+		<stamina score="2"/>
+		<agility score="3"/>
+		<dexterity score="2"/>
+		<perception score="4"/>
+		<intelligence score="4"/>
+		<charisma score="5"/>
+		<will score="3"/>
+	</attributes>
+
+	<advantages points="19">
+		<advantage name="attributes" cost="+8"/>
+		<advantage name="appearance" score="+2" cost="+2"/>
+		<advantage name="literate" cost="+2"/>
+		<advantage name="social status" target="priest" cost="+2"/>
+		<advantage name="experience" score="+10" cost="+5"/>
+        
+		<advantage name="non-combatant" score="-6" cost="-9"/>
+		<advantage name="combat paralysis" cost="-4"/>
+		<advantage name="lustful" score="+4" cost="-4"/>
+		<advantage name="love" score="+3" target="Halea" cost="-1"/>
+        <advantage name="greedy" score="+3" cost="-1"/>
+	</advantages>
+
+	<skills>
+		<group name="Talents" type="talents">
+			<skill name="Athletics" score="2"/>
+			<skill name="Awareness" score="2"/>
+			<skill name="Brawl" score="1"/>
+			<skill name="Charm" score="3"/>
+			<skill name="Guile" score="3"/>
+			<skill name="Sleight" score="2"/>
+			<skill name="Stealth" score="1"/>
+			<skill name="Throw" score="1"/>
+		</group>
+
+		<group name="Common Knowledges" type="knowledges">
+			<skill name="Area lore" score="2"/>
+			<skill name="Folk lore" score="2"/>
+			<skill name="Speak own" score="4"/>
+			<skill name="Scribe own" score="4"/>
+		</group>
+
+		<group name="Skills at age 16" type="age16">
+			<skill name="Religion (Halea)" score="4"/>
+			<skill name="Erotic arts" score="3"/>
+            <skill name="Trade" score="4"/>
+            <skill name="Guile" score="4"/>
+			<skill name="Dance" score="1"/>
+			<skill name="Sing" score="1"/>
+			<skill name="Blessing" score="2"/>
+			<skill name="Silver Tongue" score="2"/>
+			<skill name="Sardura's Vision" score="1"/>
+			<skill name="Ectasy" score="1"/>
+		</group>
+
+		<group name="Skills at age 21" type="age21">
+			<skill name="Trade" score="5"/>
+            <skill name="Blessing" score="3"/>
+		</group>
+
+		<group name="Skills at age 25" type="age25">
+			<skill name="Guile" score="5"/>
+			<skill name="Erotic arts" score="4"/>
+            <skill name="Etiquette" score="1"/>
+		</group>
+
+		<group name="Skills at age 30" type="age30">
+			<skill name="Sardura's Vision" score="3"/>
+            <skill name="Etiquette" score="3"/>
+		</group>
+
+	</skills>
+
+	<equipment>
+        <item name="Several sets of high quality clothes"/>
+        <item name="Makeup and perfume"/>
+        <item name="Cheap jewellry"/>
+	</equipment>
+
+</character-template>
+
 </character-templates>
