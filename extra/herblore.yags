@@ -15,8 +15,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.6 $</version>
-            <date>$Date: 2003-06-07 15:25:56 $</date>
+            <version>$Revision: 1.7 $</version>
+            <date>$Date: 2003-06-07 21:49:55 $</date>
         </cvsinfo>
 
         <license>
@@ -63,7 +63,66 @@
                 herbs would work in a similar way, though their effects
                 would not be limited to those outlined here.
             </para>
+        </sect1>
 
+        <sect1>
+            <title>Skills</title>
+
+            <para>
+                Often, herbs will be bought or obtained from someone
+                who has already prepared it. Some characters will want
+                to find and prepare herbs of their own however, and in this
+                case they will need the skills to do so.
+            </para>
+
+            <skill-list>
+                <skill name="Herb lore" type="knowledge">
+                    <description>
+                        <para>
+                            The <e>herb lore</e> skill gives knowledge of
+                            the indentification, preperation and use of
+                            all manner of herbs, drugs and poisons.
+                        </para>
+                    </description>
+
+                    <examples>
+                        <example target="10">
+                            Identify a common herb and know its primary
+                            properties.
+                        </example>
+
+                        <example target="15">
+                            Identify an uncommon herb, and know its primary
+                            properties. Know most of the properties of a
+                            common herb, including antidote (if any).
+                        </example>
+
+                        <example target="20">
+                            Identify a rare herb, know most things about
+                            an uncommon herb, or everything about a common
+                            herb.
+                        </example>
+
+                        <example target="25">
+                            Identify a very rare herb, know most things
+                            about rare herbs, and everything about other
+                            herbs.
+                        </example>
+
+                        <example target="30">
+                            Know most things about very rare herbs, and
+                            everything about other types. Certain special
+                            or unique herbs will be at least this difficult
+                            to identify.
+                        </example>
+
+                        <example target="35">
+                            Know everything about all herbs except for
+                            special or unique ones.
+                        </example>
+                    </examples>
+                </skill>
+            </skill-list>
         </sect1>
 
         <sect1>
@@ -141,11 +200,19 @@
                         </entry>
 
                         <entry term="Coma">
-                            Creature falls into an unconscious state, from which it is
-                            impossible to wake them. Such a symptom is nearly always
-                            followed by death. If death does not occur (due to the fatal
-                            effects of the poison being resisted), then a stamina roll of
-                            30+ each week can be made to gain consciousness.
+                            Creature falls into an unconscious state, from
+                            which it is impossible to wake them. Such a
+                            symptom is nearly always followed by death. If
+                            death does not occur (due to the fatal effects
+                            of the poison being resisted), then a stamina
+                            roll of 30+ each week can be made to gain
+                            consciousness.
+                        </entry>
+
+                        <entry term="Convulsions">
+                            Creature goes into convulsions, loosing control
+                            of their muscles. They are unable to do anything
+                            whilst this is happening.
                         </entry>
 
                         <entry term="Cramps">
@@ -383,16 +450,22 @@
                 <title>Classic Real World Poisons</title>
 
                 <herb name="Arsenic">
+                    <frequency>Common</frequency>
                     <toxicity>V</toxicity>
-                    <strength>20</strength>
-                    <time modifier="-1">30mn</time>
-                    <effects>
-                        <effect>Weakness</effect>
-                        <effect>Nausea</effect>
-                        <effect>Convulsions</effect>
-                        <effect>Coma</effect>
-                        <effect>Death</effect>
-                    </effects>
+
+                    <usage label="Poison">
+                        <strength>20</strength>
+                        <time modifier="-1">30mn</time>
+                        <effects>
+                            <effect>Weakness</effect>
+                            <effect>Nausea</effect>
+                            <effect>Convulsions</effect>
+                            <effect>Coma</effect>
+                            <effect>Death</effect>
+                        </effects>
+                    </usage>
+
+
                 </herb>
 
             </sect2>
