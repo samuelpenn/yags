@@ -4,8 +4,8 @@
     Brawling and unarmed combat techniques.
     
     Author:  Samuel Penn
-    Version: $Revision: 1.4 $
-    Date:    $Date: 2004-07-11 20:55:35 $
+    Version: $Revision: 1.5 $
+    Date:    $Date: 2004-08-22 21:09:04 $
     
  -->
 
@@ -15,9 +15,11 @@
         <skill name="Brawl"/>
         <description>
             <para>
-                A brawl attack is made to grab the defender without doing
-                damage. If successful, the defender has the immediate
-                opportunity to try and break free by making a
+                <e>Aggressive</e> or <e>normal</e> stance. A brawl attack
+                is made (with or without weapons), and if successful the
+                defender has been grabbed. The defender can choose to
+                either grab back, or try to break free. If the latter, an
+                immediate oppossed roll is made with 
                 <skillequation>
                     <attribute>strength</attribute>
                     <attribute>agility</attribute>
@@ -30,7 +32,14 @@
                 </skillequation>
                 roll to keep hold. If the defender succeeds then the
                 grapple attempt is broken. On success, both are
-                considered to be <e>grappled</e>.
+                considered to be <e>grappled</e>. Weapons do not count for
+                the roll to break free.
+            </para>
+            
+            <para>
+                The reach of this attack is generally zero, so the defender
+                may get a <e>free strike</e>. If the attacker has weapons,
+                then they count as armed (no automatic strike against them).
             </para>
         </description>
     </advantage>
@@ -109,33 +118,39 @@
             </para>
         </description>
     </advantage>
-
-    <advantage name="Shoulder throw" type="technique">
+    
+    
+    <advantage name="Reflex dodge" type="technique">
         <cost points="2"/>
         <skill name="Brawl"/>
+        
         <description>
             <para>
-                An attack requiring both hands to be free. If the initial
-                brawl attack is a success, then the defender is temporarily
-                grappled, and both make opposed
-                <skillequation>
-                    <attribute>strength</attribute>
-                    <attribute>agility</attribute>
-                    <skill>brawl</skill>
-                </skillequation>
-                rolls. If the attacker succeeds, then the defender is
-                <e>unsteady</e>. A good success leaves the defender
-                <e>prone</e> plus the attack can make a damage roll as
-                normal, doing stun damage.
-            </para>
-
-            <para>
-                An excellent success enables the attacker to place the
-                defender wherever they want, within 2m of the attacker.
+                If using the <e>defensive stance</e>, and the character
+                hasn't taken their action yet this round, then they may
+                swap their action for a dodge which gives them a +5 bonus
+                to their soak. This technique can only be used if the
+                character has just failed a defence roll - i.e. cannot be
+                made if the character did not get a defence against the
+                attack.
             </para>
         </description>
     </advantage>
     
+    <advantage name="Reflex defence" type="technique">
+        <cost points="2"/>
+        <skill name="Brawl"/>
+        
+        <description>
+            <para>
+                If using the <e>defensive stance</e>, and the character
+                hasn't taken their action yet this round but have just
+                failed a defence roll, then they may swap their action
+                for an immediate second defence roll
+            </para>
+        </description>
+    </advantage>
+
     <advantage name="Unarmed combat" type="technique">
         <cost points="4"/>
         <skill name="Brawl"/>
@@ -149,44 +164,18 @@
         </description>
     </advantage>
 
-    <advantage name="Stunning attack" type="technique">
-        <cost points="3"/>
-        <skill name="Brawl"/>
-        <description>
-            <para>
-                A bare handed attack against a target's vitals. It is a slow
-                attack, at -10. If damage is caused, the target must make a
-                size x stamina roll of 20 + stuns x 5, or be <e>unsteady</e>,
-                and at a further -10 for one round per stun caused.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Deadly punch" type="technique">
-        <cost points="6"/>
-        <skill name="Brawl"/>
-        <prerequisite>Stunning attack</prerequisite>
-        
-        <description>
-            <para>
-                A bare handed attack that does <e>mixed</e> damage rather
-                than stun damage.
-            </para>
-        </description>
-    </advantage>
-
     <advantage name="Combat reflexes" type="technique">
         <cost points="4"/>
         <skill name="Brawl"/>
         <description>
             <para>
-                The character has very fast reflexes, which give a bonus
-                to all initiative rolls, as well as rolls to surprise,
-                and to avoid being surprised.
+                The character has very fast reflexes, which give a +1
+                attribute bonus to all initiative rolls, as well as rolls
+                to surprise, and to avoid being surprised.
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Hard to kill" type="technique">
         <cost points="5"/>
         <skill name="Brawl"/>
