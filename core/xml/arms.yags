@@ -4,8 +4,8 @@
 <!--
     List of low tech weapons and armour for Yags.
 
-    Version: $Revision: 1.11 $
-    Date:    $Date: 2004-09-04 22:21:47 $
+    Version: $Revision: 1.12 $
+    Date:    $Date: 2005-01-15 14:27:04 $
  -->
 <equipment>
     <weaponlist>
@@ -654,17 +654,15 @@
             <description>
                 <para>
                     The short bow is a simple bow, about a metre in
-                    length. It is easy to pull, and most archers can
-                    comfortably exceed the maximum pull of the bow,
-                    so the strength of the archer is not factored into
-                    the penetrating power of the arrow.
+                    length. The pentrating power is based on the strength
+                    of the user, and also the maximum pull of the bow.
                 </para>
             </description>
 
             <combat mode="Projectile" importance="3">
                 <initiative>+4</initiative>
-                <attack>+10</attack>
-                <damage>20</damage>
+                <attack>+7</attack>
+                <damage>+5</damage>
                 <range>
                     <increment>15</increment>
                     <short>30</short>
@@ -700,7 +698,7 @@
 
             <combat mode="Projectile" importance="3">
                 <initiative>+2</initiative>
-                <attack>+7</attack>
+                <attack>+5</attack>
                 <damage>+12</damage>
                 <range>
                     <increment>25</increment>
@@ -723,6 +721,7 @@
 
 
         <weapon name="Throwing knife">
+            <category>Knives</category>
             <class>thrown</class>
 
             <combat mode="Thrown" importance="2">
@@ -750,6 +749,7 @@
         </weapon>
 
         <weapon name="Sling">
+            <category>Bows</category>
             <class>thrown</class>
 
             <combat mode="Projectile" importance="2">
@@ -806,6 +806,7 @@
         </weapon>
 
         <weapon name="Light crossbow">
+            <category>Bows</category>
             <class>crossbow</class>
 
             <combat mode="Projectile" importance="2">
@@ -827,10 +828,12 @@
             <properties>
                 <missile/>
                 <impaling/>
+                <reload>10</reload>
             </properties>
         </weapon>
 
         <weapon name="Medium crossbow">
+            <category>Bows</category>
             <class>crossbow</class>
 
             <combat mode="Projectile" importance="3">
@@ -852,10 +855,12 @@
             <properties>
                 <missile/>
                 <impaling/>
+                <reload>15</reload>
             </properties>
         </weapon>
 
         <weapon name="Heavy crossbow">
+            <category>Bows</category>
             <class>crossbow</class>
 
             <combat mode="Projectile" importance="2">
@@ -878,6 +883,7 @@
             <properties>
                 <missile/>
                 <impaling/>
+                <reload>20</reload>
             </properties>
         </weapon>
     </weaponlist>
@@ -1093,7 +1099,7 @@
         <armour name="Mail hauberk">
             <protection>+6</protection>
             <load>4</load>
-            <athletics>0.75</athletics>
+            <athletics>0.5</athletics>
             <stealth>1</stealth>
             <properties>
                 <mail/>
@@ -1104,7 +1110,7 @@
         <armour name="Mail leggings">
             <protection>+3</protection>
             <load>3</load>
-            <athletics>0.5</athletics>
+            <athletics>0.75</athletics>
             <stealth>1</stealth>
             <properties>
                 <mail/>

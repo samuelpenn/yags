@@ -4,8 +4,8 @@
     Techniques for missile weapons.
     
     Author:  Samuel Penn
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2004-03-14 15:35:48 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2005-01-15 14:27:04 $
     
  -->
 
@@ -34,5 +34,99 @@
         </description>
     </advantage>
 
-
+    <advantage name="Greater range" type="technique">
+        <cost points="4"/>
+        <skill name="Throw"/>
+        
+        <description>
+            <para>
+                Add +1 to strength for purposes of maximum range of a
+                thrown weapon.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Close combat archery" type="technique">
+        <cost points="4"/>
+        <skill name="Any missile skill"/>
+        
+        <description>
+            <para>
+                Character is skilled at firing into combat. The increase
+                to the fumble chance when doing so is halved (generally
+                +1 per extra possible target instead of +2).
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Deadly shot" type="technique">
+        <cost points="6"/>
+        <skill name="Any missile skill"/>
+        <prerequisite>Close combat archery</prerequisite>
+        
+        <description>
+            <para>
+                Declared before an attack, there is a -10 to the attack
+                roll. If the target is successfully wounded, then they must
+                make a size x stamina roll against a target of 10 +
+                5 x wounds (not stuns) caused or immediately drop to be
+                fatally wounded.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Fast shot" type="technique">
+        <cost points="4"/>
+        <skill name="Bow"/>
+        
+        <description>
+            <para>
+                The character is quick at using a short or long bow. An
+                arrow can be loaded and fired in a single round, and is
+                considered a normal (not slow) initiative action.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Improved aim" type="technique">
+        <cost points="4"/>
+        <skill name="Bow"/>
+        
+        <description>
+            <para>
+                Character is exceptionally skilled at firing a long or
+                short bow. If a full round is spent aiming, then the
+                character can halve all range and circumstance penalties.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Spear catching" type="technique">
+        <cost points="2"/>
+        <skill name="Throw"/>
+        
+        <description>
+            <para>
+                If the character makes a good brawl defence roll to dodge
+                a spear or javelin, and they have an empty hand, then they
+                may catch the weapon with a dexterity x throw check of 20+.
+                The catch attempt must be declared before the defence is
+                made.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Improved spear catching" type="technique">
+        <cost points="4"/>
+        <skill name="Throw"/>
+        <prerequisite>Spear catching</prerequisite>
+        
+        <description>
+            <para>
+                As for spear catching, plus the character can throw the
+                spear the same round instead of their normal attack action,
+                assuming they still have an attack left that round.
+            </para>
+        </description>
+    </advantage>
 </advantages>
