@@ -1,0 +1,266 @@
+<?xml version = '1.0' ?>
+<?xml-stylesheet
+    href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<!--
+    $Revision: 1.1 $
+    $Date: 2003-11-15 21:05:19 $
+
+    Bestiary containing information on deers.
+-->
+
+<bestiary>
+
+    <!-- Basic deer information -->
+    <beast name="Deer" primary="true">
+        <information>
+            <type>Animal</type>
+            <demeanor>Selfish</demeanor>
+
+            <habitat climate="Temperate" terrain="Forest" frequency="Uncommon"/>
+            <habitat climate="Temperate" terrain="Mountain" frequency="Rare"/>
+
+            <organisation group="Solitary" number="1"/>
+            <organisation group="Family" number="2-5"/>
+
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                Timid mammals.
+            </short>
+        </description>
+    </beast>
+
+    <!-- Black Bear -->
+    <beast name="Roe Deer">
+        <information>
+            <type>Animal</type>
+            <demeanor>Selfish</demeanor>
+
+            <habitat climate="Temperate" terrain="Forest" frequency="Uncommon"/>
+            <habitat climate="Temperate" terrain="Mountain" frequency="Rare"/>
+
+            <organisation group="Solitary" number="1"/>
+            <organisation group="Family" number="2-5"/>
+
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                Small species of deer.
+            </short>
+
+            <movement>
+                <walk normal="10" max="5"/>
+            </movement>
+
+            <scale length="2" width="1"/>
+
+            <physical>
+                <para>
+                    Roe deer are about 70cm tall at the shoulder, with the
+                    males (bucks) about 25-30kg in weight. The females
+                    (does) tend to be several kilogrammes lighter. They
+                    tend to be dark brown to charcoal grey in colour
+                    during the winter, and red or sandy yellow in the
+                    summer.
+                </para>
+
+                <para>
+                    Bucks grow antlers during the winter months, shedding
+                    them at the start of the following winter. Antlers
+                    are fully developed by March or April, with older
+                    deer developing earlier.
+                </para>
+            </physical>
+
+            <social>
+                <para>
+                    Roe deer generally organise into loose family groups
+                    or stay solitary. Bucks tend to be solitary except
+                    when mating. Doe will often be accompanied by her
+                    kids.
+                </para>
+            </social>
+        </description>
+
+        <attributes size="3" soak="9">
+            <attribute name="strength" score="2"/>
+            <attribute name="stamina" score="3"/>
+            <attribute name="agility" score="5"/>
+            <attribute name="dexterity" score="1"/>
+            <attribute name="perception" score="4"/>
+            <attribute name="intelligence" score="1"/>
+            <attribute name="charisma" score="1"/>
+            <attribute name="will" score="2"/>
+        </attributes>
+
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="6"/>
+                <skill name="Awareness" score="5"/>
+                <skill name="Brawl" score="2"/>
+                <skill name="Charm" score="1"/>
+                <skill name="Guile" score="0"/>
+                <skill name="Sleight" score="1"/>
+                <skill name="Stealth" score="3"/>
+                <skill name="Throw" score="1"/>
+            </group>
+
+            <group name="Misc" type="skills">
+                <skill name="Survival" score="4"/>
+                <skill name="Swim" score="2"/>
+            </group>
+        </skills>
+
+        <combat>
+            <combatstyle style="Bite and claw" skill="Brawl">
+                <primary>None</primary>
+                <initiative attribute="agility" bonus="+4"/>
+                <attack attribute="agility" bonus="+5"/>
+                <defence attribute="agility" bonus="+0"/>
+                <damage type="split" bonus="+1"/>
+            </combatstyle>
+
+            <armourstyle style="Base"/>
+
+            <armourstyle style="Natural">
+                <armour name="Fur" protection="+1"/>
+                <armour name="Hide" protection="+1"/>
+            </armourstyle>
+        </combat>
+
+        <passions>
+            <passion name="Bravery" score="2"/>
+            <passion name="Ego" score="2"/>
+            <passion name="Restraint" score="2"/>
+            <passion name="Temperence" score="2"/>
+        </passions>
+
+        <advantages>
+            <advantage name="Animal"/>
+            <advantage name="Acute sense of smell" score="+1"/>
+            <advantage name="Acute hearing" score="+1"/>
+            <advantage name="Poor eyesight" score="-1"/>
+            <advantage name="Good climber" score="+1"/>
+        </advantages>
+    </beast>
+
+    <beast name="Red Deer">
+        <information>
+            <type>Animal</type>
+            <demeanor>Selfish</demeanor>
+
+            <habitat climate="Temperate" terrain="Forest" frequency="Uncommon"/>
+            <habitat climate="Temperate" terrain="Mountain" frequency="Rare"/>
+
+            <organisation group="Solitary" number="1"/>
+            <organisation group="Family" number="2-5"/>
+
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                Large species of deer.
+            </short>
+
+            <movement>
+                <walk normal="10" max="5"/>
+            </movement>
+
+            <scale length="2" width="1"/>
+
+            <physical>
+                <para>
+                    Red deer stags are about 110cm tall at the shoulder,
+                    and weigh about 130kg. They are dark red or brown
+                    during the summer, and darker brown or grey in the
+                    winter.
+                </para>
+
+            </physical>
+
+            <social>
+                <para>
+                    Stags and hinds tend to remain in seperate herds
+                    until mating season. Stags will form their own herds
+                    of hinds as large as they can defend, though more than
+                    twenty is rare. After mating, herds can be as large as
+                    100 deer on the plains, but tend to be smaller (no more
+                    than 20) in woodland.
+                </para>
+            </social>
+        </description>
+
+        <attributes size="5" soak="12">
+            <attribute name="strength" score="3"/>
+            <attribute name="stamina" score="3"/>
+            <attribute name="agility" score="4"/>
+            <attribute name="dexterity" score="1"/>
+            <attribute name="perception" score="4"/>
+            <attribute name="intelligence" score="1"/>
+            <attribute name="charisma" score="1"/>
+            <attribute name="will" score="2"/>
+        </attributes>
+
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="6"/>
+                <skill name="Awareness" score="5"/>
+                <skill name="Brawl" score="2"/>
+                <skill name="Charm" score="1"/>
+                <skill name="Guile" score="0"/>
+                <skill name="Sleight" score="1"/>
+                <skill name="Stealth" score="3"/>
+                <skill name="Throw" score="1"/>
+            </group>
+
+            <group name="Misc" type="skills">
+                <skill name="Survival" score="4"/>
+                <skill name="Swim" score="2"/>
+            </group>
+        </skills>
+
+        <combat>
+            <combatstyle style="Bite and claw" skill="Brawl">
+                <primary>None</primary>
+                <initiative attribute="agility" bonus="+4"/>
+                <attack attribute="agility" bonus="+5"/>
+                <defence attribute="agility" bonus="+0"/>
+                <damage type="split" bonus="+1"/>
+            </combatstyle>
+
+            <armourstyle style="Base"/>
+
+            <armourstyle style="Natural">
+                <armour name="Fur" protection="+1"/>
+                <armour name="Hide" protection="+1"/>
+            </armourstyle>
+        </combat>
+
+        <passions>
+            <passion name="Bravery" score="2"/>
+            <passion name="Ego" score="2"/>
+            <passion name="Restraint" score="2"/>
+            <passion name="Temperence" score="2"/>
+        </passions>
+
+        <advantages>
+            <advantage name="Animal"/>
+            <advantage name="Acute sense of smell" score="+1"/>
+            <advantage name="Acute hearing" score="+1"/>
+            <advantage name="Poor eyesight" score="-1"/>
+            <advantage name="Good climber" score="+1"/>
+        </advantages>
+    </beast>
+
+
+</bestiary>

@@ -4,8 +4,8 @@
     type="text/xsl"?>
 
 <!--
-    $Revision: 1.1 $
-    $Date: 2003-08-09 10:10:01 $
+    $Revision: 1.2 $
+    $Date: 2003-11-15 21:05:19 $
 
     Bestiary containing information on bears.
 -->
@@ -33,8 +33,6 @@
                 Large omnivorous animals which can be dangerous
                 if provoked.
             </short>
-
-            <image href="graphics/bear.jpg"/>
 
             <training>
                 <para>
@@ -78,13 +76,34 @@
             <scale length="2" width="1"/>
 
             <physical>
-                Black bears are omnivores, though eat more plants than
-                meat.
+                <para>
+                    The difference between black and brown bears is more
+                    one of size than colour, though black bears do tend to
+                    be darker - normally black or dark brown. Black bears
+                    are about 110cm tall at the shoulder, and 150cm long,
+                    and weigh about 135kg. Females are much smaller, being
+                    almost half this weight.
+                </para>
+
+                <para>
+                    Females will tend to have one point lower on both
+                    strength and size.
+                </para>
+
+                <para>
+                    Black bears can run quickly for short distances, and
+                    are good swimmers, being comfortable in the water.
+                    Such bears are also very good climbers, often climbing
+                    trees in quick bounds, and capable of dropping several
+                    metres without harm.
+                </para>
             </physical>
 
             <social>
-                Bears are generally only dangerous if surprised, though
-                mothers can be very protective of their young.
+                <para>
+                    Bears are generally only dangerous if surprised, though
+                    mothers can be very protective of their young.
+                </para>
             </social>
         </description>
 
@@ -101,27 +120,24 @@
 
         <skills>
             <group name="Talents" type="talents">
-                <skill name="Athletics" score="2"/>
+                <skill name="Athletics" score="6"/>
                 <skill name="Awareness" score="4"/>
                 <skill name="Brawl" score="4"/>
                 <skill name="Charm" score="1"/>
                 <skill name="Guile" score="0"/>
                 <skill name="Sleight" score="1"/>
-                <skill name="Stealth" score="4"/>
+                <skill name="Stealth" score="5"/>
                 <skill name="Throw" score="2"/>
             </group>
 
             <group name="Misc" type="skills">
                 <skill name="Survival" score="4"/>
                 <skill name="Tracking" score="1"/>
-                <skill name="Swim" score="4"/>
+                <skill name="Swim" score="5"/>
             </group>
         </skills>
 
         <combat>
-            <weaponlist href="/usr/share/web/xml/yags/harn/weapons.xml"/>
-            <armourlist href="/usr/share/web/xml/yags/harn/armour.xml"/>
-
             <combatstyle style="Bite and claw" skill="Brawl">
                 <primary>None</primary>
                 <initiative attribute="agility" bonus="+4"/>
@@ -148,6 +164,9 @@
         <advantages>
             <advantage name="Animal"/>
             <advantage name="Acute sense of smell" score="+1"/>
+            <advantage name="Acute hearing" score="+1"/>
+            <advantage name="Poor eyesight" score="-1"/>
+            <advantage name="Good climber" score="+1"/>
         </advantages>
     </beast>
 
@@ -187,7 +206,8 @@
                 <para>
                     Brown bears are omnivores, though eat more
                     plants than meat. They can weigh up to 300kg
-                    or so.
+                    or more. They have light fur on the head and
+                    shoulders, with a darker body and lefs.
                 </para>
             </physical>
 
@@ -214,7 +234,7 @@
 
         <skills>
             <group name="Talents" type="talents">
-                <skill name="Athletics" score="2"/>
+                <skill name="Athletics" score="3"/>
                 <skill name="Awareness" score="4"/>
                 <skill name="Brawl" score="4"/>
                 <skill name="Charm" score="1"/>
@@ -232,8 +252,6 @@
         </skills>
 
         <combat>
-            <weaponlist href="/usr/share/web/xml/yags/harn/weapons.xml"/>
-            <armourlist href="/usr/share/web/xml/yags/harn/armour.xml"/>
 
             <combatstyle style="Bite and claw" skill="Brawl">
                 <initiative attribute="agility" bonus="+4"/>
@@ -260,11 +278,12 @@
         <advantages>
             <advantage name="Animal"/>
             <advantage name="Acute sense of smell" score="+1"/>
+            <advantage name="Acute hearing" score="+1"/>
         </advantages>
     </beast>
-    
 
-    
+
+
     <!-- Cave Bear -->
     <beast name="Bear, Cave">
         <information>
