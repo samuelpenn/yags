@@ -3,8 +3,8 @@
 <!--
      Edges and flaws
 
-     $Revision: 1.8 $
-     $Date: 2003-05-14 21:22:32 $
+     $Revision: 1.9 $
+     $Date: 2003-05-16 21:00:38 $
  -->
 
 <advantages>
@@ -176,38 +176,30 @@
         </description>
     </advantage>
 
-    <advantage name="Resistant to disease" type="edge">
+    <advantage name="Strong health" type="edge">
         <cost points="+2"/>
         <genre>Common</genre>
         <description>
-            Gain a bonus to all rolls to resist disease.
+            The character has a strong immune system, and has a hardy
+            constitution. Strong health gives a bonus when resisting
+            both poisons and disease.
         </description>
         <forbiddon>Weak health</forbiddon>
     </advantage>
-
-    <advantage name="Resistant to poison" type="edge">
-        <cost points="+3"/>
-        <genre>Common</genre>
-        <description>
-            Gain a bonus to all rolls to resist poison.
-        </description>
-        <forbiddon>Weak health</forbiddon>
-    </advantage>
-
 
     <advantage name="Situational awareness" type="edge">
-        <cost points="+4"/>
+        <cost points="+3"/>
         <genre>Common</genre>
         <description>
             You have a keen sense of where you are, and probably
             more importantly, where everyone else is. Gain a bonus
-            to awareness rolls in combat situations.
+            to awareness rolls in combat or other situtions which
+            could be considered confusing.
         </description>
     </advantage>
 
-
     <advantage name="Sure footed" type="edge">
-        <cost points="+4"/>
+        <cost points="+2"/>
         <description>
             The character has a good sense of balance, and gets a
             bonus to athletic rolls when balancing on narrow ledges,
@@ -233,7 +225,7 @@
 
 
     <advantage name="Animal enmity" type="flaw">
-        <cost points="-3"/>
+        <cost points="-2"/>
         <genre>Common</genre>
         <description>
             Animals hate the character. Cats will scratch and dogs
@@ -246,11 +238,12 @@
 
 
     <advantage name="Big mouth" type="flaw">
-        <cost points="-4"/>
+        <cost points="-3"/>
         <genre>Common</genre>
         <description>
             The character suffers a penalty to social interaction
-            rolls when subtlety is required.
+            rolls when subtlety is required, such as charm or
+            etiquette.
         </description>
     </advantage>
 
@@ -268,7 +261,7 @@
 
 
     <advantage name="Gullible" type="flaw">
-        <cost points="-5"/>
+        <cost points="-3"/>
         <genre>Common</genre>
         <description>
             This gives a penalty to the character's guile skill to
@@ -282,14 +275,16 @@
         <cost points="-3"/>
         <genre>Common</genre>
         <description>
-            This gives a penalty to all rolls to wake up.
+            This gives a penalty to perception rolls when asleep.
+            Normally such rolls are halved when asleep - this makes it
+            even harder to be wakened.
         </description>
         <forbiddon>Light sleeper</forbiddon>
     </advantage>
 
 
     <advantage name="Inept student" type="flaw">
-        <cost points="-6"/>
+        <cost points="-4"/>
         <genre>Common</genre>
         <description>
             When studying either with a book, or under a teacher,
@@ -299,7 +294,7 @@
 
 
     <advantage name="Invalid" type="flaw">
-        <cost points="-5"/>
+        <cost points="-4"/>
         <genre>Common</genre>
         <description>
             Gain a penalty to healing rolls to recover from wounds,
@@ -310,7 +305,7 @@
 
 
     <advantage name="Lame" type="flaw">
-        <cost points="-5"/>
+        <cost points="-3"/>
         <genre>Common</genre>
         <description>
             The character has a penalty to athletics rolls, and to
@@ -324,19 +319,21 @@
         <genre>Common</genre>
         <description>
             A penalty to stamina rolls to resist the effects of
-            drunkenness.
+            drunkenness or similar drugs.
         </description>
         <forbiddon>Heavy drinker</forbiddon>
     </advantage>
 
 
     <advantage name="Non-combatant" type="flaw">
-        <cost points="-7"/>
+        <cost points="-4"/>
         <genre>Common</genre>
         <description>
             The character suffers a penalty to all combat skills
             if using them 'for real' (as opposed to say an archery
-            contest).
+            contest). The character may be highly skilled with weapons,
+            but they have never used them in anger - only ever as a
+            competitive sport.
         </description>
         <forbiddon>Combat reflexes</forbiddon>
     </advantage>
@@ -354,19 +351,19 @@
 
 
     <advantage name="Obese" type="flaw">
-        <cost points="-5"/>
+        <cost points="-4"/>
         <genre>Common</genre>
         <description>
             The character is greatly overweight, and suffers a penalty to
             athletics, brawl and stealth rolls, as well as stamina for
             purposes of fatigue (including the number of fatigue levels
-            the character has).
+            the character has) and strength for purposes of encumbrence.
         </description>
     </advantage>
 
 
     <advantage name="Poor sense of balance" type="flaw">
-        <cost points="-3"/>
+        <cost points="-2"/>
         <genre>Common</genre>
         <description>
             The character suffers a penalty to rolls to remain
@@ -377,7 +374,7 @@
 
 
     <advantage name="Poor vision" type="flaw">
-        <cost points="-4"/>
+        <cost points="-3"/>
         <genre>Common</genre>
         <description>
             The character has very poor eyesight, and suffers a
@@ -388,7 +385,7 @@
     </advantage>
 
     <advantage name="Poor hearing" type="flaw">
-        <cost points="-4"/>
+        <cost points="-3"/>
         <genre>Common</genre>
         <description>
             The character has very poor hearing, and suffers a
@@ -400,7 +397,7 @@
 
 
     <advantage name="Repellent" type="flaw">
-        <cost points="-5"/>
+        <cost points="-3"/>
         <genre>Common</genre>
         <description>
             The character is for some reason repellent to members of
@@ -408,9 +405,9 @@
             otherwise charm a member of the opposite sex is at penalty.
         </description>
     </advantage>
-        
+
     <advantage name="Ugly" type="disadvantage">
-        <cost points="-2"/>
+        <cost points="-3"/>
         <description>
             The character is not attractive to look at. Normally, it
             will not have much effect, though if he is trying to impress
@@ -422,29 +419,30 @@
     </advantage>
 
     <advantage name="Short attention span" type="flaw">
-        <cost points="-4"/>
+        <cost points="-3"/>
         <genre>Common</genre>
         <description>
             The character is easily bored, and suffers a penalty to
             perception when on guard duty, or performing other long
-            term, boring actions, such as steering a boat.
+            term, boring actions, such as steering a boat. May apply
+            to other skills (e.g. Boating) in these situations as well.
         </description>
     </advantage>
 
 
     <advantage name="Shy" type="flaw">
-        <cost points="-4"/>
+        <cost points="-3"/>
         <genre>Common</genre>
         <description>
             The character suffers a penalty to social skills around
             strangers, and possibly to other skills if people are
-            watching.
+            watching and taking an interest.
         </description>
     </advantage>
 
 
     <advantage name="Terrible liar" type="flaw">
-        <cost points="-5"/>
+        <cost points="-3"/>
         <genre>Common</genre>
         <description>
             The character suffers a penalty to guile when trying to
@@ -454,7 +452,7 @@
 
 
     <advantage name="Uninspiring" type="flaw">
-        <cost points="-4"/>
+        <cost points="-2"/>
         <genre>Common</genre>
         <description>
             The character has an  uninspiring personality, to the
@@ -465,14 +463,13 @@
 
 
     <advantage name="Weak health" type="flaw">
-        <cost points="-4"/>
+        <cost points="-3"/>
         <genre>Common</genre>
         <description>
             The character's immune system is not able to cope well
             with poison or disease, and the character suffers a
             penalty when trying to resist such.
         </description>
-        <forbiddon>Resistant to disease</forbiddon>
-        <forbiddon>Resistant to poison</forbiddon>
+        <forbiddon>Strong health</forbiddon>
     </advantage>
 </advantages>
