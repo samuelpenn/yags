@@ -14,11 +14,6 @@
             against heat or flame/ including for soak and the effect level
             of spells.
         </para>
-
-        <para>
-            When heating objects, use the following chart.
-        </para>
-
     </preface>
 
     <spell name="Ignite" level="0" type="fire">
@@ -137,7 +132,6 @@
                 <valueLabel>Temperature</valueLabel>
                 <targetLabel>Level</targetLabel>
 
-                </item>
                 <item target="+0" value="Comfortable.">
                     A reasonable, comfortable temperature.
                 </item>
@@ -234,6 +228,8 @@
         <duration>Concentration</duration>
         <target>+3/size</target>
 
+        <prerequisite>Ignite</prerequisite>
+
         <description>
             <para>
                 Causes an existing fire to take on a specific shape,
@@ -321,25 +317,27 @@
         scrying type cantrips are part of this thread.
      -->
 
-    <spell name="Alertness" level="3" type="fire">
+    <spell name="Alertness" level="1" type="fire">
         <range>-5/m</range>
         <duration>Concentration</duration>
         <target>-5/extra target</target>
         <effect>+1 initiative/1</effect>
-        <resist>Ego</resist>
-
+        
         <prerequisite>Ignite</prerequisite>
+        
+        <summary>Increases perception and initiative.</summary>
 
         <description>
             <para>
                 Enables the targets to react quicker, giving a bonus to
                 initiative. Each level of effect gives a +1 bonus to the
-                target's initiative rolls whilst the spell is in effect.
+                target's initiative and awareness rolls whilst the cantrip
+                is in effect.
             </para>
         </description>
     </spell>
 
-    <spell name="Quicken" level="5" type="fire">
+    <spell name="Quicken" level="3" type="fire">
         <range>-5/m</range>
         <duration>Concentration</duration>
         <target>-5/extra target</target>
@@ -355,7 +353,7 @@
         </description>
     </spell>
 
-    <spell name="Haste" level="7" type="fire">
+    <spell name="Haste" level="5" type="fire">
         <range>Self</range>
         <duration>Concentration</duration>
         <effect>1 + 1/10</effect>
@@ -455,34 +453,28 @@
     </spell>
 
     <spell name="Burning Motes" level="3" type="fire">
-        <range>-3/m</range>
+        <range>-1 / 1m</range>
         <duration>Momentary</duration>
-        <target>-5/extra target</target>
-        <effect>-1/1</effect>
-        <resist>Stamina</resist>
+        <target>+5/extra target</target>
+        <effect>+2 damage/1</effect>
+        <resist>Soak</resist>
 
         <prerequisite>Flame</prerequisite>
+        
+        <summary>Create a swarm of burning sparks.</summary>
 
         <description>
             <para>
                 Creates a swarm of bright burning sparks to appear around
-                the caster, and to fly towards the designated targets,
-                blinding and confusing them, causing them to suffer a
-                penalty to all actions equal to the effect of the spell.
-                The motes do not exist for long, and the penalty halves
-                at the end of the following round, and vanishes completely
-                at the end of the round after that.
-            </para>
-
-            <para>
-                The motes may optionally also do fire damage equal to half
-                the effect. All such damage is stun damage.
+                the caster, and to fly towards the designated targets.
+                Targets suffer stun damage equal to the effect of the
+                cantrip, which can be resisted with Soak.
             </para>
         </description>
     </spell>
 
     <spell name="Flaming Spear" level="5" type="fire">
-        <range>-1/m</range>
+        <range>-1 / 2m</range>
         <duration>Momentary</duration>
         <effect>+1 damage/1</effect>
         <resist>Soak</resist>
@@ -573,69 +565,4 @@
             </para>
         </description>
     </spell>
-
-    <spell name="Whip of Flame" level="7" type="fire">
-        <range>-5/m</range>
-        <duration>Concentration</duration>
-        <effect>+1 damage/1</effect>
-        <resist>Soak</resist>
-
-        <prerequisite>Flaming Spear</prerequisite>
-
-        <description>
-            <para>
-                Creates a whip of flame which may be used to strike as
-                a melee weapon.
-            </para>
-        </description>
-    </spell>
-
-
-
-
-    <spell name="Boiling Rain" level="9" type="fire">
-        <prerequisite>Whither</prerequisite>
-
-        <description>
-            <para>
-                Rain in a large area is changed to boiling water.
-            </para>
-        </description>
-    </spell>
-
-    <spell name="Wild Fire" level="3" type="fire">
-        <range>-1/5m</range>
-        <duration>Momentary</duration>
-        <target>-3/extra</target>
-        <effect>+1/1</effect>
-
-        <prerequisite>Ignite</prerequisite>
-
-        <description>
-            <para>
-                Causes designated fires to burst and flare up randomly.
-                They may ignite nearby combustubles, and the extra light
-                will probably ruin people's night vision.
-            </para>
-        </description>
-    </spell>
-
-    <spell name="Fire Burst" level="5">
-        <range>-1/5m</range>
-        <duration>Momentary</duration>
-        <target>-5/extra</target>
-        <effect>+1/1</effect>
-        <resist>Soak</resist>
-
-        <prerequisite>Wild Fire</prerequisite>
-
-        <description>
-            <para>
-                Causes fires to burst in a fiery explosion which engulfs
-                one nearby target. The fire does damage as per the effect
-                of the spell.
-            </para>
-        </description>
-    </spell>
-
 </grimoire>
