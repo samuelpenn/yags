@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl" type="text/xsl"?>
+
+<article
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="yagsbook.xsd">
+
+
+    <header>
+        <title>Equipment</title>
+        <tagline>Yags</tagline>
+
+        <summary>
+            Full equipment lists.
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@bifrost.demon.co.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2004-08-30 21:51:14 $</date>
+        </cvsinfo>
+
+        <license>
+            <year>2004</year>
+            <holder>Samuel Penn</holder>
+            <url>http://www.gnu.org/licenses/fdl.html</url>
+            <text>
+                Permission is granted to copy, distribute and/or
+                modify this document under the terms of the GNU
+                Free Documentation License, Version 1.1; with no
+                invariant sections, no Front-Cover Texts, and with
+                no Back-Cover Texts.
+            </text>
+        </license>
+
+        <style name="combat"/>
+    </header>
+
+    <body>
+        <sect1>
+            <title>Weapons</title>
+
+            <import-weaponlist href="xml/arms.yags" 
+                                importance="1" 
+                                style="list">
+                <category>all</category>
+            </import-weaponlist>
+            <!--
+            <import-weaponinfo href="xml/arms.yags" />
+            -->
+        </sect1>
+
+        <sect1>
+            <title>Armour</title>
+
+
+            <import-armourlist href="xml/arms.yags"/>
+        </sect1>
+    </body>
+</article>
