@@ -17,8 +17,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.16 $</version>
-            <date>$Date: 2003-12-29 12:21:17 $</date>
+            <version>$Revision: 1.17 $</version>
+            <date>$Date: 2005-01-16 20:23:43 $</date>
         </cvsinfo>
 
         <license>
@@ -104,42 +104,45 @@
                 the character's passions are at a level of four.
             </para>
 
-            <character name="The Basic Character" display="template">
-                <attributes size="5" soak="12">
-                    <attribute name="strength" score="3"/>
-                    <attribute name="stamina" score="3"/>
-                    <attribute name="agility" score="3"/>
-                    <attribute name="dexterity" score="3"/>
-                    <attribute name="perception" score="3"/>
-                    <attribute name="intelligence" score="3"/>
-                    <attribute name="charisma" score="3"/>
-                    <attribute name="will" score="3"/>
-                </attributes>
-
-                <skills>
-                    <group name="Talents" type="talents">
-                        <skill name="Athletics" score="2"/>
-                        <skill name="Awareness" score="2"/>
-                        <skill name="Brawl" score="2"/>
-                        <skill name="Charm" score="2"/>
-                        <skill name="Guile" score="2"/>
-                        <skill name="Sleight" score="2"/>
-                        <skill name="Stealth" score="2"/>
-                        <skill name="Throw" score="2"/>
-                    </group>
-
-                    <group name="Knowledges" type="skills">
-                        <skill name="Speak own language" score="4"/>
-                        <skill name="Area lore" score="4"/>
-                    </group>
-                </skills>
-
-                <passions>
-                    <passion name="Bravery" score="4"/>
-                    <passion name="Ego" score="4"/>
-                    <passion name="Restraint" score="4"/>
-                    <passion name="Temperence" score="4"/>
-                </passions>
+            <character name="The Basic Character">
+                <description/>
+                <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+                    <attributes size="5" soak="12">
+                        <attribute name="strength" score="3"/>
+                        <attribute name="stamina" score="3"/>
+                        <attribute name="agility" score="3"/>
+                        <attribute name="dexterity" score="3"/>
+                        <attribute name="perception" score="3"/>
+                        <attribute name="intelligence" score="3"/>
+                        <attribute name="charisma" score="3"/>
+                        <attribute name="will" score="3"/>
+                    </attributes>
+    
+                    <skills>
+                        <group name="Talents" type="talents">
+                            <skill name="Athletics" score="2"/>
+                            <skill name="Awareness" score="2"/>
+                            <skill name="Brawl" score="2"/>
+                            <skill name="Charm" score="2"/>
+                            <skill name="Guile" score="2"/>
+                            <skill name="Sleight" score="2"/>
+                            <skill name="Stealth" score="2"/>
+                            <skill name="Throw" score="2"/>
+                        </group>
+    
+                        <group name="Knowledges" type="skills">
+                            <skill name="Speak own language" score="4"/>
+                            <skill name="Area lore" score="4"/>
+                        </group>
+                    </skills>
+    
+                    <passions>
+                        <passion name="Bravery" score="4"/>
+                        <passion name="Ego" score="4"/>
+                        <passion name="Restraint" score="4"/>
+                        <passion name="Temperence" score="4"/>
+                    </passions>
+                </statistics>
             </character>
 
             <para>
@@ -182,7 +185,7 @@
                         of campaign.
                     </para>
 
-                    <import-character href="packages/lowtech.yags" mode="template"/>
+                    <import-characters href="packages/lowtech.yags"/>
                 </sect3>
 
             </sect2>
