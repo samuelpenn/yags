@@ -1,922 +1,1145 @@
 <?xml version="1.0"?>
-<?xml-stylesheet href="/xsl/fo/yagsbook.xsl" type="text/xsl"?>
-<article>
+<?xml-stylesheet href="/usr/share/web/xsl/html/yagsbook/yagsbook.xsl" type="text/xsl"?>
 
-<header>
-    <title>Introduction</title>
-    <tagline>Yags</tagline>
-    <uri>yags/core/introduction</uri>
-    <format>System</format>
-    <author>
-        <firstname>Samuel</firstname>
-        <surname>Penn</surname>
-        <email>sam@bifrost.demon.co.uk</email>
-    </author>
-    
-    <referenceinfo>
-        <cvsversion>$Revision: 1.9 $</cvsversion>
-        <cvsdate>$Date: 2002-05-05 15:13:40 $</cvsdate>
-        <copyright>
+<article
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="yagsbook.xsd">
+
+    <header>
+        <title>Introduction</title>
+        <tagline>Yags</tagline>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@bifrost.demon.co.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.10 $</version>
+            <date>$Date: 2002-06-16 20:43:43 $</date>
+        </cvsinfo>
+        
+        <license>
             <year>2002</year>
             <holder>Samuel Penn</holder>
-            <licence>Copyright</licence>
-        </copyright>
-    </referenceinfo>
-
-    <displayscheme name="introduction">
-        <colour>orange</colour>
-        <darkcolour>#ffbb77</darkcolour>
-        <lightcolour>#ffddbb</lightcolour>
-    </displayscheme>
-</header>
-
-<sect1><title>Yags</title>
-
-<para>
-Yags is Another Game System, one that is meant to be generic
-and modular. Generic because it should be usuable with a
-number of different backgrounds and genres, and modular
-because the rules are designed to be pluggable and
-exchangable - it's not meant to be another GURPS, where
-one size fits all.
-</para>
-</sect1>
-
-<sect1><title>The Basic System</title>
-<para>
-This chapter gives a brief tour of the Yags system, explaining
-terminology, and giving a description of the basic conventions 
-used.
-</para>
-
-<sect2><title>Dice Conventions</title>
-<para>
-As with most role playing games, Yags uses dice as a means of
-randomly determining the outcome of many events. The only type 
-of die used is the d20.
-</para>
-<para>
-Normally, a die is used to determine success or failure when a 
-character (or creature) uses a skill or ability. The level of 
-their ability is found, and 1d20 is rolled and added to it.
-</para>
-
-<sect3><title>Fumbles</title>
-<para>
-A fumble normally occurs on an ability roll if the total die 
-roll is 1. Under some situations which warrant extra chances of 
-a fumble, a roll of 2 (or even higher) may cause a fumble to 
-occur. The number that constitutes a fumble is known as the
-fumble chance.
-</para>
-</sect3>
-
-<sect3><title>Taking care</title>
-<para>
-If desired, a character can be more careful when performing an action.
-If the situation is non-stressful, and the character has a chance to
-think about what they are doing and take their time, then the die roll
-is considered to be zero - but no fumble occurs. This allows a character
-to perform trivial actions with no chance of error.
-</para>
-</sect3>
-</sect2>
-
-<sect2><title>Ability Costs</title>
-<para>
-Attributes and skills, which are explained below, both
-progress in a similar way. Progression is 'bought' using
-points, both during character generation and later on with
-experience.
-</para>
-
-<para>
-<table>
-    <colspec colwidth="1cm"/>
-    <colspec colwidth="1cm"/>
-    <colspec colwidth="3.25cm"/>
-    <colspec colwidth="3.25cm"/>
-    <thead>
-        <row>
-            <entry>Score</entry>
-            <entry>Cost</entry>
-            <entry>Attribute</entry>
-            <entry>Skill</entry>
-        </row>
-    </thead>
-    <tbody>
-        <row>
-            <entry>0</entry><entry>0</entry>
-            <entry>No ability</entry>
-            <entry>No skill</entry>
-        </row>
-        <row>
-            <entry>1</entry><entry>1</entry>
-            <entry>Crippled</entry>
-            <entry>Rudimentary</entry>
-        </row>
-        <row>
-            <entry>2</entry><entry>3</entry>
-            <entry>Poor</entry>
-            <entry>Basic</entry>
-        </row>
-        <row>
-            <entry>3</entry><entry>6</entry>
-            <entry>Average</entry>
-            <entry>Competent</entry>
-        </row>
-        <row>
-            <entry>4</entry><entry>10</entry>
-            <entry>High</entry>
-            <entry>Professional level</entry>
-        </row>
-        <row>
-            <entry>5</entry><entry>15</entry>
-            <entry>Exceptional</entry>
-            <entry></entry>
-        </row>
-        <row>
-            <entry>6</entry><entry>21</entry>
-            <entry>Legendary</entry>
-            <entry>Seasoned</entry>
-        </row>
-        <row>
-            <entry>7</entry><entry>28</entry>
-            <entry>Mythical</entry>
-            <entry></entry>
-        </row>
-        <row>
-            <entry>8</entry><entry>36</entry>
-            <entry>-</entry>
-            <entry>Exceptional</entry>
-        </row>
-        <row>
-            <entry>9</entry><entry>45</entry>
-            <entry>-</entry>
-            <entry></entry>
-        </row>
-        <row>
-            <entry>10</entry><entry>55</entry>
-            <entry>-</entry>
-            <entry>Master</entry>
-        </row>
-        <row>
-            <entry>11</entry><entry>66</entry>
-            <entry>-</entry>
-            <entry></entry>
-        </row>
-        <row>
-            <entry>12</entry><entry>78</entry>
-            <entry>-</entry>
-            <entry></entry>
-        </row>
-        <row>
-            <entry>13</entry><entry>91</entry>
-            <entry>-</entry>
-            <entry>Legendary</entry>
-        </row>
-        <row>
-            <entry>14</entry><entry>105</entry>
-            <entry>-</entry>
-            <entry></entry>
-        </row>
-        <row>
-            <entry>15</entry><entry>120</entry>
-            <entry>-</entry>
-            <entry></entry>
-        </row>
-        <row>
-            <entry>16</entry><entry>136</entry>
-            <entry>-</entry>
-            <entry>Mythical</entry>
-        </row>
-    </tbody>
-</table>
-</para>
-</sect2>
-
-<sect2><title>Attributes</title>
-<para>
-Attributes are the basic defining characteristics of any character
-in Yags. There are eight attributes - strength, stamina, agility,
-dexterity, perception, intelligence, charisma and will - and
-all characters will have them at some level.
-</para>
-<para>
-An average value for any attribute for a human adult is considered
-to be three, and most people will have an attribute between two
-and four. The minimum value for a human is one, and the maximum
-for starting characters is five. Ultimately however, there is no
-limit to how high attributes can go, through anything above six
-will be legendary.
-</para>
-<para>
-An attribute of zero indicates that a creature has no ability in
-that area, and cannot even attempt tasks which would require it.
-No creature will ever have an attribute below zero, and humans
-never have attributes below one.
-</para>
-<para>
-Attributes can change over a character's life, and it is possible
-to improve attributes through training.
-</para>
-
-<sect3><title>Attribute Descriptions</title>
-
-<sect4><title>Strength</title>
-<para>
-The strength of a character is a measure of their physical
-toughness and ability to hurt, break and lift things. Strength is
-most often used in melee combat, where it is used to measure how
-damaging a blow is.
-</para>
-</sect4>
-
-<sect4><title>Stamina</title>
-<para>
-A character's stamina is a measure of their physical endurance,
-fitness and general ability to cope with fatigue and physical
-pain. Strength and agility will allow a character to run fast,
-but stamina is what keeps them running after everyone else has
-collapsed from exhaustion. Stamina is also used to stay alive and
-conscious when damage has been taken.
-</para>
-</sect4>
-
-<sect4><title>Agility</title>
-<para>
-Agility is how quick and agile a character is when performing
-acrobatic and athletic feats. An agile character will hit first
-in combat, and will be able to jump further and run faster than
-less agile characters. Agility is also used for general brawling,
-though not for melee and missile weapons.
-</para>
-</sect4>
-
-<sect4><title>Dexterity</title>
-<para>
-The dexterity of a character defines their hand-eye coordination,
-sleight-of-hand, and skill with melee weapons. Pick pockets and
-warriors need a good dexterity.
-</para>
-</sect4>
-
-<sect4><title>Perception</title>
-<para>
-Perception is a measure of a character's senses. Perceptive
-characters notice things that others will miss, making it a
-useful attribute for hunters, scouts and thieves. It is also
-used with social skills to detect emotions and lies in other
-people.
-</para>
-</sect4>
-
-<sect4><title>Intelligence</title>
-<para>
-A character's intelligence is their reasoning, common sense,
-memory and intuition. It is not their knowledge, since this
-comes from skills, but an intelligent character will be
-able to better use what they know by applying it to new
-situations (and also by remembering what they know better).
-</para>
-</sect4>
-
-<sect4><title>Charisma</title>
-<para>
-How charismatic a character is defines how others will
-relate to them. A very charismatic character will find
-others helpful, friendly, and generally well disposed
-towards them. An uncharismatic character will make only
-enemies. Charisma is not a measure of physical beauty.
-It is however, a measure of how a character sounds, so a
-charismatic character will tend to have a pleasant voice.
-</para>
-</sect4>
-
-<sect4><title>Will</title>
-<para>
-A character's will is their strength of mind, general
-stubbornness and sense of purpose. A strong willed
-person will know what they want, and who they are. They
-will be in control of their actions, not often allowing
-animal passions to get in the way. A low willed person
-will be more governed by the desires of the moment, often
-giving in to passion even when such is against their
-better judgement.
-</para>
-</sect4>
-
-<sect4><title>Size</title>
-<para>
-Characters and creatures also have a size attribute,
-which is a sort of pseudo-attribute, being treated
-differently to the other eight. The majority of adult
-humans will have a size of 5. Exceptionally large or
-small humans may have a size of 6 or 4 respectively.
-</para>
-
-<para>
-The size attribute affects the amount of damage a
-creature can sustain (the number of body levels it has),
-and a few other combat statistics. Generally, it can be
-assumed to be 5 for most human characters.
-</para>
-</sect4>
-</sect3>
-
-<sect3><title>Attributes in the Game World</title>
-<para>
-The vast majority of humans will have an average attribute,
-with a score of 3. A simple randomisation is that an NPC
-has an attribute of 3, unless a 1 or a 20 is rolled on a d20.
-On a 1, the attribute is a 2, whilst on a 20, it is a 4.
-This means the 'average' score accounts for about 90% of the
-population.
-</para>
-
-<para>
-People with above average attributes will tend to be good at
-particular things, so if they had an opportunity to demonstrate
-this, they have a good chance of being in a profession which
-can make use of their abilities.
-</para>
-</sect3>
-
-</sect2>
-
-<sect2><title>Skills</title>
-<para>
-A skill is something which can be learnt, and can only
-be gained with experience and training. Unless otherwise
-specified during character generation, all skills
-default to a score of zero.
-</para>
-
-<para>
-When a skill is used, it is multiplied with a given 
-attribute, to give the character's final ability score. 
-Generally, neither attributes nor skills are used by 
-themselves, they are always multiplied together first. 
-There are some exceptions though, where the attribute 
-is used by itself, multiply its value by four.
-</para>
-
-<para>
-To make a skill check, the character's ability score is 
-found, and 1d20 is rolled and added to it.
-</para>
-
-<para>
-A skill of four is considered to be professional level, 
-and someone with an average attribute of three and a 
-skill at four would be able to accomplish moderate tasks 
-with a good chance of success.
-</para>
-
-<sect3><title>Example Skill Levels</title>
-
-<sect4><title>Unfamiliar (0)</title>
-<para>
-The character has no training in the skill, 
-and has no knowledge about how to solve tasks requiring the 
-skill.
-</para>
-</sect4>
-
-<sect4><title>Minimal (1)</title>
-<para>
-The character has some basic knowledge of the 
-skill, but generally what ability they do have is still 
-dwarfed by blind luck.
-</para>
-</sect4>
-
-<sect4><title>Basic (2)</title>
-<para>
-The character has some basic knowledge of the 
-skill, and has used it on a regular basis. They can 'get by', 
-and have a very good chance of completing simple tasks 
-successfully.
-</para>
-</sect4>
-
-<sect4><title>Competent (3)</title>
-<para>
-The character should be able to succeed in tasks 
-of moderate difficulty a good proportion of the time, and easy 
-tasks should pose no problem.
-</para>
-</sect4>
-
-<sect4><title>Professional (4-5)</title>
-<para>
-The character is considered to be of 
-professional skill, and will be suitable for entering into 
-a career involving this skill. Many people in jobs which 
-don't tax them a great deal will not exceed this level of 
-skill. A village blacksmith, who spends his time making 
-horseshoes and nails will not know much more after twenty 
-years than he did out of apprenticeship. A warrior, who's 
-very survival depends on his skill with the sword, and who 
-practises every day against those of similar skill, may 
-will exceed this level in a couple of years.
-</para>
-</sect4>
-
-<sect4><title>Seasoned (6-7)</title>
-<para>
-The character has used the skill extensively, 
-and has much practical experience as well as theoretical 
-knowledge. This is the cap for people who aren't stretching 
-their skill to its limits. Many veteran warriors will have 
-weapon skills this high. Craftsmen in large towns, who are 
-competing against each other for custom with the quality of 
-their work may well equal or exceed this level.
-</para>
-</sect4>
-
-<sect4><title>Exceptional (8-9)</title>
-<para>
-People with skills of this caliber will
-be rare, though not unheard of. There will be a few elite groups 
-of people this skilled,  such as the huscarl of a major noble, 
-but they will not be many. Generally, it is recommended that this
-is the maximum level of skill for nameless NPCs. If a group really
-does need to be elite for some reason, giving them high attributes
-and better equipment should be investigated before giving them a
-skill in double digits.
-</para>
-</sect4>
-
-<sect4><title>Master (10-12)</title>
-<para>
-Those who achieve this level of skill will go 
-down in history as master's of their craft. Such people will be 
-very rare, and not randomly encountered.
-</para>
-</sect4>
-
-<sect4><title>Legendary (13-15)</title>
-<para>
-Only the very best, with 
-extreme dedication to go with it, will achieve this level of skill.
-</para>
-</sect4>
-
-<sect4><title>Mythical (16+)</title>
-<para>
-This is considered the limit of human achievement.
-Beyond Mythical. There is nothing in place which prevents 
-skills of this magnitude, but they must be treated with a 
-great deal of care.
-</para>
-</sect4>
-</sect3>
-
-<sect3><title>Skill Difficulties</title>
-<para>
-When making an ability check, there are some common 
-difficulty levels, which are described in the table 
-below.
-</para>
-
-<para>
-<table><title>Task Difficulties</title>
-    <colspec colwidth="6cm"/>
-    <colspec colwidth="1cm"/>
-    <thead>
-        <row>
-            <entry>Type of task</entry>
-            <entry>Target</entry>
-        </row>
-    </thead>
-    <tbody>
-        <row>
-            <entry>Very easy.</entry>
-            <entry>10</entry>
-        </row>
-        <row>
-            <entry>Easy.</entry>
-            <entry>15</entry>
-        </row>
-        <row>
-            <entry>Moderate.</entry>
-            <entry>20</entry>
-        </row>
-        <row>
-            <entry>Hard.</entry>
-            <entry>25</entry>
-        </row>
-        <row>
-            <entry>Difficult.</entry>
-            <entry>30</entry>
-        </row>
-        <row>
-            <entry>Very difficult.</entry>
-            <entry>40</entry>
-        </row>
-        <row>
-            <entry>Sheer folly.</entry>
-            <entry>50</entry>
-        </row>
-        <row>
-            <entry>Absurd.</entry>
-            <entry>60</entry>
-        </row>
-    </tbody>
-</table>
-</para>
-
-<para>
-Tasks above very difficult will be very rare, and often 
-because of less than perfect conditions, rather than the 
-nature of the task itself.
-</para>
-</sect3>
-</sect2>
-</sect1>
-
-<sect1 status="alpha"><title>Passions (alpha)</title>
-
-<para>
-This section is currently optional, and under development. It totally
-contradicts the rules on passions in the Advantages section which
-follows.
-</para>
-
-<para>
-Passions are a measure of a character's emotional traits, and to some
-extent govern how the character acts in certain situations. Representing
-such things with a game mechanic does mean that some control is taken
-out of the hands of the player, and put into a die roll. However,
-interpretation of the die roll is always up to the player, and further,
-there are situations where character's would not do what a player
-might want them to do. For example, facing some nameless terror could
-instill fear (magical or natural) in a person. A game mechanic gives
-the player the choice to design a character who is more likely to
-resist such fears.
-</para>
-
-<para>
-Passions are represented by three traits. These are treated like skills,
-in that they can be improved after character generation. Each trait
-represents a character's control over that aspect of their personality.
-</para>
-
-<para>
-The three traits are Bravery, Ego, Restraint and Temperence. Each defaults
-to four, but can be purchased higher or lower with advantages and
-disadvantages.
-</para>
-
-<sect2><title>The Four Traits</title>
-
-<sect3><title>Bravery</title>
-<para>
-Bravery is a measure of a character's willingness to face danger,
-to do their duty when their instincts tell them to flee. Bravery
-does not mean that a character is stupid and won't flee when the
-cause is pointless, but turning your back on the enemy to run can
-often be worse than standing and fighting.
-</para>
-
-<para>
-Bravery checks are required when facing superior foes, when facing
-supernatural horror, or simply when going into a situation where
-danger is expected but unseen. Overcoming phobias also require a
-bravery check.
-</para>
-</sect3>
-
-<sect3><title>Ego</title>
-<para>
-Ego is a measure of a character's sense of self. It represents their
-ability to resist the influence of mind affecting drugs and magic.
-A high ego character is better able to stand up to anything which
-may change their state of mind, and as such may tend to appear
-close minded and arrogant to others.
-</para>
-</sect3>
-
-<sect3><title>Restraint</title>
-<para>
-Restraint is a measure of a character's ability to resist responding
-to a situation she might otherwise feel needs response. Taunts or
-insults can be used against those with low restraint to force them
-into a weaker position. Failing a restraint check means that the
-character gives in to her anger and hatred.
-</para>
-
-<para>
-Restraint checks may be required if a character is insulted, or if they
-see an opportunity to attack a hated foe for example. A compassionate
-character may be moved to aid another, even if it means giving up on
-an important quest, or putting themselves and their friends in danger.
-</para>
-</sect3>
-
-<sect3><title>Temperence</title>
-<para>
-Temperence is a measure of a character's strength of will against
-temptation, in particular that of physical pleasure. Resisting the
-seductive charms of a beautiful woman, the chance to indulge in
-heavy feasting and drinking, or the opportunity of quick riches
-because of bribes or otherwise requires a temperence check.
-</para>
-
-<para>
-Temperence covers a multitude of sins, and there are plenty of
-advantages and disadvantages which effect specific ones. A temperate
-character may be seen as staid and boring by his peers. The other
-extreme leads to a reputation of unreliability and gluttony.
-</para>
-</sect3>
-</sect2>
-
-
-<sect2><title>Passion Checks</title>
-
-<para>
-When a situation comes up which warrents a passion check, the passion
-trait is rolled with will, against a difficulty representative of the
-situation. Some guidelines as to assigning difficulties are given below.
-</para>
-
-<para>
-<variablelist>
-    <varlistentry>
-        <term>Very easy (10)</term>
-        <listitem>
-            Very few people would be tempted by this. A person would
-            need to be very weak willed, or very prone to that passion
-            in order to fail to resist.
-        </listitem>
-    </varlistentry>
-
-    <varlistentry>
-        <term>Easy (15)</term>
-        <listitem>
-            Few people would fall to this, though slightly below average
-            will, or slightly susceptible people would fail. A passion of
-            2, and normal will, gives about 55% chance of resisting.
-            Normal people have 90% chance of resisting.
-        </listitem>
-    </varlistentry>
-
-    <varlistentry>
-        <term>Moderate (20)</term>
-        <listitem>
-            Most people will find this a challenge to resist. A decent
-            bribe with little chance of come back, a dallience with no
-            obvious long term risk, or something that's somewhat
-            dangerous but with a good chance of success.
-        </listitem>
-    </varlistentry>
-        
-	<varlistentry>
-	    <term>Challenging (25)</term>
-	    <listitem>
-	        A bit worse than moderate, and 60% will fail.
-	    </listitem>
-	</varlistentry>
-
-    <varlistentry>
-        <term>Difficulty (30)</term>
-        <listitem>
-            Majority of people will fail this. Something with a good
-            chance of death with little benefit gained, a really good
-            sexual offer with little or no chance of their being long
-            term repurcussions (e.g. you're single), a lot of money
-            for doing nothing, or a chance to kick an enemy when he's
-            down really hard with no risk.
-        </listitem>
-    </varlistentry>
-</variablelist>
-</para>
-
-</sect2>
-
-<sect2><title>Minor Passions</title>
-<para>
-Minor passions are traits which kick in under certain circumstances.
-They might be love of a person, which helps the character stand his
-ground when defending them. It could be loyalty, hatred or a weakness
-for some vice.
-</para>
-
-<para>
-A minor passion is considered to be an advantage (see below), and
-modifies Will - for all intents they are edges and flaws. Most minor
-passions will have a value of +1 (or -1), with a few being +2 (or -2).
-In very rare cases, +3 (or -3) will be possible but this level cannot
-be purchased at character generation.
-</para>
-
-<para>
-For example, a character with love (family) as a minor passion would get
-a +1 to will if rolling a bravery check when defending them. If she had a
-will of 3, and a Bravery passion of 4, she would have an ability score of
-(3+1) x 4 or 16, rather than the normal 12.
-</para>
-
-</sect2>
-
-</sect1>
-
-
-
-
-
-<sect1><title>Advantages</title>
-
-<sect2><title>Passions</title>
-<para>
-Passions represent a character's stronger emotional 
-traits, and range from +0 (no passion of particular note)
- to +5 (this passion consumes the character's life).
-</para>
-<para>
-A character can have many passions, and are listed as
-being either of a general emotion (such as loyal, curious, 
-cowardly) or as being directed towards a particular ideal or 
-person (love of a friend, loyalty to a lord, hatred of a 
-religion).
-</para>
-<para>
-Passions of level +3 or higher are considered to be 
-advantages or disadvantages, and must be paid for.
-</para>
-
-<sect3><title>Limits on Passions</title>
-<para>
-Generally, a character can only have one passion of +4 or 
-higher, and if they have a passion of +5, then cannot 
-have any other passion greater than +2.
-</para>
-</sect3>
-
-<sect3><title>Roleplaying Passions</title>
-<para>
-Though they are given as a game mechanic, passions 
-should definitely be role played is the main area 
-in which they are meant to be used. Passions of level 
-+1 or +2 aren't greatly different from the norm (and 
-hence aren't worth any points). A +3 passion is quite 
-strong, and people who have been around you for some 
-time should come to notice it.
-</para>
-<para>
-Passions can be overcome by will checks. To resist
-seduction, overcome fear etc, a will check is made,
-modified by all suitable passions. Each passion adds
-or subtracts to the roll, at its value x 5.
-</para>
-
-<para>
-A +4 passion is beginning to consume your personality,
-and hence should come into play a lot of the time. 
-Someone with a loyalty of +4 to someone, will obey 
-that person without question except in situations 
-which are obviously suicidal or go directly against 
-the character's ethics. In these cases, the character 
-may pause to think before obeying (or not).
-</para>
-<para>
-A character with a +5 loyalty, will not even consider
-disobeying in the above cases, and if they do try to 
-resist, the difficulty modifier is at +25.
-</para>
-</sect3>
-
-<sect3><title>Making Passion Checks</title>
-<para>
-Sometimes, a character will be in a situation where their 
-passion will probably cause them to do something stupid, 
-and the player may very well decide that they want their 
-character to do something more sensible. In this case, a 
-passion check may be required.
-</para>
-
-<para>
-A passion check is rolled on straight will, with a modifier 
-for any suitable passions. The difficulty will range from 
-10 to 25.
-</para>
-
-<sect4><title>Examples of Bravery</title>
-<para>
-The following target difficulties are given for making
-bravery checks under dangerous situations. The results
-of a failed bravery check means that the character will
-not want to go ahead with the action. They may run or
-hesitate in combat for example.
-</para>
-
-<para>
-<table><title>Bravery Targets</title>
-    <colspec colwidth="6.5cm"/>
-    <colspec colwidth="1cm"/>
-    <thead>
-        <row>
-            <entry>Type of task</entry>
-            <entry>Target</entry>
-        </row>
-    </thead>
-    <tbody>
-        <row>
-            <entry>
-                Getting involved in a non-fatal fight with
-                good odds. Entering a place rumoured to be
-                haunted.
-            </entry>
-            <entry>10</entry>
-        </row>
-        <row>
-            <entry>
-                Getting involved in a non-fatal fight with
-                reasonable odds.
-            </entry>
-            <entry>15</entry>
-        </row>
-        <row>
-            <entry>Moderate.</entry>
-            <entry>20</entry>
-        </row>
-        <row>
-            <entry>Hard.</entry>
-            <entry>25</entry>
-        </row>
-        <row>
-            <entry>Difficult.</entry>
-            <entry>30</entry>
-        </row>
-        <row>
-            <entry>Very difficult.</entry>
-            <entry>40</entry>
-        </row>
-        <row>
-            <entry>Sheer folly.</entry>
-            <entry>50</entry>
-        </row>
-        <row>
-            <entry>Absurd.</entry>
-            <entry>60</entry>
-        </row>
-    </tbody>
-</table>
-</para>
-
-</sect4>
-
-</sect3>
-</sect2>
-
-<sect2><title>Advantages and Disadvantages</title>
-<para>
-These are special bonuses and penalties characters can take 
-to make them somewhat extraordinary compared to normal people.
-</para>
-<para>
-The cost of all advantages and disadvantages taken must 
-balance, and not all cost the same. The advantage of keen 
-hearing which gives a small bonus to listening rolls, doesn't 
-cost as much as the advantage of 'shape shifting' for example.
-</para>
-</sect2>
-</sect1>
-
-
-<sect1><title>Other Information</title>
-<para>
-Except where otherwise noted, the following standards can be 
-assumed to be used throughout these rules:
-</para>
-
-<sect2><title>Fractions</title>
-<para>
-All fractions are rounded to the nearest whole number, and 
-halves round up (away from zero).
-</para>
-</sect2>
-
-<sect2><title>Weights and Measures</title>
-<para>
-The metric system is used throughout these rules, with metres 
-and kilogrammes being the standard units of distance and weight.
-</para>
-</sect2>
-
-<sect2><title>Money</title>
-<para>
-Because this version of the game system is geared towards 
-fantasy, the monetary system used is based on Dark Ages 
-England - the base unit of money is the silver penny (d), 
-of which there are five to the shilling (s) and 240 to the 
-pound (l). A pound is equivalent to a pound of silver in 
-weight. Though there is no smaller denomination than the 
-penny, a penny coin can be cut into halves or quarters.
-</para>
-</sect2>
-</sect1>
-
+            <url>http://www.gnu.org/licenses/fdl.html</url>
+            <text>
+                Permission is granted to copy, distribute and/or
+                modify this document under the terms of the GNU
+                Free Documentation License, Version 1.1 or any
+                later version published by the Free Software
+                Foundation; with no invariant sections, with no
+                Front-Cover Texts, and with no Back-Cover Texts.
+                A copy of the license is included in the section
+                entitled "GNU Free Documentation License".
+            </text>
+        </license>
+
+        <style name="core"/>
+    </header>
+
+    <body>
+
+        <sect1>
+            <title>Yags</title>
+
+            <para>
+                Yags is Another Game System, one that is meant to
+                be generic and modular. Generic because it should
+                be usuable with a number of different backgrounds
+                and genres, and modular because the rules are
+                designed to be pluggable and exchangable - it's not
+                meant to be another <tm>GURPS</tm>, where one size
+                fits all.
+            </para>
+        </sect1>
+
+        <sect1>
+            <title>The Basic System</title>
+
+            <para>
+                This chapter gives a brief tour of the Yags system,
+                explaining terminology, and giving a description of
+                the basic conventions used.
+            </para>
+
+            <sect2>
+                <title>Dice Conventions</title>
+
+                <para>
+                    As with most role playing games, Yags uses dice
+                    as a means of randomly determining the outcome
+                    of many events. The only type of die used is the
+                    d20.
+                </para>
+
+                <para>
+                    Normally, a die is used to determine success
+                    or failure when a character (or creature) uses
+                    a skill or ability. The level of their ability
+                    is found, and 1d20 is rolled and added to it.
+                </para>
+
+                <sect3>
+                    <title>Fumbles</title>
+
+                    <para>
+                        A fumble normally occurs on an ability roll
+                        if the total die roll is 1. Under some
+                        situations which warrant extra chances of
+                        a fumble, a roll of 2 (or even higher) may
+                        cause a fumble to occur. The number that
+                        constitutes a fumble is known as the fumble
+                        chance.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Taking care</title>
+
+                    <para>
+                        If desired, a character can be more careful
+                        when performing an action. If the situation
+                        is non-stressful, and the character has a
+                        chance to think about what they are doing
+                        and take their time, then the die roll is
+                        considered to be zero - but no fumble occurs.
+                        This allows a character to perform trivial
+                        actions with no chance of error.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Ability Costs</title>
+
+                <para>
+                    Attributes and skills, which are explained
+                    below, both progress in a similar way.
+                    Progression is 'bought' using points, both
+                    during character generation and later on with
+                    experience.
+                </para>
+
+                <para>
+
+                    <table>
+                        <colspec colwidth="1cm"/>
+                        <colspec colwidth="1cm"/>
+                        <colspec colwidth="3.25cm"/>
+                        <colspec colwidth="3.25cm"/>
+                        <thead>
+                            <row>
+                                <entry>Score</entry>
+                                <entry>Cost</entry>
+                                <entry>Attribute</entry>
+                                <entry>Skill</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>0</entry><entry>0</entry>
+                                <entry>No ability</entry>
+                                <entry>No skill</entry>
+                            </row>
+                            <row>
+                                <entry>1</entry><entry>1</entry>
+                                <entry>Crippled</entry>
+                                <entry>Rudimentary</entry>
+                            </row>
+                            <row>
+                                <entry>2</entry><entry>3</entry>
+                                <entry>Poor</entry>
+                                <entry>Basic</entry>
+                            </row>
+                            <row>
+                                <entry>3</entry><entry>6</entry>
+                                <entry>Average</entry>
+                                <entry>Competent</entry>
+                            </row>
+                            <row>
+                                <entry>4</entry><entry>10</entry>
+                                <entry>High</entry>
+                                <entry>Professional level</entry>
+                            </row>
+                            <row>
+                                <entry>5</entry><entry>15</entry>
+                                <entry>Exceptional</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>6</entry><entry>21</entry>
+                                <entry>Legendary</entry>
+                                <entry>Seasoned</entry>
+                            </row>
+                            <row>
+                                <entry>7</entry><entry>28</entry>
+                                <entry>Mythical</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>8</entry><entry>36</entry>
+                                <entry>-</entry>
+                                <entry>Exceptional</entry>
+                            </row>
+                            <row>
+                                <entry>9</entry><entry>45</entry>
+                                <entry>-</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>10</entry><entry>55</entry>
+                                <entry>-</entry>
+                                <entry>Master</entry>
+                            </row>
+                            <row>
+                                <entry>11</entry><entry>66</entry>
+                                <entry>-</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>12</entry><entry>78</entry>
+                                <entry>-</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>13</entry><entry>91</entry>
+                                <entry>-</entry>
+                                <entry>Legendary</entry>
+                            </row>
+                            <row>
+                                <entry>14</entry><entry>105</entry>
+                                <entry>-</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>15</entry><entry>120</entry>
+                                <entry>-</entry>
+                                <entry></entry>
+                            </row>
+                            <row>
+                                <entry>16</entry><entry>136</entry>
+                                <entry>-</entry>
+                                <entry>Mythical</entry>
+                            </row>
+                        </tbody>
+                    </table>
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Attributes</title>
+
+                <para>
+                    Attributes are the basic defining
+                    characteristics of any character in Yags. There
+                    are eight attributes - strength, stamina, agility,
+                    dexterity, perception, intelligence, charisma and
+                    will - and all characters will have them at some
+                    level.
+                </para>
+
+                <para>
+                    An average value for any attribute for a human
+                    adult is considered to be three, and most people
+                    will have an attribute between two and four. The
+                    minimum value for a human is one, and the maximum
+                    for starting characters is five. Ultimately
+                    however, there is no limit to how high attributes
+                    can go, through anything above six will be
+                    legendary.
+                </para>
+
+                <para>
+                    An attribute of zero indicates that a creature has
+                    no ability in that area, and cannot even attempt
+                    tasks which would require it. No creature will
+                    ever have an attribute below zero, and humans
+                    never have attributes below one.
+                </para>
+
+                <para>
+                    Attributes can change over a character's life,
+                    and it is possible to improve attributes through
+                    training.
+                </para>
+
+                <sect3>
+                    <title>Attribute Descriptions</title>
+
+                    <sect4>
+                        <title>Strength</title>
+
+                        <para>
+                            The strength of a character is a measure
+                            of their physical toughness and ability
+                            to hurt, break and lift things. Strength
+                            is most often used in melee combat, where
+                            it is used to measure how damaging a blow
+                            is.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Stamina</title>
+
+                        <para>
+                            A character's stamina is a measure of
+                            their physical endurance, fitness and
+                            general ability to cope with fatigue
+                            and physical pain. Strength and agility
+                            will allow a character to run fast, but
+                            stamina is what keeps them running after
+                            everyone else has collapsed from
+                            exhaustion. Stamina is also used to stay
+                            alive and conscious when damage has been
+                            taken.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Agility</title>
+
+                        <para>
+                            Agility is how quick and agile a character
+                            is when performing acrobatic and athletic
+                            feats. An agile character will hit first
+                            in combat, and will be able to jump
+                            further and run faster than less agile
+                            characters. Agility is also used for
+                            general brawling, though not for melee
+                            and missile weapons.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Dexterity</title>
+
+                        <para>
+                            The dexterity of a character defines their
+                            hand-eye coordination, sleight-of-hand,
+                            and skill with melee weapons. Pick pockets
+                            and warriors need a good dexterity.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Perception</title>
+
+                        <para>
+                            Perception is a measure of a character's
+                            senses. Perceptive characters notice
+                            things that others will miss, making it a
+                            useful attribute for hunters, scouts and
+                            thieves. It is also used with social
+                            skills to detect emotions and lies in
+                            other people.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Intelligence</title>
+
+                        <para>
+                            A character's intelligence is their
+                            reasoning, common sense, memory and
+                            intuition. It is not their knowledge,
+                            since this comes from skills, but an
+                            intelligent character will be able to
+                            better use what they know by applying it
+                            to new situations (and also by
+                            remembering what they know better).
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Charisma</title>
+
+                        <para>
+                            How charismatic a character is defines
+                            how others will relate to them. A very
+                            charismatic character will find others
+                            helpful, friendly, and generally well
+                            disposed towards them. An uncharismatic
+                            character will make only enemies.
+                            Charisma is not a measure of physical
+                            beauty. It is however, a measure of how
+                            a character sounds, so a charismatic
+                            character will tend to have a pleasant
+                            voice.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Will</title>
+
+                        <para>
+                            A character's will is their strength of
+                            mind, general stubbornness and sense of
+                            purpose. A strong willed person will know
+                            what they want, and who they are. They
+                            will be in control of their actions, not
+                            often allowing animal passions to get in
+                            the way. A low willed person will be more
+                            governed by the desires of the moment,
+                            often giving in to passion even when such
+                            is against their better judgement.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Size</title>
+
+                        <para>
+                            Characters and creatures also have a size
+                            attribute, which is a sort of
+                            pseudo-attribute, being treated differently
+                            to the other eight. The majority of adult
+                            humans will have a size of 5. Exceptionally
+                            large or small humans may have a size of 6
+                            or 4 respectively.
+                        </para>
+
+                        <para>
+                            The size attribute affects the amount of
+                            damage a creature can sustain (the number
+                            of body levels it has), and a few other
+                            combat statistics. Generally, it can be
+                            assumed to be 5 for most human characters.
+                        </para>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Attributes in the Game World</title>
+
+                    <para>
+                        The vast majority of humans will have an
+                        average attribute, with a score of 3. A
+                        simple randomisation is that an NPChas an
+                        attribute of 3, unless a 1 or a 20 is rolled
+                        on a d20. On a 1, the attribute is a 2,
+                        whilst on a 20, it is a 4. This means the
+                        <em>average</em> score accounts for
+                        about 90% of the population.
+                    </para>
+
+                    <para>
+                        People with above average attributes will
+                        tend to be good at particular things, so if
+                        they had an opportunity to demonstrate this,
+                        they have a good chance of being in a
+                        profession which can make use of their
+                        abilities.
+                    </para>
+
+                    <sect4>
+                        <title>Statistics and Reality</title>
+
+                        <para>
+                            It may be tempting to extend the above
+                            model such that on a roll of 20, a
+                            further d20 roll is made, with a second
+                            20 respresenting an attribute of five.
+                        </para>
+
+                        <para>
+                            This would mean one in four hundred people
+                            have a particular attribute at five. Since
+                            there are eight attributes, one in fifty
+                            people are exceptional at <em>something
+                            </em>. Though this would be fine if limited
+                            to important NPCs, it is too high a chance
+                            to apply to the population at large.
+                        </para>
+
+                        <para>
+                            A final point, is that though five is the
+                            maximum a player character may begin at,
+                            extending beyond this is possible. Conan
+                            the Barbarian (as played by Arnold                       strength of six might be had by Arnold
+                            Schwarzenegger) would have a strength of
+                            six. Einstein or Feynman would have had an
+                            intelligence of six. Consider how rare
+                            people like this are in the real world
+                            before making them common in the game.
+                        </para>
+                    </sect4>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Skills</title>
+
+                <para>
+                    A skill is something which can be learnt, and
+                    can only be gained with experience and training.
+                    Unless otherwise specified during character
+                    generation, all skills default to a score of zero.
+                </para>
+
+                <para>
+                    When a skill is used, it is multiplied with a
+                    given attribute, to give the character's final
+                    ability score. Generally, neither attributes nor
+                    skills are used by themselves, they are always
+                    multiplied together first. There are some
+                    exceptions though, where the attribute is used by
+                    itself, multiply its value by four.
+                </para>
+
+                <para>
+                    To make a skill check, the character's ability
+                    score is found, and 1d20 is rolled and added to
+                    it.
+                </para>
+
+                <para>
+                    A skill of four is considered to be professional
+                    level, and someone with an average attribute of
+                    three and a skill at four would be able to
+                    accomplish moderate tasks with a good chance of
+                    success.
+                </para>
+
+                <sect3>
+                    <title>Example Skill Levels</title>
+
+                    <sect4>
+                        <title>Unfamiliar (0)</title>
+
+                        <para>
+                            The character has no training in the
+                            skill, and has no knowledge about how
+                            to solve tasks requiring the skill.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Minimal (1)</title>
+
+                        <para>
+                            The character has some basic knowledge of
+                            the skill, but generally what ability they
+                            do have is still dwarfed by blind luck.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Basic (2)</title>
+
+                        <para>
+                            The character has some basic knowledge of
+                            the skill, and has used it on a regular
+                            basis. They can 'get by', and have a very
+                            good chance of completing simple tasks
+                            successfully.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Competent (3)</title>
+
+                        <para>
+                            The character should be able to succeed in
+                            tasks of moderate difficulty a good
+                            proportion of the time, and easy tasks
+                            should pose no problem.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Professional (4-5)</title>
+
+                        <para>
+                            The character is considered to be of
+                            professional skill, and will be suitable
+                            for entering into a career involving this
+                            skill. Many people in jobs which don't
+                            tax them a great deal will not exceed
+                            this level of skill. A village blacksmith,
+                            who spends his time making horseshoes and
+                            nails will not know much more after twenty
+                            years than he did out of apprenticeship.
+                            A warrior, who's very survival depends on
+                            his skill with the sword, and who
+                            practises every day against those of
+                            similar skill, may will exceed this level
+                            in a couple of years.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Seasoned (6-7)</title>
+
+                        <para>
+                            The character has used the skill
+                            extensively, and has much practical
+                            experience as well as theoretical
+                            knowledge. This is the cap for people who
+                            aren't stretching their skill to its
+                            limits. Many veteran warriors will have
+                            weapon skills this high. Craftsmen in
+                            large towns, who are competing against
+                            each other for custom with the quality
+                            of their work may well equal or exceed
+                            this level.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Exceptional (8-9)</title>
+
+                        <para>
+                            People with skills of this caliber will
+                            be rare, though not unheard of. There
+                            will be a few elite groups of people this
+                            skilled,  such as the huscarl of a major
+                            noble, but they will not be many.
+                            Generally, it is recommended that this
+                            is the maximum level of skill for
+                            nameless NPCs. If a group really does
+                            need to be elite for some reason,
+                            giving them high attributes and better
+                            equipment should be investigated before
+                            giving them a skill in double digits.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Master (10-12)</title>
+
+                        <para>
+                            Those who achieve this level of skill will
+                            go down in history as master's of their
+                            craft. Such people will be very rare, and
+                            not randomly encountered.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Legendary (13-15)</title>
+
+                        <para>
+                            Only the very best, with extreme
+                            dedication to go with it, will achieve
+                            this level of skill.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Mythical (16-18)</title>
+
+                        <para>
+                            This is considered the limit of human
+                            achievement. Beyond Mythical, there is
+                            nothing in place which prevents skills of
+                            this magnitude, but they must be treated
+                            with a great deal of care. Due to the way
+                            the standard magic systems work, spell
+                            skills at this level may be more common
+                            than other skills.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Super human (19+)</title>
+
+                        <para>
+                            Technically, there is no upper bound on
+                            how high skills can go. Improving this
+                            level of skill for player characters will
+                            be extremely difficult. It is suggested
+                            that tuition is the only way to improve
+                            skills at this level.
+                        </para>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Skill Difficulties</title>
+
+                    <para>
+                        When making an ability check, there are some
+                        common difficulty levels, which are described
+                        in the following table.
+                    </para>
+
+                    <para>
+                        <targetlist targetFirst="false" bold="true">
+                            <title>Task Difficulties</title>
+
+                            <valueLabel>Type of Task</valueLabel>
+                            <targetLabel>Target</targetLabel>
+
+                            <entry target="10" value="Very easy.">
+                                Such a task can be achieved by a
+                                person with little or no skill with
+                                a good chance of success. A
+                                professional will always succeed.
+                            </entry>
+                            <entry target="15" value="Easy.">
+                                Anyone with a small amount of skill
+                                will be able to achieve this with a
+                                good chance of success, though it will
+                                be difficult for someone without any
+                                training at all.
+                            </entry>
+                            <entry target="20" value="Moderate.">
+                                Such tasks require a fair amount of
+                                skill to have a good chance of
+                                success. A professional could do it
+                                though it would require thought.
+                            </entry>
+                            <entry target="25" value="Challenging.">
+                                People with less than professional
+                                level of skill will find it hard to
+                                succeed, and it is out of league of
+                                someone with only basic familiarity.
+                            </entry>
+                            <entry target="30" value="Difficult.">
+                                Such tasks require a highly skilled
+                                person. Anyone with less than
+                                professional competence will always
+                                fail, and even professionals will be
+                                hard pressed.
+                            </entry>
+                            <entry target="40" value="Very difficult.">
+                                Exceptional skill is required to
+                                achieve this level of difficulty.
+                            </entry>
+                            <entry target="50" value="Extreme.">
+                            </entry>
+                            <entry target="60" value="Heroic.">
+                            </entry>
+                            <entry target="70" value="Sheer folly.">
+                            </entry>
+                            <entry target="80" value="Absurd.">
+                            </entry>
+                        </targetlist>
+                    </para>
+
+                    <para>
+                        Tasks above very difficult will be very rare,
+                        and often because of less than perfect
+                        conditions, rather than the nature of the
+                        task itself.
+                    </para>
+
+                    <para>
+                        Absurd tasks should be reserved for when a
+                        player tries something totally heroic, which
+                        is at the very edge of possibility.
+                    </para>
+                </sect3>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Passions</title>
+
+            <para>
+                <warning>This section is currently optional, and
+                under development. It totally contradicts the rules
+                on passions in the Advantages section which
+                follows.</warning>
+            </para>
+
+            <para>
+                Passions are a measure of a character's emotional
+                traits, and to some extent govern how the character
+                acts in certain situations. Representing such things
+                with a game mechanic does mean that some control is
+                taken out of the hands of the player, and put into
+                a die roll. However, interpretation of the die roll
+                is always up to the player, and further, there are
+                situations where character's would not do what a
+                player might want them to do. For example, facing
+                some nameless terror could instill fear (magical or
+                natural) in a person. A game mechanic gives the
+                player the choice to design a character who is more
+                likely to resist such fears.
+            </para>
+
+            <para>
+                Passions are represented by three traits. These are
+                treated like skills, in that they can be improved
+                after character generation. Each trait represents a
+                character's control over that aspect of their
+                personality.
+            </para>
+
+            <para>
+                The three traits are Bravery, Ego, Restraint and
+                Temperence. Each defaults to four, but can be
+                purchased higher or lower with advantages and
+                disadvantages.
+            </para>
+
+            <sect2>
+                <title>The Four Traits</title>
+
+                <sect3>
+                    <title>Bravery</title>
+
+                    <para>
+                        Bravery is a measure of a character's
+                        willingness to face danger, to do their
+                        duty when their instincts tell them to flee.
+                        Bravery does not mean that a character is
+                        stupid and won't flee when the cause is
+                        pointless, but turning your back on the
+                        enemy to run can often be worse than
+                        standing and fighting.
+                    </para>
+
+                    <para>
+                        Bravery checks are required when facing
+                        superior foes, when facing supernatural
+                        horror, or simply when going into a
+                        situation where danger is expected but
+                        unseen. Overcoming phobias also require a
+                        bravery check.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Ego</title>
+
+                    <para>
+                        Ego is a measure of a character's sense of
+                        self. It represents their ability to resist
+                        the influence of mind affecting drugs and
+                        magic. A high ego character is better able
+                        to stand up to anything which may change
+                        their state of mind, and as such may tend
+                        to appear close minded and arrogant to others.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Restraint</title>
+
+                    <para>
+                        Restraint is a measure of a character's
+                        ability to resist responding to a situation
+                        she might otherwise feel needs response.
+                        Taunts or insults can be used against those
+                        with low restraint to force them into a
+                        weaker position. Failing a restraint check
+                        means that the character gives in to her
+                        anger and hatred.
+                    </para>
+
+                    <para>
+                        Restraint checks may be required if a
+                        character is insulted, or if they see an
+                        opportunity to attack a hated foe for
+                        example. A compassionate character may be
+                        moved to aid another, even if it means
+                        giving up on an important quest, or putting
+                        themselves and their friends in danger.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Temperence</title>
+
+                    <para>
+                        Temperence is a measure of a character's
+                        strength of will against temptation, in
+                        particular that of physical pleasure.
+                        Resisting the seductive charms of a beautiful
+                        woman, the chance to indulge in heavy feasting
+                        and drinking, or the opportunity of quick
+                        riches because of bribes or otherwise requires
+                        a temperence check.
+                    </para>
+
+                    <para>
+                        Temperence covers a multitude of sins, and
+                        there are plenty of advantages and
+                        disadvantages which effect specific ones. A
+                        temperate character may be seen as staid and
+                        boring by his peers. The other extreme leads
+                        to a reputation of unreliability and gluttony.
+                    </para>
+                </sect3>
+            </sect2>
+
+
+            <sect2>
+                <title>Passion Checks</title>
+
+                <para>
+                    When a situation comes up which warrents a passion
+                    check, the passion trait is rolled with will,
+                    against a difficulty representative of the
+                    situation. Some guidelines as to assigning
+                    difficulties are given below.
+                </para>
+
+                <para>
+                    <targetlist targetFirst="true" bold="true">
+                        <title>General Passion Difficulties</title>
+
+                        <targetLabel>Target</targetLabel>
+                        <valueLabel>Type of situation</valueLabel>
+
+                        <entry target="10" value="Very easy.">
+                            Very few people would be tempted by this. A
+                            person would need to be very weak willed, or
+                            very prone to that passion in order to fail
+                            to resist.
+                        </entry>
+
+                        <entry target="15" value="Easy.">
+                            Few people would fall to this, though slightly
+                            below average will, or slightly susceptible
+                            people would fail. A passion of 2, and normal
+                            will, gives about 55% chance of resisting.
+                            Normal people have 90% chance of resisting.
+                        </entry>
+
+                        <entry target="20" value="Moderate.">
+                            Most people will find this a challenge to
+                            resist. A decent bribe with little chance of
+                            come back, a dallience with no obvious long
+                            term risk, or something that's somewhat
+                            dangerous but with a good chance of success.
+                        </entry>
+
+                        <entry target="25" value="Challenging.">
+                            A bit worse than moderate, and 60% will fail.
+                        </entry>
+
+                        <entry target="30" value="Difficult.">
+                            The majority of people will fail this.
+                            Something with a good chance of death with
+                            little benefit gained, a really good sexual
+                            offer with little or no chance of their being
+                            long term repurcussions (e.g. you're single),
+                            a lot of money for doing nothing, or a chance
+                            to kick an enemy when he's down really hard
+                            with no risk.
+                        </entry>
+                    </targetlist>
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Minor Passions</title>
+
+                <para>
+                    Minor passions are traits which kick in under certain
+                    circumstances. They might be love of a person, which
+                    helps the character stand his ground when defending
+                    them. It could be loyalty, hatred or a weakness
+                    for some vice.
+                </para>
+
+                <para>
+                    A minor passion is considered to be an advantage
+                    (see below), and modifies Will - for all intents
+                    they are edges and flaws. Most minor passions will
+                    have a value of +1 (or -1), with a few being +2 (or
+                    -2). In very rare cases, +3 (or -3) will be possible
+                    but this level cannot be purchased at character
+                    generation.
+                </para>
+
+                <para>
+                    For example, a character with love (family) as a
+                    minor passion would get a +1 to will if rolling a
+                    bravery check when defending them. If she had a will
+                    of 3, and a Bravery passion of 4, she would have an
+                    ability score of (3+1) x 4 or 16, rather than the
+                    normal 12.
+                </para>
+            </sect2>
+        </sect1>
+
+
+        <sect1>
+            <title>Advantages</title>
+
+            <sect2>
+                <title>Passions</title>
+
+                <para>
+                    Passions represent a character's stronger emotional
+                    traits, and range from +0 (no passion of particular
+                    note) to +5 (this passion consumes the character's
+                    life).
+                </para>
+
+                <para>
+                    A character can have many passions, and are listed as
+                    being either of a general emotion (such as loyal,
+                    curious, cowardly) or as being directed towards a
+                    particular ideal or person (love of a friend, loyalty
+                    to a lord, hatred of a religion).
+                </para>
+
+                <para>
+                    Passions of level +3 or higher are considered to be
+                    advantages or disadvantages, and must be paid for.
+                </para>
+
+                <sect3>
+                    <title>Limits on Passions</title>
+
+                    <para>
+                        Generally, a character can only have one passion
+                        of +4 or higher, and if they have a passion of +5,
+                        then cannot have any other passion greater than
+                        +2.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Roleplaying Passions</title>
+
+                    <para>
+                        Though they are given as a game mechanic, passions
+                        should definitely be role played is the main area
+                        in which they are meant to be used. Passions of
+                        level +1 or +2 aren't greatly different from the
+                        norm (and hence aren't worth any points). A +3
+                        passion is quite strong, and people who have been
+                        around you for some time should come to notice it.
+                    </para>
+
+                    <para>
+                        Passions can be overcome by will checks. To resist
+                        seduction, overcome fear etc, a will check is
+                        made, modified by all suitable passions. Each
+                        passion adds or subtracts to the roll, at its
+                        value x 5.
+                    </para>
+
+                    <para>
+                        A +4 passion is beginning to consume your
+                        personality, and hence should come into play a
+                        lot of the time. Someone with a loyalty of +4 to
+                        someone, will obey that person without question
+                        except in situations which are obviously suicidal
+                        or go directly against the character's ethics. In
+                        these cases, the character may pause to think
+                        before obeying (or not).
+                    </para>
+
+                    <para>
+                        A character with a +5 loyalty, will not even
+                        consider disobeying in the above cases, and if
+                        they do try to resist, the difficulty modifier is
+                        at +25.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Making Passion Checks</title>
+
+                    <para>
+                        Sometimes, a character will be in a situation
+                        where their passion will probably cause them to
+                        do something stupid, and the player may very well
+                        decide that they want their character to do
+                        something more sensible. In this case, a passion
+                        check may be required.
+                    </para>
+
+                    <para>
+                        A passion check is rolled on straight will, with a
+                        modifier for any suitable passions. The difficulty
+                        will range from 10 to 25.
+                    </para>
+
+                    <sect4>
+                        <title>Examples of Bravery</title>
+
+                        <para>
+                            The following target difficulties are given
+                            for making bravery checks under dangerous
+                            situations. The results of a failed bravery
+                            check means that the character will not want
+                            to go ahead with the action. They may run or
+                            hesitate in combat for example.
+                        </para>
+
+                        <para>
+                            <targetlist targetFirst="false" bold="false">
+                                <title>Difficulties for Bravery checks</title>
+
+                                <targetLabel>Target</targetLabel>
+                                <valueLabel>Situation</valueLabel>
+
+                                <entry target="10">
+                                    Getting involved in a non-fatal fight
+                                    with good odds. Entering a place
+                                    rumoured to be haunted.
+                                </entry>
+
+                                <entry target="15">
+                                    Getting involved in a non-fatal fight
+                                    with reasonable odds.
+                                </entry>
+
+                                <entry target="20">
+                                    Moderate.
+                                </entry>
+                            </targetlist>
+                        </para>
+                    </sect4>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Advantages and Disadvantages</title>
+
+                <para>
+                    These are special bonuses and penalties characters
+                    can take to make them somewhat extraordinary
+                    compared to normal people.
+                </para>
+
+                <para>
+                    The cost of all advantages and disadvantages taken
+                    must balance, and not all cost the same. The
+                    advantage of keen hearing which gives a small bonus
+                    to listening rolls, doesn't cost as much as the
+                    advantage of 'shape shifting' for example.
+                </para>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Other Information</title>
+
+            <para>
+                Except where otherwise noted, the following standards
+                can be assumed to be used throughout these rules.
+            </para>
+
+            <sect2>
+                <title>Fractions</title>
+
+                <para>
+                    All fractions are rounded to the nearest whole
+                    number, and halves round up (away from zero).
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Weights and Measures</title>
+
+                <para>
+                    The metric system is used throughout these rules,
+                    with metres and kilogrammes being the standard
+                    units of distance and weight.
+                </para>
+            </sect2>
+        </sect1>
+
+    </body>
 </article>
