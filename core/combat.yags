@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.44 $</version>
-            <date>$Date: 2004-03-13 22:15:59 $</date>
+            <version>$Revision: 1.45 $</version>
+            <date>$Date: 2004-03-14 17:01:19 $</date>
         </cvsinfo>
 
         <license>
@@ -198,6 +198,15 @@
                         possible from such a position, but they are
                         difficult.
                     </entry>
+                    
+                    <entry term="Grappled">
+                        A <e>grappled person</e> is holding, or being held by,
+                        another person. Neither can defend against attacks
+                        made by others, nor can they attack anyone other than
+                        the person they are grappling. All combat rolls are
+                        made using the <e>brawl</e> skill. Penalties for
+                        being prone do not apply between a grappled pair.
+                    </entry>
 
                     <entry term="Combat bonuses">
                         The four statistics, <e>initiative</e>, <e>attack</e>,
@@ -371,40 +380,6 @@
                         Covers the use of all types of crossbow.
                     </para>
                 </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Techniques</title>
-
-                <para>
-                    A <e>technique</e> is a special type of manouevre that
-                    can be performed if it has been learnt. Techniques are
-                    considered to be advantages, and are bought as such.
-                    A technique has a requirement of a given level in a
-                    given skill before it can be learnt however.
-                </para>
-
-                <para>
-                    A technique is normally used instead of a normal attack
-                    or defence action. Some techniques apply automatically
-                    (such as <e>ground fighting</e> or <e>mounted combat</e>)
-                    if the situation warrents it. In this case, they apply
-                    as well as the action, and the action may be another
-                    technique.
-                </para>
-
-                <para>
-                    If a technique has a skill requirement of zero, then it
-                    can be used by anyone, and does not need to be learnt.
-                    Techniques which are listed as <e>automatic</e> can be
-                    used for free when the stated conditions apply, meaning
-                    they can be combined with other techniques, and the
-                    character does not have to consciously think about
-                    using them.
-                </para>
-
-                <import-advantages href="options/techniques.yags"
-                                   type="technique"/>
             </sect2>
 
             <sect2>
@@ -597,7 +572,9 @@
                         are required in combat.
                     </para>
 
-                    <import-weaponlist href="xml/arms.yags" importance="3" style="list">
+                    <import-weaponlist href="xml/arms.yags" 
+                                       importance="3" 
+                                       style="list">
                         <category>Axes</category>
                         <category>Clubs</category>
                         <category>Knives</category>
@@ -605,9 +582,9 @@
                     </import-weaponlist>
 
                     <para>
-                        The four ability modifiers - initiative, attack, defence and
-                        damage add to the base ability for a character when they are
-                        using that weapon.
+                        The four ability modifiers - initiative, attack,
+                        defence and damage add to the base ability for a
+                        character when they are using that weapon.
                     </para>
                 </sect3>
             </sect2>
@@ -746,6 +723,18 @@
                                 A focussed character is performing some
                                 action that requires their full attention,
                                 and they may not make any defence rolls.
+                            </entry>
+                            
+                            <entry term="Grappled">
+                                A <e>grappled person</e> is holding, or
+                                being held by, another person. Neither can
+                                defend against attacks made by others, nor
+                                can they attack anyone other than the person
+                                they are grappling. All combat rolls are
+                                made using the <e>brawl</e> skill. If a
+                                weapon is being used, then all rolls for
+                                that weapon are made at -10 per point of
+                                reach of the weapon. Shields cannot be used.
                             </entry>
                         </termlist>
                     </sect4>
@@ -2078,6 +2067,104 @@
         <sect1>
             <title>Advanced Combat</title>
 
+            <sect2>
+                <title>Techniques</title>
+
+                <para>
+                    A <e>technique</e> is a special type of manouevre that
+                    can be performed if it has been learnt. Techniques are
+                    considered to be advantages, and are bought as such.
+                    A technique has a requirement of a given level in a
+                    given skill before it can be learnt however. Many of the
+                    combat techniques can be thought of as <e>martial
+                    arts</e>, involving skill in both armed and unarmed
+                    fighting. Martial arts are not unique to Oriental
+                    cultures. Indeed, the term was coined originally in
+                    Western Europe during the Middle Ages to refer to the
+                    skills learnt by armoured knights.
+                </para>
+
+                <para>
+                    A technique is normally used instead of a normal attack
+                    or defence action. Some techniques apply automatically
+                    (such as <e>ground fighting</e> or <e>mounted combat</e>)
+                    if the situation warrents it. In this case, they apply
+                    as well as the action, and the action may be another
+                    technique.
+                </para>
+
+                <para>
+                    If a technique has a skill requirement of zero, then it
+                    can be used by anyone, and does not need to be learnt.
+                    Techniques which are listed as <e>automatic</e> can be
+                    used for free when the stated conditions apply, meaning
+                    they can be combined with other techniques, and the
+                    character does not have to consciously think about
+                    using them.
+                </para>
+                
+                <para>
+                    Some techniques require a particular stance to be taken
+                    in order to use the technique. When such is stated, any
+                    given combat modifiers are the total modifier, taking
+                    into account the stance.
+                </para>
+                
+                <sect3>
+                    <title>Unarmed combat techniques</title>
+                    
+                    <para>
+                        These techniques concentrate on unarmed melee
+                        combat. Many of them are zero cost, so can be used
+                        by anyone. These represent the standard moves which
+                        may be attempted in normal unarmed combat (i.e.,
+                        anything other than simple punching).
+                    </para>
+                    
+                    <import-advantages 
+                            href="options/techniques/brawling.yags"
+                            type="technique"/>
+                </sect3>
+
+                <sect3>
+                    <title>Circumstance techniques</title>
+                    
+                    <para>
+                        The following techniques apply in particular
+                        environments (e.g. in the dark) or when certain
+                        criteria are met (e.g. when wearing armour).
+                        They are mostly <e>automatic</e>.
+                    </para>
+                    
+                    <import-advantages
+                             href="options/techniques/circumstance.yags"
+                             type="technique"/>
+                </sect3>
+                
+                <sect3>
+                    <title>Melee techniques</title>
+                    
+                    <import-advantages 
+                            href="options/techniques/melee.yags"
+                            type="technique"/>
+                </sect3>
+                
+                <sect3>
+                    <title>Missile techniques</title>
+                    
+                    <import-advantages 
+                            href="options/techniques/missile.yags"
+                            type="technique"/>
+                </sect3>
+                
+                <sect3>
+                    <title>Mounted techniques</title>
+                    
+                    <import-advantages 
+                            href="options/techniques/mounted.yags"
+                            type="technique"/>
+                </sect3>
+            </sect2>
 
             <sect2>
                 <title>Mounted combat</title>

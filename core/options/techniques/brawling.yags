@@ -4,8 +4,8 @@
     Brawling and unarmed combat techniques.
     
     Author:  Samuel Penn
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2004-03-14 15:35:48 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2004-03-14 17:01:19 $
     
  -->
 
@@ -43,8 +43,8 @@
         
         <description>
             <para>
-                A trip requires an <e>aggressive stance</e>, and is an
-                attempt to place the defender on the floor, by throwing
+                A trip requires a <e>normal stance</e> and is slow. It's an
+                attempt to place the defender on the floor by throwing
                 or tripping them. A
                 <skillequation>
                     <attribute>agility</attribute>
@@ -73,21 +73,65 @@
             </para>
         </description>
     </advantage>
+    
+    <advantage name="Overrun" type="technique">
+        <cost points="0"/>
+        <skill name="Brawl"/>
+        
+        <description>
+            <para>
+                An overrun can be attempted using the <e>aggressive</e>
+                stance, and is considered an unarmed attack unless a
+                medium or larger shield is being used. The attacker
+                makes a
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <skill>brawl</skill>
+                </skillequation>
+                roll against the defender's
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <attribute>agility</attribute>
+                    <skill>brawl</skill>
+                </skillequation>
+                roll to withstand or dodge the attack. On success, the
+                attack can move past the defender regardless of any
+                attempts by the defender to block the attacker's
+                movement. On failure, if the defender resisted with
+                strength, then the attacker is stopped from moving any
+                further. If agility was used, then the defender side
+                stepped and the attacker moved through anyway. However,
+                the defender gets an <e>automatic strike</e> against
+                the attacker, which may be a <e>trip</e> attack at +10.
+            </para>
+            
+            <para>
+                On a good success by the attacker, stun damage may be
+                done to the defender as per a standard brawling attack.
+                On an excellent success, the attacker may opt for a
+                free <e>trip</e> attack.
+            </para>
+        </description>
+    </advantage>
 
-    <advantage name="Throw" type="technique">
+    <advantage name="Shoulder throw" type="technique">
         <cost points="2"/>
         <skill name="Brawl"/>
         <description>
             <para>
-                A <e>slow</e> attack at -5, success results in a temporary
-                hold, as if the defender has been grappled. Immediately
-                after success, both attacker and defender make oppossed
-                brawl checks, with the defender able to choose between
-                using strength or agility. Success for the attacker
-                leaves the defender <e>unsteady</e>, whilst a good
-                success will leave them <e>prone</e>, and can optionally
-                cause stun damage as well - the attacker makes a damage
-                roll as normal.
+                An attack requiring the <e>normal stance</e>, and both hands
+                must be free for the attack. If the initial brawl attack is
+                a success, then the defender is temporarily grappled, and
+                both make opposed
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <attribute>agility</attribute>
+                    <skill>brawl</skill>
+                </skillequation>
+                rolls. If the attacker succeeds, then the defender is
+                <e>unsteady</e>. A good success leaves the defender
+                <e>prone</e> plus the attack can make a damage roll as
+                normal, doing stun damage.
             </para>
 
             <para>
@@ -111,14 +155,27 @@
     </advantage>
 
     <advantage name="Stunning attack" type="technique">
-        <cost points="4"/>
+        <cost points="3"/>
         <skill name="Brawl"/>
         <description>
             <para>
                 A bare handed attack against a target's vitals. It is a slow
                 attack, at -10. If damage is caused, the target must make a
-                size x stamina roll of 20 + stuns x 5, or be <e>prone</e>,
+                size x stamina roll of 20 + stuns x 5, or be <e>unsteady</e>,
                 and at a further -10 for one round per stun caused.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Deadly punch" type="technique">
+        <cost points="6"/>
+        <skill name="Brawl"/>
+        <prerequisite>Stunning attack</prerequisite>
+        
+        <description>
+            <para>
+                A bare handed attack that does <e>mixed</e> damage rather
+                than stun damage.
             </para>
         </description>
     </advantage>
