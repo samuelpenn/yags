@@ -15,8 +15,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2003-05-19 06:02:08 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2003-06-07 15:25:56 $</date>
         </cvsinfo>
 
         <license>
@@ -122,7 +122,24 @@
                 <sect3>
                     <title>Detrimental Effects</title>
 
+                    <para>
+                        Detrimental effects may be either temporary or
+                        permanent (though death is always permanent). The
+                        description of the herb will say how long the
+                        effects last, but they always last as least as
+                        long as they are being resisted.
+                    </para>
+
                     <termlist sort="true">
+                        <entry term="Blindness">
+                            Creature's vision becomes blurry and indistinct.
+                            Perception is reduced by one for vision related
+                            rolls. If reduced to zero, then the creature is
+                            totally blind. Other skills which rely on sight
+                            (such as combat) have their attribute reduced by
+                            one as well.
+                        </entry>
+
                         <entry term="Coma">
                             Creature falls into an unconscious state, from which it is
                             impossible to wake them. Such a symptom is nearly always
@@ -132,30 +149,34 @@
                         </entry>
 
                         <entry term="Cramps">
-                            Creature suffers muscle cramp. This causes a great deal of
-                            pain, and makes movement difficult and undesirable. Strength,
-                            agility and dexterity are at -2 if anything is attempted.
+                            Creature suffers muscle cramp. This causes a
+                            great deal of pain, and makes movement difficult
+                            and undesirable. Agility and dexterity are at -1
+                            if anything is attempted, and movement is halved.
                         </entry>
 
                         <entry term="Death">
-                            The creature dies, often through paralysis of heart or lungs,
-                            oxygen starvation or some other failure of a vital organ.
+                            The creature dies, often through paralysis of
+                            heart or lungs, oxygen starvation or some other
+                            failure of a vital organ.
                         </entry>
 
                         <entry term="Nausea">
-                            Creature becomes ill, and suffering dizzyness and vomiting.
-                            Agility and dexterity is halved.
+                            Creature becomes ill, and suffering dizzyness
+                            and vomiting. Agility and dexterity are halved.
                         </entry>
 
                         <entry term="Severe Cramps">
-                            Similar to cramps, but the effects are much worse. Strength,
-                            agility and dexterity are reduced to one while severe cramps
-                            are being suffered.
+                            Similar to cramps, but the effects are much
+                            worse. Agility and dexterity are reduced to one
+                            while severe cramps are being suffered, and
+                            movement is quartered.
                         </entry>
 
                         <entry term="Weakness">
-                            Creature feels faint and somewhat unsteady. Strength,
-                            agility and dexterity are all reduced by one.
+                            Creature feels faint and somewhat unsteady.
+                            Strength is halved, whilst agility and
+                            dexterity are all reduced by one.
                         </entry>
                     </termlist>
                 </sect3>
@@ -196,26 +217,65 @@
                 </para>
 
                 <sect3>
-                    <title>Potency</title>
+                    <title>Toxicity</title>
 
                     <para>
-                        The potency of a herb gives the size of dosage required
+                        The toxicity of a herb gives the size of dosage required
                         for the listed effect. Increasing the dosage can give a
                         stronger effect, and/or have undesired side effects.
                     </para>
 
                     <para>
-                        Potency is measured on a scale between I and VI. Herbs
-                        of potency I are not very effective, and require large
+                        Toxicity is measured on a scale between I and VI. Herbs
+                        of toxicity I are not very effective, and require large
                         amounts of the drug to have the desired effect. Such
                         herbs will generally not be listed, since more powerful
                         herbs are normally available, and are much more effective.
                     </para>
 
                     <para>
-                        Potency VI herbs are very powerful, and even a small
+                        Toxicity VI herbs are very powerful, and even a small
                         taste of one can have the listed effect.
                     </para>
+
+                    <para>
+                        The following chart shows the different toxicity
+                        levels, and how much of a substance is required in
+                        order to affect a creature. Dosages per kg of host
+                        are given.
+                    </para>
+
+                    <targetlist targetFirst="true" bold="true">
+                        <targetLabel>Toxicity</targetLabel>
+                        <valueLabel>Effective dose</valueLabel>
+
+                        <entry target="I" value="Almost nontoxic.">
+                            More than 1kg of substance may be needed to
+                            affect an adult (15g/kg +).
+                        </entry>
+
+                        <entry target="II" value="Slightly toxic.">
+                            About half a litre  to a litre (10g/kg).
+                        </entry>
+
+                        <entry target="III" value="Moderately toxic.">
+                            About 100ml or more (2g/kg).
+                        </entry>
+
+                        <entry target="IV" value="Very toxic.">
+                            Anything from a teaspoon to 30ml (250mg/kg).
+                        </entry>
+
+                        <entry target="V" value="Extremely toxic.">
+                            Less than a teaspoon of substance, only a few
+                            millilitres (25mg/kg).
+                        </entry>
+
+                        <entry target="VI" value="Supertoxic.">
+                            Just a taste of such a substance is enough,
+                            a few drops (less than 5mg/kg).
+                        </entry>
+                    </targetlist>
                 </sect3>
 
                 <sect3>
@@ -314,6 +374,29 @@
                     long while.
                 </para>
             </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Common Herbs</title>
+
+            <sect2>
+                <title>Classic Real World Poisons</title>
+
+                <herb name="Arsenic">
+                    <toxicity>V</toxicity>
+                    <strength>20</strength>
+                    <time modifier="-1">30mn</time>
+                    <effects>
+                        <effect>Weakness</effect>
+                        <effect>Nausea</effect>
+                        <effect>Convulsions</effect>
+                        <effect>Coma</effect>
+                        <effect>Death</effect>
+                    </effects>
+                </herb>
+
+            </sect2>
+
         </sect1>
     </body>
 </article>
