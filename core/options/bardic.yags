@@ -2,14 +2,14 @@
 
 <!--
     Bardic Techniques.
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2004-02-23 21:31:39 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2004-04-10 14:14:43 $
  -->
 
 <advantages>
 
     <advantage name="Taunt" type="technique">
-        <cost points="4"/>
+        <cost points="2"/>
         <skill name="Guile"/>
         
         <description>
@@ -20,17 +20,145 @@
     </advantage>
 
     <advantage name="Song of Battle" type="technique">
-        <cost points="4"/>
+        <cost points="3"/>
         <skill name="Perform"/>
         
         <description>
             <para>
                 Taught only by bards. A song of passion and battle, which
                 inspires comrades to greater glory. All those within
-                stamina x 10m receive a bonus to their attack rolls
-                equal to one fifth the Bard's Charisma x Perform roll,
-                whilst the Bard is singing.
+                stamina x 10m receive a bonus to their initiative and
+                bravery rolls equal to the Bard's Perform skill. Lasts all
+                the time that the Bard is singing.
             </para>
+        </description>
+    </advantage>
+
+    <advantage name="Song of Dread" type="technique">
+        <cost points="4"/>
+        <skill name="Perform"/>
+        <prerequisite>Song of Battle</prerequisite>
+        
+        <description>
+            <para>
+                Taught only by bards. A song which inspires fear in the
+                enemy, giving a penalty to their initiative and bravery
+                rolls equal to the Bard's Perform skill. The enemy must be
+                within stamina x 10m of the bard, and the bard must overcome
+                the will x ego of each target with their own will x perform.
+            </para>
+            
+            <para>
+                Can be combined with <e>Song of Battle</e> in order to give
+                bonuses to the Bard's comrades at the same time.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Song of War" type="technique">
+        <cost points="6"/>
+        <skill name="Perform"/>
+        <prerequisite>Song of Battle</prerequisite>
+        
+        <description>
+            <para>
+                As <e>Song of Battle</e>, plus all penalties due to wounds,
+                stuns and fatigue are each reduced by the Perform score of
+                the bard. Taught only by bards.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Song of Terror" type="technique">
+        <cost points="8"/>
+        <skill name="Perform"/>
+        <prerequisite>Song of Dread</prerequisite>
+        
+        <description>
+            <para>
+                Taught only by bards. Inspire fear and terror in any enemy
+                who hear this song. Forces a morale check to be made during
+                any battle this is sung in.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Song of Fury" type="technique">
+        <cost points="9"/>
+        <skill name="Perform"/>
+        <prerequiste>Song of War</prerequisite>
+        
+        <description>
+            <para>
+                As <e>Song of War</e>, plus those affected gain a bonus to
+                their attack <e>or</e> damage rolls (chosen by the Bard at
+                the start of the song) equal to the Bard's Perform score.
+                This song is taught only by bards.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Song of Sleep" type="technique">
+        <cost points="2"/>
+        <skill name="Perform"/>
+        
+        <description>
+        </description>
+    </advantage>
+    
+    <advantage name="Song of Love" type="technique">
+        <cost points="4"/>
+        <skill name="Perform"/>
+        <prerequisite>Song of Sleep</prerequisite>
+        
+        <description>
+        </description>
+    </advantage>
+
+    <advantage name="Song of Dreaming" type="technique">
+        <cost points="7"/>
+        <skill name="Perform"/>
+        <prerequisite>Song of Sleep</prerequisite>
+        
+        <description>
+            <para>
+                Rudimentary painting the picture of the dream.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Entrancement" type="technique">
+        <cost points="5"/>
+        <skill name="Perform"/>
+
+        <description>
+        </description>
+    </advantage>
+
+    <advantage name="Suggestion" type="technique">
+        <cost points="7"/>
+        <skill name="Perform"/>
+        <prerequisite>Entrancement</prerequisite>
+
+        <description>
+        </description>
+    </advantage>
+
+    <advantage name="Geas" type="technique">
+        <cost points="9"/>
+        <skill name="Perform"/>
+        <prerequisite>Suggestion</prerequisite>
+
+        <description>
+        </description>
+    </advantage>
+
+    <advantage name="Greater Geas" type="technique">
+        <cost points="12"/>
+        <skill name="Perform"/>
+        <prerequisite>Geas</prerequisite>
+
+        <description>
         </description>
     </advantage>
 
