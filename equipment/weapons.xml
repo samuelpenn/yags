@@ -1,4 +1,6 @@
 <?xml version="1.0" ?>
+<?xml-stylesheet href="http://www.bifrost.demon.co.uk/xsl/html/equipment.xsl" type="text/xsl"?>
+
 <equipment>
 <weaponlist>
     <weapon name="Axe">
@@ -47,14 +49,24 @@
         <strength>0</strength>
         <load>0</load>
     </weapon>
-    <weapon name="Great sword">
+    <weapon name="Battle sword">
         <class>great</class>
         <initiative>+12</initiative>
         <attack>+8</attack>
         <defence>+6</defence>
-        <damage>+15</damage>
+        <damage>+16</damage>
         <strength>6</strength>
         <load>7</load>
+    </weapon>
+    <weapon name="Bastard sword">
+        <class>great</class>
+        <class>single</class>
+        <initiative>+10</initiative>
+        <attack>+7</attack>
+        <defence>+5</defence>
+        <damage>+14</damage>
+        <strength>4</strength>
+        <load>6</load>
     </weapon>
     <weapon name="Knife">
         <class>brawl</class>
@@ -71,11 +83,11 @@
         <initiative>+15</initiative>
         <attack>+4</attack>
         <defence>+4</defence>
-        <damage>+13</damage>
+        <damage>+11</damage>
         <strength>5</strength>
         <load>3</load>
     </weapon>
-    <weapon name="Long sword">
+    <weapon name="Broad sword">
         <class>single</class>
         <initiative>+6</initiative>
         <attack>+5</attack>
@@ -112,6 +124,42 @@
         <strength>2</strength>
         <load>3</load>
     </weapon>
+    <weapon name="Buckler">
+        <class>shield</class>
+        <initiative>+0</initiative>
+        <attack>+0</attack>
+        <defence>+3</defence>
+        <damage>+0</damage>
+        <strength>1</strength>
+        <load>1</load>
+    </weapon>
+    <weapon name="Kite shield">
+        <class>shield</class>
+        <initiative>+0</initiative>
+        <attack>+1</attack>
+        <defence>+8</defence>
+        <damage>+0</damage>
+        <strength>2</strength>
+        <load>4</load>
+    </weapon>
+    <weapon name="Knight shield">
+        <class>shield</class>
+        <initiative>+0</initiative>
+        <attack>+3</attack>
+        <defence>+6</defence>
+        <damage>+0</damage>
+        <strength>2</strength>
+        <load>3</load>
+    </weapon>
+    <weapon name="Tower shield">
+        <class>shield</class>
+        <initiative>+0</initiative>
+        <attack>+0</attack>
+        <defence>+9</defence>
+        <damage>+0</damage>
+        <strength>3</strength>
+        <load>5</load>
+    </weapon>
     <weapon name="Short sword">
         <class>single</class>
         <initiative>+5</initiative>
@@ -132,6 +180,69 @@
         <load>2</load>
     </weapon>
     
+    <weapon name="Hand axe">
+        <class>single</class>
+        <initiative>+3</initiative>
+        <attack>+2</attack>
+        <defence>+1</defence>
+        <damage>+5</damage>
+        <strength>1</strength>
+        <load>1</load>
+    </weapon>
+    
+    <weapon name="Maul">
+        <class>great</class>
+        <initiative>+8</initiative>
+        <attack>+6</attack>
+        <defence>+3</defence>
+        <damage>+14</damage>
+        <strength>5</strength>
+        <load>5</load>
+    </weapon>
+    
+    <weapon name="Morningstar">
+        <class>single</class>
+        <initiative>+3</initiative>
+        <attack>+4</attack>
+        <defence>+3</defence>
+        <damage>+9</damage>
+        <strength>2</strength>
+        <load>2</load>
+    </weapon>
+    
+    <weapon name="Poleaxe">
+        <class>longshaft</class>
+        <initiative>+15</initiative>
+        <attack>+6</attack>
+        <defence>+4</defence>
+        <damage>+13</damage>
+        <strength>5</strength>
+        <load>3</load>
+    </weapon>
+        
+    <weapon name="Warhammer">
+        <class>single</class>
+        <initiative>+6</initiative>
+        <attack>+3</attack>
+        <defence>+2</defence>
+        <damage>+12</damage>
+        <strength>3</strength>
+        <load>3</load>
+    </weapon>
+    
+    <weapon name="War flail">
+        <class>flail</class>
+        <initiative>+9</initiative>
+        <attack>+6</attack>
+        <defence>+6</defence>
+        <damage>+10</damage>
+        <strength>3</strength>
+        <load>3</load>
+    </weapon>
+    
+
+    
+    
     <weapon name="Thrown axe">
         <class>thrown</class>
         <initiative>+3</initiative>
@@ -150,14 +261,29 @@
     <weapon name="Long bow">
         <class>bow</class>
         <initiative>+2</initiative>
-        <attack>+10</attack>
-        <damage>+10</damage>
+        <attack>+7</attack>
+        <damage>+12</damage>
         <strength>3-5</strength>
         <load>2</load>
         <range>
             <short>40</short>
             <medium>80</medium>
             <long>160</long>
+            <extreme>240</extreme>
+        </range>
+    </weapon>
+    
+    <weapon name="Heart bow">
+        <class>bow</class>
+        <initiative>+3</initiative>
+        <attack>+7</attack>
+        <damage>+12</damage>
+        <strength>3-5</strength>
+        <load>2</load>
+        <range>
+            <short>60</short>
+            <medium>120</medium>
+            <long>180</long>
             <extreme>240</extreme>
         </range>
     </weapon>
@@ -234,6 +360,51 @@
             <medium>25</medium>
             <long>35</long>
             <extreme>50</extreme>
+        </range>
+    </weapon>
+    
+    <weapon name="Light crossbow">
+        <class>crossbow</class>
+        <initiative>+4</initiative>
+        <attack>+12</attack>
+        <damage>15</damage>
+        <strength>2</strength>
+        <load>2</load>
+        <range>
+            <short>15</short>
+            <medium>30</medium>
+            <long>60</long>
+            <extreme>120</extreme>
+        </range>
+    </weapon>
+    
+    <weapon name="Medium crossbow">
+        <class>crossbow</class>
+        <initiative>+3</initiative>
+        <attack>+12</attack>
+        <damage>22</damage>
+        <strength>3</strength>
+        <load>3</load>
+        <range>
+            <short>25</short>
+            <medium>40</medium>
+            <long>80</long>
+            <extreme>160</extreme>
+        </range>
+    </weapon>
+    
+    <weapon name="Heavy crossbow">
+        <class>crossbow</class>
+        <initiative>+2</initiative>
+        <attack>+12</attack>
+        <damage>30</damage>
+        <strength>3</strength>
+        <load>4</load>
+        <range>
+            <short>30</short>
+            <medium>50</medium>
+            <long>100</long>
+            <extreme>200</extreme>
         </range>
     </weapon>
     
