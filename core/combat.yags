@@ -13,13 +13,13 @@
         <tagline>Yags</tagline>
 
         <author>
-            <fullname>Samuel</fullname>
+            <fullname>Samuel Penns</fullname>
             <email>sam@bifrost.demon.co.uk</email>
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.18 $</version>
-            <date>$Date: 2002-08-24 15:50:34 $</date>
+            <version>$Revision: 1.19 $</version>
+            <date>$Date: 2002-08-26 11:40:22 $</date>
         </cvsinfo>
         
         <license>
@@ -161,7 +161,7 @@
                     own skill, and is independent of the weapon
                     being used.
                 </para>
-                
+
                 <termlist>
                     <entry term="Brawling">
                         Brawling is the simplest style of fighting,
@@ -182,7 +182,7 @@
                         this style, and only a single skill (single weapon)
                         is needed to cover them all.
                     </entry>
-                    
+
                     <entry term="Weapon and shield">
                         This fighting style uses a combination of a one
                         handed weapon and a shield, to give what is
@@ -190,7 +190,7 @@
                         and any one handed weapon can be used with this
                         style.
                     </entry>
-                    
+
                     <entry term="Great weapon">
                         The great weapon style allows use of a single
                         weapon which requires two hands to use it. It
@@ -473,7 +473,7 @@
 
                     <para>
                         The first step in each round involves
-                        determining what each character or creature 
+                        determining what each character or creature
                         is going to be doing. Since a round lasts
                         five seconds, there is generally time to move
                         as well as do something else, though a full
@@ -491,7 +491,7 @@
                         simultaneous for everyone. If a character
                         wishes to 'wait' then they must declare what
                         they are waiting for, and what they will do
-                        when it happens. Declarations such as 
+                        when it happens. Declarations such as
                         <emphasis>I'll hit him if he moves</emphasis>
                         are perfectly valid.
                     </para>
@@ -531,7 +531,7 @@
                             people can attack a man sized target, unless
                             circumstances dictate otherwise.
                         </para>
-                        
+
                         <para>
                             If attackers are armed with long weapons
                             such as spears, then up to six may attack
@@ -567,42 +567,59 @@
                     </para>
 
                     <para>
-                        Some special attacks will modify initiative.
-                        An aggressive attack gives a bonus, a killing
-                        blow will mean the character goes last.
-                        If the initiative roll is fumbled, then the
-                        character acts last.
+                        Some actions are considered to be either slow or
+                        fast. Fast actions always come before other
+                        actions, and slow actions always go after all
+                        other actions. When resolving initiative, resolve
+                        all fast actions first, then all normal actions,
+                        then all slow actions. In a few circumstances,
+                        an action may be very slow, in which case these
+                        are resolved last. Use of some special attacks
+                        will make an action slow or fast.
                     </para>
+                    
+                    <example>
+                        Alice has an initiative of 28, Bob has an initiative
+                        of 24 and Charles has an initiative of 22. Alice
+                        and Bob make normal attacks, but Charles makes
+                        an aggressive attack, which is always fast. When
+                        actions are resolved, fast actions go first, so
+                        Charles is first to act. Next, normal actions
+                        are performed, so Alice acts, followed by Bob.
+                        <br/>
+                        If Alice's action was also an aggressive attack,
+                        then she would be considered fast as well as Charles.
+                        When fast actions are resolved, they would be in
+                        order of Alice, then Charles. Bob would then act
+                        last, taking only a normal speed action.
+                    </example>
 
+                    <para>
+                        If initiative is fumbled, then the character acts
+                        in the next speed category down, so a normal action
+                        becomes slow, and a slow action becomes very slow.
+                    </para>
+                    
                     <sect4>
-                        <title>Who Goes Last?</title>
+                        <title>Reactions</title>
 
                         <para>
-                            Several situations can result in a character
-                            <emphasis>going last</emphasis>. If more than
-                            one character is last, then actions are
-                            resolved in the following order.
+                            A reaction is in response to anothers action.
+                            Some special attack types are considered to
+                            be reactions. In this case, the reacting
+                            character acts immediately after the action
+                            that they are reacting to.
                         </para>
-
-                        <orderedlist type="1">
-                            <item>
-                                All those not going last act in order
-                                of initiative.
-                            </item>
-                            <item>
-                                All those who are going last because
-                                they fumbled, or who are going last
-                                because of a special attack but didn't
-                                fumble, act in order of initiative.
-                            </item>
-                            <item>
-                                All those who fumbled when they were
-                                already going last (e.g. because they
-                                tried a killing blow or similar special
-                                attack), now act in order of initiative.
-                            </item>
-                        </orderedlist>
+                        
+                        <para>
+                            Normally, a reaction can only be used if the
+                            character's action would normally occur before
+                            the event. However. it is delayed until after
+                            the event. A reaction can be carried over until
+                            the next round.
+                        </para>
                     </sect4>
+
                 </sect3>
 
                 <sect3>
@@ -658,1180 +675,1416 @@
                     defense roll, then the attack was a success.
                 </para>
 
-<sect3><title>Multiple Opponents</title>
-<para>
-A defender who is having to defend against multiple opponents will
-be at a penalty to all their defence rolls. It can sometimes be
-better to not defend against all attacks, in order to at least have
-a chance at defending against some of them. It is not possible to
-defend against more than four attacks in a round.
-</para>
-
-<para>
-<table><title>Defending Against Multiple Opponents</title>
-    <colspec colwidth="3cm"/>
-    <colspec colwidth="2cm"/>
-    <colspec colwidth="2cm"/>
-    <thead>
-        <row>
-            <entry>Opponents</entry>
-            <entry>Defence</entry>
-            <entry>Attack</entry>
-        </row>
-    </thead>
-    <tbody>
-        <row>
-            <entry>1</entry>
-            <entry>0</entry>
-            <entry>0</entry>
-        </row>
-        <row>
-            <entry>2</entry>
-            <entry>-10</entry>
-            <entry>-5</entry>
-        </row>
-        <row>
-            <entry>3</entry>
-            <entry>-20</entry>
-            <entry>-10</entry>
-        </row>
-        <row>
-            <entry>4</entry>
-            <entry>-40</entry>
-            <entry>-20</entry>
-        </row>
-    </tbody>
-</table>
-</para>
-</sect3>
-</sect2>
-
-
-<sect2><title>Movement</title>
-
-<para>
-A character can be assumed to be able to move 25m in a round and
-still make an attack. Each metre they move before attacking, they 
-have a -1 penalty to initiative. It is assumed that this is rounded 
-to the nearest 5m, just for simplicity.
-</para>
-</sect2>
-
-</sect1>
-
-<sect1><title>Damage and Wounds</title>
-<para>
-A successful attack can result in damage and/or death to the defender.
-Damage is represented as either wounds or stuns - the former being
-by far the most deadly. Most weapons cause wounds, whilst punching
-someone will cause stun damage. Stuns are temporary, and even the
-worst stun damage will be recovered in a few days.
-</para>
-
-<para>
-Some attacks will cause a mixture of stuns and wounds. Animal attacks
-are often of this kind.
-</para>
-
-<para>
-Damage is measured in levels, and is calculated from the damage
-roll of the attacker and the soak roll of the defender. Soak,
-which includes basic toughness plus protective armour, reduces
-damage suffered from an attack.
-</para>
-
-<para>
-To find the damage, roll the strength x 4 + weapon damage bonus
-of the attacker, and subtract the base soak + armour soak roll
-of the defender. A typical human has a base soak of 12. A full
-suite of chain armour gives a further +13 soak, for a total of
-25. A typical human with a strength of 3 and using a sword has
-a damage of 3 x 4 + 12 = 24.
-</para>
-
-<para>
-If the damage roll is higher than the soak roll, then damage
-of some kind has been caused. For every five points (or part
-thereof) higher, one level of injury is suffered by the target.
-The effects of these injury levels depends on the damage type
-of the weapon - wounds, stuns or split damage.
-</para>
-
-<sect2><title>Wounds</title>
-<para>
-Wounds represent damage that has a good chance of breaking the skin
-and affecting vital organs, or causing massive bleeding or broken
-bones. Every injury level causes one wound, and wounds are
-cumulative from one attack to the next. If a person takes two
-wounds from one attack, and three wounds from a second attack
-the following round, they have a total of five wounds.
-</para>
-
-<para>
-<table><title>Penalties due to Wounds</title>
-    <colspec colwidth="2cm"/>
-    <colspec colwidth="1.5cm"/>
-    <colspec colwidth="1.5cm"/>
-    <colspec colwidth="3cm"/>
-    <thead>
-        <row>
-            <entry>Damage</entry>
-            <entry>Wounds</entry>
-            <entry>Penalty</entry>
-            <entry>Description</entry>
-        </row>
-    </thead>
-    <tbody>
-        <row>
-            <entry>1 - 5</entry>
-            <entry>1</entry>
-            <entry>+0</entry>
-            <entry>Hurt</entry>
-        </row>
-        <row>
-            <entry>6 - 10</entry>
-            <entry>2</entry>
-            <entry>-1</entry>
-            <entry>Light</entry>
-        </row>
-        <row>
-            <entry>11 - 15</entry>
-            <entry>3</entry>
-            <entry>-3</entry>
-            <entry>Medium</entry>
-        </row>
-        <row>
-            <entry>16-20</entry>
-            <entry>4</entry>
-            <entry>-6</entry>
-            <entry>Serious</entry>
-        </row>
-        <row>
-            <entry>21 - 25</entry>
-            <entry>5</entry>
-            <entry>-10</entry>
-            <entry>Critical</entry>
-        </row>
-        <row>
-            <entry>26 - 30</entry>
-            <entry>6</entry>
-            <entry>-15</entry>
-            <entry>Fatal</entry>
-        </row>
-    </tbody>
-</table>
-</para>
-
-<para>
-Each level of wound gives a penalty, as shown in the <emphasis>
-Penalties due to Wounds</emphasis> table. The penalty is to all
-actions performed by the character while at that wound level.
-</para>
-
-<sect3><title>Critical Wounds</title>
-<para>
-If a character becomes critically wounded (-10 penalty), then
-they must make an immediate stamina x 4 roll at difficulty 20.
-Failure means that they fall unconscious at the end of the round.
-It may be assumed that civilians and non-professional warriors
-either fall unconscious, or retreat from battle when their wounds
-reach this state.
-</para>
-</sect3>
-
-<sect3><title>Fatal Wounds</title>
-<para>
-If a character becomes fatally wounded, then they must immediately
-make a stamina roll at difficulty 20 or die (with a fumble chance
-of 3, fumbling resulting in death). If they get a good success
-(succeed by 10 or more), then they may continue normally, otherwise
-they fall unconscious.
-</para>
-
-<sect4><title>Beyond Fatal</title>
-<para>
-If a character suffers damage that takes them beyond <emphasis>
-fatally wounded</emphasis>, then they are considered to be at
-fatal, but the initial stamina difficulty is raised by 5 for each
-wound level beyond fatal they were taken. For example, if someone
-is seriously wounded, and suffers four extra wound levels, they
-will become fatally wounded, and need to make a stamina roll at
-difficulty 30 to remain alive, and 40 to remain conscious.
-</para>
-
-<para>
-The fumble chance is raised by 1 for each wound beyond fatal
-that they are taken.
-</para>
-
-<para>
-Damage such as this only affects the initial stamina roll, and does
-not affect further rolls to remain conscious and alive later on.
-For all other purposes, there are no shades of fatal wounds.
-</para>
-</sect4>
-
-<sect4><title>Surviving Fatal wounds</title>
-<para>
-Unless they receive suitable medical attention, a fatally wounded
-character will die eventually. If the character is still conscious,
-they must make another stamina roll at the end of each round at
-a target difficulty of 30 to remain conscious. Again, if the roll
-fails by 10 or more, then the character dies.
-</para>
-
-<para>
-An unconscious character must make a difficulty 20 roll each minute
-in order to remain alive. Failure means death. A roll must be made
-until the character receives first aid which stabalises their
-condition.
-</para>
-</sect4>
-
-</sect3>
-
-</sect2>
-
-
-<sect2><title>Stuns</title>
-
-<para>
-Unlike wounds, stuns are short term and generally non-fatal. Stun
-damage is caused by attacks which bruise or scratch such as fists,
-chair legs and staffs. It is possible to kill someone with stun
-damage, though it is unlikely.
-</para>
-
-<para>
-Unlike wounds, stun damage is not cumulative. If a character receives
-a number of stuns greater than the stun levels they currently have,
-then they become stunned to that level. The stuns are not added to
-the stuns they already have.
-</para>
-
-<para>
-If a character receives at least one or more stuns which do not exceed
-their current stun level, then they gain one stun.
-</para>
-
-<para>
-Similar to wounds, a character suffers penalties from being stunned.
-The penalties are on a similar scale for wound penalties, and a
-character who is both wounded and stunned suffers both sets of
-penalties.
-</para>
-
-<para>
-<table><title>Penalties due to Stuns</title>
-    <colspec colwidth="2cm"/>
-    <colspec colwidth="1.5cm"/>
-    <colspec colwidth="1.5cm"/>
-    <colspec colwidth="3cm"/>
-    <thead>
-        <row>
-            <entry>Damage</entry>
-            <entry>Stuns</entry>
-            <entry>Penalty</entry>
-            <entry>Description</entry>
-        </row>
-    </thead>
-    <tbody>
-        <row>
-            <entry>1 - 5</entry>
-            <entry>1</entry>
-            <entry>+0</entry>
-            <entry>Bruised</entry>
-        </row>
-        <row>
-            <entry>6 - 10</entry>
-            <entry>2</entry>
-            <entry>-1</entry>
-            <entry>Dazed</entry>
-        </row>
-        <row>
-            <entry>11 - 15</entry>
-            <entry>3</entry>
-            <entry>-3</entry>
-            <entry>Bloodied</entry>
-        </row>
-        <row>
-            <entry>16-20</entry>
-            <entry>4</entry>
-            <entry>-6</entry>
-            <entry>Battered</entry>
-        </row>
-        <row>
-            <entry>21 - 25</entry>
-            <entry>5</entry>
-            <entry>-10</entry>
-            <entry>Beaten</entry>
-        </row>
-        <row>
-            <entry>26 - 30</entry>
-            <entry>6</entry>
-            <entry>-15</entry>
-            <entry>Oblivious</entry>
-        </row>
-    </tbody>
-</table>
-</para>
-
-<para>
-Once a character becomes <emphasis>oblivious</emphasis>, they
-must make a stamina roll of difficulty 30 or fall unconscious.
-Every stun they receive after this requires another stamina
-roll, plus the character suffers a single wound.
-</para>
-
-<sect3><title>Excess stun damage</title>
-<para>
-If the number of stuns suffered in a single attack takes the
-character beyond the <emphasis>oblivious</emphasis> threshold,
-then the excess stuns become wounds, and add to the character's
-current wound total.
-</para>
-
-<para>
-A stamina roll is also required in order to remain conscious.
-The target difficulty is increased by 5 for each excess stun.
-</para>
-</sect3>
-
-</sect2>
-
-<sect2><title>Mixed damage</title>
-<para>
-Some weapons have a damage type of <emphasis>Mixed</emphasis>,
-which causes both stun and wound damage. On a scale of
-severity, it isn't as deadly as wound damage, but is worse than
-stun damage.
-</para>
-
-<para>
-Mixed damage is split equally between stuns and wounds, with any
-remainder going on stuns (so one level of mixed damage is equivalent
-to a single stun).
-</para>
-
-<para>
-All stuns from mixed damage are cumulative. If a character receives
-three levels of mixed damage, he suffers two stuns and one wound.
-If that character already has two stuns and two wounds, he will now
-have four stuns and three wounds.
-</para>
-</sect2>
-
-<sect2><title>Fatigue</title>
-<para>
-Fatigue is not strictly damage, but it is treated in much the same
-way as damage is, so is described here. Fatigue is gained due to
-strenuous exercise, some mental/magical attacks or lack of sleep.
-Depending on the magic system used, spell casting can also result
-in fatigue being gained.
-</para>
-
-<para>
-As for other types of <emphasis>damage</emphasis>, fatigue is
-measured in levels, each level giving a penalty to all actions.
-These levels range from 'OK' to 'Exhausted'.
-</para>
-</sect2>
-
-</sect1>
-
-
-<sect1><title>Armour</title>
-<para>
-The purpose of armour is to keep someone alive by absorbing or
-deflecting the force of a blow away from them. In reality, the
-relationship between weapons and armour is complicated, having
-evolved during an arms race lasting several millennia. As a type
-of armour was developed to counter the weapons then in use, so
-the weapons changed to minimise the effects of the new armour.
-</para>
-
-<para>
-Realistically, it is not always possible to say that one type of
-armour is better at stopping damage than another type. The
-usefulness of armour depends on whether the attack crushes,
-slices or pierces, and there are complications within these as
-well. Yags however, deliberately ignores this. Armour has a
-single protection value which works equally against all types
-of armour.
-</para>
-
-<para>
-A further simplification is that there are no hit locations.
-The protection value of armour also takes into account how
-much of the body it covers. It is left to GMs to rule when
-an attack can avoid armour - generally this will only be
-possible against an unsuspecting foe.
-</para>
-
-<sect2><title>Choosing armour</title>
-<para>
-A full set of armour can consist of several parts, and a character
-can mix and match according to preference and finances. Generally,
-armour cannot be layered - it is not possible to wear two chain
-hauberks at the same time.
-</para>
-
-<para>
-Each item of armour has a protection value, and a load. The total
-load and protection of all worn items is totalled to give the
-final value. So, a character wearing soft leather trousers (with
-a protection of 2) and a soft leather jacket (also 2), would have
-a total armour protection of 4.
-</para>
-
-<para>
-<variablelist>
-    <varlistentry>
-        <term>Jacket</term>
-        <listitem>Covers the torso, arms and upper thighs.</listitem>
-    </varlistentry>
-    
-    <varlistentry>
-        <term>Vest</term>
-        <listitem>Covers the torso and shouldres.</listitem>
-    </varlistentry>
-
-    <varlistentry>
-        <term>Trousers</term>
-        <listitem>Covers the legs and lower abdomen.</listitem>
-    </varlistentry>
-
-    <varlistentry>
-        <term>Helm</term>
-        <listitem>Protects the head.</listitem>
-    </varlistentry>
-
-    <varlistentry>
-        <term>Hauberk</term>
-        <listitem>A term used to describe a chainmail jacket. May
-        cover the legs down to the knees.</listitem>
-    </varlistentry>
-
-    <varlistentry>
-        <term>Coif</term>
-        <listitem>Covers the head, neck and shoulders. May be
-        worn under a helm.</listitem>
-    </varlistentry>
-
-    <varlistentry>
-        <term>Greaves</term>
-        <listitem>Covers the legs. Values given are for a set of
-        greaves, one for each leg.</listitem>
-    </varlistentry>
-
-    <varlistentry>
-        <term>Vambraces</term>
-        <listitem>Protects the arms. As for greaves, values given
-        assume a set of vambraces.</listitem>
-    </varlistentry>
-
-</variablelist>
-</para>
-
-<sect3><title>Stacking Armour</title>
-<para>
-Normally, it is not possible to layer armour on top of other
-armour - if it is managed, only the highest protection value
-is applied. However, some types of armour are designed to
-layer, and in this case the protection values are added
-together.
-</para>
-
-<para>
-Soft leather armour can be worn underneath chain or plate
-armour. Plate armour such as greaves, vambraces and breastplates
-can be worn over chain armour. It is possible to wear plate
-over chain over leather.
-</para>
-
-<para>
-The other layering combination is that a helm can be worn over
-a chain mail coif.
-</para>
-</sect3>
-</sect2>
-
-<sect2><title>Advantages of Armour</title>
-<para>
-The total protection of all armour worn adds to the soak of the
-wearer.
-</para>
-</sect2>
-</sect1>
-
-
-<sect1><title>Healing and First aid</title>
-
-<sect2><title>First aid</title>
-<para>
-After a character has become injured, it may be necessary for
-first aid to be applied to the wounds in order for them to heal.
-Fresh wounds need to be stabilised, a process which requires another
-character to make an intelligence x first aid roll on the wounded
-character.
-</para>
-
-<para>
-<table><title>First aid Difficulties</title>
-    <colspec colwidth="2cm"/>
-    <colspec colwidth="2cm"/>
-    <colspec colwidth="1.5cm"/>
-    <thead>
-        <row>
-            <entry>Stuns</entry>
-            <entry>Wounds</entry>
-            <entry>Target</entry>
-        </row>
-    </thead>
-    <tbody>
-        <row><entry>Bruised</entry><entry>--</entry><entry>0</entry></row>
-        <row><entry>Dazed</entry><entry>--</entry><entry>5</entry></row>
-        <row><entry>Bloodied</entry><entry>--</entry><entry>10</entry></row>
-        <row><entry>Battered</entry><entry>Hurt</entry><entry>10</entry></row>
-        <row><entry>Beaten</entry><entry>Light</entry><entry>15</entry></row>
-        <row><entry>Oblivious</entry><entry>Medium</entry><entry>15</entry></row>
-        <row><entry>--</entry><entry>Serious</entry><entry>20</entry></row>
-        <row><entry>--</entry><entry>Critical</entry><entry>20</entry></row>
-        <row><entry>--</entry><entry>Fatal</entry><entry>25</entry></row>
-    </tbody>
-</table>
-</para>
-
-<para>
-A character may first aid themselves - as long as they are conscious -
-but they suffer all their wound penalties. If the first aid roll exceeds
-the target difficulty by 10 or more, then not only is the wound
-stabilised, but one injury level is immediately healed.
-</para>
-
-<para>
-If a character is both wounded and stunned, a separate roll is needed for
-each. It takes one minute to perform first aid on a person. First aid may
-be attempted as many times as required, until it succeeds.
-</para>
-
-<para>
-A character who is fatally wounded gets a first aid roll before they roll
-to see if they die.
-</para>
-</sect2>
-
-<sect2><title>Natural healing</title>
-
-<sect3><title>Recovering from stuns</title>
-<para>
-Natural healing can only take place once an injury has been stabilised
-with a successful first aid roll. A stunned character who is bruised or
-dazed gets a stamina roll every hour at a target difficulty of 20.
-Success means that one stun is recovered. If the character spends the
-time resting, then the difficulty is reduced to 15. 
-</para>
-
-<para>
-More serious stun injuries are recovered each night. A similar stamina
-roll is made after a night's rest, with success recovering one level
-of stun. The severity of the stuns do not affect the recovery difficulty.
-</para>
-</sect3>
-
-<sect3><title>Recovering from wounds</title>
-<para>
-A wounded character who is hurt or lightly wounded gets a stamina
-roll after a full night's rest. The stamina difficulty is 20, and
-success means one wound level is recovered.
-</para>
-
-<para>
-A more seriously wounded character gets a recovery roll at the end
-of each week. The difficulty depends on the severity of the injury.
-</para>
-
-<para>
-<table><title>Recovering from wounds</title>
-    <colspec colwidth="2cm"/>
-    <colspec colwidth="1.5cm"/>
-    <thead>
-        <row>
-            <entry>Wounds</entry>
-            <entry>Target</entry>
-        </row>
-    </thead>
-    <tbody>
-        <row><entry>Medium</entry><entry>20</entry></row>
-        <row><entry>Serious</entry><entry>25</entry></row>
-        <row><entry>Critical</entry><entry>30</entry></row>
-        <row><entry>Fatal</entry><entry>35</entry></row>
-    </tbody>
-</table>
-</para>
-
-<para>
-If the character fumbles their stamina roll, then their injury
-worsens, and they gain an extra wound level. A character who is
-already fatally wounded will die.
-</para>
-
-<para>
-It is not actually possible for a person with average or worse
-stamina to recover from being fatally wounded alone. Someone
-with the first aid skill can grant a bonus if they spend time
-looking after the wounded person. An intelligence x first aid
-skill roll is made, and a bonus of +1 per full 5 rolled is
-added to the patient's stamina roll.
-</para>
-
-<para>
-A patient can look after themselves, though they suffer wounds
-penalties to do so.
-</para>
-</sect3>
-</sect2>
-
-</sect1>
-
-<sect1><title>Missile Combat</title>
-<para>
-So far everything that has been covered has dealt with melee
-combat between antagonists who are in close combat. The rules
-for missile weapons are similar. Unless a difference is noted,
-assume that missile combat works the same way.
-</para>
-
-<sect2><title>Ranged combat skills</title>
-<para>
-As for melee combat, there are a number of different styles
-which make use of a particular skill.
-</para>
-
-<sect3><title>Thrown weapons</title>
-<para>
-All characters have some ability with the <emphasis>Throw</emphasis>
-talent, which is the ranged equivalent of the <emphasis>
-Brawl</emphasis> skill. Thrown spears, javelins, bottles, slings and
-axes are covered under this skill. This actually covers the
-majority of missile combat.
-</para>
-</sect3>
-
-<sect3><title>Bow</title>
-<para>
-The bow, including both the longbow and shortbow, requires this
-skill. The bow can be quite a deadly weapon in the hands of a
-skilled professional, but can be difficult to use.
-</para>
-
-<para>
-Both longbows and shortbows are constructed for a given strength
-of user. A bow's strength rating is both the minimum and maximum
-strength. A stronger bowman cannot use their full strength when
-using the weapon.
-</para>
-</sect3>
-
-<sect3><title>Crossbow</title>
-<para>
-Crossbows have their own skill. They are easier to use for the
-unskilled user, but don't have the accuracy at long range compared
-to the long bow.
-</para>
-</sect3>
-
-</sect2>
-
-<sect2><title>Missile Ranges</title>
-<para>
-There are a number of range categories which are defined for
-all missile weapons. These are short, medium, long and extreme.
-Ranges are given in metres, and cover any distance up to and
-including the range given for a particular weapon.
-</para>
-
-<para>
-<table><title>Range Categories</title>
-    <colspec colwidth="1.5cm"/>
-    <colspec colwidth="1.5cm"/>
-    <colspec colwidth="1.5cm"/>
-    <thead>
-        <row>
-            <entry>Range</entry>
-            <entry>Attack</entry>
-            <entry>Damage</entry>
-        </row>
-    </thead>
-    <tbody>
-        <row><entry>Short</entry><entry>+0</entry><entry>+0</entry></row>
-        <row><entry>Medium</entry><entry>-5</entry><entry>+0</entry></row>
-        <row><entry>Long</entry><entry>-15</entry><entry>-5</entry></row>
-        <row><entry>Extreme</entry><entry>-30</entry><entry>-10</entry></row>
-    </tbody>
-</table>
-</para>
-
-<para>
-The range modifier subtracts from the attacker's attack roll,
-making it harder to hit targets at longer range. At long and
-extreme range, the damage of a ranged attack is also reduced.
-</para>
-
-</sect2>
-
-<sect2><title>Missile Attacks</title>
-<para>
-If a character declares an attack with a missile weapon, then
-they roll initiative as per melee combat, and act in standard
-initiative order.
-</para>
-
-<sect3><title>Defending with a missile weapon</title>
-<para>
-One problem with missile weapons is that it is not possible to
-parry with them. If the weapon has an equivalent melee defence
-total, then use the defence total for that (i.e. a thrown
-dagger is treated as a melee dagger for defence), otherwise it
-is not possible to parry with a missile weapon. Instead, the
-character must perform a brawling defence (agility x brawl),
-with no modifier for the weapon being used.
-</para>
-
-<para>
-Once a thrown weapon has been thrown, any defence bonuses are
-lost.
-</para>
-</sect3>
-
-<sect3><title>Defending against missile attacks</title>
-<para>
-Missile attacks can be dodged, but not parried unless the defender
-has a shield, in which case they get the defence bonus of the
-shield, but not of any other weapon they are using.
-</para>
-</sect3>
-
-<sect3><title>Firing into melee</title>
-<para>
-Firing into a melee combat is rarely a good idea, but sometimes
-it is done anyway. If the target of a missile attack is in close
-combat with anyone else, then the fumble chance of the attack
-is increased by two for each extra person. Firing into a melee
-involving six people, would give a +10 to the fumble chance, 
-meaning the attacker has a chance of hitting the wrong target if
-the d20 rolls less than 12.
-</para>
-
-<para>
-The chance of fumbling can be modified if the target is much larger
-or smaller than the obstructions. This is left for the GM to
-decide, but if two humans are fighting a 20m long dragon, then it
-is suggested that no penalty is applied.
-</para>
-
-<para>
-A fumble in this situation means that a random target is hit. It
-is possible to hit the 'right' random target. Chance of hitting
-each target should be based on size, and ideally distance from
-the intended target. In reality, just assigning equal chance to
-everyone is good enough.
-</para>
-
-<para>
-If someone is wrestling with the intended target, add +5 to +15
-to the fumble chance, depending on how bad a shot it is. In all
-cases, a luck point can be spent before hand to negate, or at
-least reduce, the chance of hitting a friend.
-</para>
-</sect3>
-
-</sect2>
-
-</sect1>
-
-<sect1><title>Advanced Combat</title>
-
-<sect2><title>Special Attacks</title>
-<para>
-Instead of making a normal attack, before initiative is determined,
-a character can opt to make one special attack. Unless noted
-otherwise, these are available to all forms of attack, and all
-types of weapons. In some cases, special attacks can be combined,
-but only if it is specifically noted.
-</para>
-
-<sect3><title>Aggressive</title>
-<para>
-An all out attack is made, giving a +5 bonus to the attack and
-initiative rolls, but a -10 penalty to all defence rolls. May 
-only be performed with melee attacks.
-</para>
-</sect3>
-
-<sect3><title>Aimed Shot</title>
-<para>
-Only applicable for missile attacks. If an entire round is spent
-aiming, then +1 is added to the attacker's perception for the
-attack. Spending more than a round aiming does not give further
-bonuses, but a <emphasis>killing blow</emphasis> or <emphasis>
-ambush</emphasis> may be performed.
-</para>
-</sect3>
-
-
-<sect3><title>Ambush</title>
-<para>
-If the target is unaware of the attack, then an ambush may be
-performed. This grants no bonuses to the attack, but the total
-soak of the target is halved. Furthermore, then attack counts
-as a <emphasis>killing blow</emphasis>. An ambusher cannot
-defend during the round, and such an attack is always considered
-to be slow.
-</para>
-</sect3>
-
-<sect3><title>Cleaving Attack</title>
-<para>
-A cleaving attack is always slow, and also gives a -10 penalty
-to the attack roll, or -5 if a two handed weapon is being used.
-If the attack is successful, the armour (not soak) of the target
-is halved. Such an attack can only be performed in melee.
-</para>
-</sect3>
-
-<sect3><title>Defensive</title>
-<para>
-If the round is spent fighting defensively, then a +5 bonus
-to defence rolls is gained, and a -10 penalty to initiative
-and attack rolls. Missile combat is not possible.
-</para>
-</sect3>
-
-<sect3><title>Disarm</title>
-<para>
-This is a melee attack, which can be perform with a melee weapon
-against a melee weapon. It cannot be used against shields, and
-suffers -10 against a weapon which is being used two handed. A
-weapon attack roll is made at -10, versus the defence roll as per
-normal (though no defence penalty is suffered from fighting multiple
-opponents for this roll only). On success, the defender is off
-balance and looses attack and defence bonuses from that weapon for
-the rest of the round (it is possible that this has no effect). A
-second oppossed roll is made, with the dexterity of the attack and
-defender. If the attack equals or exceeds the defender, then the
-defender has been disarmed.
-</para>
-</sect3>
-
-<sect3><title>Feint</title>
-<para>
-No attack is made this turn (but character can defend as normal),
-and a +5 bonus to attack and initiative is gained next turn, as
-long as the same opponent is being fought. Only possible in
-melee, and during the following round, any other special attack
-can be used. Further, special attacks which automatically go last,
-instead act at normal initiative.
-</para>
-</sect3>
-
-<sect3><title>Killing blow</title>
-<para>
-A killing blow is a slow attack, and the character suffers a -10
-penalty to the attack roll. If the attack is successful, and at
-least two full categories of damage are caused, the target is
-instantly killed. If performed with a weapon doing stun or mixed
-damage, the target is knocked out instead.
-</para>
-</sect3>
-
-<sect3><title>Subduing Attack</title>
-<para>
-Any attack with a melee weapon can be turned into a subduing
-attack, causing stun damage instead of wounds or mixed damage.
-</para>
-</sect3>
-
-</sect2>
-
-<sect2 status="alpha"><title>Counter attacks</title>
-
-<para>
-Counter attacks are designed to make combat slightly more
-cinematic. This does not mean unrealistic, but to give a
-bit of the flavour of sword fights seen in films.
-</para>
-
-<para>
-A counter attack is a secondary attack which may be made
-against an attacker after a successful defence. It is
-secondary because the primary weapon is not used, or if it
-is, then only in a minor role. For example, the defender
-parries an attackers sword, then kicks them in the stomach,
-or bashes them with their shield. As it stands, given that
-a character only gets one attack each round, it would be
-very inefficient to perform this sort of attack instead of
-the primary attack (which is going to have a much higher
-chance of being effective).
-</para>
-
-<para>
-If the defence roll succeeded by 10 or more, then the
-defender has the option of performing a counter attack
-against the attacker. Whether a counter attack is performed
-or not does not affect any other attack or defence rolls
-each round. One counter attack may be made per defence -
-since multiple defences are penalised already, there is
-no further penalty for performing multiple counter attacks.
-</para>
-
-<para>
-The counter attack is made as a brawling attack, regardless
-of the weapon being used. The defender gets a (free) brawling
-defence, though if they are already making multiple defences,
-then any defence penalty also applies to the brawl defence.
-</para>
-
-</sect2>
-
-<sect2><title>Berserkers</title>
-<para>
-Berserkers are mad warriors who show little concern for their own
-survival. Fueled up on bloodlust, religious fervour or drugs, they
-are able to shrug aside injuries, and fight with a strength and
-ferocity not normally possible.
-</para>
-
-<para>
-Being a berserker is considered an <emphasis>advantage</emphasis>,
-and only characters who have purchased it at character generation
-may <emphasis>go berserk</emphasis>.
-</para>
-
-<sect3><title>The berserker advantage</title>
-<para>
-The advantage is purchased to a level, from one upwards. Normally
-six is the maximum, though higher levels may be possible through
-divine inspiration or magic.
-</para>
-
-<para>
-If may be possible to increase the level of this advantage over
-time, though it may not be improved with experience. Being a
-berserker is a mind set which is difficult to learn.
-</para>
-</sect3>
-
-<sect3><title>Going berserk</title>
-<para>
-Going berserk is relatively easy, as long as there is a reason to
-fight. No roll is necessary - if there is a fight at hand, and
-the character wants to go berserk, then they can do, and they gain
-all the bonuses thereof.
-</para>
-
-<para>
-If there is no-one to fight, then entering a berserk rage is not
-possible. There must be the promise of blood letting in the very
-near future.
-</para>
-
-<sect4><title>Not going berserk</title>
-<para>
-If a berserker gets involved in a fight in which they do not want
-to go berserk, then a will check is required in order to restrain
-themselves. Failure means that they go berserk, getting all the
-bonuses and penalties associated with that.
-</para>
-
-<para>
-The difficulty to avoid going berserk is based on the size of the
-fight. The bigger and more heroic the fight, the harder it is to
-resist going berserk. The character rolls will x 4, at a penalty
-of 5 x berserker level.
-</para>
-
-<para>
-<table><title>Resisting Going Berserk</title>
-    <colspec colwidth="5cm"/>
-    <colspec colwidth="1.5cm"/>
-    <thead>
-        <row>
-            <entry>Type of fight</entry>
-            <entry>Target</entry>
-        </row>
-    </thead>
-    <tbody>
-        <row>
-            <entry>A small, friendly fight</entry>
-            <entry>0</entry>
-        </row>
-        <row>
-            <entry>Against greatly inferior foe</entry>
-            <entry>5</entry>
-        </row>
-        <row>
-            <entry>Against mildly inferior foe</entry>
-            <entry>10</entry>
-        </row>
-        <row>
-            <entry>Against similar foe</entry>
-            <entry>15</entry>
-        </row>
-        <row>
-            <entry>Against superior foe</entry>
-            <entry>20</entry>
-        </row>
-        <row>
-            <entry>Against greatly superior foe</entry>
-            <entry>25</entry>
-        </row>
-    </tbody>
-</table>
-</para>
-
-<para>
-Whether a foe is inferior or superior, depends on the skill of the
-foe, as well as numerical superiority.
-</para>
-</sect4>
-</sect3>
-
-<sect3><title>Effects of berserk combat</title>
-<para>
-A berserk warrior must fight the nearest foe to them, and may never
-use missile weapons. If there is not a foe in range, then they must
-close with the enemy as quickly as possible. A berserker may never
-fight defensively.
-</para>
-
-<para>
-The level of the berserker advantage adds to the attack, initiative
-and damage rolls of the berserker. It also subtracts from the
-berserker's defence rolls.
-</para>
-
-<para>
-Any wound, stun or fatigue penalties are reduced by the level of
-the advantage. Rolls to stay alive and conscious get a bonus equal
-to the advantage.
-</para>
-
-<para>
-Finally, a berserker gets extra wound and stun levels. These are
-temporary and are lost at the end of the battle. One extra wound
-and stun level is gained per two full levels of advantage. The first
-level is an extra <emphasis>hurt</emphasis> and <emphasis>bruised
-</emphasis> level. The second is an extra <emphasis>light</emphasis>
-and <emphasis>dazed</emphasis> level. The third is an extra
-<emphasis>medium</emphasis> and <emphasis>bloodied</emphasis> level.
-</para>
-
-<para>
-The real level is lost first when the character is injured, and the
-temporary level is lost second. At the end of the fight, the
-temporary levels go away, as do any wounds or stuns in them.
-</para>
-</sect3>
-
-</sect2>
-
-<sect2><title>Mounted combat</title>
-<para>
-Fighting from horse back can be tricky, but for a skilled rider it
-can be a big advantage. If the rider has a riding skill less than
-four, then an agility based riding check is required whenever an
-attack is made, against a target of 15. A rider with a skill of
-four or more does not have to make this roll.
-</para>
-
-<para>
-Failure of the riding roll means that the character becomes unstable,
-and must make a second roll at the same difficulty to remain on the
-horse. If the rider is not using saddle and stirrups, then both
-difficulties are increased by 5.
-</para>
-
-<para>
-The character's ride skill adds to all initiative, attack, defence
-and damage rolls made while on horseback. For example, a rider with
-a skill of 5, gets +5 to all these rolls. No other bonuses due to
-being on higher ground etc are gained. The bonuses do apply when
-fighting another mounted warrior.
-</para>
-</sect2>
-
-<sect2><title>Poison</title>
-<para>
-Use of poison is often frowned upon by honourable warriors, but not
-everyone is honourable, and not everyone is a warrior willing to
-stand up in a toe-to-toe fight. Poison may be used on darts, put
-in food, or put on bladed weapons. Different types of poisons have
-varying effectiveness, though very few will give instant death.
-</para>
-
-<para>
-For a full discussion on the use of poisons, see Herb Lore. However,
-some simple poison rules are given here.
-</para>
-
-<sect3><title>Resisting Poison</title>
-<para>
-Any poison may be resisted by making a resistence roll. This is
-normally stamina x size of the intended victim.
-</para>
-</sect3>
-
-<sect3><title>Effects of Poison</title>
-<para>
-Poison can take a varying amount of time to take affect. This may
-be a round, a minute, 15 minutes, a day or any other period of time.
-When a poison is first administered, a resistence roll is not made,
-instead the roll is made after the given period of time has passed.
-Even deadly poisons will tend to have times in the minutes.
-</para>
-
-<para>
-The target difficulty of the resistence roll is the strength of the
-poison. A good poison will tend to have a strength in the 30 - 50 range.
-Whether the resistence roll was successful or not, the poison will
-continue to do damage to the victim. Once the poison's effect time
-has passed again, then another resistence roll is required, at a
-reduced difficulty. Normally, the difficulty drops by 5 each time,
-though this will be specified in the poison description.
-</para>
-
-<para>
-For example, a poison with a strength of 40, and a time of 1 minute,
-would require a resistence roll against 40 after one minute, against
-35 after two minutes, then 30 after three minutes etc. Once 0 or less
-has been reached, no further rolls are required and the poison is
-considered to have finished its work.
-</para>
-
-<sect4><title>When poison works</title>
-<para>
-If a resistence roll was successful, then the poison has no effect
-over that time period. If it failed however, then the victim suffers
-some effect from the poison. Poisons will have a number of effects
-listed, in increasing order of severity. For example, these might
-be nausea, weakness, cramps, paralysis, death.
-</para>
-
-<para>
-The first time the resistence is failed, the first effect takes
-affect. The next failure causes the next effect and so on. For the
-above example, for a poison of strength 40, most people are likely
-to suffer nausea, weakness and cramps. Many people may suffer
-paralysis, and a few would actually die (in worst case, a stamina x
-size roll of 20 would need to be failed in order to die).
-</para>
-</sect4>
-
-</sect3>
-
-</sect2>
-
-</sect1>
+                <sect3>
+                    <title>Multiple Opponents</title>
+
+                    <para>
+                        A defender who is having to defend against
+                        multiple opponents will be at a penalty to all
+                        their defence rolls. It can sometimes be better
+                        to not defend against all attacks, in order to
+                        at least have a chance at defending against some
+                        of them. It is not possible to defend against more
+                        than four attacks in a round.
+                    </para>
+
+
+                    <table>
+                        <title>Defending Against Multiple Opponents</title>
+
+                        <colspec colwidth="3cm"/>
+                        <colspec colwidth="2cm"/>
+                        <colspec colwidth="2cm"/>
+                        <thead>
+                            <row>
+                                <entry>Opponents</entry>
+                                <entry>Defence</entry>
+                                <entry>Attack</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>1</entry>
+                                <entry>0</entry>
+                                <entry>0</entry>
+                            </row>
+                            <row>
+                                <entry>2</entry>
+                                <entry>-10</entry>
+                                <entry>-5</entry>
+                            </row>
+                            <row>
+                                <entry>3</entry>
+                                <entry>-20</entry>
+                                <entry>-10</entry>
+                            </row>
+                            <row>
+                                <entry>4</entry>
+                                <entry>-40</entry>
+                                <entry>-20</entry>
+                            </row>
+                        </tbody>
+                    </table>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Movement</title>
+
+                <para>
+                    A character can be assumed to be able to move five times
+                    their agility in metres per round and still make an
+                    attack. Each metre they move
+                    before attacking, they have a -1 penalty to initiative.
+                </para>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Damage and Wounds</title>
+
+            <para>
+                A successful attack can result in damage and/or death to
+                the defender. Damage is represented as either wounds or
+                stuns - the former being by far the most deadly. Most
+                weapons cause wounds, whilst punching someone will cause
+                stun damage. Stuns are temporary, and even the worst stun
+                damage will be recovered in a few days.
+            </para>
+
+            <para>
+                Some attacks will cause a mixture of stuns and wounds.
+                Animal attacks are often of this kind.
+            </para>
+
+            <para>
+                Damage is measured in levels, and is calculated from the
+                damage roll of the attacker and the soak roll of the
+                defender. Soak, which includes basic toughness plus
+                protective armour, reduces damage suffered from an attack.
+            </para>
+
+            <para>
+                To find the damage, roll the strength x 4 + weapon damage
+                bonus of the attacker, and subtract the base soak + armour
+                soak roll of the defender. A typical human has a base soak
+                of 12. A full suite of chain armour gives a further +13
+                soak, for a total of 25. A typical human with a strength
+                of 3 and using a sword has a damage of 3 x 4 + 12 = 24.
+            </para>
+
+            <para>
+                If the damage roll is higher than the soak roll, then
+                damage of some kind has been caused. For every five points
+                (or part thereof) higher, one level of injury is suffered
+                by the target. The effects of these injury levels depends
+                on the damage type of the weapon - wounds, stuns or split
+                damage.
+            </para>
+
+            <sect2>
+                <title>Wounds</title>
+
+                <para>
+                    Wounds represent damage that has a good chance of
+                    breaking the skin and affecting vital organs, or
+                    causing massive bleeding or broken bones. Every
+                    injury level causes one wound, and wounds are
+                    cumulative from one attack to the next. If a person
+                    takes two wounds from one attack, and three wounds
+                    from a second attack the following round, they have
+                    a total of five wounds.
+                </para>
+
+                <table>
+                    <title>Penalties due to Wounds</title>
+
+                    <colspec colwidth="2cm"/>
+                    <colspec colwidth="1.5cm"/>
+                    <colspec colwidth="1.5cm"/>
+                    <colspec colwidth="3cm"/>
+                    <thead>
+                        <row>
+                            <entry>Damage</entry>
+                            <entry>Wounds</entry>
+                            <entry>Penalty</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>1 - 5</entry>
+                            <entry>1</entry>
+                            <entry>+0</entry>
+                            <entry>Hurt</entry>
+                        </row>
+                        <row>
+                            <entry>6 - 10</entry>
+                            <entry>2</entry>
+                            <entry>-1</entry>
+                            <entry>Light</entry>
+                        </row>
+                        <row>
+                            <entry>11 - 15</entry>
+                            <entry>3</entry>
+                            <entry>-3</entry>
+                            <entry>Medium</entry>
+                        </row>
+                        <row>
+                            <entry>16-20</entry>
+                            <entry>4</entry>
+                            <entry>-6</entry>
+                            <entry>Serious</entry>
+                        </row>
+                        <row>
+                            <entry>21 - 25</entry>
+                            <entry>5</entry>
+                            <entry>-10</entry>
+                            <entry>Critical</entry>
+                        </row>
+                        <row>
+                            <entry>26 - 30</entry>
+                            <entry>6</entry>
+                            <entry>-15</entry>
+                            <entry>Fatal</entry>
+                        </row>
+                    </tbody>
+                </table>
+
+                <para>
+                    Each level of wound gives a penalty, as shown in the
+                    <emphasis>Penalties due to Wounds</emphasis> table.
+                    The penalty is to all actions performed by the character 
+                    while at that wound level.
+                </para>
+
+                <sect3>
+                    <title>Critical Wounds</title>
+
+                    <para>
+                        If a character becomes critically wounded
+                        (-10 penalty), then they must make an immediate
+                        stamina x 4 roll at difficulty 20. Failure means
+                        that they fall unconscious at the end of the round.
+                        It may be assumed that civilians and
+                        non-professional warriors either fall unconscious,
+                        or retreat from battle when their wounds reach this
+                        state.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Fatal Wounds</title>
+
+                    <para>
+                        If a character becomes fatally wounded, then they
+                        must immediately make a stamina roll at difficulty 20
+                        or die (with a fumble chance of 3, fumbling resulting
+                        in death). If they get a good success (succeed by 10
+                        or more), then they may continue normally, otherwise
+                        they fall unconscious.
+                    </para>
+
+                    <sect4>
+                        <title>Beyond Fatal</title>
+
+                        <para>
+                            If a character suffers damage that takes them
+                            beyond <emphasis>fatally wounded</emphasis>,
+                            then they are considered to be at fatal, but
+                            the initial stamina difficulty is raised by 5
+                            for each wound level beyond fatal they were
+                            taken. For example, if someone is seriously
+                            wounded, and suffers four extra wound levels,
+                            they will become fatally wounded, and need
+                            to make a stamina roll at difficulty 30 to 
+                            remain alive, and 40 to remain conscious.
+                        </para>
+
+                        <para>
+                            The fumble chance is raised by 1 for each 
+                            wound beyond fatal that they are taken.
+                        </para>
+
+                        <para>
+                            Damage such as this only affects the initial
+                            stamina roll, and does not affect further 
+                            rolls to remain conscious and alive later on.
+                            For all other purposes, there are no shades 
+                            of fatal wounds.
+                        </para>
+                    </sect4>
+
+                    <sect4><title>Surviving Fatal wounds</title>
+                        <para>
+                            Unless they receive suitable medical attention,
+                            a fatally wounded character will die eventually.
+                            If the character is still conscious, they
+                            must make another stamina roll at the end of
+                            each round at a target difficulty of 30 to 
+                            remain conscious. Again, if the roll
+                            fails by 10 or more, then the character dies.
+                        </para>
+
+                        <para>
+                            An unconscious character must make a difficulty
+                            20 roll each minute in order to remain alive. 
+                            Failure means death. A roll must be made
+                            until the character receives first aid which 
+                            stabalises theircondition.
+                        </para>
+                    </sect4>
+                </sect3>
+            </sect2>
+
+
+            <sect2>
+                <title>Stuns</title>
+
+                <para>
+                    Unlike wounds, stuns are short term and generally
+                    non-fatal. Stun damage is caused by attacks which
+                    bruise or scratch such as fists, chair legs and 
+                    staffs. It is possible to kill someone with stun
+                    damage, though it is unlikely.
+                </para>
+
+                <para>
+                    Unlike wounds, stun damage is not cumulative. If a
+                    character receives a number of stuns greater than
+                    the stun levels they currently have, then they become 
+                    stunned to that level. The stuns are not added to
+                    the stuns they already have.
+                </para>
+
+                <para>
+                    If a character receives at least one or more stuns
+                    which do not exceed their current stun level, then 
+                    they gain one stun.
+                </para>
+
+                <para>
+                    Similar to wounds, a character suffers penalties
+                    from being stunned. The penalties are on a similar
+                    scale for wound penalties, and a character who is 
+                    both wounded and stunned suffers both sets of
+                    penalties.
+                </para>
+
+                <table>
+                    <title>Penalties due to Stuns</title>
+                    <colspec colwidth="2cm"/>
+                    <colspec colwidth="1.5cm"/>
+                    <colspec colwidth="1.5cm"/>
+                    <colspec colwidth="3cm"/>
+                    <thead>
+                        <row>
+                            <entry>Damage</entry>
+                            <entry>Stuns</entry>
+                            <entry>Penalty</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>1 - 5</entry>
+                            <entry>1</entry>
+                            <entry>+0</entry>
+                            <entry>Bruised</entry>
+                        </row>
+                        <row>
+                            <entry>6 - 10</entry>
+                            <entry>2</entry>
+                            <entry>-1</entry>
+                            <entry>Dazed</entry>
+                        </row>
+                        <row>
+                            <entry>11 - 15</entry>
+                            <entry>3</entry>
+                            <entry>-3</entry>
+                            <entry>Bloodied</entry>
+                        </row>
+                        <row>
+                            <entry>16-20</entry>
+                            <entry>4</entry>
+                            <entry>-6</entry>
+                            <entry>Battered</entry>
+                        </row>
+                        <row>
+                            <entry>21 - 25</entry>
+                            <entry>5</entry>
+                            <entry>-10</entry>
+                            <entry>Beaten</entry>
+                        </row>
+                        <row>
+                            <entry>26 - 30</entry>
+                            <entry>6</entry>
+                            <entry>-15</entry>
+                            <entry>Oblivious</entry>
+                        </row>
+                    </tbody>
+                </table>
+
+                <para>
+                    Once a character becomes <emphasis>oblivious</emphasis>,
+                    they must make a stamina roll of difficulty 30 or fall
+                    unconscious. Every stun they receive after this
+                    requires another stamina roll, plus the character 
+                    suffers a single wound.
+                </para>
+
+                <sect3>
+                    <title>Excess stun damage</title>
+
+                    <para>
+                        If the number of stuns suffered in a single attack
+                        takes the character beyond the 
+                        <emphasis>oblivious</emphasis> threshold, then
+                        the excess stuns become wounds, and add to the 
+                        character's current wound total.
+                    </para>
+
+                    <para>
+                        A stamina roll is also required in order to
+                        remain conscious. The target difficulty is 
+                        increased by 5 for each excess stun.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Mixed damage</title>
+
+                <para>
+                    Some weapons have a damage type of
+                    <emphasis>Mixed</emphasis>, which causes both stun and
+                    wound damage. On a scale of severity, it isn't as deadly
+                    as wound damage, but is worse than stun damage.
+                </para>
+
+                <para>
+                    Mixed damage is split equally between stuns and wounds,
+                    with any remainder going on stuns (so one level of
+                    mixed damage is equivalent to a single stun).
+                </para>
+
+                <para>
+                    All stuns from mixed damage are cumulative. If a
+                    character receives three levels of mixed damage, he
+                    suffers two stuns and one wound. If that character 
+                    already has two stuns and two wounds, he will now
+                    have four stuns and three wounds.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Fatigue</title>
+
+                <para>
+                    Fatigue is not strictly damage, but it is treated
+                    in much the same way as damage is, so is described
+                    here. Fatigue is gained due to strenuous exercise, 
+                    some mental/magical attacks or lack of sleep. Depending 
+                    on the magic system used, spell casting can also result
+                    in fatigue being gained.
+                </para>
+
+                <para>
+                    As for other types of <emphasis>damage</emphasis>,
+                    fatigue is measured in levels, each level giving a
+                    penalty to all actions. These levels range from 'OK' 
+                    to 'Exhausted'.
+                </para>
+            </sect2>
+        </sect1>
+
+
+        <sect1>
+            <title>Armour</title>
+
+            <para>
+                The purpose of armour is to keep someone alive by absorbing
+                or deflecting the force of a blow away from them. In reality,
+                the relationship between weapons and armour is complicated,
+                having evolved during an arms race lasting several millennia.
+                As a type of armour was developed to counter the weapons
+                then in use, so the weapons changed to minimise the effects 
+                of the new armour.
+            </para>
+
+            <para>
+                Realistically, it is not always possible to say that one
+                type of armour is better at stopping damage than another
+                type. The usefulness of armour depends on whether the
+                attack crushes, slices or pierces, and there are
+                complications within these as well. Yags however, 
+                deliberately ignores this. Armour has a single 
+                protection value which works equally against all types
+                of armour.
+            </para>
+
+            <para>
+                A further simplification is that there are no hit locations.
+                The protection value of armour also takes into account how
+                much of the body it covers. It is left to GMs to rule when
+                an attack can avoid armour - generally this will only be
+                possible against an unsuspecting foe.
+            </para>
+
+            <sect2>
+                <title>Choosing armour</title>
+
+                <para>
+                    A full set of armour can consist of several parts, and a
+                    character can mix and match according to preference and
+                    finances. Generally, armour cannot be layered - it is 
+                    not possible to wear two chain hauberks at the same time.
+                </para>
+
+                <para>
+                    Each item of armour has a protection value, and a load.
+                    The total load and protection of all worn items is
+                    totalled to give the final value. So, a character
+                    wearing soft leather trousers (with a protection of 2)
+                    and a soft leather jacket (also 2), would have
+                    a total armour protection of 4.
+                </para>
+
+                <termlist>
+                    <entry term="Jacket">
+                        Covers the torso, arms and upper thighs.
+                    </entry>
+
+                    <entry term="Vest">
+                        Covers the torso and shouldres.
+                    </entry>
+
+                    <entry term="Trousers">
+                        Covers the legs and lower abdomen.
+                    </entry>
+
+                    <entry term="Helm">
+                        Protects the head.
+                    </entry>
+        
+                    <entry term="Hauberk">
+                        A term used to describe a chainmail jacket. May
+                        cover the legs down to the knees.
+                    </entry>
+                    
+                    <entry term="Coif">
+                        Covers the head, neck and shoulders. May be worn
+                        under a helm.
+                    </entry>
+        
+                    <entry term="Greaves">
+                        Covers the legs. Values given are for a set of
+                        greaves, one for each leg.
+                    </entry>
+                    
+                    <entry term="Vambraces">
+                        Protects the arms. As for greaves, values given
+                        assume a set of vambraces.
+                    </entry>
+                </termlist>
+
+                <sect3>
+                    <title>Stacking Armour</title>
+
+                    <para>
+                        Normally, it is not possible to layer armour on top
+                        of other armour - if it is managed, only the highest
+                        protection value is applied. However, some types of
+                        armour are designed to layer, and in this case the 
+                        protection values are added together.
+                    </para>
+
+                    <para>
+                        Soft leather armour can be worn underneath chain or
+                        plate armour. Plate armour such as greaves, vambraces
+                        and breastplates can be worn over chain armour. It 
+                        is possible to wear plate over chain over leather.
+                    </para>
+
+                    <para>
+                        The other layering combination is that a helm can 
+                        be worn over a chain mail coif.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Advantages of Armour</title>
+
+                <para>
+                    The total protection of all armour worn adds to the soak
+                    of the wearer.
+                </para>
+            </sect2>
+        </sect1>
+
+
+        <sect1>
+            <title>Healing and First aid</title>
+
+            <sect2>
+                <title>First aid</title>
+
+                <para>
+                    After a character has become injured, it may be
+                    necessary for first aid to be applied to the wounds
+                    in order for them to heal. Fresh wounds need to be
+                    stabilised, a process which requires another
+                    character to make an intelligence x first aid roll
+                    on the wounded character.
+                </para>
+
+                <table>
+                    <title>First aid Difficulties</title>
+
+                    <colspec colwidth="2cm"/>
+                    <colspec colwidth="2cm"/>
+                    <colspec colwidth="1.5cm"/>
+                    <thead>
+                        <row>
+                            <entry>Stuns</entry>
+                            <entry>Wounds</entry>
+                            <entry>Target</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row><entry>Bruised</entry><entry>--</entry><entry>0</entry></row>
+                        <row><entry>Dazed</entry><entry>--</entry><entry>5</entry></row>
+                        <row><entry>Bloodied</entry><entry>--</entry><entry>10</entry></row>
+                        <row><entry>Battered</entry><entry>Hurt</entry><entry>10</entry></row>
+                        <row><entry>Beaten</entry><entry>Light</entry><entry>15</entry></row>
+                        <row><entry>Oblivious</entry><entry>Medium</entry><entry>15</entry></row>
+                        <row><entry>--</entry><entry>Serious</entry><entry>20</entry></row>
+                        <row><entry>--</entry><entry>Critical</entry><entry>20</entry></row>
+                        <row><entry>--</entry><entry>Fatal</entry><entry>25</entry></row>
+                    </tbody>
+                </table>
+
+                <para>
+                    A character may first aid themselves - as long as they
+                    are conscious - but they suffer all their wound penalties.
+                    If the first aid roll exceeds the target difficulty by
+                    10 or more, then not only is the wound stabilised, but 
+                    one injury level is immediately healed.
+                </para>
+
+                <para>
+                    If a character is both wounded and stunned, a separate
+                    roll is needed for each. It takes one minute to perform
+                    first aid on a person. First aid may be attempted as 
+                    many times as required, until it succeeds.
+                </para>
+
+                <para>
+                    A character who is fatally wounded gets a first aid 
+                    roll before they roll to see if they die.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Natural healing</title>
+
+                <sect3>
+                    <title>Recovering from stuns</title>
+
+                    <para>
+                        Natural healing can only take place once an injury
+                        has been stabilised with a successful first aid roll.
+                        A stunned character who is bruised or dazed gets a 
+                        stamina roll every hour at a target difficulty of 20.
+                        Success means that one stun is recovered. If the
+                        character spends the time resting, then the 
+                        difficulty is reduced to 15.
+                    </para>
+
+                    <para>
+                        More serious stun injuries are recovered each night.
+                        A similar stamina roll is made after a night's rest,
+                        with success recovering one level of stun. The
+                        severity of the stuns do not affect the recovery 
+                        difficulty.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Recovering from wounds</title>
+
+                    <para>
+                        A wounded character who is hurt or lightly wounded
+                        gets a stamina roll after a full night's rest. The
+                        stamina difficulty is 20, and success means one 
+                        wound level is recovered.
+                    </para>
+
+                    <para>
+                        A more seriously wounded character gets a recovery
+                        roll at the end of each week. The difficulty
+                        depends on the severity of the injury.
+                    </para>
+
+                    <table>
+                        <title>Recovering from wounds</title>
+
+                        <colspec colwidth="2cm"/>
+                        <colspec colwidth="1.5cm"/>
+                        <thead>
+                            <row>
+                                <entry>Wounds</entry>
+                                <entry>Target</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row><entry>Medium</entry><entry>20</entry></row>
+                            <row><entry>Serious</entry><entry>25</entry></row>
+                            <row><entry>Critical</entry><entry>30</entry></row>
+                            <row><entry>Fatal</entry><entry>35</entry></row>
+                        </tbody>
+                    </table>
+
+                    <para>
+                        If the character fumbles their stamina roll, then
+                        their injury worsens, and they gain an extra wound
+                        level. A character who is already fatally wounded
+                        will die.
+                    </para>
+
+                    <para>
+                        It is not actually possible for a person with
+                        average or worse stamina to recover from being
+                        fatally wounded alone. Someone with the first aid
+                        skill can grant a bonus if they spend time
+                        looking after the wounded person. An intelligence
+                        x first aid skill roll is made, and a bonus of
+                        +1 per full 5 rolled is added to the patient's
+                        stamina roll.
+                    </para>
+
+                    <para>
+                        A patient can look after themselves, though they
+                        suffer wounds penalties to do so.
+                    </para>
+                </sect3>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Missile Combat</title>
+
+            <para>
+                So far everything that has been covered has dealt with
+                melee combat between antagonists who are in close combat.
+                The rules for missile weapons are similar. Unless a
+                difference is noted, assume that missile combat works
+                the same way.
+            </para>
+
+            <sect2>
+                <title>Ranged combat skills</title>
+
+                <para>
+                    As for melee combat, there are a number of different
+                    styles which make use of a particular skill.
+                </para>
+
+                <sect3>
+                    <title>Thrown weapons</title>
+
+                    <para>
+                        All characters have some ability with the
+                        <emphasis>Throw</emphasis> talent, which is the
+                        ranged equivalent of the <emphasis>
+                        Brawl</emphasis> skill. Thrown spears, javelins,
+                        bottles, slings and axes are covered under this
+                        skill. This actually covers the majority of
+                        missile combat.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Bow</title>
+
+                    <para>
+                        The bow, including both the longbow and shortbow,
+                        requires this skill. The bow can be quite a deadly
+                        weapon in the hands of a skilled professional, but
+                        can be difficult to use.
+                    </para>
+
+                    <para>
+                        Both longbows and shortbows are constructed for a
+                        given strength of user. A bow's strength rating is
+                        both the minimum and maximum strength. A stronger 
+                        bowman cannot use their full strength when
+                        using the weapon.
+                    </para>
+                    
+                    <para>
+                        Longbows have the advantage that a skilled longbowman
+                        can manage a larger 'pull' then an unskilled one of
+                        equivalent strength (due to long hours spent
+                        exercising wrist and arm muscles). For every full
+                        four points of skill a longbowman has, then they
+                        get an effective +1 to their strength when using a
+                        longbow.
+                    </para>
+                    
+                    <para>
+                        A single attack action consists of loading, aiming
+                        and firing the bow. This is considered to be a
+                        slow action. If the bow was already loaded in a
+                        previous round, then an attack action occurs on
+                        a normal initiative.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Crossbow</title>
+
+                    <para>
+                        Crossbows have their own skill. They are easier
+                        to use for the unskilled user, but don't have the
+                        accuracy at long range compared with the long bow.
+                    </para>
+                    
+                    <para>
+                        Loading and firing a crossbow in a single round is
+                        always considered to be slow. If it was loaded in
+                        a previous round, then a shot may be made as a
+                        normal action.
+                    </para>
+                    
+                    <para>
+                        Medium and heavy crossbows may take several rounds
+                        to load. On ongoing task must be completed in order
+                        to load the crossbow. An attack may be made in the
+                        round that the crossbow was loaded.
+                    </para>
+                    
+                    <para>
+                        For medium crossbows, the difficulty is 15, for 
+                        heavy crossbows the difficulty is 20. In each case,
+                        a strength x 4 roll is required.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Missile Ranges</title>
+
+                <para>
+                    There are a number of range categories which are defined
+                    for all missile weapons. These are short, medium, long
+                    and extreme. Ranges are given in metres, and cover any
+                    distance up to and including the range given for a
+                    particular weapon.
+                </para>
+
+                <table>
+                    <title>Range Categories</title>
+
+                    <colspec colwidth="1.5cm"/>
+                    <colspec colwidth="1.5cm"/>
+                    <colspec colwidth="1.5cm"/>
+                    <thead>
+                        <row>
+                            <entry>Range</entry>
+                            <entry>Attack</entry>
+                            <entry>Damage</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row><entry>Short</entry><entry>+0</entry><entry>+0</entry></row>
+                        <row><entry>Medium</entry><entry>-5</entry><entry>+0</entry></row>
+                        <row><entry>Long</entry><entry>-15</entry><entry>-5</entry></row>
+                        <row><entry>Extreme</entry><entry>-30</entry><entry>-10</entry></row>
+                    </tbody>
+                </table>
+
+                <para>
+                    The range modifier subtracts from the attacker's
+                    attack roll, making it harder to hit targets at longer
+                    range. At long and extreme range, the damage of a
+                    ranged attack is also reduced.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Missile Attacks</title>
+
+                <para>
+                    If a character declares an attack with a missile
+                    weapon, then they roll initiative as per melee combat,
+                    and act in standard initiative order.
+                </para>
+
+                <sect3>
+                    <title>Defending with a missile weapon</title>
+
+                    <para>
+                        One problem with missile weapons is that it is not
+                        possible to parry with them. If the weapon has an
+                        equivalent melee defence total, then use the defence
+                        total for that (i.e. a thrown dagger is treated as
+                        a melee dagger for defence), otherwise it
+                        is not possible to parry with a missile weapon.
+                        Instead, the character must perform a brawling
+                        defence (agility x brawl), with no modifier for
+                        the weapon being used.
+                    </para>
+
+                    <para>
+                        Once a thrown weapon has been thrown, any defence
+                        bonuses are lost.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Defending against missile attacks</title>
+
+                    <para>
+                        Missile attacks can be dodged, but not parried
+                        unless the defender has a shield, in which case
+                        they get the defence bonus of the shield, but not
+                        of any other weapon they are using.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Firing into melee</title>
+
+                    <para>
+                        Firing into a melee combat is rarely a good idea,
+                        but sometimes it is done anyway. If the target of
+                        a missile attack is in close combat with anyone
+                        else, then the fumble chance of the attack is
+                        increased by two for each extra person. Firing
+                        into a melee involving six people, would give a +10
+                        to the fumble chance, meaning the attacker has a
+                        chance of hitting the wrong target if the d20 rolls
+                        less than 12.
+                    </para>
+
+                    <para>
+                        The chance of fumbling can be modified if the
+                        target is much larger or smaller than the
+                        obstructions. This is left for the GM to
+                        decide, but if two humans are fighting a 20m
+                        long dragon, then it is suggested that no
+                        penalty is applied.
+                    </para>
+
+                    <para>
+                        A fumble in this situation means that a random
+                        target is hit. It is possible to hit the 'right'
+                        random target. Chance of hitting each target
+                        should be based on size, and ideally distance from
+                        the intended target. In reality, just assigning
+                        equal chance to everyone is good enough.
+                    </para>
+
+                    <para>
+                        If someone is wrestling with the intended target,
+                        add +5 to +15 to the fumble chance, depending on
+                        how bad a shot it is. In all cases, a luck point
+                        can be spent before hand to negate, or at
+                        least reduce, the chance of hitting a friend.
+                    </para>
+                </sect3>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Advanced Combat</title>
+
+            <sect2>
+                <title>Special Attacks</title>
+
+                <para>
+                    Instead of making a normal attack, before initiative
+                    is determined, a character can opt to make one special
+                    attack. Unless noted otherwise, these are available to
+                    all forms of attack, and all types of weapons. In some
+                    cases, special attacks can be combined, but only if it
+                    is specifically noted.
+                </para>
+
+                <para>
+                    If two actions are combined, and both modify the
+                    initiative, then the slowest initiative is used. For
+                    example, aiming allows a fast attack the following
+                    round, and can be combined with killing blow, which
+                    is a slow attack. A round is spent aiming, then the
+                    following round a slow killing blow attack is made.
+                </para>
+
+                <sect3>
+                    <title>Aggressive</title>
+
+                    <para>
+                        An all out melee attack is made, giving a +5 bonus
+                        to attack and damage rolls, but a -10 to defence.
+                        This attack is considered to be fast.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Aimed Shot</title>
+
+                    <para>
+                        Only applicable for missile attacks. If an entire
+                        round is spent aiming, then +1 is added to the
+                        attacker's perception for the attack, which
+                        occurs as a fast attack the following round. This
+                        attack may be combined with killing blows or
+                        ambush actions.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Ambush</title>
+
+                    <para>
+                        If the target is unaware of the attack, then an
+                        ambush may be performed. This grants no bonuses
+                        to the attack, but the total soak of the target
+                        is halved. Furthermore, the attack counts
+                        as a <emphasis>killing blow</emphasis>. An
+                        ambusher cannot defend during the round, and
+                        such an attack is always considered to be slow.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Cleaving Attack</title>
+
+                    <para>
+                        A cleaving attack is always slow, and also gives
+                        a -10 penalty to the attack roll, or -5 if a two
+                        handed weapon is being used. If the attack is
+                        successful, the armour (not soak) of the target
+                        is halved. Such an attack can only be performed
+                        in melee.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Defensive</title>
+
+                    <para>
+                        If the round is spent fighting defensively, then
+                        a +5 bonus to defence rolls is gained, and a -10
+                        penalty to attack rolls. Any attacks made are slow,
+                        and only melee actions can be performed.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Disarm</title>
+
+                    <para>
+                        This is a melee attack, which can be perform with
+                        a melee weapon against a melee weapon. It cannot
+                        be used against shields, and suffers -10 against
+                        a weapon which is being used two handed. A weapon
+                        attack roll is made at -10, versus the defence
+                        roll as per normal (though no defence penalty is
+                        suffered from fighting multiple opponents for this
+                        roll only). On success, the defender is off
+                        balance and looses attack and defence bonuses
+                        from that weapon for the rest of the round (it is
+                        possible that this has no effect). A second
+                        oppossed roll is made, with the dexterity of the
+                        attack and defender. If the attack equals or
+                        exceeds the defender, then the defender has been
+                        disarmed.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Feint</title>
+
+                    <para>
+                        No attack is made this turn (but character can
+                        defend as normal), and a +5 bonus to attack and
+                        initiative is gained next turn, as long as the
+                        same opponent is being fought. Only possible in
+                        melee, and during the following round, any other
+                        special attack can be used. Further, special
+                        attacks which automatically go last,
+                        instead act at normal initiative.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Killing blow</title>
+
+                    <para>
+                        A killing blow is a slow attack, and the character
+                        suffers a -10 penalty to the attack roll. If the
+                        attack is successful, and at least two full
+                        categories of damage are caused, the target is
+                        instantly killed. If performed with a weapon doing
+                        stun or mixed damage, the target is knocked out
+                        instead.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Subduing Attack</title>
+
+                    <para>
+                        Any attack with a melee weapon can be turned into
+                        a subduing attack, causing stun damage instead of
+                        wounds or mixed damage.
+                    </para>
+                </sect3>
+
+            </sect2>
+
+            <sect2>
+                <title>Counter strikes</title>
+
+                <para>
+                    Counter strikes are secondary attacks made against
+                    an attacker as part of a defence. They represent
+                    punches, kicks, shield bashes and similar actions
+                    that occur as part of a melee - effectively 'dirty
+                    fighting'.
+                </para>
+
+                <para>
+                    A counter strike is a free action that does not need
+                    to be declared before hand. However, two requirements
+                    must be met in order for a counter strike to be made.
+                    The first is that the character must have already
+                    acted this round (i.e. it must be after their
+                    initiative), and secondly, they must have made a
+                    successful defence against an attacker by at least
+                    ten points. If these two requirements have been met,
+                    then a counter strike may be made against the
+                    attacker (for a counter strike, the strike is made
+                    by the defender against the attacker).
+                </para>
+
+                <para>
+                    If defender (the character making the counter strike)
+                    makes a brawling attack, with penalties equal to those
+                    they had for the defence roll (including those for
+                    defending against multiple opponents). The attacker
+                    must a brawl defence roll, and if he succeeds, then
+                    the counter strike fails. Note that the brawl defence
+                    suffers penalties for performing multiple defences,
+                    i.e. if the attacker was already defending against two
+                    people, then his defence would be at -10. The brawl
+                    defence is considered a 'free' defence, but does suffer
+                    the penalties for other defences.
+                </para>
+
+                <para>
+                    A successful counter strike results in a brawling
+                    (stun) damage roll. The counter striker may use the
+                    damage bonus of their weapon or shield (depending on
+                    where the initial attack came from), though the
+                    damage is always considered to be stun damage.
+                </para>
+
+                <para>
+                    If the counter striker is attacking aggresively,
+                    or is in a berserk rage, or performing any similar
+                    action which gives a penalty to defence rolls, then
+                    this penalty does not apply to the counter strike.
+                    However, the attack bonus is not gained for the
+                    counter strike attack either.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Berserkers</title>
+
+                <para>
+                    Berserkers are mad warriors who show little concern
+                    for their own survival. Fueled up on bloodlust,
+                    religious fervour or drugs, they are able to shrug
+                    aside injuries, and fight with a strength and
+                    ferocity not normally possible.
+                </para>
+
+                <para>
+                    Being a berserker is considered an advantage,
+                    and only characters who have purchased it at
+                    character generation may go berserk.
+                </para>
+
+                <sect3>
+                    <title>The berserker advantage</title>
+
+                    <para>
+                        The advantage is purchased to a level, from one
+                        upwards. Normally six is the maximum, though higher
+                        levels may be possible through divine inspiration
+                        or magic.
+                    </para>
+
+                    <para>
+                        If may be possible to increase the level of this
+                        advantage over time, though it may not be improved
+                        with experience. Being a berserker is a mind set
+                        which is difficult to learn.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Going berserk</title>
+
+                    <para>
+                        Going berserk is relatively easy, as long as there
+                        is a reason to fight. No roll is necessary - if there
+                        is a fight at hand, and the character wants to go 
+                        berserk, then they can do, and they gain all the 
+                        bonuses thereof.
+                    </para>
+
+                    <para>
+                        If there is no-one to fight, then entering a berserk
+                        rage is not possible. There must be the promise of 
+                        blood letting in the very near future.
+                    </para>
+
+                    <sect4>
+                        <title>Not going berserk</title>
+
+                        <para>
+                            If a berserker gets involved in a fight in which
+                            they do not want to go berserk, then a will check 
+                            is required in order to restrain themselves.
+                            Failure means that they go berserk, getting any
+                            bonuses and penalties associated with that.
+                        </para>
+
+                        <para>
+                            The difficulty to avoid going berserk is based on
+                            the size of the fight. The bigger and more heroic
+                            the fight, the harder it is to resist going
+                            berserk. The character rolls will x 4, at a
+                            penalty of 5 x berserker level.
+                        </para>
+
+                        <targetlist targetFirst="true" bold="true">
+                            <title>Resisting Going Berserk</title>
+
+                            <targetLabel>Target</targetLabel>
+                            <valueLabel>Situation</valueLabel>
+
+                            <entry target="0" value="Friendly">
+                                A small, friendly fight.
+                            </entry>
+
+                            <entry target="5" value="Inferior foe">
+                                The foe is obviously inferior, and easy
+                                to defeat.
+                            </entry>
+
+                            <entry target="10" value="Mildly inferior">
+                                The foe is relatively easy to beat.
+                            </entry>
+
+                            <entry target="15" value="Similar">
+                                Foe is a challenge.
+                            </entry>
+
+                            <entry target="20" value="Superior">
+                                Foe is superier.
+                            </entry>
+
+                            <entry target="25" value="Greatly superior">
+                                Foe is greatly superior.
+                            </entry>
+                        </targetlist>
+
+                        <para>
+                            Whether a foe is inferior or superior, depends
+                            on the skill of the foe, as well as numerical
+                            superiority.
+                        </para>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Effects of berserk combat</title>
+
+                    <para>
+                        A berserk warrior must fight the nearest foe to
+                        them, and may never use missile weapons. If 
+                        there is not a foe in range, then they must
+                        close with the enemy as quickly as possible. 
+                        A berserker may never fight defensively.
+                    </para>
+
+                    <para>
+                        The level of the berserker advantage adds to the
+                        attack, initiative and damage rolls of the 
+                        berserker. It also subtracts from the
+                        berserker's defence rolls.
+                    </para>
+
+                    <para>
+                        Any wound, stun or fatigue penalties are reduced
+                        by the level of the advantage. Rolls to stay 
+                        alive and conscious get a bonus equal
+                        to the advantage.
+                    </para>
+
+                    <para>
+                        Finally, a berserker gets extra wound and stun
+                        levels. These are temporary and are lost at the 
+                        end of the battle. One extra wound and stun level
+                        is gained per two full levels of advantage. The
+                        first level is an extra hurt and bruised
+                        level. The second is an extra light
+                        and dazed level. The third is an extra
+                        medium and bloodied level.
+                    </para>
+
+                    <para>
+                        The real level is lost first when the character is
+                        injured, and the temporary level is lost second.
+                        At the end of the fight, the temporary levels go 
+                        away, as do any wounds or stuns in them.
+                    </para>
+                </sect3>
+
+            </sect2>
+
+            <sect2>
+                <title>Mounted combat</title>
+
+                <para>
+                    Fighting from horse back can be tricky, but for a
+                    skilled rider it can be a big advantage. If the rider
+                    has a riding skill less than four, then an agility 
+                    based riding check is required whenever an
+                    attack is made, against a target of 15. A rider
+                    with a skill of four or more does not have to make 
+                    this roll.
+                </para>
+
+                <para>
+                    Failure of the riding roll means that the character
+                    becomes unstable, and must make a second roll at the
+                    same difficulty to remain on the horse. If the rider
+                    is not using saddle and stirrups, then both
+                    difficulties are increased by 5.
+                </para>
+
+                <para>
+                    The character's ride skill adds to all initiative,
+                    attack, defence and damage rolls made while on 
+                    horseback. For example, a rider with a skill of 5,
+                    gets +5 to all these rolls. No other bonuses due to
+                    being on higher ground etc are gained. The bonuses 
+                    do apply when fighting another mounted warrior.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Poison</title>
+
+                <para>
+                    Use of poison is often frowned upon by honourable
+                    warriors, but not everyone is honourable, and not
+                    everyone is a warrior willing to stand up in a 
+                    toe-to-toe fight. Poison may be used on darts, put
+                    in food, or put on bladed weapons. Different types
+                    of poisons have varying effectiveness, though very
+                    few will give instant death.
+                </para>
+
+                <para>
+                    For a full discussion on the use of poisons, see
+                    Herb Lore. However, some simple poison rules are
+                    given here.
+                </para>
+
+                <sect3>
+                    <title>Resisting Poison</title>
+
+                    <para>
+                        Any poison may be resisted by making a resistence
+                        roll. This is normally stamina x size of the
+                        intended victim.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Effects of Poison</title>
+
+                    <para>
+                        Poison can take a varying amount of time to take
+                        affect. This may be a round, a minute, 15 minutes,
+                        a day or any other period of time. When a poison is
+                        first administered, a resistence roll is not made,
+                        instead the roll is made after the given period of
+                        time has passed. Even deadly poisons will tend to
+                        have times in the minutes.
+                    </para>
+
+                    <para>
+                        The target difficulty of the resistence roll is the
+                        strength of the poison. A good poison will tend to
+                        have a strength in the 30 - 50 range. Whether the
+                        resistence roll was successful or not, the poison
+                        will continue to do damage to the victim. Once the
+                        poison's effect time has passed again, then another
+                        resistence roll is required, at a reduced difficulty.
+                        Normally, the difficulty drops by 5 each time,
+                        though this will be specified in the poison
+                        description.
+                    </para>
+
+                    <para>
+                        For example, a poison with a strength of 40, and a
+                        time of 1 minute, would require a resistence roll
+                        against 40 after one minute, against 35 after two
+                        minutes, then 30 after three minutes etc. Once 0
+                        or less has been reached, no further rolls are
+                        required and the poison is considered to have 
+                        finished its work.
+                    </para>
+
+                    <sect4>
+                        <title>When poison works</title>
+
+                        <para>
+                            If a resistence roll was successful, then the
+                            poison has no effect over that time period. If
+                            it failed however, then the victim suffers
+                            some effect from the poison. Poisons will have
+                            a number of effects listed, in increasing order
+                            of severity. For example, these might be
+                            nausea, weakness, cramps, paralysis, death.
+                            </para>
+
+                        <para>
+                            The first time the resistence is failed, the
+                            first effect takes affect. The next failure
+                            causes the next effect and so on. For the
+                            above example, for a poison of strength 40,
+                            most people are likely to suffer nausea,
+                            weakness and cramps. Many people may suffer
+                            paralysis, and a few would actually die (in
+                            worst case, a stamina x size roll of 20 would
+                            need to be failed in order to die).
+                        </para>
+                    </sect4>
+
+                </sect3>
+
+            </sect2>
+        </sect1>
     </body>
 </article>
