@@ -1,0 +1,873 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet href="/usr/share/web/xsl/html/equipment.xsl" type="text/xsl"?>
+
+<!--
+    Weapon list for Yags.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2003-12-27 16:43:55 $
+ -->
+<equipment>
+    <weaponlist>
+        <!--
+            Weapon list. All weapons are included, with full details.
+            Weapons have the following meta-information.
+            source:
+            importance: 0=little, 1=detailed, 2=common, 3=always
+
+            Importance is used when creating weapon lists. High
+            importance weapons are always listed, low importance
+            weapons are only given in the most complete lists.
+         -->
+
+        <weapon name="Hand axe">
+            <class>single</class>
+
+            <description>
+                <para>
+                    A small axe, not designed specifically for combat but
+                    can be used in close quarters fighting. It has a small
+                    head, with a haft about 30cm long.
+                </para>
+            </description>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+3</initiative>
+                <attack>+2</attack>
+                <defence>+1</defence>
+                <damage>+5</damage>
+            </combat>
+
+            <combat mode="Thrown" importance="3">
+                <initiative>+2</initiative>
+                <attack>+1</attack>
+                <damage>+4</damage>
+                <range strength="true">
+                    <increment>5</increment>
+                    <short>3</short>
+                    <medium>6</medium>
+                    <long>10</long>
+                </range>
+            </combat>
+
+            <strength>1</strength>
+            <load>1</load>
+            <reach>1</reach>
+        </weapon>
+
+        <weapon name="Battle axe">
+            <description>
+                <para>
+                    An axe designed for single handed user. It has a single
+                    bladed head, with a haft about 60cm long.
+                </para>
+            </description>
+
+            <class>single</class>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+6</initiative>
+                <attack>+4</attack>
+                <defence>+3</defence>
+                <damage>+12</damage>
+            </combat>
+
+            <combat mode="Thrown" importance="2">
+                <initiative>+2</initiative>
+                <attack>+2</attack>
+                <damage>+9</damage>
+                <range strength="true">
+                    <increment>5</increment>
+                    <short>3</short>
+                    <medium>6</medium>
+                    <long>10</long>
+                </range>
+            </combat>
+
+            <strength>3</strength>
+            <load>3</load>
+            <reach>3</reach>
+        </weapon>
+
+        <weapon name="Broad axe">
+            <class>great</class>
+
+            <description>
+                <para>
+                    A large two handed axe with a long haft, around 150cm
+                    in length. It is topped with a single broad blade. It
+                    is poor in defence, but very good against armour.
+                </para>
+            </description>
+
+            <combat mode="Melee" importance="2">
+                <initiative>+8</initiative>
+                <attack>+7</attack>
+                <defence>+4</defence>
+                <damage>+17</damage>
+            </combat>
+
+            <strength>6</strength>
+            <load>6</load>
+            <reach>3</reach>
+            <property>two handed</property>
+        </weapon>
+
+        <weapon name="Club">
+            <class>brawl</class>
+            <class>single</class>
+
+            <description>
+                <para>
+                    Often, a club is not much more than a shaft of wood,
+                    maybe with some metal on one end to weight it. It is
+                    considered to be a simple weapon.
+                </para>
+            </description>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+3</initiative>
+                <attack>+2</attack>
+                <defence>+3</defence>
+                <damage type="split">+5</damage>
+            </combat>
+
+            <strength>2</strength>
+            <load>2</load>
+            <reach>2</reach>
+            <property>light</property>
+        </weapon>
+
+        <weapon name="Dagger">
+            <class>brawl</class>
+            <class>single</class>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+4</initiative>
+                <attack>+2</attack>
+                <defence>+3</defence>
+                <damage>+4</damage>
+            </combat>
+
+            <combat mode="Thrown" importance="3">
+                <initiative>+5</initiative>
+                <attack>+3</attack>
+                <damage>+4</damage>
+            </combat>
+
+            <strength>1</strength>
+            <load>1</load>
+            <reach>1</reach>
+        </weapon>
+
+        <weapon name="Fist">
+            <class>brawl</class>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+0</initiative>
+                <attack>+0</attack>
+                <defence>+0</defence>
+                <damage type="stun">+0</damage>
+            </combat>
+
+            <strength>0</strength>
+            <load>0</load>
+            <reach>0</reach>
+        </weapon>
+
+        <weapon name="Scramasax">
+            <class>single</class>
+
+            <description>
+                <para>
+                    A cheap single edged sword, forged from a single piece
+                    of iron.
+                </para>
+            </description>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+4</initiative>
+                <attack>+4</attack>
+                <defence>+3</defence>
+                <damage>+7</damage>
+            </combat>
+
+            <strength>2</strength>
+            <load>2</load>
+            <reach>2</reach>
+        </weapon>
+
+        <weapon name="Long sword">
+            <class>single</class>
+
+            <description>
+                <para>
+                    The blade of a long sword can be 100cm long or more,
+                    with another 20cm for the hilt. They are designed for
+                    one handed use, but the hilt is long enough for a
+                    two handed grip.
+                </para>
+            </description>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+8</initiative>
+                <attack>+6</attack>
+                <defence>+4</defence>
+                <damage>+14</damage>
+            </combat>
+
+            <strength>4</strength>
+            <load>4</load>
+            <reach>3</reach>
+            <property>two handed</property>
+        </weapon>
+
+        <weapon name="Battle sword">
+            <class>single</class>
+
+            <description>
+                <para>
+                    The common sword, with a one handed grip and a blade
+                    length of about 85 to 90cm. The blade edges tend to be
+                    parallel, designed for slashing and cutting.
+                </para>
+            </description>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+6</initiative>
+                <attack>+5</attack>
+                <defence>+5</defence>
+                <damage>+12</damage>
+            </combat>
+
+            <strength>3</strength>
+            <load>4</load>
+            <reach>3</reach>
+        </weapon>
+
+        <weapon name="Great sword">
+            <class>great</class>
+
+            <description>
+                <para>
+                    These are similar to long swords, but are heavy enough
+                    to pretty much require a double grip. Blade length is in
+                    the order of 110cm to 130cm in length, with a long
+                    hilt for a two handed grip.
+                </para>
+            </description>
+
+            <combat mode="Melee" importance="2">
+                <initiative>+12</initiative>
+                <attack>+8</attack>
+                <defence>+6</defence>
+                <damage>+16</damage>
+            </combat>
+
+            <strength>6</strength>
+            <load>7</load>
+            <reach>3</reach>
+            <weight>1.5</weight>
+            <property>two handed</property>
+        </weapon>
+
+        <weapon name="Knife">
+            <class>brawl</class>
+            <class>single</class>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+2</initiative>
+                <attack>+1</attack>
+                <defence>+2</defence>
+                <damage type="mixed">+2</damage>
+            </combat>
+
+            <combat mode="Thrown" importance="3">
+                <initiative>+3</initiative>
+                <attack>+0</attack>
+                <damage type="mixed">+2</damage>
+            </combat>
+
+            <strength>1</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+            <property>light</property>
+        </weapon>
+
+        <weapon name="Long spear">
+            <class>longshaft</class>
+
+            <combat mode="Melee" importance="2">
+                <initiative>+15</initiative>
+                <attack>+4</attack>
+                <defence>+4</defence>
+                <damage>+11</damage>
+            </combat>
+
+            <strength>5</strength>
+            <load>3</load>
+            <reach>5</reach>
+            <property>two handed</property>
+        </weapon>
+
+
+        <weapon name="Mace">
+            <class>single</class>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+5</initiative>
+                <attack>+3</attack>
+                <defence>+3</defence>
+                <damage>+11</damage>
+            </combat>
+
+            <strength>3</strength>
+            <load>3</load>
+            <reach>2</reach>
+        </weapon>
+
+        <weapon name="Quarterstaff">
+            <class>longshaft</class>
+            <class>great</class>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+9</initiative>
+                <attack>+5</attack>
+                <defence>+9</defence>
+                <damage type="mixed">+8</damage>
+            </combat>
+
+            <strength>4</strength>
+            <load>2</load>
+            <reach>4</reach>
+        </weapon>
+
+        <weapon name="Round shield">
+            <class>shield</class>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+0</initiative>
+                <attack>+2</attack>
+                <defence>+7</defence>
+                <damage>+0</damage>
+                <bash>+5</bash>
+            </combat>
+
+            <strength>2</strength>
+            <load>3</load>
+            <reach>2</reach>
+        </weapon>
+
+        <weapon name="Small shield">
+            <class>shield</class>
+
+            <combat mode="Melee" importance="2">
+                <initiative>+0</initiative>
+                <attack>+2</attack>
+                <defence>+4</defence>
+                <damage>+0</damage>
+                <bash>+3</bash>
+            </combat>
+
+            <strength>2</strength>
+            <load>2</load>
+            <reach>2</reach>
+        </weapon>
+
+        <weapon name="Buckler">
+            <class>shield</class>
+
+            <combat mode="Melee" importance="1">
+                <initiative>+0</initiative>
+                <attack>+0</attack>
+                <defence>+3</defence>
+                <damage>+0</damage>
+                <bash>+2</bash>
+            </combat>
+
+            <strength>1</strength>
+            <load>1</load>
+            <reach>1</reach>
+        </weapon>
+
+        <weapon name="Short sword">
+            <class>single</class>
+
+            <description>
+                <para>
+                    A short blade, about 60cm long.
+                </para>
+            </description>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+5</initiative>
+                <attack>+4</attack>
+                <defence>+3</defence>
+                <damage>+9</damage>
+            </combat>
+
+            <strength>2</strength>
+            <load>2</load>
+            <reach>2</reach>
+        </weapon>
+
+        <weapon name="Spear">
+            <class>single</class>
+            <class>longshaft</class>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+9</initiative>
+                <attack>+3</attack>
+                <defence>+2</defence>
+                <damage>+9</damage>
+            </combat>
+
+            <combat mode="Thrown" importance="3">
+                <initiative>+5</initiative>
+                <attack>+3</attack>
+                <damage>+9</damage>
+            </combat>
+
+            <strength>2</strength>
+            <load>2</load>
+            <reach>4</reach>
+        </weapon>
+
+        <weapon name="War spear">
+            <class>single</class>
+            <class>longshaft</class>
+
+            <description>
+                <para>
+                    A heavy spear with a broad blade on the end. Used for
+                    melee fighting, and not designed to be thrown at all.
+                </para>
+            </description>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+9</initiative>
+                <attack>+5</attack>
+                <defence>+3</defence>
+                <damage>+11</damage>
+            </combat>
+
+            <strength>3</strength>
+            <load>3</load>
+            <reach>4</reach>
+        </weapon>
+
+
+        <weapon name="Warhammer">
+            <class>single</class>
+
+            <combat mode="Melee" importance="2">
+                <initiative>+6</initiative>
+                <attack>+3</attack>
+                <defence>+2</defence>
+                <damage>+12</damage>
+            </combat>
+
+            <strength>3</strength>
+            <load>3</load>
+            <reach>3</reach>
+        </weapon>
+
+        <weapon name="War flail">
+            <class>flail</class>
+
+            <combat mode="Melee" importance="1">
+                <initiative>+9</initiative>
+                <attack>+6</attack>
+                <defence>+6</defence>
+                <damage>+10</damage>
+            </combat>
+
+            <strength>3</strength>
+            <load>3</load>
+            <reach>4</reach>
+        </weapon>
+
+
+        <weapon name="Throwing axe">
+            <class>thrown</class>
+
+            <combat mode="Melee" importance="1">
+                <initiative>+3</initiative>
+                <attack>+1</attack>
+                <defence>+1</defence>
+                <damage>+4</damage>
+            </combat>
+
+            <combat mode="Thrown" importance="2">
+                <initiative>+2</initiative>
+                <attack>+2</attack>
+                <damage>+4</damage>
+                <range strength="true">
+                    <increment>10</increment>
+                    <short>3</short>
+                    <medium>6</medium>
+                    <long>9</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>1</load>
+            <reach>1</reach>
+        </weapon>
+
+        <weapon name="Short bow">
+            <class>bow</class>
+
+            <description>
+                <para>
+                    The short bow is a simple bow, about a metre in
+                    length. It is easy to pull, and most archers can
+                    comfortably exceed the maximum pull of the bow,
+                    so the strength of the archer is not factored into
+                    the penetrating power of the arrow.
+                </para>
+            </description>
+
+            <combat mode="Projectile" importance="3">
+                <initiative>+4</initiative>
+                <attack>+10</attack>
+                <damage>20</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>30</short>
+                    <medium>60</medium>
+                    <long>120</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>1</load>
+            <reach>0</reach>
+        </weapon>
+
+        <weapon name="Long bow">
+            <class>bow</class>
+
+            <description>
+                <para>
+                    Unlike the short bow, the long bow is often composite in
+                    nature, being formed of two types of wood for maximum
+                    tension. Long bows are crafted according to the strength
+                    of the archer. A weaker archer will have great
+                    difficulty in drawing a high strength bow.
+                </para>
+            </description>
+
+            <combat mode="Projectile" importance="3">
+                <initiative>+2</initiative>
+                <attack>+7</attack>
+                <damage>+12</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>60</short>
+                    <medium>120</medium>
+                    <long>240</long>
+                </range>
+            </combat>
+
+            <strength>3</strength>
+            <load>2</load>
+            <reach>0</reach>
+        </weapon>
+
+
+        <weapon name="Throwing knife">
+            <class>thrown</class>
+
+            <combat mode="Thrown" importance="2">
+                <initiative>+2</initiative>
+                <attack>+3</attack>
+                <damage>+2</damage>
+                <range strength="true">
+                    <increment>10</increment>
+                    <short>2</short>
+                    <medium>5</medium>
+                    <long>10</long>
+                </range>
+            </combat>
+
+            <strength>1</strength>
+            <load>0.25</load>
+            <reach>0</reach>
+        </weapon>
+
+        <weapon name="Sling">
+            <class>thrown</class>
+
+            <combat mode="Projectile" importance="2">
+                <initiative>+1</initiative>
+                <attack>+8</attack>
+                <damage>+7</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>20</short>
+                    <medium>40</medium>
+                    <long>60</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>0</load>
+            <reach>0</reach>
+        </weapon>
+
+        <weapon name="Javelin">
+            <class>thrown</class>
+
+            <combat mode="Thrown" importance="2">
+                <initiative>+6</initiative>
+                <attack>+7</attack>
+                <damage>+7</damage>
+
+                <range strength="true">
+                    <increment>15</increment>
+                    <short>3</short>
+                    <medium>6</medium>
+                    <long>9</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>2</load>
+            <reach>3</reach>
+        </weapon>
+
+        <weapon name="Light crossbow">
+            <class>crossbow</class>
+
+            <combat mode="Projectile" importance="2">
+                <initiative>+4</initiative>
+                <attack>+11</attack>
+                <damage>15</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>15</short>
+                    <medium>30</medium>
+                    <long>60</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>2</load>
+            <reach>0</reach>
+        </weapon>
+
+        <weapon name="Medium crossbow">
+            <class>crossbow</class>
+
+            <combat mode="Projectile" importance="3">
+                <initiative>+3</initiative>
+                <attack>+12</attack>
+                <damage>22</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>40</short>
+                    <medium>80</medium>
+                    <long>160</long>
+                </range>
+            </combat>
+
+            <strength>3</strength>
+            <load>3</load>
+        </weapon>
+
+        <weapon name="Heavy crossbow">
+            <class>crossbow</class>
+
+            <combat mode="Projectile" importance="2">
+                <initiative>+2</initiative>
+                <attack>+9</attack>
+                <damage>30</damage>
+                <range>
+                    <increment>15</increment>
+
+                    <short>60</short>
+                    <medium>120</medium>
+                    <long>240</long>
+                </range>
+            </combat>
+
+            <strength>3</strength>
+            <load>4</load>
+        </weapon>
+    </weaponlist>
+
+
+    <armourlist>
+        <armour name="Quilted jacket">
+            <protection>+3</protection>
+            <load>1</load>
+        </armour>
+
+        <armour name="Quilted vest">
+            <protection>+2</protection>
+            <load>0.5</load>
+        </armour>
+
+        <armour name="Quilted leggings">
+            <protection>+2</protection>
+            <load>0.5</load>
+        </armour>
+
+        <armour name="Soft leather trousers">
+            <protection>+2</protection>
+            <load>0.5</load>
+            <notes>Can be worn under chain or ring leggings, or greaves.</notes>
+        </armour>
+
+        <armour name="Soft leather jacket">
+            <protection>+2</protection>
+            <load>0.5</load>
+            <notes>Can be worn under chain or ring mail, or cuirass and vambraces.</notes>
+        </armour>
+
+        <armour name="Hard leather jacket">
+            <protection>+4</protection>
+            <load>2</load>
+        </armour>
+
+        <armour name="Hard leather vest">
+            <protection>+3</protection>
+            <load>1</load>
+        </armour>
+
+        <armour name="Kurbal cuirass">
+            <protection>+1</protection>
+            <load>0.5</load>
+            <notes>Can be worn over soft leather.</notes>
+        </armour>
+
+        <armour name="Kurbal greaves">
+            <protection>+1</protection>
+            <load>0.25</load>
+            <notes>Can be worn over soft leather.</notes>
+        </armour>
+
+        <armour name="Kurbal vambraces">
+            <protection>+1</protection>
+            <load>0.25</load>
+            <notes>Can be worn over soft leather.</notes>
+        </armour>
+
+        <armour name="Fur jacket">
+            <protection>+4</protection>
+            <load>2</load>
+        </armour>
+
+        <armour name="Fur trousers">
+            <protection>+3</protection>
+            <load>2</load>
+        </armour>
+
+        <armour name="Metal helm">
+            <protection>+1</protection>
+            <load>0.5</load>
+        </armour>
+
+        <armour name="Chain habergeon">
+            <protection>+5</protection>
+            <load>3</load>
+            <property>heavy</property>
+        </armour>
+
+        <armour name="Chain hauberk">
+            <protection>+8</protection>
+            <load>4</load>
+            <property>heavy</property>
+        </armour>
+
+        <armour name="Chain leggings">
+            <protection>+5</protection>
+            <load>3</load>
+        </armour>
+
+        <armour name="Chain coif">
+            <protection>+1</protection>
+            <load>0.5</load>
+            <notes>Often worn under a helm.</notes>
+        </armour>
+
+        <armour name="Ring habergeon">
+            <protection>+5</protection>
+            <load>4</load>
+            <property>heavy</property>
+            <notes>Can be worn over soft leather.</notes>
+        </armour>
+
+        <armour name="Ring hauberk">
+            <protection>+8</protection>
+            <load>5</load>
+            <property>heavy</property>
+            <notes>Can be worn over soft leather.</notes>
+        </armour>
+
+        <armour name="Ring leggings">
+            <protection>+5</protection>
+            <load>4</load>
+            <notes>Can be worn over soft leather.</notes>
+        </armour>
+
+        <armour name="Ring coif">
+            <protection>+1</protection>
+            <load>1</load>
+            <notes>Often worn under a helm.</notes>
+        </armour>
+
+        <armour name="Plate cuirass">
+            <protection>+3</protection>
+            <load>1.5</load>
+            <notes>Can be worn over mail and/or soft leather.</notes>
+        </armour>
+
+        <armour name="Plate vambraces">
+            <protection>+1</protection>
+            <load>0.5</load>
+            <notes>Can be worn over mail and/or soft leather.</notes>
+        </armour>
+
+        <armour name="Plate greaves">
+            <protection>+1</protection>
+            <load>0.5</load>
+            <notes>Can be worn over mail and/or soft leather.</notes>
+        </armour>
+
+        <armour name="Plate shoulder plates">
+            <protection>+1</protection>
+            <load>0.5</load>
+            <notes>Can be worn over mail and/or soft leather. Cannot
+            be combined with a cuirass.</notes>
+        </armour>
+
+        <armour name="Padded armour">
+            <item name="Padded jacket"/>
+            <item name="Soft leather trousers"/>
+        </armour>
+
+        <armour name="Leather armour">
+            <item name="Hard leather jacket"/>
+            <item name="Soft leather trousers"/>
+            <item name="Metal helm"/>
+        </armour>
+
+        <armour name="Half chain">
+            <item name="Soft leather jacket"/>
+            <item name="Soft leather trousers"/>
+            <item name="Chain vest"/>
+            <item name="Metal helm"/>
+        </armour>
+
+        <armour name="Full chain">
+            <item name="Soft leather jacket"/>
+            <item name="Soft leather trousers"/>
+            <item name="Chain hauberk"/>
+            <item name="Chain trousers"/>
+            <item name="Chain coif"/>
+            <item name="Metal helm"/>
+        </armour>
+    </armourlist>
+</equipment>
