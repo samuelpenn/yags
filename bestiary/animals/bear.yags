@@ -1,0 +1,384 @@
+<?xml version = '1.0' ?>
+<?xml-stylesheet
+    href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<!--
+    $Revision: 1.1 $
+    $Date: 2003-08-09 10:10:01 $
+
+    Bestiary containing information on bears.
+-->
+
+<bestiary>
+
+    <!-- Basic Bear information -->
+    <beast name="Bear" primary="true">
+        <information>
+            <type>Animal</type>
+            <demeanor>Selfish</demeanor>
+
+            <habitat climate="Temperate" terrain="Forest" frequency="Uncommon"/>
+            <habitat climate="Temperate" terrain="Mountain" frequency="Rare"/>
+
+            <organisation group="Solitary" number="1"/>
+            <organisation group="Family" number="2-5"/>
+
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                Large omnivorous animals which can be dangerous
+                if provoked.
+            </short>
+
+            <image href="graphics/bear.jpg"/>
+
+            <training>
+                <para>
+                    It is possible to train bears, though people
+                    only generally manage to do so for entertainment
+                    purposes. Though a bear would make a good
+                    guard animal, it is very rarely done.
+                </para>
+            </training>
+
+        </description>
+    </beast>
+
+    <!-- Black Bear -->
+    <beast name="Bear, Black">
+        <information>
+            <type>Animal</type>
+            <demeanor>Selfish</demeanor>
+
+            <habitat climate="Temperate" terrain="Forest" frequency="Uncommon"/>
+            <habitat climate="Temperate" terrain="Mountain" frequency="Rare"/>
+
+            <organisation group="Solitary" number="1"/>
+            <organisation group="Family" number="2-5"/>
+
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                Any of the small species of bears.
+            </short>
+
+            <image href="graphics/bear.jpg"/>
+            
+            <movement>
+                <walk normal="10" max="5"/>
+            </movement>
+
+            <scale length="2" width="1"/>
+
+            <physical>
+                Black bears are omnivores, though eat more plants than
+                meat.
+            </physical>
+
+            <social>
+                Bears are generally only dangerous if surprised, though
+                mothers can be very protective of their young.
+            </social>
+        </description>
+
+        <attributes size="5" soak="12">
+            <attribute name="strength" score="4"/>
+            <attribute name="stamina" score="3"/>
+            <attribute name="agility" score="3"/>
+            <attribute name="dexterity" score="1"/>
+            <attribute name="perception" score="4"/>
+            <attribute name="intelligence" score="1"/>
+            <attribute name="charisma" score="1"/>
+            <attribute name="will" score="2"/>
+        </attributes>
+
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="2"/>
+                <skill name="Awareness" score="4"/>
+                <skill name="Brawl" score="4"/>
+                <skill name="Charm" score="1"/>
+                <skill name="Guile" score="0"/>
+                <skill name="Sleight" score="1"/>
+                <skill name="Stealth" score="4"/>
+                <skill name="Throw" score="2"/>
+            </group>
+
+            <group name="Misc" type="skills">
+                <skill name="Survival" score="4"/>
+                <skill name="Tracking" score="1"/>
+                <skill name="Swim" score="4"/>
+            </group>
+        </skills>
+
+        <combat>
+            <weaponlist href="/usr/share/web/xml/yags/harn/weapons.xml"/>
+            <armourlist href="/usr/share/web/xml/yags/harn/armour.xml"/>
+
+            <combatstyle style="Bite and claw" skill="Brawl">
+                <primary>None</primary>
+                <initiative attribute="agility" bonus="+4"/>
+                <attack attribute="agility" bonus="+5"/>
+                <defence attribute="agility" bonus="+0"/>
+                <damage type="split" bonus="+1"/>
+            </combatstyle>
+
+            <armourstyle style="Base"/>
+
+            <armourstyle style="Natural">
+                <armour name="Fur" protection="+1"/>
+                <armour name="Hide" protection="+1"/>
+            </armourstyle>
+        </combat>
+
+        <passions>
+            <passion name="Bravery" score="2"/>
+            <passion name="Ego" score="2"/>
+            <passion name="Restraint" score="2"/>
+            <passion name="Temperence" score="2"/>
+        </passions>
+
+        <advantages>
+            <advantage name="Animal"/>
+            <advantage name="Acute sense of smell" score="+1"/>
+        </advantages>
+    </beast>
+
+
+    <!-- Brown bear -->
+    <beast name="Bear, Brown">
+        <information>
+            <type>Animal</type>
+            <demeanor>Selfish</demeanor>
+
+            <habitat climate="Temperate" terrain="Forest" frequency="Uncommon"/>
+            <habitat climate="Temperate" terrain="Mountain" frequency="Uncommon"/>
+
+            <organisation group="Solitary" number="1"/>
+            <organisation group="Family" number="2-5"/>
+
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                Any of the large species of bear.
+            </short>
+
+            <image href="graphics/bear.jpg"/>
+
+            <movement>
+                <walk normal="10" max="5"/>
+            </movement>
+
+            <scale length="2" width="1">
+                <reach>2</reach>
+            </scale>
+
+            <physical>
+                <para>
+                    Brown bears are omnivores, though eat more
+                    plants than meat. They can weigh up to 300kg
+                    or so.
+                </para>
+            </physical>
+
+            <social>
+                <para>
+                    Bears are generally only dangerous if surprised,
+                    though mothers can be very protective of their
+                    young. If given warning, they will try to avoid
+                    contact with humans.
+                </para>
+            </social>
+        </description>
+
+        <attributes size="7" soak="15">
+            <attribute name="strength" score="6"/>
+            <attribute name="stamina" score="4"/>
+            <attribute name="agility" score="3"/>
+            <attribute name="dexterity" score="1"/>
+            <attribute name="perception" score="4"/>
+            <attribute name="intelligence" score="1"/>
+            <attribute name="charisma" score="1"/>
+            <attribute name="will" score="2"/>
+        </attributes>
+
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="2"/>
+                <skill name="Awareness" score="4"/>
+                <skill name="Brawl" score="4"/>
+                <skill name="Charm" score="1"/>
+                <skill name="Guile" score="0"/>
+                <skill name="Sleight" score="1"/>
+                <skill name="Stealth" score="4"/>
+                <skill name="Throw" score="2"/>
+            </group>
+
+            <group name="Misc" type="skills">
+                <skill name="Survival" score="4"/>
+                <skill name="Tracking" score="1"/>
+                <skill name="Swim" score="4"/>
+            </group>
+        </skills>
+
+        <combat>
+            <weaponlist href="/usr/share/web/xml/yags/harn/weapons.xml"/>
+            <armourlist href="/usr/share/web/xml/yags/harn/armour.xml"/>
+
+            <combatstyle style="Bite and claw" skill="Brawl">
+                <initiative attribute="agility" bonus="+4"/>
+                <attack attribute="agility" bonus="+5"/>
+                <defence attribute="agility" bonus="+0"/>
+                <damage type="split" bonus="+1"/>
+            </combatstyle>
+
+            <armourstyle style="Base"/>
+
+            <armourstyle style="Natural">
+                <armour name="Fur" protection="+2"/>
+                <armour name="Hide" protection="+1"/>
+            </armourstyle>
+        </combat>
+
+        <passions>
+            <passion name="Bravery" score="3"/>
+            <passion name="Ego" score="2"/>
+            <passion name="Restraint" score="2"/>
+            <passion name="Temperence" score="2"/>
+        </passions>
+
+        <advantages>
+            <advantage name="Animal"/>
+            <advantage name="Acute sense of smell" score="+1"/>
+        </advantages>
+    </beast>
+    
+
+    
+    <!-- Cave Bear -->
+    <beast name="Bear, Cave">
+        <information>
+            <type>Animal</type>
+            <demeanor>Aggressive</demeanor>
+
+            <habitat climate="Temperate" terrain="Mountain" frequency="Very rare"/>
+
+            <organisation group="Solitary" number="1"/>
+            <organisation group="Family" number="2-5"/>
+
+            <origin>Prehistoric</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                A very large ancestor of modern bears.
+            </short>
+
+            <image href="graphics/bear.jpg"/>
+            
+            <movement>
+                <walk normal="10" max="5"/>
+            </movement>
+
+            <scale length="2" width="1">
+                <reach>2</reach>
+            </scale>
+
+            <physical>
+                <para>
+                    Cave bears are omnivors, though favour meat
+                    over other forms of food. They will tend to
+                    scavange rather than go after live prey, but
+                    will attack creatures smaller than themselves
+                    if they are hungry.
+                </para>
+                
+                <para>
+                    Cave bears tend to have black or dark brown
+                    thick fur, and stand about 2.5m tall when
+                    upright.
+                </para>
+            </physical>
+
+            <social>
+                <para>
+                    Cave bears are aggresively territorial, and
+                    will attack those that it perceives as a threat.
+                </para>
+            </social>
+        </description>
+
+        <attributes size="8" soak="15">
+            <attribute name="strength" score="7"/>
+            <attribute name="stamina" score="4"/>
+            <attribute name="agility" score="3"/>
+            <attribute name="dexterity" score="1"/>
+            <attribute name="perception" score="4"/>
+            <attribute name="intelligence" score="1"/>
+            <attribute name="charisma" score="1"/>
+            <attribute name="will" score="2"/>
+        </attributes>
+
+        <skills>
+            <group name="Talents" type="talents">
+                <skill name="Athletics" score="2"/>
+                <skill name="Awareness" score="4"/>
+                <skill name="Brawl" score="7"/>
+                <skill name="Charm" score="1"/>
+                <skill name="Guile" score="0"/>
+                <skill name="Sleight" score="1"/>
+                <skill name="Stealth" score="4"/>
+                <skill name="Throw" score="2"/>
+            </group>
+
+            <group name="Misc" type="skills">
+                <skill name="Survival" score="4"/>
+                <skill name="Tracking" score="1"/>
+                <skill name="Swim" score="2"/>
+            </group>
+        </skills>
+
+        <combat>
+            <weaponlist href="/usr/share/web/xml/yags/harn/weapons.xml"/>
+            <armourlist href="/usr/share/web/xml/yags/harn/armour.xml"/>
+
+            <combatstyle style="Bite and claw" skill="Brawl">
+                <initiative attribute="agility" bonus="+4"/>
+                <attack attribute="agility" bonus="+7"/>
+                <defence attribute="agility" bonus="+4"/>
+                <damage type="split" bonus="+4"/>
+            </combatstyle>
+
+            <armourstyle style="Base"/>
+
+            <armourstyle style="Natural">
+                <armour name="Fur" protection="+3"/>
+                <armour name="Hide" protection="+2"/>
+            </armourstyle>
+        </combat>
+
+        <passions>
+            <passion name="Bravery" score="4"/>
+            <passion name="Ego" score="3"/>
+            <passion name="Restraint" score="2"/>
+            <passion name="Temperence" score="2"/>
+        </passions>
+
+        <advantages>
+            <advantage name="Animal"/>
+            <advantage name="Acute sense of smell" score="+1"/>
+        </advantages>
+    </beast>
+
+</bestiary>
