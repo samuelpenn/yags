@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<!--
+    Water cantrips.
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2004-09-27 19:28:29 $
+-->
+<grimoire name="Water">
+    <spell name="Wet" level="1" type="water">
+        <range>-5/m</range>
+        <duration>Concentration</duration>
+        <radius>-1/m</radius>
+        <effect>+1/1</effect>
+
+        <description>
+            <para>
+                Cause the area specified to be covered by a thin
+                film of water. The water is obtained from the air,
+                so the amount gained depends on the humidity.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Extinguish" level="3" type="water">
+        <range>-1/m</range>
+        <duration>Momentary</duration>
+        <target>-5/extra fire</target>
+        <effect>+2/1</effect>
+
+        <prerequisite>Wet</prerequisite>
+
+        <description>
+            <para>
+                Extinguishes the specified fires. Each fire suffers an
+                attack as if taking damage, with each level of damage
+                reducing its size by one. Assume a fire has a soak of
+                2 per point of size. Some of the heat is also removed
+                from the fuel, so there is less chance of the fire
+                immediately re-igniting back to full size.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Mist" level="3" type="water">
+        <duration>Concentration</duration>
+        <radius>-1/m</radius>
+
+        <prerequisite>Wet</prerequisite>
+
+        <description>
+            <para>
+                Creates a mist over an area which causes a soft rain to
+                dampen everything with fresh water. The amount of water
+                depends on the humidity of the air.
+            </para>
+        </description>
+    </spell>
+</grimoire>
