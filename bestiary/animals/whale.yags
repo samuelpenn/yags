@@ -3,16 +3,16 @@
     type="text/xsl"?>
 
 <!--
-    $Revision: 1.1 $
-    $Date: 2003-10-31 23:23:00 $
+    $Revision: 1.2 $
+    $Date: 2003-11-16 21:39:19 $
 
-    Bestiary containing information on wolves.
+    Bestiary containing information on whales.
 -->
 
 
 <bestiary>
 
-    <!-- Wolf -->
+    <!-- Blue Whale -->
     <beast name="Blue whale">
         <information>
             <type>Animal</type>
@@ -50,55 +50,52 @@
         </description>
 
         <attributes size="100" soak="35">
-            <attribute name="strength" score="3"/>
-            <attribute name="stamina" score="5"/>
-            <attribute name="agility" score="4"/>
+            <attribute name="strength" score="75"/>
+            <attribute name="stamina" score="4"/>
+            <attribute name="agility" score="1"/>
             <attribute name="dexterity" score="1"/>
-            <attribute name="perception" score="5"/>
-            <attribute name="intelligence" score="1"/>
+            <attribute name="perception" score="3"/>
+            <attribute name="intelligence" score="2"/>
             <attribute name="charisma" score="2"/>
             <attribute name="will" score="2"/>
         </attributes>
 
         <passions>
-            <passion name="Bravery" score="4"/>
-            <passion name="Ego" score="2"/>
-            <passion name="Restraint" score="2"/>
-            <passion name="Temperence" score="2"/>
+            <passion name="Bravery" score="3"/>
+            <passion name="Ego" score="3"/>
+            <passion name="Restraint" score="3"/>
+            <passion name="Temperence" score="3"/>
         </passions>
 
         <skills>
             <group name="Talents">
-                <skill name="Athletics" score="5"/>
-                <skill name="Awareness" score="7"/>
-                <skill name="Brawl" score="5"/>
-                <skill name="Charm" score="0"/>
-                <skill name="Guile" score="0"/>
-                <skill name="Sleight" score="1"/>
-                <skill name="Stealth" score="5"/>
+                <skill name="Athletics" score="2"/>
+                <skill name="Awareness" score="5"/>
+                <skill name="Brawl" score="2"/>
+                <skill name="Charm" score="1"/>
+                <skill name="Guile" score="1"/>
+                <skill name="Sleight" score="0"/>
+                <skill name="Stealth" score="2"/>
                 <skill name="Throw" score="0"/>
             </group>
 
             <group name="Misc">
-                <skill name="Survival" score="7"/>
-                <skill name="Battle" score="3"/>
-                <skill name="Tracking" score="7"/>
-                <skill name="Swim" score="2"/>
+                <skill name="Survival" score="4"/>
+                <skill name="Swim" score="7"/>
             </group>
         </skills>
 
         <combat>
-            <combatstyle style="Bite and claw" skill="Brawl">
-                <initiative attribute="agility" bonus="+4"/>
-                <attack attribute="agility" bonus="+5"/>
-                <defence attribute="agility" bonus="+6"/>
-                <damage type="split" bonus="+4"/>
+            <combatstyle style="Bash" skill="Brawl">
+                <initiative attribute="agility" bonus="+25"/>
+                <attack attribute="agility" bonus="+18"/>
+                <defence attribute="agility" bonus="+12"/>
+                <damage type="stun" bonus="+8"/>
             </combatstyle>
         </combat>
 
         <advantages>
             <advantage name="Animal"/>
-            <advantage name="Acute sense of smell" score="+2"/>
             <advantage name="Acute sense of hearing" score="+1"/>
         </advantages>
     </beast>
