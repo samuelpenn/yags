@@ -4,8 +4,8 @@
 <!--
     List of low tech weapons and armour for Yags.
 
-    Version: $Revision: 1.10 $
-    Date:    $Date: 2004-08-30 21:51:05 $
+    Version: $Revision: 1.11 $
+    Date:    $Date: 2004-09-04 22:21:47 $
  -->
 <equipment>
     <weaponlist>
@@ -102,7 +102,7 @@
 
             <strength>6</strength>
             <load>6</load>
-            <reach>3</reach>
+            <reach>4</reach>
 
             <properties>
                 <twohanded/>
@@ -236,7 +236,7 @@
 
             <strength>4</strength>
             <load>4</load>
-            <reach>3</reach>
+            <reach>4</reach>
             
             <properties>
                 <twohanded/>
@@ -295,7 +295,7 @@
 
             <strength>6</strength>
             <load>6</load>
-            <reach>4</reach>
+            <reach>5</reach>
             <weight>1.5</weight>
             
             <properties>
@@ -344,12 +344,13 @@
 
             <strength>5</strength>
             <load>3</load>
-            <reach>5</reach>
+            <reach>6</reach>
             <weight>2</weight>
 
             <properties>
                 <twohanded/>
-                <impaling/>
+                <thrusting/>
+                <defensive/>
             </properties>
         </weapon>
 
@@ -392,7 +393,7 @@
 
             <strength>4</strength>
             <load>2</load>
-            <reach>4</reach>
+            <reach>5</reach>
             <weight>2</weight>
             
             <properties>
@@ -499,7 +500,7 @@
             </properties>
         </weapon>
 
-        <weapon name="Spear">
+        <weapon name="Hunting spear">
             <category>Spears</category>
             <importance>3</importance>
             <class>single</class>
@@ -520,12 +521,14 @@
 
             <strength>2</strength>
             <load>2</load>
-            <reach>4</reach>
+            <reach>5</reach>
             <weight>1</weight>
 
             <properties>
                 <missile/>
                 <thrusting/>
+                <twohanded/>
+                <defensive/>
             </properties>
         </weapon>
 
@@ -558,13 +561,14 @@
 
             <strength>3</strength>
             <load>3</load>
-            <reach>4</reach>
+            <reach>5</reach>
 
             <properties>
                 <missile/>
                 <thrusting/>
                 <heavy/>
                 <twohanded/>
+                <defensive/>
             </properties>
         </weapon>
 
@@ -790,7 +794,7 @@
 
             <strength>2</strength>
             <load>2</load>
-            <reach>3</reach>
+            <reach>4</reach>
             <weight>0.5</weight>
             
             <properties>
@@ -887,12 +891,8 @@
                 <para>
                     A heavy jacket of padded cloth. It is bulkier than
                     soft leather armour, but its extra thickness adds
-                    greater protection.
-                </para>
-                
-                <para>
-                    It is the most common protection worn by peasant
-                    militia and town guards.
+                    greater protection. It is viewed as peasant armour,
+                    and never worn by real warriors.
                 </para>
             </description>
             
@@ -901,6 +901,30 @@
             <weight>1</weight>
             
             <athletics>0.5</athletics>
+            <stealth>0</stealth>
+            
+            <properties>
+                <light/>
+                <soft/>
+            </properties>
+        </armour>
+        
+        <armour name="Quilted hauberk">
+            <description>
+                <para>
+                    A long heavy jacket of padded cloth. It is commonly
+                    worn by militia troops, since it is cheap, light and
+                    easy to make. It can be better than mail against
+                    small improvised weapons since its thickness gives
+                    better padding.
+                </para>
+            </description>
+            
+            <protection>+4</protection>
+            <load>0.5</load>
+            <weight>1</weight>
+            
+            <athletics>0.75</athletics>
             <stealth>0</stealth>
             
             <properties>
@@ -1055,7 +1079,7 @@
             </properties>
         </armour>
 
-        <armour name="Chain habergeon">
+        <armour name="Mail habergeon">
             <protection>+4</protection>
             <load>3</load>
             <athletics>0.5</athletics>

@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.57 $</version>
-            <date>$Date: 2004-08-30 21:51:05 $</date>
+            <version>$Revision: 1.58 $</version>
+            <date>$Date: 2004-09-04 22:21:47 $</date>
         </cvsinfo>
 
         <license>
@@ -531,6 +531,14 @@
                             counts as impaling.
                         </item>
                         
+                        <item name="Defensive">
+                            A defensive weapon is particularly good at
+                            keeping attackers at bay. Long thrusting
+                            weapons such as spears are a prime example.
+                            When used in a defensive stance, they only
+                            suffer a -5 to attack, rather than -10.
+                        </item>
+                        
                         <item name="Blocking">
                             A blocking weapon can be used as a shield. When
                             used as a shield, weapon attributes are not
@@ -580,14 +588,18 @@
                         </item>
 
                         <item target="3">
-                            Broad sword, bastard sword, long sword, axe.
+                            Broad sword, bastard sword, axe.
                         </item>
-
+                        
                         <item target="4">
-                            Great sword, broad axe, quarterstaff, spear.
+                            Long sword, broad axe.
                         </item>
 
                         <item target="5">
+                            Great sword, quarterstaff, war spear.
+                        </item>
+
+                        <item target="6">
                             Long spear or other pole arm.
                         </item>
                     </targetlist>
@@ -618,6 +630,35 @@
                             defender must be prepared to receive the charge
                             in order to receive this bonus, if it applies
                             to them.
+                        </para>
+                    </sect4>
+                    
+                    <sect4>
+                        <title>Ranked Fighting</title>
+                        
+                        <para>
+                            If a group of warriors are fighting in two or
+                            more ranks, than it is possible for people in
+                            the second rank to attack through the first
+                            rank against the enemy if they have weapons
+                            with sufficient reach.
+                        </para>
+                        
+                        <para>
+                            The reach of the weapon is reduced by two plus
+                            the reach of the target's weapon. If it is
+                            zero or greater, then the second rank may also
+                            strike at the target with thrusting weapons.
+                            Any such attack is always slow, and counts as
+                            coming from the first rank character (i.e.,
+                            the target does not need to defend against two
+                            opponents). The second rank can only use the
+                            normal stance.
+                        </para>
+                        
+                        <para>
+                            See the <e>second rank</e> technique which
+                            removes some of the above limitations.
                         </para>
                     </sect4>
 
@@ -1437,9 +1478,6 @@
                 <e>light</e>. A whole suit of armour is considered to be
                 either heavy or light, even if the suit consists of some
                 heavy and some light components.
-            </para>
-            
-            <para>
                 By default, armour is <e>light</e>. If heavy armour covers
                 either the torso and arms, or the torso and legs, then the
                 whole suit of armour is considered heavy.

@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.1 $</version>
-            <date>$Date: 2004-08-30 21:51:14 $</date>
+            <version>$Revision: 1.2 $</version>
+            <date>$Date: 2004-09-04 22:21:47 $</date>
         </cvsinfo>
 
         <license>
@@ -42,7 +42,42 @@
 
     <body>
         <sect1>
-            <title>Weapons</title>
+            <title>Encumbrance</title>
+            
+            <para>
+                A creature can carry a load equal to its strength squared
+                without penalty (e.g., an average human with a strength
+                of 3 can carry a load of 9).
+            </para>
+            
+            <targetlist targetFirst="false" bold="true">
+                <valueLabel>Encumbrance</valueLabel>
+                <targetLabel>Load</targetLabel>
+                
+                <item target="+0" value="Unencumbered (x1).">
+                    A character can carry up to the square of their
+                    strength without being encumbered.
+                </item>
+                
+                <item target="-3" value="Light (x2).">
+                    A character who carries more than the square of their
+                    strength (but no more than twice this) is lightly
+                    encumbered, and has a -3 penalty to combat rolls.
+                </item>
+                
+                <item target="-6" value="Moderately (x3).">
+                </item>
+                
+                <item target="-10" value="Heavily (x6).">
+                </item>
+                
+                <item target="-20" value="Greatly (x10).">
+                </item>
+            </targetlist>
+        </sect1>
+        
+        <sect1>
+            <title>Weapon list</title>
 
             <import-weaponlist href="xml/arms.yags" 
                                 importance="1" 
@@ -55,7 +90,7 @@
         </sect1>
 
         <sect1>
-            <title>Armour</title>
+            <title>Armour list</title>
 
 
             <import-armourlist href="xml/arms.yags"/>
