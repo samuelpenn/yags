@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.33 $</version>
-            <date>$Date: 2003-11-26 07:10:32 $</date>
+            <version>$Revision: 1.34 $</version>
+            <date>$Date: 2003-11-30 00:14:12 $</date>
         </cvsinfo>
 
         <license>
@@ -194,6 +194,12 @@
                         possible from such a position, but they are
                         difficult.
                     </entry>
+
+                    <entry term="Combat bonuses">
+                        The four statistics, <e>initiative</e>, <e>attack</e>,
+                        <e>defence</e> and <e>damage</e> which a weapon gives
+                        as a bonus when used in combat.
+                    </entry>
                 </termlist>
             </sect2>
 
@@ -210,7 +216,7 @@
 
                 <para>
                     Each style is associated with a skill of the same name.
-                    Only single skill is needed to cover use of all weapons
+                    Only a single skill is needed to cover use of all weapons
                     which can be used with that style of fighting. It is
                     possible to use any melee weapon with any melee style,
                     though at a penalty.
@@ -227,7 +233,8 @@
 
                 <para>
                     If using a second weapon, or a shield, only half the
-                    defence bonus of the second weapon applies.
+                    defence bonus of the second weapon applies (all other
+                    bonuses of the second weapon are ignored).
                 </para>
 
                 <sect3>
@@ -266,12 +273,13 @@
                         handed weapon and a shield, to give what is
                         possibly the best combination. Any type of shield,
                         and any one handed weapon can be used with this
-                        style.
+                        style (anything which has a style of <e>single</e>
+                        in other words).
                     </para>
 
                     <para>
-                        The full combat bonuses the shield are added to the
-                        combat bonuses of the primary weapon.
+                        The full combat bonuses of the shield are added to
+                        the combat bonuses of the primary weapon.
                     </para>
                 </sect3>
 
@@ -507,7 +515,9 @@
                         of initiative.
                     </item>
                     <item>
-                        End of round book keeping.
+                        End of round book keeping, including making rolls to
+                        remain conscious and alive (if necessary) and any
+                        required morale checks.
                     </item>
                 </orderedlist>
 
@@ -540,26 +550,61 @@
                         are perfectly valid.
                     </para>
 
-                    <para>
-                        It is not possible to wait until the end of
-                        the round - any waiting must be for a particular
-                        event. It is not possible to wait for a non
-                        event. For example, an archer might specify
-                        that they are waiting for someone to come
-                        through a door, and that they will shoot them
-                        when they do. If someone comes through the door,
-                        then they get an attack, otherwise they perform
-                        no action that round.
-                    </para>
+                    <sect4>
+                        <title>Stance</title>
 
-                    <para>
-                        Further, a declaration to shoot someone if they
-                        come through the door, otherwise shoot someone
-                        else is not valid. The character will not know
-                        that someone is not going to come through the
-                        door until the round has ended, by which time
-                        it is too late.
-                    </para>
+                        <para>
+                            A character's stance is considered to be
+                            <e>normal</e> unless stated otherwise. Stance
+                            determines what actions and techniques are
+                            possible. Sometimes, stance is determined before
+                            hand due to circumstances - a character who has
+                            been knocked to the floor is considered to be
+                            <e>prone</e>, regardless of what they wish to do
+                            themselves.
+                        </para>
+
+                        <termlist sort="true">
+                            <entry term="Aggressive">
+                                An aggressive stance risks leaving the
+                                character open to attack, but has the
+                                benefit of better offense. All attacks are
+                                fast, and attack and damage rolls are at
+                                +5, however defence is at -10.
+                            </entry>
+
+                            <entry term="Defensive">
+                                A defensive stance values defense over
+                                offense. Defence rolls are at +5, however
+                                attack rolls are at -10, and actions are
+                                considered to be slow. A defensive character
+                                can defend against up to 5 attacks.
+                            </entry>
+
+                            <entry term="Prone">
+                                A prone character is at -10 to all actions,
+                                and all actions are slow. A prone character
+                                may attempt to get up as their action. An
+                                athletics or brawl check (with agility) is
+                                needed at difficulty 20. Success means they
+                                are standing and can act normally the
+                                following round, otherwise they are unsteady
+                                next round. The -10 does not apply to this
+                                action.
+                            </entry>
+
+                            <entry term="Unsteady">
+                                An unsteady character is always slow, and
+                                cannot move more than 3m in a round. An
+                                unsteady character cannot choose any other
+                                stance other than prone until they have
+                                steadied themselves. This can be done
+                                automatically by spending an action, or an
+                                attempt may be made at the end of a round
+                            </entry>
+                        </termlist>
+                    </sect4>
+
 
                     <sect4>
                         <title>Declaring Attacks</title>
@@ -609,28 +654,6 @@
                         are resolved last. Use of some special attacks
                         will make an action slow or fast.
                     </para>
-                    
-                    <example>
-                        <para>
-                            Alice has an initiative of 28, Bob has an
-                            initiative of 24 and Charles has an initiative
-                            of 22. Alice and Bob make normal attacks, but
-                            Charles makes an aggressive attack, which is
-                            always fast. When actions are resolved, fast
-                            actions go first, so Charles is first to act.
-                            Next, normal actions are performed, so Alice
-                            acts, followed by Bob.
-                        </para>
-
-                        <para>
-                            If Alice's action was also an aggressive attack,
-                            then she would be considered fast as well as
-                            Charles. When fast actions are resolved, they
-                            would be in order of Alice, then Charles. Bob
-                            would then act last, taking only a normal speed
-                            action.
-                        </para>
-                    </example>
 
                     <sect4>
                         <title>Fumbling initiative</title>
@@ -646,26 +669,6 @@
                         <para>
                             Secondly, the person becomes fatigued, gaining
                             one level of temporary fatigue.
-                        </para>
-                    </sect4>
-
-                    <sect4>
-                        <title>Reactions</title>
-
-                        <para>
-                            A reaction is in response to another's action.
-                            Some special attack types are considered to
-                            be reactions. In this case, the reacting
-                            character acts immediately after the action
-                            that they are reacting to.
-                        </para>
-                        
-                        <para>
-                            Normally, a reaction can only be used if the
-                            character's action would normally occur before
-                            the event. However, it is delayed until after
-                            the event. A reaction can be carried over until
-                            the next round.
                         </para>
                     </sect4>
                 </sect3>
