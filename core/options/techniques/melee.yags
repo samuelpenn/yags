@@ -4,12 +4,78 @@
     General melee combat techniques.
     
     Author:  Samuel Penn
-    Version: $Revision: 1.9 $
-    Date:    $Date: 2004-09-05 14:27:07 $
+    Version: $Revision: 1.10 $
+    Date:    $Date: 2004-09-05 18:19:09 $
     
  -->
 
 <advantages>
+
+    <!--
+        Aggressive
+        
+        The following techniques are based off from 'Improved attack'.
+        They generally use the aggressive stance, improving the
+        character's attack.
+     -->
+    <advantage name="Improved attack" type="technique">
+        <cost points="2"/>
+        <skill name="All melee"/>
+        
+        <description>
+            <para>
+                When using the <e>aggressive stance</e>, gain a +5 bonus to
+                damage as well as attack. Automatic.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Desperate attack" type="technique">
+        <cost points="4"/>
+        <skill name="Any melee or brawl"/>
+        <prerequisite>Improved attack</prerequisite>
+        
+        <description>
+            <para>
+                If the character is using the aggressive stance, has
+                just missed an attack and hasn't yet made any defence rolls
+                that round, then they may choose to make a second attack
+                at the same skill as the first. One fatigue is gained,
+                and they loose <e>all</e> defence rolls for the rest of
+                the round.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Double attack" type="technique">
+        <cost points="10"/>
+        <skill name="All melee"/>
+        <prerequisite>Desperate attack</prerequisite>
+        
+        <description>
+            <para>
+                Aggressive stance. The attacker can attack twice, each time
+                at a -15 penalty to skill. The first attack is fast, the
+                second attack is slow, but both happen at the same
+                initiative.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Triple attack" type="technique">
+        <cost points="15"/>
+        <skill name="All melee"/>
+        <prerequisite>Double attack</prerequisite>
+        
+        <description>
+            <para>
+                Aggressive stance. The attacker can attack three times,
+                each time at a -30 penalty to skill. The first attack is
+                fast, the second attack is normal, and the third attack
+                is slow.
+            </para>
+        </description>
+    </advantage>
 
     <advantage name="Knockback attack" type="technique">
         <cost points="4"/>
@@ -29,28 +95,60 @@
             </para>
         </description>
     </advantage>
-
-    <advantage name="Finesse" type="technique">
-        <cost points="2"/>
-        <skill name="Any melee weapon"/>
+    
+    <advantage name="Mighty blow" type="technique">
+        <cost points="6"/>
+        <skill name="Any melee"/>
+        <prerequisite>Knockback attack</prerequisite>
         
         <description>
-            <para role="descriptive">
-                Enables the character to trade hitting power for finesse.
-                The blow isn't as direct, but has more chance of getting
-                through any defences.
-            </para>
-            
             <para>
-                If finesse is declared for an attack, then damage can be
-                used in order to increase the chance of hitting. For
-                each +1 bonus to their attack roll, the attacker gets a
-                -1 penalty to damage. The bonus/penalty cannot be greater
-                than the skill score of the character.
+                Aggressive stance, fatigue, declared before the attack.
+                On a successful hit, the foe's armour is halved for that
+                attack (if already halved, or impaled, it is reduced to
+                zero).
             </para>
         </description>
     </advantage>
-
+    
+    <advantage name="Deadly blow" type="technique">
+        <cost points="6"/>
+        <skill name="Any melee weapon"/>
+        <prerequisite>Knockback attack</prerequisite>
+        
+        <description>
+            <para>
+                Aggressive, fatigue, -10 to attack roll, declared before
+                the attack. If the target is successfully wounded, then
+                they must make a size x stamina roll against a target of
+                10 + 5 x wounds (not stuns) caused or immediately drop
+                to fatally wounded.
+            </para>
+        </description>
+    </advantage>
+    
+    <advantage name="Overwhelming attack" type="technique">
+        <cost points="8"/>
+        <skill name="Any melee weapon"/>
+        <prerequisite>Mighty blow</prerequisite>
+        
+        <description>
+            <para>
+                Aggressive, automatic. On an excellent attack, the damage
+                roll gets +10 to any knockback effects.
+            </para>
+        </description>
+    </advantage>
+    
+    
+    
+    
+    <!--
+        Defensive
+        
+        The following techniques are all defensive in nature.
+     -->
+    
     <advantage name="Improved defence" type="technique">
         <cost points="2"/>
         <skill name="Any melee weapon"/>
@@ -63,9 +161,25 @@
             </para>
         </description>
     </advantage>
+    
+    <advantage name="Reflex dodge" type="technique">
+        <cost points="4"/>
+        <skill name="Any melee or brawl"/>
+        
+        <description>
+            <para>
+                If the character fails a defence roll, and they haven't
+                attacked yet this round, then they may forgo their attack
+                by dodging back from the blow. They gain +5 to their soak
+                roll for that attack only. May only be used once in a
+                round, and the character cannot be using an aggressive
+                stance.
+            </para>
+        </description>
+    </advantage>
 
     <advantage name="Counter strike" type="technique">
-        <cost points="6"/>
+        <cost points="4"/>
         <skill name="Any melee weapon"/>
         <prerequisite>Improved defence</prerequisite>
         
@@ -92,66 +206,6 @@
         </description>
     </advantage>
     
-    
-    
-    <advantage name="Improved attack" type="technique">
-        <cost points="2"/>
-        <skill name="All melee"/>
-        
-        <description>
-            <para>
-                When using the <e>aggressive stance</e>, damage rolls also
-                gain a +5 bonus.  Automatic use.
-            </para>
-        </description>
-    </advantage>
-    
-    <advantage name="Mighty blow" type="technique">
-        <cost points="6"/>
-        <skill name="Any melee"/>
-        <prerequisite>Improved attack</prerequisite>
-        
-        <description>
-            <para>
-                Aggressive, -10 to attack and uses one defence. On a
-                successful hit, foe's armour is halved for that attack
-                (or reduced to zero if already halved or impaled).
-            </para>
-        </description>
-    </advantage>
-    
-    <advantage name="Deadly blow" type="technique">
-        <cost points="6"/>
-        <skill name="Any melee weapon"/>
-        <prerequisite>Improved attack</prerequisite>
-        
-        <description>
-            <para>
-                Aggressive, -10 to attack and uses one defence. If an
-                excellent attack is made, and the defender is successfully
-                wounded, then they must make a size x stamina roll at a
-                target of 10 + 5 x wounds caused or die.
-            </para>
-        </description>
-    </advantage>
-    
-    <advantage name="Overwhelming attack" type="technique">
-        <cost points="8"/>
-        <skill name="Any melee weapon"/>
-        <prerequisite>Mighty blow</prerequisite>
-        
-        <description>
-            <para>
-                Aggressive, automatic. If the target is wounded with a
-                wounding attack, then they suffer a stun as well. On an
-                excellent attack, they must make a strength check equal
-                to 10 + 5 x wounds caused or fall prone.
-            </para>
-        </description>
-    </advantage>
-    
-    
-    
     <advantage name="Shield wall" type="technique">
         <cost points="2"/>
         <skill name="Weapon and shield"/>
@@ -174,7 +228,7 @@
         </description>
     </advantage>
     
-    <advantage name="Second rank" type="technique">
+    <advantage name="Double rank" type="technique">
         <cost points="2"/>
         <skill name="Longshaft weapon"/>
         
@@ -241,6 +295,19 @@
         </description>
     </advantage>
     
+    <advantage name="Finesse" type="technique">
+        <cost points="2"/>
+        <skill name="Any melee skill or brawl"/>
+        
+        <description>
+            <para>
+                Character is able to trade hitting power for accuracy.
+                Get +5 to attack and initiative rolls, but -5 to damage
+                rolls.
+            </para>
+        </description>
+    </advantage>
+    
     <advantage name="Quickdraw" type="technique">
         <cost points="4"/>
         <skill name="Any weapon skill"/>
@@ -257,37 +324,50 @@
     </advantage>
 
 
-
+    <advantage name="Reflex defence" type="technique">
+        <cost points="4"/>
+        <skill name="Any melee skill or brawl"/>
+        <prerequisite>Finesse</prerequisite>
+        
+        <description>
+            <para>
+                If the character has not yet made an attack, and they have
+                just failed a defence roll, they may forgo their attack
+                in order to get a second defence roll, at the same skill
+                as the first. May only be performed once a round, and not
+                if using an aggressive stance.
+            </para>
+        </description>
+    </advantage>
     
-
-
-    <advantage name="Double attack" type="technique">
-        <cost points="10"/>
-        <skill name="All melee"/>
-        <prerequisite>Improved attack</prerequisite>
+    <advantage name="Swap defence" type="technique">
+        <cost points="6"/>
+        <skill name="Any melee skill or brawl"/>
+        <prerequisite>Reflex defence</prerequisite>
         
         <description>
             <para>
-                Aggressive stance. The attacker can attack twice, each time
-                at a -15 penalty to skill. The first attack is fast, the
-                second attack is slow, but both happen at the same
-                initiative.
+                If the character is knowingly attacked (i.e. not surprise
+                attacks) by a foe they are not defending against, then
+                they may move a currently unused defence to this foe. May
+                only be done once a round.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Triple attack" type="technique">
-        <cost points="15"/>
-        <skill name="All melee"/>
-        <prerequisite>Double attack</prerequisite>
+    <advantage name="False attack" type="technique">
+        <cost points="8"/>
+        <skill name="Any melee skill or brawl"/>
+        <prerequisite>Swap defence</prerequisite>
         
         <description>
             <para>
-                Aggressive stance. The attacker can attack three times,
-                each time at a -30 penalty to skill. The first attack is
-                fast, the second attack is normal, and the third attack
-                is slow.
+                Change target of attack. When the attack is made, the
+                character can instead attack another foe within range.
+                This has the advantage that the second target probably
+                hasn't declared a defence against the character.
             </para>
         </description>
     </advantage>
+
 </advantages>
