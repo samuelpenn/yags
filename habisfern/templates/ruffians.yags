@@ -2,12 +2,22 @@
 
 
 <character-templates>
+    <preface>
+        <para>
+            Ruffians make up the seedy underworld of civilisation. Given
+            here are example templates for a variety of seedy characters
+            likely to be found in towns and cities. A few may be found in
+            rural villages as well, though they will be few since such
+            characters often need a large population to support them.
+        </para>
+    </preface>
 
     <character name="Thug (Average)">
         <description>
             <age>21</age>
             <short>
-                Typical street thug. Not particularly bright.
+                Typical street thug. Not particularly bright, but quite
+                tough and strong. Hired muscle more than anything.
             </short>
         </description>
 
@@ -75,6 +85,20 @@
                 <defence attribute="dexterity"/>
                 <damage type="mixed"/>
             </combatstyle>
+
+            <combatstyle style="Club" skill="Brawl">
+                <mode>Melee</mode>
+                <primary>Club</primary>
+                <initiative attribute="agility"/>
+                <attack attribute="dexterity"/>
+                <defence attribute="dexterity"/>
+                <damage type="mixed"/>
+            </combatstyle>
+
+            <armourstyle style="Leather">
+                <armour name="Soft leather jacket"/>
+                <armour name="Soft leather trousers"/>
+            </armourstyle>
         </combat>
     </character>
 
@@ -211,6 +235,8 @@
             </combatstyle>
         </combat>
     </character>
+
+
 
     <character name="Thief (Average)">
         <description>
