@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 
 <grimoire name="Fire">
-    <spell name="Ignite" level="1" type="fire">
-        <range>-5/m</range>
+    <spell name="Ignite" level="1" convocation="fire">
+        <range>+5/m</range>
         <duration>Momentary</duration>
-        <target>-5/size</target>
-        <effect>+1/1</effect>
+        <target>+5/size</target>
+        <effect>+1 fire/1</effect>
         <resist>Soak</resist>
 
         <description>
@@ -18,6 +18,37 @@
                 flames.
             </para>
 
+            <targetlist>
+                <valueLabel>Type of material</valueLabel>
+                <targetLabel>Target</targetLabel>
+
+                <entry target="0" value="Flammable">
+                    Oil, tinder.
+                </entry>
+
+                <entry target="5" value="Combustable">
+                    Paper.
+                </entry>
+
+                <entry target="10" value="">
+                    Wood chippings, cloth.
+                </entry>
+
+                <entry target="15" value="Burnable">
+                    Wood.
+                </entry>
+
+                <entry target="20" value="Resistent">
+                    Damp wood, flesh.
+                </entry>
+
+                <entry target="25" value="Very resistent">
+                </entry>
+
+                <entry target="30" value="Mostly inflammable">
+                </entry>
+            </targetlist>
+
             <para>
                 If the affected item is larger than the size targetted by
                 the spell, then only a portion of the item is affected. Fire
@@ -28,18 +59,6 @@
                 Only the surface of the item is affected by the initial
                 spell, though the fire may spread inwards naturally.
             </para>
-
-            <targetlist>
-                <valueLabel>Type of material</valueLabel>
-                <targetLabel>Target</targetLabel>
-
-                <entry target="5" value="Flammable oil"/>
-                <entry target="10" value="Dry paper"/>
-                <entry target="15" value="Paper, dry wood, hair"/>
-                <entry target="20" value="Wood, cloth"/>
-                <entry target="25" value="Flesh"/>
-                <entry target="30" value="Wet wood"/>
-            </targetlist>
         </description>
     </spell>
 
