@@ -4,8 +4,8 @@
 <!--
     Weapon list for Yags.
 
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2003-11-24 22:22:31 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2003-12-23 13:56:48 $
  -->
 <equipment>
     <weaponlist>
@@ -20,11 +20,46 @@
             weapons are only given in the most complete lists.
          -->
 
+        <weapon name="Hand axe">
+            <class>single</class>
+
+            <description>
+                <para>
+                    A small axe, not designed specifically for combat but
+                    can be used in close quarters fighting. It has a small
+                    head, with a haft about 30cm long.
+                </para>
+            </description>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+3</initiative>
+                <attack>+2</attack>
+                <defence>+1</defence>
+                <damage>+5</damage>
+            </combat>
+
+            <combat mode="Thrown" importance="3">
+                <initiative>+2</initiative>
+                <attack>+1</attack>
+                <damage>+4</damage>
+                <range strength="true">
+                    <increment>5</increment>
+                    <short>3</short>
+                    <medium>6</medium>
+                    <long>10</long>
+                </range>
+            </combat>
+
+            <strength>1</strength>
+            <load>1</load>
+            <reach>1</reach>
+        </weapon>
+
         <weapon name="Axe">
             <description>
                 <para>
-                    A battle axe designed for single handed use. It has a
-                    single head, with a single blade.
+                    An axe designed for single handed user. It has a single
+                    bladed head, with a haft about 60cm long.
                 </para>
             </description>
 
@@ -38,9 +73,15 @@
             </combat>
 
             <combat mode="Thrown" importance="2">
-                <initiative>+5</initiative>
-                <attack>+3</attack>
-                <damage>+10</damage>
+                <initiative>+2</initiative>
+                <attack>+2</attack>
+                <damage>+9</damage>
+                <range strength="true">
+                    <increment>5</increment>
+                    <short>3</short>
+                    <medium>6</medium>
+                    <long>10</long>
+                </range>
             </combat>
 
             <strength>3</strength>
@@ -48,14 +89,14 @@
             <reach>3</reach>
         </weapon>
 
-        <weapon name="Great axe">
+        <weapon name="Broad axe">
             <class>great</class>
 
             <description>
                 <para>
-                    A large two handed axe with a single broad blade. This
-                    weapon is quite heavy and difficult to use, but is very
-                    effective at getting through armour.
+                    A large two handed axe with a long haft, around 150cm
+                    in length. It is topped with a single broad blade. It
+                    is poor in defence, but very good against armour.
                 </para>
             </description>
 
@@ -64,12 +105,6 @@
                 <attack>+7</attack>
                 <defence>+4</defence>
                 <damage>+17</damage>
-            </combat>
-
-            <combat mode="Thrown" importance="1">
-                <initiative>+0</initiative>
-                <attack>+2</attack>
-                <damage>+14</damage>
             </combat>
 
             <strength>6</strength>
@@ -95,12 +130,6 @@
                 <attack>+2</attack>
                 <defence>+3</defence>
                 <damage type="split">+5</damage>
-            </combat>
-
-            <combat mode="Thrown" importance="0">
-                <initiative>+2</initiative>
-                <attack>+0</attack>
-                <damage type="split">+4</damage>
             </combat>
 
             <strength>2</strength>
@@ -146,6 +175,27 @@
             <reach>0</reach>
         </weapon>
 
+        <weapon name="Scramasax">
+            <class>single</class>
+
+            <description>
+                <para>
+                    A cheap single edged sword, forged from a single piece
+                    of iron.
+                </para>
+            </description>
+
+            <combat mode="Melee" importance="3">
+                <initiative>+4</initiative>
+                <attack>+4</attack>
+                <defence>+3</defence>
+                <damage>+7</damage>
+            </combat>
+
+            <strength>2</strength>
+            <load>2</load>
+            <reach>2</reach>
+        </weapon>
 
         <weapon name="Long sword">
             <class>single</class>
@@ -383,20 +433,29 @@
             <reach>4</reach>
         </weapon>
 
-        <weapon name="Hand axe">
+        <weapon name="War spear">
             <class>single</class>
+            <class>longshaft</class>
+
+            <description>
+                <para>
+                    A heavy spear with a broad blade on the end. Used for
+                    melee fighting, and not designed to be thrown at all.
+                </para>
+            </description>
 
             <combat mode="Melee" importance="3">
-                <initiative>+3</initiative>
-                <attack>+2</attack>
-                <defence>+1</defence>
-                <damage>+5</damage>
+                <initiative>+9</initiative>
+                <attack>+5</attack>
+                <defence>+3</defence>
+                <damage>+11</damage>
             </combat>
 
-            <strength>1</strength>
-            <load>1</load>
-            <reach>1</reach>
+            <strength>3</strength>
+            <load>3</load>
+            <reach>4</reach>
         </weapon>
+
 
         <weapon name="Warhammer">
             <class>single</class>
