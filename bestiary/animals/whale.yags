@@ -3,8 +3,8 @@
     type="text/xsl"?>
 
 <!--
-    $Revision: 1.2 $
-    $Date: 2003-11-16 21:39:19 $
+    $Revision: 1.3 $
+    $Date: 2005-04-07 22:04:02 $
 
     Bestiary containing information on whales.
 -->
@@ -49,55 +49,56 @@
             </tactics>
         </description>
 
-        <attributes size="100" soak="35">
-            <attribute name="strength" score="75"/>
-            <attribute name="stamina" score="4"/>
-            <attribute name="agility" score="1"/>
-            <attribute name="dexterity" score="1"/>
-            <attribute name="perception" score="3"/>
-            <attribute name="intelligence" score="2"/>
-            <attribute name="charisma" score="2"/>
-            <attribute name="will" score="2"/>
-        </attributes>
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="100" soak="35">
+                <attribute name="strength" score="75"/>
+                <attribute name="stamina" score="4"/>
+                <attribute name="agility" score="1"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="3"/>
+                <attribute name="intelligence" score="2"/>
+                <attribute name="charisma" score="2"/>
+                <attribute name="will" score="2"/>
+            </attributes>
 
-        <passions>
-            <passion name="Bravery" score="3"/>
-            <passion name="Ego" score="3"/>
-            <passion name="Restraint" score="3"/>
-            <passion name="Temperence" score="3"/>
-        </passions>
+            <passions>
+                <passion name="Bravery" score="3"/>
+                <passion name="Ego" score="3"/>
+                <passion name="Restraint" score="3"/>
+                <passion name="Temperence" score="3"/>
+            </passions>
 
-        <skills>
-            <group name="Talents">
-                <skill name="Athletics" score="2"/>
-                <skill name="Awareness" score="5"/>
-                <skill name="Brawl" score="2"/>
-                <skill name="Charm" score="1"/>
-                <skill name="Guile" score="1"/>
-                <skill name="Sleight" score="0"/>
-                <skill name="Stealth" score="2"/>
-                <skill name="Throw" score="0"/>
-            </group>
+            <skills>
+                <group name="Talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="5"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
+                    <skill name="Sleight" score="0"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="0"/>
+                </group>
 
-            <group name="Misc">
-                <skill name="Survival" score="4"/>
-                <skill name="Swim" score="7"/>
-            </group>
-        </skills>
+                <group name="Misc">
+                    <skill name="Survival" score="4"/>
+                    <skill name="Swim" score="7"/>
+                </group>
+            </skills>
 
-        <combat>
-            <combatstyle style="Bash" skill="Brawl">
-                <initiative attribute="agility" bonus="+25"/>
-                <attack attribute="agility" bonus="+18"/>
-                <defence attribute="agility" bonus="+12"/>
-                <damage type="stun" bonus="+8"/>
-            </combatstyle>
-        </combat>
+            <combat>
+                <combatstyle style="Bash" skill="Brawl">
+                    <initiative attribute="agility" bonus="+25"/>
+                    <attack attribute="agility" bonus="+18"/>
+                    <defence attribute="agility" bonus="+12"/>
+                    <damage type="stun" bonus="+8"/>
+                </combatstyle>
+            </combat>
 
-        <advantages>
-            <advantage name="Animal"/>
-            <advantage name="Acute sense of hearing" score="+1"/>
-        </advantages>
+            <advantages>
+                <advantage name="Animal"/>
+                <advantage name="Acute sense of hearing" score="+1"/>
+            </advantages>
+        </statistics>
     </beast>
-
 </bestiary>

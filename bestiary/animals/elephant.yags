@@ -4,8 +4,8 @@
     type="text/xsl"?>
 
 <!--
-    $Revision: 1.1 $
-    $Date: 2003-11-15 22:56:28 $
+    $Revision: 1.2 $
+    $Date: 2005-04-07 22:04:02 $
 
     Bestiary containing information on elephants.
 -->
@@ -51,61 +51,62 @@
             </social>
         </description>
 
-        <attributes size="25" soak="21">
-            <attribute name="strength" score="35" half="8"/>
-            <attribute name="stamina" score="4"/>
-            <attribute name="agility" score="1"/>
-            <attribute name="dexterity" score="1"/>
-            <attribute name="perception" score="4"/>
-            <attribute name="intelligence" score="1"/>
-            <attribute name="charisma" score="2"/>
-            <attribute name="will" score="2"/>
-        </attributes>
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="25" soak="21">
+                <attribute name="strength" score="35" half="8"/>
+                <attribute name="stamina" score="4"/>
+                <attribute name="agility" score="1"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="4"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="charisma" score="2"/>
+                <attribute name="will" score="2"/>
+            </attributes>
 
-        <skills>
-            <group name="Talents" type="talents">
-                <skill name="Athletics" score="6"/>
-                <skill name="Awareness" score="5"/>
-                <skill name="Brawl" score="2"/>
-                <skill name="Charm" score="1"/>
-                <skill name="Guile" score="0"/>
-                <skill name="Sleight" score="1"/>
-                <skill name="Stealth" score="3"/>
-                <skill name="Throw" score="1"/>
-            </group>
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="6"/>
+                    <skill name="Awareness" score="5"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="0"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="3"/>
+                    <skill name="Throw" score="1"/>
+                </group>
 
-            <group name="Misc" type="skills">
-                <skill name="Survival" score="4"/>
-                <skill name="Swim" score="2"/>
-            </group>
-        </skills>
+                <group name="Misc" type="skills">
+                    <skill name="Survival" score="4"/>
+                    <skill name="Swim" score="2"/>
+                </group>
+            </skills>
 
-        <combat>
-            <combatstyle style="Kick" skill="Brawl">
-                <primary>None</primary>
-                <initiative attribute="agility" bonus="+10"/>
-                <attack attribute="agility" bonus="+12"/>
-                <defence attribute="agility" bonus="+9"/>
-                <damage type="stun" bonus="+1"/>
-            </combatstyle>
+            <combat>
+                <combatstyle style="Kick" skill="Brawl">
+                    <primary>None</primary>
+                    <initiative attribute="agility" bonus="+10"/>
+                    <attack attribute="agility" bonus="+12"/>
+                    <defence attribute="agility" bonus="+9"/>
+                    <damage type="stun" bonus="+1"/>
+                </combatstyle>
 
-            <armourstyle style="Base"/>
+                <armourstyle style="Base"/>
 
-            <armourstyle style="Natural">
-                <armour name="Hide" protection="+3"/>
-            </armourstyle>
-        </combat>
+                <armourstyle style="Natural">
+                    <armour name="Hide" protection="+3"/>
+                </armourstyle>
+            </combat>
 
-        <passions>
-            <passion name="Bravery" score="2"/>
-            <passion name="Ego" score="2"/>
-            <passion name="Restraint" score="2"/>
-            <passion name="Temperence" score="2"/>
-        </passions>
+            <passions>
+                <passion name="Bravery" score="2"/>
+                <passion name="Ego" score="2"/>
+                <passion name="Restraint" score="2"/>
+                <passion name="Temperence" score="2"/>
+            </passions>
 
-        <advantages>
-            <advantage name="Animal"/>
-        </advantages>
+            <advantages>
+                <advantage name="Animal"/>
+            </advantages>
+        </statistics>
     </beast>
-
 </bestiary>

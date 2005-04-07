@@ -4,8 +4,8 @@
     type="text/xsl"?>
 
 <!--
-    $Revision: 1.3 $
-    $Date: 2003-11-01 23:37:12 $
+    $Revision: 1.4 $
+    $Date: 2005-04-07 22:04:02 $
 
     Bestiary containing information on horses.
 -->
@@ -25,6 +25,28 @@
             <short>
                 Horses are herd animals tamed by humans.
             </short>
+
+            <physical>
+                <para>
+                    There are many breeds of horses, but they are broken
+                    down into the broad categories given below. Individual
+                    breeds may be slighter larger, smaller, stronger or
+                    quicker, and can be represented by slight modifications
+                    of the standard templates.
+                </para>
+            </physical>
+
+            <training>
+                <para>
+                    In a civilised society where the majority of horses
+                    have been bred in captivity, most horses will already
+                    be trained to some extent, even if only to pull carts
+                    or as pack animals. In wilderness regions, horses will
+                    be found in the wild and will require breaking in
+                    before they will accept a human rider or be usable as
+                    a pack animal.
+                </para>
+            </training>
         </description>
     </beast>
 
@@ -48,64 +70,70 @@
                 Ponies are small or immature horses.
             </short>
 
-            <movement>
-                <walk normal="15" max="5"/>
-            </movement>
+            <physical>
+                <para>
+                    A pony represents any type of small horse that is
+                    large enough to be ridden by an adult. They are not
+                    capable of carrying armoured knights however, and
+                    may often be used as cheap riding horses.
+                </para>
+            </physical>
         </description>
 
-        <attributes size="6" soak="12">
-            <attribute name="strength" score="4"/>
-            <attribute name="stamina" score="3"/>
-            <attribute name="agility" score="3"/>
-            <attribute name="dexterity" score="1"/>
-            <attribute name="perception" score="3"/>
-            <attribute name="intelligence" score="1"/>
-            <attribute name="charisma" score="1"/>
-            <attribute name="will" score="1"/>
-        </attributes>
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12">
+                <attribute name="strength" score="6" half="3"/>
+                <attribute name="stamina" score="3"/>
+                <attribute name="agility" score="3"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="3"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="charisma" score="1"/>
+                <attribute name="will" score="1"/>
+            </attributes>
 
-        <skills>
-            <group name="Talents" type="talents">
-                <skill name="Athletics" score="3"/>
-                <skill name="Awareness" score="4"/>
-                <skill name="Brawl" score="2"/>
-                <skill name="Charm" score="0"/>
-                <skill name="Guile" score="0"/>
-                <skill name="Sleight" score="1"/>
-                <skill name="Stealth" score="2"/>
-                <skill name="Throw" score="0"/>
-            </group>
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="3"/>
+                    <skill name="Awareness" score="4"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="0"/>
+                    <skill name="Guile" score="0"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="0"/>
+                </group>
 
-            <group name="Misc" type="skills">
-                <skill name="Survival" score="2"/>
-                <skill name="Swim" score="2"/>
-            </group>
-        </skills>
+                <group name="Misc" type="skills">
+                    <skill name="Survival" score="2"/>
+                    <skill name="Swim" score="2"/>
+                </group>
+            </skills>
 
-        <combat>
-            <combatstyle style="Kick" skill="Brawl">
-                <initiative attribute="agility" bonus="+3"/>
-                <attack attribute="agility" bonus="+2"/>
-                <defence attribute="agility" bonus="+1"/>
-                <damage type="split" bonus="+6"/>
-            </combatstyle>
-        </combat>
+            <combat>
+                <combatstyle style="Kick" skill="Brawl">
+                    <initiative attribute="agility" bonus="+3"/>
+                    <attack attribute="agility" bonus="+2"/>
+                    <defence attribute="agility" bonus="+1"/>
+                    <damage type="split" bonus="+6"/>
+                </combatstyle>
+            </combat>
 
-        <passions>
-            <passion name="Bravery" score="2"/>
-            <passion name="Temperence" score="2"/>
-            <passion name="Restraint" score="2"/>
-            <passion name="Ego" score="2"/>
-        </passions>
+            <passions>
+                <passion name="Bravery" score="2"/>
+                <passion name="Temperence" score="2"/>
+                <passion name="Restraint" score="2"/>
+                <passion name="Ego" score="2"/>
+            </passions>
 
-        <advantages>
-            <advantage name="Animal"/>
-            <advantage name="Acute sense of smell" score="+2"/>
-            <advantage name="Acute sense of hearing" score="+1"/>
-            <advantage name="Brontophobia"/>
-            <advantage name="Phobia (blood)"/>
-            <advantage name="Extra encumbrance" score="+2"/>
-        </advantages>
+            <advantages>
+                <advantage name="Animal"/>
+                <advantage name="Acute sense of smell" score="+2"/>
+                <advantage name="Acute sense of hearing" score="+1"/>
+                <advantage name="Brontophobia"/>
+                <advantage name="Phobia (blood)"/>
+            </advantages>
+        </statistics>
     </beast>
 
 
@@ -138,64 +166,66 @@
 
         </description>
 
-        <attributes size="7" soak="15">
-            <attribute name="strength" score="5"/>
-            <attribute name="stamina" score="4"/>
-            <attribute name="agility" score="3"/>
-            <attribute name="dexterity" score="1"/>
-            <attribute name="perception" score="3"/>
-            <attribute name="intelligence" score="1"/>
-            <attribute name="charisma" score="1"/>
-            <attribute name="will" score="1"/>
-        </attributes>
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="7" soak="15">
+                <attribute name="strength" score="5"/>
+                <attribute name="stamina" score="4"/>
+                <attribute name="agility" score="3"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="3"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="charisma" score="1"/>
+                <attribute name="will" score="1"/>
+            </attributes>
 
-        <skills>
-            <group name="Talents" type="talents">
-                <skill name="Athletics" score="3"/>
-                <skill name="Awareness" score="4"/>
-                <skill name="Brawl" score="2"/>
-                <skill name="Charm" score="0"/>
-                <skill name="Guile" score="0"/>
-                <skill name="Sleight" score="1"/>
-                <skill name="Stealth" score="2"/>
-                <skill name="Throw" score="0"/>
-            </group>
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="3"/>
+                    <skill name="Awareness" score="4"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="0"/>
+                    <skill name="Guile" score="0"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="0"/>
+                </group>
 
-            <group name="Misc" type="skills">
-                <skill name="Survival" score="2"/>
-                <skill name="Swim" score="2"/>
-            </group>
-        </skills>
+                <group name="Misc" type="skills">
+                    <skill name="Survival" score="2"/>
+                    <skill name="Swim" score="2"/>
+                </group>
+            </skills>
 
-        <combat>
-            <combatstyle style="Kick" skill="Brawl">
-                <initiative attribute="agility" bonus="+3"/>
-                <attack attribute="agility" bonus="+4"/>
-                <defence attribute="agility" bonus="+1"/>
-                <damage type="split" bonus="+3"/>
-            </combatstyle>
-        </combat>
+            <combat>
+                <combatstyle style="Kick" skill="Brawl">
+                    <initiative attribute="agility" bonus="+3"/>
+                    <attack attribute="agility" bonus="+4"/>
+                    <defence attribute="agility" bonus="+1"/>
+                    <damage type="split" bonus="+3"/>
+                </combatstyle>
+            </combat>
 
-        <passions>
-            <passion name="Bravery" score="2"/>
-            <passion name="Temperence" score="2"/>
-            <passion name="Restraint" score="2"/>
-            <passion name="Ego" score="2"/>
-        </passions>
+            <passions>
+                <passion name="Bravery" score="2"/>
+                <passion name="Temperence" score="2"/>
+                <passion name="Restraint" score="2"/>
+                <passion name="Ego" score="2"/>
+            </passions>
 
-        <advantages>
-            <advantage name="Animal"/>
-            <advantage name="Acute sense of smell" score="+2"/>
-            <advantage name="Acute sense of hearing" score="+1"/>
-            <advantage name="Brontophobia"/>
-            <advantage name="Phobia (blood)"/>
-            <advantage name="Extra encumbrance" score="+2"/>
-        </advantages>
+            <advantages>
+                <advantage name="Animal"/>
+                <advantage name="Acute sense of smell" score="+2"/>
+                <advantage name="Acute sense of hearing" score="+1"/>
+                <advantage name="Brontophobia"/>
+                <advantage name="Phobia (blood)"/>
+                <advantage name="Extra encumbrance" score="+2"/>
+            </advantages>
+        </statistics>
     </beast>
 
 
     <!-- Light war horse -->
-    <beast name="Light war horse">
+    <beast name="Light Warhorse">
         <information>
             <type>Animal</type>
             <demeanor>Herd</demeanor>
@@ -229,62 +259,64 @@
             </physical>
         </description>
 
-        <attributes size="8" soak="15">
-            <attribute name="strength" score="6"/>
-            <attribute name="stamina" score="4"/>
-            <attribute name="agility" score="4"/>
-            <attribute name="dexterity" score="1"/>
-            <attribute name="perception" score="3"/>
-            <attribute name="intelligence" score="1"/>
-            <attribute name="charisma" score="1"/>
-            <attribute name="will" score="2"/>
-        </attributes>
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="8" soak="15">
+                <attribute name="strength" score="6"/>
+                <attribute name="stamina" score="4"/>
+                <attribute name="agility" score="4"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="3"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="charisma" score="1"/>
+                <attribute name="will" score="2"/>
+            </attributes>
 
-        <skills>
-            <group name="Talents" type="talents">
-                <skill name="Athletics" score="4"/>
-                <skill name="Awareness" score="4"/>
-                <skill name="Brawl" score="4"/>
-                <skill name="Charm" score="0"/>
-                <skill name="Guile" score="0"/>
-                <skill name="Sleight" score="1"/>
-                <skill name="Stealth" score="2"/>
-                <skill name="Throw" score="0"/>
-            </group>
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="4"/>
+                    <skill name="Awareness" score="4"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="0"/>
+                    <skill name="Guile" score="0"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="0"/>
+                </group>
 
-            <group name="Misc" type="skills">
-                <skill name="Survival" score="2"/>
-                <skill name="Swim" score="2"/>
-                <skill name="Battle" score="2"/>
-            </group>
-        </skills>
+                <group name="Misc" type="skills">
+                    <skill name="Survival" score="2"/>
+                    <skill name="Swim" score="2"/>
+                    <skill name="Battle" score="2"/>
+                </group>
+            </skills>
 
-        <combat>
-            <combatstyle style="Kick" skill="Brawl">
-                <initiative attribute="agility" bonus="+4"/>
-                <attack attribute="agility" bonus="+3"/>
-                <defence attribute="agility" bonus="+1"/>
-                <damage type="split" bonus="+3"/>
-            </combatstyle>
-        </combat>
+            <combat>
+                <combatstyle style="Kick" skill="Brawl">
+                    <initiative attribute="agility" bonus="+4"/>
+                    <attack attribute="agility" bonus="+3"/>
+                    <defence attribute="agility" bonus="+1"/>
+                    <damage type="split" bonus="+3"/>
+                </combatstyle>
+            </combat>
 
-        <passions>
-            <passion name="Bravery" score="4"/>
-            <passion name="Temperence" score="2"/>
-            <passion name="Restraint" score="4"/>
-            <passion name="Ego" score="2"/>
-        </passions>
+            <passions>
+                <passion name="Bravery" score="4"/>
+                <passion name="Temperence" score="2"/>
+                <passion name="Restraint" score="4"/>
+                <passion name="Ego" score="2"/>
+            </passions>
 
-        <advantages>
-            <advantage name="Animal"/>
-            <advantage name="Acute sense of smell" score="+2"/>
-            <advantage name="Acute sense of hearing" score="+1"/>
-            <advantage name="Extra encumbrance" score="+3"/>
-        </advantages>
+            <advantages>
+                <advantage name="Animal"/>
+                <advantage name="Acute sense of smell" score="+2"/>
+                <advantage name="Acute sense of hearing" score="+1"/>
+                <advantage name="Extra encumbrance" score="+3"/>
+            </advantages>
+        </statistics>
     </beast>
 
     <!-- Heavy war horse -->
-    <beast name="Heavy war horse">
+    <beast name="Heavy Warhorse">
         <information>
             <type>Animal</type>
             <demeanor>Herd</demeanor>
@@ -318,63 +350,64 @@
             </physical>
         </description>
 
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="10" soak="15">
+                <attribute name="strength" score="7"/>
+                <attribute name="stamina" score="5"/>
+                <attribute name="agility" score="3"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="3"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="charisma" score="1"/>
+                <attribute name="will" score="1"/>
+            </attributes>
 
-        <attributes size="10" soak="15">
-            <attribute name="strength" score="7"/>
-            <attribute name="stamina" score="5"/>
-            <attribute name="agility" score="3"/>
-            <attribute name="dexterity" score="1"/>
-            <attribute name="perception" score="3"/>
-            <attribute name="intelligence" score="1"/>
-            <attribute name="charisma" score="1"/>
-            <attribute name="will" score="1"/>
-        </attributes>
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="4"/>
+                    <skill name="Awareness" score="4"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="0"/>
+                    <skill name="Guile" score="0"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="0"/>
+                </group>
 
-        <skills>
-            <group name="Talents" type="talents">
-                <skill name="Athletics" score="4"/>
-                <skill name="Awareness" score="4"/>
-                <skill name="Brawl" score="4"/>
-                <skill name="Charm" score="0"/>
-                <skill name="Guile" score="0"/>
-                <skill name="Sleight" score="1"/>
-                <skill name="Stealth" score="2"/>
-                <skill name="Throw" score="0"/>
-            </group>
+                <group name="Misc" type="skills">
+                    <skill name="Survival" score="2"/>
+                    <skill name="Swim" score="2"/>
+                    <skill name="Battle" score="2"/>
+                </group>
+            </skills>
 
-            <group name="Misc" type="skills">
-                <skill name="Survival" score="2"/>
-                <skill name="Swim" score="2"/>
-                <skill name="Battle" score="2"/>
-            </group>
-        </skills>
+            <combat>
+                <combatstyle style="Kick" skill="Brawl">
+                    <initiative attribute="agility" bonus="+4"/>
+                    <attack attribute="agility" bonus="+3"/>
+                    <defence attribute="agility" bonus="+1"/>
+                    <damage type="split" bonus="+3"/>
+                </combatstyle>
+            </combat>
 
-        <combat>
-            <combatstyle style="Kick" skill="Brawl">
-                <initiative attribute="agility" bonus="+4"/>
-                <attack attribute="agility" bonus="+3"/>
-                <defence attribute="agility" bonus="+1"/>
-                <damage type="split" bonus="+3"/>
-            </combatstyle>
-        </combat>
+            <passions>
+                <passion name="Bravery" score="4"/>
+                <passion name="Temperence" score="2"/>
+                <passion name="Restraint" score="4"/>
+                <passion name="Ego" score="2"/>
+            </passions>
 
-        <passions>
-            <passion name="Bravery" score="4"/>
-            <passion name="Temperence" score="2"/>
-            <passion name="Restraint" score="4"/>
-            <passion name="Ego" score="2"/>
-        </passions>
-
-        <advantages>
-            <advantage name="Animal"/>
-            <advantage name="Acute sense of smell" score="+2"/>
-            <advantage name="Acute sense of hearing" score="+1"/>
-            <advantage name="Extra encumbrance" score="+3"/>
-        </advantages>
+            <advantages>
+                <advantage name="Animal"/>
+                <advantage name="Acute sense of smell" score="+2"/>
+                <advantage name="Acute sense of hearing" score="+1"/>
+                <advantage name="Extra encumbrance" score="+3"/>
+            </advantages>
+        </statistics>
     </beast>
 
     <!-- Heavy war horse -->
-    <beast name="Horse, Draft">
+    <beast name="Draft Horse">
         <information>
             <type>Animal</type>
             <demeanor>Herd</demeanor>
@@ -410,59 +443,60 @@
             </physical>
         </description>
 
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="10" soak="15">
+                <attribute name="strength" score="7"/>
+                <attribute name="stamina" score="5"/>
+                <attribute name="agility" score="2"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="3"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="charisma" score="1"/>
+                <attribute name="will" score="1"/>
+            </attributes>
 
-        <attributes size="10" soak="15">
-            <attribute name="strength" score="7"/>
-            <attribute name="stamina" score="5"/>
-            <attribute name="agility" score="2"/>
-            <attribute name="dexterity" score="1"/>
-            <attribute name="perception" score="3"/>
-            <attribute name="intelligence" score="1"/>
-            <attribute name="charisma" score="1"/>
-            <attribute name="will" score="1"/>
-        </attributes>
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="3"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="0"/>
+                    <skill name="Guile" score="0"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="0"/>
+                </group>
 
-        <skills>
-            <group name="Talents" type="talents">
-                <skill name="Athletics" score="2"/>
-                <skill name="Awareness" score="3"/>
-                <skill name="Brawl" score="2"/>
-                <skill name="Charm" score="0"/>
-                <skill name="Guile" score="0"/>
-                <skill name="Sleight" score="1"/>
-                <skill name="Stealth" score="2"/>
-                <skill name="Throw" score="0"/>
-            </group>
+                <group name="Misc" type="skills">
+                    <skill name="Survival" score="2"/>
+                </group>
+            </skills>
 
-            <group name="Misc" type="skills">
-                <skill name="Survival" score="2"/>
-            </group>
-        </skills>
+            <combat>
+                <combatstyle style="Kick" skill="Brawl">
+                    <initiative attribute="agility" bonus="+4"/>
+                    <attack attribute="agility" bonus="+3"/>
+                    <defence attribute="agility" bonus="+1"/>
+                    <damage type="split" bonus="+2"/>
+                </combatstyle>
+            </combat>
 
-        <combat>
-            <combatstyle style="Kick" skill="Brawl">
-                <initiative attribute="agility" bonus="+4"/>
-                <attack attribute="agility" bonus="+3"/>
-                <defence attribute="agility" bonus="+1"/>
-                <damage type="split" bonus="+2"/>
-            </combatstyle>
-        </combat>
+            <passions>
+                <passion name="Bravery" score="2"/>
+                <passion name="Temperence" score="2"/>
+                <passion name="Restraint" score="2"/>
+                <passion name="Ego" score="2"/>
+            </passions>
 
-        <passions>
-            <passion name="Bravery" score="2"/>
-            <passion name="Temperence" score="2"/>
-            <passion name="Restraint" score="2"/>
-            <passion name="Ego" score="2"/>
-        </passions>
-
-        <advantages>
-            <advantage name="Animal"/>
-            <advantage name="Acute sense of smell" score="+2"/>
-            <advantage name="Acute sense of hearing" score="+1"/>
-            <advantage name="Brontophobia"/>
-            <advantage name="Phobia (blood)"/>
-            <advantage name="Extra encumbrance" score="+3"/>
-        </advantages>
+            <advantages>
+                <advantage name="Animal"/>
+                <advantage name="Acute sense of smell" score="+2"/>
+                <advantage name="Acute sense of hearing" score="+1"/>
+                <advantage name="Brontophobia"/>
+                <advantage name="Phobia (blood)"/>
+                <advantage name="Extra encumbrance" score="+3"/>
+            </advantages>
+        </statistics>
     </beast>
 
 </bestiary>

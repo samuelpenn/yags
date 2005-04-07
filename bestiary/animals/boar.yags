@@ -4,8 +4,8 @@
     type="text/xsl"?>
 
 <!--
-    $Revision: 1.4 $
-    $Date: 2003-11-15 21:05:19 $
+    $Revision: 1.5 $
+    $Date: 2005-04-07 22:04:02 $
 
     Bestiary containing information on boars.
 -->
@@ -15,12 +15,12 @@
         <information>
             <type>Animal</type>
             <demeanor>Aggressive</demeanor>
-            
+
             <habistat climate="Temperate" terrain="Forest" frequency="Uncommon"/>
-            
+
             <organisation group="Solitary" number="1"/>
             <organisation group="Family" number="2-5"/>
-            
+
             <origin>Common</origin>
             <genre>Real</genre>
         </information>
@@ -51,70 +51,72 @@
             </social>
         </description>
 
-        <attributes size="3" soak="9">
-            <attribute name="strength" score="3"/>
-            <attribute name="stamina" score="5"/>
-            <attribute name="agility" score="3"/>
-            <attribute name="dexterity" score="1"/>
-            <attribute name="perception" score="3"/>
-            <attribute name="intelligence" score="1"/>
-            <attribute name="charisma" score="1"/>
-            <attribute name="will" score="3"/>
-        </attributes>
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="3" soak="9">
+                <attribute name="strength" score="3"/>
+                <attribute name="stamina" score="5"/>
+                <attribute name="agility" score="3"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="3"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="charisma" score="1"/>
+                <attribute name="will" score="3"/>
+            </attributes>
 
-        <skills>
-            <group name="Talents">
-                <skill name="Athletics" score="3"/>
-                <skill name="Awareness" score="5"/>
-                <skill name="Brawl" score="5"/>
-                <skill name="Charm" score="0"/>
-                <skill name="Guile" score="0"/>
-                <skill name="Sleight" score="0"/>
-                <skill name="Stealth" score="2"/>
-                <skill name="Throw" score="0"/>
-            </group>
-            <group name="Misc">
-                <skill name="Survival" score="5"/>
-                <skill name="Swim" score="2"/>
-            </group>
-        </skills>
+            <skills>
+                <group name="Talents">
+                    <skill name="Athletics" score="3"/>
+                    <skill name="Awareness" score="5"/>
+                    <skill name="Brawl" score="5"/>
+                    <skill name="Charm" score="0"/>
+                    <skill name="Guile" score="0"/>
+                    <skill name="Sleight" score="0"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="0"/>
+                </group>
+                <group name="Misc">
+                    <skill name="Survival" score="5"/>
+                    <skill name="Swim" score="2"/>
+                </group>
+            </skills>
 
-        <combat>
-            <combatstyle style="Gore" skill="Brawl">
-                <initiative attribute="agility" bonus="+4"/>
-                <attack attribute="agility" bonus="+3"/>
-                <defence attribute="agility" bonus="+3"/>
-                <damage type="split" bonus="+6"/>
-            </combatstyle>
+            <combat>
+                <combatstyle style="Gore" skill="Brawl">
+                    <initiative attribute="agility" bonus="+4"/>
+                    <attack attribute="agility" bonus="+3"/>
+                    <defence attribute="agility" bonus="+3"/>
+                    <damage type="split" bonus="+6"/>
+                </combatstyle>
 
-            <combatstyle style="Trample" skill="Brawl">
-                <initiative attribute="agility" bonus="-5"/>
-                <attack attribute="agility" bonus="+10"/>
-                <defence attribute="agility" bonus="-10"/>
-                <damage type="stun" bonus="+10"/>
-            </combatstyle>
+                <combatstyle style="Trample" skill="Brawl">
+                    <initiative attribute="agility" bonus="-5"/>
+                    <attack attribute="agility" bonus="+10"/>
+                    <defence attribute="agility" bonus="-10"/>
+                    <damage type="stun" bonus="+10"/>
+                </combatstyle>
 
-            <armourstyle style="Base"/>
+                <armourstyle style="Base"/>
 
-            <armourstyle style="Natural">
-                <armour name="Toughness" protection="+3"/>
-                <armour name="Hide" protection="+1"/>
-            </armourstyle>
-        </combat>
+                <armourstyle style="Natural">
+                    <armour name="Toughness" protection="+3"/>
+                    <armour name="Hide" protection="+1"/>
+                </armourstyle>
+            </combat>
 
-        <passions>
-            <passion name="Bravery" score="4"/>
-            <passion name="Ego" score="4"/>
-            <passion name="Restraint" score="1"/>
-            <passion name="Temperence" score="2"/>
-        </passions>
+            <passions>
+                <passion name="Bravery" score="4"/>
+                <passion name="Ego" score="4"/>
+                <passion name="Restraint" score="1"/>
+                <passion name="Temperence" score="2"/>
+            </passions>
 
-        <advantages>
-            <advantage name="Animal"/>
-            <advantage name="Acute sense of smell" score="+2"/>
-            <advantage name="Berserker" score="+2"/>
+            <advantages>
+                <advantage name="Animal"/>
+                <advantage name="Acute sense of smell" score="+2"/>
+                <advantage name="Berserker" score="+2"/>
 
-            <advantage name="Gore" type="manouevre"/>
-        </advantages>
+                <advantage name="Gore" type="manouevre"/>
+            </advantages>
+        </statistics>
     </beast>
 </bestiary>

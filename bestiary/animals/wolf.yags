@@ -3,8 +3,8 @@
     type="text/xsl"?>
 
 <!--
-    $Revision: 1.1 $
-    $Date: 2003-08-09 10:10:01 $
+    $Revision: 1.2 $
+    $Date: 2005-04-07 22:04:02 $
 
     Bestiary containing information on wolves.
 -->
@@ -33,7 +33,7 @@
                 Wolves are closely related to dogs, often found on
                 the fringes of civilisation, or in wilderness areas.
             </short>
-            
+
             <image href="graphics/wolf.jpg"/>
 
             <physical>
@@ -64,58 +64,60 @@
             </tactics>
         </description>
 
-        <attributes size="4" soak="12">
-            <attribute name="strength" score="3"/>
-            <attribute name="stamina" score="5"/>
-            <attribute name="agility" score="4"/>
-            <attribute name="dexterity" score="1"/>
-            <attribute name="perception" score="5"/>
-            <attribute name="intelligence" score="1"/>
-            <attribute name="charisma" score="2"/>
-            <attribute name="will" score="2"/>
-        </attributes>
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="4" soak="12">
+                <attribute name="strength" score="3"/>
+                <attribute name="stamina" score="5"/>
+                <attribute name="agility" score="4"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="5"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="charisma" score="2"/>
+                <attribute name="will" score="2"/>
+            </attributes>
 
-        <passions>
-            <passion name="Bravery" score="4"/>
-            <passion name="Ego" score="2"/>
-            <passion name="Restraint" score="2"/>
-            <passion name="Temperence" score="2"/>
-        </passions>
+            <passions>
+                <passion name="Bravery" score="4"/>
+                <passion name="Ego" score="2"/>
+                <passion name="Restraint" score="2"/>
+                <passion name="Temperence" score="2"/>
+            </passions>
 
-        <skills>
-            <group name="Talents">
-                <skill name="Athletics" score="5"/>
-                <skill name="Awareness" score="7"/>
-                <skill name="Brawl" score="5"/>
-                <skill name="Charm" score="0"/>
-                <skill name="Guile" score="0"/>
-                <skill name="Sleight" score="1"/>
-                <skill name="Stealth" score="5"/>
-                <skill name="Throw" score="0"/>
-            </group>
+            <skills>
+                <group name="Talents">
+                    <skill name="Athletics" score="5"/>
+                    <skill name="Awareness" score="7"/>
+                    <skill name="Brawl" score="5"/>
+                    <skill name="Charm" score="0"/>
+                    <skill name="Guile" score="0"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="5"/>
+                    <skill name="Throw" score="0"/>
+                </group>
 
-            <group name="Misc">
-                <skill name="Survival" score="7"/>
-                <skill name="Battle" score="3"/>
-                <skill name="Tracking" score="7"/>
-                <skill name="Swim" score="2"/>
-            </group>
-        </skills>
+                <group name="Misc">
+                    <skill name="Survival" score="7"/>
+                    <skill name="Battle" score="3"/>
+                    <skill name="Tracking" score="7"/>
+                    <skill name="Swim" score="2"/>
+                </group>
+            </skills>
 
-        <combat>
-            <combatstyle style="Bite and claw" skill="Brawl">
-                <initiative attribute="agility" bonus="+4"/>
-                <attack attribute="agility" bonus="+5"/>
-                <defence attribute="agility" bonus="+6"/>
-                <damage type="split" bonus="+4"/>
-            </combatstyle>
-        </combat>
+            <combat>
+                <combatstyle style="Bite and claw" skill="Brawl">
+                    <initiative attribute="agility" bonus="+4"/>
+                    <attack attribute="agility" bonus="+5"/>
+                    <defence attribute="agility" bonus="+6"/>
+                    <damage type="split" bonus="+4"/>
+                </combatstyle>
+            </combat>
 
-        <advantages>
-            <advantage name="Animal"/>
-            <advantage name="Acute sense of smell" score="+2"/>
-            <advantage name="Acute sense of hearing" score="+1"/>
-        </advantages>
+            <advantages>
+                <advantage name="Animal"/>
+                <advantage name="Acute sense of smell" score="+2"/>
+                <advantage name="Acute sense of hearing" score="+1"/>
+            </advantages>
+        </statistics>
     </beast>
 
     <!-- Dire Wolf -->
@@ -159,54 +161,56 @@
             </social>
         </description>
 
-        <attributes size="6" soak="15">
-            <attribute name="strength" score="4"/>
-            <attribute name="stamina" score="6"/>
-            <attribute name="agility" score="5"/>
-            <attribute name="dexterity" score="1"/>
-            <attribute name="perception" score="5"/>
-            <attribute name="intelligence" score="2"/>
-            <attribute name="charisma" score="1"/>
-            <attribute name="will" score="3"/>
-        </attributes>
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="6" soak="15">
+                <attribute name="strength" score="4"/>
+                <attribute name="stamina" score="6"/>
+                <attribute name="agility" score="5"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="5"/>
+                <attribute name="intelligence" score="2"/>
+                <attribute name="charisma" score="1"/>
+                <attribute name="will" score="3"/>
+            </attributes>
 
-        <passions>
-            <passion name="Bravery" score="4"/>
-            <passion name="Ego" score="4"/>
-            <passion name="Restraint" score="2"/>
-            <passion name="Temperence" score="2"/>
-        </passions>
+            <passions>
+                <passion name="Bravery" score="4"/>
+                <passion name="Ego" score="4"/>
+                <passion name="Restraint" score="2"/>
+                <passion name="Temperence" score="2"/>
+            </passions>
 
-        <skills>
-            <group name="Talents">
-                <skill name="Athletics" score="5"/>
-                <skill name="Awareness" score="7"/>
-                <skill name="Brawl" score="7"/>
-                <skill name="Charm" score="0"/>
-                <skill name="Guile" score="0"/>
-                <skill name="Sleight" score="1"/>
-                <skill name="Stealth" score="3"/>
-                <skill name="Throw" score="0"/>
-            </group>
+            <skills>
+                <group name="Talents">
+                    <skill name="Athletics" score="5"/>
+                    <skill name="Awareness" score="7"/>
+                    <skill name="Brawl" score="7"/>
+                    <skill name="Charm" score="0"/>
+                    <skill name="Guile" score="0"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="3"/>
+                    <skill name="Throw" score="0"/>
+                </group>
 
-            <group name="Misc">
-                <skill name="Survival" score="7"/>
-                <skill name="Tracking" score="7"/>
-                <skill name="Swim" score="2"/>
-            </group>
-        </skills>
+                <group name="Misc">
+                    <skill name="Survival" score="7"/>
+                    <skill name="Tracking" score="7"/>
+                    <skill name="Swim" score="2"/>
+                </group>
+            </skills>
 
-        <combat>
-            <combatstyle style="Bite and claw" skill="Brawl">
-                <initiative attribute="agility" bonus="+4"/>
-                <attack attribute="agility" bonus="+7"/>
-                <defence attribute="agility" bonus="+6"/>
-                <damage type="split" bonus="+5"/>
-            </combatstyle>
-        </combat>
+            <combat>
+                <combatstyle style="Bite and claw" skill="Brawl">
+                    <initiative attribute="agility" bonus="+4"/>
+                    <attack attribute="agility" bonus="+7"/>
+                    <defence attribute="agility" bonus="+6"/>
+                    <damage type="split" bonus="+5"/>
+                </combatstyle>
+            </combat>
 
-        <advantages>
-            <advantage name="Acute sense of smell" score="+2"/>
-        </advantages>
+            <advantages>
+                <advantage name="Acute sense of smell" score="+2"/>
+            </advantages>
+        </statistics>
     </beast>
 </bestiary>
