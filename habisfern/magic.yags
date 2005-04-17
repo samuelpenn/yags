@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.13 $</version>
-            <date>$Date: 2005-04-17 13:42:23 $</date>
+            <version>$Revision: 1.14 $</version>
+            <date>$Date: 2005-04-17 21:40:31 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -434,17 +434,93 @@
             <title>Insanity</title>
 
             <para>
-                Whenever a wizard uses a cantrip, they strengthen their tie
-                to the Other World. The strength of this tie is represented
-                by a <e>Cord</e> score, which is increased by the level of
-                the cantrip just cast.
+                Whenever a wizard uses a cantrip, there is a chance that
+                the magic will have a negative effect on the mind of the
+                caster. This chance increases for more complex cantrips,
+                and in regions where the boundary between reality and
+                the dream worlds is weak.
             </para>
 
-            <para>
-                The Cord weakens over time, dropping by an amount equal to
-                the wizard's Will every hour. There is no limit to how high
-                the Cord can go.
-            </para>
+            <sect2>
+                <title>Fumbling a Cantrip</title>
+
+                <para>
+                    In game terms, if a wizard fumbles when casting a
+                    cantrip, then there is a chance of some side effect.
+                    The fumble chance is normally '1', as for standard
+                    stressful actions, but is modified as follows.
+                </para>
+
+                <targetlist>
+                    <targetLabel>Fumble</targetLabel>
+                    <valueLabel>Condition</valueLable>
+
+                    <item target="+1">
+                        Level of cantrip is higher than intelligence of
+                        wizard.
+                    </item>
+
+                    <item target="+aura">
+                        Wizard is in a region with a magical aura.
+                    </item>
+
+                    <item target="+1">
+                        It is night, between sunset and sunrise.
+                    </item>
+
+                    <item target="+1">
+                        The moon is above the horizon and not hidden by
+                        clouds. Being underground, or in a permanent
+                        building out of sight of the moon can negate this.
+                    </item>
+
+                    <item target="+1">
+                        The moon is full, regardless of whether it can be
+                        seen.
+                    </item>
+                </targetlist>
+
+                <para>
+                    On a fumble, the wizard must attempt to keep control
+                    of the magic. Luck may be spent in order to do this
+                    automatically (either to get a reroll, or to make the
+                    roll '10'), otherwise a will check is required, using
+                    the <e>Passion</e> associated with the Word being
+                    used.
+                </para>
+
+                <targetlist>
+                    <targetLabel>Passion</targetLabel>
+                    <valueLabel>Word</valueLabel>
+
+                    <item target="Bravery">
+                        Earth, Water.
+                    </item>
+
+                    <item target="Temperence">
+                        Spirit, Air.
+                    </item>
+
+                    <item target="Restraint">
+                        Fire, Metal.
+                    </item>
+                </targetlist>
+
+                <para>
+                    The difficulty is equal to 10 + 5 x level of cantrip.
+                    If this succeeds, then the cantrip can be cast normally
+                    as if nothing had happened.
+                </para>
+
+                <para>
+                    On a failure, then the wizard is mentally stunned for
+                    the rest of the round. The following round, and each
+                    round thereafter, another check is made with the
+                    difficulty dropping by 10 each time until it is zero
+                    or lower. The number of failures then determines the
+                    result.
+                </para>
+            </sect2>
         </sect1>
     </body>
 
