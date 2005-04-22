@@ -4,8 +4,8 @@
     General melee combat techniques.
     
     Author:  Samuel Penn
-    Version: $Revision: 1.12 $
-    Date:    $Date: 2005-04-17 13:40:24 $
+    Version: $Revision: 1.13 $
+    Date:    $Date: 2005-04-22 21:32:54 $
     
  -->
 
@@ -13,7 +13,7 @@
 
     <!--
         Aggressive
-        
+
         The following techniques are based off from 'Improved attack'.
         They generally use the aggressive stance, improving the
         character's attack.
@@ -21,7 +21,7 @@
     <advantage name="Improved attack" type="technique">
         <cost points="2"/>
         <skill name="All melee"/>
-        
+
         <description>
             <para>
                 When using the <e>aggressive stance</e>, gain a +5 bonus to
@@ -29,29 +29,29 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Desperate attack" type="technique">
         <cost points="4"/>
         <skill name="Any melee or brawl"/>
         <prerequisite>Improved attack</prerequisite>
-        
+
         <description>
             <para>
                 If the character is using the aggressive stance, has
                 just missed an attack and hasn't yet made any defence rolls
                 that round, then they may choose to make a second attack
-                at the same skill as the first. One fatigue is gained,
-                and they loose <e>all</e> defence rolls for the rest of
-                the round.
+                at the same skill as the first.
+                They loose <e>all</e> defence rolls for the rest of
+                that round.
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Double attack" type="technique">
         <cost points="10"/>
         <skill name="All melee"/>
         <prerequisite>Desperate attack</prerequisite>
-        
+
         <description>
             <para>
                 Aggressive stance. The attacker can attack twice, each time
@@ -66,7 +66,7 @@
         <cost points="15"/>
         <skill name="All melee"/>
         <prerequisite>Double attack</prerequisite>
-        
+
         <description>
             <para>
                 Aggressive stance. The attacker can attack three times,
@@ -86,73 +86,116 @@
             <para role="descriptive">
                 Uses the force of the blow to try and knock the target
                 from their feet, or at least unsteady them ready for a
-                follow up attack.
+                follow up attack. The defender suffers a -10 penalty to
+                any knockdown checks, but damage type is reduced by one
+                (e.g. <e>wounds</e> become <e>mixed</e>).
             </para>
 
             <para>
-                Aggressive, fatigue, declared. Attack at +5, with a
-                successful attack having +10 to any knockdown checks.
+                The knockback attack must be declared before the attack
+                is made, and uses up one defence. Aggressive.
             </para>
         </description>
     </advantage>
-    
-    <advantage name="Mighty blow" type="technique">
+
+    <advantage name="Cleave" type="technique">
         <cost points="6"/>
         <skill name="Any melee"/>
         <prerequisite>Knockback attack</prerequisite>
-        
+
         <description>
             <para>
-                Aggressive stance, fatigue, declared before the attack.
-                On a successful hit, the foe's armour is halved for that
-                attack (if already halved, or impaled, it is reduced to
-                zero).
+                Aggressive stance, declared, -10 to attack. Uses up one
+                defence. On a successful hit, the foe's armour (not total
+                soak) is halved for that attack (if already halved, or
+                impaled, it is reduced to zero).
+            </para>
+
+            <para>
+                Against light armour, cutting and piercing weapons do not
+                suffer a -10 to the attack. Against rigid armour, bashing
+                weapons do not suffer a -10.
             </para>
         </description>
     </advantage>
-    
-    <advantage name="Deadly blow" type="technique">
+
+    <advantage name="Deadly strike" type="technique">
         <cost points="6"/>
         <skill name="Any melee weapon"/>
         <prerequisite>Knockback attack</prerequisite>
-        
+
         <description>
             <para>
-                Aggressive, fatigue, -10 to attack roll, declared before
+                Aggressive, -10 to attack roll, declared before
                 the attack. If the target is successfully wounded, then
                 they must make a size x stamina roll against a target of
                 10 + 5 x wounds (not stuns) caused or immediately drop
-                to fatally wounded.
+                to fatally wounded. If they succeed their roll, then
+                they take one less wound from the attack than normal.
+            </para>
+
+            <para>
+                A deadly strike uses up one defence.
             </para>
         </description>
     </advantage>
-    
-    <advantage name="Overwhelming attack" type="technique">
-        <cost points="8"/>
-        <skill name="Any melee weapon"/>
-        <prerequisite>Mighty blow</prerequisite>
-        
+
+    <advantage name="Improved blow" type="technique">
+        <cost points="4"/>
+        <skill name="Any melee weapon skill"/>
+
+        <prerequisite>Improved attack</prerequisite>
+
         <description>
             <para>
-                Aggressive, automatic. On an excellent attack, the damage
-                roll gets +10 to any knockback effects.
+                Improved technique enables a skilled attacker to more
+                effectively harm their foe. All attacks do +3 damage
+                regardless of stance. Automatic.
             </para>
         </description>
     </advantage>
-    
-    
-    
-    
+
+    <advantage name="Superior blow" type="technique">
+        <cost points="8"/>
+        <skill name="Any melee weapon skill"/>
+
+        <prerequisite>Improved blow</prerequisite>
+
+        <description>
+            <para>
+                Similar to improved blow, adds +3 to all damage rolls
+                with weapons. Stacks with the former technique to give
+                a total +6 damage bonus. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Great blow" type="technique">
+        <cost points="12"/>
+        <skill name="Any melee weapon skill"/>
+
+        <prerequisite>Superior blow</prerequisite>
+
+        <description>
+            <para>
+                Stacks with <e>Improved blow</e> and <e>Superior blow</e>
+                giving an extra +3 to damage, for a total of +9. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+
+
     <!--
         Defensive
-        
+
         The following techniques are all defensive in nature.
      -->
-    
+
     <advantage name="Improved defence" type="technique">
         <cost points="2"/>
         <skill name="Any melee weapon"/>
-        
+
         <description>
             <para>
                 Automatic, defensive stance. The character can defend
@@ -162,11 +205,11 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Reflex dodge" type="technique">
         <cost points="4"/>
         <skill name="Any melee or brawl"/>
-        
+
         <description>
             <para>
                 If the character fails a defence roll, and they haven't
@@ -183,7 +226,7 @@
         <cost points="4"/>
         <skill name="Any melee weapon"/>
         <prerequisite>Improved defence</prerequisite>
-        
+
         <description>
             <para>
                 If declared, uses the <e>defensive stance</e> at -10. For
@@ -192,12 +235,12 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Whirlwind defence" type="technique">
         <cost points="8"/>
         <skill name="Any melee weapon"/>
         <prerequisite>Counter strike</prerequisite>
-        
+
         <description>
             <para>
                 If declared, uses defensive stance at -10, and the character
@@ -206,7 +249,7 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Shield wall" type="technique">
         <cost points="2"/>
         <skill name="Weapon and shield"/>
@@ -221,18 +264,18 @@
                 defensive bonus equal to the character's skill level as long
                 as their ally also has this technique.
             </para>
-            
+
             <para>
                 If the character uses any stance other than <e>normal</e>
                 or <e>defensive</e>, then they cannot use this technique.
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Double rank" type="technique">
         <cost points="2"/>
         <skill name="Longshaft weapon"/>
-        
+
         <description>
             <para>
                 When fighting from a second rank with a spear or similar
@@ -243,12 +286,12 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Spearman" type="technique">
         <cost points="4"/>
         <skill name="Longshaft weapon"/>
         <prerequisite>Double rank</prerequisite>
-        
+
         <description>
             <para>
                 Trained in fighting with long weapons. When fighting
@@ -257,7 +300,7 @@
                 per point of extra reach. With this technique, the bonus
                 also applies to attack.
             </para>
-             
+
              <para>
                 Further, if fighting in a shield wall, and the
                 <e>Shield wall</e> technique is also known, an automatic
@@ -271,7 +314,7 @@
     <advantage name="Ambush" type="technique">
         <cost points="2"/>
         <skill name="Any melee"/>
-        
+
         <description>
             <para>
                 When initiated against someone who is not expecting an
@@ -279,7 +322,7 @@
                 in combat, even if they are fighting someone else),
                 then an <e>ambush</e> ignores all armour. May be combined
                 with other techniques which cause special effects on
-                an attack (such as deadly blow).
+                an attack (such as deadly strike).
             </para>
 
             <para>
@@ -288,12 +331,12 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Combat ambush" type="technique">
         <cost points="4"/>
         <skill name="Any melee"/>
         <prerequisite>Ambush</prerequisite>
-        
+
         <description>
             <para>
                 As <e>Ambush</e>, but may be made any time the defender is
@@ -308,7 +351,7 @@
         <cost points="8"/>
         <skill name="Any melee"/>
         <prerequisite>Combat ambush</prerequisite>
-        
+
         <description>
             <para>
                 Automatic, aggressive or normal stance. As <e>Ambush</e>,
@@ -318,11 +361,11 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Finesse" type="technique">
         <cost points="2"/>
         <skill name="Any melee skill or brawl"/>
-        
+
         <description>
             <para>
                 Character is able to trade hitting power for accuracy.
@@ -331,12 +374,12 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Quickdraw" type="technique">
         <cost points="4"/>
         <skill name="Any weapon skill"/>
         <prerequisite>Finesse</prerequisite>
-        
+
         <description>
             <para>
                 The character can draw a weapon and attack without penalty
@@ -352,7 +395,7 @@
         <cost points="4"/>
         <skill name="Any melee skill or brawl"/>
         <prerequisite>Finesse</prerequisite>
-        
+
         <description>
             <para>
                 If the character has not yet made an attack, and they have
@@ -363,12 +406,12 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Swap defence" type="technique">
         <cost points="6"/>
         <skill name="Any melee skill or brawl"/>
         <prerequisite>Reflex defence</prerequisite>
-        
+
         <description>
             <para>
                 If the character is knowingly attacked (i.e. not surprise
@@ -383,7 +426,7 @@
         <cost points="8"/>
         <skill name="Any melee skill or brawl"/>
         <prerequisite>Swap defence</prerequisite>
-        
+
         <description>
             <para>
                 Change target of attack. When the attack is made, the
@@ -393,7 +436,6 @@
             </para>
         </description>
     </advantage>
-
 </advantages>
 
 
