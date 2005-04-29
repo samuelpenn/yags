@@ -4,8 +4,8 @@
 <!--
     List of low tech weapons and armour for Yags.
 
-    Version: $Revision: 1.14 $
-    Date:    $Date: 2005-04-17 13:40:25 $
+    Version: $Revision: 1.15 $
+    Date:    $Date: 2005-04-29 20:57:57 $
  -->
 <equipment>
     <weaponlist>
@@ -896,14 +896,14 @@
         description:    Text description, para block elements.
         protection:     Soak bonus gained through wearing this armour.
         load:           Encumbrance added to load of character.
-        weight:         Actual physical weight, in kg.
+        weight:         Actual physical weight, in g.
         properties/
-            restrictive Maximum agility when being athletic.
+            restrictive Penalty to agility.
+            noisy       Penalty to stealth.
             light       Light armour, not good v heavy weapons.
             heavy       Heavy armour, very good v light weapons.
             soft        Soft armour, double protection v stun weapons.
             mail        Half protection v piercing weapons.
-            noisy       Maximum agility when trying to be quiet.
      -->
     <armourlist>
         <armour name="Quilted jacket">
@@ -912,13 +912,13 @@
                     A heavy jacket of padded cloth. It is bulkier than
                     soft leather armour, but its extra thickness adds
                     greater protection. It is viewed as peasant armour,
-                    and never worn by real warriors.
+                    and rarely worn by noble warriors.
                 </para>
             </description>
 
             <protection>+3</protection>
-            <load>0.5</load>
-            <weight>1</weight>
+            <load>2</load>
+            <weight>2000</weight>
 
             <properties>
                 <light/>
@@ -938,23 +938,28 @@
             </description>
 
             <protection>+4</protection>
-            <load>0.5</load>
-            <weight>1</weight>
+            <load>3</load>
+            <weight>3000</weight>
 
             <properties>
-                <restrictive score="4"/>
+                <restrictive score="1"/>
                 <light/>
                 <soft/>
             </properties>
         </armour>
 
         <armour name="Quilted vest">
-            <protection>+2</protection>
-            <load>0.25</load>
-            <weight>0.5</weight>
 
-            <athletics/>
-            <stealth/>
+            <description>
+                <para>
+                    A padded vest, which protects the torso. Often made
+                    of cloth and wool. Cheap and light.
+                </para>
+            </description>
+
+            <protection>+2</protection>
+            <load>1</load>
+            <weight>1000</weight>
 
             <properties>
                 <light/>
@@ -963,29 +968,43 @@
         </armour>
 
         <armour name="Quilted leggings">
-            <protection>+1</protection>
-            <load>0.5</load>
-            <weight>0.5</weight>
 
-            <athletics>0.25</athletics>
-            <stealth>0</stealth>
+            <description>
+                <para>
+                    Made of cloth and wool, these are padded trousers which
+                    cover the legs up to the waist. They tend to be quite
+                    bulky and restrict leg movement quite a bit.
+                </para>
+            </description>
+
+            <protection>+1</protection>
+            <load>2</load>
+            <weight>2000</weight>
 
             <properties>
-                <restrictive score="3"/>
+                <restrictive score="1"/>
                 <light/>
                 <soft/>
             </properties>
         </armour>
 
         <armour name="Soft leather trousers">
+            <description>
+                <para>
+                    Trousers made of thick leather. They are flexible so as
+                    not to restrict movement, but only provide limited
+                    protection. Often worn under mail to add extra padding.
+                </para>
+            </description>
+
             <protection>+1</protection>
-            <load>0.5</load>
-            <weight>0.5</weight>
+            <load>2</load>
+            <weight>2000</weight>
 
             <athletics>0</athletics>
             <stealth>0</stealth>
 
-            <notes>Can be worn under chain or ring leggings, or greaves.</notes>
+            <notes>Can be worn under mail leggings.</notes>
 
             <properties>
                 <light/>
@@ -993,13 +1012,20 @@
         </armour>
 
         <armour name="Soft leather jacket">
+            <description>
+                <para>
+                    A flexible and soft jacket which gives protection to
+                    the torso and arms. It is thin enough to be worn
+                    under mail - either a mail shirt or mail hauberk.
+                </para>
+            </description>
+
             <protection>+2</protection>
-            <load>0.5</load>
-            <weight>0.5</weight>
+            <load>1</load>
+            <weight>1000</weight>
 
             <notes>
-                Can be worn under chain or ring mail, or cuirass and
-                vambraces.
+                Can be worn under mail, a cuirass or vambraces.
             </notes>
 
             <properties>
@@ -1008,20 +1034,28 @@
         </armour>
 
         <armour name="Hard leather jacket">
+            <description>
+                <para>
+                    A tough leather jacket designed to protect the upper
+                    body. It can be restrictive since much of it consists
+                    of boiled leather plates.
+                </para>
+            </description>
+
             <protection>+3</protection>
             <load>2</load>
-            <weight>2</weight>
+            <weight>2000</weight>
 
             <properties>
-                <restrictive score="5"/>
+                <restrictive score="1"/>
                 <light/>
             </properties>
         </armour>
 
         <armour name="Kurbal cuirass">
             <protection>+1</protection>
-            <load>0.5</load>
-            <weight>0.5</weight>
+            <load>1</load>
+            <weight>1000</weight>
 
             <notes>
                 Can be worn over soft leather or quilted armour.
@@ -1032,107 +1066,135 @@
             </properties>
         </armour>
 
-<!--
-        <armour name="Kurbal greaves">
-            <protection>+1</protection>
-            <load>0.25</load>
-            <athletics>1</athletics>
-            <stealth>1</stealth>
-            <notes>Can be worn over soft leather.</notes>
-            <properties>
-                <light/>
-            </properties>
-        </armour>
-
-        <armour name="Kurbal vambraces">
-            <protection>+1</protection>
-            <load>0.25</load>
-            <athletics>1</athletics>
-            <stealth>1</stealth>
-            <notes>Can be worn over soft leather.</notes>
-            <properties>
-                <light/>
-            </properties>
-        </armour>
--->
-
         <armour name="Fur jacket">
+            <description>
+                <para>
+                    A heavy jacket made of thick fur and leather. Suffers
+                    from being bulky, but is also warm so useful in cold
+                    climates.
+                </para>
+            </description>
+
             <protection>+4</protection>
-            <load>2</load>
+            <load>3</load>
+            <weight>3000</weight>
 
             <properties>
-                <restrictive score="4"/>
+                <restrictive score="1"/>
                 <light/>
                 <soft/>
             </properties>
         </armour>
 
         <armour name="Fur trousers">
+            <description>
+                <para>
+                    A heavy set of trousers of thick fur and leather.
+                    Suffers from being bulky, but is also warm.
+                </para>
+            </description>
+
             <protection>+2</protection>
-            <load>2</load>
-            <athletics>0.5</athletics>
-            <stealth>0</stealth>
+            <load>3</load>
+            <weight>3000</weight>
+
             <properties>
-                <restrictive score="4"/>
+                <restrictive score="1"/>
                 <light/>
                 <soft/>
             </properties>
         </armour>
 
         <armour name="Metal helm">
+            <description>
+                <para>
+                    A metal helm which covers the top, back and sides of
+                    the head. Sometimes has a nose guard as well.
+                </para>
+            </description>
+
             <protection>+1</protection>
-            <load>0.5</load>
-            <athletics>0</athletics>
-            <stealth>0</stealth>
+            <load>1</load>
+            <weight>1000</weight>
+
             <properties>
                 <heavy/>
             </properties>
         </armour>
 
         <armour name="Mail habergeon">
+            <description>
+                <para>
+                    A mail shirt which covers the torso but not the arms.
+                </para>
+            </description>
+
             <protection>+4</protection>
-            <load>3</load>
-            <athletics>0.5</athletics>
-            <stealth>1</stealth>
+            <load>7</load>
+            <weight>7000</weight>
+
             <properties>
-                <restrictive score="5"/>
-                <noisy score="3"/>
+                <restrictive score="1"/>
+                <noisy score="1"/>
                 <mail/>
                 <heavy/>
             </properties>
         </armour>
 
         <armour name="Mail hauberk">
+            <description>
+                <para>
+                    A layer of mail which covers the torso, arms and upper
+                    legs. It is heavy and noisy, but provides excellent
+                    protection.
+                </para>
+            </description>
+
             <protection>+6</protection>
-            <load>4</load>
-            <athletics>0.5</athletics>
-            <stealth>1</stealth>
+            <load>10</load>
+            <weight>10000</weight>
+
             <properties>
-                <restrictive score="4"/>
-                <noisy score="3"/>
+                <restrictive score="2"/>
+                <noisy score="1"/>
                 <mail/>
                 <heavy/>
             </properties>
         </armour>
 
         <armour name="Mail leggings">
+            <description>
+                <para>
+                    Mail trousers which cover the legs and waist. Can be
+                    worn under a hauberk. Needs to be worn over cloth or
+                    leather armour to prevent chaffing.
+                </para>
+            </description>
+
             <protection>+3</protection>
-            <load>3</load>
-            <athletics>0.75</athletics>
-            <stealth>1</stealth>
+            <load>6</load>
+            <weight>6000</weight>
+
             <properties>
-                <restrictive score="3"/>
-                <noisy score="2"/>
+                <restrictive score="1"/>
+                <noisy score="1"/>
                 <mail/>
                 <heavy/>
             </properties>
         </armour>
 
         <armour name="Mail coif">
+            <description>
+                <para>
+                    Covers the head and shoulders. Worn under a helm, it
+                    protects the neck from sword blows.
+                </para>
+            </description>
+
             <protection>+1</protection>
-            <load>0.5</load>
-            <athletics>0</athletics>
-            <stealth>0.25</stealth>
+            <load>2</load>
+            <weight>2000</weight>
+
             <notes>Often worn under a helm.</notes>
             <properties>
                 <mail/>
@@ -1142,13 +1204,13 @@
 
         <armour name="Ring habergeon">
             <protection>+4</protection>
-            <load>4</load>
-            <athletics>0.75</athletics>
-            <stealth>1</stealth>
+            <load>8</load>
+            <weight>8000</weight>
+
             <notes>Can be worn over soft leather.</notes>
             <properties>
-                <restrictive score="3"/>
-                <noisy score="3"/>
+                <restrictive score="1"/>
+                <noisy score="1"/>
                 <mail/>
                 <heavy/>
             </properties>
@@ -1156,13 +1218,13 @@
 
         <armour name="Ring hauberk">
             <protection>+6</protection>
-            <load>5</load>
-            <athletics>1</athletics>
-            <stealth>1</stealth>
+            <load>12</load>
+            <weight>12000</weight>
+
             <notes>Can be worn over soft leather.</notes>
             <properties>
-                <restrictive score="3"/>
-                <noisy score="2"/>
+                <restrictive score="2"/>
+                <noisy score="1"/>
                 <mail/>
                 <heavy/>
             </properties>
@@ -1170,57 +1232,18 @@
 
         <armour name="Ring leggings">
             <protection>+3</protection>
-            <load>4</load>
-            <athletics>1</athletics>
-            <stealth>1</stealth>
+            <load>7</load>
+            <weight>7000</weight>
+
             <notes>Can be worn over soft leather.</notes>
             <properties>
                 <restrictive score="2"/>
-                <noisy score="2"/>
+                <noisy score="1"/>
                 <mail/>
                 <heavy/>
             </properties>
         </armour>
 
-<!--
-        <armour name="Ring coif">
-            <protection>+1</protection>
-            <load>1</load>
-            <athletics>2</athletics>
-            <stealth>2</stealth>
-            <notes>Often worn under a helm.</notes>
-            <properties>
-                <mail/>
-                <heavy/>
-            </properties>
-        </armour>
--->
-<!--
-        <armour name="Plate cuirass">
-            <protection>+3</protection>
-            <load>1.5</load>
-            <notes>Can be worn over mail and/or soft leather.</notes>
-        </armour>
-
-        <armour name="Plate vambraces">
-            <protection>+1</protection>
-            <load>0.5</load>
-            <notes>Can be worn over mail and/or soft leather.</notes>
-        </armour>
-
-        <armour name="Plate greaves">
-            <protection>+1</protection>
-            <load>0.5</load>
-            <notes>Can be worn over mail and/or soft leather.</notes>
-        </armour>
-
-        <armour name="Plate shoulder plates">
-            <protection>+1</protection>
-            <load>0.5</load>
-            <notes>Can be worn over mail and/or soft leather. Cannot
-            be combined with a cuirass.</notes>
-        </armour>
- -->
     </armourlist>
 </equipment>
 
