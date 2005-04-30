@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.9 $</version>
-            <date>$Date: 2005-04-30 15:33:05 $</date>
+            <version>$Revision: 1.10 $</version>
+            <date>$Date: 2005-04-30 22:19:31 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -44,9 +44,19 @@
             <title>Encumbrance</title>
 
             <para>
-                A creature can carry a load equal to its strength squared
-                without penalty (e.g., an average human with a strength
-                of 3 can carry a load of 9).
+                How much a person can carry is based on their strength.
+                The more they carry, the greater the penalties when trying
+                to perform physical actions. A character can normally
+                carry up to the square of their strength (in kg) without
+                any penalty. If they try to carry more than this, then
+                they are penalised.
+            </para>
+
+            <para>
+                The following table shows the penalties for given levels
+                of encumbrance. The encumbrance column lists the maximum
+                load that can be carried as a multiple of their base
+                amount (strength squared).
             </para>
 
             <targetlist targetFirst="false" bold="true">
@@ -84,10 +94,28 @@
                     automatically zero and -2 to dexterity.
                 </item>
             </targetlist>
+
+            <para>
+                The level of encumbrance is used in other situations.
+                When fatigue checks are made, it gives a -5 to the
+                roll per level of encumbrance.
+            </para>
+
+            <para>
+                It may also add a similar penalty if the character attempts
+                some athletic action that would be greatly affected by
+                encumbrance. Examples include jumping, swimming or
+                acrobatics.
+            </para>
         </sect1>
 
-        <sect1>
+        <sect1 format="wide">
             <title>Weapon list</title>
+
+            <para>
+                The following table lists the most common weapons, together
+                with their statistics for Yags.
+            </para>
 
             <import-weaponlist href="xml/arms.yags"
                                 importance="1"
@@ -101,15 +129,68 @@
                 <category>Spears</category>
                 <category>Swords</category>
             </import-weaponlist>
+
+            <para>
+                The notes for each weapon are as follows. See the combat
+                article for full details.
+            </para>
+
+            <itemlist>
+                <item name="2H">
+                    This weapon is designed to be used with two hands.
+                </item>
+
+                <item name="Hv">
+                    This is a heavy weapon, and halves the protection
+                    provided by light armour.
+                </item>
+
+                <item name="Li">
+                    This is a light weapon, and it's damage type is
+                    reduced by one against heavy armour.
+                </item>
+
+                <item name="Im">
+                    This is an impaling weapon, which halves the
+                    protection provided by mail and cloth armours.
+                </item>
+
+                <item name="Cr">
+                    A crushing weapon, which gives +5 to knockback.
+                </item>
+
+                <item name="Th">
+                    A throwable weapon is designed to be thrown, and
+                    gives better ranges than other weapons.
+                </item>
+
+                <item name="De">
+                    This weapon is defensive, and suffers only -5 to
+                    attack (instead of -10) when being used defensively.
+                </item>
+
+                <item name="Bl">
+                    Blocking weapons are shields, which can be used
+                    as a second weapon at full bonus.
+                </item>
+
+                <item name="We">
+                    Weak weapons are more likely to break.
+                </item>
+
+                <item name="St">
+                    Strong weapons are less likely to break.
+                </item>
+            </itemlist>
         </sect1>
 
-        <sect1>
+        <sect1 format="wide">
             <title>Armour list</title>
 
             <import-armourlist href="xml/arms.yags"/>
         </sect1>
 
-        <sect1>
+        <sect1 format="wide">
             <title>General Equipment</title>
 
             <import-equipment href="xml/equipment.yags">
