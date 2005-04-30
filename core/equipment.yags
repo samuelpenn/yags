@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.8 $</version>
-            <date>$Date: 2005-04-30 15:29:26 $</date>
+            <version>$Revision: 1.9 $</version>
+            <date>$Date: 2005-04-30 15:33:05 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -51,26 +51,37 @@
 
             <targetlist targetFirst="false" bold="true">
                 <valueLabel>Encumbrance</valueLabel>
-                <targetLabel>Load</targetLabel>
+                <targetLabel>Level</targetLabel>
 
-                <item target="+0" value="Unencumbered (x1).">
+                <item target="0" value="Unencumbered (x1).">
                     A character can carry up to the square of their
                     strength without being encumbered.
                 </item>
 
-                <item target="-3" value="Light (x2).">
+                <item target="1" value="Light (x2).">
                     A character who carries more than the square of their
                     strength (but no more than twice this) is lightly
-                    encumbered, and has a -3 penalty to combat rolls.
+                    encumbered, and has a -1 penalty to agility.
                 </item>
 
-                <item target="-6" value="Moderately (x3).">
+                <item target="2" value="Moderately (x3).">
+                    Character has a -1 penalty to both agility and
+                    dexterity.
                 </item>
 
-                <item target="-10" value="Heavily (x6).">
+                <item target="3" value="Heavily (x6).">
+                    Character has a -2 penalty to agility and a -1
+                    penalty to dexterity.
                 </item>
 
-                <item target="-20" value="Greatly (x10).">
+                <item target="4" value="Greatly (x10).">
+                    A greatly burdened character has a -2 penalty to
+                    both agility and dexterity.
+                </item>
+
+                <item target="5" value="Over encumbered.">
+                    Character cannot move, all agility checks are
+                    automatically zero and -2 to dexterity.
                 </item>
             </targetlist>
         </sect1>
@@ -90,9 +101,6 @@
                 <category>Spears</category>
                 <category>Swords</category>
             </import-weaponlist>
-            <!--
-            <import-weaponinfo href="xml/arms.yags" />
-            -->
         </sect1>
 
         <sect1>
