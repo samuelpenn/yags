@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.10 $</version>
-            <date>$Date: 2005-04-30 22:19:31 $</date>
+            <version>$Revision: 1.11 $</version>
+            <date>$Date: 2005-05-01 13:50:16 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -187,14 +187,74 @@
         <sect1 format="wide">
             <title>Armour list</title>
 
+            <para>
+                There is a wide variety of armour available, varying in
+                cost, weight and protective ability. Some armour is better
+                against certain types of weapons than other armour -
+                padded cloth can be better against crushing weapons than
+                mail is, though mail is far superior against swords.
+            </para>
+
+            <para>
+                The following lists the most common types of armour,
+                together with their properties.
+            </para>
+
             <import-armourlist href="xml/arms.yags"/>
+
+            <para>
+                The combat article gives a full description of the
+                different properties, but they are repeated here in
+                brief for easy reference.
+            </para>
+
+            <itemlist>
+                <item name="Hv">
+                    Heavy armour is good against all weapon types.
+                </item>
+
+                <item name="Li">
+                    Light armour is ineffective against heavy weapons, but
+                    tends to be cheap and comfortable to wear.
+                </item>
+
+                <item name="Re-X">
+                    Armour is restrictive, and gives a penalty to Agility
+                    equal to X for athletics, brawling and initiative.
+                </item>
+
+                <item name="No-X">
+                    Armour is noisy, and gives a penalty to Agility equal
+                    to X for stealth checks.
+                </item>
+
+                <item name="Ma">
+                    Mail armour is halved against impaling weapons.
+                </item>
+
+                <item name="So">
+                    Soft armour is doubled against light weapons.
+                </item>
+
+                <item name="Wa">
+                    Warm armour gives added protection against the cold,
+                    and doubles as cold weather clothing.
+                </item>
+            </itemlist>
         </sect1>
 
         <sect1 format="wide">
             <title>General Equipment</title>
 
             <import-equipment href="xml/equipment.yags">
-                <category>all</category>
+                <category>Adventuring</category>
+                <category>Animals</category>
+                <category>Climbing</category>
+                <category>Container</category>
+                <category>Food</category>
+                <category>Food</category>
+                <category>Services</category>
+                <category>Transport</category>
             </import-equipment>
         </sect1>
     </body>
