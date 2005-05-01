@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.11 $</version>
-            <date>$Date: 2005-05-01 13:50:16 $</date>
+            <version>$Revision: 1.12 $</version>
+            <date>$Date: 2005-05-01 22:01:37 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -41,72 +41,264 @@
 
     <body>
         <sect1>
-            <title>Encumbrance</title>
+            <title>Carrying, Finding and Buying</title>
 
             <para>
-                How much a person can carry is based on their strength.
-                The more they carry, the greater the penalties when trying
-                to perform physical actions. A character can normally
-                carry up to the square of their strength (in kg) without
-                any penalty. If they try to carry more than this, then
-                they are penalised.
+                The following sections of this article list the most common
+                items of equipment that it is possible to buy. Initially
+                though there is a brief summary of the rules side of
+                things - encumbrance, limitations on buying stuff and
+                other things.
             </para>
 
-            <para>
-                The following table shows the penalties for given levels
-                of encumbrance. The encumbrance column lists the maximum
-                load that can be carried as a multiple of their base
-                amount (strength squared).
-            </para>
+            <sect2>
+                <title>Encumbrance</title>
 
-            <targetlist targetFirst="false" bold="true">
-                <valueLabel>Encumbrance</valueLabel>
-                <targetLabel>Level</targetLabel>
+                <para>
+                    How much a person can carry is based on their strength.
+                    The more they carry, the greater the penalties when trying
+                    to perform physical actions. A character can normally
+                    carry up to the square of their strength (in kg) without
+                    any penalty. If they try to carry more than this, then
+                    they are penalised.
+                </para>
 
-                <item target="0" value="Unencumbered (x1).">
-                    A character can carry up to the square of their
-                    strength without being encumbered.
-                </item>
+                <para>
+                    The following table shows the penalties for given levels
+                    of encumbrance. The encumbrance column lists the maximum
+                    load that can be carried as a multiple of their base
+                    amount (strength squared).
+                </para>
 
-                <item target="1" value="Light (x2).">
-                    A character who carries more than the square of their
-                    strength (but no more than twice this) is lightly
-                    encumbered, and has a -1 penalty to agility.
-                </item>
+                <targetlist targetFirst="false" bold="true">
+                    <valueLabel>Encumbrance</valueLabel>
+                    <targetLabel>Level</targetLabel>
 
-                <item target="2" value="Moderately (x3).">
-                    Character has a -1 penalty to both agility and
-                    dexterity.
-                </item>
+                    <item target="0" value="Unencumbered (x1).">
+                        A character can carry up to the square of their
+                        strength without being encumbered.
+                    </item>
 
-                <item target="3" value="Heavily (x6).">
-                    Character has a -2 penalty to agility and a -1
-                    penalty to dexterity.
-                </item>
+                    <item target="1" value="Light (x2).">
+                        A character who carries more than the square of their
+                        strength (but no more than twice this) is lightly
+                        encumbered, and has a -1 penalty to agility.
+                    </item>
 
-                <item target="4" value="Greatly (x10).">
-                    A greatly burdened character has a -2 penalty to
-                    both agility and dexterity.
-                </item>
+                    <item target="2" value="Moderately (x3).">
+                        Character has a -1 penalty to both agility and
+                        dexterity.
+                    </item>
 
-                <item target="5" value="Over encumbered.">
-                    Character cannot move, all agility checks are
-                    automatically zero and -2 to dexterity.
-                </item>
-            </targetlist>
+                    <item target="3" value="Heavily (x6).">
+                        Character has a -2 penalty to agility and a -1
+                        penalty to dexterity.
+                    </item>
 
-            <para>
-                The level of encumbrance is used in other situations.
-                When fatigue checks are made, it gives a -5 to the
-                roll per level of encumbrance.
-            </para>
+                    <item target="4" value="Greatly (x10).">
+                        A greatly burdened character has a -2 penalty to
+                        both agility and dexterity.
+                    </item>
 
-            <para>
-                It may also add a similar penalty if the character attempts
-                some athletic action that would be greatly affected by
-                encumbrance. Examples include jumping, swimming or
-                acrobatics.
-            </para>
+                    <item target="5" value="Over encumbered.">
+                        Character cannot move, all agility checks are
+                        automatically zero and -2 to dexterity.
+                    </item>
+                </targetlist>
+
+                <para>
+                    The level of encumbrance is used in other situations.
+                    When fatigue checks are made, it gives a -5 to the
+                    roll per level of encumbrance.
+                </para>
+
+                <para>
+                    It may also add a similar penalty if the character attempts
+                    some athletic action that would be greatly affected by
+                    encumbrance. Examples include jumping, swimming or
+                    acrobatics.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Item Availability</title>
+
+                <para>
+                    Not all items are available for sale everywhere. An
+                    elegant gold water clock won't be found in a typical
+                    village, however you could probably buy as many eggs
+                    as you wanted there.
+                </para>
+
+                <para>
+                    Likewise, steel plate armour won't be available in
+                    10th century London - you'd have to wait another
+                    few hundred years for that.
+                </para>
+
+                <para>
+                    Apart from cost, there are three principle things
+                    which govern whether something can be bought at a
+                    given location - <e>availability</e>, <e>legality</e>
+                    and <e>technology</e>.
+                </para>
+
+                <sect3>
+                    <title>Availability</title>
+
+                    <para>
+                        All items have an availability rating, on a scale
+                        of zero to five, with five being very rare items and
+                        zero being things which can be picked up anywhere.
+                    </para>
+
+                    <targetlist targetFirst="true" bold="true">
+                        <targetLabel>Availability</targetLabel>
+                        <valueLabel>Where it can be found...</valueLabel>
+
+                        <item target="0" value="Free.">
+                            Such items are as common as dirt. They include
+                            such things as firewood, chalk, clubs and
+                            staves. They can be picked up from anywhere
+                            either fully formed, or easily crafted by
+                            anyone with opposable thumbs. They may still
+                            have a price, which reflects the trouble
+                            of someone going to pick the item up and
+                            sticking it in a shop.
+                        </item>
+
+                        <item target="1" value="Common.">
+                            Such items are available in even small villages
+                            for a reasonable cost. Even a farmstead will
+                            have some, though non-renewable items may cost
+                            a bit extra.
+                        </item>
+
+                        <item target="2" value="Uncommon.">
+                            Simple items which take some time and skill to
+                            make. They will be common in small villages,
+                            though not generally for sale. Larger villages
+                            will tend to have them for common sale.
+                        </item>
+
+                        <item target="3" value="Rare">
+                            Such items are rare in villages, but available
+                            in market towns. Simple weapons, basic armour
+                            and most farm animals.
+                        </item>
+
+                        <item target="4" value="Very rare">
+                            Such items are only available in decent towns.
+                            Most weapons, jewellery, good quality cloth,
+                            quality horses and most luxury items.
+                        </item>
+
+                        <item target="5" value="Extremely rare">
+                            Such items are only found in large towns or
+                            cities. Good quality or unusual weapons or
+                            armour, luxury goods or items which require
+                            a high degree of skill to make.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        Availability can also be affected by the type of
+                        good. Some items are listed as being
+                        <e>specialist</e>. Such items are only available
+                        from a few rare sources. For example, lock picks
+                        won't be available from anyone other than a
+                        locksmith or a thief.
+                    </para>
+
+                    <para>
+                        Some items are noted as being <e>luxury</e> items.
+                        These may not be available to common folk, or at
+                        least anyone who looks like a commoner, just out
+                        of snobbery.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Legality</title>
+
+                    <para>
+                        Some items are, if not outright illegal, somewhat
+                        shady in nature. Items marked as <e>illegal</e>
+                        cannot be bought through normal channels. Contacts
+                        with the criminal underworld or hefty bribes may be
+                        required.
+                    </para>
+
+                    <para>
+                        Some items are merely <e>shady</e>. A shady item
+                        can be used for legal purposes, though a suspicious
+                        looking person who buys such an item might get
+                        reported to local law enforcement.
+                    </para>
+
+                    <para>
+                        Finally, <e>restricted</e> items are legal, but
+                        only permitted to certain people. Knightly weapons
+                        and armour would be one example, which aren't
+                        permitted to be owned by non-nobles.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Technology</title>
+
+                    <para>
+                        Some items require a certain level of technology
+                        before they become available. Every item has a
+                        <e>tech level</e> (TL) which denotes when the item
+                        was first introduced.
+                    </para>
+
+                    <termlist targetFirst="true">
+                        <item target="0" value="Stone age"/>
+                        <item target="1" value="Bronze age"/>
+                        <item target="2" value="Iron age"/>
+                        <item target="3" value="Medieval"/>
+                        <item target="4" value="Renaissance"/>
+                        <item target="5" value="Steam"/>
+                        <item target="6" value="Mechanical"/>
+                        <item target="7" value="Nuclear"/>
+                        <item target="8" value="Information"/>
+                        <item target="9" value="Microtech"/>
+                    </termlist>
+
+                    <para>
+                        The equipment lists given here only deal with
+                        <e>low tech</e> goods, up until tech level 3.
+                    </para>
+
+                    <para>
+                        The technology levels assume a technology
+                        advancement similar to Western Europe. Advancement
+                        trees outside of this are not currently
+                        represented.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Cost of living</title>
+
+                <para>
+                    The monthly cost of living of a person will vary
+                    according to their social class (or at least, the
+                    social class they wish to emulate). Out in the
+                    wilderness, everyone is pretty much equal. In a
+                    village, there won't be much option, though an
+                    innkeeper and his family may give up their private
+                    rooms for someone of obvious importance.
+                </para>
+
+                <para>
+                    In towns, how expensively a character lives
+                    will often determine their perceived social class.
+                </para>
+            </sect2>
         </sect1>
 
         <sect1 format="wide">
@@ -252,7 +444,7 @@
                 <category>Climbing</category>
                 <category>Container</category>
                 <category>Food</category>
-                <category>Food</category>
+                <category>Rogue</category>
                 <category>Services</category>
                 <category>Transport</category>
             </import-equipment>
