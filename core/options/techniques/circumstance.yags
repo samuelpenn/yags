@@ -9,8 +9,8 @@
     version 2.
 
     Author:  Samuel Penn
-    Version: $Revision: 1.7 $
-    Date:    $Date: 2005-05-08 21:48:08 $
+    Version: $Revision: 1.8 $
+    Date:    $Date: 2005-05-14 10:32:50 $
 
  -->
 
@@ -41,20 +41,34 @@
         </description>
     </advantage>
 
-    <advantage name="Sea fighting" type="technique">
-        <cost points="2"/>
-        <skill name="All"/>
+    <advantage name="Improved blind fighting" type="technique">
+        <cost points="8"/>
+        <skill name="Awareness"/>
+        <prerequisite>Blind fighting</prerequisite>
+
+        <description>
+            <para>
+                As <e>Blind fighting</e>, but gives a further +1 bonus
+                on top of that (for a total of +2). Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Sea legs" type="technique">
+        <cost points="4"/>
+        <skill name="Athletics"/>
         <description>
             <para>
                 Gain a +1 bonus to agility when it is used to cap combat
                 skills when fighting aboard ship in rough seas, or in water.
-                Automatic.
+                Also applies as a bonus when making athletic checks on
+                board a boat or ship that is at sea. Automatic.
             </para>
         </description>
     </advantage>
 
     <advantage name="Stealthy in armour" type="technique">
-        <cost points="3"/>
+        <cost points="4"/>
         <skill name="Stealth"/>
         <description>
             <para>
@@ -71,7 +85,7 @@
         <description>
             <para>
                 The character is experienced with moving whilst wearing
-                heavy armour. The total agility penalty caused by some
+                heavy armour. The <e>total</e> agility penalty caused by
                 armour is reduced by one. Automatic.
             </para>
         </description>
