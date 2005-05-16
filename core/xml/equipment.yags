@@ -9,18 +9,16 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.10 $
-    Date:    $Date: 2005-05-02 12:46:38 $
+    Version: $Revision: 1.11 $
+    Date:    $Date: 2005-05-16 20:34:25 $
 
     Categories
 
     Adventuring     The sort of things only adventurers have.
     Rogue           Thieves/assassins tools and the like.
     Food            Food and drink.genre
-
-    Legality
-    0               Illegal
-    5               Totally mundane
+    Animal          An animal which isn't livestock - horses and dogs.
+    Livestock       Animals bred for food, such as pigs and cows.
 
     Importance
     0               Only include in complete lists.
@@ -29,6 +27,8 @@
     3               Very important. Always list
 
     All units are in cgs.
+
+    Prices should be in farthings, but prices can't really be trusted yet.
  -->
 <equipment>
     <item name="10' pole">
@@ -1969,6 +1969,200 @@
 
         <cost>2</cost>
     </item>
+
+    <item name="Dozen chickens">
+        <category>Livestock</category>
+        <importance>2</importance>
+        <availability>1</availability>
+        <source>Farmer</source>
+
+        <short>A dozen live chickens.</short>
+
+        <description>
+            <para>
+                Chickens are a relatively cheap and common commodity,
+                making a single chicken relatively worthless as far
+                as money is concerned. If fewer chickens are needed,
+                then bartering is the order of the day.
+            </para>
+        </description>
+
+        <weight>6000</weight>
+        <material>animal</material>
+
+        <cost>3</cost>
+    </item>
+
+    <item name="Cow">
+        <category>Livestock</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <source>Farmer</source>
+
+        <short>A single fully grown cow.</short>
+
+        <description>
+            <para>
+                A cow will generally be ready to be milked. Those that
+                aren't capable of milking will be cheaper.
+            </para>
+        </description>
+
+        <weight>500000</weight>
+        <material>animal</material>
+
+        <cost>280</cost>
+    </item>
+
+    <item name="Ewe and lamb">
+        <category>Livestock</category>
+        <importance>1</importance>
+        <availability>2</availability>
+        <source>Farmer</source>
+
+        <short>An ewe with a newly born lamb.</short>
+
+        <description>
+            <para>
+                Lambs are often sold with their mothers, since they are
+                easier to keep fresh if alive, but can't survive without
+                their mother's milk.
+            </para>
+        </description>
+
+        <weight>250000</weight>
+        <material>animal</material>
+
+        <cost>100</cost>
+    </item>
+
+    <item name="Ox">
+        <category>Animal</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <source>Farmer</source>
+
+        <short>Oxen make great draft animals.</short>
+
+        <weight>750000</weight>
+        <material>animal</material>
+
+        <cost>340</cost>
+    </item>
+
+    <item name="Pig">
+        <category>Livestock</category>
+        <importance>2</importance>
+        <availability>1</availability>
+        <source>Farmer</source>
+
+        <short>The source of bacon sandwiches.</short>
+
+        <weight>75000</weight>
+        <material>animal</material>
+
+        <cost>80</cost>
+    </item>
+
+    <item name="Sheep">
+        <category>Livestock</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <source>Shephard</source>
+
+        <short>Used for wool or meat.</short>
+
+        <weight>75000</weight>
+        <material>animal</material>
+
+        <cost>40</cost>
+    </item>
+
+    <item name="Fledged Peregrine Falcon">
+        <category>Animal</category>
+        <importance>1</importance>
+        <availability>3</availability>
+        <source>Falconer</source>
+
+        <short>A falcon with developed feathers and capable of flight.</short>
+
+        <weight>250</weight>
+        <material>animal</material>
+
+        <cost>960</cost>
+    </item>
+
+    <item name="Fledged Sparrow Hawk">
+        <category>Animal</category>
+        <importance>1</importance>
+        <availability>2</availability>
+        <source>Falconer</source>
+
+        <short>A hawk with developed feathers and capable of flight.</short>
+
+        <weight>200</weight>
+        <material>animal</material>
+
+        <cost>96</cost>
+    </item>
+
+    <item name="Lap dog" quality="2">
+        <category>Animal</category>
+        <importance>2</importance>
+        <availability>1</availability>
+
+        <short>A common house trained dog.</short>
+
+        <weight>10000</weight>
+        <material>animal</material>
+
+        <cost>16</cost>
+    </item>
+
+    <item name="Lap dog" quality="3">
+        <category>Animal</category>
+        <importance>2</importance>
+        <availability>2</availability>
+
+        <short>A good quality house trained dog.</short>
+
+        <weight>10000</weight>
+        <material>animal</material>
+
+        <cost>100</cost>
+    </item>
+
+    <item name="Lap dog" quality="4">
+        <category>Animal</category>
+        <importance>2</importance>
+        <availability>3</availability>
+
+        <short>A high quality house trained dog.</short>
+
+        <weight>10000</weight>
+        <material>animal</material>
+
+        <cost>480</cost>
+    </item>
+
+
+    <item name="Buck Hound">
+        <category>Animal</category>
+        <importance>2</importance>
+        <availability>3</availability>
+
+        <properties>
+            <trained/>
+        </properties>
+
+        <short>A hound for hunting deer.</short>
+
+        <weight>10000</weight>
+        <material>animal</material>
+
+        <cost>480</cost>
+    </item>
+
 </equipment>
 
 
