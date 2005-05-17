@@ -9,8 +9,8 @@
     version 2.
 
     Author:  Samuel Penn
-    Version: $Revision: 1.15 $
-    Date:    $Date: 2005-05-02 12:46:38 $
+    Version: $Revision: 1.16 $
+    Date:    $Date: 2005-05-17 17:58:50 $
 
  -->
 
@@ -25,7 +25,9 @@
      -->
     <advantage name="Improved attack" type="technique">
         <cost points="2"/>
-        <skill name="All melee"/>
+        <skill name="Melee"/>
+
+        <short>Bonus to damage when aggressive.</short>
 
         <description>
             <para>
@@ -37,8 +39,10 @@
 
     <advantage name="Desperate attack" type="technique">
         <cost points="4"/>
-        <skill name="Any melee or brawl"/>
+        <skill name="Melee"/>
         <prerequisite>Improved attack</prerequisite>
+
+        <short>Second attack if miss on first.</short>
 
         <description>
             <para>
@@ -54,8 +58,10 @@
 
     <advantage name="Double attack" type="technique">
         <cost points="10"/>
-        <skill name="All melee"/>
+        <skill name="Melee"/>
         <prerequisite>Desperate attack</prerequisite>
+
+        <short>Two attacks a round.</short>
 
         <description>
             <para>
@@ -69,8 +75,10 @@
 
     <advantage name="Triple attack" type="technique">
         <cost points="15"/>
-        <skill name="All melee"/>
+        <skill name="Melee"/>
         <prerequisite>Double attack</prerequisite>
+
+        <short>Three attacks a round.</short>
 
         <description>
             <para>
@@ -84,8 +92,10 @@
 
     <advantage name="Knockback attack" type="technique">
         <cost points="4"/>
-        <skill name="Any melee weapon"/>
+        <skill name="Armed melee"/>
         <prerequisite>Improved attack</prerequisite>
+
+        <short>Try and knock someone over.</short>
 
         <description>
             <para role="descriptive">
@@ -105,8 +115,10 @@
 
     <advantage name="Cleave" type="technique">
         <cost points="6"/>
-        <skill name="Any melee"/>
+        <skill name="Armed melee"/>
         <prerequisite>Knockback attack</prerequisite>
+
+        <short>Halve armour of target.</short>
 
         <description>
             <para>
@@ -126,8 +138,10 @@
 
     <advantage name="Deadly strike" type="technique">
         <cost points="6"/>
-        <skill name="Any melee weapon"/>
+        <skill name="Armed melee"/>
         <prerequisite>Knockback attack</prerequisite>
+
+        <short>Kill foe in a single blow.</short>
 
         <description>
             <para>
@@ -147,9 +161,11 @@
 
     <advantage name="Improved blow" type="technique">
         <cost points="4"/>
-        <skill name="Any melee weapon skill"/>
+        <skill name="Armed melee"/>
 
         <prerequisite>Improved attack</prerequisite>
+
+        <short>Do +3 damage on all attacks.</short>
 
         <description>
             <para>
@@ -162,9 +178,11 @@
 
     <advantage name="Superior blow" type="technique">
         <cost points="8"/>
-        <skill name="Any melee weapon skill"/>
+        <skill name="Armed melee"/>
 
         <prerequisite>Improved blow</prerequisite>
+
+        <short>Do +6 damage on all attacks.</short>
 
         <description>
             <para>
@@ -177,9 +195,11 @@
 
     <advantage name="Great blow" type="technique">
         <cost points="12"/>
-        <skill name="Any melee weapon skill"/>
+        <skill name="Armed melee"/>
 
         <prerequisite>Superior blow</prerequisite>
+
+        <short>Do +9 damage on all attacks.</short>
 
         <description>
             <para>
@@ -199,7 +219,9 @@
 
     <advantage name="Improved defence" type="technique">
         <cost points="2"/>
-        <skill name="Any melee weapon"/>
+        <skill name="Melee"/>
+
+        <short>Gain bonus against multiple attackers.</short>
 
         <description>
             <para>
@@ -213,7 +235,9 @@
 
     <advantage name="Reflex dodge" type="technique">
         <cost points="4"/>
-        <skill name="Any melee or brawl"/>
+        <skill name="Melee"/>
+
+        <short>Dodge to reduce damage instead of attack.</short>
 
         <description>
             <para>
@@ -227,33 +251,81 @@
         </description>
     </advantage>
 
-    <advantage name="Counter strike" type="technique">
-        <cost points="4"/>
-        <skill name="Any melee weapon"/>
-        <prerequisite>Improved defence</prerequisite>
+    <advantage name="Improved reflex dodge" type="technique">
+        <cost points="6"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Reflex dodge</prerequisite>
+
+        <short>Free dodge to reduce damage.</short>
 
         <description>
             <para>
-                If declared, uses the <e>defensive stance</e> at -10. For
-                the first good defence made that round, defender gets
-                a free strike against that attacker.
+                As for <e>Reflex dodge</e>, except the character does not
+                have to give up their attack, and may use it at any time
+                in the round when they fail their first defence roll.
+                Automatic, and cannot be aggressive.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Superior reflex dodge" type="technique">
+        <cost points="8"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Improved reflex dodge</prerequisite>
+
+        <short>Free dodges to reduce damage.</short>
+
+        <description>
+            <para>
+                As for <e>Improved reflex dodge</e>, except it applies to
+                any failed defence rolls that round. Automatic, defensive
+                stance only.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Counter strike" type="technique">
+        <cost points="4"/>
+        <skill name="Melee"/>
+        <prerequisite>Improved defence</prerequisite>
+
+        <short>Free attack if good defence.</short>
+
+        <description>
+            <para>
+                If declared, uses the <e>defensive stance</e> and one
+                defence slot. For the first <e>good</e> defence made that
+                round, character gets a free strike against that attacker,
+                regardless of whether they are a declared target.
             </para>
         </description>
     </advantage>
 
     <advantage name="Whirlwind defence" type="technique">
         <cost points="8"/>
-        <skill name="Any melee weapon"/>
+        <skill name="Melee"/>
         <prerequisite>Counter strike</prerequisite>
+
+        <short>Free attack against all attackers.</short>
 
         <description>
             <para>
-                If declared, uses defensive stance at -10, and the character
-                cannot make any normal attacks. For each good defence
-                made against an attacker, a free strike can be made.
+                If declared, uses defensive stance, once defence slot and
+                the character cannot make any normal attacks. For every
+                <e>good</e> defence made against an attacker, the character
+                can follow up with a free strike.
             </para>
         </description>
     </advantage>
+
+
+    <!--
+        Miscellaneous
+
+        The following don't following the main trees.
+    -->
 
     <advantage name="Shield wall" type="technique">
         <cost points="2"/>
@@ -366,6 +438,12 @@
             </para>
         </description>
     </advantage>
+
+
+
+    <!--
+        Finesse based.
+    -->
 
     <advantage name="Finesse" type="technique">
         <cost points="2"/>
