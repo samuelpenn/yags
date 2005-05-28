@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet
-    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+                href="/home/sam/src/forge/yagsbook/xml/xslt/html/yagsbook.xsl"
     type="text/xsl"?>
 
 <article>
@@ -14,8 +14,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.17 $</version>
-            <date>$Date: 2005-04-29 17:27:56 $</date>
+            <version>$Revision: 1.18 $</version>
+            <date>$Date: 2005-05-28 22:36:59 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -33,7 +33,7 @@
 
     <body>
         <sect1>
-            <title>Choosing a Character</title>
+            <title>Building a Character</title>
 
             <para>
                 Habisfern is a fantasy campaign setting similar in
@@ -51,6 +51,81 @@
                 their character above and beyond what is provided
                 in the base package.
             </para>
+
+            <itemlist sort="strict">
+                <item name="1">
+                    Choose a character package. The package determines
+                    the type of character you are going to play, and
+                    everything else is probably based off that.
+                </item>
+
+                <item name="2">
+                    Choose attributes.
+                </item>
+
+                <item name="3">
+                    Choose an age.
+                </item>
+
+                <item name="4">
+                    Spend your 'free' 10 points on advantages or skills.
+                </item>
+            </itemlist>
+
+            <sect2>
+                <title>Attributes</title>
+
+                <para>
+                    There are eight primary attributes, all of which have
+                    a default score of three. Characters who are noticeably
+                    poor in an attribute will have a score of two, whilst
+                    those who are gifted will have a score of four. A rare
+                    few will have a score of five.
+                </para>
+
+                <para>
+                    The attributes are <e>strength</e>, <e>stamina</e>,
+                    <e>agility</e>, <e>dexterity</e>, <e>perception</e>,
+                    <e>intelligence</e>, <e>charisma</e> and <e>will</e>.
+                    Their meanings are described in detail in the
+                    <s>Introduction</s> article.
+                </para>
+
+                <para>
+                    A player may choose the distribution of their
+                    attributes from the following table.
+                </para>
+
+                <targetlist bold="true" targetFirst="true">
+                    <targetLabel>Option</targetLabel>
+                    <valueLabel>Attributes</valueLabel>
+
+                    <item target="1" value="3,3,3,3,3,3,3,3.">
+                        Such a character has a three in every attribute.
+                        They represent about 90% of the population, and
+                        though they have no major failings, they do not
+                        excell at anything either.
+                    </item>
+
+                    <item target="2" value="4,3,3,3,3,3,3,2.">
+                        Such a character has one attribute at four, one
+                        at two, and the remaining six at three.
+                    </item>
+
+                    <item target="3" value="4,4,3,3,3,3,2,2.">
+                        With two fours and two two's.
+                    </item>
+
+                    <item target="4" value="4,4,4,3,2,2,2,2.">
+                    </item>
+
+                    <item target="5" value="5,3,3,3,3,3,2,2.">
+                    </item>
+
+                    <item target="6" value="5,4,3,3,2,2,2,2.">
+                    </item>
+                </targetlist>
+            </sect2>
 
             <sect2>
                 <title>Character Age</title>
@@ -99,12 +174,21 @@
             <title>Character Packages</title>
 
             <para>
-                Each package provides a set of skills for the character,
-                as well as a guide to equipment and social class. Not all
-                packages are equal, and some are very much 'better' than
-                others. Characters of high social class however come with
-                responsibilities other characters don't have. Packages
-                have no effect after character generation.
+                Every character is begun by choosing one of the many
+                character packages available. Each package provides the
+                character with a social class, broad background and a set
+                of skills. The idea of a package is to determine what the
+                character has been doing up until this point. After
+                character generation, the chosen package has no further
+                direct relevence.
+            </para>
+
+            <para>
+                Not all packages are equal, especially if total number of
+                skill points provided by each is taken as a guide. Not all
+                skills are equal however, and some of the better packages
+                have restrictions in other ways - the character may have
+                obligations, responsibilities and an image to maintain.
             </para>
 
             <para>
@@ -138,7 +222,112 @@
         </sect1>
 
         <sect1>
+            <title>Attributes</title>
+
+            <para>
+                It is assumed that the typical adult will have a score of
+                three in all their primary attributes, and this is
+                considered the default for player characters. Attributes
+                may be bought up or bought down, and doing so costs
+                points. The more points spent on attributes means less
+                points to spend on buying extra skills, and also means
+                that the player may also have to choose some
+                <e>disadvantages</e> for the character as well.
+            </para>
+
+            <para>
+                It is probably a good idea not to spend more than 10 points
+                on attributes at this stage, though this suggestion is
+                little more than a guide for first time players.
+            </para>
+
+            <targetlist bold="true" targetFirst="false">
+                <targetLabel>Cost</targetLabel>
+                <valueLabel>Attribute Score</valueLabel>
+
+                <item target="-9" value="Poor (2).">
+                </item>
+
+                <item target="0" value="Typical (3).">
+                </item>
+
+                <item target="+12" value="Good (4).">
+                </item>
+
+                <item target="+27" value="Exceptional (5).">
+                </item>
+            </targetlist>
+
+            <para>
+                For example, a character could have two <e>good</e>
+                attributes at 4 for a cost of +24 points, and offset this
+                with two <e>poor</e> attributes at 2 for -18 points,
+                giving a final cost of +6.
+            </para>
+        </sect1>
+
+        <sect1>
             <title>Advantages and Disadvantages</title>
+
+            <para>
+                A character may be fleshed out with special abilities
+                known as <e>advantages</e>. They may also take
+                <e>disadvantages</e> which are detrimental to the
+                character. Only a certain number of points can be spent
+                on advantages, some of which may already have been spent
+                on raising attributes.
+            </para>
+
+            <para>
+                A typical character will have 10 points to spend. The
+                player can opt to start the character older than the
+                default age of 16, in which case they gain an extra two
+                points each year up to a maximum of 18 points at age 25.
+                Taking an older, and therefore more experienced, character
+                can be quite beneficial.
+            </para>
+
+            <para>
+                It is suggested that a character not have more than 10
+                points of disadvantages. Disadvantages count as negative
+                points and offset advantages, attributes and skills that
+                have been bought.
+            </para>
+
+            <para>
+                The following sections outline the advantages and
+                disadvantages available to characters.
+            </para>
+
+            <sect2>
+                <title>General Background</title>
+
+                <para>
+                    Background based advantages and disadvantages affect
+                    the character before they enter play. Though their
+                    effects may continue after play commences, they may
+                    change due to the actions of the character or others.
+                    Enemies may be befriended, wealth lost and favours
+                    paid off, without having to buy off the disadvantage.
+                </para>
+
+                <import-advantages href="../core/options/background.yags"
+                                   type="background"/>
+            </sect2>
+
+            <sect2>
+                <title>Miscellaneous Advantages</title>
+
+                <import-advantages href="../core/options/advantages.yags"
+                                   type="advantage"/>
+            </sect2>
+
+            <sect2>
+                <title>Miscellaneous Disadvantages</title>
+
+                <import-advantages href="../core/options/advantages.yags"
+                                   type="disadvantage"/>
+            </sect2>
 
             <sect2>
                 <title>Bryteland</title>
