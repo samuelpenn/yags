@@ -14,8 +14,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.18 $</version>
-            <date>$Date: 2005-05-28 22:36:59 $</date>
+            <version>$Revision: 1.19 $</version>
+            <date>$Date: 2005-05-30 16:35:04 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -71,103 +71,6 @@
                     Spend your 'free' 10 points on advantages or skills.
                 </item>
             </itemlist>
-
-            <sect2>
-                <title>Attributes</title>
-
-                <para>
-                    There are eight primary attributes, all of which have
-                    a default score of three. Characters who are noticeably
-                    poor in an attribute will have a score of two, whilst
-                    those who are gifted will have a score of four. A rare
-                    few will have a score of five.
-                </para>
-
-                <para>
-                    The attributes are <e>strength</e>, <e>stamina</e>,
-                    <e>agility</e>, <e>dexterity</e>, <e>perception</e>,
-                    <e>intelligence</e>, <e>charisma</e> and <e>will</e>.
-                    Their meanings are described in detail in the
-                    <s>Introduction</s> article.
-                </para>
-
-                <para>
-                    A player may choose the distribution of their
-                    attributes from the following table.
-                </para>
-
-                <targetlist bold="true" targetFirst="true">
-                    <targetLabel>Option</targetLabel>
-                    <valueLabel>Attributes</valueLabel>
-
-                    <item target="1" value="3,3,3,3,3,3,3,3.">
-                        Such a character has a three in every attribute.
-                        They represent about 90% of the population, and
-                        though they have no major failings, they do not
-                        excell at anything either.
-                    </item>
-
-                    <item target="2" value="4,3,3,3,3,3,3,2.">
-                        Such a character has one attribute at four, one
-                        at two, and the remaining six at three.
-                    </item>
-
-                    <item target="3" value="4,4,3,3,3,3,2,2.">
-                        With two fours and two two's.
-                    </item>
-
-                    <item target="4" value="4,4,4,3,2,2,2,2.">
-                    </item>
-
-                    <item target="5" value="5,3,3,3,3,3,2,2.">
-                    </item>
-
-                    <item target="6" value="5,4,3,3,2,2,2,2.">
-                    </item>
-                </targetlist>
-            </sect2>
-
-            <sect2>
-                <title>Character Age</title>
-
-                <para>
-                    All characters are assumed to start at age 16. If a
-                    character starts older than this, then they gain 2
-                    extra points per year of extra age. No points are
-                    gained after age 25 however.
-                </para>
-            </sect2>
-
-            <sect2>
-                <title>Social Class</title>
-
-                <targetlist>
-                    <targetLabel>Level</targetLabel>
-                    <valueLabel>Social class</valueLabel>
-
-                    <item target="-4" value="Outlaw"/>
-                    <item target="-3" value="Slave"/>
-                    <item target="-2" value="Serf"/>
-                    <item target="-1" value="Kotsetla"/>
-                    <item target="+0" value="Ceorl"/>
-                    <item target="+1" value="Craftsman"/>
-                    <item target="+2" value="Priest"/>
-                    <item target="+3" value="Low noble">
-                        The lowest rank of nobility, normally a direct
-                        relation of a landed noble, such as a child or
-                        spouse.
-                    </item>
-                    <item target="+4" value="Landed noble">
-                        A noble who owns at least a manor worth of land.
-                        The title is not heriditary, and can be stripped
-                        at any time.
-                    </item>
-                    <item target="+5" value="High noble"/>
-                    <item target="+6" value="Ealdorman"/>
-                    <item target="+7" value="King"/>
-                </targetlist>
-
-            </sect2>
         </sect1>
 
         <sect1>
@@ -295,39 +198,11 @@
             </para>
 
             <para>
-                The following sections outline the advantages and
-                disadvantages available to characters.
+                Most advantages and disadvantages are described in the
+                <e>Advantages</e> article, though there are some which
+                are unique to the Habisfern setting which are described
+                below.
             </para>
-
-            <sect2>
-                <title>General Background</title>
-
-                <para>
-                    Background based advantages and disadvantages affect
-                    the character before they enter play. Though their
-                    effects may continue after play commences, they may
-                    change due to the actions of the character or others.
-                    Enemies may be befriended, wealth lost and favours
-                    paid off, without having to buy off the disadvantage.
-                </para>
-
-                <import-advantages href="../core/options/background.yags"
-                                   type="background"/>
-            </sect2>
-
-            <sect2>
-                <title>Miscellaneous Advantages</title>
-
-                <import-advantages href="../core/options/advantages.yags"
-                                   type="advantage"/>
-            </sect2>
-
-            <sect2>
-                <title>Miscellaneous Disadvantages</title>
-
-                <import-advantages href="../core/options/advantages.yags"
-                                   type="disadvantage"/>
-            </sect2>
 
             <sect2>
                 <title>Bryteland</title>
@@ -349,6 +224,19 @@
 
             <sect2>
                 <title>Cults</title>
+
+                <para>
+                    If a character is a member of a cult, they may have
+                    access to some techniques. Techniques are purchased
+                    like advantages, however they are linked to a skill,
+                    and the skill must be at a given level before the
+                    technique can be learnt.
+                </para>
+
+                <para>
+                    Some techniques also have prerequisites in that other
+                    techniques must be learnt first.
+                </para>
 
                 <import-advantages
                     source="/usr/share/xml/habisfern"
