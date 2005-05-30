@@ -9,8 +9,8 @@
     version 2.
 
     Author:  Samuel Penn
-    Version: $Revision: 1.17 $
-    Date:    $Date: 2005-05-18 18:23:10 $
+    Version: $Revision: 1.18 $
+    Date:    $Date: 2005-05-30 14:34:22 $
 
  -->
 
@@ -52,6 +52,55 @@
                 at the same skill as the first.
                 They loose <e>all</e> defence rolls for the rest of
                 that round.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Sunder" type="technique">
+        <cost points="4"/>
+        <skill name="Armed melee"/>
+
+        <prerequisite>Improved attack</prerequisite>
+
+        <short>Try and break your foe's weapon.</short>
+
+        <description>
+            <para>
+                A <e>sunder</e> attack is an attempt to break the
+                defender's weapon. The attacker makes a dexterity based
+                attack roll, and the defender rolls their base
+                dexterity x weapon skill. If the attacker succeeds, then
+                there is a chance of breaking the weapon. Each extra level
+                of success gives the attacker +5 on the following checks.
+            </para>
+
+            <para>
+                To see if the weapon breaks, the attacker rolls their
+                strength x weapon strength (this is the minimum strength
+                required to use the weapon) versus the defender's
+                strength x weapon strength. The attacker gets +5 if they
+                are using a <e>heavy</e> weapon against a <e>light</e>
+                weapon, or a metal edged weapon against wood.
+            </para>
+
+            <para>
+                A <e>good</e> success is needed by the attacker in order
+                to <e>weaken</e> the defender's weapon. A weakened weapon
+                that is again sundered is broken and cannot be used. A
+                weakened weapon will also break if it fumbles an attack
+                or defence roll. If the weapon is classed as <e>weak</e>,
+                then only a normal success is required. A <e>strong</e>
+                weapon needs an <e>excellent</e> success.
+            </para>
+
+            <para>
+                On a successful sunder, a second check is made immediately,
+                and if this also succeeds, then the weapon is broken
+                immediately. If the defender has a shield and are using
+                the <e>weapon and shield</e> style, or are using two
+                weapons with the <e>two weapons</e> style, then the
+                defender can choose which weapon is attacked, otherwise
+                it is the attacker's choice.
             </para>
         </description>
     </advantage>
@@ -451,11 +500,46 @@
         <cost points="2"/>
         <skill name="Any melee skill or brawl"/>
 
+        <short>Trade damage for extra speed.</short>
+
         <description>
             <para>
                 Character is able to trade hitting power for accuracy.
                 Get +5 to attack and initiative rolls, but -5 to damage
                 rolls.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Disarm" type="technique">
+        <cost points="4"/>
+        <skill name="Armed melee"/>
+
+        <prerequisite>Finesse</prerequisite>
+
+        <short>Try to disarm your foe.</short>
+
+        <description>
+            <para>
+                Character can try to disarm their foe. A disarm attempt
+                is an opposed dexterity x skill check between the two,
+                with +3 for a heavy weapon, and -3 for a light weapon.
+                Weapons being used with two hands have a +5 bonus if
+                defending against a <e>disarm</e>.
+            </para>
+
+            <para>
+                It is easier to disarm a foe if the two weapons are
+                roughly equivalent in size - if the target weapon is much
+                bigger then it has a mass advantage, if it is much smaller,
+                then it is harder to hit effectively. For each point of
+                difference in <e>reach</e>, the defender gets +3.
+            </para>
+
+            <para>
+                A disarm attempt is a declared action, and uses up one
+                defence slot. A success disarms the foe, a failure allows
+                them a <e>free strike</e>.
             </para>
         </description>
     </advantage>
