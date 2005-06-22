@@ -9,12 +9,34 @@
     version 2.
 
     Author:  Samuel Penn
-    Version: $Revision: 1.18 $
-    Date:    $Date: 2005-05-30 14:34:22 $
+    Version: $Revision: 1.19 $
+    Date:    $Date: 2005-06-22 17:18:22 $
 
  -->
 
 <advantages>
+    <header>
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.19 $</version>
+            <date>$Date: 2005-06-22 17:18:22 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2005</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+            <url>http://www.glendale.org.uk/gpl.txt</url>
+        </license>
+    </header>
 
     <!--
         Aggressive
@@ -27,34 +49,126 @@
         <cost points="2"/>
         <skill name="Melee"/>
 
-        <short>Bonus to damage when aggressive.</short>
+        <short>Bonus of +5 to damage when aggressive.</short>
 
         <description>
             <para>
                 When using the <e>aggressive stance</e>, gain a +5 bonus to
-                damage as well as attack. Automatic.
+                damage rolls as well as attack rolls. Automatic.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Desperate attack" type="technique">
+    <advantage name="Improved blow" type="technique">
         <cost points="4"/>
-        <skill name="Melee"/>
+        <skill name="Armed melee"/>
+
         <prerequisite>Improved attack</prerequisite>
 
-        <short>Second attack if miss on first.</short>
+        <short>Do +3 damage on all attacks.</short>
 
         <description>
             <para>
-                If the character is using the aggressive stance, has
-                just missed an attack and hasn't yet made any defence rolls
-                that round, then they may choose to make a second attack
-                at the same skill as the first.
-                They loose <e>all</e> defence rolls for the rest of
-                that round.
+                Improved skill enables a skilled attacker to more
+                effectively harm their foe. All attacks do +3 damage
+                regardless of stance. Automatic.
             </para>
         </description>
     </advantage>
+
+    <advantage name="Deadly strike" type="technique">
+        <cost points="6"/>
+        <skill name="Armed melee"/>
+        <prerequisite>Improved blow</prerequisite>
+
+        <short>Kill foe in a single blow.</short>
+
+        <description>
+            <para>
+                Aggressive, -10 to attack roll, declared before
+                the attack. If the target is successfully wounded, then
+                they must make a size x stamina roll against a target of
+                10 + 5 x wounds (not stuns) caused or immediately drop
+                to fatally wounded. If they succeed their roll, then
+                they take one less wound from the attack than normal.
+            </para>
+
+            <para>
+                A deadly strike uses up one defence.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Superior blow" type="technique">
+        <cost points="8"/>
+        <skill name="Armed melee"/>
+
+        <prerequisite>Deadly strike</prerequisite>
+
+        <short>Do +6 damage on all attacks.</short>
+
+        <description>
+            <para>
+                Similar to improved blow, adds +3 to all damage rolls
+                with weapons. Stacks with the former technique to give
+                a total +6 damage bonus. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Double attack" type="technique">
+        <cost points="10"/>
+        <skill name="Melee"/>
+        <prerequisite>Superior blow</prerequisite>
+
+        <short>Two attacks a round.</short>
+
+        <description>
+            <para>
+                Aggressive stance. The attacker can attack twice, each time
+                at a -15 penalty to skill. The first attack is fast, the
+                second attack is slow, but both happen at the same
+                initiative.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Great blow" type="technique">
+        <cost points="12"/>
+        <skill name="Armed melee"/>
+
+        <prerequisite>Double attack</prerequisite>
+
+        <short>Do +9 damage on all attacks.</short>
+
+        <description>
+            <para>
+                Stacks with <e>Improved blow</e> and <e>Superior blow</e>
+                giving an extra +3 to damage, for a total of +9. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Triple attack" type="technique">
+        <cost points="15"/>
+        <skill name="Melee"/>
+        <prerequisite>Great blow</prerequisite>
+
+        <short>Three attacks a round.</short>
+
+        <description>
+            <para>
+                Aggressive stance. The attacker can attack three times,
+                each time at a -30 penalty to skill. The first attack is
+                fast, the second attack is normal, and the third attack
+                is slow.
+            </para>
+        </description>
+    </advantage>
+
+
+
+
 
     <advantage name="Sunder" type="technique">
         <cost points="4"/>
@@ -105,39 +219,7 @@
         </description>
     </advantage>
 
-    <advantage name="Double attack" type="technique">
-        <cost points="10"/>
-        <skill name="Melee"/>
-        <prerequisite>Desperate attack</prerequisite>
 
-        <short>Two attacks a round.</short>
-
-        <description>
-            <para>
-                Aggressive stance. The attacker can attack twice, each time
-                at a -15 penalty to skill. The first attack is fast, the
-                second attack is slow, but both happen at the same
-                initiative.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Triple attack" type="technique">
-        <cost points="15"/>
-        <skill name="Melee"/>
-        <prerequisite>Double attack</prerequisite>
-
-        <short>Three attacks a round.</short>
-
-        <description>
-            <para>
-                Aggressive stance. The attacker can attack three times,
-                each time at a -30 penalty to skill. The first attack is
-                fast, the second attack is normal, and the third attack
-                is slow.
-            </para>
-        </description>
-    </advantage>
 
     <advantage name="Knockback attack" type="technique">
         <cost points="4"/>
@@ -185,78 +267,9 @@
         </description>
     </advantage>
 
-    <advantage name="Deadly strike" type="technique">
-        <cost points="6"/>
-        <skill name="Armed melee"/>
-        <prerequisite>Knockback attack</prerequisite>
 
-        <short>Kill foe in a single blow.</short>
 
-        <description>
-            <para>
-                Aggressive, -10 to attack roll, declared before
-                the attack. If the target is successfully wounded, then
-                they must make a size x stamina roll against a target of
-                10 + 5 x wounds (not stuns) caused or immediately drop
-                to fatally wounded. If they succeed their roll, then
-                they take one less wound from the attack than normal.
-            </para>
 
-            <para>
-                A deadly strike uses up one defence.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Improved blow" type="technique">
-        <cost points="4"/>
-        <skill name="Armed melee"/>
-
-        <prerequisite>Improved attack</prerequisite>
-
-        <short>Do +3 damage on all attacks.</short>
-
-        <description>
-            <para>
-                Improved technique enables a skilled attacker to more
-                effectively harm their foe. All attacks do +3 damage
-                regardless of stance. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Superior blow" type="technique">
-        <cost points="8"/>
-        <skill name="Armed melee"/>
-
-        <prerequisite>Improved blow</prerequisite>
-
-        <short>Do +6 damage on all attacks.</short>
-
-        <description>
-            <para>
-                Similar to improved blow, adds +3 to all damage rolls
-                with weapons. Stacks with the former technique to give
-                a total +6 damage bonus. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Great blow" type="technique">
-        <cost points="12"/>
-        <skill name="Armed melee"/>
-
-        <prerequisite>Superior blow</prerequisite>
-
-        <short>Do +9 damage on all attacks.</short>
-
-        <description>
-            <para>
-                Stacks with <e>Improved blow</e> and <e>Superior blow</e>
-                giving an extra +3 to damage, for a total of +9. Automatic.
-            </para>
-        </description>
-    </advantage>
 
 
 
@@ -288,85 +301,107 @@
 
         <prerequisite>Improved defence</prerequisite>
 
-        <short>Dodge to reduce damage instead of attack.</short>
+        <short>Second dodge or reduce damage if hit.</short>
 
         <description>
             <para>
-                If the character fails a defence roll, and they haven't
-                attacked yet this round, then they may forgo their attack
-                by dodging back from the blow. They gain +5 to their soak
-                roll for that attack only. May only be used once in a
-                round, and the character cannot be using an aggressive
-                stance.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Improved reflex dodge" type="technique">
-        <cost points="6"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Reflex dodge</prerequisite>
-
-        <short>Free dodge to reduce damage.</short>
-
-        <description>
-            <para>
-                As for <e>Reflex dodge</e>, except the character does not
-                have to give up their attack, and may use it at any time
-                in the round when they fail their first defence roll.
-                Automatic, and cannot be aggressive.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Superior reflex dodge" type="technique">
-        <cost points="8"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Improved reflex dodge</prerequisite>
-
-        <short>Free dodges to reduce damage.</short>
-
-        <description>
-            <para>
-                As for <e>Improved reflex dodge</e>, except it applies to
-                any failed defence rolls that round. Automatic, defensive
-                stance only.
+                If a character fails a defence roll, then they may use
+                another defence action to either give themselves a second
+                defence roll, or gain a +5 bonus to soak.
             </para>
         </description>
     </advantage>
 
     <advantage name="Counter strike" type="technique">
-        <cost points="4"/>
+        <cost points="6"/>
         <skill name="Melee"/>
-        <prerequisite>Improved defence</prerequisite>
+        <prerequisite>Reflex dodge</prerequisite>
 
         <short>Free attack if good defence.</short>
 
         <description>
             <para>
-                If declared, uses the <e>defensive stance</e> and one
-                defence slot. For the first <e>good</e> defence made that
-                round, character gets a free strike against that attacker,
-                regardless of whether they are a declared target.
+                If make a <e>good</e> defence, they may use up another
+                defence action to get a free strike on the attacker.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Improved reflex dodge" type="technique">
+        <cost points="8"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Counter strike</prerequisite>
+
+        <short>Free dodge to reduce damage.</short>
+
+        <description>
+            <para>
+                If the character fails a defence roll, then they get a +5
+                to their soak to resist damage from being able to dodge
+                back from the blow in order to reduce it's effectiveness.
+                This is automatic, but does not stack with
+                <e>reflex dodge</e>. If no defence roll is made against an
+                attack, then no soak bonus is gained.
             </para>
         </description>
     </advantage>
 
     <advantage name="Whirlwind defence" type="technique">
-        <cost points="8"/>
+        <cost points="10"/>
         <skill name="Melee"/>
-        <prerequisite>Counter strike</prerequisite>
+
+        <prerequisite>Improved reflex dodge</prerequisite>
 
         <short>Free attack against all attackers.</short>
 
         <description>
             <para>
-                If declared, uses defensive stance, once defence slot and
-                the character cannot make any normal attacks. For every
-                <e>good</e> defence made against an attacker, the character
-                can follow up with a free strike.
+                If the characteris using a <e>defensive stance</e>, then a
+                whirlwind defence can be declared at the start of the
+                round. The character looses all their attacks that round.
+                For every good defence made, the character gets a free
+                strike against their attacker, at a penalty equal to their
+                defence penalty for multiple defences (if any).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Careful defence" type="technique">
+        <cost points="12"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Whirlwind defence</prerequisite>
+
+        <short>Ignore free strikes.</short>
+
+        <description>
+            <para>
+                Any free strikes against the character are ignored. Any
+                automatic strikes become free strikes instead. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Counter defence" type="technique">
+        <cost points="15"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Careful defence</prerequisite>
+
+        <short>Free defence against targets.</short>
+
+        <description>
+            <para>
+                The character gets a free defence action against any target
+                they are attacking that round. This defence does not count
+                towards the normal total, and is at full skill regardless of
+                the number of other defences being made.
+            </para>
+
+            <para>
+                If the character is making multiple attacks, a free defence
+                is gained against every target.
             </para>
         </description>
     </advantage>

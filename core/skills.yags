@@ -16,8 +16,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.11 $</version>
-            <date>$Date: 2005-04-29 20:57:57 $</date>
+            <version>$Revision: 1.12 $</version>
+            <date>$Date: 2005-06-22 17:18:22 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -59,16 +59,49 @@
             </para>
 
             <sect2>
-                <title>General Skills</title>
+                <title>Types of Skills</title>
+
+                <sect3>
+                    <title>Standard skills</title>
+
+                    <para>
+                        Most skills are considered to be <e>standard
+                        skills</e>. Such skills can be learnt relatively
+                        easily, including being self taught. They can also
+                        be used by a character who has a skill of zero,
+                        though such an attempt fumbles on a natural one
+                        or two.
+                    </para>
+                </sect3>
 
                 <sect3>
                     <title>Talents</title>
 
                     <para>
                         Talents are skills which are known by everyone
-                        from childhood onwards.
+                        from childhood onwards. They are treated just as
+                        standard skills, with the exception that all
+                        characters start with a skill level of two in all
+                        talents.
                     </para>
 
+                    <para>
+                        There are only eight talents, and are listed by
+                        default on the character sheet. Talents are
+                        sometimes marked with an asterix (*).
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Knowledges</title>
+
+                    <para>
+                        A knowledge is a special type of skill which cannot
+                        be attempted unless the character has a skill level
+                        of at least one. They can rarely be self taught,
+                        requiring a teacher or study aid (such as a book)
+                        to learn from.
+                    </para>
                 </sect3>
 
                 <sect3>
@@ -173,97 +206,15 @@
             <title>Skill Descriptions</title>
 
             <sect2>
-                <title>Talents</title>
+                <title>Skills by Groups</title>
 
-                <para>
-                    Talents are skills which all characters have some
-                    experience with. They require no special training to
-                    learn, and are normally picked up during early
-                    childhood. They include basic physical skills, as
-                    well as social interaction.
-                </para>
-
-                <para>
-                    Each talent covers quite a broad area, and can often
-                    be used in place of other skills, though at a penalty.
-                    All player characters have at least two in each talent,
-                    and NPCs with lower skills will be rare.
-                </para>
-
-                <import-skills href="options/skills/talents.yags"/>
+                <list-skills href="options/skills.yags"/>
             </sect2>
 
-
             <sect2>
-                <title>Knowledges</title>
+                <title>Skill Descriptions</title>
 
-                <import-skills href="options/skills/knowledges.yags"
-                               type="knowledge"/>
-            </sect2>
-
-
-            <sect2>
-                <title>Social Skills</title>
-
-                <import-skills href="options/skills/social.yags"
-                               techniques="options/techniques/skills.yags"
-                               type="social"/>
-            </sect2>
-
-
-            <sect2>
-                <title>Wilderness Skills</title>
-
-                <import-skills href="options/skills/wilderness.yags"
-                               type="wilderness"/>
-
-            </sect2>
-
-
-            <sect2>
-                <title>Professional Skills</title>
-
-                <para>
-                    Professional skills will not often be learned by
-                    player characters, however they will be the most
-                    common skills known by people in the world.
-                </para>
-
-                <para>
-                    Each professional skill covers those tasks
-                    performed by someone who makes their living. As
-                    well as the actual obvious use of the skill, the
-                    skill can be used to evaluate the quality of raw
-                    materials and finished goods, estimate prices and
-                    set up and run a business based around the
-                    profession.
-                </para>
-
-                <para>
-                    Some skills are only taught as part of a guilded
-                    occupation. Learning them if the character is
-                    not apprenticed to a master will be difficult.
-                </para>
-
-                <import-skills href="options/skills/professional.yags"
-                               type="professional"/>
-            </sect2>
-
-
-            <sect2>
-                <title>Combat Skills</title>
-
-                <para>
-                    See the combat chapter for a complete description
-                    of how these skills are used. Generally, a skill
-                    in a particular weapon is not necessary, just a
-                    style of fighting.
-                </para>
-
-                <import-skills href="options/combat-skills.xml" type="combat"/>
-
-                <skill-list>
-                </skill-list>
+                <import-skills href="options/skills.yags"/>
             </sect2>
         </sect1>
 

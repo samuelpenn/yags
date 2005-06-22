@@ -24,8 +24,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.70 $</version>
-            <date>$Date: 2005-05-17 17:58:50 $</date>
+            <version>$Revision: 1.71 $</version>
+            <date>$Date: 2005-06-22 17:18:22 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -763,7 +763,9 @@
 
                 <itemlist order="1">
                     <item>
-                        Determine character actions.
+                        Determine character actions. Targets of attacks
+                        are declared, as are the number of defences
+                        that are to be made that round.
                     </item>
                     <item>
                         Roll initiative.
@@ -803,7 +805,9 @@
                         If a character is performing an attack, then stance
                         and techniques should be declared at this point.
                         Once all attacks have been declared, characters can
-                        declare which attacks they are defending against.
+                        declare how many attacks they are defending
+                        against. It is not necessary to declare exactly
+                        which attacks are being defended against.
                     </para>
 
                     <para>
@@ -1001,8 +1005,26 @@
                 <para>
                     If a character chooses to make an attack on someone,
                     then the target can choose either to defend
-                    themselves or not, though this decision must be made
-                    when actions are declared.
+                    themselves or not. A character is limited to the
+                    number of attackers they can defend against in a
+                    round (the number is declared at the start of the
+                    round), so there can be a reason to save a defence
+                    for a more potent foe.
+                </para>
+
+                <para>
+                    Unless the target is unaware of the attack (or
+                    unable to respond in any meaningful way, such as
+                    being tied up or using the <e>focused</e> stance),
+                    the attacker must declare a defence against the
+                    target. Failing to do so means that the target may
+                    get a free strike against the attacker immediately
+                    following the attack, assuming that the target is
+                    still standing. This defence declaration must be
+                    made before the attack, and cannot be left until
+                    afterwards when the free strike is made (making
+                    the free strike effectively an automatic strike in
+                    most cases).
                 </para>
 
                 <para>
@@ -1010,12 +1032,12 @@
                     attack rating as follows.
                 </para>
 
-                <skillequation>
-                    <attribute>attribute</attribute>
-                    <skill>skill</skill>
+                <skeq title="Attack roll">
+                    <attr>attribute</attr>
+                    <sk>skill</sk>
                     <bonus>weapon attack bonus</bonus>
                     <die/>
-                </skillequation>
+                </skeq>
 
                 <para>
                     If the defender is not defending, then the target
@@ -1023,6 +1045,13 @@
                     If the defender is defending, then they make a
                     defence roll.
                 </para>
+
+                <skeq title="Defence roll">
+                    <attr>attribute</attr>
+                    <sk>skill</sk>
+                    <bonus>weapon defence bonus</bonus>
+                    <die/>
+                </skeq>
 
                 <para>
                     If the attack roll is equal to or greater than the

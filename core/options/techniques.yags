@@ -6,9 +6,1298 @@
  -->
 
 <advantages>
-    <!-- Weapon techniques -->
-    
-    
+    <header>
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.10 $</version>
+            <date>$Date: 2005-06-22 17:18:22 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2005</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+            <url>http://www.glendale.org.uk/gpl.txt</url>
+        </license>
+    </header>
+    <!--
+        Athletics.
+        -->
+
+    <advantage name="Running" type="technique">
+        <cost points="4"/>
+        <skill name="Athletics"/>
+        <description>
+            <para>
+                The character is experienced in long distance running.
+                Those with this technique only need to make fatigue
+                rolls half as often when running (not sprinting).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Sure footed" type="technique">
+        <cost points="4"/>
+        <skill name="Athletics"/>
+        <description>
+            <para>
+                The character has a good sense of balance, and gets a
+                bonus to athletic rolls when balancing on narrow ledges
+                or when on uneven or unsteady surfaces. In such situations,
+                their agility attribute gets a +1 bonus.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Climbing" type="technique">
+        <cost points="4"/>
+        <skill name="Athletics"/>
+
+        <description>
+            <para>
+                Double basic movement whilst climbing.
+            </para>
+        </description>
+    </advantage>
+
+    <!--
+        Awareness.
+        -->
+    <advantage name="Combat awareness" type="technique">
+        <cost points="4"/>
+        <skill name="Awareness"/>
+        <description>
+            <para>
+                The character can keep track of things going on around
+                them in the most hectic of circumstances. In combat or
+                similar situations, they get a +1 to their perception
+                when making rolls to notice things.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Light Sleeper" type="technique">
+        <cost points="4"/>
+        <skill name="Awareness"/>
+        <description>
+            <para>
+                The character is good at reacting to things when asleep.
+                With this technique, awareness rolls are only halved when
+                fully asleep, and unaffected if dozing.
+            </para>
+        </description>
+    </advantage>
+
+
+    <!--
+        Charm.
+        -->
+    <advantage name="Seduction" type="technique">
+        <cost points="4"/>
+        <skill name="Charm"/>
+
+        <description>
+            <para>
+                The character is experienced in talking people into going
+                to bed with them. Any circumstance penalties are halved.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Carousing" type="technique">
+        <cost points="3"/>
+        <skill name="Charm"/>
+
+        <description>
+            <para>
+                The character is a party animal, and gets on very well
+                with people in a party environment. Any circumstance
+                penalties such as the character not being welcome, or
+                people the character wants to talk to being busy, are
+                halved.
+            </para>
+        </description>
+    </advantage>
+
+    <!--
+        Guile.
+        -->
+    <advantage name="Disguise" type="technique">
+        <cost points="2"/>
+        <skill name="Guile"/>
+        <description>
+            <para>
+                When the character is trying to disguise themselves,
+                any circumstance penalties are halved, and get a choice
+                of using either intelligence or charisma.
+            </para>
+        </description>
+    </advantage>
+
+    <!--
+        Sleight.
+        -->
+    <advantage name="Juggling" type="technique">
+        <cost points="2"/>
+        <skill name="Sleight"/>
+
+        <description>
+            <para>
+                The character can juggle. The difficulty is equal to
+                5 x number of balls. +10 to difficulty for clubs,
+                +20 for more difficult items. Double the difficulty
+                if the character does not have this technique.
+            </para>
+        </description>
+    </advantage>
+
+    <!--
+        Stealth.
+        -->
+
+    <advantage name="Silent running" type="technique">
+        <cost points="4"/>
+        <skill name="Stealth"/>
+
+        <description>
+            <para>
+                Character can move twice as quickly as normal before
+                receiving a penalty for trying to be stealthy.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Grapple" type="technique">
+        <cost points="0"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                <e>Aggressive</e> or <e>normal</e> stance. A brawl attack
+                is made (with or without weapons), and if successful the
+                defender has been grabbed. The defender can choose to
+                either grab back, or try to break free. If the latter, an
+                immediate oppossed roll is made with
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <attribute>agility</attribute>
+                    <skill>brawl</skill>
+                </skillequation>
+                roll against the attackers
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <skill>brawl</skill>
+                </skillequation>
+                roll to keep hold. If the defender succeeds then the
+                grapple attempt is broken. On success, both are
+                considered to be <e>grappled</e>. Weapons do not count for
+                the roll to break free.
+            </para>
+
+            <para>
+                The reach of this attack is generally zero, so the defender
+                may get a <e>free strike</e>. If the attacker has weapons,
+                then they count as armed (no automatic strike against them).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Trip" type="technique">
+        <cost points="0"/>
+        <skill name="Brawl"/>
+
+        <description>
+            <para>
+                A trip is an attempt to place the defender on the floor by
+                throwing or tripping them. A
+                <skillequation>
+                    <attribute>agility</attribute>
+                    <attribute>strength</attribute>
+                    <skill>brawl</skill>
+                    <penalty>5</penalty>
+                </skillequation>
+                roll is made, and on success no damage is done, but the
+                defender is considered to be <e>unsteady</e>. A second
+                opposed roll is immediately made, with the attacker
+                using
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <skill>brawl</skill>
+                </skillequation>
+                against the defender's
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <attribute>agility</attribute>
+                    <skill>brawl</skill>
+                    <skill>athletics</skill>
+                </skillequation>.
+                Success by the attacker means that the defender is now
+                <e>prone</e>. If the two are already <e>grappled</e>,
+                then the first attack roll is not necessary.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Overrun" type="technique">
+        <cost points="0"/>
+        <skill name="Brawl"/>
+
+        <description>
+            <para>
+                An overrun is considered an unarmed attack unless a
+                medium or larger shield is being used. The attacker
+                makes a
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <skill>brawl</skill>
+                </skillequation>
+                roll against the defender's
+                <skillequation>
+                    <attribute>strength</attribute>
+                    <attribute>agility</attribute>
+                    <skill>brawl</skill>
+                </skillequation>
+                roll to withstand or dodge the attack. On success, the
+                attack can move past the defender regardless of any
+                attempts by the defender to block the attacker's
+                movement. On failure, if the defender resisted with
+                strength, then the attacker is stopped from moving any
+                further. If agility was used, then the defender side
+                stepped and the attacker moved through anyway. However,
+                the defender gets an <e>automatic strike</e> against
+                the attacker, which may be a <e>trip</e> attack at +10.
+            </para>
+
+            <para>
+                On a good success by the attacker, stun damage may be
+                done to the defender as per a standard brawling attack.
+                On an excellent success, the attacker may opt for a
+                free <e>trip</e> attack.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Unarmed combat" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                The character is trained in fighting with no weapons against
+                armed foes. Doing so is still not suggested, but the
+                <e>automatic strike</e> that the armed defender gets is
+                a <e>free strike</e> instead.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Combat reflexes" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                The character has very fast reflexes, which give a +1
+                attribute bonus to all initiative rolls, as well as rolls
+                to surprise, and to avoid being surprised.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Hard to kill" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        <description>
+            <para>
+                Character is particularly tough and resilient to damage,
+                and keeps on going even after taking a severe beating.
+                This is an automatic technique which gives a +1 stamina
+                bonus when making rolls to stay alive or conscious
+                because of damage.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Ground fighting" type="technique">
+        <cost points="4"/>
+        <skill name="Athletics"/>
+        <description>
+            <para>
+                The character is trained to fight from a prone position.
+                Penalties to skill rolls when either <e>unsteady</e> or
+                <e>prone</e> or ignored, though other penalties (such as
+                not being able to move) still apply. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Blind fighting" type="technique">
+        <cost points="4"/>
+        <skill name="Awareness"/>
+        <description>
+            <para>
+                The character is trained to fight in conditions where
+                vision is restricted. Gain a +1 bonus to Perception
+                when it is used to cap combat skills in darkness.
+                Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Improved blind fighting" type="technique">
+        <cost points="8"/>
+        <skill name="Awareness"/>
+        <prerequisite>Blind fighting</prerequisite>
+
+        <description>
+            <para>
+                As <e>Blind fighting</e>, but gives a further +1 bonus
+                on top of that (for a total of +2). Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Sea legs" type="technique">
+        <cost points="4"/>
+        <skill name="Athletics"/>
+        <description>
+            <para>
+                Gain a +1 bonus to agility when it is used to cap combat
+                skills when fighting aboard ship in rough seas, or in water.
+                Also applies as a bonus when making athletic checks on
+                board a boat or ship that is at sea. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Stealthy in armour" type="technique">
+        <cost points="4"/>
+        <skill name="Stealth"/>
+        <description>
+            <para>
+                The character is experienced with moving quietly whilst
+                wearing armour. Agility penalty for moving quietly in
+                armour is reduced by one. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Proficient with armour" type="technique">
+        <cost points="4"/>
+        <skill name="Athletics"/>
+        <description>
+            <para>
+                The character is experienced with moving whilst wearing
+                heavy armour. The <e>total</e> agility penalty caused by
+                armour is reduced by one. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Improved load" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl, Athletics"/>
+
+        <description>
+            <para>
+                Automatic. All encumbrance penalties are shifted down
+                by one category, so a character can carry up to twice
+                the square of their strength without penalty. If a
+                character becomes overburdened however, they are still
+                overburdened and this technique has no effect.
+            </para>
+
+            <para>
+                Often taken by those who have trained fighting or
+                hiking with heavy loads, such as armour, supplies and
+                so forth.
+            </para>
+        </description>
+    </advantage>
+    <!--
+        Aggressive
+
+        The following techniques are based off from 'Improved attack'.
+        They generally use the aggressive stance, improving the
+        character's attack.
+        -->
+    <advantage name="Improved attack" type="technique">
+        <cost points="2"/>
+        <skill name="Melee"/>
+
+        <short>Bonus of +5 to damage when aggressive.</short>
+
+        <description>
+            <para>
+                When using the <e>aggressive stance</e>, gain a +5 bonus to
+                damage rolls as well as attack rolls. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Improved blow" type="technique">
+        <cost points="4"/>
+        <skill name="Armed melee"/>
+
+        <prerequisite>Improved attack</prerequisite>
+
+        <short>Do +3 damage on all attacks.</short>
+
+        <description>
+            <para>
+                Improved skill enables a skilled attacker to more
+                effectively harm their foe. All attacks do +3 damage
+                regardless of stance. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Deadly strike" type="technique">
+        <cost points="6"/>
+        <skill name="Armed melee"/>
+        <prerequisite>Improved blow</prerequisite>
+
+        <short>Kill foe in a single blow.</short>
+
+        <description>
+            <para>
+                Aggressive, -10 to attack roll, declared before
+                the attack. If the target is successfully wounded, then
+                they must make a size x stamina roll against a target of
+                10 + 5 x wounds (not stuns) caused or immediately drop
+                to fatally wounded. If they succeed their roll, then
+                they take one less wound from the attack than normal.
+            </para>
+
+            <para>
+                A deadly strike uses up one defence.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Superior blow" type="technique">
+        <cost points="8"/>
+        <skill name="Armed melee"/>
+
+        <prerequisite>Deadly strike</prerequisite>
+
+        <short>Do +6 damage on all attacks.</short>
+
+        <description>
+            <para>
+                Similar to improved blow, adds +3 to all damage rolls
+                with weapons. Stacks with the former technique to give
+                a total +6 damage bonus. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Double attack" type="technique">
+        <cost points="10"/>
+        <skill name="Melee"/>
+        <prerequisite>Superior blow</prerequisite>
+
+        <short>Two attacks a round.</short>
+
+        <description>
+            <para>
+                Aggressive stance. The attacker can attack twice, each time
+                at a -15 penalty to skill. The first attack is fast, the
+                second attack is slow, but both happen at the same
+                initiative.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Great blow" type="technique">
+        <cost points="12"/>
+        <skill name="Armed melee"/>
+
+        <prerequisite>Double attack</prerequisite>
+
+        <short>Do +9 damage on all attacks.</short>
+
+        <description>
+            <para>
+                Stacks with <e>Improved blow</e> and <e>Superior blow</e>
+                giving an extra +3 to damage, for a total of +9. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Triple attack" type="technique">
+        <cost points="15"/>
+        <skill name="Melee"/>
+        <prerequisite>Great blow</prerequisite>
+
+        <short>Three attacks a round.</short>
+
+        <description>
+            <para>
+                Aggressive stance. The attacker can attack three times,
+                each time at a -30 penalty to skill. The first attack is
+                fast, the second attack is normal, and the third attack
+                is slow.
+            </para>
+        </description>
+    </advantage>
+
+
+
+
+
+    <advantage name="Sunder" type="technique">
+        <cost points="4"/>
+        <skill name="Armed melee"/>
+
+        <prerequisite>Improved attack</prerequisite>
+
+        <short>Try and break your foe's weapon.</short>
+
+        <description>
+            <para>
+                A <e>sunder</e> attack is an attempt to break the
+                defender's weapon. The attacker makes a dexterity based
+                attack roll, and the defender rolls their base
+                dexterity x weapon skill. If the attacker succeeds, then
+                there is a chance of breaking the weapon. Each extra level
+                of success gives the attacker +5 on the following checks.
+            </para>
+
+            <para>
+                To see if the weapon breaks, the attacker rolls their
+                strength x weapon strength (this is the minimum strength
+                required to use the weapon) versus the defender's
+                strength x weapon strength. The attacker gets +5 if they
+                are using a <e>heavy</e> weapon against a <e>light</e>
+                weapon, or a metal edged weapon against wood.
+            </para>
+
+            <para>
+                A <e>good</e> success is needed by the attacker in order
+                to <e>weaken</e> the defender's weapon. A weakened weapon
+                that is again sundered is broken and cannot be used. A
+                weakened weapon will also break if it fumbles an attack
+                or defence roll. If the weapon is classed as <e>weak</e>,
+                then only a normal success is required. A <e>strong</e>
+                weapon needs an <e>excellent</e> success.
+            </para>
+
+            <para>
+                On a successful sunder, a second check is made immediately,
+                and if this also succeeds, then the weapon is broken
+                immediately. If the defender has a shield and are using
+                the <e>weapon and shield</e> style, or are using two
+                weapons with the <e>two weapons</e> style, then the
+                defender can choose which weapon is attacked, otherwise
+                it is the attacker's choice.
+            </para>
+        </description>
+    </advantage>
+
+
+
+    <advantage name="Knockback attack" type="technique">
+        <cost points="4"/>
+        <skill name="Armed melee"/>
+        <prerequisite>Improved attack</prerequisite>
+
+        <short>Try and knock someone over.</short>
+
+        <description>
+            <para role="descriptive">
+                Uses the force of the blow to try and knock the target
+                from their feet, or at least unsteady them ready for a
+                follow up attack. The defender suffers a -10 penalty to
+                any knockdown checks, but damage type is reduced by one
+                (e.g. <e>wounds</e> become <e>mixed</e>).
+            </para>
+
+            <para>
+                The knockback attack must be declared before the attack
+                is made, and uses up one defence. Aggressive.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Cleave" type="technique">
+        <cost points="6"/>
+        <skill name="Armed melee"/>
+        <prerequisite>Knockback attack</prerequisite>
+
+        <short>Halve armour of target.</short>
+
+        <description>
+            <para>
+                Aggressive stance, declared, -10 to attack. Uses up one
+                defence. On a successful hit, the foe's armour (not total
+                soak) is halved for that attack (if already halved, or
+                impaled, it is reduced to zero).
+            </para>
+
+            <para>
+                Against light armour, cutting and piercing weapons do not
+                suffer a -10 to the attack. Against rigid armour, bashing
+                weapons do not suffer a -10.
+            </para>
+        </description>
+    </advantage>
+
+
+
+
+
+
+
+    <!--
+        Defensive
+
+        The following techniques are all defensive in nature.
+        -->
+
+    <advantage name="Improved defence" type="technique">
+        <cost points="2"/>
+        <skill name="Melee"/>
+
+        <short>Gain bonus against multiple attackers.</short>
+
+        <description>
+            <para>
+                Automatic, defensive stance. The character can defend
+                against up to one extra opponent, and they gain an extra
+                +5 to defence rolls when defending against multiple
+                attackers.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Reflex dodge" type="technique">
+        <cost points="4"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Improved defence</prerequisite>
+
+        <short>Second dodge or reduce damage if hit.</short>
+
+        <description>
+            <para>
+                If a character fails a defence roll, then they may use
+                another defence action to either give themselves a second
+                defence roll, or gain a +5 bonus to soak.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Counter strike" type="technique">
+        <cost points="6"/>
+        <skill name="Melee"/>
+        <prerequisite>Reflex dodge</prerequisite>
+
+        <short>Free attack if good defence.</short>
+
+        <description>
+            <para>
+                If make a <e>good</e> defence, they may use up another
+                defence action to get a free strike on the attacker.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Improved reflex dodge" type="technique">
+        <cost points="8"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Counter strike</prerequisite>
+
+        <short>Free dodge to reduce damage.</short>
+
+        <description>
+            <para>
+                If the character fails a defence roll, then they get a +5
+                to their soak to resist damage from being able to dodge
+                back from the blow in order to reduce it's effectiveness.
+                This is automatic, but does not stack with
+                <e>reflex dodge</e>. If no defence roll is made against an
+                attack, then no soak bonus is gained.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Whirlwind defence" type="technique">
+        <cost points="10"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Improved reflex dodge</prerequisite>
+
+        <short>Free attack against all attackers.</short>
+
+        <description>
+            <para>
+                If the characteris using a <e>defensive stance</e>, then a
+                whirlwind defence can be declared at the start of the
+                round. The character looses all their attacks that round.
+                For every good defence made, the character gets a free
+                strike against their attacker, at a penalty equal to their
+                defence penalty for multiple defences (if any).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Careful defence" type="technique">
+        <cost points="12"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Whirlwind defence</prerequisite>
+
+        <short>Ignore free strikes.</short>
+
+        <description>
+            <para>
+                Any free strikes against the character are ignored. Any
+                automatic strikes become free strikes instead. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Counter defence" type="technique">
+        <cost points="15"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Careful defence</prerequisite>
+
+        <short>Free defence against targets.</short>
+
+        <description>
+            <para>
+                The character gets a free defence action against any target
+                they are attacking that round. This defence does not count
+                towards the normal total, and is at full skill regardless of
+                the number of other defences being made.
+            </para>
+
+            <para>
+                If the character is making multiple attacks, a free defence
+                is gained against every target.
+            </para>
+        </description>
+    </advantage>
+
+
+    <!--
+        Miscellaneous
+
+        The following don't following the main trees.
+        -->
+
+    <advantage name="Shield wall" type="technique">
+        <cost points="2"/>
+        <skill name="Weapon and shield"/>
+        <skill name="Longshaft weapon"/>
+
+        <description>
+            <para>
+                The character is trained in fighting as part of a shield
+                wall. The character must be fighting with a shield along
+                side allies. The character's own attack and defence rolls
+                are unmodified, but their ally on their shield side gains a
+                defensive bonus equal to the character's skill level as long
+                as their ally also has this technique.
+            </para>
+
+            <para>
+                If the character uses any stance other than <e>normal</e>
+                or <e>defensive</e>, then they cannot use this technique.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Double rank" type="technique">
+        <cost points="2"/>
+        <skill name="Longshaft weapon"/>
+
+        <description>
+            <para>
+                When fighting from a second rank with a spear or similar
+                weapon, attacks are not automatically slow and the
+                spearman counts as a different attacker to the person
+                they are fighting through (i.e., the target needs to
+                defend against two foes).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Spearman" type="technique">
+        <cost points="4"/>
+        <skill name="Longshaft weapon"/>
+        <prerequisite>Double rank</prerequisite>
+
+        <description>
+            <para>
+                Trained in fighting with long weapons. When fighting
+                defensively with a weapon of longer reach than the
+                opponent, a character normally gets a +3 bonus to defence
+                per point of extra reach. With this technique, the bonus
+                also applies to attack.
+            </para>
+
+            <para>
+                Further, if fighting in a shield wall, and the
+                <e>Shield wall</e> technique is also known, an automatic
+                strike is gained on a good defence even if this character
+                is fighting defensively (though not if the opponent is
+                fighting defensively).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Ambush" type="technique">
+        <cost points="2"/>
+        <skill name="Any melee"/>
+
+        <description>
+            <para>
+                When initiated against someone who is not expecting an
+                attack (any attack, so cannot be done against someone
+                in combat, even if they are fighting someone else),
+                then an <e>ambush</e> ignores all armour. May be combined
+                with other techniques which cause special effects on
+                an attack (such as deadly strike).
+            </para>
+
+            <para>
+                <e>Ambush</e> is a slow attack, and the ambusher is
+                considered to be using the <e>focused stance</e>.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Combat ambush" type="technique">
+        <cost points="4"/>
+        <skill name="Any melee"/>
+        <prerequisite>Ambush</prerequisite>
+
+        <description>
+            <para>
+                As <e>Ambush</e>, but may be made any time the defender is
+                not aware of the attacker, even if the defender is otherwise
+                in combat. Slow attack, using <e>focused stance</e>. May be
+                combined with other techniques as per <e>ambush</e>.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Sudden death" type="technique">
+        <cost points="8"/>
+        <skill name="Any melee"/>
+        <prerequisite>Combat ambush</prerequisite>
+
+        <description>
+            <para>
+                Automatic, aggressive or normal stance. As <e>Ambush</e>,
+                but may be made any time the defender is not defending
+                against the character, regardless of whether they are aware
+                of the character's attack.
+            </para>
+        </description>
+    </advantage>
+
+
+
+    <!--
+        Finesse based.
+        -->
+
+    <advantage name="Finesse" type="technique">
+        <cost points="2"/>
+        <skill name="Any melee skill or brawl"/>
+
+        <short>Trade damage for extra speed.</short>
+
+        <description>
+            <para>
+                Character is able to trade hitting power for accuracy.
+                Get +5 to attack and initiative rolls, but -5 to damage
+                rolls.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Disarm" type="technique">
+        <cost points="4"/>
+        <skill name="Armed melee"/>
+
+        <prerequisite>Finesse</prerequisite>
+
+        <short>Try to disarm your foe.</short>
+
+        <description>
+            <para>
+                Character can try to disarm their foe. A disarm attempt
+                is an opposed dexterity x skill check between the two,
+                with +3 for a heavy weapon, and -3 for a light weapon.
+                Weapons being used with two hands have a +5 bonus if
+                defending against a <e>disarm</e>.
+            </para>
+
+            <para>
+                It is easier to disarm a foe if the two weapons are
+                roughly equivalent in size - if the target weapon is much
+                bigger then it has a mass advantage, if it is much smaller,
+                then it is harder to hit effectively. For each point of
+                difference in <e>reach</e>, the defender gets +3.
+            </para>
+
+            <para>
+                A disarm attempt is a declared action, and uses up one
+                defence slot. A success disarms the foe, a failure allows
+                them a <e>free strike</e>.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Quickdraw" type="technique">
+        <cost points="4"/>
+        <skill name="Any weapon skill"/>
+        <prerequisite>Finesse</prerequisite>
+
+        <description>
+            <para>
+                The character can draw a weapon and attack without penalty
+                in the same round. The character must use the <e>normal</e>
+                stance, and cannot defend with the weapon until her
+                initiative.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Reflex defence" type="technique">
+        <cost points="4"/>
+        <skill name="Any melee skill or brawl"/>
+        <prerequisite>Finesse</prerequisite>
+
+        <description>
+            <para>
+                If the character has not yet made an attack, and they have
+                just failed a defence roll, they may forgo their attack
+                in order to get a second defence roll, at the same skill
+                as the first. May only be performed once a round, and not
+                if using an aggressive stance.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Swap defence" type="technique">
+        <cost points="6"/>
+        <skill name="Any melee skill or brawl"/>
+        <prerequisite>Reflex defence</prerequisite>
+
+        <description>
+            <para>
+                If the character is knowingly attacked (i.e. not surprise
+                attacks) by a foe they are not defending against, then
+                they may move a currently unused defence to this foe. May
+                only be done once a round.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="False attack" type="technique">
+        <cost points="8"/>
+        <skill name="Any melee skill or brawl"/>
+        <prerequisite>Swap defence</prerequisite>
+
+        <description>
+            <para>
+                Change target of attack. When the attack is made, the
+                character can instead attack another foe within range.
+                This has the advantage that the second target probably
+                hasn't declared a defence against the character.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Improved pull" type="technique">
+        <cost points="4"/>
+        <skill name="Bow"/>
+        <description>
+            <para>
+                Due to extensive training with arm muscles, the archer gets
+                +1 to their strength for purposes of using a longbow.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Greater pull" type="technique">
+        <cost points="8"/>
+        <skill name="Bow"/>
+        <prerequisite>Improved pull</prerequisite>
+
+        <description>
+            <para>
+                Similar to, and stacks with, <e>improved pull</e>. The
+                archer gets a +1 to their strength for using a longbow.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Greater range" type="technique">
+        <cost points="4"/>
+        <skill name="Throw"/>
+
+        <description>
+            <para>
+                Add +1 to strength for purposes of maximum range of a
+                thrown weapon.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Close combat archery" type="technique">
+        <cost points="4"/>
+        <skill name="Any missile skill"/>
+
+        <description>
+            <para>
+                Character is skilled at firing into combat. The increase
+                to the fumble chance when doing so is halved (generally
+                +1 per extra possible target instead of +2).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Deadly shot" type="technique">
+        <cost points="6"/>
+        <skill name="Any missile skill"/>
+        <prerequisite>Close combat archery</prerequisite>
+
+        <description>
+            <para>
+                Declared before an attack, there is a -10 to the attack
+                roll. If the target is successfully wounded, then they must
+                make a size x stamina roll against a target of 10 +
+                5 x wounds (not stuns) caused or immediately drop to be
+                fatally wounded.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Fast shot" type="technique">
+        <cost points="4"/>
+        <skill name="Bow"/>
+
+        <description>
+            <para>
+                The character is quick at using a short or long bow. An
+                arrow can be loaded and fired in a single round, and is
+                considered a normal (not slow) initiative action.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Improved aim" type="technique">
+        <cost points="4"/>
+        <skill name="Bow"/>
+
+        <description>
+            <para>
+                Character is exceptionally skilled at firing a long or
+                short bow. If a full round is spent aiming, then the
+                character can halve all range and circumstance penalties.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Spear catching" type="technique">
+        <cost points="2"/>
+        <skill name="Throw"/>
+
+        <description>
+            <para>
+                If the character makes a good brawl defence roll to dodge
+                a spear or javelin, and they have an empty hand, then they
+                may catch the weapon with a dexterity x throw check of 20+.
+                The catch attempt must be declared before the defence is
+                made.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Improved spear catching" type="technique">
+        <cost points="4"/>
+        <skill name="Throw"/>
+        <prerequisite>Spear catching</prerequisite>
+
+        <description>
+            <para>
+                As for spear catching, plus the character can throw the
+                spear the same round instead of their normal attack action,
+                assuming they still have an attack left that round.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Mounted combat" type="technique">
+        <cost points="3"/>
+        <skill name="Ride"/>
+        <description>
+            <para>
+                A character with <e>mounted combat</e> does not have to make
+                a <e>ride</e> check whenever they attack from horseback.
+                Further, they get a bonus equal to their <e>ride</e> skill
+                which applies to initiative, attack, defence and damage
+                rolls made when mounted. This only applies to melee combat.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Mounted archery" type="technique">
+        <cost points="3"/>
+        <skill name="Ride"/>
+        <prerequisite>Mounted combat</prerequisite>
+
+        <description>
+            <para>
+                A character with <e>mounted archery</e> does not suffer the
+                doubling of effective range when using missile weapons from
+                the back of a moving mount. Further, they do not have to
+                make a <e>ride</e> roll in order to make a missile attack.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Direction sense" type="technique">
+        <cost points="2"/>
+        <skill name="Survival"/>
+        <skill name="Navigation"/>
+
+        <description>
+            <para>
+                Gives a +1 bonus to intelligence when trying to find
+                the best route to somewhere.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Erotic dancing" type="technique">
+        <cost points="4"/>
+        <skill name="Dance"/>
+
+        <description>
+            <para>
+                Gives a bonus to agility equal to the appearance of
+                the character when dancing in an erotic manner. If
+                <e>Seduction</e> is known, and the situation allows
+                for it, an erotic dance may be performed to give a
+                1/5th bonus to a seduction attempt.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Hidden Insult" type="technique">
+        <cost points="4"/>
+        <skill name="Etiquette"/>
+
+        <description>
+            <para>
+                Insult someone in a way that is polite and difficult to
+                respond to. If done cleverly, the target of the insult
+                may not even be sure that they have been insulted, which
+                makes it doubly difficult for them to respond.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Hiking" type="technique">
+        <cost points="4"/>
+        <skill name="Survival"/>
+
+        <description>
+            <para>
+                The character is an experienced hiker, and can move across
+                country at a faster pace. When walking long distances
+                (using the overland movement rules), the character can add
+                their <e>survival</e> skill to their base movement.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Flirt" type="technique">
+        <cost points="4"/>
+        <skill name="Etiquette"/>
+
+        <prerequisite>Seduction</prerequisite>
+
+        <description>
+            <para>
+                Flirt with a person in a socially acceptable manner. This
+                allows the character to make a seduction attempt in polite
+                company, even if the spouse of the enticed is present,
+                without other people really being sure about what is going
+                on. In a court situation, flirting can be common and
+                acceptable, as long as it doesn't actually lead to
+                anything.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Passionate Speaker" type="technique">
+        <cost points="4"/>
+        <skill name="Perform"/>
+
+        <description>
+            <para>
+                Gain a +1 charisma bonus when performing an impromtu
+                speech.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Poet" type="technique">
+        <cost points="4"/>
+        <skill name="Perform"/>
+
+        <description>
+            <para>
+                Get a +1 intelligence bonus when trying to invent poems on
+                the spot.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Shadowing" type="technique">
+        <cost points="4"/>
+        <skill name="Streetwise"/>
+
+        <description>
+            <para>
+                Follow a person in an urban environment without being
+                noticed. The character can use either their streetwise
+                or stealth skill to do this (whichever is highest).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Underwater swimming" type="technique">
+        <cost points="4"/>
+        <skill name="Swim"/>
+
+        <description>
+            <para>
+                Character can hold their breath for longer than normal.
+                Double the time between fatigue checks.
+            </para>
+        </description>
+    </advantage>
+
+
 
 </advantages>
 
