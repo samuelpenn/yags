@@ -9,7 +9,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.1 $
+    Version: $Revision: 1.2 $
     Author: Samuel Penn
     -->
 
@@ -113,27 +113,31 @@
             <para>
                 The skill of being sociable, in a generally honest and open
                 fashion. <e>charm</e> is charisma based when trying to make
-                a good impression, to cheer someone up or to befriend them.
-                It can be used to try to get someone to open up about a
-                subject they would not normally want to talk about. All
-                difficulties are modified by circumstances (-30 to +30)
-                depending on the initial attitude of those being charmed.
+                a good impression, to cheer someone up, befriend them or
+                get them to open up about a subject they would not normally
+                want to talk about. All difficulties are modified by
+                circumstances (-30 to +30) depending on the initial attitude
+                of those being charmed.
             </para>
 
             <para>
-                At it's basic level, <e>charm</e> can be used to improve
-                a second skill test. Make a charisma x charm check against
-                the will x ego of the target to gain +3 for each level of
-                success for a following social skill test such as guile,
-                trade or perform.
+                <e>Charm</e> can be used to improve a second social skill
+                test (such as <e>guile</e>, <e>trade</e> or
+                <e>perform</e>).
+                Make a <skeq><attr>charisma</attr><sk>charm</sk></skeq>
+                check against the <skeq><attr>will</attr><sk>ego</sk></skeq>
+                of the target to gain +3 for each level of success for the
+                following social skill test.
             </para>
         </description>
 
         <description task="Carousing">
             <para>
-                Can be used to get on with people and
-                make contacts at a party or other social gathering.
-                Generally not resisted.
+                Used at parties and similar social gatherings. Can be used
+                to find out information, flirt or try and talk to someone
+                who might be otherwise difficult to talk to (such as a duke
+                surround by hangers-on and aids who won't let anyone else
+                near him). Generally not resisted.
             </para>
         </description>
 
@@ -163,9 +167,10 @@
         </description>
 
         <examples>
-            <example target="10">Befriend a person.</example>
-            <example target="10">Survive a party.</example>
-            <example target="10">Get information out of someone.</example>
+            <example target="10">Not make a fool of yourself.</example>
+            <example target="20">Give a good impression.</example>
+            <example target="30">Be very likeable and understanding.</example>
+            <example target="40">Win friends and influence people easily.</example>
         </examples>
 
         <examples task="Carousing">
@@ -207,32 +212,48 @@
 
         <description>
             <para>
-                The ability to use deceit and deception in social
-                situations, and also to be able to counter the same. With
-                this skill, you can lie convincingly with both words and
-                body language, see through other people's lies and have a
-                good idea as to their emotions.
+                <e>Guile</e> allows a character to use and understand
+                social methods of deception, through lying, body language
+                and actions. A character can lie by making an opposed
+                <skeq><attr>will</attr><sk>guile</sk></skeq> check
+                against a target's
+                <skeq><attr>charisma</attr><sk>guile</sk></skeq>.
+                Success means that the target is fooled, though the
+                attempt may be modified by circumstances based on how
+                probably the lie is.
             </para>
 
             <para>
-                It is used with charisma to fool others, possibly intelligence
-                to think of a good excuse when fast talking, and perception when
-                detecting subterfuge in others. Always modified by
-                circumstances.
+                Will is generally used when trying to hide a character's
+                own emotions, charisma to understand another's and
+                intelligence to think quickly when inventing a
+                believable story.
             </para>
+        </description>
 
+        <description task="Disguise">
             <para>
-                <e>Disguise</e>. Opposed with intelligence x guile, uses
-                charisma.
+                The character can disguise either themselves or another
+                person by using <e>guile</e>. Make an
+                <skeq><attr>intelligence</attr><sk>guile</sk></skeq>
+                check.
             </para>
+        </description>
 
+        <description task="Fast talk">
             <para>
-                <e>Fast talk</e>. Tell a person a quick lie. Opposed with
-                charisma x guile.
+                When trying to invent a plausible story quickly, then an
+                <skeq><attr>intelligence</attr><sk>guile</sk></skeq> check
+                can often be called for, against the same for the target.
+                If the target finds the story plausible, then opposed
+                charisma and will checks may still be necessary in order
+                to hide the lie.
             </para>
+        </description>
 
+        <description task="Taunt">
             <para>
-                <e>Taunt</e>. Make someone mad. Opposed with
+                Make someone mad. Opposed with
                 will x restraint.
             </para>
         </description>
@@ -541,10 +562,6 @@
                 or how to behave at a joust or banquet. It is normally
                 based on intelligence, but may use charisma (especially
                 for courtly flirting or flattery).
-            </para>
-
-            <para>
-                Defaults to <e>Charm</e>.
             </para>
         </description>
     </skill>

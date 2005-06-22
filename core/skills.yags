@@ -16,8 +16,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.12 $</version>
-            <date>$Date: 2005-06-22 17:18:22 $</date>
+            <version>$Revision: 1.13 $</version>
+            <date>$Date: 2005-06-22 22:02:47 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -198,12 +198,101 @@
                         Physics to 6.
                     </para>
                 </sect3>
+
+                <sect3>
+                    <title>Techniques</title>
+
+                    <para>
+                        <e>Techniques</e> are advantages and are described
+                        in full in the <s>Advantages</s> article.
+                    </para>
+
+                    <para>
+                        Some skills have techniques associated with them.
+                        When the skill reaches a certain level (the level
+                        of the technique) then the technique may be
+                        purchased as an advantage. Techniques generally
+                        allow the skill to be used in a different way, or
+                        give bonuses to certain uses of the skill.
+                    </para>
+                </sect3>
             </sect2>
         </sect1>
 
-
         <sect1>
-            <title>Skill Descriptions</title>
+            <title>Skills</title>
+
+            <para>
+                The following list of skills is not exhaustive, but
+                covers the most common set of skills found in a low
+                tech campaign setting. The following example shows
+                what a skill entry looks like.
+            </para>
+
+            <skill-list>
+                <skill name="Medicine Example" type="knowledge">
+                    <group>Science</group>
+                    <group>Healing</group>
+                    <default>First aid</default>
+                    <prerequisite score="4">First aid</prerequisite>
+
+                    <description>
+                        <para>
+                            This skill can be used to try and make people
+                            better when they aren't feeling very well.
+                        </para>
+                    </description>
+
+                    <description task="Diagnosis">
+                        <para>
+                            Try to figure out what is wrong with someone.
+                        </para>
+                    </description>
+
+                    <examples>
+                        <example target="10">Cure a headache.</example>
+                        <example target="20">Put a leg back on.</example>
+                    </examples>
+                </skill>
+            </skill-list>
+
+            <para>
+                The heading gives the name of the skill, followed by
+                whether it is a <e>knowledge</e>, <e>talent</e> or
+                <e>language</e> in parenthesis.
+            </para>
+
+            <para>
+                The second line displays all the skill groups that the
+                skill belongs to. These are sometimes used for purposes
+                of bonuses which apply to a category of skills.
+            </para>
+
+            <para>
+                Next is given the skill <e>default</e> and
+                <e>pre-requisites</e> (if any). The score given for the
+                pre-requisite is the minimum score that is needed in
+                the required skill before this skill can be bought.
+            </para>
+
+            <para>
+                For skills which have <e>techniques</e> associated with
+                them, then these will be listed as well.
+            </para>
+
+            <para>
+                The main body of text describes the skill - what it
+                does and how it can be used. Some skills can be used in
+                different ways for different tasks, and if these sub
+                tasks are sufficiently different or important, then
+                they will be listed under a sub heading (for our
+                Medicine example, Diagnosis is listed as a sub-task).
+            </para>
+
+            <para>
+                Finally, example skill difficulties may be given. These
+                are suggested target numbers for achieving given tasks.
+            </para>
 
             <sect2>
                 <title>Skills by Groups</title>
@@ -213,6 +302,7 @@
 
             <sect2>
                 <title>Skill Descriptions</title>
+
 
                 <import-skills href="options/skills.yags"/>
             </sect2>
