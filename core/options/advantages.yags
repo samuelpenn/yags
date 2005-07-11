@@ -21,7 +21,7 @@
         </description>
         <forbiddon>Poor hearing</forbiddon>
     </advantage>
-    
+
     <advantage name="Keen vision" type="advantage">
         <cost points="+4"/>
         <genre>Common</genre>
@@ -48,16 +48,17 @@
         </description>
         <forbiddon>Can't sing</forbiddon>
     </advantage>
-    
+
     <advantage name="Night vision" type="advantage">
         <cost points="+2"/>
         <genre>Common</genre>
         <description>
             <para>
-                Character gains +1 to their perception in darkness. This
-                comes into play whenever the character has a penalty to
-                perception because of darkness, or if other actions are
-                capped to their perception because of darkness.
+                Character gains +1 to their perception in partial darkness
+                (not full darkness). This comes into play whenever the
+                character has a penalty to perception because of darkness,
+                or if other actions are capped to their perception because
+                of darkness.
             </para>
         </description>
     </advantage>
@@ -93,11 +94,13 @@
     <advantage name="Language talent" type="advantage">
         <cost points="+6"/>
         <description>
-            The character is adept at picking up new languages
-            quickly. Any experience placed on language skills
-            (excluding the starting score in speak own language) is
-            doubled. If <e>literate</e> has been taken, this also
-            affects written languages.
+            <para>
+                The character is adept at picking up new languages
+                quickly. Any experience placed on language skills
+                (excluding the starting score in speak own language) is
+                doubled. If <e>literate</e> has been taken, this also
+                affects written languages.
+            </para>
         </description>
     </advantage>
 
@@ -128,28 +131,38 @@
     <advantage name="Tough" type="advantage">
         <cost points="+2" levels="1" max="3"/>
         <description>
-            The character gets a bonus to basic soak of +1, +2 or +3
-            depending on the level of this advantage.
+            <para>
+                The character gets a bonus to basic soak of +1, +2 or +3
+                depending on the level of this advantage.
+            </para>
         </description>
     </advantage>
 
-    <advantage name="Bulky" type="advantage">
+    <advantage name="Heavily built" type="advantage">
         <cost points="+5"/>
         <description>
-            Built like a barn door, and as tough as a brick, the character
-            is capable of shrugging off blows that would knock others down.
-            The character must have a strength of at least 4 (and be at
-            least average size) for this, but he adds +5 to his knockdown
-            score (and rolls to remain standing if that is failed), and
-            also gains +5 to soak versus stun attacks.
+            <para>
+                The character is heavily built, being tougher and broader
+                than normer. Add +5 to the character's knockdown and
+                difficulty to be tripped, plus gets +5 soak versus
+                <e>stun</e> attacks.
+            </para>
+
+            <para>
+                The character must have a strength of at least four in
+                order to take this advantage.
+            </para>
         </description>
     </advantage>
 
     <advantage name="Ambidexterity" type="advantage">
         <cost points="+2"/>
         <description>
-            The character suffers no penalty for performing actions with
-            her off hand. This does not affect <e>two weapon fighting</e>.
+            <para>
+                The character suffers no penalty for performing actions
+                with her off hand. This does not affect <e>two weapon
+                fighting</e>.
+            </para>
         </description>
     </advantage>
 
@@ -161,18 +174,28 @@
                 The character is much larger than normal, being well built
                 and tall. He has a size of six, and has one more body level
                 than normal. Such a person must also take a strength of at
-                least four.
+                least four. They may also add +1 to the reach of any
+                weapon they are using (including fist attacks).
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Empathy" type="advantage">
         <cost points="+5"/>
         <description>
             <para>
                 The character is very good at telling if someone is lying.
-                They get an automatic +1 to their charisma or perception
-                when detecting a lie.
+                They get an automatic +1 to their charisma when trying to
+                detect a lie.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Quick" type="advantage">
+        <cost points="+2"/>
+        <description>
+            <para>
+                Character gains a +2 bonus to their basic move.
             </para>
         </description>
     </advantage>
@@ -400,7 +423,7 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Light drinker" type="disadvantage">
         <cost points="-2"/>
         <genre>Common</genre>
@@ -411,7 +434,7 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Bad hangovers" type="disadvantage">
         <cost points="-1"/>
         <genre>Common</genre>
@@ -423,7 +446,7 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Non-combatant" type="disadvantage">
         <cost points="-4"/>
         <genre>Common</genre>
@@ -439,7 +462,7 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Absent minded" type="disadvantage">
         <cost points="-5"/>
         <genre>Common</genre>
@@ -454,7 +477,7 @@
                 intelligence check for the character to see if they
                 remembered doing something important.
             </para>
-            
+
             <para>
                 If the <e>player</e> ever forgets something, then
                 excuses of "but my character would have remembered" can
@@ -462,7 +485,7 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Animal enmity" type="disadvantage">
         <cost points="-2"/>
         <genre>Common</genre>
@@ -474,7 +497,7 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Big mouth" type="disadvantage">
         <cost points="-3"/>
         <genre>Common</genre>
@@ -500,7 +523,7 @@
                 might be very good at it themselves, but can't spot when
                 others are doing it.
             </para>
-            
+
             <para>
                 Normally the character will automatically any attempts to
                 detect lying. In really obvious situations, they can have
@@ -508,7 +531,7 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Clumsy" type="disadvantage">
         <cost points="-3"/>
         <genre>Common</genre>
@@ -519,7 +542,7 @@
                 generally lack any grace or finesse of movement. If trying
                 to move stealthily, they are doomed to failure.
             </para>
-             
+
             <para>
                 If there is anything they can knock, bump or tread on
                 which will make a noise then they automatically fail
@@ -528,7 +551,7 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Heavy sleeper" type="disadvantage">
         <cost points="-3"/>
         <genre>Common</genre>
@@ -540,14 +563,14 @@
                 shaking for a whole round), and are then at -1 to all
                 attributes for the next minute.
             </para>
-            
+
             <para>
                 If dozing, then all perception rolls are quartered, as
                 for normal people who are in deep sleep.
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="No direction sense" type="disadvantage">
         <cost points="-2"/>
         <genre>Common</genre>
@@ -560,7 +583,7 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Obese" type="disadvantage">
         <cost points="-4"/>
         <genre>Common</genre>
@@ -574,7 +597,7 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Poor vision" type="disadvantage">
         <cost points="-3"/>
         <genre>Common</genre>
@@ -601,7 +624,7 @@
         <forbiddon>Keen hearing</forbiddon>
         <forbiddon>Combat awareness</forbiddon>
     </advantage>
-    
+
     <advantage name="Repellent" type="disadvantage">
         <cost points="-3"/>
         <genre>Common</genre>
@@ -615,7 +638,7 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Ugly" type="disadvantage">
         <cost points="-3"/>
         <description>
@@ -628,7 +651,7 @@
             </para>
         </description>
     </advantage>
-    
+
     <advantage name="Shy" type="disadvantage">
         <cost points="-3"/>
         <genre>Common</genre>
@@ -639,7 +662,7 @@
                 their attribute if performing some task in front of
                 people, or if trying to socialise with strangers.
             </para>
-            
+
             <para>
                 If the character is really stressed, such as in the
                 middle of combat, then the penalty doesn't apply since
@@ -659,7 +682,7 @@
                 lies may allow them a skill check, though the result will
                 be halved.
             </para>
-            
+
             <para>
                 A <e>terrible liar</e> lying to a <e>gullible</e> person
                 would be a very painful event to watch.
@@ -679,7 +702,7 @@
             </para>
         </description>
     </advantage>
-    
+
 </advantages>
 
 

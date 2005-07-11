@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.10 $</version>
-            <date>$Date: 2005-06-22 17:18:22 $</date>
+            <version>$Revision: 1.11 $</version>
+            <date>$Date: 2005-07-11 20:37:37 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -102,7 +102,9 @@
         -->
     <advantage name="Seduction" type="technique">
         <cost points="4"/>
-        <skill name="Charm"/>
+        <skill name="Social"/>
+
+        <prerequisite>Carousing</prerequisite>
 
         <description>
             <para>
@@ -113,8 +115,8 @@
     </advantage>
 
     <advantage name="Carousing" type="technique">
-        <cost points="3"/>
-        <skill name="Charm"/>
+        <cost points="2"/>
+        <skill name="Social"/>
 
         <description>
             <para>
@@ -175,6 +177,66 @@
         </description>
     </advantage>
 
+    <advantage name="Ambush" type="technique">
+        <cost points="2"/>
+        <skill name="Stealth"/>
+
+        <short>Ignore unsuspecting foe's armour.</short>
+
+        <description>
+            <para>
+                Allows the character to make an attack against an
+                unsuspecting target, bypassing armour. If an attack is
+                made with either the <e>brawl</e> or <e>single weapon</e>
+                skill against a target who is both unware of the attack
+                and also not in combat, then the attack ignores all
+                armour.
+            </para>
+
+            <para>
+                An <e>ambush</e> is a slow attack, and the ambusher is
+                considered to be using the <e>focused stance</e>. May be
+                combined with other techniques.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Combat ambush" type="technique">
+        <cost points="4"/>
+        <skill name="Stealth"/>
+        <prerequisite>Ambush</prerequisite>
+
+        <short>Ambush someone in the middle of combat.</short>
+
+        <description>
+            <para>
+                As for <e>Ambush</e>, but may be performed at any time the
+                defender is not aware of the attacker (even if the defender
+                is in combat). Still only applies to attacks made with
+                either the <e>Single weapon</e> or <e>Brawl</e> skills.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Sudden death" type="technique">
+        <cost points="8"/>
+        <skill name="Stealth"/>
+        <prerequisite>Combat ambush</prerequisite>
+
+        <short>Ambush anyone even if they can see you.</short>
+
+        <description>
+            <para>
+                As for <e>Ambush</e>, but applies whenever the defender
+                is not defending against the character's attack. The
+                character may use either an <e>aggressive</e> or a
+                <e>normal</e> stance. Still only applies to attacks made
+                with either the <e>Single weapon</e> or <e>Brawl</e>
+                skills.
+            </para>
+        </description>
+    </advantage>
+
     <advantage name="Grapple" type="technique">
         <cost points="0"/>
         <skill name="Brawl"/>
@@ -185,16 +247,16 @@
                 defender has been grabbed. The defender can choose to
                 either grab back, or try to break free. If the latter, an
                 immediate oppossed roll is made with
-                <skillequation>
-                    <attribute>strength</attribute>
-                    <attribute>agility</attribute>
-                    <skill>brawl</skill>
-                </skillequation>
+                <skeq>
+                    <attr>strength</attr>
+                    <attr>agility</attr>
+                    <sk>brawl</sk>
+                </skeq>
                 roll against the attackers
-                <skillequation>
-                    <attribute>strength</attribute>
-                    <skill>brawl</skill>
-                </skillequation>
+                <skeq>
+                    <attr>strength</attr>
+                    <sk>brawl</sk>
+                </skeq>
                 roll to keep hold. If the defender succeeds then the
                 grapple attempt is broken. On success, both are
                 considered to be <e>grappled</e>. Weapons do not count for
@@ -217,27 +279,27 @@
             <para>
                 A trip is an attempt to place the defender on the floor by
                 throwing or tripping them. A
-                <skillequation>
-                    <attribute>agility</attribute>
-                    <attribute>strength</attribute>
-                    <skill>brawl</skill>
+                <skeq>
+                    <attr>agility</attr>
+                    <attr>strength</attr>
+                    <sk>brawl</sk>
                     <penalty>5</penalty>
-                </skillequation>
+                </skeq>
                 roll is made, and on success no damage is done, but the
                 defender is considered to be <e>unsteady</e>. A second
                 opposed roll is immediately made, with the attacker
                 using
-                <skillequation>
-                    <attribute>strength</attribute>
-                    <skill>brawl</skill>
-                </skillequation>
+                <skeq>
+                    <attr>strength</attr>
+                    <sk>brawl</sk>
+                </skeq>
                 against the defender's
-                <skillequation>
-                    <attribute>strength</attribute>
-                    <attribute>agility</attribute>
-                    <skill>brawl</skill>
-                    <skill>athletics</skill>
-                </skillequation>.
+                <skeq>
+                    <attr>strength</attr>
+                    <attr>agility</attr>
+                    <sk>brawl</sk>
+                    <sk>athletics</sk>
+                </skeq>.
                 Success by the attacker means that the defender is now
                 <e>prone</e>. If the two are already <e>grappled</e>,
                 then the first attack roll is not necessary.
@@ -253,17 +315,12 @@
             <para>
                 An overrun is considered an unarmed attack unless a
                 medium or larger shield is being used. The attacker
-                makes a
-                <skillequation>
-                    <attribute>strength</attribute>
-                    <skill>brawl</skill>
-                </skillequation>
+                makes a <skeq><attr>strength</attr><sk>brawl</sk></skeq>
                 roll against the defender's
-                <skillequation>
-                    <attribute>strength</attribute>
-                    <attribute>agility</attribute>
-                    <skill>brawl</skill>
-                </skillequation>
+                <skeq>
+                    <attr>strength</attr><attr>agility</attr>
+                    <sk>brawl</sk>
+                </skeq>
                 roll to withstand or dodge the attack. On success, the
                 attack can move past the defender regardless of any
                 attempts by the defender to block the attacker's
@@ -798,7 +855,6 @@
     <advantage name="Shield wall" type="technique">
         <cost points="2"/>
         <skill name="Weapon and shield"/>
-        <skill name="Longshaft weapon"/>
 
         <description>
             <para>
@@ -817,9 +873,41 @@
         </description>
     </advantage>
 
-    <advantage name="Double rank" type="technique">
+    <advantage name="Shield defence" type="technique">
+        <cost points="4"/>
+        <skill name="Weapon and shield"/>
+
+        <prerequisite>Shield wall</prerequisite>
+
+        <description>
+            <para>
+                The character gains a +5 bonus to defence when defending
+                against multiple attackers whilst using a shield.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Spearman" type="technique">
         <cost points="2"/>
         <skill name="Longshaft weapon"/>
+
+        <description>
+            <para>
+                Trained in fighting with long weapons. When fighting
+                defensively with a weapon of longer reach than the
+                opponent, a character normally gets a +3 bonus to defence
+                per point of extra reach. With this technique, the bonus
+                also applies to attack.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Double rank" type="technique">
+        <cost points="4"/>
+        <skill name="Longshaft weapon"/>
+
+        <prerequisite>Spearman</prerequisite>
 
         <description>
             <para>
@@ -832,80 +920,7 @@
         </description>
     </advantage>
 
-    <advantage name="Spearman" type="technique">
-        <cost points="4"/>
-        <skill name="Longshaft weapon"/>
-        <prerequisite>Double rank</prerequisite>
 
-        <description>
-            <para>
-                Trained in fighting with long weapons. When fighting
-                defensively with a weapon of longer reach than the
-                opponent, a character normally gets a +3 bonus to defence
-                per point of extra reach. With this technique, the bonus
-                also applies to attack.
-            </para>
-
-            <para>
-                Further, if fighting in a shield wall, and the
-                <e>Shield wall</e> technique is also known, an automatic
-                strike is gained on a good defence even if this character
-                is fighting defensively (though not if the opponent is
-                fighting defensively).
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Ambush" type="technique">
-        <cost points="2"/>
-        <skill name="Any melee"/>
-
-        <description>
-            <para>
-                When initiated against someone who is not expecting an
-                attack (any attack, so cannot be done against someone
-                in combat, even if they are fighting someone else),
-                then an <e>ambush</e> ignores all armour. May be combined
-                with other techniques which cause special effects on
-                an attack (such as deadly strike).
-            </para>
-
-            <para>
-                <e>Ambush</e> is a slow attack, and the ambusher is
-                considered to be using the <e>focused stance</e>.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Combat ambush" type="technique">
-        <cost points="4"/>
-        <skill name="Any melee"/>
-        <prerequisite>Ambush</prerequisite>
-
-        <description>
-            <para>
-                As <e>Ambush</e>, but may be made any time the defender is
-                not aware of the attacker, even if the defender is otherwise
-                in combat. Slow attack, using <e>focused stance</e>. May be
-                combined with other techniques as per <e>ambush</e>.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Sudden death" type="technique">
-        <cost points="8"/>
-        <skill name="Any melee"/>
-        <prerequisite>Combat ambush</prerequisite>
-
-        <description>
-            <para>
-                Automatic, aggressive or normal stance. As <e>Ambush</e>,
-                but may be made any time the defender is not defending
-                against the character, regardless of whether they are aware
-                of the character's attack.
-            </para>
-        </description>
-    </advantage>
 
 
 
@@ -915,7 +930,7 @@
 
     <advantage name="Finesse" type="technique">
         <cost points="2"/>
-        <skill name="Any melee skill or brawl"/>
+        <skill name="Melee"/>
 
         <short>Trade damage for extra speed.</short>
 
@@ -963,7 +978,7 @@
 
     <advantage name="Quickdraw" type="technique">
         <cost points="4"/>
-        <skill name="Any weapon skill"/>
+        <skill name="Armed melee"/>
         <prerequisite>Finesse</prerequisite>
 
         <description>
@@ -976,57 +991,70 @@
         </description>
     </advantage>
 
-
-    <advantage name="Reflex defence" type="technique">
+    <advantage name="Fire into melee" type="technique">
         <cost points="4"/>
-        <skill name="Any melee skill or brawl"/>
-        <prerequisite>Finesse</prerequisite>
+        <skill name="Missile"/>
 
         <description>
             <para>
-                If the character has not yet made an attack, and they have
-                just failed a defence roll, they may forgo their attack
-                in order to get a second defence roll, at the same skill
-                as the first. May only be performed once a round, and not
-                if using an aggressive stance.
+                Character is skilled at firing into combat. The increase
+                to the fumble chance when doing so is halved (generally
+                +1 per extra possible target instead of +2).
             </para>
         </description>
     </advantage>
 
-    <advantage name="Swap defence" type="technique">
+    <advantage name="Deadly shot" type="technique">
         <cost points="6"/>
-        <skill name="Any melee skill or brawl"/>
-        <prerequisite>Reflex defence</prerequisite>
+        <skill name="Missile"/>
+
+        <prerequisite>Fire into melee</prerequisite>
 
         <description>
             <para>
-                If the character is knowingly attacked (i.e. not surprise
-                attacks) by a foe they are not defending against, then
-                they may move a currently unused defence to this foe. May
-                only be done once a round.
+                Declared before an attack, there is a -10 to the attack
+                roll. If the target is successfully wounded, then they must
+                make a size x stamina roll against a target of 10 +
+                5 x wounds (not stuns) caused or immediately drop to be
+                fatally wounded.
             </para>
         </description>
     </advantage>
 
-    <advantage name="False attack" type="technique">
-        <cost points="8"/>
-        <skill name="Any melee skill or brawl"/>
-        <prerequisite>Swap defence</prerequisite>
+    <advantage name="Fast shot" type="technique">
+        <cost points="2"/>
+        <skill name="Bow"/>
 
         <description>
             <para>
-                Change target of attack. When the attack is made, the
-                character can instead attack another foe within range.
-                This has the advantage that the second target probably
-                hasn't declared a defence against the character.
+                The character is quick at using a short or long bow. An
+                arrow can be loaded and fired in a single round, and is
+                considered a normal (not slow) initiative action.
             </para>
         </description>
     </advantage>
 
+    <advantage name="Improved aim" type="technique">
+        <cost points="4"/>
+        <skill name="Bow"/>
+
+        <prerequisite>Fast shot</prerequisite>
+
+        <description>
+            <para>
+                Character is exceptionally skilled at firing a long or
+                short bow. If a full round is spent aiming, then the
+                character can halve all range and circumstance penalties.
+            </para>
+        </description>
+    </advantage>
 
     <advantage name="Improved pull" type="technique">
         <cost points="4"/>
         <skill name="Bow"/>
+
+        <prerequisite>Fast shot</prerequisite>
+
         <description>
             <para>
                 Due to extensive training with arm muscles, the archer gets
@@ -1050,67 +1078,12 @@
 
     <advantage name="Greater range" type="technique">
         <cost points="4"/>
-        <skill name="Throw"/>
+        <skill name="Missile"/>
 
         <description>
             <para>
                 Add +1 to strength for purposes of maximum range of a
                 thrown weapon.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Close combat archery" type="technique">
-        <cost points="4"/>
-        <skill name="Any missile skill"/>
-
-        <description>
-            <para>
-                Character is skilled at firing into combat. The increase
-                to the fumble chance when doing so is halved (generally
-                +1 per extra possible target instead of +2).
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Deadly shot" type="technique">
-        <cost points="6"/>
-        <skill name="Any missile skill"/>
-        <prerequisite>Close combat archery</prerequisite>
-
-        <description>
-            <para>
-                Declared before an attack, there is a -10 to the attack
-                roll. If the target is successfully wounded, then they must
-                make a size x stamina roll against a target of 10 +
-                5 x wounds (not stuns) caused or immediately drop to be
-                fatally wounded.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Fast shot" type="technique">
-        <cost points="4"/>
-        <skill name="Bow"/>
-
-        <description>
-            <para>
-                The character is quick at using a short or long bow. An
-                arrow can be loaded and fired in a single round, and is
-                considered a normal (not slow) initiative action.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Improved aim" type="technique">
-        <cost points="4"/>
-        <skill name="Bow"/>
-
-        <description>
-            <para>
-                Character is exceptionally skilled at firing a long or
-                short bow. If a full round is spent aiming, then the
-                character can halve all range and circumstance penalties.
             </para>
         </description>
     </advantage>
@@ -1201,9 +1174,11 @@
         </description>
     </advantage>
 
-    <advantage name="Hidden Insult" type="technique">
-        <cost points="4"/>
+    <advantage name="Hidden insult" type="technique">
+        <cost points="6"/>
         <skill name="Etiquette"/>
+
+        <prerequisite>Flirt</prerequisite>
 
         <description>
             <para>
@@ -1233,7 +1208,7 @@
         <cost points="4"/>
         <skill name="Etiquette"/>
 
-        <prerequisite>Seduction</prerequisite>
+        <prerequisite>Carousing</prerequisite>
 
         <description>
             <para>
