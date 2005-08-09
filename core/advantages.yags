@@ -3,7 +3,8 @@
         href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
         type="text/xsl"?>
 
-<article>
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
         <title>Advantages</title>
         <tagline>Yags 0.7 Core</tagline>
@@ -19,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.21 $</version>
-            <date>$Date: 2005-07-11 20:37:37 $</date>
+            <version>$Revision: 1.22 $</version>
+            <date>$Date: 2005-08-09 08:47:46 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -101,22 +102,22 @@
                     paid off, without having to buy off the disadvantage.
                 </para>
 
-                <import-advantages href="options/background.yags"
-                                   type="background"/>
+                <y:import-advantages href="options/background.yags"
+                                     type="background"/>
             </sect2>
 
             <sect2>
                 <title>Miscellaneous Advantages</title>
 
-                <import-advantages href="options/advantages.yags"
-                                   type="advantage"/>
+                <y:import-advantages href="options/advantages.yags"
+                                     type="advantage"/>
             </sect2>
 
             <sect2>
                 <title>Miscellaneous Disadvantages</title>
 
-                <import-advantages href="options/advantages.yags"
-                                   type="disadvantage"/>
+                <y:import-advantages href="options/advantages.yags"
+                                     type="disadvantage"/>
             </sect2>
         </sect1>
 
@@ -151,8 +152,8 @@
             <sect2>
                 <title>Techniques Descriptions</title>
 
-                <import-advantages href="options/techniques.yags"
-                                   type="technique" tree="true"/>
+                <y:import-advantages href="options/techniques.yags"
+                                     type="technique" tree="true"/>
             </sect2>
         </sect1>
 

@@ -3,10 +3,8 @@
     href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
     type="text/xsl"?>
 
-<article
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="yagsbook.xsd">
-
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
 
     <header>
         <title>Equipment</title>
@@ -22,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.15 $</version>
-            <date>$Date: 2005-05-16 20:34:25 $</date>
+            <version>$Revision: 1.16 $</version>
+            <date>$Date: 2005-08-09 08:47:46 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -312,25 +310,25 @@
                 with their statistics for Yags.
             </para>
 
-            <import-weaponlist href="xml/arms.yags"
+            <y:import-weaponlist href="xml/equipment.yags"
                                 importance="1"
                                 style="list">
-                <category>Axes</category>
-                <category>Bows</category>
-                <category>Clubs</category>
-                <category>Flails</category>
-                <category>Knives</category>
-                <category>Shields</category>
-                <category>Spears</category>
-                <category>Swords</category>
-            </import-weaponlist>
+                <y:category>Axes</y:category>
+                <y:category>Bows</y:category>
+                <y:category>Clubs</y:category>
+                <y:category>Flails</y:category>
+                <y:category>Knives</y:category>
+                <y:category>Shields</y:category>
+                <y:category>Spears</y:category>
+                <y:category>Swords</y:category>
+            </y:import-weaponlist>
 
             <para>
                 The notes for each weapon are as follows. See the combat
                 article for full details.
             </para>
 
-            <itemlist>
+            <itemlist order="sort">
                 <item name="2H">
                     This weapon is designed to be used with two hands.
                 </item>
@@ -395,7 +393,7 @@
                 together with their properties.
             </para>
 
-            <import-armourlist href="xml/arms.yags"/>
+            <y:import-armourlist href="xml/equipment.yags"/>
 
             <para>
                 The combat article gives a full description of the
@@ -449,6 +447,7 @@
             <import-equipment href="xml/equipment.yags">
                 <category>Adventuring</category>
                 <category>Animals</category>
+                <category>Armour</category>
                 <category>Climbing</category>
                 <category>Container</category>
                 <category>Food</category>
@@ -456,6 +455,7 @@
                 <category>Rogue</category>
                 <category>Services</category>
                 <category>Transport</category>
+                <category>Weapon</category>
             </import-equipment>
         </sect1>
     </body>

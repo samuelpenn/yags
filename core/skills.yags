@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl" type="text/xsl"?>
 
-<article>
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
+         xmlns:yb="http://yagsbook.sourceforge.net/xml">
     <header>
         <title>Skills</title>
         <tagline>Yags 0.7 Core</tagline>
@@ -16,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.13 $</version>
-            <date>$Date: 2005-06-22 22:02:47 $</date>
+            <version>$Revision: 1.14 $</version>
+            <date>$Date: 2005-08-09 08:47:46 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -229,12 +231,12 @@
                 what a skill entry looks like.
             </para>
 
-            <skill-list>
-                <skill name="Medicine Example" type="knowledge">
-                    <group>Science</group>
-                    <group>Healing</group>
-                    <default>First aid</default>
-                    <prerequisite score="4">First aid</prerequisite>
+            <y:skill-list>
+                <y:skill name="Medicine Example" type="knowledge">
+                    <y:group>Science</y:group>
+                    <y:group>Healing</y:group>
+                    <y:default>First aid</y:default>
+                    <y:prerequisite score="4">First aid</y:prerequisite>
 
                     <description>
                         <para>
@@ -249,12 +251,12 @@
                         </para>
                     </description>
 
-                    <examples>
-                        <example target="10">Cure a headache.</example>
-                        <example target="20">Put a leg back on.</example>
-                    </examples>
-                </skill>
-            </skill-list>
+                    <y:examples>
+                        <y:example target="10">Cure a headache.</y:example>
+                        <y:example target="20">Put a leg back on.</y:example>
+                    </y:examples>
+                </y:skill>
+            </y:skill-list>
 
             <para>
                 The heading gives the name of the skill, followed by
@@ -297,14 +299,14 @@
             <sect2>
                 <title>Skills by Groups</title>
 
-                <list-skills href="options/skills.yags"/>
+                <y:list-skills href="options/skills.yags"/>
             </sect2>
 
             <sect2>
                 <title>Skill Descriptions</title>
 
 
-                <import-skills href="options/skills.yags"/>
+                <y:import-skills href="options/skills.yags"/>
             </sect2>
         </sect1>
 

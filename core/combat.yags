@@ -3,10 +3,8 @@
     href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
     type="text/xsl"?>
 
-<article
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="yagsbook.xsd">
-
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
 
     <header>
         <title>Combat</title>
@@ -24,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.72 $</version>
-            <date>$Date: 2005-07-11 20:37:37 $</date>
+            <version>$Revision: 1.73 $</version>
+            <date>$Date: 2005-08-09 08:47:46 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -718,17 +716,17 @@
                         statistics which are required in combat.
                     </para>
 
-                    <import-weaponlist href="xml/arms.yags"
+                    <y:import-weaponlist href="xml/equipment.yags"
                                        importance="3"
                                        style="list">
-                        <category>Axes</category>
-                        <category>Bows</category>
-                        <category>Clubs</category>
-                        <category>Knives</category>
-                        <category>Shields</category>
-                        <category>Spears</category>
-                        <category>Swords</category>
-                    </import-weaponlist>
+                        <y:category>Axes</y:category>
+                        <y:category>Bows</y:category>
+                        <y:category>Clubs</y:category>
+                        <y:category>Knives</y:category>
+                        <y:category>Shields</y:category>
+                        <y:category>Spears</y:category>
+                        <y:category>Swords</y:category>
+                    </y:import-weaponlist>
 
                     <para>
                         The four ability modifiers - initiative, attack,
@@ -801,13 +799,13 @@
                     <para>
                         If a character is making an attack, then their
                         initiative is
-                        <skeq>
-                            <attr>agility</attr>
-                            <sk>skill</sk>
-                            <bonus>weapon bonus</bonus>
-                        </skeq>
+                        <y:skeq>
+                            <y:attr>agility</y:attr>
+                            <y:sk>skill</y:sk>
+                            <y:bonus>weapon bonus</y:bonus>
+                        </y:skeq>
                         whilst for most other actions it is simply based on
-                        <skeq><attr>agility</attr><sk>brawl</sk></skeq>.
+                        <y:skeq><y:attr>agility</y:attr><y:sk>brawl</y:sk></y:skeq>.
                     </para>
 
                     <para>
@@ -1040,12 +1038,12 @@
                     attack rating as follows.
                 </para>
 
-                <skeq title="Attack roll">
-                    <attr>attribute</attr>
-                    <sk>skill</sk>
-                    <bonus>weapon attack bonus</bonus>
-                    <die/>
-                </skeq>
+                <y:skeq title="Attack roll">
+                    <y:attr>attribute</y:attr>
+                    <y:sk>skill</y:sk>
+                    <y:bonus>weapon attack bonus</y:bonus>
+                    <y:die/>
+                </y:skeq>
 
                 <para>
                     If the defender is not defending, then the target
@@ -1054,12 +1052,12 @@
                     defence roll.
                 </para>
 
-                <skeq title="Defence roll">
-                    <attr>attribute</attr>
-                    <sk>skill</sk>
-                    <bonus>weapon defence bonus</bonus>
-                    <die/>
-                </skeq>
+                <y:skeq title="Defence roll">
+                    <y:attr>attribute</y:attr>
+                    <y:sk>skill</y:sk>
+                    <y:bonus>weapon defence bonus</y:bonus>
+                    <y:die/>
+                </y:skeq>
 
                 <para>
                     If the attack roll is equal to or greater than the
@@ -2344,106 +2342,6 @@
 
         <sect1>
             <title>Advanced Combat</title>
-
-            <sect2>
-                <title>Techniques</title>
-
-                <para>
-                    A <e>technique</e> is a special type of manouevre that
-                    can be performed if it has been learnt. Techniques are
-                    considered to be advantages, and are bought as such.
-                    A technique has a requirement of a given level in a
-                    given skill before it can be learnt however. Many of the
-                    combat techniques can be thought of as <e>martial
-                    arts</e>, involving skill in both armed and unarmed
-                    fighting. Martial arts are not unique to Oriental
-                    cultures. Indeed, the term was coined originally in
-                    Western Europe during the Middle Ages to refer to the
-                    skills learnt by armoured knights.
-                </para>
-
-                <para>
-                    A technique is normally used instead of a normal attack
-                    or defence action. Some techniques apply automatically
-                    (such as <e>ground fighting</e> or <e>mounted combat</e>)
-                    if the situation warrents it. In this case, they apply
-                    as well as the action, and the action may be another
-                    technique.
-                </para>
-
-                <para>
-                    If a technique has a skill requirement of zero, then it
-                    can be used by anyone, and does not need to be learnt.
-                    Techniques which are listed as <e>automatic</e> can be
-                    used for free when the stated conditions apply, meaning
-                    they can be combined with other techniques, and the
-                    character does not have to consciously think about
-                    using them.
-                </para>
-
-                <para>
-                    Some techniques require a particular stance to be taken
-                    in order to use the technique. When such is stated, any
-                    given combat modifiers are the total modifier, taking
-                    into account the stance.
-                </para>
-
-                <sect3>
-                    <title>Unarmed combat techniques</title>
-
-                    <para>
-                        These techniques concentrate on unarmed melee
-                        combat. Many of them are zero cost, so can be used
-                        by anyone. These represent the standard moves which
-                        may be attempted in normal unarmed combat (i.e.,
-                        anything other than simple punching).
-                    </para>
-
-                    <import-advantages
-                            href="options/techniques/brawling.yags"
-                            type="technique" tree="true"/>
-                </sect3>
-
-                <sect3>
-                    <title>Circumstance techniques</title>
-
-                    <para>
-                        The following techniques apply in particular
-                        environments (e.g. in the dark) or when certain
-                        criteria are met (e.g. when wearing armour).
-                        They are mostly <e>automatic</e>.
-                    </para>
-
-                    <import-advantages
-                             href="options/techniques/circumstance.yags"
-                             type="technique" tree="true"/>
-                </sect3>
-
-                <sect3>
-                    <title>Melee techniques</title>
-
-
-                    <import-advantages
-                            href="options/techniques/melee.yags"
-                            type="technique" tree="true"/>
-                </sect3>
-
-                <sect3>
-                    <title>Missile techniques</title>
-
-                    <import-advantages
-                            href="options/techniques/missile.yags"
-                            type="technique" tree="true"/>
-                </sect3>
-
-                <sect3>
-                    <title>Mounted techniques</title>
-
-                    <import-advantages
-                            href="options/techniques/mounted.yags"
-                            type="technique" tree="true"/>
-                </sect3>
-            </sect2>
 
             <sect2>
                 <title>Mounted combat</title>

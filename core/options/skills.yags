@@ -9,11 +9,14 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.4 $
+    Version: $Revision: 1.5 $
     Author: Samuel Penn
     -->
 
-<skill-list techniques="techniques.yags">
+<skill-list xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:yb="http://yagsbook.sourceforge.net/xml"
+            techniques="techniques.yags">
     <groups>
         <group>Talents</group>
         <group>Combat</group>
@@ -25,7 +28,10 @@
         <group>Artistic</group>
         <group>Wilderness</group>
         <group>Professional</group>
+        <group>Animal</group>
         <group>Lore</group>
+        <group>Legal</group>
+        <group>Rural</group>
     </groups>
 
 
@@ -36,7 +42,7 @@
 
         <short>Jumping, climbing and running.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 This skill covers all forms of athletics, gymnastics and
                 acrobatics, including running, jumping and climbing. It is a
@@ -45,16 +51,16 @@
             </para>
         </description>
 
-        <description task="Running">
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Running">
             <para>
                 A character can run at their full <e>move</e> score each
                 round. They gain a point of fatigue for every
-                <skeq><attr>stamina</attr><sk>athletics</sk></skeq>
+                <y:skeq><y:attr>stamina</y:attr><y:sk>athletics</y:sk></y:skeq>
                 minutes of running.
             </para>
         </description>
 
-        <description task="Sprinting">
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Sprinting">
             <para>
                 A character can sprint at a speed equal to their
                 <e>move x 2</e> + <e>athletics</e> each round. A sprinting
@@ -62,13 +68,13 @@
             </para>
         </description>
 
-        <description task="Jumping">
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Jumping">
             <para>
                 Both long jumping and high jumping.
             </para>
         </description>
 
-        <description task="Climbing">
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Climbing">
             <para>
                 Climbing things.
             </para>
@@ -82,7 +88,7 @@
 
         <short>General ability to notice things.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 This skill is used by the character when there is a chance
                 of noticing something which isn't obvious, such as someone
@@ -121,7 +127,7 @@
 
         <short>Punching, kicking, wrestling and dodging.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 A general purpose combat skill covering dodging, punching
                 and wrestling. This is covered in more detail in the combat
@@ -137,7 +143,7 @@
 
         <short>Being nice to people.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The ability to be friendly and sociable. At its most
                 basic, it is a simple charisma skill check since it is not
@@ -165,7 +171,7 @@
             </para>
         </description>
 
-        <description task="Carousing">
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Carousing">
             <para>
                 Used at parties and similar social gatherings. Can be used
                 to find out information, flirt or try and talk to someone
@@ -175,7 +181,7 @@
             </para>
         </description>
 
-        <description task="Chatter">
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Chatter">
             <para>
                 Mindless chatter to try and draw
                 information out of someone, or to simply distract them.
@@ -184,7 +190,7 @@
             </para>
         </description>
 
-        <description task="Seduction">
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Seduction">
             <para>
                 Can try to seduce a person. Add
                 appearance to Charisma for purposes of seduction
@@ -193,7 +199,7 @@
             </para>
         </description>
 
-        <description task="Persuade">
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Persuade">
             <para>
                 If trying to change someone's mind by
                 emotional arguments, resisted with will x ego.
@@ -244,7 +250,7 @@
 
         <short>Using and recognising deceit.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 <e>Guile</e> allows a character to use and understand
                 social methods of deception, through lying, body language
@@ -265,7 +271,7 @@
             </para>
         </description>
 
-        <description task="Disguise">
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Disguise">
             <para>
                 The character can disguise either themselves or another
                 person by using <e>guile</e>. Make an
@@ -274,7 +280,7 @@
             </para>
         </description>
 
-        <description task="Fast talk">
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Fast talk">
             <para>
                 When trying to invent a plausible story quickly, then an
                 <skeq><attr>intelligence</attr><sk>guile</sk></skeq> check
@@ -285,7 +291,7 @@
             </para>
         </description>
 
-        <description task="Taunt">
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Taunt">
             <para>
                 Make someone mad. Opposed with
                 will x restraint.
@@ -300,7 +306,7 @@
 
         <short>Sleight of hand.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Sleight of hand, from filching items on a market stall,
                 to picking someone's pockets. Can also be used for anything
@@ -316,7 +322,7 @@
 
         <short>Hiding and moving quietly.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Moving quietly, hiding, and generally not being seen
                 or heard. Based on agility for moving quietly, or perception
@@ -333,7 +339,7 @@
 
         <short>Using thrown weapons, and catching things.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 This is the ranged attack equivalent of the brawl skill,
                 and is used for throwing rocks, spears, knives, axes
@@ -356,7 +362,7 @@
 
         <short>Knowledge of combat tactics.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Tactics, strategy and leadership when planning and fighting
                 a battle involving groups of warriors. It can be used to
@@ -373,7 +379,7 @@
 
         <short>Using all sorts of bows, except crossbows.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The knowledge of how to use a bow such as a short bow, long
                 bow or composite bow. For long bows, for every full four
@@ -395,7 +401,7 @@
 
         <short>Using crossbows.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Covers the use of all varieties of hand held crossbows.
                 Skill in this provides accuracy, and also enables
@@ -417,7 +423,7 @@
 
         <short>Using large two handed weapons.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Covers the use of large two handed weapons such as great
                 swords, quarterstaffs and great axes. It generally does
@@ -443,7 +449,7 @@
 
         <short>Using long thrusting weapons.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Fighting with a long thrusting weapon, such as a spear,
                 quarterstaff, pike or lance. If the weapon is being
@@ -468,7 +474,7 @@
 
         <short>Using a single weapon in one hand.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Fighting with a single one handed melee weapon without a
                 shield. This is probably the weakest of the melee fighting
@@ -495,7 +501,7 @@
 
         <short>Using two weapons at once.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The two weapon style allows two weapons to be used at the
                 same time, for both defence and attack. Half (round up) of
@@ -519,7 +525,7 @@
 
         <short>Using a weapon and a shield.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 This is often the most common fighting skill in low tech
                 societies, since it gives the advantages of a good attack
@@ -546,7 +552,7 @@
 
         <short>Using a chained weapon.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 A rare combat style, specialised in using weapons which
                 consist of weights on the end of one or more chains, such
@@ -562,7 +568,7 @@
 
         <short>Using whips in combat.</short>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The skill of using a whip, this is probably the narrowest
                 of the combat skills since it only applies to a single
@@ -581,7 +587,7 @@
 
         <default>Charm</default>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Etiquette is a knowledge of good manners and social
                 behaviour. It is of much greater use amongst the higher
@@ -599,7 +605,7 @@
             </para>
         </description>
 
-        <description task="Flirt">
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Flirt">
             <para>
                 <e>Flirt</e> with a lady or gentleman in a polite and
                 possibly discreet way.
@@ -612,7 +618,7 @@
 
         <default>Guile</default>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Being able to scare people, either with threats of simple
                 physical violence, or by more subtle means. Can either be
@@ -625,7 +631,7 @@
         <group>Social</group>
         <default>Guile</default>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The skill of dealing with the intrigues of a political
                 court. With it, it is possible to find out relationships
@@ -649,7 +655,7 @@
         <group>Rogue</group>
         <default>Guile</default>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 <e>Streetwise</e> is similar to <e>intrigue</e>, though is
                 more suited to life amongst the criminal classes. With it,
@@ -665,7 +671,7 @@
         <group>Rogue</group>
         <default>Guile</default>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge of how to play games of chance. Used with charisma
                 for bluffing, intelligence to figure out the odds of
@@ -677,7 +683,7 @@
 
     <skill name="Game" type="standard">
         <group>Social</group>
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge of, and skill at playing a game such as chess
                 or Hnefatafl. A skill is required for each game played,
@@ -712,7 +718,7 @@
     <skill name="Lip reading" type="standard">
         <group>Rogue</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The skill of reading lips. Each 10 rolled gives an
                 equivalent point of language skill. There may be penalties
@@ -726,7 +732,7 @@
         <group>Artistic</group>
         <default>Charm</default>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 A skill which covers many forms of social skills,
                 including oratory, poetry and singing. It may be used to
@@ -794,7 +800,7 @@
 
     <skill name="Musician" type="standard">
         <group>Artistic</group>
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The skill of playing musical instruments, whether they are
                 a drum, a flute or a harp.
@@ -812,7 +818,7 @@
 
         <default>Athletics</default>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The ability to dance gracefully and to music. Used with
                 agility.
@@ -843,7 +849,7 @@
 
     <skill name="Artist" type="standard">
         <group>Artistic</group>
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The ability to draw or paint competently. Used with
                 dexterity, or with intelligence to try and accurately draw
@@ -855,7 +861,7 @@
     <skill name="Area lore" type="knowledge">
         <group>Lore</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge of a given area, including geographical and
                 political knowledge. The <e>Area lore</e> skill is used
@@ -884,7 +890,7 @@
     <skill name="Alchemy" type="knowledge">
         <group>Lore</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Basic, primitive, knowledge of chemicals and herbs. How to
                 mix things to get a funny smell or a particular colour.
@@ -895,7 +901,7 @@
     <skill name="Astrology" type="knowledge">
         <group>Lore</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge of the heavens, and how they affect the day to
                 day life of mortals.
@@ -906,7 +912,7 @@
     <skill name="Beast lore" type="knowledge">
         <group>Lore</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge of animals, how to recognise them and what
                 their behaviours are.
@@ -921,7 +927,7 @@
         <prerequisite>First aid</prerequisite>
         <default>First aid</default>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Performing major operations on a wounded person. This
                 requires some specialist tools (though rarely more complicated
@@ -933,7 +939,7 @@
     <skill name="Dream lore" type="knowledge">
         <group>Lore</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Interpreting dreams.
             </para>
@@ -944,7 +950,7 @@
     <skill name="First aid" type="knowledge">
         <group>Lore</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Provides care and treatment of wounds to stop bleeding and
                 prevent infection. Once a wound has been successfully
@@ -975,7 +981,7 @@
     <skill name="Vetinary" type="knowledge">
         <group>Lore</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 First aid for animals. The <e>first aid</e> skill may be
                 substituted, though it takes twice as long, and no wounds
@@ -988,7 +994,7 @@
     <skill name="Faerie lore" type="knowledge">
         <group>Lore</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge of the Other World, of faeries, spirits
                 and beasts of supernatural nature. Based on intelligence.
@@ -998,8 +1004,9 @@
 
     <skill name="Heraldry" type="knowledge">
         <group>Lore</group>
+        <group>Legal</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge of heraldic arms, flags and other symbols. A
                 person skilled in heraldry can recognise nobles, understand
@@ -1045,7 +1052,7 @@
     <skill name="Herb lore" type="knowledge">
         <group>Lore</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge of herbs and their properties. Can be used
                 to recognise, collect and prepare herbs and plants for
@@ -1057,7 +1064,7 @@
     <skill name="History" type="knowledge">
         <group>Lore</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge of the past, especially the last few hundred
                 years. Based on intelligence.
@@ -1067,8 +1074,9 @@
 
     <skill name="Law" type="knowledge">
         <group>Lore</group>
+        <group>Legal</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge and understanding of the law, and how to apply
                 it in a given situation. Based on intelligence.
@@ -1079,7 +1087,7 @@
     <skill name="Legend lore" type="knowledge">
         <group>Lore</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge of legends and stories of heroes, places and
                 artifacts.
@@ -1090,7 +1098,7 @@
     <skill name="Religion" type="knowledge">
         <group>Lore</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 There are many <e>religion</e> skills, one for each god or
                 cult. Knowledge of other gods and religions can be provided
@@ -1112,7 +1120,7 @@
     <skill name="Speak own" type="language">
         <group>Language</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The ability to speak your own language. This defaults
                 to four. Language skills are very rarely rolled.
@@ -1123,7 +1131,7 @@
     <skill name="Teach" type="standard">
         <group>Social</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The ability to teach another person, and train them in
                 the use of a skill. See the Campaign section for details
@@ -1136,7 +1144,7 @@
         <group>Social</group>
         <default>Guile</default>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Covers a multitude of skills involved with trading,
                 including bartering, and having some clue as to the
@@ -1146,13 +1154,12 @@
     </skill>
 
     <skill name="Armoury" type="standard">
-        <group>Professional</group>
         <group>Craft</group>
 
         <default>Blacksmithing</default>
         <prerequisite score="2">Blacksmithing</prerequisite>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Making metal armour such as mail, plate or ring armour.
                 Leather armour requires <e>leatherworking</e>, and cloth
@@ -1185,7 +1192,12 @@
     </skill>
 
     <skill name="Beekeeping" type="standard">
-        <description>
+        <group>Animal</group>
+        <group>Rural</group>
+
+        <default>Farming</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The keeping of bees, and the harvesting of honey from
                 them.
@@ -1196,7 +1208,7 @@
     <skill name="Blacksmithing" type="standard">
         <group>Craft</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Metal working, including needles, horseshoes, tools
                 and so on. It can be used to make knives and daggers, but
@@ -1208,7 +1220,7 @@
     <skill name="Bowyer" type="standard">
         <group>Craft</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The making of bows and arrows.
             </para>
@@ -1216,7 +1228,12 @@
     </skill>
 
     <skill name="Brewing" type="standard">
-        <description>
+        <group>Craft</group>
+        <group>Rural</group>
+
+        <default>Farming</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Brewing beer and ale. This skill is generally the domain
                 of the ale wives in small villages.
@@ -1227,7 +1244,7 @@
     <skill name="Candlemaking" type="standard">
         <group>Craft</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The making of candles.
             </para>
@@ -1237,7 +1254,7 @@
     <skill name="Carpentry" type="standard">
         <group>Craft</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Crafting items out of wood, from chairs to houses.
             </para>
@@ -1247,7 +1264,7 @@
     <skill name="Clothier" type="standard">
         <group>Craft</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Working with cloth, generally in the making of clothes.
                 Can be used for making leather or padded armour if necessary,
@@ -1257,7 +1274,9 @@
     </skill>
 
     <skill name="Cooking" type="standard">
-        <description>
+        <group>Craft</group>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The preparing, preserving and cooking of food. Includes
                 some knowledge of herbs.
@@ -1266,7 +1285,12 @@
     </skill>
 
     <skill name="Copicing" type="standard">
-        <description>
+        <group>Wilderness</group>
+        <group>Rural</group>
+
+        <default>Farming</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The care and management of woodland. All manors will
                 have someone skilled in this, and it is not uncommon for
@@ -1276,7 +1300,12 @@
     </skill>
 
     <skill name="Dairying" type="standard">
-        <description>
+        <group>Animal</group>
+        <group>Rural</group>
+
+        <default>Farming</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The making of cheese and other dairy products. Includes
                 caring for and milking cows.
@@ -1285,7 +1314,9 @@
     </skill>
 
     <skill name="Farming" type="standard">
-        <description>
+        <group>Rural</group>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The planting, caring for and harvesting of crops, the
                 care and feeding of animals such as cows, sheep and
@@ -1298,7 +1329,7 @@
     <skill name="Glassworking" type="standard">
         <group>Craft</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The making of glassware, though this is a rare, and highly
                 sought after, skill.
@@ -1309,7 +1340,7 @@
     <skill name="Handicraft" type="standard">
         <group>Craft</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The making of baskets, embroidery and other similar village
                 hand crafts not covered by other professional skills. It is
@@ -1321,7 +1352,7 @@
     <skill name="Jewelcraft" type="standard">
         <group>Craft</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The crafting of jewelry and gems. Covers artistic
                 skill, as well as knowledge of the values of such items.
@@ -1332,7 +1363,7 @@
     <skill name="Masonry" type="standard">
         <group>Craft</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The building of houses, bridges and other constructions
                 out of stone.
@@ -1341,7 +1372,10 @@
     </skill>
 
     <skill name="Milling" type="standard">
-        <description>
+        <group>Rural</group>
+        <default>Farming</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Running a mill, from the grinding of flour to the baking
                 of the bread.
@@ -1350,7 +1384,7 @@
     </skill>
 
     <skill name="Mining" type="standard">
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Covers being able to locate new mines, and to construct
                 and work them safely.
@@ -1359,7 +1393,10 @@
     </skill>
 
     <skill name="Ostling" type="standard">
-        <description>
+        <group>Rural</group>
+        <group>Animal</group>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The care and training of horses.
             </para>
@@ -1369,7 +1406,7 @@
     <skill name="Potter" type="standard">
         <group>Craft</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Pottery.
             </para>
@@ -1377,7 +1414,9 @@
     </skill>
 
     <skill name="Seneschal" type="standard">
-        <description>
+        <group>Legal</group>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The art of administration of a manor. Includes knowing how
                 much supplies to lay in for the winter, how to organise
@@ -1390,7 +1429,7 @@
     <skill name="Shipwright" type="standard">
         <group>Craft</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Ship building.
             </para>
@@ -1398,7 +1437,9 @@
     </skill>
 
     <skill name="Tanning" type="standard">
-        <description>
+        <group>Craft</group>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Tanning.
             </para>
@@ -1406,7 +1447,9 @@
     </skill>
 
     <skill name="Thatching" type="standard">
-        <description>
+        <group>Craft</group>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Thatching.
             </para>
@@ -1418,7 +1461,7 @@
 
         <prerequisite score="2">Blacksmithing</prerequisite>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The making of weapons, including spears, daggers,
                 swords and axes. The making of bows and arrows is a
@@ -1430,7 +1473,7 @@
     <skill name="Weaving" type="standard">
         <group>Craft</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 A profession which includes weaving and spindling.
             </para>
@@ -1439,7 +1482,11 @@
 
     <skill name="Forgery" type="standard">
         <group>Rogue</group>
-        <description>
+        <group>Legal</group>
+
+        <default>Sleight</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The art of forging documents, signatures and seals. Covers
                 both producing forged material, and detecting it.
@@ -1448,7 +1495,9 @@
     </skill>
 
     <skill name="Animal care" type="standard">
-        <description>
+        <group>Animal</group>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Experience with animals, and a practical knowledge of their
                 general behaviour. It does not provide recognition of
@@ -1467,7 +1516,7 @@
     <skill name="Boating" type="standard">
         <group>Wilderness</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Being able to use a small oared boat. Based on intelligence
                 for judging travel conditions, strength for speed or
@@ -1488,8 +1537,9 @@
 
     <skill name="Falconry" type="standard">
         <group>Wilderness</group>
+        <group>Animal</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The skill of training, caring for and hunting with falcons
                 and similar birds of prey.
@@ -1499,8 +1549,9 @@
 
     <skill name="Hunting" type="standard">
         <group>Wilderness</group>
+        <group>Animal</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The skill of training, caring for and hunting with hounds.
                 If trained dogs are available, can be used instead of
@@ -1512,7 +1563,7 @@
     <skill name="Navigation" type="standard">
         <group>Wilderness</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The skill of seafarers the world over, enables a sailor
                 to determine where they are, and where they are going.
@@ -1536,8 +1587,9 @@
 
     <skill name="Ride" type="standard">
         <group>Wilderness</group>
+        <group>Animal</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The ability to ride, normally a horse. A different skill
                 is needed for different types of animals (horses and ponies
@@ -1550,7 +1602,9 @@
     </skill>
 
     <skill name="Teamster" type="standard">
-        <description>
+        <group>Animal</group>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Handling a team of animals, either pack animals or horses or
                 oxen pulling wagons. Care, feeding and pacing, as well as
@@ -1563,7 +1617,7 @@
     <skill name="Survival" type="standard">
         <group>Wilderness</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 There is one survival skill for each type of terrain.
                 Possible choices include woodland, plains, coastal, desert,
@@ -1698,7 +1752,7 @@
     <skill name="Swim" type="standard">
         <group>Wilderness</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The ability to move in water without drowning or panicking.
                 Basically, a waterborne version of the athletics skill.
@@ -1709,7 +1763,7 @@
     <skill name="Seamanship" type="standard">
         <group>Wilderness</group>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Handling a sea going vessel. This is very different from
                 boating, which is limited to coastal or river boats.
@@ -1718,7 +1772,9 @@
     </skill>
 
     <skill name="Scrounging" type="standard">
-        <description>
+        <group>Rogue</group>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Being able to turn useless scrap into something useful. Used
                 with intelligence. Covers finding, planning and building,
