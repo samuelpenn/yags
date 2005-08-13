@@ -2,41 +2,41 @@
 
 <!--
     Spirit cantrips.
-    Version: $Revision: 1.4 $
-    Date:    $Date: 2005-04-17 13:42:23 $
+    Version: $Revision: 1.5 $
+    Date:    $Date: 2005-08-13 15:47:35 $
 -->
-<grimoire name="Spirit">
+<grimoire xmlns="http://yagsbook.sourceforge.net/xml/yags/habisfern" name="Spirit">
     <preface>
         <para>
-		    Spirit covers all magic to do with the mind, spirit and dreams.
-			It allows minds to be sensed and probed, and also enables
-			phantasmal attacks to be made against people.
-		</para>
+            Spirit covers all magic to do with the mind, spirit and dreams.
+            It allows minds to be sensed and probed, and also enables
+            phantasmal attacks to be made against people.
+        </para>
 
-		<para>
-		    Spirit magic is considered to be either passive or active.
-			Passive magic is difficult for a target to detect. Unless
-			they have some supernatural ability such as Second Sight or
-			can use magic themselves, then they will never notice if
-			they are the target of passive scrying. Others may get a
+        <para>
+            Spirit magic is considered to be either passive or active.
+            Passive magic is difficult for a target to detect. Unless
+            they have some supernatural ability such as Second Sight or
+            can use magic themselves, then they will never notice if
+            they are the target of passive scrying. Others may get a
             perception check at difficulty 30 less the level of the
-			cantrip.
-		</para>
-	</preface>
+            cantrip.
+        </para>
+    </preface>
 
     <spell name="Sense Mind" level="0" type="spirit">
         <range>-1/m</range>
         <duration>Concentration</duration>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Detects any minds out to the range of the spell, providing
                 a rough direction and range (5m, 10m, 20m, 40m etc). Unless
                 the target is magically shrouded, a moderate success will
-				detect human minds, a good success animal minds, and a
-				superb success very small animals.
+                detect human minds, a good success animal minds, and a
+                superb success very small animals.
             </para>
-            
+
             <para>
                 The wizard can try to concentrate on a single mind, this
                 action taking a round. The target gets an Ego roll to
@@ -45,51 +45,51 @@
             </para>
         </description>
     </spell>
-    
+
     <spell name="Sense Aura" level="1" type="spirit">
         <range>-1/m</range>
         <duration>Concentration</duration>
         <target>-5/extra</target>
- 
+
         <prerequisite>Sense Mind</prerequisite>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The wizard must be able to see the targets to be effected.
-				The level of success determines the amount of knowledge
-				gained.
+                The level of success determines the amount of knowledge
+                gained.
             </para>
-            
+
             <targetlist>
                 <valueLabel>Detail seen</valueLabel>
                 <targetLabel>Success</targetLabel>
-                
+
                 <item target="Moderate" value="Type.">
                     Type of mind detected, human, animal, elder, as well
                     as whether they are male or female, young or old.
                 </item>
-                
+
                 <item target="Good" value="State.">
                     The rough state of mind of the target - strong emotions
                     such as fear, love, excitement etc will show through if
                     they are currently active.
                 </item>
-                
+
                 <item target="Excellent" value="Passions.">
                     The strongest emotion currently in force will be known.
                 </item>
-                
+
                 <item target="Superb" value="Self.">
                     The wizard will see the target how they view themselves,
                     which may give clues to their personality, job or set
                     of skills. An off duty warrior in civilian clothes may
                     appear as an armed and armoured warrior for instance.
                 </item>
-                
+
                 <item target="Fantastic" value="God.">
                     The patron god of the target is known.
                 </item>
-                
+
                 <item target="Amazing" value="Morality.">
                     A vague indication of the morality of the target is
                     known. This is especially vague since it can be very
@@ -98,15 +98,15 @@
             </targetlist>
         </description>
     </spell>
-    
+
     <spell name="Empathy" level="3" type="spirit">
         <range>-1/m</range>
         <duration>Concentration</duration>
         <target>-5/extra</target>
-        
+
         <prerequisite>Sense Aura</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The wizard is able to know the emotional state of mind
                 of the target. They can scan the surface thoughts, and get
@@ -116,95 +116,95 @@
             </para>
         </description>
     </spell>
-    
+
     <spell name="Soul Sight" level="5" type="spirit">
         <range>-1/5m</range>
         <duration>Concentration</duration>
-        
+
         <prerequisite>Empathy</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Read surface thoughts of target.
             </para>
         </description>
     </spell>
-    
+
     <spell name="Dream Watch" level="5" type="spirit">
         <range>-1/m</range>
         <duration>Concentration</duration>
-        
+
         <prerequisite>Empathy</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 View a person's dreams as they dream them.
             </para>
         </description>
     </spell>
-    
+
     <spell name="Dream Walk" level="7" type="spirit">
         <range>-1/m</range>
         <duration>Sleep</duration>
-        
+
         <prerequisite>Dream Watch</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Walk in the target's dreams, influencing them and
                 communicating with the target.
             </para>
         </description>
     </spell>
-    
+
     <spell name="Sending" level="7" type="spirit">
         <range>-1/1km</range>
         <duration>Concentration</duration>
-        
+
         <prerequisite>Dream Watch</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Send a message to someone in their dreams.
             </para>
         </description>
     </spell>
-    
+
     <spell name="Living Nightmare" level="9" type="spirit">
         <range>-1/100m</range>
         <duration>Sleep</duration>
         <target>-3/extra</target>
-        
+
         <prerequisite>Dream Walk</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Turn a dream into a terror which may haunt the dreamer.
             </para>
         </description>
     </spell>
-    
+
     <spell name="Waking Dream" level="12" type="spirit">
         <range>-1/100m</range>
         <duration>Sleep</duration>
         <target>-3/extra</target>
-        
+
         <prerequisite>Living Nightmare</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The nightmares and fears of the target's come alive and
                 affect them when they are awake.
             </para>
         </description>
     </spell>
-    
+
     <spell name="Emote" level="1" type="spirit">
         <range>-1/m</range>
         <duration>Concentration</duration>
         <target>-5/extra</target>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The wizard can project his emotions to the target,
                 allowing them to know the wizard's state of mind. The
@@ -215,69 +215,69 @@
             </para>
         </description>
     </spell>
-    
+
     <spell name="Impress" level="3" type="spirit">
         <range>-1/m</range>
         <duration>Concentration</duration>
         <target>-5/extra</target>
-        
+
         <prerequisite>Emote</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Affect a person's emotions. Bonus to charisma rolls.
             </para>
         </description>
     </spell>
-    
+
     <spell name="Memory" level="5" type="spirit">
         <range>-1/m</range>
         <duration>Concentration</duration>
-        
+
         <prerequisite>Impress</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Affect a person's memories, changing them.
             </para>
         </description>
     </spell>
-    
+
     <spell name="Suggestion" level="7" type="spirit">
         <range>-1/5m</range>
         <duration>Momentary</duration>
-        
+
         <prerequisite>Memory</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Affect a person's thoughts, and suggest courses of actions
                 to them.
             </para>
         </description>
     </spell>
-    
+
     <spell name="Desire" level="9" type="spirit">
         <range>-1/m</range>
         <duration>Momentary</duration>
-        
+
         <prerequisite>Suggestion</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Implant a strong desire in someone for something. This is
                 a long term effect.
             </para>
         </description>
     </spell>
-    
+
     <spell name="Geas" level="12" type="spirit">
         <range>-1/m</range>
         <duration>Momentary</duration>
-        
+
         <prerequisite>Desire</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Person suffers if they fail to do something.
             </para>
@@ -287,31 +287,31 @@
     <spell name="Greater  Geas" level="15" type="spirit">
         <range>-1/m</range>
         <duration>Momentary</duration>
-        
+
         <prerequisite>Geas</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Person dies if they fail to do something.
             </para>
         </description>
     </spell>
-    
+
     <spell name="Fear" level="5" type="spirit">
         <range>-1/5m</range>
         <duration>Concentration</duration>
         <target>-5/doubling</target>
-        
+
         <prerequisite>Impress</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Instill fear in the target.
             </para>
         </description>
     </spell>
-    
-        
+
+
 </grimoire>
 
 

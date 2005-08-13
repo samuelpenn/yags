@@ -2,10 +2,10 @@
 
 <!--
     Water cantrips.
-    Version: $Revision: 1.4 $
-    Date:    $Date: 2005-04-17 13:42:23 $
+    Version: $Revision: 1.5 $
+    Date:    $Date: 2005-08-13 15:47:35 $
 -->
-<grimoire name="Water">
+<grimoire xmlns="http://yagsbook.sourceforge.net/xml/yags/habisfern" name="Water">
 
     <!--
         Following are the core spells. Various other threads split off from
@@ -16,7 +16,7 @@
         <duration>Momentary</duration>
         <radius>-1/m</radius>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Cause the area specified to be covered by a thin film of
                 water. The water is obtained from the air, so the amount
@@ -25,34 +25,34 @@
                 air. The air will be dryer after the cantrip has made the
                 change.
             </para>
-            
+
             <targetlist targetFirst="true">
                 <valueLabel>Level of wetness</valueLabel>
                 <targetLabel>Effect</targetLabel>
-                
+
                 <item target="0-9" value="Moist.">
                     Surface is moist. There will be no free standing water.
                     Candles go out, other fires unaffected.
                 </item>
-                
+
                 <item target="10-19" value="Wet.">
                     Droplets of water cover surfaces, clothing is
                     completely soaked. Small fires dimmed and may go out.
                 </item>
-                
+
                 <item target="20-29" value="Saturated.">
                     A millimetre of water covers all impermeable surfaces,
                     other items drip with water. Small fires go out,
                     medium fires reduced, larger fires cause a lot of
                     steam.
                 </item>
-                
+
                 <item target="30+" value="Flooded.">
                     Several millimetres of water covers everything. Double
                     amount of water each level beyond this.
                 </item>
             </targetlist>
-            
+
             <para>
                 Targets do not get any resistence. Only surfaces open to
                 the air from the point of view of the caster are affected.
@@ -66,53 +66,53 @@
 
         <prerequisite>Wet</prerequisite>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Creates a mist over an area which obscures vision and
                 causes everything to become damp. Once concentration has
                 ceased, the mist will dissipate normally. Sound is also
                 muffled in the mist, often more effectively than vision.
             </para>
-            
+
             <targetlist targetFirst="true">
                 <valueLabel>Thickness</valueLabel>
                 <targetLabel>Effect</targetLabel>
-                
+
                 <item target="0-9" value="Light.">
                     A light mist, vision is reduced to 250m (which may mean
                     no effect if the mist isn't this extensive). Surfaces
                     become moist (see the Wet cantrip) after a minute.
                 </item>
-                
+
                 <item target="10-19" value="Moderate.">
                     Vision is reduced to 100m.
                 </item>
-                
+
                 <item target="20-29" value="Heavy.">
                     Vision is reduced to 25m.
                 </item>
-                
+
                 <item target="30-39" value="Thick.">
                     Vision is reduced to 10m.
                 </item>
-                
+
                 <item target="40+" value="Very thick.">
                     An unnatural mist that reduces vision to 1m.
                 </item>
             </targetlist>
         </description>
     </spell>
-    
-    
+
+
     <spell name="Flood" level="5" type="water">
         <range>-1/5m</range>
         <duration>Concentration</duration>
         <target>10 tonnes, -2/x2</target>
         <effect>+100% volume/+5</effect>
-        
+
         <prerequisite>Mist</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Causes the specified body of water to radically grow in
                 volume. Each 5 points of spell effect will increase the
@@ -120,7 +120,7 @@
                 be in range of the spell when cast, but stays flooded
                 even if it passes out of range later.
             </para>
-            
+
             <para>
                 If the caster stands in (or near) a stream, then as soon
                 as enough water has flowed past to exceed the target of
@@ -128,17 +128,17 @@
             </para>
         </description>
     </spell>
-    
-    
+
+
     <spell name="Water's Embrace" level="7" type="water">
         <range>-1/5m</range>
         <duration>Concentration</duration>
         <target>-5/extra</target>
         <resist>Strength x Swim</resist>
-        
+
         <prerequisite>Flood</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 A body of water can be made to such down an object or
                 creature within it, or reject that object, enabling it to
@@ -146,7 +146,7 @@
                 can resist with a swim check, failure means that they are
                 totally submerged and may begin to drown.
             </para>
-            
+
             <para>
                 A creature expelled from water may crawl across the surface
                 or even attempt to walk, requiring an athletics check to
@@ -154,15 +154,15 @@
             </para>
         </description>
     </spell>
-    
-    
+
+
     <spell name="Control Water" level="9" type="water">
         <duration>Concentration</duration>
         <radius>-1/10m radius</radius>
-        
+
         <prerequisite>Water's Embrace</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Control the flow and movement of water within the radius
                 of the spell. The effect gives the degree of control.
@@ -174,14 +174,14 @@
             </para>
         </description>
     </spell>
-    
+
     <spell name="Body of Water" level="12" type="water">
         <duration>Concentration</duration>
         <range>Self</range>
-        
+
         <prerequisite>Control Water</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The caster's body changes to a water like substance.
                 It can move through water at will, and slowly on
@@ -189,23 +189,23 @@
             </para>
         </description>
     </spell>
-    
+
     <spell name="Sea's Wrath" level="15" type="water">
         <duration>Concentration</duration>
-        
+
         <prerequisite>Body of Water</prerequisite>
-        
+
         <description>
             <para>
                 Summon a tidal wave.
             </para>
         </description>
     </spell>
-    
+
     <!--
         Extingiush thread. Adds cancelling heat and light.
     -->
-    
+
     <spell name="Extinguish" level="3" type="water">
         <range>-1/5m</range>
         <duration>Momentary</duration>
@@ -213,27 +213,27 @@
 
         <prerequisite>Wet</prerequisite>
 
-        <description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 All fires within the effect of the cantrip are extinguished.
                 The effect governs how big a fire can be affected. Larger
                 fires may dim briefly, but will generally burn back to
                 full strength pretty quickly.
             </para>
-            
+
             <targetlist targetFirst="true">
                 <item target="0-9" value="Torches.">
                 </item>
-                
+
                 <item target="10-19" value="Camp fires.">
                 </item>
-                
+
                 <item target="20-29" value="Medium fires.">
                 </item>
-                
+
                 <item target="30-39" value="Large fires.">
                 </item>
-                
+
                 <item target="40+" value="House fires.">
                 </item>
             </targetlist>
@@ -243,33 +243,33 @@
     <spell name="Darkness" level="5" type="water">
         <range>-1/5m</range>
         <radius>-1/m</radius>
-        
+
         <prerequisite>Extinguish</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Each level of effect causes one level of darkness.
             </para>
         </description>
     </spell>
-    
+
     <spell name="Blind" level="5" type="water">
         <prerequisite>Darkness</prerequisite>
     </spell>
 
-    
+
     <!--
         Weather thread. Rain, snow etc.
     -->
-    
-        
+
+
     <spell name="Rain" level="5" type="water">
         <duration>Concentration</duration>
         <area>-1/10m</area>
-        
+
         <prerequisite>Mist</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 It starts to rain over the area specified, centred on the
                 caster. The amount of rain will depend on the effectiveness
@@ -277,64 +277,64 @@
             </para>
         </description>
     </spell>
-    
-    
-    
-    
+
+
+
+
     <spell name="Breathe Water" level="3" type="water">
         <range>-1/5m</range>
         <target>-5/extra</target>
-        
+
         <prerequisite>Wet</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Targets of this cantrip are able to breathe water as if it
                 were air without loosing the ability to breathe air.
             </para>
         </description>
     </spell>
-    
 
-    
-    
+
+
+
     <spell name="Cold" level="3" type="water">
         <duration>Concentration</duration>
         <radius>-1/m</radius>
-        
+
         <prerequisite>Wet</prerequisite>
-        
-        <description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Make the area cold.
             </para>
         </description>
     </spell>
-    
+
     <spell name="Frozen Touch" level="5" type="water">
         <prerequisite>Cold</prerequisite>
     </spell>
-    
+
     <spell name="Slow" level="5" type="water">
         <prerequisite>Cold</prerequisite>
     </spell>
-    
+
     <spell name="Fatigue" level="5" type="water">
         <prerequisite>Cold</prerequisite>
     </spell>
-    
+
     <spell name="Frost" level="5" type="water">
         <prerequisite>Cold</prerequisite>
     </spell>
-    
+
     <spell name="Breath of Winter" level="7" type="water">
         <prerequisite>Frost</prerequisite>
     </spell>
-    
+
     <spell name="Winter Cloak" level="9" type="water">
         <prerequisite>Breath of Winter</prerequisite>
     </spell>
-    
+
 </grimoire>
 
 
