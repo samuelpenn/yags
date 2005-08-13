@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl" type="text/xsl"?>
 
-<article>
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
         <title>Bestiary</title>
         <tagline>Yags 0.7</tagline>
@@ -16,8 +17,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.10 $</version>
-            <date>$Date: 2005-04-17 13:40:24 $</date>
+            <version>$Revision: 1.11 $</version>
+            <date>$Date: 2005-08-13 15:23:36 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -91,7 +92,7 @@
                         will generally have a mindset and goals quite
                         different from that of humanity.
                     </item>
-                    
+
                     <item name="Elemental">
                         Elementals are magical constructs inhabited by a
                         spirit, clothed in material such as rock, earth,
@@ -100,8 +101,8 @@
                         free will. They suffer fatigue, but have twice the
                         normal number of wound and stun levels.
                     </item>
-                    
-                    <item name="Vermin"> 
+
+                    <item name="Vermin">
                         Vermin are natural creatures with a tendency to
                         swarm. They are small and numerous.
                     </item>
@@ -110,14 +111,14 @@
                         Plant based creatures may be natural or magical,
                         and may have unique properties.
                     </item>
-                    
+
                     <item name="Undead">
                         Undead are the walking dead. They have no vital
                         organs, and have no need of food or sleep. They
                         ignore fatigue, and have double the normal number
                         of wound and stun levels for their size.
                     </item>
-                    
+
                     <item name="Ethereal">
                         Ethereals have no physical body, and cannot be
                         harmed by physical weapons. Likewise, they cannot
@@ -449,11 +450,11 @@
                         </row>
                     </tbody>
                 </table>
-                
-                
+
+
                 <sect3>
                     <title>Damage</title>
-                    
+
                     <para>
                         There are three types of damage in Yags - stun,
                         wounds and mixed. Wound damage is the most deadly,
@@ -463,13 +464,13 @@
                         and as such most animals will do either stun or
                         mixed (a mixture of stuns and wounds) damage.
                     </para>
-                    
+
                     <para>
                         However, whilst the blow from a whale's tail may
                         be considered stun damage by other whales, to a
                         small human, such damage can be deadly.
                     </para>
-                    
+
                     <para>
                         If the attacking creature is two size categories
                         larger than the defender, then all damage is
@@ -483,7 +484,7 @@
                         A gigantic creature always does wound damage to a
                         medium sized foe.
                     </para>
-                    
+
                     <para>
                         There is an exception to this, in that some very
                         large creatures might have attacks which aren't
@@ -498,7 +499,7 @@
 
             <sect2>
                 <title>Base Soak</title>
-                
+
                 <para>
                     By default, all medium sized creatures have a
                     basic soak of 12. Larger or smaller creatures
@@ -508,7 +509,7 @@
                     other than superficial cuts, which aren't worth
                     even a single wound level.
                 </para>
-                
+
                 <targetlist bold="true">
                     <targetLabel>Soak</targetLabel>
                     <valueLabel>Creature Size</valueLabel>
@@ -524,7 +525,7 @@
                     <item target="30" value="Colossal"/>
                     <item target="35" value="Titanic"/>
                 </targetlist>
-                
+
                 <para>
                     Large creatures will tend to have strengths of
                     a suitable value in order to injure creatures
@@ -570,7 +571,7 @@
                 </targetlist>
 
             </sect2>
-            
+
             <sect2>
                 <title>Multiple Attacks</title>
 
@@ -599,7 +600,7 @@
                     attack wouldn't work, and yet all should be possible
                     each round.
                 </para>
-                
+
                 <para>
                     To this end, some creatures are capable of attacking
                     multiple creatures simultaneously. There are two
@@ -611,7 +612,7 @@
                     everyone in an area - a single tail swipe may knock
                     over several people if the beast is huge.
                 </para>
-                
+
                 <sect3>
                     <title>Area attacks</title>
 
@@ -623,7 +624,7 @@
                         creature. Generally, only huge creatures
                         or bigger can make an area attack.
                     </para>
-                    
+
                     <para>
                         When a beast makes an area attack, all people
                         in the area are potential targets. The beast
@@ -637,15 +638,15 @@
             </sect2>
 
         </sect1>
-        
+
         <sect1>
             <title>Advantages</title>
-            
+
             <para>
                 Beasts have a number of advantages available to them.
             </para>
-            
-            <import-advantages href="options/beast-advantages.yags" type="advantage"/>
+
+            <y:import-advantages href="options/beast-advantages.yags" type="advantage"/>
         </sect1>
     </body>
 </article>
