@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.12 $</version>
-            <date>$Date: 2005-08-09 08:47:46 $</date>
+            <version>$Revision: 1.13 $</version>
+            <date>$Date: 2005-08-20 22:50:33 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -71,17 +71,17 @@
 
     <!--
         Awareness.
-        -->
-    <advantage name="Combat awareness" type="technique">
+    -->
+    <advantage name="Blind fighting" type="technique">
         <cost points="4"/>
         <skill name="Awareness"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character can keep track of things going on around
-                them in the most hectic of circumstances. In combat or
-                similar situations, they get a +1 to their perception
-                when making rolls to notice things.
+                The character is trained to fight in conditions where
+                vision is restricted. Gain a +1 bonus to Perception
+                for every four points of <e>Awareness</e> when it is
+                used to cap skills in darkness. Automatic.
             </para>
         </description>
     </advantage>
@@ -94,7 +94,7 @@
             <para>
                 The character is good at reacting to things when asleep.
                 With this technique, awareness rolls are only halved when
-                fully asleep, and unaffected if dozing.
+                fully asleep, and unaffected if dozing. Automatic.
             </para>
         </description>
     </advantage>
@@ -102,7 +102,7 @@
 
     <!--
         Charm.
-        -->
+    -->
     <advantage name="Seduction" type="technique">
         <cost points="4"/>
         <skill name="Social"/>
@@ -397,32 +397,6 @@
         </description>
     </advantage>
 
-    <advantage name="Blind fighting" type="technique">
-        <cost points="4"/>
-        <skill name="Awareness"/>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The character is trained to fight in conditions where
-                vision is restricted. Gain a +1 bonus to Perception
-                when it is used to cap combat skills in darkness.
-                Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Improved blind fighting" type="technique">
-        <cost points="8"/>
-        <skill name="Awareness"/>
-        <prerequisite>Blind fighting</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                As <e>Blind fighting</e>, but gives a further +1 bonus
-                on top of that (for a total of +2). Automatic.
-            </para>
-        </description>
-    </advantage>
-
     <advantage name="Sea legs" type="technique">
         <cost points="4"/>
         <skill name="Athletics"/>
@@ -481,6 +455,8 @@
             </para>
         </description>
     </advantage>
+
+
     <!--
         Aggressive
 
@@ -508,13 +484,14 @@
 
         <prerequisite>Improved attack</prerequisite>
 
-        <short>Do +3 damage on all attacks.</short>
+        <short>Do extra damage on all attacks.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Improved skill enables a skilled attacker to more
-                effectively harm their foe. All attacks do +3 damage
-                regardless of stance. Automatic.
+                effectively harm their foe. Regardless of stance,
+                all attacks have a bonus to damage equal to the
+                skill score of the character.
             </para>
         </description>
     </advantage>
@@ -928,72 +905,6 @@
 
 
 
-    <!--
-        Finesse based.
-        -->
-
-    <advantage name="Finesse" type="technique">
-        <cost points="2"/>
-        <skill name="Melee"/>
-
-        <short>Trade damage for extra speed.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Character is able to trade hitting power for accuracy.
-                Get +5 to attack and initiative rolls, but -5 to damage
-                rolls.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Disarm" type="technique">
-        <cost points="4"/>
-        <skill name="Armed melee"/>
-
-        <prerequisite>Finesse</prerequisite>
-
-        <short>Try to disarm your foe.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Character can try to disarm their foe. A disarm attempt
-                is an opposed dexterity x skill check between the two,
-                with +3 for a heavy weapon, and -3 for a light weapon.
-                Weapons being used with two hands have a +5 bonus if
-                defending against a <e>disarm</e>.
-            </para>
-
-            <para>
-                It is easier to disarm a foe if the two weapons are
-                roughly equivalent in size - if the target weapon is much
-                bigger then it has a mass advantage, if it is much smaller,
-                then it is harder to hit effectively. For each point of
-                difference in <e>reach</e>, the defender gets +3.
-            </para>
-
-            <para>
-                A disarm attempt is a declared action, and uses up one
-                defence slot. A success disarms the foe, a failure allows
-                them a <e>free strike</e>.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Quickdraw" type="technique">
-        <cost points="4"/>
-        <skill name="Armed melee"/>
-        <prerequisite>Finesse</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The character can draw a weapon and attack without penalty
-                in the same round. The character must use the <e>normal</e>
-                stance, and cannot defend with the weapon until her
-                initiative.
-            </para>
-        </description>
-    </advantage>
 
     <advantage name="Fire into melee" type="technique">
         <cost points="4"/>
@@ -1061,21 +972,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Due to extensive training with arm muscles, the archer gets
-                +1 to their strength for purposes of using a longbow.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Greater pull" type="technique">
-        <cost points="8"/>
-        <skill name="Bow"/>
-        <prerequisite>Improved pull</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Similar to, and stacks with, <e>improved pull</e>. The
-                archer gets a +1 to their strength for using a longbow.
+                Due to extensive training with arm muscles, the archer
+                gets +1 to their strength for purposes of using a longbow
+                for every four points of <e>Bow</e> skill.
             </para>
         </description>
     </advantage>

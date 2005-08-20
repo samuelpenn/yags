@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.73 $</version>
-            <date>$Date: 2005-08-09 08:47:46 $</date>
+            <version>$Revision: 1.74 $</version>
+            <date>$Date: 2005-08-20 22:50:33 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -192,9 +192,9 @@
                     </item>
 
                     <item name="Combat bonuses">
-                        The four statistics which define the bonuses a
+                        The three statistics which define the bonuses a
                         weapon provides to skill and damage rolls in combat
-                        (initiative, attack, defence and damage).
+                        (attack, defence and damage).
                     </item>
                 </itemlist>
             </sect2>
@@ -245,7 +245,7 @@
                     </para>
 
                     <para>
-                        When using a brawling attack, the initiative,
+                        When using a brawling attack, the
                         attack, defence and damage bonuses of the weapon
                         (or the natural bonuses of the creature) add to
                         the combat rolls.
@@ -411,13 +411,6 @@
                     </para>
 
                     <itemlist order="strict">
-                        <item name="Initiative">
-                            This represents the speed, reach and tactical
-                            advantage provided by the weapon. A good
-                            initiative is represented by acting first in
-                            a combat.
-                        </item>
-
                         <item name="Attack">
                             This provides a bonus to hit the target. It is
                             a measure of accuracy and also weight and
@@ -573,60 +566,41 @@
                         <targetLabel>Reach</targetLabel>
                         <valueLabel>Examples</valueLabel>
 
-                        <item target="0">
-                            Fist, knife.
+                        <item target="Close (0)">
+                            Fist, knife, dagger.
                         </item>
 
-                        <item target="1">
-                            Kick, dagger, hand axe.
+                        <item target="Short (1)">
+                            Short sword, club, hand axe, shield, mace.
                         </item>
 
-                        <item target="2">
-                            Short sword, club, shield.
+                        <item target="Medium (2)">
+                            Broad sword, battle axe, javelin.
                         </item>
 
-                        <item target="3">
-                            Broad sword, bastard sword, axe.
+                        <item target="Long (3)">
+                            Long sword, broad axe, spear,
+                            great sword, quarterstaff.
                         </item>
 
-                        <item target="4">
-                            Long sword, broad axe.
-                        </item>
-
-                        <item target="5">
-                            Great sword, quarterstaff, war spear.
-                        </item>
-
-                        <item target="6">
-                            Long spear or other pole arm.
+                        <item target="Very long (4)">
+                            Long spear.
                         </item>
                     </targetlist>
 
                     <para>
-                        Weapons up to reach one require little or no space
-                        to wield, and can be used without penalty in even a
-                        confined space. Longer weapons need at least
-                        one metre of space for each full two points of
-                        reach, if they are to be swung effectively.
-                        Thrusting weapons may need space behind them.
-                        If there is not enough space, then the user is at
-                        -5 to all rolls per point of reach beyond that
-                        available.
+                        <e>Close</e> weapons can be used in pretty much
+                        any circumstance without penalty, including when
+                        grappled with someone. Longer weapons require a
+                        greater amount of space, and may suffer a penalty
+                        if used in confined conditions.
                     </para>
 
                     <para>
-                        If a character is fighting defensively, then they
-                        get a bonus of +3 to their defence for each point
-                        of reach extra they have over their opponent.
-                    </para>
-
-                    <para>
-                        If one character's weapon is at least 2 reach
-                        longer than the other's, and neither they nor their
-                        attacker is fighting defensively, then the defender
-                        gets an automatic strike if they make a good
-                        defence. See the <e>Spearman</e> technique for
-                        possible bonuses that apply here.
+                        If a defender is attacked by someone with a weapon
+                        of shorter reach, then the defender gets a
+                        <e>free strike</e> on the attacker just before
+                        the attack.
                     </para>
 
                     <sect4>
@@ -651,25 +625,19 @@
                             If a group of warriors are fighting in two or
                             more ranks, than it is possible for people in
                             the second rank to attack through the first
-                            rank against the enemy if they have weapons
-                            with sufficient reach.
+                            rank against the enemy if they have thrusting
+                            weapons with sufficient reach.
                         </para>
 
                         <para>
-                            The reach of the weapon is reduced by two plus
-                            the reach of the target's weapon. If it is
-                            zero or greater, then the second rank may also
-                            strike at the target with thrusting weapons.
-                            Any such attack is always slow, and counts as
-                            coming from the first rank character (i.e.,
-                            the target does not need to defend against two
-                            opponents). The second rank can only use the
+                            If the second rank has weapons at least two
+                            reach greater than the target, then the target
+                            can be attacked. All such attacks are
+                            <e>slow</e>, and count as being an attack by
+                            the first rank (i.e. if the target is being
+                            attacked by two ranks, it only uses one defence
+                            slot). The second rank can only use the
                             normal stance.
-                        </para>
-
-                        <para>
-                            See the <e>Second rank</e> technique which
-                            removes some of the above limitations.
                         </para>
                     </sect4>
 
@@ -677,31 +645,17 @@
                         <title>Unarmed attacks</title>
 
                         <para>
-                            An attacker who does not have any real weapons
-                            is at a disadvantage against a defender with a
-                            real weapon. A real weapon is anything which
-                            does more than <e>stun</e> damage, or has a
-                            reach greater than zero and isn't part of the
-                            attacker's body.
+                            <e>Martial</e> weapons are any melee weapon
+                            which does more than <e>stun</e> damage. They
+                            are items designed to kill people, rather
+                            than improvised heavy objects.
                         </para>
 
                         <para>
-                            If an attack is made (e.g. with a fist or kick,
-                            or a sap, but not a knife) against a defender
-                            with a sword, then an <e>good defence</e>
-                            results in an <e>automatic strike</e> against
-                            the attacker. Note that most animals don't have
-                            <e>real</e> weapons according to his definition,
-                            so are vulnerable to automatic strikes.
-                        </para>
-
-                        <para>
-                            If the conditions for much greater reach, and
-                            unarmed attacks are both met in the same attack
-                            (i.e. a punch against anyone with a short sword
-                            or longer), then only a <e>moderate defence</e>
-                            is required in order to get an <e>automatic
-                            strike</e>.
+                            If an attacker with a non-martial weapon
+                            attacks a defender with a martial weapon, then
+                            the defender gets a <e>free strike</e> if they
+                            ever succeed in a <e>good</e> defence.
                         </para>
                     </sect4>
                 </sect3>
@@ -729,7 +683,7 @@
                     </y:import-weaponlist>
 
                     <para>
-                        The four ability modifiers - initiative, attack,
+                        The three ability modifiers - attack,
                         defence and damage add to the base ability for a
                         character when they are using that weapon.
                     </para>
@@ -750,6 +704,44 @@
             </para>
 
             <sect2>
+                <title>Initiating Combat</title>
+
+                <para>
+                    When a combat begins, actions and time are
+                    sorted into <e>rounds</e>, each being about five
+                    second long. A character can move and perform
+                    one <e>action</e> each round. They may also make
+                    a number of defences.
+                </para>
+
+                <para>
+                    The first thing that occurs is that <e>initiative</e>
+                    is determined. Initiative is rolled once at the start
+                    of the combat, and determines the order in which
+                    characters declare actions and act in each round.
+                </para>
+
+                <y:skeq>
+                    <y:title>Determining Initiative</y:title>
+                    <y:attr>agility</y:attr>
+                    <y:const>4</y:const>
+                    <y:die/>
+                </y:skeq>
+
+                <para>
+                    On a fumble (a natural one), the character cannot
+                    take an action (though may defend) during the first
+                    round, but otherwise acts as normal.
+                </para>
+
+                <para>
+                    In the case of a tie between two or more characters,
+                    compare agilities, then perception, then intelligence.
+                    If it's still a tie, then roll for it.
+                </para>
+            </sect2>
+
+            <sect2>
                 <title>The Combat Round</title>
 
                 <para>
@@ -761,12 +753,8 @@
 
                 <itemlist order="1">
                     <item>
-                        Roll initiative.
-                    </item>
-                    <item>
-                        Determine character actions. Targets of attacks
-                        are declared, as are the number of defences
-                        that are to be made that round.
+                        Characters declare actions in order of increasing
+                        initiative.
                     </item>
                     <item>
                         Perform all fast actions in decreasing
@@ -788,98 +776,22 @@
                 </itemlist>
 
                 <sect3>
-                    <title>Initiative</title>
-
-                    <para>
-                        <e>Initiative</e> determines who has the advantage
-                        during a round of combat. It is a mixture of speed,
-                        reach, tactics and luck.
-                    </para>
-
-                    <para>
-                        If a character is making an attack, then their
-                        initiative is
-                        <y:skeq>
-                            <y:attr>agility</y:attr>
-                            <y:sk>skill</y:sk>
-                            <y:bonus>weapon bonus</y:bonus>
-                        </y:skeq>
-                        whilst for most other actions it is simply based on
-                        <y:skeq><y:attr>agility</y:attr><y:sk>brawl</y:sk></y:skeq>.
-                    </para>
-
-                    <para>
-                        Actions are declared in order of lowest initiative
-                        to highest initiative. Characters act in order of
-                        highest initiative to lowest. Some actions are
-                        considered to be <e>fast</e> or <e>slow</e> - all
-                        <e>fast</e> actions go first (in initiative order),
-                        normal actions go next and then <e>slow</e> actions
-                        happen. This split has no affect on the actual
-                        declaration of actions.
-                    </para>
-
-                    <sect4>
-                        <title>Fumbling initiative</title>
-
-                        <para>
-                            Initiative rolls fumble on a natural one. If
-                            this occurs, then the character cannot take any
-                            actions that round (such as attacking or
-                            moving) and also loose their first defence.
-                            They cannot change their stance from the
-                            previous round.
-                        </para>
-
-                        <para>
-                            The character may opt to ignore these
-                            penalties, and they instead gain a level of
-                            fatigue (but can attack and defend as normal).
-                            The fatigue is gained at the end of the round.
-                        </para>
-
-                        <para>
-                            A character who is encumbered adds their level
-                            of encumbrance to their fumble chance. For
-                            example, a character who is moderately
-                            encumbered (more than twice their carry
-                            capacity) at level 2, will fumble initiative
-                            on a natural roll of 1-3.
-                        </para>
-                    </sect4>
-                </sect3>
-
-                <sect3>
-                    <title>Determine Actions</title>
+                    <title>Declaring Actions</title>
 
                     <para>
                         At the start of each round, all combatants declare
-                        their actions simultaneously. Since a round is five
-                        seconds, there is generally time to notice what
-                        everyone else is doing before committing. If someone
-                        takes a long time deciding on their action however,
-                        then they loose it for that round.
+                        their actionsin order of increasing initiative.
+                        This means that characters with a high initiative
+                        get to see what lower initiative people are doing
+                        before they get to act.
                     </para>
 
                     <para>
                         If a character is performing an attack, then stance
-                        and techniques should be declared at this point.
-                        Once all attacks have been declared, characters can
-                        declare how many attacks they are defending
-                        against. It is not necessary to declare exactly
-                        which attacks are being defended against.
-                    </para>
-
-                    <para>
-                        Action determination is considered to be
-                        simultaneous for everyone. If a character
-                        wishes to 'wait' then they must declare what
-                        they are waiting for, and what they will do
-                        when it happens. Declarations such as
-                        <e>I'll hit him if he moves</e>
-                        are perfectly valid. If he hasn't moved by the end
-                        of the round however, then the character does not
-                        get any action.
+                        and techniques should be declared at this point. A
+                        character should also declare how many defences
+                        they are making this round, though they don't need
+                        to declare who the defences will be made against.
                     </para>
 
                     <sect4>
@@ -889,11 +801,11 @@
                             A character's stance is considered to be
                             <e>normal</e> unless stated otherwise. Stance
                             determines what actions and techniques are
-                            possible. Sometimes, stance is determined before
-                            hand due to circumstances - a character who has
-                            been knocked to the floor is considered to be
-                            <e>prone</e>, regardless of what they wish to do
-                            themselves.
+                            possible. Sometimes, stance is determined
+                            before hand due to circumstances - a
+                            character who has been knocked to the floor
+                            is considered to be <e>prone</e>, regardless
+                            of what they wish to do themselves.
                         </para>
 
                         <itemlist order="sort">
@@ -954,14 +866,17 @@
                         </itemlist>
                     </sect4>
 
-
                     <sect4>
                         <title>Declaring Attacks</title>
 
                         <para>
-                            Attacks are declared before initiative is
-                            determined, and any techniques to be used are
-                            decided at this point.
+                            When an attack is declared, the target of the
+                            attack, the stance and any techniques must
+                            be decided. There is a limit to how many
+                            attackers may attack the same opponent. Against
+                            human sized defenders, no more than six
+                            attackers declare an attack against them in
+                            any one round.
                         </para>
                     </sect4>
 
@@ -972,15 +887,10 @@
                             A character may defend against any number
                             of opponents, though there are penalties
                             if more than one defence is performed.
-                            Since defenses are being declared, it is
-                            necessary for a character to know who is
-                            attacking them that round, so defenses are
-                            declared after all attacks.
-                        </para>
-
-                        <para>
-                            A single defence will protect against all
-                            attacks from a single opponent.
+                            Each declared defence will defend against
+                            any number of attacks from a single attacker.
+                            Only the number of defences need to be
+                            declared at this point.
                         </para>
                     </sect4>
                 </sect3>
@@ -989,7 +899,10 @@
                     <title>Perform Actions</title>
 
                     <para>
-                        Actions are performed.
+                        Actions are performed in decreasing order of
+                        initiative, though are split into three phases -
+                        all fast actions, all normal actions and finally
+                        all slow actions.
                     </para>
                 </sect3>
 
@@ -998,7 +911,7 @@
 
                     <para>
                         At the end of each round, any general
-                        bookkeeping can be performed. If stamina rolls
+                        book keeping can be performed. If stamina rolls
                         are needed to remain conscious, then they are
                         made now.
                     </para>
@@ -1024,9 +937,13 @@
                     being tied up or using the <e>focused</e> stance),
                     the attacker must declare a defence against the
                     target. Failing to do so means that the target may
-                    get a free strike against the attacker immediately
-                    following the attack, assuming that the target is
-                    still standing. This defence declaration must be
+                    get a <e>free strike</e> against the attacker
+                    immediately following the attack, assuming that the
+                    target is still standing.
+                </para>
+
+                <para>
+                    This defence declaration must be
                     made before the attack, and cannot be left until
                     afterwards when the free strike is made (making
                     the free strike effectively an automatic strike in
@@ -1038,7 +955,8 @@
                     attack rating as follows.
                 </para>
 
-                <y:skeq title="Attack roll">
+                <y:skeq>
+                    <y:title>Attack roll</y:title>
                     <y:attr>attribute</y:attr>
                     <y:sk>skill</y:sk>
                     <y:bonus>weapon attack bonus</y:bonus>
@@ -1052,7 +970,8 @@
                     defence roll.
                 </para>
 
-                <y:skeq title="Defence roll">
+                <y:skeq>
+                    <y:title>Defence roll</y:title>
                     <y:attr>attribute</y:attr>
                     <y:sk>skill</y:sk>
                     <y:bonus>weapon defence bonus</y:bonus>
@@ -1097,17 +1016,10 @@
                     </targetlist>
 
                     <para>
-                        Characters with a shield using the <e>weapon and
-                        shield</e> style may defend against an extra
-                        opponent each round. A character who is using the
-                        defensive stance may also defend against an extra
-                        opponent. All such bonuses are cumulative.
-                    </para>
-
-                    <para>
-                        Some techniques and abilities allow further
-                        opponents to be defended against, but the maximum
-                        is six.
+                        A character who is using the defensive stance
+                        increases their maximum by one. Other techniques
+                        may also add to this, and all such additions are
+                        cumulative, but the maximum is always six.
                     </para>
                 </sect3>
             </sect2>
@@ -2342,6 +2254,62 @@
 
         <sect1>
             <title>Advanced Combat</title>
+
+            <sect2>
+                <title>Special Actions</title>
+
+                <sect3>
+                    <title>Retreating defence</title>
+
+                    <para>
+                        If a character is willing to give ground, then
+                        they can gain a bonus to their defence if they
+                        are using the <e>defensive stance</e>. They
+                        can move backwards (away from their attacker)
+                        up to a number of metres equal to their agility.
+                        Each metre gives +3 to their defence roll,
+                        however they may not make any attacks.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Acrobatic stunts</title>
+
+                    <para>
+                        A character can attempt an acrobatic stunt in
+                        order to surprise their foe and gain an advantage.
+                        A stunt may be as simple as leaping straight at
+                        their foe, or as complex as jumping over a
+                        bannister and onto a rope, then striking as they
+                        swing back.
+                    </para>
+
+                    <para>
+                        The GM should assign a basic difficulty for the
+                        stunt - generally from 10 to 30. The character
+                        then decides how complex they want to make the
+                        stunt - each level adds +10 to the difficulty
+                        but gives +3 bonus to the attack roll.
+                    </para>
+
+                    <targetlist targetFirst="false">
+                        <targetLabel>Target</targetLabel>
+                        <valueLabel>Type of stunt</valueLabel>
+
+                        <item target="10" value="Easy">
+                        </item>
+
+                        <item target="20" value="Moderate">
+                        </item>
+
+                        <item target="30" value="Difficult">
+                        </item>
+
+                        <item target="40" value="Very difficult">
+                        </item>
+                    </targetlist>
+                </sect3>
+            </sect2>
 
             <sect2>
                 <title>Mounted combat</title>
