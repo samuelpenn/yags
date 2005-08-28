@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.74 $</version>
-            <date>$Date: 2005-08-20 22:50:33 $</date>
+            <version>$Revision: 1.75 $</version>
+            <date>$Date: 2005-08-28 12:34:58 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -982,6 +982,83 @@
                     If the attack roll is equal to or greater than the
                     defense roll, then the attack was a success.
                 </para>
+
+                <sect3>
+                    <title>Fumbles</title>
+
+                    <para>
+                        A fumble will normally occur on a roll of a '1'.
+                        When a fumble occurs, there are a number of
+                        possible results. Which result happens is chosen
+                        by the character who fumbled unless their
+                        opponent has a <e>higher</e> skill score, in
+                        which case their opponent chooses.
+                    </para>
+
+                    <para>
+                        Only attack and defence rolls fumble - damage
+                        and soak rolls do not.
+                    </para>
+
+                    <sect4>
+                        <title>Fumbling an attack</title>
+
+                        <para>
+                            A fumbled attack roll is an automatic miss,
+                            and doesn't <e>require</e> a defence from the
+                            defender (so the defender can't fumble, and
+                            doesn't need to use a defence slot). The
+                            defender may optionally still defend however
+                            (they may have a special ability they want to
+                            use which requires a defence).
+                        </para>
+
+                        <itemlist order="unordered">
+                            <item>
+                                Attacker gains a point of fatigue.
+                            </item>
+
+                            <item>
+                                Attacker looses weapon (disarmed).
+                            </item>
+
+                            <item>
+                                Attacker's primary weapon breaks, but
+                                only if it is weak.
+                            </item>
+                        </itemlist>
+                    </sect4>
+
+                    <sect4>
+                        <title>Fumbling a defence</title>
+
+                        <para>
+                            A fumbled defence roll does not mean an
+                            automatic hit for the attacker, unless this
+                            option is chosen.
+                        </para>
+
+                        <itemlist order="unordered">
+                            <item>
+                                Defender gains a point of fatigue.
+                            </item>
+
+                            <item>
+                                Defender looses weapon (disarmed, choose
+                                which weapon if have multiple weapons).
+                            </item>
+
+                            <item>
+                                Defender's weapon breaks, but only if it
+                                is not strong.
+                            </item>
+
+                            <item>
+                                Fail defence, use base difficulty only.
+                            </item>
+                        </itemlist>
+                    </sect4>
+                </sect3>
 
                 <sect3>
                     <title>Multiple Opponents</title>
@@ -2285,29 +2362,38 @@
                     </para>
 
                     <para>
-                        The GM should assign a basic difficulty for the
-                        stunt - generally from 10 to 30. The character
-                        then decides how complex they want to make the
-                        stunt - each level adds +10 to the difficulty
-                        but gives +3 bonus to the attack roll.
+                        The base difficulty of the action depends on how
+                        tactically appropriate it is. Leaping onto someone
+                        from above is appropriate for example.
                     </para>
 
                     <targetlist targetFirst="false">
                         <targetLabel>Target</targetLabel>
                         <valueLabel>Type of stunt</valueLabel>
 
-                        <item target="10" value="Easy">
+                        <item target="10" value="Appropriate">
+                            Action would give tactical advantage.
                         </item>
 
-                        <item target="20" value="Moderate">
+                        <item target="20" value="Neutral">
+                            Probably no real tactical advantage.
                         </item>
 
-                        <item target="30" value="Difficult">
-                        </item>
-
-                        <item target="40" value="Very difficult">
+                        <item target="30" value="Silly">
+                            Not a tactically sound move.
                         </item>
                     </targetlist>
+
+                    <para>
+                        If the stunt is particularly difficult, then add
+                        another +10 or +20 to the base difficulty.
+                    </para>
+
+                    <para>
+                        The character then attempts the stunt, and if
+                        they succeed they get +5 to their attack, plus a
+                        further +5 for each extra level of success.
+                    </para>
                 </sect3>
             </sect2>
 

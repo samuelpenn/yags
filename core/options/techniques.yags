@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.13 $</version>
-            <date>$Date: 2005-08-20 22:50:33 $</date>
+            <version>$Revision: 1.14 $</version>
+            <date>$Date: 2005-08-28 12:34:58 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -134,7 +134,7 @@
 
     <!--
         Guile.
-        -->
+    -->
     <advantage name="Disguise" type="technique">
         <cost points="2"/>
         <skill name="Guile"/>
@@ -150,7 +150,7 @@
 
     <!--
         Sleight.
-        -->
+    -->
     <advantage name="Juggling" type="technique">
         <cost points="2"/>
         <skill name="Sleight"/>
@@ -167,7 +167,7 @@
 
     <!--
         Stealth.
-        -->
+    -->
 
     <advantage name="Silent running" type="technique">
         <cost points="4"/>
@@ -358,18 +358,6 @@
         </description>
     </advantage>
 
-    <advantage name="Combat reflexes" type="technique">
-        <cost points="4"/>
-        <skill name="Brawl"/>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The character has very fast reflexes, which give a +1
-                attribute bonus to all initiative rolls, as well as rolls
-                to surprise, and to avoid being surprised.
-            </para>
-        </description>
-    </advantage>
-
     <advantage name="Hard to kill" type="technique">
         <cost points="4"/>
         <skill name="Brawl"/>
@@ -383,7 +371,7 @@
             </para>
         </description>
     </advantage>
-
+<!--
     <advantage name="Ground fighting" type="technique">
         <cost points="4"/>
         <skill name="Athletics"/>
@@ -409,7 +397,7 @@
             </para>
         </description>
     </advantage>
-
+-->
     <advantage name="Stealthy in armour" type="technique">
         <cost points="4"/>
         <skill name="Stealth"/>
@@ -478,28 +466,113 @@
         </description>
     </advantage>
 
-    <advantage name="Improved blow" type="technique">
+    <advantage name="Combat reflexes" type="technique">
         <cost points="4"/>
-        <skill name="Armed melee"/>
+        <skill name="Melee"/>
 
         <prerequisite>Improved attack</prerequisite>
 
-        <short>Do extra damage on all attacks.</short>
+        <short>Best melee skill adds to initiative.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Improved skill enables a skilled attacker to more
-                effectively harm their foe. Regardless of stance,
-                all attacks have a bonus to damage equal to the
-                skill score of the character.
+                Character has a bonus to <e>initiative</e> equal to
+                their best melee skill score. Automatic.
             </para>
         </description>
     </advantage>
 
+    <advantage name="Second chance attack" type="technique">
+        <cost points="6"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Combat reflexes</prerequisite>
+
+        <short>Use fatigue to re-roll attack or damage.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Character can re-roll an attack or damage roll by
+                gaining a level of fatigue. Keep the highest.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Lucky strike" type="technique">
+        <cost points="8"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Second chance attack</prerequisite>
+
+        <short>Increase defender's chance of fumbling.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If the character rolls a natural '20' on an attack roll,
+                then they cause the defender to fumble, unless the
+                defender knows either the <e>Lucky strike</e> or
+                <e>Lucky defence</e> techniques.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Double attack" type="technique">
+        <cost points="10"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Lucky strike</prerequisite>
+
+        <short>Two attacks a round.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Aggressive stance. The attacker can attack twice, each time
+                at a -15 penalty to skill. The first attack is fast, the
+                second attack is slow, but both happen at the same
+                initiative.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Skilled strike" type="technique">
+        <cost points="12"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Double attack</prerequisite>
+
+        <short>Do extra damage on good attacks.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Each extra level of success in an attack does an extra +3
+                damage.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Triple attack" type="technique">
+        <cost points="15"/>
+        <skill name="Melee"/>
+        <prerequisite>Skilled strike</prerequisite>
+
+        <short>Three attacks a round.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Aggressive stance. The attacker can attack three times,
+                each time at a -30 penalty to skill. The first attack is
+                fast, the second attack is normal, and the third attack
+                is slow.
+            </para>
+        </description>
+    </advantage>
+
+
     <advantage name="Deadly strike" type="technique">
         <cost points="6"/>
         <skill name="Armed melee"/>
-        <prerequisite>Improved blow</prerequisite>
+
+        <prerequisite>Combat reflexes</prerequisite>
 
         <short>Kill foe in a single blow.</short>
 
@@ -519,77 +592,12 @@
         </description>
     </advantage>
 
-    <advantage name="Superior blow" type="technique">
-        <cost points="8"/>
-        <skill name="Armed melee"/>
-
-        <prerequisite>Deadly strike</prerequisite>
-
-        <short>Do +6 damage on all attacks.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Similar to improved blow, adds +3 to all damage rolls
-                with weapons. Stacks with the former technique to give
-                a total +6 damage bonus. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Double attack" type="technique">
-        <cost points="10"/>
-        <skill name="Melee"/>
-        <prerequisite>Superior blow</prerequisite>
-
-        <short>Two attacks a round.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Aggressive stance. The attacker can attack twice, each time
-                at a -15 penalty to skill. The first attack is fast, the
-                second attack is slow, but both happen at the same
-                initiative.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Great blow" type="technique">
-        <cost points="12"/>
-        <skill name="Armed melee"/>
-
-        <prerequisite>Double attack</prerequisite>
-
-        <short>Do +9 damage on all attacks.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Stacks with <e>Improved blow</e> and <e>Superior blow</e>
-                giving an extra +3 to damage, for a total of +9. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Triple attack" type="technique">
-        <cost points="15"/>
-        <skill name="Melee"/>
-        <prerequisite>Great blow</prerequisite>
-
-        <short>Three attacks a round.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Aggressive stance. The attacker can attack three times,
-                each time at a -30 penalty to skill. The first attack is
-                fast, the second attack is normal, and the third attack
-                is slow.
-            </para>
-        </description>
-    </advantage>
 
 
 
 
 
+<!--
     <advantage name="Sunder" type="technique">
         <cost points="4"/>
         <skill name="Armed melee"/>
@@ -638,66 +646,14 @@
             </para>
         </description>
     </advantage>
-
-
-
-    <advantage name="Knockback attack" type="technique">
-        <cost points="4"/>
-        <skill name="Armed melee"/>
-        <prerequisite>Improved attack</prerequisite>
-
-        <short>Try and knock someone over.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para role="descriptive">
-                Uses the force of the blow to try and knock the target
-                from their feet, or at least unsteady them ready for a
-                follow up attack. The defender suffers a -10 penalty to
-                any knockdown checks, but damage type is reduced by one
-                (e.g. <e>wounds</e> become <e>mixed</e>).
-            </para>
-
-            <para>
-                The knockback attack must be declared before the attack
-                is made, and uses up one defence. Aggressive.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Cleave" type="technique">
-        <cost points="6"/>
-        <skill name="Armed melee"/>
-        <prerequisite>Knockback attack</prerequisite>
-
-        <short>Halve armour of target.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Aggressive stance, declared, -10 to attack. Uses up one
-                defence. On a successful hit, the foe's armour (not total
-                soak) is halved for that attack (if already halved, or
-                impaled, it is reduced to zero).
-            </para>
-
-            <para>
-                Against light armour, cutting and piercing weapons do not
-                suffer a -10 to the attack. Against rigid armour, bashing
-                weapons do not suffer a -10.
-            </para>
-        </description>
-    </advantage>
-
-
-
-
-
+-->
 
 
     <!--
         Defensive
 
         The following techniques are all defensive in nature.
-        -->
+    -->
 
     <advantage name="Improved defence" type="technique">
         <cost points="2"/>
@@ -721,48 +677,48 @@
 
         <prerequisite>Improved defence</prerequisite>
 
-        <short>Second dodge or reduce damage if hit.</short>
+        <short>Increases base chance to be hit.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                If a character fails a defence roll, then they may use
-                another defence action to either give themselves a second
-                defence roll, or gain a +5 bonus to soak.
+                If a character is aware of an attack, but unable to
+                defend against it, then they may add their highest
+                melee skill score to their base difficulty to be hit
+                for one attack each round. Automatic.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Counter strike" type="technique">
+    <advantage name="Second chance defence" type="technique">
         <cost points="6"/>
         <skill name="Melee"/>
+
         <prerequisite>Reflex dodge</prerequisite>
 
-        <short>Free attack if good defence.</short>
+        <short>Re-roll defence or soak roll.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                If make a <e>good</e> defence, they may use up another
-                defence action to get a free strike on the attacker.
+                Character may gain a level of fatigue in order to re-roll
+                a defence or soak roll. Keep the highest.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Improved reflex dodge" type="technique">
+    <advantage name="Lucky defence" type="technique">
         <cost points="8"/>
         <skill name="Melee"/>
 
-        <prerequisite>Counter strike</prerequisite>
+        <prerequisite>Second chance defence</prerequisite>
 
-        <short>Free dodge to reduce damage.</short>
+        <short>Cause attacker to fumble attack.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                If the character fails a defence roll, then they get a +5
-                to their soak to resist damage from being able to dodge
-                back from the blow in order to reduce it's effectiveness.
-                This is automatic, but does not stack with
-                <e>reflex dodge</e>. If no defence roll is made against an
-                attack, then no soak bonus is gained.
+                If the character rolls a natural '20' on their defence,
+                then their attacker fumbles their attack roll. Attackers
+                who know <e>Lucky attack</e> or <e>Lucky defence</e> are
+                immune to this technique. Automatic.
             </para>
         </description>
     </advantage>
@@ -771,7 +727,7 @@
         <cost points="10"/>
         <skill name="Melee"/>
 
-        <prerequisite>Improved reflex dodge</prerequisite>
+        <prerequisite>Lucky defence</prerequisite>
 
         <short>Free attack against all attackers.</short>
 
@@ -840,16 +796,16 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The character is trained in fighting as part of a shield
-                wall. The character must be fighting with a shield along
-                side allies. The character's own attack and defence rolls
-                are unmodified, but their ally on their shield side gains a
-                defensive bonus equal to the character's skill level as long
-                as their ally also has this technique.
+                wall. When they are fighting in a shield wall formation,
+                those either side of them that also know this technique
+                gain a bonus to defence rolls equal to this character's
+                <e>weapon and shield</e> score. If a character gains
+                from two people with this technique, they do not stack,
+                and the character only gains the highest.
             </para>
 
             <para>
-                If the character uses any stance other than <e>normal</e>
-                or <e>defensive</e>, then they cannot use this technique.
+                <e>Defensive</e> or <e>normal</e> stance, declared.
             </para>
         </description>
     </advantage>
@@ -862,8 +818,25 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character gains a +5 bonus to defence when defending
-                against multiple attackers whilst using a shield.
+                The character gains a free defence against the target
+                of their attacks, which does not count towards their
+                maximum number of defences. Declared.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Shield bash" type="technique">
+        <cost points="6"/>
+        <skill name="Weapon and shield"/>
+
+        <prerequisite>Shield defence</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Character can use a defence slot to perform a second
+                attack with their shield at the same time as their
+                normal (first) attack. Does <e>stun</e> damage at a
+                bonus equal to their weapon skill.
             </para>
         </description>
     </advantage>
@@ -884,7 +857,7 @@
     </advantage>
 
 
-    <advantage name="Double rank" type="technique">
+    <advantage name="Two rank fighting" type="technique">
         <cost points="4"/>
         <skill name="Longshaft weapon"/>
 
@@ -901,14 +874,88 @@
         </description>
     </advantage>
 
+    <advantage name="Long defence" type="technique">
+        <cost points="6"/>
+        <skill name="Longshaft weapon"/>
+
+        <prerequisite>Two rank fighting</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When fighting defensively, if the character out reaches
+                their opponent then they get a +1 bonus to their
+                dexterity for attack and defence rolls.
+            </para>
+        </description>
+    </advantage>
 
 
+    <advantage name="Agile fighting" type="technique">
+        <cost points="2"/>
+        <skill name="Single weapon"/>
+
+        <short>Use agility instead of dexterity.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Character can opt to use either agility or dexterity
+                when making attack and defence rolls.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Acrobatic dodge" type="technique">
+        <cost points="4"/>
+        <skill name="Single weapon"/>
+
+        <prerequisite>Agile fighting</prerequisite>
+
+        <short>Free brawling defence each round.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Character gains a free brawl defence each round which
+                may be used against any attacker. Defence bonuses for
+                weapons do not apply.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Acrobatic defence" type="technique">
+        <cost points="6"/>
+        <skill name="Single weapon"/>
+
+        <prerequisite>Acrobatic dodge</prerequisite>
+
+        <short>Increases base chance to be hit.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Character can add their <e>athletics</e> score to their
+                base difficulty to be hit for all attacks they are aware
+                of in a round, but which they are unable to defend against.
+            </para>
+        </description>
+    </advantage>
 
 
+    <advantage name="Greater range" type="technique">
+        <cost points="2"/>
+        <skill name="Missile"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Add +1 to strength for purposes of maximum range of a
+                thrown weapon.
+            </para>
+        </description>
+    </advantage>
 
     <advantage name="Fire into melee" type="technique">
         <cost points="4"/>
         <skill name="Missile"/>
+
+        <prerequisite>Greater range</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -949,21 +996,6 @@
         </description>
     </advantage>
 
-    <advantage name="Improved aim" type="technique">
-        <cost points="4"/>
-        <skill name="Bow"/>
-
-        <prerequisite>Fast shot</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Character is exceptionally skilled at firing a long or
-                short bow. If a full round is spent aiming, then the
-                character can halve all range and circumstance penalties.
-            </para>
-        </description>
-    </advantage>
-
     <advantage name="Improved pull" type="technique">
         <cost points="4"/>
         <skill name="Bow"/>
@@ -979,14 +1011,17 @@
         </description>
     </advantage>
 
-    <advantage name="Greater range" type="technique">
-        <cost points="4"/>
-        <skill name="Missile"/>
+    <advantage name="Improved aim" type="technique">
+        <cost points="6"/>
+        <skill name="Bow"/>
+
+        <prerequisite>Improved pull</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Add +1 to strength for purposes of maximum range of a
-                thrown weapon.
+                Character is exceptionally skilled at firing a long or
+                short bow. If a full round is spent aiming, then the
+                character can halve all range and circumstance penalties.
             </para>
         </description>
     </advantage>
@@ -1021,22 +1056,23 @@
     </advantage>
 
     <advantage name="Mounted combat" type="technique">
-        <cost points="3"/>
+        <cost points="2"/>
         <skill name="Ride"/>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 A character with <e>mounted combat</e> does not have to make
                 a <e>ride</e> check whenever they attack from horseback.
                 Further, they get a bonus equal to their <e>ride</e> skill
-                which applies to initiative, attack, defence and damage
-                rolls made when mounted. This only applies to melee combat.
+                which applies to melee attack, defence and damage rolls
+                made when mounted.
             </para>
         </description>
     </advantage>
 
     <advantage name="Mounted archery" type="technique">
-        <cost points="3"/>
+        <cost points="4"/>
         <skill name="Ride"/>
+
         <prerequisite>Mounted combat</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -1056,8 +1092,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Gives a +1 bonus to intelligence when trying to find
-                the best route to somewhere.
+                Character is an expert navigator, and halves all
+                penalties due to bad circumstances when trying to
+                determine position, or plotting a course.
             </para>
         </description>
     </advantage>
