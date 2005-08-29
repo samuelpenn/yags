@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.75 $</version>
-            <date>$Date: 2005-08-28 12:34:58 $</date>
+            <version>$Revision: 1.76 $</version>
+            <date>$Date: 2005-08-29 21:22:15 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -46,9 +46,8 @@
             <para>
                 This is a basic introduction to the <tm>Yags</tm>
                 combat system, and a description of low tech fighting,
-                using swords, bows and brawling. Modern day warfare
-                is covered in <qv>Modern Combat</qv> and futuristic
-                combat is covered in <qv>Future Combat</qv>.
+                using swords, bows and brawling. Modern day and future
+                combat will be covered elsewhere.
             </para>
 
             <para>
@@ -709,7 +708,7 @@
                 <para>
                     When a combat begins, actions and time are
                     sorted into <e>rounds</e>, each being about five
-                    second long. A character can move and perform
+                    seconds long. A character can move and perform
                     one <e>action</e> each round. They may also make
                     a number of defences.
                 </para>
@@ -736,7 +735,7 @@
 
                 <para>
                     In the case of a tie between two or more characters,
-                    compare agilities, then perception, then intelligence.
+                    compare agility, then perception, then intelligence.
                     If it's still a tie, then roll for it.
                 </para>
             </sect2>
@@ -753,8 +752,12 @@
 
                 <itemlist order="1">
                     <item>
-                        Characters declare actions in order of increasing
-                        initiative.
+                        Characters declare actions, including movement and
+                        attacks, in order of increasing initiative.
+                    </item>
+                    <item>
+                        Characters declare how many defences they are
+                        making.
                     </item>
                     <item>
                         Perform all fast actions in decreasing
@@ -2393,6 +2396,101 @@
                         The character then attempts the stunt, and if
                         they succeed they get +5 to their attack, plus a
                         further +5 for each extra level of success.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Wrestling and brawling</title>
+
+                <para>
+                    Wrestling and brawling covers any unarmed hand to hand
+                    combat which is more complex than simply hitting the
+                    other guy. Since all such attacks generally require
+                    getting in very close to the target, they generate a
+                    <e>free strike</e> against the attacker.
+                </para>
+
+                <para>
+                    The attacker generally uses an agility based brawl
+                    attack, against the defender's brawl defence. If the
+                    defender has weapons, then they may defend with their
+                    weapons except that they use their <e>brawl</e> skill
+                    rather than normal weapon skill. Also, every point of
+                    reach of their weapon gives them a -5 penalty.
+                </para>
+
+                <para>
+                    If the initial attack succeeds, then the attacker can
+                    proceed to perform the action they are attempting
+                    (grapple, trip, overrun etc). Each extra level of
+                    success on the initial attack gives a +5 bonus to
+                    the next roll.
+                </para>
+
+                <sect3>
+                    <title>Grapple</title>
+
+                    <para>
+                        A grapple attempt involves one or both
+                        combatents trying to grab and hold the other.
+                        The defender can choose to either break free
+                        or grapple back. In either case, both make a
+                        contested brawl check, using either strength or
+                        agility (normally whichever is highest).
+                    </para>
+
+                    <para>
+                        If the defender wins, and they were trying to
+                        break free, then the attempt stops there,
+                        otherwise the winner is assumed to have grabbed
+                        and held the other, giving them a -1 to agility,
+                        dexterity and strength for further skill checks
+                        plus a further -1 for each level of success.
+                    </para>
+
+                    <para>
+                        As an action, a character can try to break free,
+                        by making a similar contested brawl check.
+                        Obviously, the looser of the last check is at
+                        a penalty.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Trip</title>
+
+                    <para>
+                        A <e>trip</e> is an attempt to trip, throw or knock
+                        a defender to the floor. After a successful brawl
+                        attack, the attacker makes a strength based brawl
+                        check to trip the defender. The defender rolls
+                        <y:skeq>
+                            <y:attr>strength</y:attr>
+                            <y:attr>agility</y:attr>
+                            <y:sk>brawl</y:sk>
+                            <y:sk>athletics</y:sk>
+                            <y:die/>
+                        </y:skeq>
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Overrun</title>
+
+                    <para>
+                        An overrun is an attempt by an attacker to move
+                        through a defender, either by forcing them out the
+                        way or by knocking them over. An attempt at an
+                        overrun counts as not using a weapon, so may
+                        generate a <e>free strike</e> unless the attacker
+                        has a medium or larger shield.
+                    </para>
+
+                    <para>
+                        The attacker makes a strength based brawling attack
+                        against the defender's defence strength or agility
+                        based
                     </para>
                 </sect3>
             </sect2>

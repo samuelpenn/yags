@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.14 $</version>
-            <date>$Date: 2005-08-28 12:34:58 $</date>
+            <version>$Revision: 1.15 $</version>
+            <date>$Date: 2005-08-29 21:22:16 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -241,109 +241,6 @@
         </description>
     </advantage>
 
-    <advantage name="Grapple" type="technique">
-        <cost points="0"/>
-        <skill name="Brawl"/>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                <e>Aggressive</e> or <e>normal</e> stance. A brawl attack
-                is made (with or without weapons), and if successful the
-                defender has been grabbed. The defender can choose to
-                either grab back, or try to break free. If the latter, an
-                immediate oppossed roll is made with
-                <skeq>
-                    <attr>strength</attr>
-                    <attr>agility</attr>
-                    <sk>brawl</sk>
-                </skeq>
-                roll against the attackers
-                <skeq>
-                    <attr>strength</attr>
-                    <sk>brawl</sk>
-                </skeq>
-                roll to keep hold. If the defender succeeds then the
-                grapple attempt is broken. On success, both are
-                considered to be <e>grappled</e>. Weapons do not count for
-                the roll to break free.
-            </para>
-
-            <para>
-                The reach of this attack is generally zero, so the defender
-                may get a <e>free strike</e>. If the attacker has weapons,
-                then they count as armed (no automatic strike against them).
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Trip" type="technique">
-        <cost points="0"/>
-        <skill name="Brawl"/>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                A trip is an attempt to place the defender on the floor by
-                throwing or tripping them. A
-                <skeq>
-                    <attr>agility</attr>
-                    <attr>strength</attr>
-                    <sk>brawl</sk>
-                    <penalty>5</penalty>
-                </skeq>
-                roll is made, and on success no damage is done, but the
-                defender is considered to be <e>unsteady</e>. A second
-                opposed roll is immediately made, with the attacker
-                using
-                <skeq>
-                    <attr>strength</attr>
-                    <sk>brawl</sk>
-                </skeq>
-                against the defender's
-                <skeq>
-                    <attr>strength</attr>
-                    <attr>agility</attr>
-                    <sk>brawl</sk>
-                    <sk>athletics</sk>
-                </skeq>.
-                Success by the attacker means that the defender is now
-                <e>prone</e>. If the two are already <e>grappled</e>,
-                then the first attack roll is not necessary.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Overrun" type="technique">
-        <cost points="0"/>
-        <skill name="Brawl"/>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                An overrun is considered an unarmed attack unless a
-                medium or larger shield is being used. The attacker
-                makes a <skeq><attr>strength</attr><sk>brawl</sk></skeq>
-                roll against the defender's
-                <skeq>
-                    <attr>strength</attr><attr>agility</attr>
-                    <sk>brawl</sk>
-                </skeq>
-                roll to withstand or dodge the attack. On success, the
-                attack can move past the defender regardless of any
-                attempts by the defender to block the attacker's
-                movement. On failure, if the defender resisted with
-                strength, then the attacker is stopped from moving any
-                further. If agility was used, then the defender side
-                stepped and the attacker moved through anyway. However,
-                the defender gets an <e>automatic strike</e> against
-                the attacker, which may be a <e>trip</e> attack at +10.
-            </para>
-
-            <para>
-                On a good success by the attacker, stun damage may be
-                done to the defender as per a standard brawling attack.
-                On an excellent success, the attacker may opt for a
-                free <e>trip</e> attack.
-            </para>
-        </description>
-    </advantage>
 
     <advantage name="Unarmed combat" type="technique">
         <cost points="4"/>
@@ -446,31 +343,13 @@
 
 
     <!--
-        Aggressive
+        Basic melee techniques.
 
-        The following techniques are based off from 'Improved attack'.
-        They generally use the aggressive stance, improving the
-        character's attack.
-        -->
-    <advantage name="Improved attack" type="technique">
+        The following techniques are common to all melee skills.
+    -->
+    <advantage name="Combat reflexes" type="technique">
         <cost points="2"/>
         <skill name="Melee"/>
-
-        <short>Bonus of +5 to damage when aggressive.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                When using the <e>aggressive stance</e>, gain a +5 bonus to
-                damage rolls as well as attack rolls. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Combat reflexes" type="technique">
-        <cost points="4"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Improved attack</prerequisite>
 
         <short>Best melee skill adds to initiative.</short>
 
@@ -482,36 +361,55 @@
         </description>
     </advantage>
 
-    <advantage name="Second chance attack" type="technique">
-        <cost points="6"/>
+    <advantage name="Reflex dodge" type="technique">
+        <cost points="4"/>
         <skill name="Melee"/>
 
         <prerequisite>Combat reflexes</prerequisite>
 
-        <short>Use fatigue to re-roll attack or damage.</short>
+        <short>Increases base chance to be hit.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character can re-roll an attack or damage roll by
-                gaining a level of fatigue. Keep the highest.
+                If a character is aware of an attack, but unable to
+                defend against it, then they may add their highest
+                melee skill score to their base difficulty to be hit
+                for one attack each round. Automatic.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Lucky strike" type="technique">
+
+    <advantage name="Skilled strike" type="technique">
+        <cost points="6"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Reflex dodge</prerequisite>
+
+        <short>Do extra damage on good attacks.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Each extra level of success in an attack does an extra +3
+                damage.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Unstoppable attack" type="technique">
         <cost points="8"/>
         <skill name="Melee"/>
 
-        <prerequisite>Second chance attack</prerequisite>
+        <prerequisite>Skilled strike</prerequisite>
 
         <short>Increase defender's chance of fumbling.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                If the character rolls a natural '20' on an attack roll,
-                then they cause the defender to fumble, unless the
-                defender knows either the <e>Lucky strike</e> or
-                <e>Lucky defence</e> techniques.
+                Automatic technique which applies when the character
+                rolls a natural '20' on their attack roll. If the
+                defender does not also have this technique, then any
+                defence is considered to be an automatic fumble.
             </para>
         </description>
     </advantage>
@@ -520,7 +418,7 @@
         <cost points="10"/>
         <skill name="Melee"/>
 
-        <prerequisite>Lucky strike</prerequisite>
+        <prerequisite>Unstoppable attack</prerequisite>
 
         <short>Two attacks a round.</short>
 
@@ -534,18 +432,18 @@
         </description>
     </advantage>
 
-    <advantage name="Skilled strike" type="technique">
+    <advantage name="Careful defence" type="technique">
         <cost points="12"/>
         <skill name="Melee"/>
 
         <prerequisite>Double attack</prerequisite>
 
-        <short>Do extra damage on good attacks.</short>
+        <short>Ignore free strikes.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Each extra level of success in an attack does an extra +3
-                damage.
+                Any free strikes against the character are ignored. Any
+                automatic strikes become free strikes instead. Automatic.
             </para>
         </description>
     </advantage>
@@ -553,7 +451,7 @@
     <advantage name="Triple attack" type="technique">
         <cost points="15"/>
         <skill name="Melee"/>
-        <prerequisite>Skilled strike</prerequisite>
+        <prerequisite>Careful defence</prerequisite>
 
         <short>Three attacks a round.</short>
 
@@ -567,33 +465,41 @@
         </description>
     </advantage>
 
+    <advantage name="Disarm" type="technique">
+        <cost points="4"/>
+        <skill name="Armed melee"/>
+
+        <prerequisite>Agile fighting</prerequisite>
+
+        <short>Make an attack to disarm a foe.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If a disarm is declared, then it uses up one defence
+                action, and the attack is at -10.
+            </para>
+        </description>
+    </advantage>
 
     <advantage name="Deadly strike" type="technique">
         <cost points="6"/>
         <skill name="Armed melee"/>
 
-        <prerequisite>Combat reflexes</prerequisite>
+        <prerequisite>Skilled strike</prerequisite>
 
         <short>Kill foe in a single blow.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Aggressive, -10 to attack roll, declared before
-                the attack. If the target is successfully wounded, then
+                Aggressive attack which also uses up one defence slot.
+                If the target is successfully wounded, then
                 they must make a size x stamina roll against a target of
                 10 + 5 x wounds (not stuns) caused or immediately drop
                 to fatally wounded. If they succeed their roll, then
                 they take one less wound from the attack than normal.
             </para>
-
-            <para>
-                A deadly strike uses up one defence.
-            </para>
         </description>
     </advantage>
-
-
-
 
 
 
@@ -650,144 +556,10 @@
 
 
     <!--
-        Defensive
-
-        The following techniques are all defensive in nature.
-    -->
-
-    <advantage name="Improved defence" type="technique">
-        <cost points="2"/>
-        <skill name="Melee"/>
-
-        <short>Gain bonus against multiple attackers.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Automatic, defensive stance. The character can defend
-                against up to one extra opponent, and they gain an extra
-                +5 to defence rolls when defending against multiple
-                attackers.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Reflex dodge" type="technique">
-        <cost points="4"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Improved defence</prerequisite>
-
-        <short>Increases base chance to be hit.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If a character is aware of an attack, but unable to
-                defend against it, then they may add their highest
-                melee skill score to their base difficulty to be hit
-                for one attack each round. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Second chance defence" type="technique">
-        <cost points="6"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Reflex dodge</prerequisite>
-
-        <short>Re-roll defence or soak roll.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Character may gain a level of fatigue in order to re-roll
-                a defence or soak roll. Keep the highest.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Lucky defence" type="technique">
-        <cost points="8"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Second chance defence</prerequisite>
-
-        <short>Cause attacker to fumble attack.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If the character rolls a natural '20' on their defence,
-                then their attacker fumbles their attack roll. Attackers
-                who know <e>Lucky attack</e> or <e>Lucky defence</e> are
-                immune to this technique. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Whirlwind defence" type="technique">
-        <cost points="10"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Lucky defence</prerequisite>
-
-        <short>Free attack against all attackers.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If the characteris using a <e>defensive stance</e>, then a
-                whirlwind defence can be declared at the start of the
-                round. The character looses all their attacks that round.
-                For every good defence made, the character gets a free
-                strike against their attacker, at a penalty equal to their
-                defence penalty for multiple defences (if any).
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Careful defence" type="technique">
-        <cost points="12"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Whirlwind defence</prerequisite>
-
-        <short>Ignore free strikes.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Any free strikes against the character are ignored. Any
-                automatic strikes become free strikes instead. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Counter defence" type="technique">
-        <cost points="15"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Careful defence</prerequisite>
-
-        <short>Free defence against targets.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The character gets a free defence action against any target
-                they are attacking that round. This defence does not count
-                towards the normal total, and is at full skill regardless of
-                the number of other defences being made.
-            </para>
-
-            <para>
-                If the character is making multiple attacks, a free defence
-                is gained against every target.
-            </para>
-        </description>
-    </advantage>
-
-
-    <!--
         Miscellaneous
 
         The following don't following the main trees.
-        -->
+    -->
 
     <advantage name="Shield wall" type="technique">
         <cost points="2"/>
