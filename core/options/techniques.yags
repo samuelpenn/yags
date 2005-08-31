@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.15 $</version>
-            <date>$Date: 2005-08-29 21:22:16 $</date>
+            <version>$Revision: 1.16 $</version>
+            <date>$Date: 2005-08-31 14:52:03 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -241,16 +241,53 @@
         </description>
     </advantage>
 
+    <advantage name="Wrestling" type="technique">
+        <cost points="2"/>
+        <skill name="Brawl"/>
+
+        <short>Only martial weapons cause a free strike.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When attempting a wrestle manouevre which normally
+                causes a <e>free strike</e>, the <e>free strike</e> is
+                ignored if the defender does not have a martial weapon.
+                Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Brute force" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+
+        <prerequisite>Wrestling</prerequisite>
+
+        <short>Can use strength when making an attack.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When making an attack roll, the character may use strength
+                instead of agility. However, doing so uses up one defence
+                slot and character may not use the <e>defensive stance</e>.
+            </para>
+        </description>
+    </advantage>
 
     <advantage name="Unarmed combat" type="technique">
         <cost points="4"/>
         <skill name="Brawl"/>
+
+        <prerequisite>Wrestling</prerequisite>
+
+        <short>Reduces the risk of free strikes.</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is trained in fighting with no weapons against
-                armed foes. Doing so is still not suggested, but the
-                <e>automatic strike</e> that the armed defender gets is
-                a <e>free strike</e> instead.
+                The character is trained in fighting with no weapons
+                against armed foes. A defender with a martial weapon only
+                gets a <e>free strike</e> if they make a <e>good</e>
+                defence roll.
             </para>
         </description>
     </advantage>
