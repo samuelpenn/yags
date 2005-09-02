@@ -2,29 +2,56 @@
 
 <!--
     These list generic advantages and disadvantages,
- -->
+
+    Version: $Revision: 1.10 $
+    Date:    $Date: 2005-09-02 22:19:18 $
+    Author:  Samuel Penn (sam@glendale.org.uk)
+
+-->
 
 <advantages xmlns="http://yagsbook.sourceforge.net/xml/yags">
 
-    <!--
-        Advantages.
-     -->
+    <advantage name="Good attribute" type="advantage">
+        <cost points="+3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has one attribute at level 4 rather than 3.
+                This advantage can be taken multiple times on different
+                attributes.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Excellent attribute" type="advantage">
+        <cost points="+5"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is truly exceptional in one attribute, and
+                can start with a score of 5 in it. The character must
+                already have taken <e>Good attribute</e> in this attribute.
+            </para>
+        </description>
+    </advantage>
+
     <advantage name="Keen hearing" type="advantage">
-        <cost points="+4"/>
+        <cost points="+1"/>
         <genre>Common</genre>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The character has very good hearing, and gains a bonus
-                of +1 to their perception when making hearing based
-                perception checks.
+                of +1 to their perception for purposes of hearing.
             </para>
         </description>
         <forbiddon>Poor hearing</forbiddon>
     </advantage>
 
     <advantage name="Keen vision" type="advantage">
-        <cost points="+4"/>
+        <cost points="+1"/>
         <genre>Common</genre>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -38,8 +65,8 @@
         <forbiddon>Poor vision</forbiddon>
     </advantage>
 
-    <advantage name="Musical affinity" type="advantage">
-        <cost points="+2"/>
+    <advantage name="Musical talent" type="advantage">
+        <cost points="+1"/>
         <genre>Common</genre>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -53,37 +80,34 @@
     </advantage>
 
     <advantage name="Night vision" type="advantage">
-        <cost points="+2"/>
+        <cost points="+1"/>
         <genre>Common</genre>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character gains +1 to their perception in partial darkness
-                (not full darkness). This comes into play whenever the
-                character has a penalty to perception because of darkness,
-                or if other actions are capped to their perception because
-                of darkness.
+                Character is particularly adept at seeing in the dark.
+                All penalties to perception for darkness (except for full
+                darkness) are reduced by one.
             </para>
         </description>
     </advantage>
 
     <advantage name="Beautiful" type="advantage">
         <cost points="+3"/>
-        <cost points="+9"/>
         <genre>Common</genre>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is very good looking, and gets a bonus to
-                charisma when trying to charm members of a compatible sex.
-                There are two levels to this advantage, the second level
-                giving +2 to Charisma instead of +1.
+                The character has exceptional beauty, and gets a +1 bonus
+                to their charisma when trying to charm or persuade someone
+                who finds them attractive. The character is also easy to
+                recognise.
             </para>
         </description>
         <forbiddon>Ugly</forbiddon>
     </advantage>
 
-    <advantage name="Beautiful voice" type="edge">
+    <advantage name="Voice" type="edge">
         <cost points="+3"/>
         <genre>Common</genre>
 
@@ -91,14 +115,15 @@
             <para>
                 The character has a very clear and pleasant voice, getting
                 a +1 bonus to charisma when singing, orating or reading
-                poetry.
+                poetry. This does not stack with similar advantages such
+                as <e>Beautiful</e>.
             </para>
         </description>
         <forbiddon>Can't sing</forbiddon>
     </advantage>
 
     <advantage name="Language talent" type="advantage">
-        <cost points="+6"/>
+        <cost points="+3"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -112,7 +137,7 @@
     </advantage>
 
     <advantage name="Literate" type="advantage">
-        <cost points="+4"/>
+        <cost points="+3"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -137,25 +162,26 @@
     </advantage>
 
     <advantage name="Tough" type="advantage">
-        <cost points="+2" levels="1" max="3"/>
+        <cost points="+5"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character gets a bonus to basic soak of +1, +2 or +3
-                depending on the level of this advantage.
+                The character is particulary tough and resilient to
+                damage, and gains a +3 bonus to their basic soak
+                (15 instead of 12) to resist all forms of damage.
             </para>
         </description>
     </advantage>
 
     <advantage name="Heavily built" type="advantage">
-        <cost points="+5"/>
+        <cost points="+3"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The character is heavily built, being tougher and broader
-                than normer. Add +5 to the character's knockdown and
-                difficulty to be tripped, plus gets +5 soak versus
-                <e>stun</e> attacks.
+                than normal. They get a +5 bonus to their soak against
+                <e>stun</e> damage, and get a +1 bonus to strength for
+                purposes of knockdown, being tripped and the like.
             </para>
 
             <para>
@@ -166,7 +192,7 @@
     </advantage>
 
     <advantage name="Ambidexterity" type="advantage">
-        <cost points="+2"/>
+        <cost points="+1"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -179,15 +205,15 @@
 
 
     <advantage name="Large" type="advantage">
-        <cost points="+7"/>
+        <cost points="+5"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The character is much larger than normal, being well built
                 and tall. He has a size of six, and has one more body level
                 than normal. Such a person must also take a strength of at
-                least four. They may also add +1 to the reach of any
-                weapon they are using (including fist attacks).
+                least four. In combat, any attacks they make which have a
+                reach of zero of one, count as being one reach longer.
             </para>
         </description>
     </advantage>

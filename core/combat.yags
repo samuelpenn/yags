@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.78 $</version>
-            <date>$Date: 2005-09-01 16:18:38 $</date>
+            <version>$Revision: 1.79 $</version>
+            <date>$Date: 2005-09-02 22:19:18 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -760,12 +760,9 @@
 
                 <itemlist order="1">
                     <item>
-                        Characters declare actions, including movement and
-                        attacks, in order of increasing initiative.
-                    </item>
-                    <item>
-                        Characters declare how many defences they are
-                        making.
+                        Characters declare actions, including movement,
+                        attacks and defences, in order of increasing
+                        initiative.
                     </item>
                     <item>
                         Perform all fast actions in decreasing
@@ -824,15 +821,17 @@
                                 An aggressive stance risks leaving the
                                 character open to attack, but has the
                                 benefit of better offense. All attacks are
-                                fast, and attack rolls are at +5, however
-                                defence is at -10.
+                                fast, and attack and damage rolls are at +5,
+                                however defence is at -10.
                             </item>
 
                             <item name="Defensive">
                                 A defensive stance values defense over
                                 offense. Defence rolls are at +5, however
                                 attack rolls are at -10, and actions are
-                                considered to be slow.
+                                considered to be slow. Character also adds
+                                one to the maximum number of defences they
+                                can make that round.
                             </item>
 
                             <item name="Prone">
