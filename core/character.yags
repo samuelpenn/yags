@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.19 $</version>
-            <date>$Date: 2005-08-09 08:47:46 $</date>
+            <version>$Revision: 1.20 $</version>
+            <date>$Date: 2005-09-08 21:44:09 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -96,83 +96,118 @@
             <title>Building a Character</title>
 
             <para>
-                Initially, a character has all attributes at three, and all
-                talents at two. Further, he has both the <e>Area Lore</e>
-                and <e>Speak own language</e> skills at four. Lastly, all
-                the character's passions are at a level of four.
-            </para>
-
-            <character name="The Basic Character">
-                <description/>
-                <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-                    <attributes size="5" soak="12" luck="0">
-                        <attribute name="strength" score="3"/>
-                        <attribute name="stamina" score="3"/>
-                        <attribute name="agility" score="3"/>
-                        <attribute name="dexterity" score="3"/>
-                        <attribute name="perception" score="3"/>
-                        <attribute name="intelligence" score="3"/>
-                        <attribute name="charisma" score="3"/>
-                        <attribute name="will" score="3"/>
-                    </attributes>
-
-                    <skills>
-                        <group name="Talents" type="talents">
-                            <skill name="Athletics" score="2"/>
-                            <skill name="Awareness" score="2"/>
-                            <skill name="Brawl" score="2"/>
-                            <skill name="Charm" score="2"/>
-                            <skill name="Guile" score="2"/>
-                            <skill name="Sleight" score="2"/>
-                            <skill name="Stealth" score="2"/>
-                            <skill name="Throw" score="2"/>
-                        </group>
-
-                        <group name="Knowledges" type="skills">
-                            <skill name="Speak own language" score="4"/>
-                            <skill name="Area lore" score="4"/>
-                        </group>
-                    </skills>
-
-                    <passions>
-                        <passion name="Bravery" score="4"/>
-                        <passion name="Ego" score="4"/>
-                        <passion name="Restraint" score="4"/>
-                        <passion name="Temperance" score="4"/>
-                    </passions>
-                </statistics>
-            </character>
-
-            <para>
-                The basic character can then be given a <e>package</e>. The
-                package provides basic skills that a character would have
-                gained whilst training for their profession. Not all
-                packages are equal in the number of skills that they
-                provide.
+                When building a new character for Yags, players have to
+                make a number of choices about the type of character
+                they want, and what they want that character to do.
+                The main choice to be made is which <e>package</e> to
+                choose. A <e>package</e> provides the character with a
+                set of skills and a rough background. The number and
+                type of packages will vary from campaign to campaign,
+                but possible generic examples include a <e>Warrior</e>,
+                a <e>Rogue</e> or a <e>Nobleman</e>.
             </para>
 
             <para>
-                Lastly, the player has ten points with which to customise
-                the character. These points can be used to buy up attributes
-                or skills, or to buy advantages. Up to a further ten points
-                can be purchased by taking disadvantages.
+                A campaign world may provide more specific packages.
+                <e>Northern Border Guard</e>, <e>Sea Raider</e> or
+                even <e>Temple Guard of the Red Goddess</e> are all
+                possible warrior-like packages. Such packages provide
+                some automatic background, friends and enemies for
+                the character, as well as a variety of skills. A
+                Temple Guard will probably have some skills involving
+                religion and etiquette, whilst the Sea Raider will
+                have shiphandling and navigation skills.
             </para>
 
             <para>
-                The most efficient way to get further skills however is by
-                buying <e>age</e>, which is a disadvantage, though it does
-                not count towards the ten point disadvantage limit. Each
-                year of age gives a further two points to spend.
+                As far as what skills and abilities are available to a
+                character, choice of package <e>only</e> affects
+                character generation. Once the character has been
+                created, then the PC is free to develop any skills
+                and abilities that they want to, limited only by the
+                realities of the game world (to learn the religious
+                rituals of the Red Goddess the character may need to
+                be friendly with Her priests, something that a Temple
+                Guard will start with, but a Border Guard will have to
+                earn through role playing and actions).
             </para>
 
             <para>
-                In total, a player could have 38 points to customise their
-                character with, assuming ten points of disadvantages and
-                nine years of age.
+                Once a package has been chosen, the player is free to
+                customise that package by purchasing skills and
+                advantages for their character. How many extra skills
+                and advantages can be purchased depends on the starting
+                level of the campaign.
             </para>
+
+
+            <sect2>
+                <title>The Basic Template</title>
+
+                <para>
+                    All characters will start with a basic template
+                    which provides them with the default abilities for
+                    their race. The basic human template is as follows.
+                </para>
+
+                <character name="The Basic Character">
+                    <description/>
+                    <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+                        <attributes size="5" soak="12" luck="0">
+                            <attribute name="strength" score="3"/>
+                            <attribute name="stamina" score="3"/>
+                            <attribute name="agility" score="3"/>
+                            <attribute name="dexterity" score="3"/>
+                            <attribute name="perception" score="3"/>
+                            <attribute name="intelligence" score="3"/>
+                            <attribute name="charisma" score="3"/>
+                            <attribute name="will" score="3"/>
+                        </attributes>
+
+                        <skills>
+                            <group name="Talents" type="talents">
+                                <skill name="Athletics" score="2"/>
+                                <skill name="Awareness" score="2"/>
+                                <skill name="Brawl" score="2"/>
+                                <skill name="Charm" score="2"/>
+                                <skill name="Guile" score="2"/>
+                                <skill name="Sleight" score="2"/>
+                                <skill name="Stealth" score="2"/>
+                                <skill name="Throw" score="2"/>
+                            </group>
+
+                            <group name="Knowledges" type="skills">
+                                <skill name="Speak own language" score="4"/>
+                                <skill name="Area lore" score="4"/>
+                            </group>
+                        </skills>
+
+                        <passions>
+                            <passion name="Bravery" score="4"/>
+                            <passion name="Ego" score="4"/>
+                            <passion name="Restraint" score="4"/>
+                            <passion name="Temperance" score="4"/>
+                        </passions>
+                    </statistics>
+                </character>
+
+                <para>
+                    All packages will at least have these ability levels
+                    defined. Campaigns where humans are the only choice
+                    will tend to have just a single basic template.
+                    Campaigns were there are a variety of races will
+                    have one template per race.
+                </para>
+            </sect2>
 
             <sect2>
                 <title>Packages</title>
+
+                <para>
+                    The player should choose a package based on the
+                    skills that they want the character to have, and
+                    the sort of background that interests them.
+                </para>
 
                 <sect3>
                     <title>Low Tech Packages</title>
