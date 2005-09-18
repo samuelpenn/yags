@@ -2,8 +2,8 @@
 
 <!--
     Fire cantrips.
-    Version: $Revision: 1.16 $
-    Date:    $Date: 2005-08-13 15:56:59 $
+    Version: $Revision: 1.17 $
+    Date:    $Date: 2005-09-18 16:11:31 $
 -->
 
 <grimoire xmlns="http://yagsbook.sourceforge.net/xml/yags/habisfern" name="Fire">
@@ -22,12 +22,12 @@
         </para>
     </description>
 
-    <spell name="Ignite" level="0" type="fire">
+    <spell name="Ignite" level="1" type="fire">
         <range>-5/m</range>
         <duration>Momentary</duration>
         <target>+5/size</target>
 
-        <summary>Ignites flammable material</summary>
+        <summary>Ignites flammable material.</summary>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -46,7 +46,7 @@
                 </item>
 
                 <item target="Good" value="Combustable">
-                    Paper.
+                    Dry paper.
                 </item>
 
                 <item target="Excellent" value="">
@@ -78,13 +78,8 @@
         </description>
     </spell>
 
-    <!--
-        Begin the 'Warm' thread.
-        Contains cantrips which affect heat directly, rather than causing
-        fire or other effects.
-     -->
 
-    <spell name="Warm" level="1" type="fire">
+    <spell name="Warm" level="3" type="fire">
         <range>Self</range>
         <duration>Concentration</duration>
         <radius>+5/m beyond 1m</radius>
@@ -109,6 +104,37 @@
                 normally one minute for the total change.
             </para>
 
+            <targetlist targetFirst="true" bold="true">
+                <valueLabel>Environment</valueLabel>
+                <targetLabel>Level</targetLabel>
+
+                <item target="-2" value="Very cold.">
+                    Dangerously cold. Very thick clothing will keep
+                    people warm, but those with less clothing will
+                    suffer from exposure.
+                </item>
+
+                <item target="-1" value="Cold.">
+                    Uncomfortably cold, but not dangerously so. People
+                    are comfortable in thick clothing, and will suffer
+                    from exposure if naked for many hours.
+                </item>
+
+                <item target="0" value="Comfortable.">
+                    Room temperature. People are okay indefinitely in
+                    light clothing.
+                </item>
+
+                <item target="+1" value="Warm.">
+                    Nicely warm, people will be uncomfortable in anything
+                    heavier than light clothing.
+                </item>
+
+                <item target="+2" value="Hot.">
+                    Uncomfortably warm.
+                </item>
+            </targetlist>
+
             <para>
                 If there is a wind, then warmed air will be continually
                 carried away and replaced by colder air. Even in still air,
@@ -117,7 +143,7 @@
         </description>
     </spell>
 
-    <spell name="Heat" level="3" type="fire">
+    <spell name="Heat" level="5" type="fire">
         <range>-1/1m</range>
         <duration>Concentration</duration>
         <target>+3/size</target>
@@ -174,7 +200,7 @@
     </spell>
 
 
-    <spell name="Burning Wind" level="5" type="fire">
+    <spell name="Burning Wind" level="7" type="fire">
         <duration>Concentration</duration>
         <range>-1/5m</range>
         <resist>Soak</resist>
@@ -191,10 +217,18 @@
                 can be doubled by halving the angle. Any within the blast
                 of air suffers burning damage.
             </para>
+
+            <para>
+                The wizard cannot do anything else (including defend)
+                whilst concentrating on this magic, though may turn to
+                face a new direction each round if they desire. It may
+                be cast as a single blast effect which does damage
+                once and ends.
+            </para>
         </description>
     </spell>
 
-    <spell name="Whither" level="7" type="fire">
+    <spell name="Whither" level="9" type="fire">
         <range>Self</range>
         <duration>Momentary</duration>
         <area>+1/20m radius</area>
@@ -248,7 +282,7 @@
         </description>
     </spell>
 
-    <spell name="Summer" level="9" type="fire">
+    <spell name="Summer" level="12" type="fire">
         <range>Self</range>
         <duration>Day</duration>
         <radius>+1/50m</radius>
@@ -267,7 +301,7 @@
         </description>
     </spell>
 
-    <spell name="Shape fire" level="1" type="fire">
+    <spell name="Control Fire" level="3" type="fire">
         <range>-1/m</range>
         <duration>Concentration</duration>
         <target>+3/size</target>
@@ -279,24 +313,24 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Causes an existing fire to take on a specific shape,
-                such as that of a face or image. The flames will not
-                extend beyond the normal bounds of the fire. A moderate
-                success will shape the fire into natural forms - thinner,
-                taller, darker, brighter. Better successes may form
-                unnatural shapes, such as faces or colours. Doesn't
-                affect burn rate or heat.
+                or change a property. Heat, light and rate of burning
+                can each be halved or doubled for each level of
+                success. One level will change the shape of the
+                fire to a slight degree, two levels will form a
+                recognisable but unnatural shape (such as a face).
+                More success allow greater amount of detail.
             </para>
         </description>
     </spell>
 
 
-    <spell name="Resist Fire" level="3" type="fire">
+    <spell name="Resist Fire" level="5" type="fire">
         <range>-1/m</range>
         <duration>Concentration</duration>
         <target>-5/extra target</target>
         <effect>+1 soak/1</effect>
 
-        <prerequisite>Warm</prerequisite>
+        <prerequisite>Control Fire</prerequisite>
 
         <summary>Provides protection from fire.</summary>
 
@@ -308,25 +342,12 @@
                 that work according to the level of effect, such as
                 <e>Heat</e> or <e>Ignite</e>.
             </para>
-        </description>
-    </spell>
 
-    <spell name="Control Fire" level="5" type="fire">
-        <range>+1/5m</range>
-        <duration>Concentration</duration>
-        <target>+3/size</target>
-
-        <prerequisite>Resist Fire</prerequisite>
-
-        <summary>Change how a fire burns.</summary>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Cause a fire to increase or reduce in intensity. It may
-                burn faster or slower, hotter or colder. The flames may
-                darken to reduce light, or grow brighter to provide more
-                light. Each level of success allows one of these factors
-                to be halved or doubled.
+                The wizard is automatically protected, plus the cantrip
+                can be extended to protect other objects or people. No
+                single target can have a size larger than the wizard's
+                <e>Fire</e> score.
             </para>
         </description>
     </spell>
@@ -337,7 +358,7 @@
         <duration>Concentration</duration>
         <resist>Stamina</resist>
 
-        <prerequisite>Resist Fire</prerequisite>
+        <prerequisite>Control Fire</prerequisite>
 
         <summary>Fill an area with smoke.</summary>
 
@@ -414,8 +435,8 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Enables the targets to react quicker, giving a bonus to
-                initiative. Each level of effect gives a +1 bonus to the
-                target's initiative and awareness rolls whilst the cantrip
+                initiative. Each level of effect gives a +1 bonus to
+                initiative and awareness rolls whilst the cantrip
                 is in effect.
             </para>
         </description>
@@ -502,11 +523,12 @@
         All these cantrips are combat related.
      -->
 
-    <spell name="Flame" level="1" type="fire">
+    <spell name="Flame" level="5" type="fire">
         <range>Self</range>
         <duration>Concentration</duration>
+        <effect>+1 mixed damage/2</effect>
 
-        <prerequisite>Ignite</prerequisite>
+        <prerequisite>Control Fire</prerequisite>
 
         <summary>Creates a flame in the palm of the hand.</summary>
 
@@ -516,45 +538,10 @@
                 The flame can be used to ignite material, strike at
                 someone to cause damage, or even thrown.
             </para>
-        </description>
-    </spell>
 
-    <spell name="Burning Motes" level="3" type="fire">
-        <range>-1 / 1m</range>
-        <duration>Momentary</duration>
-        <target>+5/extra target</target>
-        <effect>+2 damage/1</effect>
-        <resist>Soak</resist>
-
-        <prerequisite>Flame</prerequisite>
-
-        <summary>Create a swarm of burning sparks.</summary>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Creates a swarm of bright burning sparks to appear around
-                the caster, and to fly towards the designated targets.
-                Targets suffer stun damage equal to the effect of the
-                cantrip, which can be resisted with Soak.
-            </para>
-        </description>
-    </spell>
-
-    <spell name="Flaming Spear" level="5" type="fire">
-        <range>-1 / 2m</range>
-        <duration>Momentary</duration>
-        <effect>+1 damage/1</effect>
-        <resist>Soak</resist>
-
-        <prerequisite>Burning Motes</prerequisite>
-
-        <summary>Create a spear of flame to burn someone.</summary>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Creates a jet of flame which strikes a single target
-                causing wounding damage. Requires a <e>throw</e>
-                roll to hit.
+                The cantrip ends when either the wizard stops
+                concentrating on the flame, or it is thrown.
             </para>
         </description>
     </spell>
@@ -566,7 +553,7 @@
         <effect>+1</effect>
         <target>-10/extra ring</target>
 
-        <prerequisite>Flaming Spear</prerequisite>
+        <prerequisite>Flame</prerequisite>
 
         <summary>Create a ring of fire around caster.</summary>
 
@@ -636,7 +623,8 @@
 
             <para>
                 It is difficult to harm the wizard in this form, all
-                physical damage is fifthed.
+                physical damage is divided by five (before soak, which
+                is equal to the wizard's <e>Fire</e> score).
             </para>
         </description>
     </spell>
