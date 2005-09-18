@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.42 $</version>
-            <date>$Date: 2005-08-13 15:23:36 $</date>
+            <version>$Revision: 1.43 $</version>
+            <date>$Date: 2005-09-18 16:14:28 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -74,9 +74,15 @@
 
                 <para>
                     A character's ability score is either equal to their
-                    <skeq><attr>attribute</attr><const>4</const></skeq>
+                    <y:skeq>
+                        <y:attr>attribute</y:attr>
+                        <y:const>4</y:const>
+                    </y:skeq>
                     for a pure attribute check, or
-                    <skeq><attr>attribute</attr><sk>skill</sk></skeq>
+                    <y:skeq>
+                        <y:attr>attribute</y:attr>
+                        <y:sk>skill</y:sk>
+                    </y:skeq>
                     when a skill check is required. An attribute of 3 is
                     considered human average, and a skill of 4 is taken to
                     be professional level.
@@ -85,7 +91,9 @@
                 <para>
                     Sometimes, a skill contest is called for between two or
                     more characters. In this case, each character makes a
-                    roll as above, and whoever gets highest wins.
+                    roll as above, and whoever gets highest wins. If the
+                    result is a tie, then the character with the highest
+                    skill wins.
                 </para>
 
                 <sect3>
