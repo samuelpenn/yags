@@ -3,8 +3,8 @@
     href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
     type="text/xsl"?>
 
-<article xmlns="http://yagsbook.sourceforge.net/xml">
-
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
         <title>Core</title>
         <tagline>Yags</tagline>
@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.45 $</version>
-            <date>$Date: 2005-10-01 10:41:18 $</date>
+            <version>$Revision: 1.46 $</version>
+            <date>$Date: 2005-10-02 20:39:49 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -39,39 +39,108 @@
 
     <body>
         <sect1>
-            <title>Yags</title>
+            <title>Yags is Another Game System</title>
 
             <para>
-                <e>Yags is Another Game System</e>, one that is meant to be
+                <s>Yags is Another Game System</s>, one that is meant to be
                 generic and modular. Each <e>article</e> describes one part
                 of the Yags rules. If desired, individual articles can be
                 replaced without having much effect on the rest of the rules.
                 The only fundamental rules set is this article, the
-                <e>Introduction</e>, which defines the fundamental rules
+                <e>Core Rules</e>, which defines the fundamental rules
                 of Yags.
+            </para>
+
+            <para>
+                <s>Yags</s> is a Free set of roleplaying rules released
+                under the <e>GNU General Public License</e>. This means
+                that you are free to copy, distribute, modify and even
+                sell these rules, though anyone who receives them must
+                likewise be free to do the same. The original versions
+                of these rules can be found at
+                <url href="http://www.glendale.org.uk/yags/">
+                    http://www.glendale.org.uk/yags/
+                </url>.
             </para>
         </sect1>
 
         <sect1>
-            <title>The Basic System</title>
+            <title>The Core Mechanics</title>
 
             <para>
-                This article gives a brief tour of the Yags system,
+                This section gives a brief tour of the Yags system,
                 explaining terminology, and giving a description of
                 the basic conventions used.
             </para>
 
             <sect2>
+                <title>Terminology</title>
+
+                <para>
+                    The following terminology is used throughout the
+                    <s>Yags</s> rules. Where these terms are used, the
+                    specific definitions given here are what is meant.
+                </para>
+
+                <itemlist order="sort">
+                    <item name="Attribute">
+                        One of the eight basic numbers which define any
+                        creature in Yags. A typical adult human has a
+                        score of 3 in all their attributes. Attributes
+                        are combined with a skill to determine a
+                        creature's ability at a task.
+                    </item>
+
+                    <item name="Skill">
+                        A skill defines a creature's training and
+                        experience in a narrow field. Skills are combined
+                        with attributes to determine a creature's ability
+                        at a task. A competent level of skill is 4 or more.
+                    </item>
+
+                    <item name="Ability">
+                        A creature's ability to achieve success in a task
+                        is equal to an attribute multiplied by a skill.
+                    </item>
+
+                    <item name="Score">
+                        The raw numerical value of any characteristic,
+                        unmodified by anything else. A skill score would
+                        be a creature's rating in a skill, before it is
+                        multiplied by an attribute.
+                    </item>
+
+                    <item name="Task">
+                        An activity that requires an ability check.
+                    </item>
+                </itemlist>
+            </sect2>
+
+            <sect2>
                 <title>Task Resolution</title>
 
                 <para>
-                    Whenever a task is attempted within Yags, an ability
-                    check is required. This consists of rolling 1d20 and
-                    adding the character's ability score. This is compared
-                    against the task's difficulty, and if the roll is
-                    equal or higher, the attempt was a success. A
-                    <e>moderate</e> difficulty (challenging for a skilled
-                    person) is considered to be 20.
+                    Most activities performed by characters in <s>Yags</s>
+                    can be performed automatically without any form of
+                    die roll. Walking along the street or climbing a short
+                    ladder are examples. Stressful situations however
+                    may require an ability check to see how successful
+                    the character was. Walking along a narrow ledge or
+                    climbing a ladder whilst someone tries to wrestle the
+                    character are examples.
+                </para>
+
+                <para>
+                    Stressful tasks have a difficulty target assigned to
+                    them. Very easy tasks have a target of 10, moderate
+                    tasks (which a competent person will succeed more
+                    often than not) are 20, difficult tasks are 30.
+                </para>
+
+                <para>
+                    The player rolls their ability + 1d20, and if they
+                    equal or exceed the target, then the attempt is
+                    considered successful.
                 </para>
 
                 <para>
@@ -134,6 +203,15 @@
                     </para>
                 </sect3>
             </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Characteristics</title>
+
+            <para>
+                All characters are described by a set of characteristics
+                which consist of attributes and skills.
+            </para>
 
             <sect2>
                 <title>Attributes</title>
@@ -173,52 +251,62 @@
                 <sect3>
                     <title>Attribute Levels</title>
 
+                    <para>
+                        For humans, attributes tend to range between two
+                        and five. Higher values are possible, but rare.
+                        The following chart describes the different levels
+                        from the point of view of an adult human.
+                        Non-human creatures may work on different scales,
+                        especially for strength which tends to be much
+                        higher for large animals.
+                    </para>
+
                     <targetlist targetFirst="true" bold="true">
-                        <targetLabel>Cost</targetLabel>
+                        <targetLabel>Score</targetLabel>
                         <valueLabel>Attribute</valueLabel>
 
-                        <item target="-18" value="0 (None).">
+                        <item target="0" value="None.">
                             Character has no or minimal rateable ability in
                             that attribute.
                         </item>
 
-                        <item target="-15" value="1 (Cripple).">
+                        <item target="1" value="Cripple.">
                             Character is considered to be crippled in that
                             attribute. They are either very dumb, sickly weak
                             or sociophobic for instance. They will be in the
                             bottom 0.174f the population.
                         </item>
 
-                        <item target="-9" value="2 (Poor).">
+                        <item target="2" value="Poor.">
                             Character is noticeably below average in their
                             ability. They are in the bottom 574f the
                             population for that attribute. This is the starting
                             minimum for player characters.
                         </item>
 
-                        <item target="0" value="3 (Average).">
+                        <item target="3" value="Average.">
                             Character is considered to be average. 9074f the
                             population will fit into this category for any
                             given attribute.
                         </item>
 
-                        <item target="+12" value="4 (High).">
+                        <item target="4" value="High.">
                             Character is considered to be of well above average
-                            ability in the attribute, in the top 574f the
+                            ability in the attribute, in the top 5% of the
                             population. They will be noticeably better than
                             average people.
                         </item>
 
-                        <item target="+27" value="5 (Very high).">
+                        <item target="5" value="Very high.">
                             Such characters are well above average, being in
-                            the top 0.174f the population. This is the
+                            the top 0.1% of the population. This is the
                             starting maximum for player characters in many
                             campaigns, and is normally the natural maximum
                             for people who haven't had an opportunity to
                             develop the attribute.
                         </item>
 
-                        <item target="+45" value="6 (Exceptional).">
+                        <item target="6" value="Exceptional.">
                             One in a hundred thousand people would have an
                             ability this high. They are truly exceptional.
                             Only those who have had an opportunity to
@@ -226,15 +314,19 @@
                             a score this high.
                         </item>
 
-                        <item target="+66" value="7 (Incredible).">
+                        <item target="7" value="Incredible.">
                             One in a ten million people have an attribute
                             at this level. They have generally worked
                             hard at developing their abilities to this
                             level, it is not obtained naturally.
                         </item>
 
-                        <item target="+90" value="8 (Legendary).">
+                        <item target="8" value="Legendary.">
                             One in a billion people have such an ability.
+                        </item>
+
+                        <item target="9+" value="Divine.">
+                            The realm of gods.
                         </item>
                     </targetlist>
                 </sect3>
@@ -284,21 +376,26 @@
 
                         <item name="Charisma">
                             Charisma is the raw ability to get on with
-                            people. High charisma characters will make
-                            friends easily.
+                            people and understand their behaviour.
                         </item>
 
                         <item name="Will">
                             Strength of will is used to overcome base
                             instincts, such as fear and lust. High will
-                            characters are more resistant to magic, and are
-                            also less gullible.
+                            characters are more resistant to magic, are
+                            less gullible and tend to be good liars.
                         </item>
                     </itemlist>
                 </sect3>
 
                 <sect3>
                     <title>Secondary Attributes</title>
+
+                    <para>
+                        Secondary attributes aren't part of the standard
+                        set of eight attributes, and do not tend to fall
+                        within the normal 2-5 range.
+                    </para>
 
                     <itemlist order="strict">
                         <item name="Size">
@@ -342,17 +439,17 @@
                         on a d20. On a 1, the attribute is a 2,
                         whilst on a 20, it is a 4. This means the
                         <e>average</e> score accounts for
-                        about 9074f the population.
+                        about 90% of the population.
                     </para>
 
                     <para>
-                        People such as Newton or Hawking would probably have
-                        an intelligence score of eight. The best Olympic
-                        athletes in the modern world would probably have
-                        similar scores for physical attributes. For humans,
-                        scores above five are gained through lots of
-                        training and experience - they are not gained due to
-                        a chance of birth.
+                        People such as Newton or Feynman would probably
+                        have an intelligence score of eight. The best
+                        Olympic athletes in the modern world would
+                        probably have similar scores for physical
+                        attributes. For humans, scores above five are
+                        gained through lots of training and experience -
+                        they are not gained due to a chance of birth.
                     </para>
                 </sect3>
             </sect2>
@@ -625,122 +722,172 @@
                 are each treated as a skill, which defaults to four for
                 characters (most animals default to two). When a passion
                 check is made, the passion is rolled with <e>will</e>.
-                Passions may be considered optional, at least for PCs.
-                They are of most use in a fantasy campaign, where magic
-                and the supernatural can affect a character's mind.
             </para>
 
             <para>
-                Passions effect how a character acts. A character with a
-                low bravery will tend to avoid danger a lot. If the player
-                decides not to roleplay this, then the GM may require a
-                passion check to see if the character can control their
-                instincts. If they succeed, then the character can go
-                ahead with the action. On failure, the character is
-                overcome with the emotion they are trying to control
-                (in this case, fear), and it is up to the player to role
-                play this.
-            </para>
-
-            <para>
-                Passions can go up with skill points, but they can also go
-                down if a character is not being played true to his passions.
-                A character with a high bravery who always runs away, will
-                tend to loose points from their bravery passion.
+                Passions only need to be used if the GM thinks that the
+                player is not playing their character according to their
+                current passion score. If a character with a low passion
+                wishes to control their emotion, then they must make a
+                passion check in order to do so. If a character follows
+                their emotions more often than their score would suggest,
+                then they may loose points from their passion.
             </para>
 
             <para>
                 Each of the passions will generally range from 1 to 10,
                 though higher scores are possible (though unusual, and
-                very extreme).
+                very extreme). The passion score not only affects what a
+                character roles when making a check, it also affects
+                when checks are made. A score of 2 means that the
+                character will be making checks even in relatively
+                mundane situations, whilst a passion of 10 means that
+                the character will hardly ever need to make a check.
             </para>
 
+            <para>
+                Every situation where a passion comes into play has a
+                rating associated with it. Standing up to someone in a
+                tavern brawl would invoke bravery, might have a rating
+                of 3. Facing a giant rampaging beast might have a
+                rating of 7. If the rating equals or exceeds the
+                character's current passion score, then they need to
+                make a passion check in order to not give in to their
+                emotions (in these cases, run away).
+            </para>
+
+            <para>
+                If a check is required, then the target is equal to
+                10 + 3 x rating. The description of the passions below
+                detail ratings and what happens when a check fails.
+            </para>
+
+
             <sect2>
-                <title>The Four Traits</title>
+                <title>Bravery</title>
+
+                <para>
+                    Bravery is a measure of a character's ability to
+                    control their fear and resist terror. A standard
+                    bravery check is when facing a threat that is
+                    likely to cause several wounds.
+                </para>
+
+                <targetlist targetFirst="true" bold="true">
+                    <title>Probability modifier</title>
+                    <targetLabel>Modifier</targetLabel>
+                    <valueLabel>Situation</valueLabel>
+
+                    <item target="-2" value="Unlikely.">
+                        It is unlikely that the threat will actually be
+                        effective. Fighting an outmatched foe.
+                    </item>
+                    <item target="-1" value="Possible.">
+                        The threat may be effective, but it is more likely
+                        that it won't be. Fighting an inferior foe.
+                    </item>
+                    <item target="+0" value="Likely.">
+                        This outcome is the most likely event. Fighting an
+                        equal foe to the death.
+                    </item>
+                    <item target="+1" value="Certain.">
+                        The threat is almost certain to be effective.
+                        Fighting a superior foe.
+                    </item>
+                </targetlist>
+
+                <para>
+                    The standard level of threat is several wounds. If
+                    the threat is less severe, then the rating is reduced.
+                    If the threat is more severe (likelyhood of death),
+                    then the rating is increased. Raising this modifier
+                    by a level is offset by reducing the probility by a
+                    level, and vice versa. Select one of the following.
+                </para>
+
+                <targetlist targetFirst="true" bold="true">
+                    <title>Threat modifier</title>
+                    <targetLabel>Modifier</targetLabel>
+                    <valueLabel>Situation</valueLabel>
+
+                    <item target="-1" value="Stuns.">
+                        The threat is several stuns or maybe a wound.
+                    </item>
+
+                    <item target="+0" value="Wounds.">
+                        The threat is several wounds.
+                    </item>
+
+                    <item target="+1" value="Fatal.">
+                        The threat is critical or fatal wounds, but
+                        there is a chance of recovery. A fight in which
+                        the victor will be satisfied with victory.
+                    </item>
+
+                    <item target="+2" value="Death.">
+                        The threat is death. A fight in which the victor
+                        will ensure that their foe is dead.
+                    </item>
+                </targetlist>
+
+                <para>
+                    Choose any of the following.
+                </para>
+
+                <targetlist targetFirst="true" bold="true">
+                    <title>Miscellaneous modifiers</title>
+                    <targetLabel>Modifier</targetLabel>
+                    <valueLabel>Situation</valueLabel>
+
+                    <item target="+1" value="First time.">
+                        This type of threat has never been faced by the
+                        character before.
+                    </item>
+
+                    <item target="+1" value="Big and scary.">
+                        Facing a creature that is large or otherwise
+                        scary. A charging horse or enraged elephant
+                        would count.
+                    </item>
+
+                    <item target="+1" value="Ugly and horrible.">
+                        Facing a threat that is unpleasant as well as
+                        fear inducing. Anything with lots of slime or
+                        a bad smell.
+                    </item>
+
+                    <item target="+1" value="Supernatural.">
+                        Threat is beyond the understanding of the
+                        character.
+                    </item>
+
+                    <item target="+1" value="Painful.">
+                        Threat is especially painful.
+                    </item>
+
+                    <item target="+X" value="Terror">
+                        Threat has a terror rating, which is added to the
+                        rating of the bravery check.
+                    </item>
+                </targetlist>
+            </sect2>
+
+            <sect2>
+                <title>Ego</title>
+
+                <para>
+                    Ego is a measure of a character's sense of self.
+                    It represents their ability to resist the influence
+                    of mind affecting drugs and magic. A high ego
+                    character is better able to stand up to anything
+                    which may change their state of mind, and as such
+                    may tend to appear close minded and arrogant to
+                    others. However, they can be harder to fast talk
+                    since they are difficult to confuse.
+                </para>
 
                 <sect3>
-                    <title>Bravery</title>
-
-                    <para>
-                        Bravery is a measure of a character's
-                        willingness to face danger, to do their
-                        duty when their instincts tell them to flee.
-                        Bravery does not mean that a character is
-                        stupid and won't flee when the cause is
-                        pointless, but turning your back on the
-                        enemy to run can often be worse than
-                        standing and fighting.
-                    </para>
-
-                    <para>
-                        Bravery checks are required when facing
-                        superior foes, when facing supernatural
-                        horror, or simply when going into a
-                        situation where danger is expected but
-                        unseen. Overcoming phobias also require a
-                        bravery check.
-                    </para>
-
-                    <targetlist targetFirst="true" bold="true">
-                        <title>Bravery Passions</title>
-
-                        <valueLabel>Examples</valueLabel>
-                        <targetLabel>Score</targetLabel>
-
-                        <item target="1" value="Very low.">
-                            Flees from the slightest danger, even when
-                            friends and family are in danger.
-                        </item>
-                        <item target="2" value="Low.">
-                            Obviously cowardly, stays at the back in fights
-                            and only faces up to danger when absolutely
-                            necessary.
-                        </item>
-                        <item target="3" value="Poor.">
-                            Tends to be cautious, avoiding danger when
-                            possible, and preferring to cut and run when
-                            things are going badly.
-                        </item>
-                        <item target="4" value="Normal.">
-                        </item>
-                        <item target="5" value="Above average.">
-                            A bit braver than normal.
-                        </item>
-                        <item target="6" value="High.">
-                            Obviously brave, sometimes overconfident in the
-                            face of danger.
-                        </item>
-                        <item target="7" value="Exceptional.">
-                            Rarely shows fear except in unusual circumstances.
-                        </item>
-                        <item target="8" value="Highly exceptional.">
-                            Steadfast and heroic, remaking cool under fire.
-                        </item>
-                        <item target="9" value="Superb.">
-                            Rarely, if ever, startled by anything. Rarely
-                            takes the danger of a task into account, only
-                            whether it can be done or not.
-                        </item>
-                        <item target="10+" value="Extreme.">
-                            Doesn't ever think about danger. Can appear to
-                            be suicidal at times.
-                        </item>
-                    </targetlist>
-                </sect3>
-
-                <sect3>
-                    <title>Ego</title>
-
-                    <para>
-                        Ego is a measure of a character's sense of self.
-                        It represents their ability to resist the influence
-                        of mind affecting drugs and magic. A high ego
-                        character is better able to stand up to anything
-                        which may change their state of mind, and as such
-                        may tend to appear close minded and arrogant to
-                        others. However, they can be harder to fast talk
-                        since they are difficult to confuse.
-                    </para>
+                    <title>Values</title>
 
                     <targetlist targetFirst="true" bold="true">
                         <title>Ego Passions</title>
@@ -783,30 +930,28 @@
                         </item>
                     </targetlist>
                 </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Restraint</title>
+
+                <para>
+                    Restraint is a measure of a character's ability to
+                    control their temper and desire for vengeance.
+                </para>
+
+                <para>
+                    Restraint checks may be required if a
+                    character is insulted, or if they see an
+                    opportunity to attack a hated foe for
+                    example. A compassionate character may be
+                    moved to aid another, even if it means
+                    giving up on an important quest, or putting
+                    themselves and their friends in danger.
+                </para>
 
                 <sect3>
-                    <title>Restraint</title>
-
-                    <para>
-                        Restraint is a measure of a character's
-                        ability to resist responding to a situation
-                        she might otherwise feel needs response.
-                        Taunts or insults can be used against those
-                        with low restraint to force them into a
-                        weaker position. Failing a restraint check
-                        means that the character gives in to her
-                        anger and hatred.
-                    </para>
-
-                    <para>
-                        Restraint checks may be required if a
-                        character is insulted, or if they see an
-                        opportunity to attack a hated foe for
-                        example. A compassionate character may be
-                        moved to aid another, even if it means
-                        giving up on an important quest, or putting
-                        themselves and their friends in danger.
-                    </para>
+                    <title>Restaint values</title>
 
                     <targetlist targetFirst="true" bold="true">
                         <title>Restraint Passions</title>
@@ -856,28 +1001,32 @@
                         </item>
                     </targetlist>
                 </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Temperance</title>
+
+                <para>
+                    Temperance is a measure of a character's
+                    strength of will against temptation, in
+                    particular that of physical pleasure.
+                    Resisting the seductive charms of a beautiful
+                    woman, the chance to indulge in heavy feasting
+                    and drinking, or the opportunity of quick
+                    riches because of bribes or otherwise requires
+                    a temperance check.
+                </para>
+
+                <para>
+                    Temperance covers a multitude of sins, including
+                    lust, gluttony and greed. A
+                    temperate character may be seen as staid and
+                    boring by his peers. The other extreme leads
+                    to a reputation of unreliability and gluttony.
+                </para>
 
                 <sect3>
-                    <title>Temperance</title>
-
-                    <para>
-                        Temperance is a measure of a character's
-                        strength of will against temptation, in
-                        particular that of physical pleasure.
-                        Resisting the seductive charms of a beautiful
-                        woman, the chance to indulge in heavy feasting
-                        and drinking, or the opportunity of quick
-                        riches because of bribes or otherwise requires
-                        a temperance check.
-                    </para>
-
-                    <para>
-                        Temperance covers a multitude of sins, including
-                        lust, gluttony and greed. A
-                        temperate character may be seen as staid and
-                        boring by his peers. The other extreme leads
-                        to a reputation of unreliability and gluttony.
-                    </para>
+                    <title>Temperance values</title>
 
                     <targetlist targetFirst="true" bold="true">
                         <title>Temperance Passions</title>
@@ -938,7 +1087,6 @@
                             anything considered to be enjoyment.
                         </item>
                     </targetlist>
-
                 </sect3>
             </sect2>
 
