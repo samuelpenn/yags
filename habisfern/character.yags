@@ -15,8 +15,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.21 $</version>
-            <date>$Date: 2005-08-13 21:28:26 $</date>
+            <version>$Revision: 1.22 $</version>
+            <date>$Date: 2005-10-26 11:40:16 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -53,7 +53,7 @@
                 in the base package.
             </para>
 
-            <itemlist sort="strict">
+            <itemlist order="strict">
                 <item name="1">
                     Choose a character package. The package determines
                     the type of character you are going to play, and
@@ -126,51 +126,6 @@
         </sect1>
 
         <sect1>
-            <title>Attributes</title>
-
-            <para>
-                It is assumed that the typical adult will have a score of
-                three in all their primary attributes, and this is
-                considered the default for player characters. Attributes
-                may be bought up or bought down, and doing so costs
-                points. The more points spent on attributes means less
-                points to spend on buying extra skills, and also means
-                that the player may also have to choose some
-                <e>disadvantages</e> for the character as well.
-            </para>
-
-            <para>
-                It is probably a good idea not to spend more than 10 points
-                on attributes at this stage, though this suggestion is
-                little more than a guide for first time players.
-            </para>
-
-            <targetlist bold="true" targetFirst="false">
-                <targetLabel>Cost</targetLabel>
-                <valueLabel>Attribute Score</valueLabel>
-
-                <item target="-9" value="Poor (2).">
-                </item>
-
-                <item target="0" value="Typical (3).">
-                </item>
-
-                <item target="+12" value="Good (4).">
-                </item>
-
-                <item target="+27" value="Exceptional (5).">
-                </item>
-            </targetlist>
-
-            <para>
-                For example, a character could have two <e>good</e>
-                attributes at 4 for a cost of +24 points, and offset this
-                with two <e>poor</e> attributes at 2 for -18 points,
-                giving a final cost of +6.
-            </para>
-        </sect1>
-
-        <sect1>
             <title>Advantages and Disadvantages</title>
 
             <para>
@@ -204,6 +159,20 @@
                 are unique to the Habisfern setting which are described
                 below.
             </para>
+
+            <sect2>
+                <title>Common Advantages</title>
+
+                <y:import-advantages href="options/advantages.yags"
+                                     type="advantage"/>
+            </sect2>
+
+            <sect2>
+                <title>Common Disadvantages</title>
+
+                <y:import-advantages href="options/advantages.yags"
+                                     type="disadvantage"/>
+            </sect2>
 
             <sect2>
                 <title>Bryteland</title>

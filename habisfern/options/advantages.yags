@@ -1,13 +1,266 @@
 <?xml version="1.0"?>
 
 <!--
-    These advantages are generally available to characters in the
-    Habisfern campaign.
- -->
+    These list advantages and disadvantages available to all characters
+    in the Habisfern campaign.
+
+    Version: $Revision: 1.7 $
+    Date:    $Date: 2005-10-26 11:40:16 $
+    Author:  Samuel Penn (sam@glendale.org.uk)
+
+-->
 
 <advantages xmlns="http://yagsbook.sourceforge.net/xml/yags">
+
+    <advantage name="Good attribute" type="advantage">
+        <cost points="+3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has one attribute at level 4 rather than 3.
+                This advantage can be taken multiple times on different
+                attributes.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Excellent attribute" type="advantage">
+        <cost points="+5"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is truly exceptional in one attribute, and
+                can raise it from four to five. The character must
+                already have taken <e>Good attribute</e> in this attribute.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Strong willed" type="advantage">
+        <cost points="+1"/>
+        <cost points="+3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character begins the game with one passion at a score
+                of either five (+1 cost) or six (+3 cost). Multiple
+                passions can be raised in this way by buying this
+                advantage multiple times.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Keen hearing" type="advantage">
+        <cost points="+1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has very good hearing, and gains a bonus
+                of +1 to their perception for purposes of hearing.
+            </para>
+        </description>
+        <forbiddon>Poor hearing</forbiddon>
+    </advantage>
+
+    <advantage name="Keen vision" type="advantage">
+        <cost points="+1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Gain a bonus to vision rolls to see things at a distance.
+                Any perception roll where the character is not working at
+                close range (e.g. looking for a trap) they get +1 to their
+                perception attribute.
+            </para>
+        </description>
+        <forbiddon>Poor vision</forbiddon>
+    </advantage>
+
+    <advantage name="Musical talent" type="advantage">
+        <cost points="+1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has a natural talent with music, and gains
+                a +1 bonus to charisma or intelligence when playing a
+                musical instrument or composing for one.
+            </para>
+        </description>
+        <forbiddon>Can't sing</forbiddon>
+    </advantage>
+
+    <advantage name="Night vision" type="advantage">
+        <cost points="+1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Character is particularly adept at seeing in the dark.
+                All penalties to perception for darkness (except for full
+                darkness) are reduced by one.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Beautiful" type="advantage">
+        <cost points="+3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has exceptional beauty, and gets a +1 bonus
+                to their charisma when trying to charm or persuade someone
+                who finds them attractive. The character is also easy to
+                recognise.
+            </para>
+        </description>
+        <forbiddon>Ugly</forbiddon>
+    </advantage>
+
+    <advantage name="Voice" type="edge">
+        <cost points="+3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has a very clear and pleasant voice, getting
+                a +1 bonus to charisma when singing, orating or reading
+                poetry. This does not stack with similar advantages such
+                as <e>Beautiful</e>.
+            </para>
+        </description>
+        <forbiddon>Can't sing</forbiddon>
+    </advantage>
+
+    <advantage name="Language talent" type="advantage">
+        <cost points="+3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is adept at picking up new languages
+                quickly. Any experience placed on language skills
+                (excluding the starting score in speak own language) is
+                doubled. If <e>literate</e> has been taken, this also
+                affects written languages.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Literate" type="advantage">
+        <cost points="+3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character can read and write any languages they can
+                speak. The character starts with a scribe score equal to
+                the score of each language skill they start with.
+                Languages gained during play are not affected.
+            </para>
+
+            <para>
+                In a campaign where literacy is common, this advantage
+                is had by everyone for free, unless <e>illiterate</e>
+                is taken.
+            </para>
+
+            <para>
+                This advantage does not affect languages which have no
+                written form, or dead languages which may have no known
+                spoken form.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Tough" type="advantage">
+        <cost points="+5"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is particulary tough and resilient to
+                damage, and gains a +3 bonus to their basic soak
+                (15 instead of 12) to resist all forms of damage.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Heavily built" type="advantage">
+        <cost points="+3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is heavily built, being tougher and broader
+                than normal. They get a +5 bonus to their soak against
+                <e>stun</e> damage, and get a +1 bonus to strength for
+                purposes of knockdown, being tripped and the like.
+            </para>
+
+            <para>
+                The character must have a strength of at least four in
+                order to take this advantage.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Ambidexterity" type="advantage">
+        <cost points="+1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character suffers no penalty for performing actions
+                with her off hand. This does not affect <e>two weapon
+                fighting</e>.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Large" type="advantage">
+        <cost points="+5"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is much larger than normal, being well built
+                and tall. He has a size of six, and has one more body level
+                than normal. Such a person must also take a strength of at
+                least four. In combat, any attacks they make which have a
+                reach of zero of one, count as being one reach longer.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Empathy" type="advantage">
+        <cost points="+3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has the ability to tell a person's nature
+                when they first meet. A raw Charisma check is made, and
+                on a 20+ the general personality of the character can be
+                'read', giving an indication to how trustworthy, kind
+                or honourable they are.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Quick" type="advantage">
+        <cost points="+1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is particularly quick on their feet,
+                and gains a +2 bonus to their basic move.
+            </para>
+        </description>
+    </advantage>
+
     <advantage name="Dreaming" type="advantage">
-        <cost points="+10"/>
+        <cost points="+5"/>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The character has dreams of their future. When a major
@@ -51,7 +304,7 @@
     </advantage>
 
     <advantage name="Wyrd" type="advantage">
-        <cost points="+4"/>
+        <cost points="+5"/>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 At birth, an omen was seen, or a prophecy made about the
@@ -70,8 +323,565 @@
         </description>
     </advantage>
 
+    <!--
+        Disadvantages.
+     -->
+
+    <advantage name="Poor attribute" type="disadvantage">
+        <cost points="-3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                One of the character's attributes has a score of two.
+                This disadvantage may be taken multiple times, but
+                only once for any given attribute.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Weak willed" type="disadvantage">
+        <cost points="-1"/>
+        <cost points="-3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character begins the game with one passion at a score
+                of either three (-1 cost) or two (-3 cost). Multiple
+                passions can be lowered in this way by taking this
+                disadvantage multiple times.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Albino" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is an albino. Skin and hair are white,
+                and eyes are pink. They will often suffer sun burn in
+                bright sunlight, and suffer double range penalties in
+                daylight.
+            </para>
+
+            <para>
+                An albino may find others reacting badly to him on first
+                sight, especially by those who are superstitious or
+                paranoid about strangers.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Anosmia" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has no sense of taste nor smell.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Blind" type="disadvantage">
+        <cost points="-5"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is completely blind. This disadvantage
+                cannot be combined with any other that affects sight.
+            </para>
+        </description>
+        <forbiddon>Poor vision</forbiddon>
+    </advantage>
+
+
+    <advantage name="Combat paralysis" type="disadvantage">
+        <cost points="-3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character cannot act in the first round of combat, due
+                to fear and indecision. If they have surprise, then they
+                gain no advantage from the surprise. They still roll
+                initiative as normal, and a fumble means that they are
+                indecisive for two rounds.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Illiterate" type="disadvantage">
+        <cost points="-3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character does not know how to read or write, and
+                cannot start with any reading or writing skills in any
+                language. This disadvantage can only be taken in a
+                campaign where literacy is considered the norm.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Innumerate" type="disadvantage">
+        <cost points="-3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is unable to count above ten, and even that
+                requires the use of fingers and thumbs. Arithmetic is very
+                difficult, and estimating numbers of things is incredibly
+                difficult for groups larger than three.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Loud voice" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Character has a very loud voice, and has difficulty
+                keeping it down. If trying to speak quietly, they must
+                make a will roll of difficulty 20 in order to succeed.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Noticeable mark" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has a strange and obvious mark on their
+                body which makes they easy to recognise, but doesn't
+                otherwise affect their appearance.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Sexually tantalising" type="disadvantage">
+        <cost points="-3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                A sexually tantalising person is very attractive to the
+                opposite sex. She will often find herself the centre of
+                attention, but it is often a shallow, superficial
+                form of attention.
+            </para>
+
+            <para>
+                People will not see beyond the woman's good looks, seeing
+                her as a sex object rather than a person. This can sometimes
+                be useful, but gets annoying very quickly. Characters must
+                have <e>Beautiful</e> before taking this disdvantage.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Voracious appetite" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has a fast metabolism, and needs to eat
+                more than everyone else to prevent hunger. They are not
+                being greedy, since they will starve if they don't eat
+                their fill. The character must eat 50% more than a
+                normal person.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Small" type="disadvantage">
+        <cost points="-5"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is smaller than average, being both shorter
+                and thinner. She has a size of four, and therefore has one
+                less body level than normal. She cannot have a strength
+                above three. Reach of <e>short</e> and <e>medium</e>
+                weapons is reduced by one level.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Addiction" type="disadvantage">
+        <cost points="varies"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The addict craves some drug which they need to stave off
+                withdrawal symptoms. The cost of the addiction is measured
+                by three factors - whether the substance is socially
+                accepted (tobacco and alcohol normally are), whether it is
+                expensive and/or difficult to get hold of (heroin), and
+                whether it has any side effects which affect the character
+                in game (alcohol and heroin would, though tobacco wouldn't,
+                since the latter's side effects are too long term to have
+                any effect in most games).
+            </para>
+
+            <para>
+                Side effects include anything which can be detrimental to
+                the character during the general course of play. An
+                alcoholic who drinks himself into a stupor most nights
+                may not have much affect on the game. One who is mildly
+                drunk all the time will.
+            </para>
+
+            <targetlist>
+                <valueLabel>Addiction</valueLabel>
+                <targetLabel>Cost</targetLabel>
+
+                <item target="-1">
+                    Addiction does not have much affect on the addict,
+                    normally because it is mostly socially acceptable,
+                    reasonably cheap and has few side effects. Smoking
+                    of tobacco in the modern day would be an example.
+                </item>
+
+                <item target="-3">
+                    Addiction is either not socially acceptable, has
+                    one or more side effects, or is expensive.
+                    Alcoholism is an example, since it can seriously
+                    degrade the skills of the addict, though is cheap
+                    and socially acceptable in many societies.
+                </item>
+
+                <item target="-5">
+                    Addiction suffers from two of the problems.
+                    Alternatively, he suffers from one problem very
+                    badly.
+                </item>
+            </targetlist>
+        </description>
+    </advantage>
+
+    <advantage name="Looks young" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character looks younger than she really is, possibly
+                thirteen or fourteen. As such, adults will not take her
+                seriously. A character who looks young cannot take the
+                age disadvantage. As the character ages during the game,
+                this disadvantage will disappear. The character should
+                probably also take <e>Small</e>, and cannot have a
+                strength above three to begin with.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Light drinker" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Character has a penalty of -1 to stamina rolls to resist
+                the effects of alchohol and similar intoxicants.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Bad hangovers" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character suffers from very bad hangovers the morning
+                after a night of drinking. All penalties and effects of a
+                hangover are doubled.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Non-combatant" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is not used to, and greatly dislikes, real
+                combat. They don't like hurting people or getting hurt,
+                the smell of blood or the clash of steel. They may be
+                skilled at martial arts for sporting events, but when
+                it comes to fighting in anger, their nature lets them
+                down. In a real combat, they suffer a penalty of -1 to
+                agility, dexterity and perception.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Absent minded" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has a poor memory, and probably has a
+                reputation of being forgetful. The problem mainly
+                manifests itself when trying to remember everyday
+                mundane things, such as locking the front door,
+                putting out the fire or packing food for a journey.
+                At inconvenient moments, the GM will secretly make an
+                intelligence check for the character to see if they
+                remembered doing something important.
+            </para>
+
+            <para>
+                If the <e>player</e> ever forgets something, then
+                excuses of "but my character would have remembered" can
+                be safely ignored by the GM.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Animal enmity" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character does not get on well with animals.
+                The Reaction of animals to the character is always one
+                level worse than it would be otherwise.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Big mouth" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has a habit of spurting out the wrong thing
+                at the worst possible time. If the player makes any snide
+                comments, asides or other such utterences whilst a social
+                situation is being roleplayed, then their character said
+                it out loud.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Gullible" type="disadvantage">
+        <cost points="-5"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is particularly gullible. They cannot tell
+                if someone is lying, and tend to take things at face
+                value. They may well understand the concept of lying, and
+                might be very good at it themselves, but can't spot when
+                others are doing it.
+            </para>
+
+            <para>
+                Normally the character will automatically any attempts to
+                detect lying. In really obvious situations, they can have
+                a roll but the final result is halved.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Clumsy" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is particularly clumsy, and has a tendancy
+                to bump into things, stumble over their own feet and
+                generally lack any grace or finesse of movement. If trying
+                to move stealthily, they are doomed to failure.
+            </para>
+
+            <para>
+                If there is anything they can knock, bump or tread on
+                which will make a noise then they automatically fail
+                at any stealth attempts. In ideal situations, they can
+                make a stealth roll but the result is halved.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Heavy sleeper" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is very bad at waking from sleep. If they
+                are sleeping, then they can only be awakened with lots
+                of physical discomfort (cold water, a kick, vigerous
+                shaking for a whole round), and are then at -1 to all
+                attributes for the next minute.
+            </para>
+
+            <para>
+                If dozing, then all perception rolls are quartered, as
+                for normal people who are in deep sleep.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="No direction sense" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character really has no sense of direction and can
+                get lost getting out of bed. Except in the most simple
+                of situations (when their rolls are halved), they will
+                automatically fail any navigation attempts.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Obese" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is greatly overweight, and suffers a
+                penalty to athletics, brawl and stealth rolls, as well
+                as stamina for purposes of fatigue (including the number
+                of fatigue levels the character has) and strength for
+                purposes of encumbrence.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Poor vision" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has very poor eyesight, and suffers a
+                penalty of -1 to their perception for all vision based
+                skill checks (including missile attacks).
+            </para>
+        </description>
+        <forbiddon>Keen vision</forbiddon>
+    </advantage>
+
+    <advantage name="Poor hearing" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has very poor hearing, and suffers a
+                penalty of -1 to their perception for all hearing based
+                perception checks.
+            </para>
+        </description>
+        <forbiddon>Keen hearing</forbiddon>
+        <forbiddon>Combat awareness</forbiddon>
+    </advantage>
+
+    <advantage name="Repellent" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                People who would otherwise find this character sexually
+                attractive are instead repelled. Any attempts to seduce
+                such people will always fail. When the character first
+                meets someone so affected, then any reaction results
+                are always at one level worse.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Ugly" type="disadvantage">
+        <cost points="-3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is not attractive to look at. When first
+                meeting people, reaction results will be at one level
+                worse than normal. At other times, the character may
+                suffer a -1 to their charisma if their appearance could
+                affect such rolls.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Shy" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is uncomfortable if strangers are taking
+                an interest in what they are doing. They suffer a -1 to
+                their attribute if performing some task in front of
+                people, or if trying to socialise with strangers.
+            </para>
+
+            <para>
+                If the character is really stressed, such as in the
+                middle of combat, then the penalty doesn't apply since
+                they'll be too worried to care.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Terrible liar" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is a really bad liar. If the character ever
+                tries to lie, then they will generally fail. Really easy
+                lies may allow them a skill check, though the result will
+                be halved.
+            </para>
+
+            <para>
+                A <e>terrible liar</e> lying to a <e>gullible</e> person
+                would be a very painful event to watch.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Uninspiring" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character has an  uninspiring personality, to the
+                point of being utterly forgettable. They suffer a penalty
+                when trying to impress people.
+            </para>
+        </description>
+    </advantage>
+
     <advantage name="Minor enemy" type="disadvantage">
-        <cost points="-2"/>
+        <cost points="-1"/>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The character has made an enemy of an organisation or
@@ -91,7 +901,7 @@
     </advantage>
 
     <advantage name="Major enemy" type="disadvantage">
-        <cost points="-4"/>
+        <cost points="-3"/>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The character has made a great enemy. The enemy has
@@ -103,5 +913,4 @@
         </description>
     </advantage>
 </advantages>
-
 

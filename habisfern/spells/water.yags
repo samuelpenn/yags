@@ -2,8 +2,8 @@
 
 <!--
     Water cantrips.
-    Version: $Revision: 1.5 $
-    Date:    $Date: 2005-08-13 15:47:35 $
+    Version: $Revision: 1.6 $
+    Date:    $Date: 2005-10-26 11:40:16 $
 -->
 <grimoire xmlns="http://yagsbook.sourceforge.net/xml/yags/habisfern" name="Water">
 
@@ -11,6 +11,38 @@
         Following are the core spells. Various other threads split off from
         this one.
      -->
+
+    <spell name="Chill" level="1" type="water">
+        <range>Self</range>
+        <duration>Concentration</duration>
+        <radius>-1/m</radius>
+
+        <short>Summon cold and damp to the area.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This cantrip causes the immediate area to become cold
+                and damp, making it uncomfortable, and possibly even
+                unhealthy. The wizard can define the area affected,
+                though it is always centred on him. At casting time,
+                he may choose to have the area of effect remain fixed,
+                or follow him as he moves.
+            </para>
+
+            <para>
+                The full effect of the magic is felt out to the radius
+                of the cantrip. The level of effect drops by one each
+                multiple of radius out from this (-1 out to twice the
+                radius, -2 out to three times etc).
+            </para>
+
+            <para>
+                The temperature drops by one level per success.
+            </para>
+        </description>
+    </spell>
+
+
     <spell name="Wet" level="1" type="water">
         <range>-1/m</range>
         <duration>Momentary</duration>

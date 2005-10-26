@@ -10,15 +10,24 @@
         </para>
     </preface>
 
-    <character name="Kotsetla">
+    <character name="Kotsetla" quality="2">
         <description>
             <gender>Male</gender>
             <age>18-24</age>
             <short>
                 A poor farmer who has to farm his lord's land to survive.
-                Kotsetla's own little, and take part in the militia only
-                when times are desperate.
             </short>
+
+            <background>
+                <para>
+                    Kotsetla's are the rural lower class. They are
+                    still technically <e>free</e>, though have enough
+                    obligations to tie them to the land and their
+                    Lord. A Kotsetla is only expected to serve in the
+                    fyrd in exceptional circumstances, but are the
+                    first to starve when times are hard.
+                </para>
+            </background>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
@@ -50,17 +59,12 @@
                     <skill name="Area lore" score="2"/>
                 </group>
 
-                <group name="Combat" type="skills">
+                <group name="Skills" type="skills">
                     <skill name="Longshaft weapon" score="2"/>
-                </group>
-
-                <group name="Profession" type="skills">
                     <skill name="Farming" score="3"/>
                     <skill name="Carpentry" score="1"/>
-                </group>
-
-                <group name="Misc" type="skills">
                     <skill name="Gambling" score="2"/>
+                    <skill name="Survival" score="1"/>
                 </group>
             </skills>
 
@@ -73,7 +77,7 @@
         </statistics>
     </character>
 
-    <character name="Kotsetla's wife">
+    <character name="Kotsetla's wife" quality="2">
         <description>
             <gender>Female</gender>
             <age>18-24</age>
@@ -81,6 +85,21 @@
                 Wife of a Kotsetla. They have little opportunity to
                 achieve much in the world.
             </short>
+
+            <background>
+                <para>
+                    Wives of poor farmers have even less opportunity
+                    to develop than their husbands. They cook, clean
+                    and give birth. Many will have handicraft skills,
+                    and help where they can around the farm.
+                </para>
+
+                <para>
+                    Some may act as servents to their Lord (or his Lady),
+                    though this is generally left to younger women since
+                    it takes them away from the home (and family).
+                </para>
+            </background>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
@@ -117,6 +136,7 @@
                     <skill name="Farming" score="2"/>
                     <skill name="Dairying" score="1"/>
                     <skill name="Handicraft" score="3"/>
+                    <skill name="Cook" score="2"/>
                 </group>
             </skills>
 
@@ -130,7 +150,8 @@
     </character>
 
 
-    <character name="Ceorl Farmer">
+
+    <character name="Ceorl Farmer" quality="2">
         <description>
             <gender>Male</gender>
             <age>18-24</age>
@@ -141,7 +162,7 @@
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <attributes size="5" soak="12">
+            <attributes size="5" soak="12" luck="0">
                 <attribute name="strength" score="3"/>
                 <attribute name="stamina" score="3"/>
                 <attribute name="agility" score="3"/>
@@ -169,20 +190,144 @@
                     <skill name="Area lore" score="2"/>
                 </group>
 
-                <group name="Combat" type="skills">
+                <group name="Skills" type="skills">
                     <skill name="Longshaft weapon" score="3"/>
-                </group>
-
-                <group name="Profession" type="skills">
+                    <skill name="Weapon and shield" score="2"/>
                     <skill name="Farming" score="4"/>
                     <skill name="Dairying" score="2"/>
                     <skill name="Carpentry" score="2"/>
-                </group>
-
-                <group name="Misc" type="skills">
                     <skill name="Gambling" score="2"/>
                     <skill name="Game (Hnefatafl)" score="2"/>
                     <skill name="Survival" score="1"/>
+                </group>
+            </skills>
+
+            <passions>
+                <passion name="Bravery" score="4"/>
+                <passion name="Ego" score="4"/>
+                <passion name="Restraint" score="4"/>
+                <passion name="Temperence" score="4"/>
+            </passions>
+
+            <advantages>
+                <advantage name="Shield wall" cost="2"
+                           skill="Weapon and shield"/>
+            </advantages>
+        </statistics>
+    </character>
+
+    <character name="Ceorl Farmer" quality="3">
+        <description>
+            <gender>Male</gender>
+            <age>21-30</age>
+            <short>
+                A Ceorl is a freeman.
+            </short>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12" luck="0">
+                <attribute name="strength" score="3"/>
+                <attribute name="stamina" score="3"/>
+                <attribute name="agility" score="3"/>
+                <attribute name="dexterity" score="3"/>
+                <attribute name="perception" score="3"/>
+                <attribute name="intelligence" score="3"/>
+                <attribute name="charisma" score="3"/>
+                <attribute name="will" score="3"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="3"/>
+                    <skill name="Charm" score="2"/>
+                    <skill name="Guile" score="3"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak Rornic" score="4"/>
+                    <skill name="Area lore" score="2"/>
+                </group>
+
+                <group name="Skills" type="skills">
+                    <skill name="Longshaft weapon" score="3"/>
+                    <skill name="Weapon and shield" score="3"/>
+                    <skill name="Farming" score="5"/>
+                    <skill name="Dairying" score="2"/>
+                    <skill name="Carpentry" score="2"/>
+                    <skill name="Gambling" score="3"/>
+                    <skill name="Game (Hnefatafl)" score="3"/>
+                    <skill name="Survival" score="1"/>
+                </group>
+            </skills>
+
+            <passions>
+                <passion name="Bravery" score="4"/>
+                <passion name="Ego" score="4"/>
+                <passion name="Restraint" score="4"/>
+                <passion name="Temperence" score="4"/>
+            </passions>
+
+            <advantages>
+                <advantage name="Shield wall" cost="2"
+                           skill="Weapon and shield"/>
+            </advantages>
+        </statistics>
+    </character>
+
+
+    <character name="Ceorl's Wife" quality="2">
+        <description>
+            <gender>Female</gender>
+            <age>18-24</age>
+            <short>
+                The wife of a ceorl normally oversees the household chores,
+                supplementing income with handicrafts and looking after the
+                children.
+            </short>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12" luck="0">
+                <attribute name="strength" score="3"/>
+                <attribute name="stamina" score="3"/>
+                <attribute name="agility" score="3"/>
+                <attribute name="dexterity" score="3"/>
+                <attribute name="perception" score="3"/>
+                <attribute name="intelligence" score="3"/>
+                <attribute name="charisma" score="3"/>
+                <attribute name="will" score="3"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="2"/>
+                    <skill name="Guile" score="2"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak Rornic" score="4"/>
+                    <skill name="Area lore" score="2"/>
+                    <skill name="First aid" score="1"/>
+                </group>
+
+                <group name="Skills" type="skills">
+                    <skill name="Handicraft" score="4"/>
+                    <skill name="Brewing" score="2"/>
+                    <skill name="Farming" score="2"/>
+                    <skill name="Dairying" score="2"/>
+                    <skill name="Cooking" score="2"/>
                 </group>
             </skills>
 
@@ -195,20 +340,80 @@
         </statistics>
     </character>
 
-    <character name="Ceorl's Wife">
+    <character name="Woodsman" quality="2">
         <description>
-            <gender>Female</gender>
+            <gender>Male</gender>
             <age>18-24</age>
             <short>
-                The wife of a ceorl normally oversees the household chores,
-                supplementing income with handicrafts and looking after the
-                children.
+                A Ceorl is a freeman.
             </short>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <attributes size="5" soak="12">
+            <attributes size="5" soak="12" luck="0">
                 <attribute name="strength" score="3"/>
+                <attribute name="stamina" score="3"/>
+                <attribute name="agility" score="3"/>
+                <attribute name="dexterity" score="3"/>
+                <attribute name="perception" score="3"/>
+                <attribute name="intelligence" score="3"/>
+                <attribute name="charisma" score="3"/>
+                <attribute name="will" score="3"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="3"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="2"/>
+                    <skill name="Guile" score="2"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="3"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak Rornic" score="4"/>
+                    <skill name="Area lore" score="2"/>
+                </group>
+
+                <group name="Skills" type="skills">
+                    <skill name="Longshaft weapon" score="2"/>
+                    <skill name="Bow" score="3"/>
+                    <skill name="Copicing" score="4"/>
+                    <skill name="Farming" score="2"/>
+                    <skill name="Carpentry" score="2"/>
+                    <skill name="Gambling" score="1"/>
+                    <skill name="Game (Hnefatafl)" score="1"/>
+                    <skill name="Survival" score="2"/>
+                </group>
+            </skills>
+
+            <passions>
+                <passion name="Bravery" score="4"/>
+                <passion name="Ego" score="4"/>
+                <passion name="Restraint" score="4"/>
+                <passion name="Temperence" score="4"/>
+            </passions>
+
+            <advantages>
+            </advantages>
+        </statistics>
+    </character>
+
+    <character name="Blacksmith" quality="2">
+        <description>
+            <gender>Male</gender>
+            <age>18-24</age>
+            <short>
+                A craftsman skilled in iron work.
+            </short>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12" luck="0">
+                <attribute name="strength" score="4"/>
                 <attribute name="stamina" score="3"/>
                 <attribute name="agility" score="3"/>
                 <attribute name="dexterity" score="3"/>
@@ -225,7 +430,7 @@
                     <skill name="Brawl" score="2"/>
                     <skill name="Charm" score="2"/>
                     <skill name="Guile" score="2"/>
-                    <skill name="Sleight" score="2"/>
+                    <skill name="Sleight" score="3"/>
                     <skill name="Stealth" score="2"/>
                     <skill name="Throw" score="2"/>
                 </group>
@@ -235,20 +440,13 @@
                     <skill name="Area lore" score="2"/>
                 </group>
 
-                <group name="Combat" type="skills">
-                    <skill name="Longshaft weapon" score="3"/>
-                </group>
-
-                <group name="Profession" type="skills">
-                    <skill name="Farming" score="4"/>
-                    <skill name="Dairying" score="2"/>
+                <group name="Skills" type="skills">
+                    <skill name="Single weapon" score="2"/>
+                    <skill name="Blacksmithing" score="4"/>
                     <skill name="Carpentry" score="2"/>
-                </group>
-
-                <group name="Misc" type="skills">
-                    <skill name="Gambling" score="2"/>
+                    <skill name="Weaponsmithing" score="1"/>
+                    <skill name="Armoury" score="1"/>
                     <skill name="Game (Hnefatafl)" score="2"/>
-                    <skill name="Survival" score="1"/>
                 </group>
             </skills>
 
@@ -258,6 +456,12 @@
                 <passion name="Restraint" score="4"/>
                 <passion name="Temperence" score="4"/>
             </passions>
+
+            <advantages>
+                <advantage name="Shield wall" cost="2"
+                           skill="Weapon and shield"/>
+                <advantage name="Heavily built" cost="5"/>
+            </advantages>
         </statistics>
     </character>
 

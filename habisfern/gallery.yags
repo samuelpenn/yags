@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<?xml-stylesheet href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl" type="text/xsl"?>
+<?xml-stylesheet href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl" type="text/xsl"?>
 
 <article xmlns="http://yagsbook.sourceforge.net/xml">
     <header>
@@ -12,8 +12,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.7 $</version>
-            <date>$Date: 2005-08-13 15:47:35 $</date>
+            <version>$Revision: 1.8 $</version>
+            <date>$Date: 2005-10-26 11:40:16 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -43,10 +43,19 @@
                 <title>Quality and Experience</title>
 
                 <para>
-                    NPCs will be of varying levels of skill, and for most
-                    character types, several examples are given. In all,
-                    five different skill classifications are given, ranging
-                    from poor quality up to the elite of the profession.
+                    Not everyone is the same, and how skilled a person is
+                    depends a lot on their age as well as their own
+                    willingness and ability to learn. All NPCs listed here
+                    are given a quality rating from 1 (Poor) to 5
+                    (Excellent).
+                </para>
+
+                <para>
+                    Most people will be <e>average</e> to <e>good</e>.
+                    In rural communities where little changes from year
+                    to year, opportunities to learn and improve are
+                    rare, and even then many people don't care enough
+                    to take advantage of such an opportunity.
                 </para>
 
                 <itemlist order="strict">
@@ -55,11 +64,21 @@
                     </item>
 
                     <item name="Average">
-                        Skill level about 4. Age 16-20.
+                        Skill level about 4. This is a typical example
+                        of a young or inexperienced member of this
+                        profession, often in the age range of 16-21.
+                        Professions where there isn't much need or
+                        opportunity to improve (such as many in poor
+                        rural communities) will tend to remain
+                        <e>average</e> into their thirties.
                     </item>
 
                     <item name="Good">
-                        Skill level about 5.
+                        Skill level about 5-6. This represents an
+                        experienced or gifted member of a profession.
+                        Most people will become good sometime in their
+                        early twenties, and remain there for much of
+                        the rest of their life.
                     </item>
 
                     <item name="Superior">
@@ -75,6 +94,17 @@
         </sect1>
 
         <sect1>
+            <title>Commoners</title>
+
+            <para>
+                <e>Commoners</e> cover all the normal people who make
+                up 99% of society.
+            </para>
+
+            <import-characters href="templates/common.yags"/>
+        </sect1>
+
+        <sect1>
             <title>Ruffians</title>
 
             <sect2>
@@ -84,11 +114,6 @@
             </sect2>
         </sect1>
 
-        <sect1>
-            <title>Peasants</title>
-
-            <import-characters href="templates/common.yags"/>
-        </sect1>
 
         <sect1>
             <title>Rornic Warriors</title>
