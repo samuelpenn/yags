@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.81 $</version>
-            <date>$Date: 2005-10-08 21:58:14 $</date>
+            <version>$Revision: 1.82 $</version>
+            <date>$Date: 2005-10-27 15:35:10 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -271,9 +271,8 @@
                         </item>
 
                         <item>
-                            Attack rolls are based on dexterity, defence
-                            rolls may be based on either dexterity or
-                            agility.
+                            Attack and defence rolls are based on the
+                            highest of agility and dexterity.
                         </item>
                     </itemlist>
                 </sect3>
@@ -390,7 +389,7 @@
 
                         <item>
                             Weapons listed as being defensive only suffer a
-                            -5 penalty to defence rolls instead of -10 when
+                            -5 penalty to attack rolls instead of -10 when
                             using the defensive stance.
                         </item>
                     </itemlist>
@@ -2532,22 +2531,28 @@
                     <para>
                         The base difficulty of the action depends on how
                         tactically appropriate it is. Leaping onto someone
-                        from above is appropriate for example.
+                        from above is appropriate for example. The check is
+                        made with
+                        <y:skeq>
+                            <y:attr>agility</y:attr>
+                            <y:sk>athletics</y:sk>
+                            <die/>
+                        </y:skeq>
                     </para>
 
-                    <targetlist targetFirst="false">
+                    <targetlist targetFirst="false" bold="true">
                         <targetLabel>Target</targetLabel>
                         <valueLabel>Type of stunt</valueLabel>
 
-                        <item target="10" value="Appropriate">
+                        <item target="10" value="Appropriate.">
                             Action would give tactical advantage.
                         </item>
 
-                        <item target="20" value="Neutral">
+                        <item target="20" value="Neutral.">
                             Probably no real tactical advantage.
                         </item>
 
-                        <item target="30" value="Silly">
+                        <item target="30" value="Silly.">
                             Not a tactically sound move.
                         </item>
                     </targetlist>
