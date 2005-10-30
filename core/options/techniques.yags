@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.16 $</version>
-            <date>$Date: 2005-08-31 14:52:03 $</date>
+            <version>$Revision: 1.17 $</version>
+            <date>$Date: 2005-10-30 13:52:31 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -601,6 +601,7 @@
     <advantage name="Shield wall" type="technique">
         <cost points="2"/>
         <skill name="Weapon and shield"/>
+        <short>Form a solid defensive wall of shields.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -619,26 +620,11 @@
         </description>
     </advantage>
 
-    <advantage name="Shield defence" type="technique">
+    <advantage name="Shield bash" type="technique">
         <cost points="4"/>
         <skill name="Weapon and shield"/>
-
         <prerequisite>Shield wall</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The character gains a free defence against the target
-                of their attacks, which does not count towards their
-                maximum number of defences. Declared.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Shield bash" type="technique">
-        <cost points="6"/>
-        <skill name="Weapon and shield"/>
-
-        <prerequisite>Shield defence</prerequisite>
+        <short>Can make an extra stunning attack with shield.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -649,6 +635,59 @@
             </para>
         </description>
     </advantage>
+
+    <advantage name="Shielded attack" type="technique">
+        <cost points="6"/>
+        <skill name="Weapon and shield"/>
+        <prerequisite>Shield bash</prerequisite>
+        <short>Attack penalty due to multiple defences is halved.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If making multiple defences that round, and not fighting
+                defensively, then the character's attack penalty for
+                those defences is halved. Declared.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Secure defence" type="technique">
+        <cost points="8"/>
+        <skill name="Weapon and shield"/>
+        <prerequisite>Shielded attack</prerequisite>
+        <short>Ignore first fumble of the battle.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The first time the character fumbles their defence roll
+                in a battle, they can ignore the fumble. Further, knowing
+                this technique means that <e>Unstoppable attack</e> cannot
+                be used against the character when they are defending
+                with this skill. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Tricky defence" type="technique">
+        <cost points="10"/>
+        <skill name="Weapon and shield"/>
+        <prerequisite>Secure defence</prerequisite>
+        <short>Increase attacker's fumble chance.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If the character rolls a '20' when making a defence roll
+                with this skill, then their attacker is considered to have
+                fumbled their attack. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+
+
+
+
+
 
     <advantage name="Spearman" type="technique">
         <cost points="2"/>
@@ -665,88 +704,149 @@
         </description>
     </advantage>
 
-
-    <advantage name="Two rank fighting" type="technique">
+    <advantage name="Sweep attack" type="technique">
         <cost points="4"/>
         <skill name="Longshaft weapon"/>
-
         <prerequisite>Spearman</prerequisite>
+        <short>Cause a trip if making a good attack.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When fighting from a second rank with a spear or similar
-                weapon, attacks are not automatically slow and the
-                spearman counts as a different attacker to the person
-                they are fighting through (i.e., the target needs to
-                defend against two foes).
+                On a <e>good</e> attack, get a free trip attack against
+                the target after damage has been applied. Declared.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Long defence" type="technique">
+    <advantage name="Defensive reach" type="technique">
         <cost points="6"/>
         <skill name="Longshaft weapon"/>
-
-        <prerequisite>Two rank fighting</prerequisite>
+        <prerequisite>Sweep attack</prerequisite>
+        <short>Ignore attack penalty if defensive.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When fighting defensively, if the character out reaches
-                their opponent then they get a +1 bonus to their
-                dexterity for attack and defence rolls.
+                When using a <e>defensive</e> weapon, the defensive stance
+                does not provide any penalty to attack. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Deadly reach" type="technique">
+        <cost points="8"/>
+        <skill name="Longshaft weapon"/>
+        <prerequisite>Defensive reach</prerequisite>
+        <short>Turn a free strike into an automatic strike.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The first time that the character gets a <e>free strike</e>
+                in the round for any reason, then they may consider the
+                extra attack to be an <e>automatic strike</e> as long as
+                they have the advantage of reach. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Impaling attack" type="technique">
+        <cost points="10"/>
+        <skill name="Longshaft weapon"/>
+        <prerequisite>Deadly reach</prerequisite>
+        <short>Damage bonus when using impaling weapons.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If the character is using an impaling weapon, then they
+                get a +3 bonus to damage for each extra level of success
+                when making an attack. Declared.
             </para>
         </description>
     </advantage>
 
 
-    <advantage name="Agile fighting" type="technique">
+
+
+    <advantage name="Finesse" type="technique">
         <cost points="2"/>
         <skill name="Single weapon"/>
 
-        <short>Use agility instead of dexterity.</short>
+        <short>+5 to attack, -5 to damage.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character can opt to use either agility or dexterity
-                when making attack and defence rolls.
+                Character can choose to attack with speed and finesse
+                rather than power, getting a +5 to their attack but
+                suffering a -5 to the damage they do.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Acrobatic attack" type="technique">
+        <cost points="4"/>
+        <skill name="Single weapon"/>
+        <prerequisite>Finesse</prerequisite>
+
+        <short>Bonus when making performing a stunt.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When performing a stunt before making an attack, the
+                character can gain a bonus to the athletics roll
+                equal to their <e>single weapon</e> skill. Automatic.
             </para>
         </description>
     </advantage>
 
     <advantage name="Acrobatic dodge" type="technique">
-        <cost points="4"/>
+        <cost points="6"/>
         <skill name="Single weapon"/>
 
-        <prerequisite>Agile fighting</prerequisite>
+        <prerequisite>Acrobatic attack</prerequisite>
 
-        <short>Free brawling defence each round.</short>
+        <short>Increases base soak.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character gains a free brawl defence each round which
-                may be used against any attacker. Defence bonuses for
-                weapons do not apply.
+                Character is able to dodge away from blows, lessening the
+                impact of their strike. They gain a bonus to their soak
+                equal to their agility as long as they are unencumbered.
+                Automatic, as long as they are aware of the attack.
             </para>
         </description>
     </advantage>
 
     <advantage name="Acrobatic defence" type="technique">
-        <cost points="6"/>
+        <cost points="8"/>
         <skill name="Single weapon"/>
-
         <prerequisite>Acrobatic dodge</prerequisite>
 
-        <short>Increases base chance to be hit.</short>
+        <short>Increase difficulty to be hit.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character can add their <e>athletics</e> score to their
-                base difficulty to be hit for all attacks they are aware
-                of in a round, but which they are unable to defend against.
+                As long as the character is unencumbered, they can make
+                use of their skill to avoid attacks, increase the base
+                target number to hit them by their <e>Single weapon</e>
+                skill, as long as they are aware of the attack.
             </para>
         </description>
     </advantage>
 
+    <advantage name="Counterstrike" type="technique">
+        <cost points="10"/>
+        <skill name="Single weapon"/>
+        <prerequisite>Acrobatic defence</prerequisite>
+
+        <short>Strike back at an attacker.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If the character makes a <e>good</e> defence, then they get
+                an immediate <e>free strike</e> against their attacker as
+                long as neither are defensive. Automatic.
+            </para>
+        </description>
+    </advantage>
 
     <advantage name="Greater range" type="technique">
         <cost points="2"/>
