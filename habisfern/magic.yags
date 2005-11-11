@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.19 $</version>
-            <date>$Date: 2005-11-06 18:23:13 $</date>
+            <version>$Revision: 1.20 $</version>
+            <date>$Date: 2005-11-11 23:38:42 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -282,10 +282,51 @@
                     </y:skeq>
                     resistance roll of the target.
                 </para>
+
+                <para>
+                    Raw magic tends to be unstructured, and some uses
+                    are very different from others. In general however,
+                    it takes a round to activate magic, and the effect
+                    will either last a brief moment (the magic does
+                    what it does, then ends) or as long as the wizard
+                    concentrates (effect being aimed for).
+                </para>
+
+                <para>
+                    All magical activations are considered to be
+                    <e>slow</e> actions, but generally just require
+                    thought without any need of incantations or gestures.
+                    If a wizard is hit in combat whilst activating
+                    magic, then they add +10 to the casting difficulty
+                    for every level of stun or wound taken.
+                </para>
+
+                <para>
+                    A wizard who is concentrating on magic is at -1 to
+                    agility, dexterity and perception for each effect
+                    they are concentrating on.
+                </para>
             </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Spirit</title>
+
+            <para>
+                The Word of <e>Spirit</e> gives the wizard control over
+                the realm of spirits, souls and minds. It is the realm
+                of seekers after knowledge, and the haunts of ghosts.
+            </para>
+
+            <para>
+                <e>Spirit</e> is linked to the female side of life, and
+                women who master its secrets suffer fewer penalties than
+                do men. <e>Spirit</e> is directly opposed to <e>Iron</e>,
+                and indirectly opposed to <e>Fire</e> and <e>Earth</e>.
+            </para>
 
             <sect2>
-                <title>Spirit</title>
+                <title>Raw Spirit</title>
 
                 <sect3>
                     <title>Sense</title>
@@ -329,7 +370,6 @@
                             Visions of the history of the person.
                         </item>
                     </targetlist>
-
                 </sect3>
 
                 <sect3>
@@ -405,390 +445,503 @@
             </sect2>
 
             <sect2>
-                <title>Water</title>
+                <title>Masters of Spirit</title>
+
+                <y:advantages title="Spirit Mastery">
+                    <y:advantage name="Aura sight">
+                        <y:short>See auras all the time.</y:short>
+
+                        <description>
+                            <para>
+                                A Spirit Master is able to see auras of
+                                people and animals at will. Each time
+                                this advantage is taken, the wizard gets
+                                one automatic success level of information.
+                                The target does not get a resistence roll.
+                            </para>
+                        </description>
+                    </y:advantage>
+
+                    <y:advantage name="Second sight">
+                        <y:short>See spirits.</y:short>
+                    </y:advantage>
+
+                    <y:advantage name="Empathy">
+                        <y:short>Add score to charisma checks.</y:short>
+                    </y:advantage>
+
+                    <y:advantage name="Iron will">
+                        <y:short>Strong at resisting magic.</y:short>
+                    </y:advantage>
+
+                    <y:advantage name="Divination">
+                        <y:short>Foretell the future.</y:short>
+                    </y:advantage>
+
+                    <y:advantage name="Dream walker">
+                        <y:short>Control over dreams.</y:short>
+                    </y:advantage>
+                </y:advantages>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Water</title>
+
+            <para>
+                <e>Water</e> gives power over the wet, dark and cold.
+                It represents the deep ocean which engulfs and swallows
+                those within it, the darkness which hides and frightens
+                and the coldness which stills limbs and depresses the
+                soul. As water quenches fire, so this power quenches
+                passions and energy.
+            </para>
+
+            <sect2>
+                <title>Sense</title>
 
                 <para>
-                    <e>Water</e> gives power over the wet, dark and cold.
-                    It represents the deep ocean which engulfs and swallows
-                    those within it, the darkness which hides and frightens
-                    and the coldness which stills limbs and depresses the
-                    soul. As water quenches fire, so this power quenches
-                    passions and energy.
+                    <e>Sense water</e> provides the wizard with a
+                    means to detect the nearest sources of water.
                 </para>
 
-                <sect3>
-                    <title>Sense</title>
-
-                    <para>
-                        <e>Sense water</e> provides the wizard with a
-                        means to detect the nearest sources of water.
-                    </para>
-
-                    <para>
-                        <e>Sense water</e> also enables the wizard to
-                        divine the properties of a liquid.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Control</title>
-
-                    <para>
-                        Gives the wizard control over water around him.
-                    </para>
-
-                    <targetlist>
-                        <item target="Moderate">
-                            Keep dry in light rain.
-                        </item>
-
-                        <item target="Good">
-                            Keep dry in heavy rain. Remove liquid from
-                            wet clothes.
-                        </item>
-
-                        <item target="Excellent">
-                            Walk on still water.
-                        </item>
-                    </targetlist>
-                </sect3>
-
-                <sect3>
-                    <title>Summon</title>
-
-                    <para>
-                        <e>Summon water</e> only works out in the open.
-                        The default effect is to cause it to start raining
-                        over the course of an hour, covering a 250m radius
-                        area.
-                    </para>
-
-                    <para>
-                        Each level of success increases the intensity of
-                        the rain. Add +5 to the target difficulty for each
-                        doubling of the radius affected. Add +10 to cause
-                        the rain to reach full strength in a minute instead
-                        of an hour, or +20 to reduce that time to a round.
-                    </para>
-
-                    <para>
-                        The magic lasts as long as the wizard concentrates.
-                    </para>
-
-                    <para>
-                        Alternatively, the wizard may attempt to summon a
-                        water elemental out of a body of water.
-                    </para>
-                </sect3>
+                <para>
+                    <e>Sense water</e> also enables the wizard to
+                    divine the properties of a liquid.
+                </para>
             </sect2>
 
             <sect2>
-                <title>Earth</title>
+                <title>Control</title>
 
                 <para>
-                    <e>Earth</e> gives control over growing things.
+                    Gives the wizard control over water around him.
                 </para>
 
-                <sect3>
-                    <title>Sense</title>
+                <targetlist>
+                    <item target="Moderate">
+                        Keep dry in light rain.
+                    </item>
 
-                    <para>
-                        <e>Sense earth</e> enables the wizard to commune
-                        with animals and plants. How easy this is to do
-                        depends on how close the animal is to humans. Dogs
-                        are quite easy, a wild bear is hard.
-                    </para>
+                    <item target="Good">
+                        Keep dry in heavy rain. Remove liquid from
+                        wet clothes.
+                    </item>
 
-                    <para>
-                        Animals which are used to dealing with humans and
-                        which get on well with them (trained dogs and
-                        horses) have a target difficulty of 10. Wild
-                        versions of such, or animals used to humans such
-                        as cats, cows, trained birds are 20.
-                    </para>
-
-                    <para>
-                        Other mammals and birds are 30, as are trees.
-                        Lizards are 40, insects and bushes are 50 and
-                        grasses are 70.
-                    </para>
-
-                    <targetlist targetFirst="true">
-                        <targetLabel>Success</targetLabel>
-                        <valueLabel>Level of communication</valueLabel>
-
-                        <item target="Moderate">
-                            Basic empathy, getting an idea of whether the
-                            target feels good or bad.
-                        </item>
-
-                        <item target="Good">
-                            Simple ideas can be read, and simple questions
-                            related to those ideas can be asked. Where is
-                            food? Which way did the big thing go?
-                        </item>
-
-                        <item target="Excellent">
-                            Enables child like conversations with the
-                            target. The target does not have access to
-                            information it would not have. A tree cannot
-                            see for example, but it can feel vibrations
-                            in the ground.
-                        </item>
-
-                        <item target="Superb">
-                            Adult like conversations. Topics are still
-                            limited to what the target would know about.
-                        </item>
-
-                        <item target="Fantastic">
-                            Tap into the memories of the target directly,
-                            even seeing visions if applicable.
-                        </item>
-                    </targetlist>
-                </sect3>
-
-                <sect3>
-                    <title>Control</title>
-
-                    <para>
-                        <e>Control earth</e> gives the wizard power over
-                        the fertility and growth of living things. She can
-                        increase crop yields, increase a woman's chances
-                        of conceiving and speed recovery.
-                    </para>
-
-                    <para>
-                        Increasing plant growth takes a day, and the base
-                        difficulty increases growth of all plants by about
-                        10% over a 10m radius. Each +5 doubles the radius,
-                        and each +10 increases the yield by another 10%.
-                        This magic can only be used once per growth cycle,
-                        and does tend to deplete the soil of nutrients.
-                    </para>
-
-                    <para>
-                        The magic may also be used to help heal wounds.
-                        Doing so takes a minute and causes one point of
-                        exhaustion in the wizard. The difficulty is 10
-                        plus the wound penalty of the target. Success
-                        causes the target to heal one level of wound
-                        over night.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Summon</title>
-
-                    <para>
-                        Summon an earth elemental.
-                    </para>
-                </sect3>
+                    <item target="Excellent">
+                        Walk on still water.
+                    </item>
+                </targetlist>
             </sect2>
 
             <sect2>
-                <title>Iron</title>
+                <title>Summon</title>
 
                 <para>
-                    <e>Iron</e> is the realm of metal and rock. It is
-                    solid and unmoving.
+                    <e>Summon water</e> only works out in the open.
+                    The default effect is to cause it to start raining
+                    over the course of an hour, covering a 250m radius
+                    area.
                 </para>
 
-                <sect3>
-                    <title>Sense</title>
+                <para>
+                    Each level of success increases the intensity of
+                    the rain. Add +5 to the target difficulty for each
+                    doubling of the radius affected. Add +10 to cause
+                    the rain to reach full strength in a minute instead
+                    of an hour, or +20 to reduce that time to a round.
+                </para>
 
-                    <para>
-                        <e>Sense iron</e> enables the wizard to detect
-                        flaws and properties of a metal. When using a
-                        craft skill to work metal, the wizard can add
-                        their <e>Earth</e> skill to the craft roll.
-                    </para>
-                </sect3>
+                <para>
+                    The magic lasts as long as the wizard concentrates.
+                </para>
 
-                <sect3>
-                    <title>Control</title>
+                <para>
+                    Alternatively, the wizard may attempt to summon a
+                    water elemental out of a body of water.
+                </para>
+            </sect2>
+        </sect1>
 
-                    <para>
-                        <e>Iron</e> represents strength and toughness, and
-                        <e>Control Iron</e> grants the wizard control over
-                        their own nature, toughening their body. By
-                        concentrating for a minute, the wizard can give
-                        themselves a +5 to soak for each level of success,
-                        but at a cost of -1 to agility and dexterity. Two
-                        success can be used to give a soak bonus without
-                        the penalty.
-                    </para>
+        <sect1>
+            <title>Earth</title>
 
-                    <para>
-                        The effect lasts as long as the wizard concentrates
-                        or until they are wounded. Each time they take a
-                        wound (not stuns), their soak bonus drops by 5. Any
-                        penalties are lost as soon as they loose their last
-                        bonus. Other side effects mean that the wizard
-                        looses all sense of touch, and is heavier, making
-                        them unable to swim.
-                    </para>
-                </sect3>
+            <para>
+                <e>Earth</e> gives control over growing things.
+            </para>
 
-                <sect3>
-                    <title>Summon</title>
+            <sect2>
+                <title>Sense</title>
 
-                    <para>
-                        Summon something or other.
-                    </para>
-                </sect3>
+                <para>
+                    <e>Sense earth</e> enables the wizard to commune
+                    with animals and plants. How easy this is to do
+                    depends on how close the animal is to humans. Dogs
+                    are quite easy, a wild bear is hard.
+                </para>
+
+                <para>
+                    Animals which are used to dealing with humans and
+                    which get on well with them (trained dogs and
+                    horses) have a target difficulty of 10. Wild
+                    versions of such, or animals used to humans such
+                    as cats, cows, trained birds are 20.
+                </para>
+
+                <para>
+                    Other mammals and birds are 30, as are trees.
+                    Lizards are 40, insects and bushes are 50 and
+                    grasses are 70.
+                </para>
+
+                <targetlist targetFirst="true">
+                    <targetLabel>Success</targetLabel>
+                    <valueLabel>Level of communication</valueLabel>
+
+                    <item target="Moderate">
+                        Basic empathy, getting an idea of whether the
+                        target feels good or bad.
+                    </item>
+
+                    <item target="Good">
+                        Simple ideas can be read, and simple questions
+                        related to those ideas can be asked. Where is
+                        food? Which way did the big thing go?
+                    </item>
+
+                    <item target="Excellent">
+                        Enables child like conversations with the
+                        target. The target does not have access to
+                        information it would not have. A tree cannot
+                        see for example, but it can feel vibrations
+                        in the ground.
+                    </item>
+
+                    <item target="Superb">
+                        Adult like conversations. Topics are still
+                        limited to what the target would know about.
+                    </item>
+
+                    <item target="Fantastic">
+                        Tap into the memories of the target directly,
+                        even seeing visions if applicable.
+                    </item>
+                </targetlist>
             </sect2>
 
             <sect2>
-                <title>Fire</title>
+                <title>Control</title>
 
                 <para>
-                    <e>Fire</e> represents heat, flames, mobility and
-                    passion. It is seen to have an affinity to the
-                    female side of magic.
+                    <e>Control earth</e> gives the wizard power over
+                    the fertility and growth of living things. She can
+                    increase crop yields, increase a woman's chances
+                    of conceiving and speed recovery.
                 </para>
 
-                <sect3>
-                    <title>Sense</title>
+                <para>
+                    Increasing plant growth takes a day, and the base
+                    difficulty increases growth of all plants by about
+                    10% over a 10m radius. Each +5 doubles the radius,
+                    and each +10 increases the yield by another 10%.
+                    This magic can only be used once per growth cycle,
+                    and does tend to deplete the soil of nutrients.
+                </para>
 
-                    <para>
-                        <e>Sense Fire</e> enables the wizard to see
-                        visions through fires. By looking into a fire, the
-                        wizard can see out of another fire within sight
-                        (i.e. the wizard must be able to see both fires).
-                        The distance to the next fire impacts on the
-                        quality of the vision. If it is more than 10 metres
-                        away, then the wizard is at -10. Each multiple of
-                        10 (100m, 1km, 10km) reduces the roll by a further
-                        -10.
-                    </para>
-
-                    <para>
-                        The size of the smallest of the two fires also
-                        reduces the quality of the vision. A large camp
-                        fire or larger is needed for best quality. A small
-                        camp fire reduces the quality by one level, a
-                        torch by two levels and a candle by three levels.
-                    </para>
-
-                    <targetlist targetFirst="true">
-                        <targetLabel>Success</targetLabel>
-                        <valueLabel>Vision quality</valueLabel>
-
-                        <item target="Moderate">
-                            Poor quality, the wizard can make out shadowy
-                            shapes, but not much else.
-                        </item>
-
-                        <item target="Good">
-                            Low quality, the wizard can see enough to
-                            recognise people, but not details about what
-                            they are holding or wearing.
-                        </item>
-
-                        <item target="Excellent">
-                            The wizard can see details about people, though
-                            not enough to read by. Some sound can be heard,
-                            and though voices may be recognised, words
-                            cannot be.
-                        </item>
-
-                        <item target="Superb">
-                            Good enough quality to read by, and conversations
-                            can be heard and understood.
-                        </item>
-                    </targetlist>
-
-                    <para>
-                        A person with <e>Second sight</e> may see the
-                        eyes or face of the wizard staring out of the fire.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Control</title>
-
-                    <para>
-                        With the power of <e>Control fire</e>, the wizard
-                        may protect herself from heat and flames. By
-                        concentrating on her magic, she can grant herself
-                        a soak bonus of +5 against heat and flame per
-                        level of success.
-                    </para>
-
-                    <para>
-                        Alternatively, all fires within range may be made
-                        more or less intense, increasing its heat and
-                        rate of burning, or snuffing it out altogether.
-                        Each success changes the effective size of the
-                        fire by one. Each metre of radius of effect gives
-                        a -1 to the magic check.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Summon</title>
-
-                    <para>
-                        The wizard can summon a fire elemental to do her
-                        bidding. The elemental must be called from a fire
-                        of sufficient size. If it is commanded to leave
-                        an area of combustion, then it will reduce in size
-                        each round. It may take over and animate the bodies
-                        of living creatures it has slain.
-                    </para>
-                </sect3>
+                <para>
+                    The magic may also be used to help heal wounds.
+                    Doing so takes a minute and causes one point of
+                    exhaustion in the wizard. The difficulty is 10
+                    plus the wound penalty of the target. Success
+                    causes the target to heal one level of wound
+                    over night.
+                </para>
             </sect2>
 
             <sect2>
-                <title>Air</title>
+                <title>Summon</title>
 
-                <sect3>
-                    <title>Sense</title>
+                <para>
+                    Summon an earth elemental.
+                </para>
+            </sect2>
 
-                    <para>
-                        With <e>Sense air</e> the wizard can predict the
-                        weather. Each level of success gives a weather
-                        prediction for up to one day into the future for
-                        the local area.
-                    </para>
+            <sect2>
+                <title>Mastery</title>
 
-                    <para>
-                        With <e>sense air</e> the wizard can also increase
-                        their perception of things in line of sight. Each
-                        level of success halves the effectiveness distance
-                        for purposes of seeing and hearing things within
-                        direct line of sight.
-                    </para>
-                </sect3>
+                <para>
+                    A wizard who has mastered Earth has power over the
+                    ground, fertility and sexuality. She also has power
+                    over nature and animals, for they are an expression
+                    of life itself.
+                </para>
 
-                <sect3>
-                    <title>Control</title>
+                <para>
+                    An Earth Master may choose one of the following
+                    advantages when she achieves a score of 10 in Earth.
+                    She may choose a second at 12, a third at 15 and
+                    one more every 5 points thereafter.
+                </para>
 
-                    <para>
-                        With <e>control air</e> the wizard can command the
-                        winds around him. By default, the air within 10m
-                        of the wizard is affected. Each level of success
-                        increases or decreases the level of wind. Each
-                        multiple of 10 increase in the radius of effect
-                        requires an extra level of success.
-                    </para>
+                <para>
+                    Earth is directly opposed to <e>Air</e>, so she
+                    receives a penalty to her Will for Air based magic.
+                    It also affects <e>Spirit</e> and <e>Fire</e> to
+                    a lesser extent.
+                </para>
 
-                    <para>
-                        It takes one minute for each success level to
-                        have an affect, and the wizard must concentrate
-                        on the casting of the magic during this time.
-                        The change lasts whilst the wizard concentrates.
-                    </para>
-                </sect3>
+                <y:advantages title="Mastery of Earth">
+                    <y:advantage name="Earth sense">
+                        <description>
+                            <para>
+                                A Master of Earth's senses are extended
+                                whilst she is in contact with the ground.
+                                She has a sense of anything else that
+                                contacts the ground within a number of
+                                metres of her equal to her score. She
+                                can sense them as if she can see them,
+                                so is unaffected by darkness, and it is
+                                impossible to hide from her.
+                            </para>
 
-                <sect3>
-                    <title>Summon</title>
+                            <para>
+                                This advantage may be taken multiple
+                                times, each extra time doubles the
+                                range of the ability.
+                            </para>
+                        </description>
+                    </y:advantage>
 
-                    <para>
-                        The wizard may summon an elemental of air.
-                    </para>
-                </sect3>
+                    <y:advantage name="Fertility">
+                        <description>
+                            <para>
+                                The Earth Master has full control over
+                                her own fertility, and may choose to
+                                conceive or not when coupling with
+                                another. If male, the Earth Master may
+                                cause a partner to automatically
+                                conceive, regardless of herbal
+                                contraception.
+                            </para>
+
+                            <para>
+                                If taken a second time, then the Earth
+                                Master has complete control over her own
+                                sexuality. Over the course of a day,
+                                they may change their sex. They keep the
+                                same general appearance, though appear
+                                a male or female version of what they
+                                once were (probably being mistaken for a
+                                brother or sister).
+                            </para>
+                        </description>
+                    </y:advantage>
+                </y:advantages>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Iron</title>
+
+            <para>
+                <e>Iron</e> is the realm of metal and rock. It is
+                solid and unmoving.
+            </para>
+
+            <sect2>
+                <title>Sense</title>
+
+                <para>
+                    <e>Sense iron</e> enables the wizard to detect
+                    flaws and properties of a metal. When using a
+                    craft skill to work metal, the wizard can add
+                    their <e>Earth</e> skill to the craft roll.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Control</title>
+
+                <para>
+                    <e>Iron</e> represents strength and toughness, and
+                    <e>Control Iron</e> grants the wizard control over
+                    their own nature, toughening their body. By
+                    concentrating for a minute, the wizard can give
+                    themselves a +5 to soak for each level of success,
+                    but at a cost of -1 to agility and dexterity. Two
+                    success can be used to give a soak bonus without
+                    the penalty.
+                </para>
+
+                <para>
+                    The effect lasts as long as the wizard concentrates
+                    or until they are wounded. Each time they take a
+                    wound (not stuns), their soak bonus drops by 5. Any
+                    penalties are lost as soon as they loose their last
+                    bonus. Other side effects mean that the wizard
+                    looses all sense of touch, and is heavier, making
+                    them unable to swim.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Summon</title>
+
+                <para>
+                    Summon something or other.
+                </para>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Fire</title>
+
+            <para>
+                <e>Fire</e> represents heat, flames, mobility and
+                passion. It is seen to have an affinity to the
+                female side of magic.
+            </para>
+
+            <sect2>
+                <title>Sense</title>
+
+                <para>
+                    <e>Sense Fire</e> enables the wizard to see
+                    visions through fires. By looking into a fire, the
+                    wizard can see out of another fire within sight
+                    (i.e. the wizard must be able to see both fires).
+                    The distance to the next fire impacts on the
+                    quality of the vision. If it is more than 10 metres
+                    away, then the wizard is at -10. Each multiple of
+                    10 (100m, 1km, 10km) reduces the roll by a further
+                    -10.
+                </para>
+
+                <para>
+                    The size of the smallest of the two fires also
+                    reduces the quality of the vision. A large camp
+                    fire or larger is needed for best quality. A small
+                    camp fire reduces the quality by one level, a
+                    torch by two levels and a candle by three levels.
+                </para>
+
+                <targetlist targetFirst="true">
+                    <targetLabel>Success</targetLabel>
+                    <valueLabel>Vision quality</valueLabel>
+
+                    <item target="Moderate">
+                        Poor quality, the wizard can make out shadowy
+                        shapes, but not much else.
+                    </item>
+
+                    <item target="Good">
+                        Low quality, the wizard can see enough to
+                        recognise people, but not details about what
+                        they are holding or wearing.
+                    </item>
+
+                    <item target="Excellent">
+                        The wizard can see details about people, though
+                        not enough to read by. Some sound can be heard,
+                        and though voices may be recognised, words
+                        cannot be.
+                    </item>
+
+                    <item target="Superb">
+                        Good enough quality to read by, and conversations
+                        can be heard and understood.
+                    </item>
+                </targetlist>
+
+                <para>
+                    A person with <e>Second sight</e> may see the
+                    eyes or face of the wizard staring out of the fire.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Control</title>
+
+                <para>
+                    With the power of <e>Control fire</e>, the wizard
+                    may protect herself from heat and flames. By
+                    concentrating on her magic, she can grant herself
+                    a soak bonus of +5 against heat and flame per
+                    level of success.
+                </para>
+
+                <para>
+                    Alternatively, all fires within range may be made
+                    more or less intense, increasing its heat and
+                    rate of burning, or snuffing it out altogether.
+                    Each success changes the effective size of the
+                    fire by one. Each metre of radius of effect gives
+                    a -1 to the magic check.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Summon</title>
+
+                <para>
+                    The wizard can summon a fire elemental to do her
+                    bidding. The elemental must be called from a fire
+                    of sufficient size. If it is commanded to leave
+                    an area of combustion, then it will reduce in size
+                    each round. It may take over and animate the bodies
+                    of living creatures it has slain.
+                </para>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Air</title>
+
+            <sect2>
+                <title>Sense</title>
+
+                <para>
+                    With <e>Sense air</e> the wizard can predict the
+                    weather. Each level of success gives a weather
+                    prediction for up to one day into the future for
+                    the local area.
+                </para>
+
+                <para>
+                    With <e>sense air</e> the wizard can also increase
+                    their perception of things in line of sight. Each
+                    level of success halves the effectiveness distance
+                    for purposes of seeing and hearing things within
+                    direct line of sight.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Control</title>
+
+                <para>
+                    With <e>control air</e> the wizard can command the
+                    winds around him. By default, the air within 10m
+                    of the wizard is affected. Each level of success
+                    increases or decreases the level of wind. Each
+                    multiple of 10 increase in the radius of effect
+                    requires an extra level of success.
+                </para>
+
+                <para>
+                    It takes one minute for each success level to
+                    have an affect, and the wizard must concentrate
+                    on the casting of the magic during this time.
+                    The change lasts whilst the wizard concentrates.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Summon</title>
+
+                <para>
+                    The wizard may summon an elemental of air.
+                </para>
             </sect2>
         </sect1>
 
