@@ -11,7 +11,8 @@
         <tagline>Yags Habisfern</tagline>
 
         <summary>
-            Magic rules for the Habisfern campaign.
+            Magic in the world of Habisfern, describing how it is used
+            and the background behind it.
         </summary>
 
         <author>
@@ -20,8 +21,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.20 $</version>
-            <date>$Date: 2005-11-11 23:38:42 $</date>
+            <version>$Revision: 1.21 $</version>
+            <date>$Date: 2005-11-16 16:40:59 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -144,15 +145,22 @@
                     Power</e>, also called Runes, each of which has some
                     control over one facet of the world. There are six
                     <e>Words</e>, and each must be studied and learnt
-                    separately in order to use magic.
+                    separately in order to use magic. The Words form a
+                    circle, each bound to their neighbour and opposed to
+                    the Word which lays on the opposite side of the
+                    circle. The Words, in order, are <e>Spirit</e>,
+                    <e>Water</e>, <e>Earth</e>, <e>Iron</e>, <e>Fire</e>
+                    and <e>Air</e>.
                 </para>
 
                 <para>
-                    There are six basic Words - Air, Fire, Iron, Earth,
-                    Water and Spirit. There is also a seventh, World
-                    (sometimes called Dragon), but it is rarely known,
-                    and mastery of the other words is necessary before
-                    the World rune may be learnt.
+                    Once learnt, a Word can be used by itself, and the
+                    majority of practicioners of the magical arts find
+                    that this is all they need. There are three ways in
+                    which each Word can be used - to <e>Sense</e>, to
+                    <e>Control</e> and to <e>Summon</e>. Once a Word has
+                    been learnt, then a wizard can perform these three
+                    things on that Word with equal skill.
                 </para>
 
                 <sect3>
@@ -193,26 +201,6 @@
                     whilst he sleeps, making it unhealthy for a wizard to
                     use magic just before bedtime.
                 </para>
-
-                <sect3>
-                    <title>Corruption</title>
-
-                    <para>
-                        Some magic also leads to corruption of the Wizard.
-                        There is a quicker, faster way to powerful magic,
-                        which often uses blood sacrifices. This darker
-                        side is shunned by civilised wizards, and is
-                        banned in most countries.
-                    </para>
-
-                    <para>
-                        Each Word has its own dark side. For example, for
-                        <e>Earth</e> it is necromancy. The runes for the
-                        dark magic are normally hidden to a wizard, but
-                        may be taught by another, or become knowable if
-                        consciously sought after.
-                    </para>
-                </sect3>
             </sect2>
         </sect1>
 
@@ -261,6 +249,56 @@
                     Imparting the knowledge of magic costs both the
                     teacher and student one point of permanent Luck,
                     regardless of whether the attempt is successful.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Mastering a Word</title>
+
+                <para>
+                    When a wizard achieves a score of 10 in a Word for the
+                    first time, then they are considered to have
+                    automatically <e>Mastered</e> that Word. A Wizard will
+                    only ever Master a single Word, and does not get the
+                    option to not Master a Word when they first obtain
+                    a score of 10. After the first Word has been Mastered,
+                    the wizard may raise other Words to 10 and beyond
+                    without any special effect.
+                </para>
+
+                <para>
+                    A Master is considered to have a deep knowledge and
+                    understanding of the realm of magic that the Word
+                    represents. The magic also takes mastery of them to
+                    some extent as well, which is why they do not get a
+                    choice about Mastery.
+                </para>
+
+                <para>
+                    On Mastering a Word, the Arch Wizard may choose one
+                    of the special advantages that become open to them.
+                    This is a free bonus, which does not need to be paid
+                    for. The advantage provides an ability that is free
+                    for the Arch Wizard to use at will.
+                    Further advantages may be chosen at a skill level of
+                    12, 15 and every 5 points thereafter, but only in the
+                    Word that has been Mastered.
+                </para>
+
+                <para>
+                    There is a downside to Mastery, in that the directly
+                    opposed Word is negatively affected, gaining a -1 to
+                    Will when using magic associated with that Word. When
+                    the second Mastery level is taken, then a further -1
+                    is suffered. The two indirectly opposed Words suffer
+                    a penalty equal to half (round down) the main penalty.
+                </para>
+
+                <para>
+                    If the Wizard's gender matches the affinity of the
+                    Word (e.g. a female wizard mastering <e>Earth</e>),
+                    then the first level of penalty is ignored, and the
+                    first -1 is gained when they reach a skill of 12.
                 </para>
             </sect2>
 
@@ -354,12 +392,16 @@
                             The wizard can tell the type of spirit being
                             examined. She knows whether the aura is
                             human, fey, beast or dead. She can also tell
-                            the gender and general age of the target.
+                            the gender and general age of the target. A
+                            single strong emotion can be detected as well,
+                            if one is active.
                         </item>
 
                         <item target="Good" value="State.">
                             The general state of mind of the target, as
-                            well as some of the strongest emotions.
+                            well as some of the strongest emotions that
+                            drive the target, even if they aren't currently
+                            active.
                         </item>
 
                         <item target="Excellent" value="Emotions.">
@@ -464,24 +506,57 @@
 
                     <y:advantage name="Second sight">
                         <y:short>See spirits.</y:short>
+
+                        <description>
+                            <para>
+                                This duplicates the advantage of the same
+                                name. The wizard can see ghosts and spirits
+                                even when they are hidden to normal sight.
+                            </para>
+                        </description>
                     </y:advantage>
 
                     <y:advantage name="Empathy">
                         <y:short>Add score to charisma checks.</y:short>
+
+                        <description>
+                            <para>
+                                The wizard can add her <e>Spirit</e> score
+                                to charisma checks when dealing with
+                                others. May only be taken once.
+                            </para>
+                        </description>
                     </y:advantage>
 
                     <y:advantage name="Iron will">
                         <y:short>Strong at resisting magic.</y:short>
+
+                        <description>
+                            <para>
+                                The wizard gains a +1 bonus to her Will to
+                                resist the effects of magic. She make take
+                                this multiple times.
+                            </para>
+                        </description>
                     </y:advantage>
 
                     <y:advantage name="Divination">
                         <y:short>Foretell the future.</y:short>
-                    </y:advantage>
 
-                    <y:advantage name="Dream walker">
-                        <y:short>Control over dreams.</y:short>
+                        <description>
+                            <para>
+                                The wizard gains the ability to divine the
+                                future.
+                            </para>
+                        </description>
                     </y:advantage>
                 </y:advantages>
+            </sect2>
+
+            <sect2>
+                <title>Spirit Cantrips</title>
+
+                <h:import-spells href="spells/spirit.yags" type="spirit"/>
             </sect2>
         </sect1>
 
@@ -498,68 +573,151 @@
             </para>
 
             <sect2>
-                <title>Sense</title>
+                <title>Raw Water</title>
 
-                <para>
-                    <e>Sense water</e> provides the wizard with a
-                    means to detect the nearest sources of water.
-                </para>
+                <sect3>
+                    <title>Sense</title>
 
-                <para>
-                    <e>Sense water</e> also enables the wizard to
-                    divine the properties of a liquid.
-                </para>
+                    <para>
+                        <e>Sense water</e> provides the wizard with a
+                        means to detect the nearest sources of water.
+                    </para>
+
+                    <para>
+                        <e>Sense water</e> also enables the wizard to
+                        divine the properties of a liquid.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Control</title>
+
+                    <para>
+                        Gives the wizard control over water around him.
+                    </para>
+
+                    <targetlist>
+                        <item target="Moderate">
+                            Keep dry in light rain.
+                        </item>
+
+                        <item target="Good">
+                            Keep dry in heavy rain. Remove liquid from
+                            wet clothes.
+                        </item>
+
+                        <item target="Excellent">
+                            Walk on still water.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        The Wizard may also control the weather, causing
+                        it to become colder or wetter, as desired. Each
+                        level of success makes ir colder or wetter by one
+                        level. The base radius affected is 125m. Each level
+                        of success can be used to double the radius rather
+                        than change the intensity.
+                    </para>
+
+                    <para>
+                        Every success takes a minute of concentration to
+                        come into affect. The change will last as long as
+                        the wizard concentrates.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Summon</title>
+
+                    <para>
+                        <e>Summon water</e> only works out in the open.
+                        The default effect is to cause it to start raining
+                        over the course of an hour, covering a 250m radius
+                        area.
+                    </para>
+
+                    <para>
+                        Each level of success increases the intensity of
+                        the rain. Add +5 to the target difficulty for each
+                        doubling of the radius affected. Add +10 to cause
+                        the rain to reach full strength in a minute instead
+                        of an hour, or +20 to reduce that time to a round.
+                    </para>
+
+                    <para>
+                        The magic lasts as long as the wizard concentrates.
+                    </para>
+
+                    <para>
+                        Alternatively, the wizard may attempt to summon a
+                        water elemental out of a body of water.
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
-                <title>Control</title>
+                <title>Masters of Water</title>
 
                 <para>
-                    Gives the wizard control over water around him.
+                    A Master of Water may choose from the following
+                    abilities.
                 </para>
 
-                <targetlist>
-                    <item target="Moderate">
-                        Keep dry in light rain.
-                    </item>
+                <y:advantages>
+                    <y:advantage name="Breath water">
+                        <y:short>The ability to breath water.</y:short>
 
-                    <item target="Good">
-                        Keep dry in heavy rain. Remove liquid from
-                        wet clothes.
-                    </item>
+                        <description>
+                            <para>
+                                The wizard gains the ability to breath
+                                water as if it were air. This does not
+                                affect their ability to breath air in any
+                                way. Water enters their lungs as air does,
+                                and the oxygen extracted from it.
+                            </para>
+                        </description>
+                    </y:advantage>
 
-                    <item target="Excellent">
-                        Walk on still water.
-                    </item>
-                </targetlist>
+                    <y:advantage name="Water movement">
+                        <y:short>Freedom of action in water.</y:short>
+
+                        <description>
+                            <para>
+                                The wizard can move freely through water.
+                                Running or walking through water is hardly
+                                hindered at all, and swimming is at full
+                                movement rate, in any direction.
+                            </para>
+
+                            <para>
+                                If this is taken a second time, then the
+                                wizard may walk on the surface of water.
+                            </para>
+                        </description>
+                    </y:advantage>
+
+                    <y:advantage name="Cold resist">
+                        <y:short>Gain a resistence to cold.</y:short>
+
+                        <description>
+                            <para>
+                                The wizard may act as if the temperature
+                                were up to three levels higher than it
+                                actually is. He also gains a +10 bonus to
+                                soak to resist cold related damage. If
+                                taken more than once, this advantage stacks
+                                with itself.
+                            </para>
+                        </description>
+                    </y:advantage>
+                </y:advantages>
             </sect2>
 
             <sect2>
-                <title>Summon</title>
+                <title>Water Cantrips</title>
 
-                <para>
-                    <e>Summon water</e> only works out in the open.
-                    The default effect is to cause it to start raining
-                    over the course of an hour, covering a 250m radius
-                    area.
-                </para>
-
-                <para>
-                    Each level of success increases the intensity of
-                    the rain. Add +5 to the target difficulty for each
-                    doubling of the radius affected. Add +10 to cause
-                    the rain to reach full strength in a minute instead
-                    of an hour, or +20 to reduce that time to a round.
-                </para>
-
-                <para>
-                    The magic lasts as long as the wizard concentrates.
-                </para>
-
-                <para>
-                    Alternatively, the wizard may attempt to summon a
-                    water elemental out of a body of water.
-                </para>
+                <h:import-spells href="spells/water.yags" type="water"/>
             </sect2>
         </sect1>
 
@@ -1263,17 +1421,7 @@
                 <h:import-spells href="spells/fire.yags" type="fire"/>
             </sect2>
 
-            <sect2>
-                <title>Spirit</title>
 
-                <h:import-spells href="spells/spirit.yags" type="spirit"/>
-            </sect2>
-
-            <sect2>
-                <title>Water</title>
-
-                <h:import-spells href="spells/water.yags" type="water"/>
-            </sect2>
         </sect1>
 
         <sect1>

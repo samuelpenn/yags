@@ -2,15 +2,21 @@
 
 <!--
     Spirit cantrips.
-    Version: $Revision: 1.8 $
-    Date:    $Date: 2005-10-26 11:40:16 $
+    Version: $Revision: 1.9 $
+    Date:    $Date: 2005-11-16 16:40:59 $
 -->
-<grimoire xmlns="http://yagsbook.sourceforge.net/xml/yags/habisfern" name="Spirit">
+<grimoire xmlns="http://yagsbook.sourceforge.net/xml/yags/habisfern"
+          xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
+          name="Spirit">
+
     <description xmlns="http://yagsbook.sourceforge.net/xml">
         <para>
-            Spirit covers all magic to do with the mind, spirit and dreams.
-            It allows minds to be sensed and probed, and also enables
-            phantasmal attacks to be made against people.
+            Cantrips of <e>Spirit</e> enable the wizard to probe deeper
+            into a person's mind, shape their thoughts and have control
+            over their dreams. To a limited extent they also allow
+            illusions, though unlike the illusions of <e>Air</e>, they
+            work by making people thing they see something, rather
+            than creating an image which is actually seen.
         </para>
 
         <para>
@@ -24,67 +30,11 @@
         </para>
     </description>
 
-    <spell name="Sense" level="1" type="spirit">
-        <range>-1/m</range>
-        <duration>Concentration</duration>
 
-        <short>Sense minds and emotions.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Detects any minds out to the range of the spell, providing
-                a rough direction and range (5m, 10m, 20m, 40m etc). Unless
-                the target is magically shrouded, a moderate success will
-                detect human minds, a good success animal minds, and a
-                superb success very small animals.
-            </para>
-
-            <para>
-                The wizard can try to concentrate on a single mind, this
-                action taking a round. The target gets an Ego roll to
-                resist this, but if the Wizard succeeds, they can identify
-                the mind if they have encountered it before, and attempt
-                a perception x spirit check against the will x ego of the
-                target at the same penalty for range.
-            </para>
-
-            <targetlist>
-                <valueLabel>Detail seen</valueLabel>
-                <targetLabel>Success</targetLabel>
-
-                <item target="Moderate" value="Type.">
-                    Type of mind detected, human, animal, elder, as well
-                    as whether they are male or female, young or old.
-                </item>
-
-                <item target="Good" value="State.">
-                    The rough state of mind of the target - strong emotions
-                    such as fear, love, excitement etc will show through if
-                    they are currently active.
-                </item>
-
-                <item target="Excellent" value="Passions.">
-                    The strongest emotion currently in force will be known,
-                    as well as some thoughts related to that emotion (if
-                    the emotion is love, then possibly an image of the
-                    person desired will be seen).
-                </item>
-
-                <item target="Superb" value="Self.">
-                    The wizard will see the target how they view themselves,
-                    which may give clues to their personality, job or set
-                    of skills. An off duty warrior in civilian clothes may
-                    appear as an armed and armoured warrior for instance.
-                </item>
-            </targetlist>
-        </description>
-    </spell>
-
-    <spell name="Impress" level="3" type="spirit">
+    <spell name="Impress" level="1" type="spirit">
         <range>Special</range>
-        <duration>Concentration</duration>
-
-        <prerequisite>Sense</prerequisite>
+        <duration>Special</duration>
+        <resist>Special</resist>
 
         <short>Instill an emotion in a person.</short>
 
@@ -94,20 +44,65 @@
                 desire upon a person. The emotion is conveyed using
                 speech, song or even actions if appropriate (such as
                 threatening or seductive behaviour for fear and lust
-                respectively).
+                respectively). Because the magic is bound into her
+                voice or actions, there is no range modifier for this
+                cantrip.
             </para>
 
             <para>
-                The words or actions of the wizard are strengthened
-                with magic, granting a bonus to social skills to sway
-                or impress people. Each level of success grants +1
-                to the wizard's charisma.
+                The wizard gains a bonus to her charisma of +1 for
+                each level of success for the duration of the speech,
+                song, dance or whatever social skill she is attempting
+                to enchant. Targets do not have an extra Will check
+                beyond what they would normally get for resisting her
+                social skill, though anyone who gets a bonus against
+                magic will receive it. Those with the ability to see
+                or detect magic may also notice the effect.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Pain" level="3" type="spirit">
+        <range>-1/1m</range>
+        <duration>Momentary</duration>
+        <resist>Stamina x Ego</resist>
+        <prerequisite>Impress</prerequisite>
+
+        <short>Inflict pain on a person.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                With this cantrip, the wizard inflicts imaginary pain on
+                the target. Each success causes one level of stun damage.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Find" level="3" type="spirit">
+        <range>-1/1km</range>
+        <duration>Concentration</duration>
+        <resist>Will</resist>
+        <prerequisite>Impress</prerequisite>
+
+        <short>Find a known person.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                With this cantrip the wizard may know the location of a
+                single person that they have met before. The target of
+                the cantrip gets to resist, unless they are actively
+                thinking about the wizard. On a moderate success, the
+                wizard will know the direction (within 30 degrees) and
+                distance (within +/- 50%) to the target. Each extra
+                level of success halves both of these errors.
             </para>
 
             <para>
-                The magic of this cantrip is bound into the wizard's
-                actions, allowing it to affect everyone who would
-                normally be affected non-magically.
+                The above assumes that the target is well known to the
+                wizard. Someone who isn't that well known (possibly
+                met often, but she doesn't really know that much about
+                them) adds +10 to the difficulty, and someone who has
+                simply been seen adds +20.
             </para>
         </description>
     </spell>
@@ -116,7 +111,7 @@
         <range>-1/1km</range>
         <duration>Concentration</duration>
 
-        <prerequisite>Impress</prerequisite>
+        <prerequisite>Find</prerequisite>
 
         <short>Send a message as a dream.</short>
 
@@ -188,7 +183,7 @@
             </para>
 
             <targetlist>
-                <item target="Good" value="Hiding.">
+                <item target="Moderate" value="Hiding.">
                     In order to completely mask her presence, then the
                     wizard requires a good success, which grants a +1
                     bonus to her attribute for stealth attempts. Each
@@ -240,7 +235,60 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Plant a nightmare in the target's mind.
+                Plant a nightmare in the target's mind. The target must
+                be sleeping at the time.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Sleep" level="12" type="spirit">
+        <range>-1/10m</range>
+        <duration>Special</duration>
+        <target>-5/doubling of targets</target>
+        <resist>Ego</resist>
+
+        <prerequisite>Nightmare</prerequisite>
+
+        <short>Put the targets under a magical sleep.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The targets of the cantrip are placed into a magical
+                slumber from which they will not awaken for a specified
+                time. Affected targets will age by just a day for the
+                duration of the sleep, and food and water requirements
+                are likewise reduced.
+            </para>
+
+            <targetlist>
+                <targetLabel>Success</targetLabel>
+                <valueLabel>Duration of sleep</valueLabel>
+
+                <item target="Moderate" value="1 day"/>
+                <item target="Good" value="1 week"/>
+                <item target="Excellent" value="1 month"/>
+                <item target="Superb" value="1 year"/>
+            </targetlist>
+        </description>
+    </spell>
+
+    <spell name="Terror" level="9" type="spirit">
+        <range>-1/10m</range>
+        <duration>Concentration</duration>
+        <resist>Bravery</resist>
+        <target>-5/doubling of targets</target>
+        <prerequisite>Obscure</prerequisite>
+
+        <short>Create a terrifying illusion.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Create the illusion of something terrifying, which can
+                only be seen by the targets of the cantrip. Success
+                makes the target of the cantrip cower in fear, a
+                <e>good</e> success will cause them to run for cover,
+                and an <e>excellent</e> success will cause them to flee
+                in mindless panic.
             </para>
         </description>
     </spell>
