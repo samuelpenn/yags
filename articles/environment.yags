@@ -17,8 +17,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2005-09-26 21:05:00 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2005-11-24 18:08:00 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -40,7 +40,17 @@
             <title>The Environment</title>
 
             <para>
-                Heat, cold, that sort of thing.
+                Representing the environment in game terms can be
+                complicated, and often it is not necessary to do so.
+                There are a few situations however where having a
+                consistent in-game representation of the world can
+                be useful, especially when magic is involved.
+            </para>
+
+            <para>
+                What follows is a number of rating systems for
+                describing the natural environment - the weather,
+                fires and disasters for instance
             </para>
 
         </sect1>
@@ -50,6 +60,11 @@
 
             <sect2>
                 <title>Clothing</title>
+
+                <para>
+                    Not really the weather, but describes what sort of
+                    clothing gives good protection against the weather.
+                </para>
 
                 <targetlist targetFirst="true" bold="true">
                     <targetLabel>Level</targetLabel>
@@ -92,6 +107,19 @@
             <sect2>
                 <title>Hot and Cold</title>
 
+                <para>
+                    Heat and cold assume that the character is totally
+                    without protection - i.e. naked. Layers of clothing
+                    will increase the effective temperature (each level
+                    of clothing increases the temperature by one level).
+                </para>
+
+                <para>
+                    A breeze will tend to lower the effective temperature
+                    since it takes heat away from the body. Every two
+                    levels of wind reduces the temperature by one level.
+                </para>
+
                 <targetlist>
                     <item target="-5" value="Extreme cold.">
                         Arctic winter conditions, temperature around -50C.
@@ -109,7 +137,9 @@
                     </item>
 
                     <item target="-2" value="Cold.">
-                        Around 0C. One fatigue a minute.
+                        Around 0C. Character gains one fatigue every
+                        minute. Once unconscious, then they gain wounds
+                        at the same rate.
                     </item>
 
                     <item target="-1" value="Chilly.">

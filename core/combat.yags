@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.82 $</version>
-            <date>$Date: 2005-10-27 15:35:10 $</date>
+            <version>$Revision: 1.83 $</version>
+            <date>$Date: 2005-11-24 18:07:59 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -1286,8 +1286,59 @@
                 <para>
                     A character can move their full <e>Move</e> score in a
                     round, but may only perform a normal attack which is
-                    automatically slow.
+                    automatically <e>slow</e>.
                 </para>
+            </sect2>
+
+            <sect2>
+                <title>Other Actions</title>
+
+                <sect3>
+                    <title>Drawing a weapon</title>
+
+                    <para>
+                        A weapon may be drawn and used in the same round.
+                        Because everything is happening more or less
+                        simultaneously, a character <e>may</e> defend with
+                        a weapon they are drawing that round, even if
+                        their action hasn't come up yet.
+                    </para>
+
+                    <para>
+                        Drawing a weapon gives a penalty to all attack
+                        and defence rolls of -5 per reach of the weapon
+                        that round.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Putting a weapon away</title>
+
+                    <para>
+                        It is normally considered a full action to put a
+                        weapon away. Dropping a weapon is free however,
+                        so a weapon may be dropped, another one drawn
+                        and an attack made in the same round.
+                    </para>
+
+                    <para>
+                        One weapon may be put away, and a second drawn
+                        in a single round, though other actions cannot
+                        be taken that round.
+                    </para>
+
+                    <para>
+                        A character may attempt to put a weapon away at
+                        the end of a round (after their attack, and after
+                        all defences have been made) by making a
+                        <y:skeq>
+                            <y:attr>dexterity</y:attr>
+                            <y:sk>weapon skill</y:sk>
+                        </y:skeq>
+                        check against a difficulty of 15 + 5 * reach of
+                        the weapon.
+                    </para>
+                </sect3>
             </sect2>
         </sect1>
 
