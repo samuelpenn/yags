@@ -3,14 +3,75 @@
 <!--
     Standard Habisfern character packages.
 
-    Version: $Revision: 1.5 $
-    Date:    $Date: 2005-12-02 22:53:02 $
+    Version: $Revision: 1.6 $
+    Date:    $Date: 2005-12-03 21:23:27 $
 -->
 <characters xmlns="http://yagsbook.sourceforge.net/xml"
             xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
 
+
+    <character name="Bandit">
+        <description>
+            <race>Human</race>
+            <age>16</age>
+            <short>
+                People who make a living stealing from travellers.
+            </short>
+
+            <background>
+                <para>
+                    Bandits may be outlaws, or just farmers who make a
+                    bit on the side now and again by raiding merchants
+                    and travellers. They are generally disorganised,
+                    violent, relying on fear to get what they want.
+                </para>
+            </background>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="3"/>
+                    <skill name="Charm" score="2"/>
+                    <skill name="Guile" score="3"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                </group>
+
+                <group name="Profession" type="skills">
+                    <skill name="Farming" score="2"/>
+                    <skill name="Other rural" score="1"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Longshaft weapon" score="3"/>
+                    <skill name="Bow" score="3"/>
+                    <skill name="Intimidation" score="4"/>
+                </group>
+            </skills>
+        </statistics>
+
+        <equipment>
+            <cash value="3d"/>
+            <item name="Standard clothes"/>
+            <item name="Spear"/>
+            <item name="Scramasax"/>
+            <item name="Short bow"/>
+        </equipment>
+    </character>
+
+
     <character name="Ceorl">
         <description>
+            <race>Human</race>
             <age>16</age>
             <short>
                 Ceorls are freemen, often farmers and craftsmen.
@@ -52,12 +113,15 @@
                 <group name="Profession" type="skills">
                     <skill name="Farming" score="4"/>
                     <skill name="Trade" score="2"/>
+                    <skill name="Other rural" score="2"/>
                 </group>
 
                 <group name="Other" type="skills">
                     <skill name="Game (any)" score="2"/>
                     <skill name="Longshaft weapon" score="3"/>
                     <skill name="Weapon and shield" score="3"/>
+                    <skill name="Survival" score="1"/>
+                    <skill name="Ride" score="1"/>
                 </group>
             </skills>
 
@@ -76,8 +140,74 @@
         </equipment>
     </character>
 
+    <character name="Free woman">
+        <description>
+            <race>Human</race>
+            <age>16</age>
+            <gender>Female</gender>
+            <short>
+                A free woman.
+            </short>
+
+            <background>
+                <para>
+                    Ceorls are freemen who work their own land on their
+                    Lord's estates. They are sufficiently well off to be
+                    able to support themselves.
+                </para>
+            </background>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="3"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="4"/>
+                    <skill name="Guile" score="3"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                </group>
+
+                <group name="Profession" type="skills">
+                    <skill name="Handicraft" score="4"/>
+                    <skill name="Farming" score="2"/>
+                    <skill name="Trade" score="2"/>
+                    <skill name="Seneschal" score="1"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Etiquette" score="1"/>
+                    <skill name="Herb lore" score="2"/>
+                    <skill name="First aid" score="2"/>
+                </group>
+            </skills>
+
+            <advantages>
+                <advantage name="Literate" cost="3"/>
+            </advantages>
+        </statistics>
+
+        <equipment>
+            <cash value="10d"/>
+            <item name="Standard clothes"/>
+            <item name="Spear"/>
+            <item name="Scramasax"/>
+            <item name="Leather armour"/>
+        </equipment>
+    </character>
+
     <character name="Man-at-arms">
         <description>
+            <race>Human</race>
+            <age>16</age>
             <short>
                 The man-at-arms is a foot soldier in the employ of his lord.
                 He is not a knight, and definitely not a noble. But he does
@@ -110,7 +240,7 @@
 
                 <group name="Other" type="skills">
                     <skill name="Weapon and shield" score="4"/>
-                    <skill name="Longshaft weapon" score="3"/>
+                    <skill name="Second melee skill" score="3"/>
                     <skill name="Battle" score="1"/>
                 </group>
             </skills>
@@ -133,54 +263,117 @@
             <item name="Soft leather armour"/>
             <item name="Metal helm"/>
         </equipment>
-
     </character>
-
-
 
     <character name="Merchant">
         <description>
+            <race>Human</race>
+            <age>16</age>
             <short>
                 The merchant is a freeman who makes his living moving goods
-                from one place to another. They may be very rich or very
-                poor, but generally make enough for a comfortable living.
+                from one place to another.
+            </short>
+
+            <background>
+                <para>
+                    This type of merchant is a traveller, making money
+                    by moving goods (any goods, whatever is for sale here
+                    and may fetch more money over there).
+                </para>
+            </background>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="3"/>
+                    <skill name="Guile" score="4"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak Own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                </group>
+
+                <group name="Profession" type="skills">
+                    <skill name="Trade" score="4"/>
+                    <skill name="Teamster" score="3"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Ride" score="2"/>
+                    <skill name="Single weapon" score="2"/>
+                    <skill name="Etiquette" score="2"/>
+                    <skill name="Seneschal" score="1"/>
+                </group>
+            </skills>
+        </statistics>
+
+        <equipment>
+            <cash value="30d"/>
+            <item name="Good clothes"/>
+            <item name="Wagon"/>
+            <item name="Draft horse"/>
+        </equipment>
+    </character>
+
+
+    <character name="Rogue">
+        <description>
+            <race>Human</race>
+            <age>16</age>
+            <short>
+                A dodgy character.
             </short>
         </description>
 
-        <skills>
-            <group name="Talents" type="talents">
-                <skill name="Athletics" score="2"/>
-                <skill name="Awareness" score="2"/>
-                <skill name="Brawl" score="2"/>
-                <skill name="Charm" score="3"/>
-                <skill name="Guile" score="3"/>
-                <skill name="Sleight" score="2"/>
-                <skill name="Stealth" score="2"/>
-                <skill name="Throw" score="2"/>
-            </group>
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="3"/>
+                    <skill name="Guile" score="4"/>
+                    <skill name="Sleight" score="3"/>
+                    <skill name="Stealth" score="3"/>
+                    <skill name="Throw" score="2"/>
+                </group>
 
-            <group name="Knowledges" type="knowledges">
-                <skill name="Speak Rornic" score="4"/>
-                <skill name="Area lore" score="4"/>
-            </group>
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak Own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                </group>
 
-            <group name="Profession" type="skills">
-                <skill name="Trade" score="4"/>
-                <skill name="Teamster" score="3"/>
-            </group>
+                <group name="Rogue" type="skills">
+                    <skill name="Gambling" score="3"/>
+                    <skill name="Streetwise" score="3"/>
+                </group>
 
-            <group name="Other" type="skills">
-                <skill name="Ride" score="2"/>
-                <skill name="Single weapon" score="2"/>
-                <skill name="Etiquette" score="2"/>
-                <skill name="Law" score="1"/>
-            </group>
-        </skills>
+                <group name="Other" type="skills">
+                    <skill name="Trade" score="2"/>
+                </group>
+            </skills>
+        </statistics>
+
+        <equipment>
+            <cash value="5d"/>
+            <item name="Standard clothes"/>
+        </equipment>
     </character>
+
 
 
     <character name="Woodsman">
         <description>
+            <race>Human</race>
+            <age>16</age>
             <short>
                 The woodsman cares for the Lord's orchards and grazing
                 lands. He has knowledge of the wild, of how to hunt it and
@@ -188,38 +381,43 @@
             </short>
         </description>
 
-        <skills>
-            <group name="Talents" type="talents">
-                <skill name="Athletics" score="2"/>
-                <skill name="Awareness" score="2"/>
-                <skill name="Brawl" score="2"/>
-                <skill name="Charm" score="2"/>
-                <skill name="Guile" score="2"/>
-                <skill name="Sleight" score="2"/>
-                <skill name="Stealth" score="3"/>
-                <skill name="Throw" score="2"/>
-            </group>
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="2"/>
+                    <skill name="Guile" score="2"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="3"/>
+                    <skill name="Throw" score="2"/>
+                </group>
 
-            <group name="Knowledges" type="knowledges">
-                <skill name="Speak Rornic" score="4"/>
-                <skill name="Area lore" score="4"/>
-            </group>
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak Own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                </group>
 
-            <group name="Profession" type="skills">
-                <skill name="Copicing" score="4"/>
-                <skill name="Farming" score="1"/>
-                <skill name="Carpentry" score="2"/>
-            </group>
+                <group name="Profession" type="skills">
+                    <skill name="Copicing" score="4"/>
+                    <skill name="Farming" score="1"/>
+                </group>
 
-            <group name="Other" type="skills">
-                <skill name="Bow" score="3"/>
-                <skill name="Single weapon" score="3"/>
-                <skill name="Survival" score="3"/>
-                <skill name="Hunting" score="2"/>
-                <skill name="Herb lore" score="1"/>
-                <skill name="First aid" score="1"/>
-            </group>
-        </skills>
+                <group name="Other" type="skills">
+                    <skill name="Bow" score="4"/>
+                    <skill name="Survival" score="4"/>
+                    <skill name="Single weapon" score="2"/>
+                </group>
+            </skills>
+        </statistics>
+
+        <equipment>
+            <cash value="5d"/>
+            <item name="Standard outdoor clothes"/>
+            <item name="Short bow"/>
+            <item name="Spear"/>
+        </equipment>
     </character>
 
 

@@ -1,45 +1,83 @@
 <?xml version="1.0"?>
 
 
-<character-templates>
+<!--
+    Standard Habisfern character packages: Nobles
 
+    Version: $Revision: 1.8 $
+    Date:    $Date: 2005-12-03 21:23:27 $
+-->
 
-    <character name="Sea Raider">
+<characters xmlns="http://yagsbook.sourceforge.net/xml"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <character name="Thegn">
         <description>
+            <race>Human</race>
+            <age>21</age>
             <short>
-                A sea raider is a warrior who raids coastl settlements
-                from the sea. They have knowledge of boat handling as
-                well as warfare.
+                Thegns are landowners.
             </short>
+
+            <background>
+                <para>
+                    A noble.
+                </para>
+            </background>
         </description>
 
-        <skills>
-            <group name="Talents" type="talents">
-                <skill name="Athletics" score="2"/>
-                <skill name="Awareness" score="3"/>
-                <skill name="Brawl" score="3"/>
-                <skill name="Charm" score="2"/>
-                <skill name="Guile" score="2"/>
-                <skill name="Sleight" score="2"/>
-                <skill name="Stealth" score="3"/>
-                <skill name="Throw" score="2"/>
-            </group>
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="2"/>
+                    <skill name="Guile" score="2"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
 
-            <group name="Knowledges" type="knowledges">
-                <skill name="Speak own" score="4"/>
-                <skill name="Area lore" score="4"/>
-                <skill name="Navigation" score="1"/>
-            </group>
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                    <skill name="Law" score="2"/>
+                </group>
 
-            <group name="Other" type="skills">
-                <skill name="Boating" score="4"/>
-                <skill name="Weapon and shield" score="4"/>
-                <skill name="Swim" score="2"/>
-                <skill name="Survival (coastal)" score="2"/>
-            </group>
-        </skills>
+                <group name="Profession" type="skills">
+                    <skill name="Seneschal" score="2"/>
+                    <skill name="Etiquette" score="2"/>
+                    <skill name="Politics" score="2"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Weapon and shield" score="4"/>
+                    <skill name="Second melee skill" score="4"/>
+                    <skill name="Battle" score="2"/>
+                    <skill name="Ride" score="2"/>
+                    <skill name="Hunting" score="2"/>
+                </group>
+            </skills>
+
+            <advantages>
+                <advantage name="Combat reflexes" cost="2"
+                           skill="Melee"/>
+                <advantage name="Shield wall" cost="2"
+                           skill="Weapon and shield"/>
+            </advantages>
+        </statistics>
+
+        <equipment>
+            <cash value="10d"/>
+            <item name="Standard clothes"/>
+            <item name="Spear"/>
+            <item name="Scramasax"/>
+            <item name="Leather armour"/>
+        </equipment>
     </character>
 
-</character-templates>
+
+</characters>
 
 
