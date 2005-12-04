@@ -3,8 +3,8 @@
 <!--
     Standard Habisfern character packages.
 
-    Version: $Revision: 1.6 $
-    Date:    $Date: 2005-12-03 21:23:27 $
+    Version: $Revision: 1.7 $
+    Date:    $Date: 2005-12-04 22:48:22 $
 -->
 <characters xmlns="http://yagsbook.sourceforge.net/xml"
             xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
@@ -146,14 +146,28 @@
             <age>16</age>
             <gender>Female</gender>
             <short>
-                A free woman.
+                A free woman, either single or married.
             </short>
 
             <background>
                 <para>
-                    Ceorls are freemen who work their own land on their
-                    Lord's estates. They are sufficiently well off to be
-                    able to support themselves.
+                    Most societies in Habisfern are male dominated, however
+                    the existance of all-female warrior cults, and the fact
+                    that only Queens have ever ruled Weidany means women do
+                    have the option of being something other than a wife
+                    and mother. It is <e>expected</e> that a woman will
+                    stay at home, however women who have the courage and
+                    will to take on a profession are accepted as equals.
+                </para>
+
+                <para>
+                    The type of woman described here is one who has not
+                    taken on another profession, but is making her own way
+                    in the world. Since women are expected to run the
+                    household, look after the finances and keep their
+                    husband aware of changes in politics and the market,
+                    such women find that the transition from housewife to
+                    merchant an easy one.
                 </para>
             </background>
         </description>
@@ -180,12 +194,12 @@
                     <skill name="Handicraft" score="4"/>
                     <skill name="Farming" score="2"/>
                     <skill name="Trade" score="2"/>
-                    <skill name="Seneschal" score="1"/>
+                    <skill name="Seneschal" score="2"/>
                 </group>
 
                 <group name="Other" type="skills">
                     <skill name="Etiquette" score="1"/>
-                    <skill name="Herb lore" score="2"/>
+                    <skill name="Herb lore" score="1"/>
                     <skill name="First aid" score="2"/>
                 </group>
             </skills>
@@ -198,9 +212,6 @@
         <equipment>
             <cash value="10d"/>
             <item name="Standard clothes"/>
-            <item name="Spear"/>
-            <item name="Scramasax"/>
-            <item name="Leather armour"/>
         </equipment>
     </character>
 
@@ -331,6 +342,30 @@
             <short>
                 A dodgy character.
             </short>
+
+            <background>
+                <para>
+                    Rogues are those who make a living through crime, or
+                    at least skirting close to the edge of what is legal
+                    and isn't. Many will use charm and wit to gain money
+                    from people, moving on quickly before their deceit is
+                    noticed. Though they may be as homeless as a vagabond,
+                    rogues try to pretend they are a person of good
+                    standing, and try to make money with as little work
+                    as possible. They are often more respectable than a
+                    vagabond, but generally less trustworthy.
+                </para>
+
+                <para>
+                    Due to the rural nature of most of civilisation, theft
+                    is normally of the opportunistic sort, rather than
+                    the sort of planned burglary which may be worthwhile in
+                    the larger cities. As such, though a rogue wouldn't
+                    object to taking a chicken or nice cloak when no-one
+                    was looking, it's not something that requires much
+                    skill, so they don't tend to have burglary skills.
+                </para>
+            </background>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
@@ -364,10 +399,75 @@
 
         <equipment>
             <cash value="5d"/>
-            <item name="Standard clothes"/>
+            <item name="Good clothes"/>
         </equipment>
     </character>
 
+    <character name="Vagabond">
+        <description>
+            <race>Human</race>
+            <age>16</age>
+            <short>
+                A traveller without a proper home.
+            </short>
+
+            <background>
+                <para>
+                    Vagabonds are those who either have no home, or
+                    have been forced to leave their homes. They may be
+                    nobles, freemen or slaves, though the most common
+                    are poor freemen who have decided to leave their
+                    lord. Many turn to crime to make a living, and
+                    because of this they are pretty much mistrusted
+                    wherever they go.
+                </para>
+
+                <para>
+                    Vagabounds are not necessarily outlaws, though some
+                    are. They generally hire themselves out to do whatever
+                    work is required, and hope they get paid at the end.
+                    Groups of vagabonds are seen as a threat, and so will
+                    often be forceably broken up.
+                </para>
+            </background>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="3"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="2"/>
+                    <skill name="Guile" score="3"/>
+                    <skill name="Sleight" score="4"/>
+                    <skill name="Stealth" score="3"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak Own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                </group>
+
+                <group name="Rogue" type="skills">
+                    <skill name="Gambling" score="3"/>
+                    <skill name="Streetwise" score="2"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Survival" score="3"/>
+                    <skill name="Longshaft weapon" score="3"/>
+                </group>
+            </skills>
+        </statistics>
+
+        <equipment>
+            <cash value="1d"/>
+            <item name="Poor clothes"/>
+            <item name="Quarterstaff"/>
+        </equipment>
+    </character>
 
 
     <character name="Woodsman">
