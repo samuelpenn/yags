@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet
-                href="/home/sam/src/forge/yagsbook/xml/xslt/html/yagsbook.xsl"
+    href="/home/sam/src/forge/yagsbook/xml/xslt/html/yagsbook.xsl"
     type="text/xsl"?>
 
 <article xmlns="http://yagsbook.sourceforge.net/xml"
@@ -19,8 +19,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.25 $</version>
-            <date>$Date: 2005-12-04 22:48:22 $</date>
+            <version>$Revision: 1.26 $</version>
+            <date>$Date: 2005-12-20 17:22:28 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -199,7 +199,8 @@
 
                 <para>
                     Located to the north-west, Bryteland is a nation of
-                    warriors.
+                    warriors. Packages unique to characters who come
+                    from this land follows below.
                 </para>
 
                 <import-characters
@@ -252,70 +253,233 @@
                 have been bought.
             </para>
 
-            <para>
-                Most advantages and disadvantages are described in the
-                <e>Advantages</e> article, though there are some which
-                are unique to the Habisfern setting which are described
-                below.
-            </para>
-
             <sect2>
-                <title>Common Advantages</title>
-
-                <y:import-advantages href="options/advantages.yags"
-                                     type="advantage"/>
-            </sect2>
-
-            <sect2>
-                <title>Common Disadvantages</title>
-
-                <y:import-advantages href="options/advantages.yags"
-                                     type="disadvantage"/>
-            </sect2>
-
-            <sect2>
-                <title>Bryteland</title>
-
-                <y:import-advantages
-                    source="/usr/share/xml/habisfern"
-                    topic="bryteland"
-                    role="background"/>
-            </sect2>
-
-            <sect2>
-                <title>Weidany</title>
-
-                <y:import-advantages
-                    source="/usr/share/xml/habisfern"
-                    topic="weidany"
-                    role="background"/>
-            </sect2>
-
-            <sect2>
-                <title>Cults</title>
+                <title>Traits</traits>
 
                 <para>
-                    If a character is a member of a cult, they may have
-                    access to some techniques. Techniques are purchased
-                    like advantages, however they are linked to a skill,
-                    and the skill must be at a given level before the
-                    technique can be learnt.
+                    <e>Traits</e> are a measure of a character's
+                    personality or mental well being. They are all
+                    considered to be zero unless they are bought with
+                    advantages or disadvantages. All traits range in
+                    value from zero to five.
                 </para>
 
                 <para>
-                    Some techniques also have prerequisites in that other
-                    techniques must be learnt first.
+                    Traits may come into play during times of stress,
+                    when the actions of a character are dictated by
+                    the roll of a die rather than the wishes of the
+                    player. The player may wish their character to
+                    stand fast against a charging ogre, however a
+                    fear check may result in the character turning
+                    and running instead.
                 </para>
 
-                <y:import-advantages
-                    source="/usr/share/xml/habisfern"
-                    topic="habisfern"
-                    role="technique"/>
+                <para>
+                    Traits which help a player keep control of their
+                    character in such situations are considered to be
+                    advantages. Those which cause the character to act
+                    on their instincts instead are considered
+                    disadvantages. However, society in Habisfern considers
+                    the suppression of emotion to be a bad thing,
+                    especially when taken to the extreme. Those that
+                    refuse to act through logic rather than out of
+                    passion are considered tools of the Ice, which is
+                    the enemy of passion and lust.
+                </para>
+
+                <sect3>
+                    <title>Valour and Cowardice</title>
+
+                    <para>
+                        <e>Valour</e> is a measure of how brave and heroic
+                        a person is, whilst <e>Cowardice</e> represents
+                        a fearful, timid person who flees from danger.
+                        When a fear, horror or morale check is called for,
+                        then <e>Valour</e> adds to the character's Will,
+                        and <e>Cowardice</e> subtracts from it.
+                    </para>
+
+                    <para>
+                        A valorous character will gain a reputation of
+                        being brave, heroic and possibly foolhardy. A
+                        cowardly character will be known to.
+                    </para>
+                </sect3>
+
+
+                <sect3>
+                    <title>Lust and Chastity</title>
+
+                    <para>
+                        A character with a high <e>Lust</e> enjoys, and is
+                        tempted by, the pleasures of the flesh. The gods
+                        of chaos look on Lust as a good thing, holding it
+                        in high regard, for it is the enemy of the Ice.
+                        A character <e>Chastity</e> has little interest
+                        in sexual pleasure, and is able to resist
+                        temptation with relative ease.
+                    </para>
+
+                    <para>
+                        Those with <e>Lust</e> suffer a penalty to their
+                        Will when resisting such temptation equal to the
+                        level of their trait, and those with
+                        <e>Chastity</e> gain a bonus to Will.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Ferocity and Restraint</title>
+
+                    <para>
+                        A person with the <e>Ferocity</e> trait is
+                        easily angered, and prone to use violence to
+                        solve problems. Someone who has <e>Restraint</e>
+                        will tend to ignore insults, and when violence i
+                        used it will be in a measured and controlled way.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Gluttony and Temperance</title>
+
+                    <para>
+                        Indulges, or doesn't.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Luck and Cursed</title>
+
+                    <para>
+                        Lucky characters have a <e>Luck</e> trait which
+                        is rarely used for Will checks, however the GM
+                        may sometimes make a luck roll for the character
+                        or group, in which any Luck traits will play
+                        a part.
+                    </para>
+
+                    <para>
+                        A <e>Cursed</e> character has been abondoned by
+                        Fate. Chance will rarely favour the character,
+                        and whenever a luck roll is made, then their
+                        <e>Cursed</e> trait acts as a penalty.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Ego</title>
+
+                    <para>
+                        <e>Ego</e> is a measure of a character's sense of
+                        personal importance. A character with a high
+                        <e>Ego</e> is strong willed and difficult to sway
+                        with talk or magic. Their trait adds to their Will
+                        when resisting both magical and non-magical
+                        attempts at persuasion or mind control.
+                    </para>
+
+                    <para>
+                        However, Ego does make a character hard to get on
+                        with.
+                    </para>
+                </sect3>
+
+
+            </sect2>
+
+            <sect2>
+                <title>List of Advantages</title>
+
+                <sect3>
+                    <title>Common Advantages</title>
+
+                    <y:import-advantages href="options/advantages.yags"
+                                        type="advantage"/>
+                </sect3>
+
+                <sect3>
+                    <title>Common Disadvantages</title>
+
+                    <y:import-advantages href="options/advantages.yags"
+                                        type="disadvantage"/>
+                </sect3>
+
+                <sect3>
+                    <title>Bryteland</title>
+
+                    <y:import-advantages
+                        source="/usr/share/xml/habisfern"
+                        topic="bryteland"
+                        role="background"/>
+                </sect3>
+
+                <sect3>
+                    <title>Weidany</title>
+
+                    <y:import-advantages
+                        source="/usr/share/xml/habisfern"
+                        topic="weidany"
+                        role="background"/>
+                </sect3>
+
+                <sect3>
+                    <title>Cults</title>
+
+                    <para>
+                        If a character is a member of a cult, they may have
+                        access to some techniques. Techniques are purchased
+                        like advantages, however they are linked to a skill,
+                        and the skill must be at a given level before the
+                        technique can be learnt.
+                    </para>
+
+                    <para>
+                        Some techniques also have prerequisites in that other
+                        techniques must be learnt first.
+                    </para>
+
+                    <y:import-advantages
+                        source="/usr/share/xml/habisfern"
+                        topic="habisfern"
+                        role="technique"/>
+                </sect3>
             </sect2>
         </sect1>
 
-    </body>
+        <sect1>
+            <title>Luck</title>
 
+            <para>
+                <e>Habisfern</e> is a world where fate and destiny are
+                seen to be a very real part of everyday life. For some
+                people, Fate will guide them towards their goal, for
+                others, Fate may try to drag them down to their doom.
+                In Yags, whether Fate has an interest in a character
+                is represented by the <e>Luck</e> and <e>Cursed</e>
+                traits.
+            </para>
+
+            <termlist targetFirst="true">
+                <targetLabel>Chance</targetLabel>
+                <valueLabel>Cicumstance</valueLabel>
+
+                <item target="5" value="Likely.">
+                    Event is very likely to happen unless the
+                    character is particularly unlucky.
+                </item>
+
+                <item target="10" value="Evens.">
+                </item>
+
+                <item target="15" value="Unlikely.">
+                </item>
+
+                <item target="20" value="Improbable.">
+                </item>
+            </termlist>
+        </sect1>
+    </body>
 </article>
 
 
