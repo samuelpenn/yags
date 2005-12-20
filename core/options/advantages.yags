@@ -3,8 +3,8 @@
 <!--
     These list generic advantages and disadvantages,
 
-    Version: $Revision: 1.13 $
-    Date:    $Date: 2005-10-01 10:39:19 $
+    Version: $Revision: 1.14 $
+    Date:    $Date: 2005-12-20 18:01:05 $
     Author:  Samuel Penn (sam@glendale.org.uk)
 
 -->
@@ -28,26 +28,13 @@
         <cost points="+5"/>
         <genre>Common</genre>
 
+        <prerequisite>Good attribute</prerequisite>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The character is truly exceptional in one attribute, and
                 can raise it from four to five. The character must
                 already have taken <e>Good attribute</e> in this attribute.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Strong willed" type="advantage">
-        <cost points="+1"/>
-        <cost points="+3"/>
-        <genre>Common</genre>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The character begins the game with one passion at a score
-                of either five (+1 cost) or six (+3 cost). Multiple
-                passions can be raised in this way by buying this
-                advantage multiple times.
             </para>
         </description>
     </advantage>
@@ -275,21 +262,6 @@
         </description>
     </advantage>
 
-    <advantage name="Weak willed" type="disadvantage">
-        <cost points="-1"/>
-        <cost points="-3"/>
-        <genre>Common</genre>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The character begins the game with one passion at a score
-                of either three (-1 cost) or two (-3 cost). Multiple
-                passions can be lowered in this way by taking this
-                disadvantage multiple times.
-            </para>
-        </description>
-    </advantage>
-
 
     <advantage name="Albino" type="disadvantage">
         <cost points="-1"/>
@@ -351,6 +323,7 @@
 
     <advantage name="Illiterate" type="disadvantage">
         <cost points="-3"/>
+        <forbiddon>Literate</forbiddon>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -439,6 +412,7 @@
 
     <advantage name="Small" type="disadvantage">
         <cost points="-5"/>
+        <forbiddon>Large</forbiddon>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -522,6 +496,7 @@
     <advantage name="Light drinker" type="disadvantage">
         <cost points="-1"/>
         <genre>Common</genre>
+        <forbiddon>Heavy drinker</forbiddon>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -730,12 +705,12 @@
             </para>
         </description>
         <forbiddon>Keen hearing</forbiddon>
-        <forbiddon>Combat awareness</forbiddon>
     </advantage>
 
     <advantage name="Repellent" type="disadvantage">
         <cost points="-1"/>
         <genre>Common</genre>
+        <forbiddon>Sexually tantalising</forbiddon>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -750,6 +725,7 @@
 
     <advantage name="Ugly" type="disadvantage">
         <cost points="-3"/>
+        <forbiddon>Beautiful</forbiddon>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
