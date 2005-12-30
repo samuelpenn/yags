@@ -1,0 +1,603 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <header>
+        <title>Combat (Wounds)</title>
+        <tagline>Yags</tagline>
+
+        <summary>
+            Basic combat rules, mostly for fantasy/historical combat.
+            Includes both melee and missile combat, as well as basic
+            movement, damage and armour rules.
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2005-12-30 23:19:56 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2004</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+        </license>
+
+        <style name="combat"/>
+    </header>
+
+    <body>
+        <sect1 id="damage">
+            <title>Damage, Stuns and Wounds</title>
+
+            <para>
+                A successful attack has a chance of injuring or killing
+                the target - which is determined by the attacker making
+                a <e>damage</e> roll against the target's <e>soak</e>.
+                Soak, which is a combination of the target's toughness
+                and armour, reduces the damage of an attack.
+            </para>
+
+            <para>
+                Damage is represented as <e>stuns</e> and <e>wounds</e>.
+                The former represent bruises, shock and minor cuts which
+                rarely kill and can be healed in a few days. Wounds
+                represent penetrating damage that will often kill and
+                may take weeks or months to heal if it doesn't. Punches
+                do stun damage, whilst swords do wound damage.
+            </para>
+
+            <para>
+                Some attacks will cause a mixture of stuns and wounds.
+                Animal attacks are often of this kind. Which of the damage
+                types will be caused depends on the nature of the attack,
+                and will be described in the weapon or animal description.
+            </para>
+
+            <para>
+                To find the damage, roll the strength x 4 + weapon damage
+                bonus of the attacker, and subtract the base soak + armour
+                soak roll of the defender. A typical human has a base soak
+                of 12. A full suite of mail armour gives a further +13
+                soak, for a total of 25. A typical human with a strength
+                of 3 and using a sword has a damage of 3 x 4 + 12 = 24.
+            </para>
+
+            <para>
+                If the damage roll is equal or higher than the soak roll,
+                then at leats one level of damage has been caused. Every
+                extra 5 points of damage rolled over the soak does an
+                extra level of damage to the target. The effects of these
+                injury levels depends on the damage type of the weapon -
+                wounds, stuns or mixed damage.
+            </para>
+
+            <sect2>
+                <title>Knockdown</title>
+
+                <para>
+                    An attack can knock the target to the ground as well
+                    as causing damage. A knocked down target is considered
+                    <e>prone</e> from that point onwards. Knockdown will
+                    occur if one of the following conditions is met.
+                </para>
+
+                <itemlist order="1">
+                    <item>
+                        If the number of damage levels caused in that
+                        attack is equal or greater than the strength of
+                        the target.
+                    </item>
+
+                    <item>
+                        If the damage roll (before soak) is equal to or
+                        greater than 2 x size x strength + 10 of the
+                        target. Such a knockdown also causes 1 stun.
+                    </item>
+                </itemlist>
+
+                <para>
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Wounds</title>
+
+                <para>
+                    Wounds represent damage that has a good chance of
+                    breaking the skin and affecting vital organs, or
+                    causing massive bleeding or broken bones. Every
+                    injury level causes one wound, and wounds are
+                    cumulative from one attack to the next. If a person
+                    takes two wounds from one attack, and three wounds
+                    from a second attack the following round, they have
+                    a total of five wounds.
+                </para>
+
+                <table>
+                    <title>Penalties due to Wounds</title>
+
+                    <colspec colwidth="2cm"/>
+                    <colspec colwidth="1.5cm"/>
+                    <colspec colwidth="1.5cm"/>
+                    <colspec colwidth="3cm"/>
+                    <thead>
+                        <row>
+                            <entry>Damage</entry>
+                            <entry>Wounds</entry>
+                            <entry>Penalty</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>0 - 4</entry>
+                            <entry>1</entry>
+                            <entry>+0</entry>
+                            <entry>Minor</entry>
+                        </row>
+                        <row>
+                            <entry>5 - 9</entry>
+                            <entry>2</entry>
+                            <entry>-1</entry>
+                            <entry>Light</entry>
+                        </row>
+                        <row>
+                            <entry>10 - 14</entry>
+                            <entry>3</entry>
+                            <entry>-3</entry>
+                            <entry>Medium</entry>
+                        </row>
+                        <row>
+                            <entry>15 - 19</entry>
+                            <entry>4</entry>
+                            <entry>-6</entry>
+                            <entry>Heavy</entry>
+                        </row>
+                        <row>
+                            <entry>20 - 24</entry>
+                            <entry>5</entry>
+                            <entry>-10</entry>
+                            <entry>Critical</entry>
+                        </row>
+                        <row>
+                            <entry>25 - 29</entry>
+                            <entry>6</entry>
+                            <entry>-15</entry>
+                            <entry>Fatal</entry>
+                        </row>
+                    </tbody>
+                </table>
+
+                <para>
+                    Each level of wound gives a penalty, as shown in the
+                    <e>Penalties due to Wounds</e> table.
+                    The penalty is to all actions performed by the character
+                    while at that wound level.
+                </para>
+
+                <sect3>
+                    <title>Critical Wounds</title>
+
+                    <para>
+                        Most creatures and people who are critically wounded
+                        will seek to avoid further combat. Enraged creatures
+                        and people, or professional warriors may carry on
+                        fighting however.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Fatal Wounds</title>
+
+                    <para>
+                        If a character becomes fatally wounded, then they
+                        must immediately make a stamina roll at difficulty 20
+                        or die (with a fumble chance of 3, fumbling resulting
+                        in death). If they get a good success (succeed by 10
+                        or more), then they may continue normally, otherwise
+                        they fall unconscious.
+                    </para>
+
+                    <sect4>
+                        <title>Beyond Fatal</title>
+
+                        <para>
+                            If a character suffers damage that takes them
+                            beyond <e>fatally wounded</e>,
+                            then they are considered to be at fatal, but
+                            the initial stamina difficulty is raised by 5
+                            for each wound level beyond fatal they were
+                            taken. For example, if someone is seriously
+                            wounded, and suffers four extra wound levels,
+                            they will become fatally wounded, and need
+                            to make a stamina roll at difficulty 30 to
+                            remain alive, and 40 to remain conscious.
+                        </para>
+
+                        <para>
+                            The fumble chance is raised by 1 for each
+                            wound beyond fatal that they are taken.
+                        </para>
+
+                        <para>
+                            Damage such as this only affects the initial
+                            stamina roll, and does not affect further
+                            rolls to remain conscious and alive later on.
+                            For all other purposes, there are no shades
+                            of fatal wounds.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Surviving Fatal wounds</title>
+
+                        <para>
+                            Unless they receive suitable medical attention,
+                            a fatally wounded character will die eventually.
+                            If the character is still active, they
+                            must make another stamina roll at the end of
+                            each round at a target difficulty of 30 to
+                            remain conscious. Again, if the roll
+                            fails by 10 or more, then the character dies.
+                        </para>
+
+                        <para>
+                            An unconscious character must make a difficulty
+                            20 roll each minute in order to remain alive.
+                            Failure means death. A roll must be made
+                            until the character receives first aid which
+                            stabalises their condition.
+                        </para>
+                    </sect4>
+                </sect3>
+            </sect2>
+
+
+            <sect2>
+                <title>Stuns</title>
+
+                <para>
+                    Unlike wounds, stuns are short term and generally
+                    non-fatal. Stun damage is caused by attacks which
+                    bruise or scratch such as fists, chair legs and
+                    staffs. It is possible to kill someone with stun
+                    damage, though it is unlikely.
+                </para>
+
+                <para>
+                    Unlike wounds, stun damage is not cumulative. If a
+                    character receives a number of stuns greater than
+                    the stun levels they currently have, then they become
+                    stunned to that level. The stuns are not added to
+                    the stuns they already have.
+                </para>
+
+                <para>
+                    If a character receives at least one or more stuns
+                    which do not exceed their current stun level, but are
+                    at least half their current number of stuns, then
+                    they gain one stun.
+                </para>
+
+                <para>
+                    Similar to wounds, a character suffers penalties
+                    from being stunned. The penalties are on a similar
+                    scale for wound penalties, and a character who is
+                    both wounded and stunned suffers both sets of
+                    penalties.
+                </para>
+
+                <table>
+                    <title>Penalties due to Stuns</title>
+                    <colspec colwidth="2cm"/>
+                    <colspec colwidth="1.5cm"/>
+                    <colspec colwidth="1.5cm"/>
+                    <colspec colwidth="3cm"/>
+                    <thead>
+                        <row>
+                            <entry>Damage</entry>
+                            <entry>Stuns</entry>
+                            <entry>Penalty</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>0 - 4</entry>
+                            <entry>1</entry>
+                            <entry>+0</entry>
+                            <entry>Minor</entry>
+                        </row>
+                        <row>
+                            <entry>5 - 9</entry>
+                            <entry>2</entry>
+                            <entry>-1</entry>
+                            <entry>Light</entry>
+                        </row>
+                        <row>
+                            <entry>10 - 14</entry>
+                            <entry>3</entry>
+                            <entry>-3</entry>
+                            <entry>Medium</entry>
+                        </row>
+                        <row>
+                            <entry>15 - 19</entry>
+                            <entry>4</entry>
+                            <entry>-6</entry>
+                            <entry>Heavy</entry>
+                        </row>
+                        <row>
+                            <entry>20 - 24</entry>
+                            <entry>5</entry>
+                            <entry>-10</entry>
+                            <entry>Critical</entry>
+                        </row>
+                        <row>
+                            <entry>25 - 29</entry>
+                            <entry>6</entry>
+                            <entry>-15</entry>
+                            <entry>Oblivious</entry>
+                        </row>
+                    </tbody>
+                </table>
+
+                <para>
+                    Once a character becomes <e>oblivious</e>,
+                    they must make a stamina roll of difficulty 30 or fall
+                    unconscious. Every stun they receive after this
+                    requires another stamina roll, plus the character
+                    suffers a single wound.
+                </para>
+
+                <sect3>
+                    <title>Excess stun damage</title>
+
+                    <para>
+                        If the number of stuns suffered in a single attack
+                        takes the character beyond the
+                        <e>oblivious</e> threshold, then
+                        the excess stuns become wounds, and add to the
+                        character's current wound total.
+                    </para>
+
+                    <para>
+                        A stamina roll is also required in order to
+                        remain conscious. The target difficulty is
+                        increased by 5 for each excess stun.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Mixed damage</title>
+
+                <para>
+                    Some weapons have a damage type of
+                    <e>Mixed</e>, which causes both stun and
+                    wound damage. On a scale of severity, it isn't as deadly
+                    as wound damage, but is worse than stun damage.
+                </para>
+
+                <para>
+                    Mixed damage is split equally between stuns and wounds,
+                    with any remainder going on stuns (so one level of
+                    mixed damage is equivalent to a single stun).
+                </para>
+
+                <para>
+                    All stuns from mixed damage are cumulative. If a
+                    character receives three levels of mixed damage, he
+                    suffers two stuns and one wound. If that character
+                    already has two stuns and two wounds, he will now
+                    have four stuns and three wounds.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Fatigue</title>
+
+                <para>
+                    A character's fatigue is measured in a similar way to
+                    wounds, though the number of fatigue levels they have
+                    is based on their stamina, ranging from OK to
+                    Exhausted. If a character becomes Exhausted then they
+                    must immediately rest.
+                </para>
+
+                <para>
+                    Fatigue is normally short term, and can be lost in
+                    minutes. Exhaustion is gained through long term
+                    effort or lack of sleep, and can only be lost through
+                    a night of sleep. Exhaustion and fatigue stack
+                    together on the same track - two levels of
+                    fatigue and two levels of exhaustion add up to
+                    four levels on the fatigue track, and count as a
+                    single penalty as if the character had four levels
+                    of either.
+                </para>
+
+                <para>
+                    It is suggested that fatigue is kept track of on the
+                    character sheet by crossing off fatigue levels
+                    with a single line, and exhaustion with a cross.
+                    Exhaustion is always <e>first</e> on the line,
+                    and last to be lost.
+                </para>
+            </sect2>
+        </sect1>
+
+
+
+        <sect1 id="healing">
+            <title>Healing and First aid</title>
+
+            <sect2>
+                <title>First aid</title>
+
+                <para>
+                    After a character has become injured, it may be
+                    necessary for first aid to be applied to the wounds
+                    in order for them to heal. Fresh wounds need to be
+                    stabilised, a process which requires another
+                    character to make an intelligence x first aid roll
+                    on the wounded character.
+                </para>
+
+                <para>
+                    The base difficulty to successfully first aid a
+                    character's stuns is zero. To tend to a character's
+                    wounds, the base difficulty is 10. In both cases, the
+                    difficulty is modified upwards by the character's
+                    total stun and wound penalties.
+                </para>
+
+                <para>
+                    For example, a battered (-6) and lightly wounded (-1)
+                    character would be difficulty 7 to first aid their
+                    stuns, and 17 to first aid their wounds.
+                </para>
+
+                <para>
+                    A character may first aid themselves - as long as they
+                    are conscious - but they suffer all their wound
+                    penalties to their skill roll (as well as them adding
+                    to the difficulty of the task).
+                </para>
+
+                <sect3>
+                    <title>Tending to Stuns</title>
+
+                    <para>
+                        A successful first aid attempt against stuns will
+                        heal one level of stun immediately, plus a further
+                        level for every full 10 points the healer rolled
+                        above the difficulty.
+                    </para>
+
+                    <para>
+                        Stuns do not need to be stabalised, so there is no
+                        penalty from failing to have first aid performed as
+                        long as the character is only stunned.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Tending to Wounds</title>
+
+                    <para>
+                        A successful first aid attempt against wounds will
+                        stabalise the wound, preventing it from becoming
+                        infected or worsening. If the roll was at least 10
+                        points higher than the difficulty, then a single
+                        wound level is immediately healed.
+                    </para>
+
+                    <para>
+                        A character who is fatally wounded, does not have
+                        to roll to see if they die while the first aid
+                        attempt is in progress. However, if the first aid
+                        fails (at the end of the minute it takes), then
+                        the character has to start rolling again as per
+                        normal.
+                    </para>
+
+                    <para>
+                        If a wound is not successfully first aided within
+                        an hour, then there is a chance that it becomes
+                        infected and worsens. The character makes a stamina
+                        roll at difficulty 20, modified by wound penalties.
+                        Failure means that the wound is infected, and
+                        worsens by one level. Each day thereafter, until
+                        first aid is successfully attempted, another roll
+                        is needed, with each failure worsening the wound
+                        each time.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Natural healing</title>
+
+                <sect3>
+                    <title>Recovering from stuns</title>
+
+                    <para>
+                        Stuns are healed after a night's rest. Each morning,
+                        the character makes a stamina roll at difficulty 0,
+                        modified by their current wound and stun penalties.
+                        Success means that one stun level is healed, and each
+                        10 above the difficulty heals a further stun level.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Recovering from wounds</title>
+
+                    <para>
+                        Wounds heal naturally after a week. Each week, the
+                        character gets a stamina roll at difficulty 20,
+                        modified by their total stun and wound penalties.
+                        On a success, a single level of wound is healed.
+                    </para>
+
+                    <para>
+                        If the character fumbles their stamina roll, then
+                        their injury worsens, and they gain an extra wound
+                        level. A character who is already fatally wounded
+                        will die.
+                    </para>
+
+                    <para>
+                        If the wounded individual is spending the time
+                        resting, and they are being looked after by someone
+                        who has the <e>first aid</e> skill (spending at
+                        least an hour a day with them), then they receive
+                        a bonus equal to the healer's <e>first aid</e>
+                        score to their healing check.
+                    </para>
+
+                    <para>
+                        A patient looking after themselves in this way
+                        only receives half the normal bonus (rounded up).
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Recovering from Fatigue</title>
+
+                    <para>
+                        The only way to recover from fatigue is through
+                        rest. For each level of fatigue or exhaustion a
+                        character has, it takes five minutes to recover
+                        one level of fatigue.
+                    </para>
+
+                    <para>
+                        Exhaustion counts towards fatigue, but cannot be
+                        lost through a few minutes of rest. Four hours of
+                        good sleep with remove all fatigue and one point
+                        of exhaustion for every two points of stamina
+                        (rounded up, so 2 exhaustion is recovered by
+                        someone with a stamina of 3 or 4).
+                    </para>
+                </sect3>
+            </sect2>
+        </sect1>
+    </body>
+</article>
+
+

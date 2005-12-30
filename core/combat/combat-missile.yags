@@ -1,0 +1,770 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <header>
+        <title>Combat (Melee)</title>
+        <tagline>Yags</tagline>
+
+        <summary>
+            Basic combat rules, mostly for fantasy/historical combat.
+            Includes both melee and missile combat, as well as basic
+            movement, damage and armour rules.
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2005-12-30 23:19:56 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2004</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+        </license>
+
+        <style name="combat"/>
+    </header>
+
+    <body>
+
+        <sect1>
+            <title>Missile Combat</title>
+
+            <para>
+                So far everything that has been covered has dealt with
+                melee combat between antagonists who are in close combat.
+                The rules for missile weapons are similar. Unless a
+                difference is noted, assume that missile combat works
+                the same way.
+            </para>
+
+            <sect2>
+                <title>Ranged combat skills</title>
+
+                <para>
+                    As for melee combat, there are a number of different
+                    styles which make use of a particular skill.
+                </para>
+
+                <sect3>
+                    <title>Thrown weapons</title>
+
+                    <para>
+                        All characters have some ability with the
+                        <e>Throw</e> talent, which is the
+                        ranged equivalent of the <e>Brawl</e> skill.
+                        Thrown spears, javelins,
+                        bottles, slings and axes are covered under this
+                        skill. This actually covers the majority of
+                        missile combat.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Bow</title>
+
+                    <para>
+                        The bow, including both the longbow and shortbow,
+                        requires this skill. The bow can be quite a deadly
+                        weapon in the hands of a skilled professional, but
+                        can be difficult to use.
+                    </para>
+
+                    <para>
+                        Both longbows and shortbows are constructed for a
+                        given strength of user. A bow's strength rating is
+                        both the minimum and maximum strength. A stronger
+                        bowman cannot use their full strength when
+                        using the weapon.
+                    </para>
+
+                    <para>
+                        A single attack action consists of loading, aiming
+                        and firing the bow. This is considered to be a
+                        slow action. If the bow was already loaded in a
+                        previous round, then an attack action occurs on
+                        a normal initiative. If the bow was loaded and
+                        aimed in the previous round, then firing it is
+                        considered a <e>fast</e> action.
+                    </para>
+
+                    <para>
+                        A character can use the <e>throw</e> skill in place
+                        of the bow skill, but all range penalties are
+                        doubled and no techniques can be used.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Crossbow</title>
+
+                    <para>
+                        Crossbows have their own skill. They are easier
+                        to use for the unskilled user, but don't have the
+                        accuracy at long range compared with the long bow.
+                    </para>
+
+                    <para>
+                        Loading and firing a crossbow in a single round is
+                        always considered to be slow. If it was loaded in
+                        a previous round, then a shot may be made as a
+                        normal action.
+                    </para>
+
+                    <para>
+                        Medium and heavy crossbows may take several rounds
+                        to load. On ongoing task must be completed in order
+                        to load the crossbow. An attack may be made in the
+                        round that the crossbow was loaded.
+                    </para>
+
+                    <para>
+                        For medium crossbows, the difficulty is 15, for
+                        heavy crossbows the difficulty is 20. In each case,
+                        a strength x 4 roll is required.
+                    </para>
+
+                    <para>
+                        The <e>throw</e> skill can be used instead when
+                        using a crossbow, but range penalties at targets
+                        greater than short range are doubled.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Size of Target</title>
+
+                <para>
+                    As for melee combat, there is a base difficulty needed
+                    to hit a target. Unlike in melee combat though, this is
+                    modified by the range to the target, and environmental
+                    factors such as wind and visibility.
+                </para>
+
+                <para>
+                    For a human sized target, the base difficulty is 15, as
+                    for melee combat. For smaller or larger targets, the
+                    difficulty changes however.
+                </para>
+
+                <targetlist bold="true" targetFirst="false">
+                    <targetLabel>Difficulty</targetLabel>
+                    <valueLabel>Size of target</valueLabel>
+
+                    <item value="Diminutive" target="30">
+                        Size 0, which is about 10cm in length.
+                    </item>
+
+                    <item value="Tiny" target="25">
+                        Size 1, about 30cm in length. A small cat.
+                    </item>
+
+                    <item value="Small" target="20">
+                        Sizes 2 - 3. Cats and dogs, 60cm to 90cm in length.
+                    </item>
+
+                    <item value="Medium" target="15">
+                        Sizes 4 - 6, from 130cm to 210cm in length or height.
+                    </item>
+
+                    <item value="Large" target="10">
+                        Sizes 7 - 12, from 2m to 5m in length. Includes
+                        lions, horses and the like.
+                    </item>
+
+                    <item value="Huge" target="5">
+                        Sizes 13 - 20, up to 10m in length. Elephants,
+                        houses and the like.
+                    </item>
+
+                    <item value="Enormous" target="0">
+                        Sizes 21 - 30, up to 16m in length. Dinosaurs.
+                    </item>
+
+                    <item value="Gigantic" target="-5">
+                        Sizes 31 - 50, up to 23m in length. The largest
+                        dinosaurs and whales are gigantic.
+                    </item>
+
+                    <item value="Colossal" target="-10">
+                        Sizes 51 - 80, up to 31m in length.
+                    </item>
+
+                    <item value="Titanic" target="-15">
+                        Sizes 81+. Anything larger.
+                    </item>
+                </targetlist>
+
+                <para>
+                    The very largest creatures are very difficult to miss at
+                    close ranges. Groups of smaller creatures also count as
+                    being of a larger size (but aiming for the group will
+                    mean that a random individual is hit).
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Missile Ranges</title>
+
+                <para>
+                    There are two range factors to take into account - the
+                    <e>range increment</e> of the weapon, and the <e>range
+                    category</e> it is being fired at.
+                </para>
+
+                <sect3>
+                    <title>Range Increment</title>
+
+                    <para>
+                        The range increment is a measure of how accurate the
+                        weapon is at range. It is given as a distance, and
+                        each multiple of this distance gives a +5 modifier
+                        to the target difficulty.
+                    </para>
+
+                    <para>
+                        A long bow has a range increment of 25m. Targets
+                        less than 25m away have no modifier. Targets which
+                        are 25m or further away have +5 to the difficulty,
+                        50m or further have +10 etc.
+                    </para>
+
+                    <para>
+                        Shooting a long bow against a <e>Colossal</e> target
+                        at 200m, would be difficulty 30 (-10 for size, + 40
+                        for the range).
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Range Category</title>
+
+                    <para>
+                        The range category is either <e>short</e>,
+                        <e>medium</e> or <e>long</e>. A weapon cannot hit
+                        targets beyond long range. The range category
+                        affects the performance of the weapon, though not
+                        the difficulty to hit. In most cases, this is just
+                        the damage the weapon does.
+                    </para>
+
+                    <targetlist>
+                        <targetLabel>Damage</targetLabel>
+                        <valueLabel>Range category</valueLabel>
+
+                        <item value="Short" target="+0"/>
+                        <item value="Medium" target="-5"/>
+                        <item value="Long" target="-10"/>
+                    </targetlist>
+
+                    <para>
+                        Weapons such as bows, crossbows, hurled weapons and
+                        slings must be aimed on a ballistic trajectory to
+                        hit targets at medium or long range. Targets at
+                        short range can be hit on a more or less flat
+                        trajectory. So, for example, it is not possible to
+                        fire at long range down a low corridor.
+                    </para>
+
+                    <para>
+                        At medium range, there must be ample height available
+                        equal to one tenth the range. At long range, quarter
+                        the range is needed in height. Firing a long bow at
+                        a target 200m away, requires 50m of height, since
+                        this is at long range.
+                    </para>
+
+                    <para>
+                        Because of the angle the short will come down at, it
+                        is not possible to fire through narrow gaps, such as
+                        a window or arrow slit at long range - the archer
+                        can hit the window, but not someone behind the
+                        window. At medium range, it is possible to hit
+                        someone immediately behind a window or similar gap,
+                        but it would not be possible to fire through a
+                        window to hit someone on the other side of the room.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Other Modifiers</title>
+
+                    <para>
+                        Other modifiers to the target difficulty for
+                        missile weapons are as follows. All modifiers are
+                        per range category, so use the listed modifier at
+                        short range, double the modifier at medium range
+                        and triple the modifier at long range.
+                    </para>
+
+                    <targetlist>
+                        <targetLabel>Modifier</targetLabel>
+                        <valueLabel>Environment</valueLabel>
+
+                        <item value="Moderate wind" target="+5"/>
+                        <item value="High wind" target="+10"/>
+                        <item value="Very high wind" target="+20"/>
+                        <item value="Target moving" target="+5"/>
+                        <item value="Target moving fast" target="+10"/>
+                        <item value="Firer is moving" target="+10"/>
+                    </targetlist>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Missile Attacks</title>
+
+                <para>
+                    If a character declares an attack with a missile
+                    weapon, then they roll initiative as per melee combat,
+                    and act in standard initiative order. The are always
+                    considered to be using a normal stance (unless prone
+                    or unsteady). An aiming character is <e>Focused</e>.
+                </para>
+
+                <sect3>
+                    <title>Defending with a missile weapon</title>
+
+                    <para>
+                        One problem with missile weapons is that it is not
+                        possible to parry with them. If the weapon has an
+                        equivalent melee defence total, then use the defence
+                        total for that (i.e. a thrown dagger is treated as
+                        a melee dagger for defence), otherwise it
+                        is not possible to parry with a missile weapon.
+                        Instead, the character must perform a brawling
+                        defence (agility x brawl), with no modifier for
+                        the weapon being used.
+                    </para>
+
+                    <para>
+                        Once a thrown weapon has been thrown, any defence
+                        bonuses are lost.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Defending against missile attacks</title>
+
+                    <para>
+                        Missile attacks can be dodged, but not parried
+                        unless the defender has a shield, in which case
+                        they get the defence bonus of the shield, but not
+                        of any other weapon they are using.
+                    </para>
+
+                    <para>
+                        The main issue with defending against missile
+                        attacks is that the defender must be aware that
+                        they are being made. If a character is in the
+                        middle of a melee, then an awareness roll may be
+                        required to notice an archer taking aim.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Firing into melee</title>
+
+                    <para>
+                        Firing into a melee combat is rarely a good idea,
+                        but sometimes it is done anyway. If the target of
+                        a missile attack is in close combat with anyone
+                        else, then the fumble chance of the attack is
+                        increased by two for each extra person. Firing
+                        into a melee involving six people, would give a +10
+                        to the fumble chance, meaning the attacker has a
+                        chance of hitting the wrong target if the d20 rolls
+                        less than 12.
+                    </para>
+
+                    <para>
+                        The chance of fumbling can be modified if the
+                        target is much larger or smaller than the
+                        obstructions. This is left for the GM to
+                        decide, but if two humans are fighting a 20m
+                        long dragon, then it is suggested that no
+                        penalty is applied.
+                    </para>
+
+                    <para>
+                        A fumble in this situation means that a random
+                        target is hit. It is possible to hit the 'right'
+                        random target. Chance of hitting each target
+                        should be based on size, and ideally distance from
+                        the intended target. In reality, just assigning
+                        equal chance to everyone is good enough.
+                    </para>
+
+                    <para>
+                        If someone is wrestling with the intended target,
+                        add +5 to +15 to the fumble chance, depending on
+                        how bad a shot it is. In all cases, a luck point
+                        can be spent before hand to negate, or at
+                        least reduce, the chance of hitting a friend.
+                    </para>
+                </sect3>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Environment</title>
+
+            <para>
+                The environment can affect how a combat is fought.
+            </para>
+
+            <sect2>
+                <title>Darkness</title>
+
+                <para>
+                    Darkness covers any situation where one combatant cannot
+                    see another, due to lack of light, blindness, fog, smoke
+                    and the like.
+                </para>
+
+                <para>
+                    In these situations, a character has to use senses other
+                    than sight, and their ability to do this is based on
+                    <e>Perception</e>. When under the effects of darkness,
+                    the <e>Agility</e> and <e>Dexterity</e> of the character
+                    are capped to their modified <e>Perception</e>. The
+                    modifier depends on the degree of darkness.
+                </para>
+
+                <targetlist targetFirst="false" bold="true">
+                    <targetLabel>Penalty</targetLabel>
+                    <valueLabel>Darkness</valueLabel>
+
+                    <item target="-1" value="Dim.">
+                        Twilight or other poor lighting conditions.
+                    </item>
+                    <item target="-2" value="Dark.">
+                        Night, with full moon and clear sky.
+                    </item>
+                    <item target="-3" value="Very dark.">
+                        Night, just with starlight.
+                    </item>
+                    <item target="-4" value="Pitch black.">
+                        No light at all, underground or in a closed room.
+                    </item>
+                </targetlist>
+
+                <para>
+                    A character with <e>night vision</e> has +1 to
+                    Perception for all levels of darkness other than pitch
+                    black (though this only applies if it is dark, not in
+                    fog or smoke). <e>Situational awareness</e>, and edges
+                    which give bonuses to hearing also affect perception
+                    for the purpose of this, even in pitch black conditions.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Unstable ground</title>
+
+                <para>
+                    If the ground is unstable (on a ship, or swaying bridge)
+                    or broken (loose rocks, cracks) then the <e>Agility</e>
+                    and <e>Dexterity</e> of the character is capped to a
+                    modified <e>Agility</e>.
+                </para>
+
+                <targetlist targetFirst="false" bold="true">
+                    <targetLabel>Penalty</targetLabel>
+                    <valueLabel>Condition</valueLabel>
+
+                    <item target="-0" value="Swaying floor.">
+                        If the floor is swaying in a strong, but
+                        predictable fashion (boat at sea, a rope bridge).
+                    </item>
+                    <item target="-1" value="Unstable floor.">
+                        On a boat in rough seas, or an unpredictable
+                        rope bridge.
+                    </item>
+                    <item target="-2" value="Very unstable.">
+                        On a boat in a storm, a rope bridge in high winds.
+                    </item>
+                    <item target="-1" value="Loose ground.">
+                        Fighting on loose rocks.
+                    </item>
+                </targetlist>
+
+                <para>
+                    If the character is <e>sure footed</e>, then they get
+                    a +1 bonus to their <e>Agility</e> before the cap.
+                    The technique <e>Sea fighting</e> applies if fighting
+                    on a boat.
+                </para>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Advanced Combat</title>
+
+            <sect2>
+                <title>Special Actions</title>
+
+                <sect3>
+                    <title>Retreating defence</title>
+
+                    <para>
+                        If a character is willing to give ground, then
+                        they can gain a bonus to their defence if they
+                        are using the <e>defensive stance</e>. They
+                        can move backwards (away from their attacker)
+                        up to a number of metres equal to their agility.
+                        Each metre gives +3 to their defence roll,
+                        however they may not make any attacks.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Acrobatic stunts</title>
+
+                    <para>
+                        A character can attempt an acrobatic stunt in
+                        order to surprise their foe and gain an advantage.
+                        A stunt may be as simple as leaping straight at
+                        their foe, or as complex as jumping over a
+                        bannister and onto a rope, then striking as they
+                        swing back.
+                    </para>
+
+                    <para>
+                        The base difficulty of the action depends on how
+                        tactically appropriate it is. Leaping onto someone
+                        from above is appropriate for example. The check is
+                        made with
+                        <y:skeq>
+                            <y:attr>agility</y:attr>
+                            <y:sk>athletics</y:sk>
+                            <die/>
+                        </y:skeq>
+                    </para>
+
+                    <targetlist targetFirst="false" bold="true">
+                        <targetLabel>Target</targetLabel>
+                        <valueLabel>Type of stunt</valueLabel>
+
+                        <item target="10" value="Appropriate.">
+                            Action would give tactical advantage.
+                        </item>
+
+                        <item target="20" value="Neutral.">
+                            Probably no real tactical advantage.
+                        </item>
+
+                        <item target="30" value="Silly.">
+                            Not a tactically sound move.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        If the stunt is particularly difficult, then add
+                        another +10 or +20 to the base difficulty.
+                    </para>
+
+                    <para>
+                        The character then attempts the stunt, and if
+                        they succeed they get +5 to their attack, plus a
+                        further +5 for each extra level of success.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Wrestling and brawling</title>
+
+                <para>
+                    Wrestling and brawling covers any unarmed hand to hand
+                    combat which is more complex than simply hitting the
+                    other guy. Since all such attacks generally require
+                    getting in very close to the target, they generate a
+                    <e>free strike</e> against the attacker.
+                </para>
+
+                <para>
+                    The attacker generally uses an agility based brawl
+                    attack, against the defender's brawl defence. If the
+                    defender has weapons, then they may defend with their
+                    weapons except that they use their <e>brawl</e> skill
+                    rather than normal weapon skill. Also, every point of
+                    reach of their weapon gives them a -5 penalty.
+                </para>
+
+                <para>
+                    If the initial attack succeeds, then the attacker can
+                    proceed to perform the action they are attempting
+                    (grapple, trip, overrun etc). Each extra level of
+                    success on the initial attack gives a +5 bonus to
+                    the next roll.
+                </para>
+
+                <sect3>
+                    <title>Grapple</title>
+
+                    <para>
+                        A grapple attempt involves one or both
+                        combatents trying to grab and hold the other.
+                        The defender can choose to either break free
+                        or grapple back. In either case, both make a
+                        contested brawl check, using either strength or
+                        agility (normally whichever is highest).
+                    </para>
+
+                    <para>
+                        If the defender wins, and they were trying to
+                        break free, then the attempt stops there,
+                        otherwise the winner is assumed to have grabbed
+                        and held the other, giving them a -1 to agility,
+                        dexterity and strength for further skill checks
+                        plus a further -1 for each level of success.
+                    </para>
+
+                    <para>
+                        As an action, a character can try to break free,
+                        by making a similar contested brawl check.
+                        Obviously, the looser of the last check is at
+                        a penalty.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Trip</title>
+
+                    <para>
+                        A <e>trip</e> is an attempt to trip, throw or knock
+                        a defender to the floor. After a successful brawl
+                        attack, the attacker makes a strength based brawl
+                        check to trip the defender. The defender rolls
+                        <y:skeq>
+                            <y:attr>strength</y:attr>
+                            <y:attr>agility</y:attr>
+                            <y:sk>brawl</y:sk>
+                            <y:sk>athletics</y:sk>
+                            <y:die/>
+                        </y:skeq>
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Overrun</title>
+
+                    <para>
+                        An overrun is an attempt by an attacker to move
+                        through a defender, either by forcing them out the
+                        way or by knocking them over. An attempt at an
+                        overrun counts as not using a weapon, so may
+                        generate a <e>free strike</e> unless the attacker
+                        has a medium or larger shield.
+                    </para>
+
+                    <para>
+                        The attacker makes a strength based brawling attack
+                        against the defender's defence strength or agility
+                        based
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Mounted combat</title>
+
+                <para>
+                    Fighting from horse back can be tricky, but for a
+                    skilled rider it can be a big advantage. Warriors who
+                    wish to fight from horseback should look at the
+                    <e>mounted combat</e> and <e>mounted archery</e>
+                    techniques, since these mitigate most of the problems.
+                </para>
+
+                <para>
+                    If a character wishes to make a melee attack from the
+                    back of a mount, then they must make a agility riding
+                    check at difficulty 15. One roll is required each round
+                    that the character has declared any attacks or
+                    defenses.
+                </para>
+
+                <para>
+                    Failure of the riding roll means that the character
+                    becomes unstable and looses their attack. A second roll
+                    at the same difficulty to remain on the horse. If the
+                    rider is not using saddle and stirrups, then both
+                    difficulties are increased by 5.
+                </para>
+
+                <para>
+                    The character's ride skill adds to attack rolls made
+                    from horseback, against either infantry or other
+                    mounted opponents. Characters with the <e>mounted
+                    combat</e> technique add this bonus to <e>all</e>
+                    their combat rolls (initiative, attack, defence and
+                    damage), as well as not needing to make ride rolls
+                    each round.
+                </para>
+
+                <sect3>
+                    <title>Archery from Horseback</title>
+
+                    <para>
+                        As for melee combat, and missile combat requires a
+                        riding roll if firing from horseback. All penalties
+                        due to range are also doubled.
+                    </para>
+
+                    <para>
+                        Missile combat however suffers no penalty if the
+                        horse is stationary. No roll is required to stay
+                        mounted, and range penalties are not doubled.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Mounted charge</title>
+
+                    <para>
+                        A <e>mounted charge</e> is a special kind of attack
+                        that uses a lance from horseback, and can only be
+                        used after at least a full round of charging. This
+                        can only be done from a trained warhorse.
+                    </para>
+
+                    <para>
+                        On a successful mounted attack, damage is done with
+                        a bonus equal to the strength of the mount (on top
+                        of any bonuses due to the <e>ride</e> skill).
+                        Furthermore, for each wound dealt, a stun is dealt
+                        as well from the shock of the attack.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Overbear</title>
+
+                    <para>
+                        A warhorse can be made to attack an opponent,
+                        knocking them back or to the ground.
+                    </para>
+                </sect3>
+            </sect2>
+        </sect1>
+    </body>
+</article>
+
+

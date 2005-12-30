@@ -1,0 +1,1187 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <header>
+        <title>Combat (Melee)</title>
+        <tagline>Yags</tagline>
+
+        <summary>
+            Basic combat rules, mostly for fantasy/historical combat.
+            Includes both melee and missile combat, as well as basic
+            movement, damage and armour rules.
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2005-12-30 23:19:56 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2004</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+        </license>
+
+        <style name="combat"/>
+    </header>
+
+    <body>
+        <sect1>
+            <sect2>
+                <title>Weapons</title>
+
+                <para>
+                    Each weapon has a number of properties which
+                    represents how effective it is. These give a bonus
+                    to a character's skill checks in combat. All
+                    bonuses are zero or positive - no weapon gives a
+                    negative adjustment to combat actions.
+                </para>
+
+                <para>
+                    Creatures which have natural attacks have their
+                    own combat modifiers, depending on the nature of
+                    their natural weapons. Generally, these are worse
+                    than those of man made weapons. Size, reach and
+                    sharpness all have a say in how effective natural
+                    weapons are for a given type of creature.
+                </para>
+
+                <sect3>
+                    <title>Weapon attributes</title>
+
+                    <para>
+                        The following apply to all weapons.
+                    </para>
+
+                    <itemlist order="strict">
+                        <item name="Attack">
+                            This provides a bonus to hit the target. It is
+                            a measure of accuracy and also weight and
+                            reach.
+                        </item>
+
+                        <item name="Defence">
+                            This adds to the character's defence roll. It
+                            represents parrying, but also how good the
+                            weapon is at keeping the enemy away from the
+                            user.
+                        </item>
+
+                        <item name="Damage">
+                            The weapon's damage modifier adds to the damage
+                            done by the attacker. This property also
+                            includes the type of damage done - either stun,
+                            mixed or wounds.
+                        </item>
+
+                        <item name="Load">
+                            The load of a weapon represents how heavy it
+                            is to wield. A weapon that is being used adds
+                            its load to the character's current load.
+                        </item>
+
+                        <item name="Reach">
+                            The reach of the weapon is how far forward it can
+                            be effectively used. Reach gives an advantage
+                            against shorter weapons, though can be a
+                            disadvantage in confined spaces.
+                        </item>
+
+                        <item name="Strength">
+                            The minimum strength needed to use a weapon. A
+                            weapon being used two handed adds 50% (round up)
+                            to the user's effective strength for this. If
+                            the user's strength is one point below that
+                            required, there is a -5 penalty to
+                            attack and defence. Two points below, this
+                            penalty is -15. Weaker characters cannot use the
+                            weapon at all.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+                <sect3>
+                    <title>Special properties</title>
+
+                    <para>
+                        Some weapons have special properties which affect
+                        how it is used, or how effective it is in a given
+                        situation. By default, a weapon will have none of
+                        the following properties.
+                    </para>
+
+                    <itemlist order="sort">
+                        <item name="Light">
+                            Light weapons aren't very effective at getting
+                            through armour. Against heavy armour, they do
+                            damage of one worse type (i.e. wounds become
+                            mixed, mixed becomes stuns, stuns become
+                            ineffective).
+                        </item>
+
+                        <item name="Heavy">
+                            A heavy weapon is good at getting through
+                            armour relative to its size. Against light
+                            armour, heavy weapons use the 'half armour'
+                            column for figuring the soak of the target.
+                        </item>
+
+                        <item name="Impaling">
+                            Impaling weapons are good at getting through
+                            some types of armour such as mail and cloth.
+                            Against impaling weapons, such armour only
+                            gives half protection.
+                        </item>
+
+                        <item name="Crushing">
+                            Crushing weapons are good at causing knockback,
+                            and get a +5 bonus to damage for purposes of
+                            knockback. This increases the chance of causing
+                            stun damage, even if the attack didn't get
+                            through the target's armour.
+                        </item>
+
+                        <item name="Two handed">
+                            The weapon is designed to be used two handed,
+                            and can be used with the <e>great weapons</e>
+                            fighting style.
+                        </item>
+
+                        <item name="Throwable">
+                            The weapon is designed to be thrown as a missile
+                            weapon. Though any melee weapon can be thrown,
+                            throwable weapons have better ranges.
+                        </item>
+
+                        <item name="Thrusting">
+                            A thrusting weapon, when used two handed,
+                            counts as impaling.
+                        </item>
+
+                        <item name="Defensive">
+                            A defensive weapon is particularly good at
+                            keeping attackers at bay when using the
+                            Longshaft weapon style.
+                            When used in a defensive stance, they only
+                            suffer a -5 to attack, rather than -10.
+                        </item>
+
+                        <item name="Blocking">
+                            A blocking weapon can be used as a shield. When
+                            used as a shield (using the weapon and shield
+                            style), weapon attributes are not
+                            halved as they would be if the weapon was simply
+                            treated as a second weapon. The weapon's damage
+                            bonus is ignored however.
+                        </item>
+
+                        <item name="Weak">
+                            The weapon is poorly made and is more likely to
+                            break.
+                        </item>
+
+                        <item name="Strong">
+                            The weapon is well made, and less likely to
+                            break compared to similar weapons.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+                <sect3>
+                    <title>Reach</title>
+
+                    <para>
+                        The <e>Reach</e> of a weapon is a measure of its
+                        length and effectiveness at engaging targets at a
+                        distance. Spears are the best reach weapons, knives
+                        and daggers are amongst the worst.
+                    </para>
+
+                    <para>
+                        Long weapons are best in open spaces, especially
+                        when used in massed ranks. In a narrow corrider,
+                        they can actually be a hindrance to the user.
+                        Examples of various weapon reaches is given in the
+                        table below.
+                    </para>
+
+                    <targetlist targetFirst="true">
+                        <targetLabel>Reach</targetLabel>
+                        <valueLabel>Examples</valueLabel>
+
+                        <item target="Close (0)">
+                            Fist, knife, dagger.
+                        </item>
+
+                        <item target="Short (1)">
+                            Short sword, club, hand axe, shield, mace.
+                        </item>
+
+                        <item target="Medium (2)">
+                            Broad sword, battle axe, javelin.
+                        </item>
+
+                        <item target="Long (3)">
+                            Long sword, broad axe, spear,
+                            great sword, quarterstaff.
+                        </item>
+
+                        <item target="Very long (4)">
+                            Long spear.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        <e>Close</e> weapons can be used in pretty much
+                        any circumstance without penalty, including when
+                        grappled with someone. Longer weapons require a
+                        greater amount of space, and may suffer a penalty
+                        if used in confined conditions.
+                    </para>
+
+                    <para>
+                        If a defender is using a weapon with a longer reach
+                        than the attacker, then the following applies.
+                    </para>
+
+                    <itemlist order="1">
+                        <item>
+                            A good defence gives the defender a free strike
+                            against the attacker unless the attacker is
+                            using the defensive stance.
+                        </item>
+
+                        <item>
+                            If the attacker succeeds in their attack, then
+                            they can close to within the reach of the
+                            defender's weapon unless they are using the
+                            defensive stance. This lasts until the defender
+                            makes a successful attack.
+                        </item>
+                    </itemlist>
+
+                    <para>
+                        A weapon that is too long for the situation, or
+                        which is being used against a foe that has closed
+                        to within the weapon's reach, gives a -5 to attack
+                        rolls for each excess level of reach.
+                    </para>
+
+                    <sect4>
+                        <title>Reach in a Charge</title>
+
+                        <para>
+                            In a charge attack, the longest weapon always
+                            strikes first. The person with the longest reach
+                            weapon gets a <e>free strike</e> against the
+                            opponent before the main attack. However, though
+                            this always applies to the attacker, the
+                            defender must be prepared to receive the charge
+                            in order to receive this bonus, if it applies
+                            to them.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Ranked Fighting</title>
+
+                        <para>
+                            If a group of warriors are fighting in two or
+                            more ranks, than it is possible for people in
+                            the second rank to attack through the first
+                            rank against the enemy if they have thrusting
+                            weapons with sufficient reach.
+                        </para>
+
+                        <para>
+                            If the second rank has weapons at least two
+                            reach greater than the target, then the target
+                            can be attacked. All such attacks are
+                            <e>slow</e>, and count as being an attack by
+                            the first rank (i.e. if the target is being
+                            attacked by two ranks, it only uses one defence
+                            slot). The second rank can only use the
+                            normal stance.
+                        </para>
+                    </sect4>
+
+                </sect3>
+
+                <sect3>
+                    <title>Weapon statistics</title>
+
+                    <para>
+                        There are a variety of different weapons, all with
+                        their own advantages and disadvantages. The table
+                        lists the most common weapons, together with the
+                        statistics which are required in combat.
+                    </para>
+
+                    <y:import-weaponlist href="xml/equipment.yags"
+                                       importance="3"
+                                       style="list">
+                        <y:category>Axes</y:category>
+                        <y:category>Bows</y:category>
+                        <y:category>Clubs</y:category>
+                        <y:category>Knives</y:category>
+                        <y:category>Shields</y:category>
+                        <y:category>Spears</y:category>
+                        <y:category>Swords</y:category>
+                    </y:import-weaponlist>
+
+                    <para>
+                        The three ability modifiers - attack,
+                        defence and damage add to the base ability for a
+                        character when they are using that weapon.
+                    </para>
+                </sect3>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Melee Combat</title>
+
+            <para>
+                Strictly speaking, melee combat involves two or more
+                characters fighting each other close up with melee
+                weapons. The rules for melee combat form the basis
+                of other forms of combat as well (such as ranged
+                combat), so the basic rules of combat are
+                described here.
+            </para>
+
+            <sect2>
+                <title>Initiating Combat</title>
+
+                <para>
+                    When a combat begins, actions and time are
+                    sorted into <e>rounds</e>, each being about five
+                    seconds long. A character can move and perform
+                    one <e>action</e> each round. They may also make
+                    a number of defences.
+                </para>
+
+                <para>
+                    The first thing that occurs is that <e>initiative</e>
+                    is determined. Initiative is rolled once at the start
+                    of the combat, and determines the order in which
+                    characters declare actions and act in each round.
+                </para>
+
+                <y:skeq>
+                    <y:title>Determining Initiative</y:title>
+                    <y:attr>agility</y:attr>
+                    <y:const>4</y:const>
+                    <y:die/>
+                </y:skeq>
+
+                <para>
+                    On a fumble (a natural one), the character cannot
+                    take an action (though may defend) during the first
+                    round, but otherwise acts as normal.
+                </para>
+
+                <para>
+                    In the case of a tie between two or more characters,
+                    compare perception, then intelligence. If it's still a
+                    tie, then roll for it.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>The Combat Round</title>
+
+                <para>
+                    All combat is divided into rounds, and each round is
+                    broken into a number of different steps. Various book
+                    keeping activities happen at the end of each round.
+                    The sequence of events in each round is as follows.
+                </para>
+
+                <itemlist order="1">
+                    <item>
+                        Characters declare actions, including movement,
+                        attacks and defences, in order of increasing
+                        initiative.
+                    </item>
+                    <item>
+                        Perform all fast actions in decreasing
+                        order of initiative.
+                    </item>
+                    <item>
+                        Perform all normal actions in decreasing
+                        order of initiative.
+                    </item>
+                    <item>
+                        Perform all slow actions in decreasing order
+                        of initiative.
+                    </item>
+                    <item>
+                        End of round book keeping, including making rolls to
+                        remain conscious and alive (if necessary) and any
+                        required morale checks.
+                    </item>
+                </itemlist>
+
+                <sect3>
+                    <title>Declaring Actions</title>
+
+                    <para>
+                        At the start of each round, all combatants declare
+                        their actionsin order of increasing initiative.
+                        This means that characters with a high initiative
+                        get to see what lower initiative people are doing
+                        before they get to act.
+                    </para>
+
+                    <para>
+                        If a character is performing an attack, then stance
+                        and techniques should be declared at this point. A
+                        character should also declare how many defences
+                        they are making this round, though they don't need
+                        to declare who the defences will be made against.
+                    </para>
+
+                    <sect4>
+                        <title>Stance</title>
+
+                        <para>
+                            A character's stance is considered to be
+                            <e>normal</e> unless stated otherwise. Stance
+                            determines what actions and techniques are
+                            possible. Sometimes, stance is determined
+                            before hand due to circumstances - a
+                            character who has been knocked to the floor
+                            is considered to be <e>prone</e>, regardless
+                            of what they wish to do themselves.
+                        </para>
+
+                        <sect5>
+                            <title>Aggressive</title>
+
+                            <para>
+                                An aggressive stance risks leaving the
+                                character open to attack, but has the
+                                benefit of better offense. All attacks are
+                                <e>fast</e>, and attack and damage rolls
+                                are at +5, however defence is at -10.
+                            </para>
+                        </sect5>
+
+                        <sect5>
+                            <title>Defensive</title>
+
+                            <para>
+                                A defensive stance values defense over
+                                offense. Defence rolls are at +5, however
+                                attack rolls are at -10, and actions are
+                                considered to be slow. Character also adds
+                                one to the maximum number of defences they
+                                can make that round.
+                            </para>
+                        </sect5>
+
+                        <sect5>
+                            <title>Prone</title>
+
+                            <para>
+                                All actions of a <e>prone</e> character are
+                                considered to be <e>slow</e>. Attack and
+                                defence rolls whilst prone are at -10. The
+                                character can move up to 3m a round.
+                            </para>
+
+                            <para>
+                                A prone character can use their action to
+                                get to stand up.
+                            </para>
+                        </sect5>
+
+                        <sect5>
+                            <title>Focused</title>
+
+                            <para>
+                                A focused character is performing some
+                                action that requires their full attention,
+                                and they may not make any defence rolls.
+                            </para>
+                        </sect5>
+
+                        <sect5>
+                            <title>Grappled</title>
+
+                            <para>
+                                A <e>grappled person</e> is holding, or
+                                being held by, another person. Neither can
+                                defend against attacks made by others, nor
+                                can they attack anyone other than the person
+                                they are grappling. All combat rolls are
+                                made using the <e>brawl</e> skill. If a
+                                weapon is being used, then all rolls for
+                                that weapon are made at -5 per point of
+                                reach of the weapon. Shields cannot be used.
+                            </para>
+                        </sect5>
+                    </sect4>
+
+                    <sect4>
+                        <title>Declaring Attacks</title>
+
+                        <para>
+                            When an attack is declared, the target of the
+                            attack, the stance and any techniques must
+                            be decided. There is a limit to how many
+                            attackers may attack the same opponent. Against
+                            human sized defenders, no more than six
+                            attackers declare an attack against them in
+                            any one round.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Declaring Defenses</title>
+
+                        <para>
+                            A character may defend against any number
+                            of opponents, though there are penalties
+                            if more than one defence is performed.
+                            Each declared defence will defend against
+                            any number of attacks from a single attacker.
+                            Only the number of defences need to be
+                            declared at this point.
+                        </para>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Perform Actions</title>
+
+                    <para>
+                        Actions are performed in decreasing order of
+                        initiative, though are split into three phases -
+                        all fast actions, all normal actions and finally
+                        all slow actions.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>End of Round</title>
+
+                    <para>
+                        At the end of each round, any general
+                        book keeping can be performed. If stamina rolls
+                        are needed to remain conscious, then they are
+                        made now.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Making an Attack</title>
+
+                <para>
+                    If a character chooses to make an attack on someone,
+                    then the target can choose either to defend
+                    themselves or not. A character is limited to the
+                    number of attackers they can defend against in a
+                    round (the number is declared at the start of the
+                    round), so there can be a reason to save a defence
+                    for a more potent foe.
+                </para>
+
+                <para>
+                    Unless the target is unaware of the attack (or
+                    unable to respond in any meaningful way, such as
+                    being tied up or using the <e>focused</e> stance),
+                    the attacker must declare a defence against the
+                    target. Failing to do so means that the target may
+                    get a <e>free strike</e> against the attacker
+                    immediately following the attack, assuming that the
+                    target is still standing.
+                </para>
+
+                <para>
+                    This defence declaration must be
+                    made before the attack, and cannot be left until
+                    afterwards when the free strike is made (making
+                    the free strike effectively an automatic strike in
+                    most cases).
+                </para>
+
+                <para>
+                    The attacker makes an attack roll, using their
+                    attack rating as follows.
+                </para>
+
+                <y:skeq>
+                    <y:title>Attack roll</y:title>
+                    <y:attr>attribute</y:attr>
+                    <y:sk>skill</y:sk>
+                    <y:bonus>weapon attack bonus</y:bonus>
+                    <y:die/>
+                </y:skeq>
+
+                <para>
+                    If the defender is not defending, then the target
+                    difficulty is 15 (assuming a medium sized target).
+                    If the defender is defending, then they make a
+                    defence roll.
+                </para>
+
+                <y:skeq>
+                    <y:title>Defence roll</y:title>
+                    <y:attr>attribute</y:attr>
+                    <y:sk>skill</y:sk>
+                    <y:bonus>weapon defence bonus</y:bonus>
+                    <y:die/>
+                </y:skeq>
+
+                <para>
+                    If the attack roll is equal to or greater than the
+                    defense roll, then the attack was a success.
+                </para>
+
+                <sect3>
+                    <title>Fumbles</title>
+
+                    <para>
+                        A fumble will normally occur on a roll of a '1'.
+                        When a fumble occurs, there are a number of
+                        possible results. Which result happens is chosen
+                        by the character who fumbled unless their
+                        opponent has a <e>higher</e> skill score, in
+                        which case their opponent chooses.
+                    </para>
+
+                    <para>
+                        Only attack and defence rolls fumble - damage
+                        and soak rolls do not.
+                    </para>
+
+                    <sect4>
+                        <title>Fumbling an attack</title>
+
+                        <para>
+                            A fumbled attack roll is an automatic miss,
+                            and doesn't <e>require</e> a defence from the
+                            defender (so the defender can't fumble, and
+                            doesn't need to use a defence slot). The
+                            defender may optionally still defend however
+                            (they may have a special ability they want to
+                            use which requires a defence).
+                        </para>
+
+                        <itemlist order="unordered">
+                            <item>
+                                Attacker gains a point of fatigue.
+                            </item>
+
+                            <item>
+                                Attacker looses weapon (disarmed).
+                            </item>
+
+                            <item>
+                                Attacker's primary weapon breaks, but
+                                only if it is weak.
+                            </item>
+                        </itemlist>
+                    </sect4>
+
+                    <sect4>
+                        <title>Fumbling a defence</title>
+
+                        <para>
+                            A fumbled defence roll does not mean an
+                            automatic hit for the attacker, unless this
+                            option is chosen.
+                        </para>
+
+                        <itemlist order="unordered">
+                            <item>
+                                Defender gains a point of fatigue.
+                            </item>
+
+                            <item>
+                                Defender looses weapon (disarmed, choose
+                                which weapon if have multiple weapons).
+                            </item>
+
+                            <item>
+                                Defender's weapon breaks, but only if it
+                                is not strong.
+                            </item>
+
+                            <item>
+                                Fail defence, use base difficulty only.
+                            </item>
+                        </itemlist>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Multiple Opponents</title>
+
+                    <para>
+                        A defender who is having to defend against multiple
+                        opponents will be at a penalty to all their attack
+                        and defence rolls. Defence is per opponent, not per
+                        attack, so a single attacker making multiple
+                        attacks only counts as a single source of attack.
+                    </para>
+
+                    <para>
+                        A character is limited to defending against a
+                        maximum number of attackers a round, regardless of
+                        their skill. This is the average of their
+                        agility and perception (rounded up). Penalties to
+                        either agility or perception due to armour or
+                        darkness will modify this.
+                    </para>
+
+                    <targetlist>
+                        <valueLabel>Number of Opponents</valueLabel>
+                        <targetLabel>Penalty</targetLabel>
+
+                        <item value="1" target="-0"/>
+                        <item value="2" target="-10"/>
+                        <item value="3" target="-20"/>
+                        <item value="4" target="-40"/>
+                        <item value="5" target="-60"/>
+                        <item value="6" target="-80"/>
+                    </targetlist>
+
+                    <para>
+                        A character who is using the defensive stance
+                        increases their maximum by one. Other techniques
+                        may also add to this, and all such additions are
+                        cumulative, but the maximum is always six.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Movement</title>
+
+                <para>
+                    A character or creature may move as well as make an
+                    attack. They can move up to a number of metres equal to
+                    half their <e>Move</e> score without penalty. Combat
+                    movement such as this is limited to more or less a
+                    straight line.
+                </para>
+
+                <para>
+                    A character can move their full <e>Move</e> score in a
+                    round, but may only perform a normal attack which is
+                    automatically <e>slow</e>.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Other Actions</title>
+
+                <sect3>
+                    <title>Drawing a weapon</title>
+
+                    <para>
+                        A weapon may be drawn and used in the same round.
+                        Because everything is happening more or less
+                        simultaneously, a character <e>may</e> defend with
+                        a weapon they are drawing that round, even if
+                        their action hasn't come up yet.
+                    </para>
+
+                    <para>
+                        Drawing a weapon gives a penalty to all attack
+                        and defence rolls of -5 per reach of the weapon
+                        that round.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Putting a weapon away</title>
+
+                    <para>
+                        It is normally considered a full action to put a
+                        weapon away. Dropping a weapon is free however,
+                        so a weapon may be dropped, another one drawn
+                        and an attack made in the same round.
+                    </para>
+
+                    <para>
+                        One weapon may be put away, and a second drawn
+                        in a single round, though other actions cannot
+                        be taken that round.
+                    </para>
+
+                    <para>
+                        A character may attempt to put a weapon away at
+                        the end of a round (after their attack, and after
+                        all defences have been made) by making a
+                        <y:skeq>
+                            <y:attr>dexterity</y:attr>
+                            <y:sk>weapon skill</y:sk>
+                        </y:skeq>
+                        check against a difficulty of 15 + 5 * reach of
+                        the weapon.
+                    </para>
+                </sect3>
+            </sect2>
+        </sect1>
+
+
+
+        <sect1>
+            <title>Armour</title>
+
+            <para>
+                There are no hit locations, so the protection given by
+                armour is averaged over the whole body. Armour is
+                chosen in a piecemeal fashion, with the protective
+                bonus of each item being totalled.
+            </para>
+
+            <sect2>
+                <title>Properties of armour</title>
+
+                <para>
+                    As for weapons, different types of armour may have
+                    special properties. Unlike weapons, there are two
+                    properties which all armour types are one of - whether
+                    they are <e>heavy</e> or <e>light</e>.
+                </para>
+
+                <para>
+                    A whole suit of armour is considered to be either heavy
+                    or light, even if the suit consists of some heavy and
+                    some light components. By default, armour is light.
+                    If heavy armour covers either the torso and arms, or
+                    the torso and legs, then the whole suit of armour is
+                    considered heavy.
+                </para>
+
+                <itemlist order="sort">
+                    <item name="Heavy">
+                        Any light weapon will do damage of the next less
+                        effective type (e.g. wounds become mixed).
+                    </item>
+
+                    <item name="Light">
+                        All heavy weapons halve the total protective value
+                        of the armour.
+                    </item>
+
+                    <item name="Soft">
+                        The protection value of soft armour is doubled
+                        against stun and mixed attacks.
+                    </item>
+
+                    <item name="Mail">
+                        Impaling weapons halve the protective bonus of
+                        any mail armour.
+                    </item>
+
+                    <item name="Restrictive">
+                        The armour is difficult to move in, and reduces
+                        agility by the given value for combat (including
+                        initiative) and athletic actions.
+                    </item>
+
+                    <item name="Noisy">
+                        The armour is noisy, and reduces agility by the
+                        given value when the wearer is trying to be
+                        stealthy.
+                    </item>
+
+                    <item name="Vitals">
+                        The armour protects the vitals - this is generally
+                        limited to heavy armour which protects the torso
+                        and head. It provides the value given as a bonus to
+                        stamina checks to survive/remain conscious
+                        immediately after being hit.
+                    </item>
+                </itemlist>
+            </sect2>
+
+            <sect2>
+                <title>Choosing armour</title>
+
+                <para>
+                    A full set of armour can consist of several parts, and a
+                    character can mix and match according to preference and
+                    finances. Unless otherwise stated, armour cannot be
+                    layered - it is not possible to wear two chain hauberks
+                    at the same time.
+                </para>
+
+                <para>
+                    Each item of armour has a protection value, and a load.
+                    The total load and protection of all worn items is
+                    totalled to give the final value. So, a character
+                    wearing soft leather trousers (with a protection of 2)
+                    and a soft leather jacket (also 2), would have
+                    a total armour protection of 4.
+                </para>
+
+                <itemlist order="sort">
+                    <item name="Jacket">
+                        Covers the torso, arms and upper thighs.
+                    </item>
+
+                    <item name="Vest">
+                        Covers the torso and shoulders.
+                    </item>
+
+                    <item name="Trousers">
+                        Covers the legs and lower abdomen.
+                    </item>
+
+                    <item name="Helm">
+                        Protects the head.
+                    </item>
+
+                    <item name="Hauberk">
+                        A term used to describe a mail jacket that covers
+                        the torso, arms and legs down to the knees.
+                    </item>
+
+                    <item name="Coif">
+                        Covers the head, neck and shoulders. May be worn
+                        under a helm.
+                    </item>
+
+                    <item name="Greaves">
+                        Covers the legs. Values given are for a set of
+                        greaves, one for each leg.
+                    </item>
+
+                    <item name="Vambraces">
+                        Protects the arms. As for greaves, values given
+                        assume a complete set of vambraces. However, if
+                        vambraces are worn on only one arm, the full
+                        armour bonus is still gained as long as the other
+                        arm is fully protected by a shield.
+                    </item>
+                </itemlist>
+
+                <sect3>
+                    <title>Stacking Armour</title>
+
+                    <para>
+                        Normally, it is not possible to layer armour on top
+                        of other armour - if it is managed, only the highest
+                        protection value is applied. However, some types of
+                        armour are designed to layer, and in this case the
+                        protection values are added together.
+                    </para>
+
+                    <para>
+                        Soft leather armour can be worn underneath chain or
+                        plate armour. Plate armour such as greaves, vambraces
+                        and breastplates can be worn over chain armour. It
+                        is possible to wear plate over chain over leather.
+                    </para>
+
+                    <para>
+                        The other layering combination is that a helm can
+                        be worn over a chain mail coif.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Armour statistics</title>
+
+                <para>
+                    The total protection of all armour worn adds to the soak
+                    of the wearer. Likewise, the load of each piece of
+                    armour adds to the load carried by the character.
+                </para>
+
+                <para>
+                    A description of the common armour types is given below.
+                </para>
+
+                <y:import-armourlist href="xml/equipment.yags"/>
+            </sect2>
+        </sect1>
+
+
+
+
+        <sect1>
+            <title>Advanced Combat</title>
+
+            <sect2>
+                <title>Special Actions</title>
+
+                <sect3>
+                    <title>Retreating defence</title>
+
+                    <para>
+                        If a character is willing to give ground, then
+                        they can gain a bonus to their defence if they
+                        are using the <e>defensive stance</e>. They
+                        can move backwards (away from their attacker)
+                        up to a number of metres equal to their agility.
+                        Each metre gives +3 to their defence roll,
+                        however they may not make any attacks.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Acrobatic stunts</title>
+
+                    <para>
+                        A character can attempt an acrobatic stunt in
+                        order to surprise their foe and gain an advantage.
+                        A stunt may be as simple as leaping straight at
+                        their foe, or as complex as jumping over a
+                        bannister and onto a rope, then striking as they
+                        swing back.
+                    </para>
+
+                    <para>
+                        The base difficulty of the action depends on how
+                        tactically appropriate it is. Leaping onto someone
+                        from above is appropriate for example. The check is
+                        made with
+                        <y:skeq>
+                            <y:attr>agility</y:attr>
+                            <y:sk>athletics</y:sk>
+                            <die/>
+                        </y:skeq>
+                    </para>
+
+                    <targetlist targetFirst="false" bold="true">
+                        <targetLabel>Target</targetLabel>
+                        <valueLabel>Type of stunt</valueLabel>
+
+                        <item target="10" value="Appropriate.">
+                            Action would give tactical advantage.
+                        </item>
+
+                        <item target="20" value="Neutral.">
+                            Probably no real tactical advantage.
+                        </item>
+
+                        <item target="30" value="Silly.">
+                            Not a tactically sound move.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        If the stunt is particularly difficult, then add
+                        another +10 or +20 to the base difficulty.
+                    </para>
+
+                    <para>
+                        The character then attempts the stunt, and if
+                        they succeed they get +5 to their attack, plus a
+                        further +5 for each extra level of success.
+                    </para>
+                </sect3>
+            </sect2>
+
+
+            <sect2>
+                <title>Mounted combat</title>
+
+                <para>
+                    Fighting from horse back can be tricky, but for a
+                    skilled rider it can be a big advantage. Warriors who
+                    wish to fight from horseback should look at the
+                    <e>mounted combat</e> and <e>mounted archery</e>
+                    techniques, since these mitigate most of the problems.
+                </para>
+
+                <para>
+                    If a character wishes to make a melee attack from the
+                    back of a mount, then they must make a agility riding
+                    check at difficulty 15. One roll is required each round
+                    that the character has declared any attacks or
+                    defenses.
+                </para>
+
+                <para>
+                    Failure of the riding roll means that the character
+                    becomes unstable and looses their attack. A second roll
+                    at the same difficulty to remain on the horse. If the
+                    rider is not using saddle and stirrups, then both
+                    difficulties are increased by 5.
+                </para>
+
+                <para>
+                    The character's ride skill adds to attack rolls made
+                    from horseback, against either infantry or other
+                    mounted opponents. Characters with the <e>mounted
+                    combat</e> technique add this bonus to <e>all</e>
+                    their combat rolls (initiative, attack, defence and
+                    damage), as well as not needing to make ride rolls
+                    each round.
+                </para>
+
+                <sect3>
+                    <title>Archery from Horseback</title>
+
+                    <para>
+                        As for melee combat, and missile combat requires a
+                        riding roll if firing from horseback. All penalties
+                        due to range are also doubled.
+                    </para>
+
+                    <para>
+                        Missile combat however suffers no penalty if the
+                        horse is stationary. No roll is required to stay
+                        mounted, and range penalties are not doubled.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Mounted charge</title>
+
+                    <para>
+                        A <e>mounted charge</e> is a special kind of attack
+                        that uses a lance from horseback, and can only be
+                        used after at least a full round of charging. This
+                        can only be done from a trained warhorse.
+                    </para>
+
+                    <para>
+                        On a successful mounted attack, damage is done with
+                        a bonus equal to the strength of the mount (on top
+                        of any bonuses due to the <e>ride</e> skill).
+                        Furthermore, for each wound dealt, a stun is dealt
+                        as well from the shock of the attack.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Overbear</title>
+
+                    <para>
+                        A warhorse can be made to attack an opponent,
+                        knocking them back or to the ground.
+                    </para>
+                </sect3>
+            </sect2>
+        </sect1>
+    </body>
+</article>
+
+
