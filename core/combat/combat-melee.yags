@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2006-01-01 13:02:59 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2006-01-02 11:27:58 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -40,8 +40,8 @@
     </header>
 
     <body>
-        <sect1>
-            <title>Advanced Melee Combat</title>
+        <sect1 id="melee">
+            <title>Melee Combat</title>
 
             <para>
                 The basic rules for combat describe a simple and fast
@@ -64,15 +64,27 @@
                 </para>
 
                 <para>
-                    Any style may be used with any combination of weapons.
-                    However, if the weapon combination is not applicable all
-                    combat bonuses of the weapon are halved. Further, all
-                    attacks are slow, and all attack and defence rolls
-                    fumble on a 1-2 rather than a 1 (unless brawl is being
-                    used, in which case only fumble on a 1). No techniques
-                    can be used. An aggressive stance will enable the
-                    character to act with normal (not fast) initiative.
+                    If a weapon combination is used with the wrong style
+                    (such as just a sword with the <e>weapon and shield</e>
+                    style, or a greatsword with the <e>single weapon</e>
+                    style), then the following penalties apply.
                 </para>
+
+                <itemlist order="1">
+                    <item>
+                        All attacks are slow, regardless of stance used.
+                    </item>
+
+                    <item>
+                        No techniques may be used (even ones which apply to
+                        any melee skill).
+                    </item>
+
+                    <item>
+                        Unless the brawl skill is being used, attack and
+                        defence rolls fumble on a 1-2 instead of a 1.
+                    </item>
+                </itemlist>
 
                 <sect3>
                     <title>Brawling</title>
@@ -268,13 +280,19 @@
                             When using either the aggressive or defensive
                             stances, the bonus is +10 instead of +5.
                         </item>
+
+                        <item>
+                            If an attacker has a weapon with shorter reach
+                            than your chain weapon, he fumbles on a 1-2
+                            when making attack rolls.
+                        </item>
                     </itemlist>
                 </sect3>
 
             </sect2>
 
             <sect2>
-                <title>Weapons</title>
+                <title>Advanced Weapons</title>
 
                 <para>
                     Each weapon has a number of properties which
@@ -535,7 +553,7 @@
                         statistics which are required in combat.
                     </para>
 
-                    <y:import-weaponlist href="../xml/equipment.yags"
+                    <y:import-weaponlist href="xml/equipment.yags"
                                        importance="3"
                                        style="list">
                         <y:category>Axes</y:category>
@@ -556,7 +574,7 @@
             </sect2>
 
             <sect2>
-                <title>Armour</title>
+                <title>Advanced Armour</title>
 
                 <para>
                     There are no hit locations, so the protection given by
@@ -726,7 +744,7 @@
                         A description of the common armour types is given below.
                     </para>
 
-                    <y:import-armourlist href="../xml/equipment.yags"/>
+                    <y:import-armourlist href="xml/equipment.yags"/>
                 </sect3>
             </sect2>
 
@@ -813,47 +831,40 @@
             </sect2>
 
             <sect2>
-                <title>Attack and Defence Fumbles</title>
+                <title>Fumbles in Combat</title>
 
                 <para>
-                    A fumble will normally occur on a roll of a '1'.
-                    When a fumble occurs, there are a number of
-                    possible results. Which result happens is chosen
-                    by the character who fumbled unless their
-                    opponent has a <e>higher</e> skill score, in
-                    which case their opponent chooses.
-                </para>
-
-                <para>
-                    Only attack and defence rolls fumble - damage
-                    and soak rolls do not.
+                    When making an attack or defence roll, if you roll a
+                    natural '1', then a fumble occurs. Some situations may
+                    increase this fumble chance. When a fumble occurs, one
+                    of a number of possible outcomes results. You get to
+                    choose the fumble result unless your opponent has a
+                    higher skill, in which case they choose.
                 </para>
 
                 <sect3>
                     <title>Fumbling an attack</title>
 
                     <para>
-                        A fumbled attack roll is an automatic miss,
-                        and doesn't <e>require</e> a defence from the
-                        defender (so the defender can't fumble, and
-                        doesn't need to use a defence slot). The
-                        defender may optionally still defend however
-                        (they may have a special ability they want to
-                        use which requires a defence).
+                        A fumbled attack roll is always an automatic miss.
+                        You (or your opponent) get to choose from one of
+                        the following results.
                     </para>
 
                     <itemlist order="unordered">
                         <item>
-                            Attacker gains a point of fatigue.
+                            You gain a point of fatigue.
                         </item>
 
                         <item>
-                            Attacker looses weapon (disarmed).
+                            You lose your weapon (your are disarmed, or
+                            simply drop your weapon).
                         </item>
 
                         <item>
-                            Attacker's primary weapon breaks, but
-                            only if it is weak.
+                            Your primary weapon breaks, but only if it is
+                            weak. If it is not weak, then you cannot choose
+                            this option.
                         </item>
                     </itemlist>
                 </sect3>
