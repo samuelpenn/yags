@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.16 $</version>
-            <date>$Date: 2005-12-07 20:40:24 $</date>
+            <version>$Revision: 1.17 $</version>
+            <date>$Date: 2006-01-02 21:55:19 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -341,15 +341,28 @@
                     idea about which skills to buy.
                 </para>
 
-                <y:list-skills href="options/skills.yags"/>
+                <y:list-skills href="options/skills.yags">
+                    <y:skills>options/skills.yags</y:skills>
+                    <y:skills>lowtech/lowtech-skills.yags</y:skills>
+
+                    <y:techniques>options/techniques.yags</y:techniques>
+                    <y:techniques>lowtech/lowtech-techniques.yags</y:techniques>
+                </y:list-skills>
             </sect2>
 
             <sect2>
                 <title>Skill Descriptions</title>
 
 
-                <y:import-skills href="options/skills.yags"/>
+                <y:import-skills href="options/skills.yags">
+                    <y:skills>options/skills.yags</y:skills>
+                    <y:skills>lowtech/lowtech-skills.yags</y:skills>
+
+                    <y:techniques>options/techniques.yags</y:techniques>
+                    <y:techniques>lowtech/lowtech-techniques.yags</y:techniques>
+                </y:import-skills>
             </sect2>
+
         </sect1>
 
     </body>

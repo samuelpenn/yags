@@ -9,7 +9,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.13 $
+    Version: $Revision: 1.14 $
     Author: Samuel Penn
     -->
 
@@ -34,6 +34,8 @@
         <group>Rural</group>
         <group>Household</group>
     </groups>
+
+    <techniques>options/techniques.yags</techniques>
 
 
     <!-- Athletics -->
@@ -132,7 +134,15 @@
             <para>
                 A general purpose combat skill covering dodging, punching
                 and wrestling. This is covered in more detail in the combat
-                section.
+                section. It allows the use of small weapons such as knives
+                and daggers, as well as improvised weapons such as stones,
+                bottles, sticks and chairs.
+            </para>
+
+            <para>
+                A character may always use the <e>brawl</e> skill to dodge
+                even if they are using a weapon, but they don't get any
+                advantages of the weapon if they do so.
             </para>
         </description>
     </skill>
@@ -364,7 +374,7 @@
     </skill>
 
 
-    <skill name="Battle" type="standard">
+    <skill name="Tactics" type="standard">
         <group>Combat</group>
 
         <short>Knowledge of combat tactics.</short>
@@ -372,7 +382,7 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Tactics, strategy and leadership when planning and fighting
-                a battle involving groups of warriors. It can be used to
+                a battle involving small groups. It can be used to
                 choose a suitable site for battle, to determine weaknesses
                 in the enemy's strategy and defences, and to plan the
                 logistics of travel and supply.
@@ -568,23 +578,6 @@
         </description>
     </skill>
 
-    <skill name="Whip" type="standard">
-        <group>Combat</group>
-        <group>Melee</group>
-        <group>Armed melee</group>
-
-        <short>Using whips in combat.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of using a whip, this is probably the narrowest
-                of the combat skills since it only applies to a single
-                weapon.
-            </para>
-        </description>
-    </skill>
-
-
     <!--
         SOCIAL SKILLS
     -->
@@ -691,14 +684,21 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Knowledge of how to play games of chance. Used with charisma
-                for bluffing, intelligence to figure out the odds of
-                something, or perception to spot cheating. Does not really
-                help if the game is totally chance based, though it can
-                be used for bluffing even then.
+                This is the skill of playing games of chance, such as
+                card games or dice games. This is a generic skill,
+                based around being able to spot patterns, work out
+                probabilities, bluff, cheat and basic gaming tactics.
+            </para>
+
+            <para>
+                A high skill represents a good, broad, knowledge of
+                all such games, and so a greater chance of knowing how
+                to play any given game, or at least knowing enough about
+                a similar game in order to be able to play well.
             </para>
         </description>
     </skill>
+
 
     <skill name="Game" type="standard">
         <group>Social</group>
@@ -940,103 +940,6 @@
         </examples>
     </skill>
 
-    <skill name="Alchemy" type="knowledge">
-        <group>Lore</group>
-
-        <short>Knowledge of chemicals and magic.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Alchemy is the lore of non-living substances and how they
-                interact. It may be used to identify substances, gives
-                some knowledge of poisons, and provides a means to
-                manufacture some simple effects - coloured smoke, invisible
-                ink, bangs and the like.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Astrology" type="knowledge">
-        <group>Lore</group>
-
-        <short>Knowledge of the heavens.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of the heavens, and how they affect the day to
-                day life of mortals. When combined with charisma, it may
-                be used to tell someone's fortune. The better the success,
-                the more the reading will be believed. Whether it turns
-                out to be true or not is unrelated to the success roll
-                unless the character has some other means of divining
-                the future.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Beast lore" type="knowledge">
-        <group>Lore</group>
-
-        <short>Knowledge about animals.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of animals, how to recognise them and what
-                their behaviours are.
-            </para>
-        </description>
-    </skill>
-
-    <!-- Chirurgury -->
-    <skill name="Chirurgury" type="knowledge">
-        <group>Lore</group>
-
-        <prerequisite>First aid</prerequisite>
-        <default>First aid</default>
-
-        <short>Healing severe wounds.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Performing major operations on a wounded person. This
-                requires some specialist tools (though rarely more
-                complicated than sharp knives and tongs). It is used
-                with <e>intelligence</e>.
-            </para>
-
-            <para>
-                A chirurgury attempt takes an hour, and may be performed
-                on a person with wounds. Stuns are unaffected by use of
-                this skill. The difficulty is equal to 20 + the wound
-                (not stun) penalties of the patient. Success results in
-                the patient automatically healing one wound at their
-                next natural healing check, <e>before</e> the check is
-                made. Only one chirurgury check can be made each day
-                on a single patient, but once one has been successful,
-                not further attempts count until the patient is wounded
-                again.
-            </para>
-
-            <para>
-                A fumble results in the patient receiving an extra
-                wound (killing a <e>fatally wounded</e> person), though
-                further attempts can be made.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Dream lore" type="knowledge">
-        <group>Lore</group>
-
-        <short>Interpreting dreams.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The ability to interpret someone's dreams in order to
-                fortell the future, or determine a haunting.
-            </para>
-        </description>
-    </skill>
 
     <!-- First aid -->
     <skill name="First aid" type="knowledge">
@@ -1073,38 +976,6 @@
         </description>
     </skill>
 
-    <skill name="Natural philosophy" type="knowledge">
-        <group>Lore</group>
-
-        <short>Knowledge about how the world works.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of the world and how it works. It includes
-                philosophy, very basic science and metaphysics (the
-                nature of the world and the heavens from an academic
-                point of view).
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Philosophy" type="knowledge">
-        <group>Lore</group>
-
-        <short>Ethics, economics and politics.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                A lore which covers ethics, economics and politics. It
-                is different from the <e>Politics</e> and <e>Trade</e>
-                skills which represent experience in the real world.
-                <e>Philosophy</e> gives knowledge of theory, of other
-                systems of government and ways of doing business, and
-                is mainly of use for being able to debate with other
-                philosophers.
-            </para>
-        </description>
-    </skill>
 
     <skill name="Vetinary" type="knowledge">
         <group>Lore</group>
@@ -1122,82 +993,6 @@
         </description>
     </skill>
 
-    <skill name="Faerie lore" type="knowledge">
-        <group>Lore</group>
-
-        <short>Knowledge about the fey, spirits and elementals.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of the Other World, of faeries, spirits
-                and beasts of supernatural nature. Based on intelligence.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Heraldry" type="knowledge">
-        <group>Lore</group>
-        <group>Legal</group>
-
-        <short>Knowledge about heraldic arms.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of heraldic arms, flags and other symbols. A
-                person skilled in heraldry can recognise nobles, understand
-                and describe the code of heraldic arms, and make guesses
-                as to who someone is allied with based on their coat of
-                arms. Based on intelligence.
-            </para>
-
-            <para>
-                <e>Area lore</e> may be substituted, though all rolls are
-                halved and it can only be used for recognition.
-            </para>
-        </description>
-
-        <examples>
-            <example target="10">
-                Recognise a major personality based on their arms,
-                such as a principle member of the royal family, or a
-                major duke or earl. Recognise that someone belongs to
-                a major noble house.
-            </example>
-
-            <example target="20">
-                Recognise a very important person, such as a duke or
-                earl, or a secondary member of the royal family.
-            </example>
-
-            <example target="30">
-                Recognise an important land owner, such as a powerful
-                baron.
-            </example>
-
-            <example target="40">
-                Recognise a baron or other low ranking land owner.
-            </example>
-
-            <example target="50">
-                Recognise someone really obscure.
-            </example>
-        </examples>
-    </skill>
-
-    <skill name="Herb lore" type="knowledge">
-        <group>Lore</group>
-        <group>Household</group>
-
-        <short>Knowledge of herbs and poisons.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of herbs and their properties. Can be used
-                to recognise, collect and prepare herbs and plants for
-                use in remedies, poisons and potions. Based on intelligence.
-            </para>
-        </description>
-    </skill>
 
     <skill name="History" type="knowledge">
         <group>Lore</group>
@@ -1226,18 +1021,6 @@
         </description>
     </skill>
 
-    <skill name="Legend lore" type="knowledge">
-        <group>Lore</group>
-
-        <short>Knowledge of stories and legends.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of legends and stories of heroes, places and
-                artifacts.
-            </para>
-        </description>
-    </skill>
 
     <skill name="Religion" type="knowledge">
         <group>Lore</group>
@@ -1321,6 +1104,7 @@
 
     <skill name="Trade" type="standard">
         <group>Social</group>
+        <group>Business</group>
         <default>Guile</default>
 
         <short>Bartering and other merchant skills.</short>
@@ -1334,143 +1118,6 @@
         </description>
     </skill>
 
-    <skill name="Armoury" type="standard">
-        <group>Craft</group>
-
-        <default>Blacksmithing</default>
-        <prerequisite score="2">Blacksmithing</prerequisite>
-
-        <short>The making of metal armour.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Making metal armour such as mail, plate or ring armour.
-                Leather armour requires <e>leatherworking</e>, and cloth
-                or padded armour requires <e>clothier</e>.
-            </para>
-
-            <para>
-                Assuming raw materials are available, a item of armour can
-                be constructed as a <e>long task</e>, with each stage
-                taking a week. Failure means a flaw in the item, though
-                an <skeq><attr>intelligence</attr><sk>armoury</sk></skeq>
-                check at the same difficulty allows the armourer to notice
-                and fix the flaw.
-            </para>
-
-            <para>
-                The armourer can choose to double the difficulty in order
-                to proceed quicker, in which case each stage only takes a
-                single day.
-            </para>
-        </description>
-
-        <examples>
-            <example target="10">Make a metal helm.</example>
-            <example target="15">Make a mail coif.</example>
-            <example target="20">Make a mail shirt.</example>
-            <example target="25">Make a mail hauberk or trousers.</example>
-            <example target="-5">Ring rather than mail armour.</example>
-        </examples>
-    </skill>
-
-    <skill name="Beekeeping" type="standard">
-        <group>Animal</group>
-        <group>Rural</group>
-
-        <default>Farming</default>
-
-        <short>Keep of bees and production of honey.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The keeping of bees, and the harvesting of honey from
-                them.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Blacksmithing" type="standard">
-        <group>Craft</group>
-
-        <short>Crafting metal items.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Metal working, including needles, horseshoes, tools
-                and so on. It can be used to make knives and daggers, but
-                anything larger requires the weaponsmithing skill.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Bowyer" type="standard">
-        <group>Craft</group>
-
-        <short>Making bows and arrows.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The making of bows and arrows.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Brewing" type="standard">
-        <group>Craft</group>
-        <group>Rural</group>
-        <group>Household</group>
-
-        <default>Farming</default>
-
-        <short>Brewing beer and ale.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Brewing beer and ale. This skill is generally the domain
-                of the ale wives in small villages.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Candlemaking" type="standard">
-        <group>Craft</group>
-
-        <short>Making candles.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The making of candles.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Carpentry" type="standard">
-        <group>Craft</group>
-
-        <short>Crafting wooden items.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Crafting items out of wood, from chairs to houses.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Clothier" type="standard">
-        <group>Craft</group>
-        <group>Household</group>
-
-        <short>Making and repairing clothes.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Working with cloth, generally in the making of clothes.
-                Can be used for making leather or padded armour if necessary,
-                though this is not normally the domain of clothiers.
-            </para>
-        </description>
-    </skill>
 
     <skill name="Cooking" type="standard">
         <group>Household</group>
@@ -1485,66 +1132,6 @@
         </description>
     </skill>
 
-    <skill name="Copicing" type="standard">
-        <group>Wilderness</group>
-        <group>Rural</group>
-
-        <default>Farming</default>
-
-        <short>Care and management of woodland.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The care and management of woodland. All manors will
-                have someone skilled in this, and it is not uncommon for
-                such a person to be a carpenter as well.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Dairying" type="standard">
-        <group>Animal</group>
-        <group>Rural</group>
-
-        <default>Farming</default>
-
-        <short>Production of milk and cheese.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The making of cheese and other dairy products. Includes
-                caring for and milking cows.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Farming" type="standard">
-        <group>Rural</group>
-
-        <short>Growing and harvesting of crops.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The planting, caring for and harvesting of crops, the
-                care and feeding of animals such as cows, sheep and
-                chickens. The majority of people in rural areas will of
-                course be farmers and will have this skill to some level.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Glassworking" type="standard">
-        <group>Craft</group>
-
-        <short>Making glassware.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The making of glassware, though this is a rare, and highly
-                sought after, skill.
-            </para>
-        </description>
-    </skill>
 
     <skill name="Handicraft" type="standard">
         <group>Craft</group>
@@ -1561,85 +1148,8 @@
         </description>
     </skill>
 
-    <skill name="Jewelcraft" type="standard">
-        <group>Craft</group>
 
-        <short>Polishing and cutting gemstones.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The crafting of jewelry and gems. Covers artistic
-                skill, as well as knowledge of the values of such items.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Masonry" type="standard">
-        <group>Craft</group>
-
-        <short>Building of stone constructions.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The building of houses, bridges and other constructions
-                out of stone.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Milling" type="standard">
-        <group>Rural</group>
-        <default>Farming</default>
-
-        <short>Skill of making flour.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Running a mill, from the grinding of flour to the baking
-                of the bread.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Mining" type="standard">
-        <group>Craft</group>
-
-        <short>Working in and locating mines.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Covers being able to locate new mines, and to construct
-                and work them safely.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Ostling" type="standard">
-        <group>Rural</group>
-        <group>Animal</group>
-
-        <short>Training of horses.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The care and training of horses.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Pottery" type="standard">
-        <group>Craft</group>
-
-        <short>Making clay pots.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Pottery.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Seneschal" type="standard">
+    <skill name="Administration" type="standard">
         <group>Legal</group>
         <group>Household</group>
 
@@ -1655,70 +1165,6 @@
         </description>
     </skill>
 
-    <skill name="Shipwright" type="standard">
-        <group>Craft</group>
-
-        <short>Designing and building ships.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Ship building.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Tanning" type="standard">
-        <group>Craft</group>
-
-        <short>Leatherworking.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Tanning.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Thatching" type="standard">
-        <group>Craft</group>
-
-        <short>Making thatched rooves.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Thatching.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Weaponsmithing" type="standard">
-        <group>Craft</group>
-
-        <prerequisite score="2">Blacksmithing</prerequisite>
-
-        <short>Crafting weapons.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The making of weapons, including spears, daggers,
-                swords and axes. The making of bows and arrows is a
-                different profession, which is covered by bowyer.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Weaving" type="standard">
-        <group>Craft</group>
-        <group>Household</group>
-
-        <short>Making of cloth.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                A profession which includes weaving and spindling.
-            </para>
-        </description>
-    </skill>
 
     <skill name="Forgery" type="standard">
         <group>Rogue</group>
@@ -1781,99 +1227,6 @@
         </examples>
     </skill>
 
-    <skill name="Falconry" type="standard">
-        <group>Wilderness</group>
-        <group>Animal</group>
-
-        <short>Training, caring and hunting with birds.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of training, caring for and hunting with falcons
-                and similar birds of prey.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Hunting" type="standard">
-        <group>Wilderness</group>
-        <group>Animal</group>
-
-        <short>Training, caring and hunting with dogs.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of training, caring for and hunting with hounds.
-                If trained dogs are available, can be used instead of
-                survival to track or hunt game.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Navigation" type="standard">
-        <group>Wilderness</group>
-
-        <short>Sea navigation.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of seafarers the world over, enables a sailor
-                to determine where they are, and where they are going.
-                As for <e>survival</e>, allows direction and time of
-                day to be determined. It also however allows the sailor
-                to determine the effects of wind and currents, and
-                estimate the sailor's latitude. Used with intelligence.
-            </para>
-
-            <para>
-                A failed attempt to plot a course may be determined by
-                a successfull position check, though how quickly the
-                error is noticed depends on how accurately position
-                can be determined, and even then, time will have been
-                wasted.
-            </para>
-        </description>
-
-        <examples>
-            <example target="10">
-                Accurately determine direction, time of day or night
-                according to the position of sun, moon or stars.
-            </example>
-
-            <example target="15">
-                Successfully plot a course over a short distance, for
-                a journey less than a day in length.
-            </example>
-
-            <example target="20">
-                Plot a course out of sight of land for a journey longer
-                than a day. Determine current position.
-            </example>
-
-            <example target="30">
-                Plot a course for a journey longer than week.
-            </example>
-
-            <example target="+10">
-                Poor visibility, only partial sight of the sky in order
-                to see stars and sun due to cloud cover.
-            </example>
-
-            <example target="+20">
-                Very bad visibility, navigation at night probably
-                impossible.
-            </example>
-
-            <example target="+10">
-                Unfamiliar currents and landmarks.
-            </example>
-
-            <example target="+10">
-                Bad weather makes keeping on course and taking accurate
-                measurements difficult.
-            </example>
-        </examples>
-    </skill>
 
     <skill name="Ride" type="standard">
         <group>Wilderness</group>
@@ -1889,21 +1242,6 @@
                 as enabling you to remain mounted, it grants a bonus to
                 combat skills when mounted if the relevant techniques
                 are known.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Teamster" type="standard">
-        <group>Animal</group>
-
-        <short>Handling pack animals.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Handling a team of animals, either pack animals or horses or
-                oxen pulling wagons. Care, feeding and pacing, as well as
-                being able to distribute load across the team to get the
-                maximum efficiency.
             </para>
         </description>
     </skill>
@@ -2058,18 +1396,6 @@
         </description>
     </skill>
 
-    <skill name="Seamanship" type="standard">
-        <group>Wilderness</group>
-
-        <short>Handling sea going vessels.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Handling a sea going vessel. This is very different from
-                boating, which is limited to coastal or river boats.
-            </para>
-        </description>
-    </skill>
 
     <skill name="Scrounging" type="standard">
         <group>Rogue</group>
