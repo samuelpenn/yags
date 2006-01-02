@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+
+<!--
+    Modern skills, mostly sciences and engineering skills.
+
+    Copyright (c) 2005, Samuel Penn.
+    This document can be redistributed and/or modified under the terms
+    of the GNU Public License as published by the Free Software Foundation
+    version 2.
+
+    Version: $Revision: 1.1 $
+    Author: Samuel Penn
+-->
+
+<skill-list xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:yb="http://yagsbook.sourceforge.net/xml"
+            techniques="options/techniques.yags">
+
+    <groups>
+        <group>Science</group>
+        <group>Combat</group>
+        <group parent="Combat">Firearms</group>
+        <group>Business</group>
+        <group>Technical</group>
+        <group>Academic</group>
+        <group>Sport</group>
+    </groups>
+
+
+
+
+    <skill name="Science" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <short>Basic science, logic and reasoning.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Science covers basic scientific knowledge, logical
+                reasoning and ballony detection. Most Western schools will
+                teach <e>science</e> to some degree. The skill provides
+                basic knowledge of the various sciences, an understanding
+                of the philosophy of science, and the ability to tell the
+                difference between a scientific theory and dodgy
+                pseudo-science.
+            </para>
+
+            <para>
+                All scientists will have <e>Science</e> to a greater or
+                lesser degree, as will those in science based professions
+                such as engineering or mathematics.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Mathematics" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <short>Geometry, aglebra etc.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Mathematics is the knowledge of advanced mathematics.
+                Simple arithmetic is considered to be basic intelligence.
+                Mathematics covers geometry, algebra, set theory,
+                probability and other branches of mathematics. Most
+                children with a Western education will have some
+                knowledge of Mathematics after leaving school, though
+                it's likely to be only a couple of points.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Physics" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <short>The science of physics.</short>
+
+        <prerequisite score="2">Science</prerequisite>
+        <prerequisite score="2">Mathematics</prerequisite>
+        <default>Science</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Physics is a particular branch of <e>Science</e>, concerned
+                with forces and motion, energy and matter at the smallest
+                scales. Particular branches of physics are treated as
+                <e>techniques</e> - not knowing the technique doubles the
+                difficulty.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     task="Nuclear physics">
+            <para>
+                Knowledge of nuclear physics, including how to build a
+                nuclear power station or a nuclear bomb. Also covers
+                how to work safely with radioactive materials.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     task="Quantum physics">
+            <para>
+                Knowledge of quantum mechanics.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     task="Relativity">
+            <para>
+                Relativity and gravity.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Chemistry" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <short>The science of chemistry.</short>
+
+        <prerequisite score="2">Science</prerequisite>
+        <default>Science</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Chemistry is a particular branch of <e>Science</e>, which
+                is concerned with the study of chemicals and elements.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Biology" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <short>The science of biology.</short>
+
+        <prerequisite score="2">Science</prerequisite>
+        <default>Science</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Biology is a particular branch of <e>Science</e>, and
+                covers the study of living things.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Astronomy" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <default>Astrophysics</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is concerned with the study of stars and planets,
+                their motions, positions and general behaviour. It does
+                not provide full detail on their formation and physical
+                makeup (that is left to <e>Astrophysics</e>).
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Astrophysics" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <prerequisite score="4">Physics</prerequisite>
+        <prerequisite score="2">Astronomy</prerequisite>
+        <default>Astronomy</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Astrophysics deals with the makeup and behaviour of stars
+                and planets from the point of view of physics. It is not
+                concerned with particular stars (that is <e>Astronomy</e>)
+                but with the underlaying physics behind them.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Biochemistry" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <prerequisite score="4">Biology</prerequisite>
+        <prerequisite score="4">Chemistry</prerequisite>
+        <default>Biology</default>
+        <default>Chemistry</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is the study of the chemicals of life.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Botany" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <default>Biology</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is the study of plants.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Zoology" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <default>Biology</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is the study of animals.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Anthropology" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is the study of Homonids.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Ecology" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <prerequisite score="2">Biology</prerequisite>
+        <prerequisite score="2">Zoology</prerequisite>
+
+        <default>Botany</default>
+        <default>Zoology</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is knowledge of ecosystems, of the relationships
+                between plants and animals living together in balance.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Economics" type="knowledge">
+        <group>Academic</group>
+        <group>Business</group>
+
+        <short>Knowledge of financial matters.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Economics is the study of how the economy and
+                financial world works.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Administration" type="skill">
+        <group>Business</group>
+        <group>Social</group>
+
+        <short>Being able to manage people and paper.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of managing an organisation, from dealing with
+                people, basic finance, reception type duties and so on and
+                so forth.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Research" type="skill">
+        <group>Academic</group>
+
+        <default>Any Academic skill</default>
+
+        <short>Being able to find information.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of being able to find information in books, on
+                a computer system, or in any other knowledge source which
+                doesn't require interaction with people (beyond standard
+                dealing with librarians etc).
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Computer operation" type="skill">
+        <group>Technical</group>
+
+        <short>The skill of using a computer.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This covers basic computer use, from switching it on
+                to using a word processor, browsing the web or sending
+                an email. High levels of skill will allow basic
+                programming tasks and diagnosing faults.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Computer hacking" type="skill">
+        <group>Technical</group>
+
+        <default>Computer operation</default>
+
+        <short>Indepth knowledge of computers.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This skill mostly covers programming a computer,
+                though it also includes knowing how they really work,
+                diagnosing software problems, some knowledge of
+                security and so on and so forth.
+            </para>
+
+            <para>
+                It is not primarily about breaking into computers,
+                though this skill is required if that is the intent.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Fencing">
+        <group>Sport</group>
+
+        <short>Fighting with light fencing weapons.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The sport of using light fencing weapons. It can be used
+                in dueling and combat, though is primarily concerned with
+                the use of fencing weapons as a sport. Because it is
+                <e>not</e> part of the Combat group, it cannot be used
+                with any of the standard combat techniques.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Pistol">
+        <group>Combat</group>
+        <group>Firearms</group>
+
+        <short>Using pistols.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Firing a hand gun with accuracy.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Rifle">
+        <group>Combat</group>
+        <group>Firearms</group>
+
+        <short>Firing rifles.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Firing a rifle with accuracy.
+            </para>
+        </description>
+    </skill>
+</skill-list>
+
