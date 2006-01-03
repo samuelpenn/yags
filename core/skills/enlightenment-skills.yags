@@ -8,7 +8,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.1 $
+    Version: $Revision: 1.2 $
     Author: Samuel Penn
 -->
 
@@ -21,6 +21,7 @@
         <group>Science</group>
         <group>Combat</group>
         <group parent="Combat">Firearms</group>
+        <group parent="Combat">Melee</group>
         <group>Business</group>
         <group>Academic</group>
     </groups>
@@ -74,6 +75,8 @@
 
         <limited>Astrology</limited>
 
+        <short>Knowledge of how the stars and planets move.</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 This is concerned with the study of stars and planets,
@@ -82,5 +85,200 @@
         </description>
     </skill>
 
+    <skill name="Philosophy" type="knowledge">
+        <genre>Enlightenment</genre>
+
+        <group>Academic</group>
+        <group>Business</group>
+
+        <short>Ethics, economics and politics.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Covers ethics, economics and politics. It is different
+                from the politics skill which is more about practical
+                intrigue rather than the theory of different political
+                systems. After the Enlightenment, Economics and
+                Political theory will split out from Philosophy, but
+                currently this isn't the case.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Natural Philosophy" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <short>Early science.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Sort of proto-science. Knowledge of the world and how
+                it works, as taught by the ancient Greeks. A sort of
+                mixture of science and philosophy, though science
+                hasn't yet been invented. Also includes what was known
+                as <e>Metaphysics</e>.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Artes Liberales" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <short>The classical knowledges.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The seven classical knowledges. Traditionally the skill
+                consists of the Trivium (logic, grammar and rhetoric) and
+                the Quadrivium (astronomy, music, arithmetic and geometry).
+                The liberal arts originated in classical times, and was
+                popularised in the medeival period.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Alchemy" type="knowledge">
+        <genre>Enlightenment</genre>
+
+        <group>Academic</group>
+        <group>Science</group>
+
+        <short>Early chemistry.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Alchemy had always been the domain of wizards and
+                conjurers, and was capable of not much more than
+                producing flashes, bangs and strange smells. With
+                the Enlightenment, it becomes the forerunner to
+                <e>Chemistry</e>, and begins to take on more of
+                a scientific nature.
+            </para>
+
+            <para>
+                However, Alchemy is still tied strongly to the
+                classical ways of thinking about the world, and by
+                the time scientists start to figure out the true
+                nature of the elements, it begins to fade into the
+                background.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Astrology" type="knowledge">
+        <genre>Enlightenment</genre>
+
+        <group>Academic</group>
+        <group>Science</group>
+
+        <short>The casting of horoscopes.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                With the birth of science, <e>Astrology</e> begins the
+                gradual shift towards <e>Astronomy</e>. However, it is
+                still bound by religious and classical thought, for
+                it teaches that the heavens are mystical, and have
+                power over men. It's primary purpose is to better
+                calculate the positions and movements of the stars and
+                planets in order to produce better horoscopes.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Cryptography" type="knowledge">
+        <group>Academic</group>
+        <group>Business</group>
+
+        <short>Using codes and cyphers.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Knowledge of the use of codes and cyphers. You are able
+                to encode and decode messages which have been encrypted.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Cryptanalysis" type="knowledge">
+        <group>Academic</group>
+        <group>Business</group>
+        <default>Cryptography</default>
+
+        <short>Using codes and cyphers.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of breaking an unknown cypher text.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Fencing" type="knowledge">
+        <genre>Enlightenment</genre>
+
+        <group>Combat</group>
+        <group>Melee</group>
+
+        <short>Dueling with light bladed weapons.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of fighting with a light bladed weapon, such
+                as a rapier. With the spread of firearms, fencing is
+                being regulated to dueling, though its use in a real
+                combat should not be underestimated.
+            </para>
+
+            <para>
+                It also allows the use of a second smaller weapon
+                (such as a dagger or knife). If two long weapons are
+                required, then the <e>Two weapons</e> skill should
+                still be used.
+            </para>
+
+            <para>
+                Note that this is <e>not</e> the sport of fencing, and
+                the point of the skill is to kill another person, not
+                to win points.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Musket" type="standard">
+        <group>Combat</group>
+        <group>Firearms</group>
+
+        <short>Shooting and using early firearms.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill required to load, clean and fire a black
+                powder weapon such as a musket.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Pistol" type="standard">
+        <group>Combat</group>
+        <group>Firearms</group>
+
+        <short>The use of pistols.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+        </description>
+    </skill>
+
+    <skill name="Rifle" type="standard">
+        <group>Combat</group>
+        <group>Firearms</group>
+
+        <short>Shooting early firearms.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+        </description>
+    </skill>
 </skill-list>
 

@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.17 $</version>
-            <date>$Date: 2006-01-02 21:55:19 $</date>
+            <version>$Revision: 1.18 $</version>
+            <date>$Date: 2006-01-03 19:30:57 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -342,24 +342,111 @@
                 </para>
 
                 <y:list-skills href="options/skills.yags">
-                    <y:skills>options/skills.yags</y:skills>
-                    <y:skills>lowtech/lowtech-skills.yags</y:skills>
+                    <y:skills>skills/skills.yags</y:skills>
+                    <y:skills>skills/lowtech-skills.yags</y:skills>
 
-                    <y:techniques>options/techniques.yags</y:techniques>
-                    <y:techniques>lowtech/lowtech-techniques.yags</y:techniques>
+                    <y:techniques>techniques/techniques.yags</y:techniques>
+                    <y:techniques>techniques/lowtech-techniques.yags</y:techniques>
                 </y:list-skills>
             </sect2>
 
             <sect2>
                 <title>Skill Descriptions</title>
 
+                <y:import-skills href="options/skills.yags">
+                    <y:skills>skills/skills.yags</y:skills>
+                    <y:skills>skills/lowtech-skills.yags</y:skills>
+
+                    <y:techniques>techniques/techniques.yags</y:techniques>
+                    <y:techniques>techniques/lowtech-techniques.yags</y:techniques>
+                </y:import-skills>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Genre Specific Skills</title>
+
+            <para>
+                The following skills are specific to certain genres. Though
+                time periods are suggested, the cut over between the
+                different eras is difficult to place, and some campaigns
+                may want to borrow from multiple skill lists.
+            </para>
+
+            <para>
+                In some cases, a skill is listed in two or more genres,
+                with a different description each time. This is because
+                what the skill covers is different in each genre, though
+                what it is attempting to cover, and what it is called,
+                is pretty similar (the sciences are a good example of
+                this).
+            </para>
+
+            <sect2>
+                <title>The Enlightenment</title>
+
+                <para>
+                    The <e>Enlightenment</e> covers the period between about
+                    the 17th century and 19th century. By the turn of the
+                    20th century, the <e>Modern</e> era has definitely begun,
+                    but the change over point could be placed anywhere in
+                    the 19th.
+                </para>
+
+                <para>
+                    The <e>Enlightenment</e> sees the birth of science, and
+                    so the biggest change in this period to previous ones
+                    is changes and additions to the knowledges. Old knowledges
+                    still exist, but what they cover has changed. New
+                    knowledges (the sciences) are beginning to come into
+                    their own, however they are still held back by classical
+                    thinking, and are not as flexible as they are in the
+                    <e>Modern</e> period.
+                </para>
+
+                <y:list-skills href="options/skills.yags">
+                    <y:skills>skills/enlightenment-skills.yags</y:skills>
+
+                    <y:techniques>techniques/techniques.yags</y:techniques>
+                </y:list-skills>
 
                 <y:import-skills href="options/skills.yags">
-                    <y:skills>options/skills.yags</y:skills>
-                    <y:skills>lowtech/lowtech-skills.yags</y:skills>
+                    <y:skills>skills/enlightenment-skills.yags</y:skills>
 
-                    <y:techniques>options/techniques.yags</y:techniques>
-                    <y:techniques>lowtech/lowtech-techniques.yags</y:techniques>
+                    <y:techniques>techniques/techniques.yags</y:techniques>
+                    <y:techniques>techniques/modern-techniques.yags</y:techniques>
+                </y:import-skills>
+            </sect2>
+
+            <sect2>
+                <title>Modern</title>
+
+                <para>
+                    The <e>Modern</e> period nominally starts around 1900,
+                    but could be placed as early as the mid 19th century.
+                    The industrial revolution has happened, and classical
+                    modes of thinking have been swept away.
+                </para>
+
+                <para>
+                    There is a huge increase in the number of knowledge
+                    skills (mostly sciences, but also engineering skills),
+                    and the increase in literacy and education means that
+                    such skills are more widely known.
+                </para>
+
+                <y:list-skills>
+                    <y:skills>skills/modern-skills.yags</y:skills>
+
+                    <y:techniques>techniques/techniques.yags</y:techniques>
+                    <y:techniques>techniques/modern-techniques.yags</y:techniques>
+                </y:list-skills>
+
+                <y:import-skills>
+                    <y:skills>skills/modern-skills.yags</y:skills>
+
+                    <y:techniques>techniques/techniques.yags</y:techniques>
+                    <y:techniques>techniques/modern-techniques.yags</y:techniques>
                 </y:import-skills>
             </sect2>
 
