@@ -3,8 +3,8 @@
 <!--
     Standard Habisfern character packages.
 
-    Version: $Revision: 1.7 $
-    Date:    $Date: 2005-12-04 22:48:22 $
+    Version: $Revision: 1.8 $
+    Date:    $Date: 2006-01-05 16:54:08 $
 -->
 <characters xmlns="http://yagsbook.sourceforge.net/xml"
             xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
@@ -194,7 +194,7 @@
                     <skill name="Handicraft" score="4"/>
                     <skill name="Farming" score="2"/>
                     <skill name="Trade" score="2"/>
-                    <skill name="Seneschal" score="2"/>
+                    <skill name="Administration" score="2"/>
                 </group>
 
                 <group name="Other" type="skills">
@@ -252,7 +252,7 @@
                 <group name="Other" type="skills">
                     <skill name="Weapon and shield" score="4"/>
                     <skill name="Second melee skill" score="3"/>
-                    <skill name="Battle" score="1"/>
+                    <skill name="Tactics" score="1"/>
                 </group>
             </skills>
 
@@ -321,7 +321,7 @@
                     <skill name="Ride" score="2"/>
                     <skill name="Single weapon" score="2"/>
                     <skill name="Etiquette" score="2"/>
-                    <skill name="Seneschal" score="1"/>
+                    <skill name="Administration" score="1"/>
                 </group>
             </skills>
         </statistics>
@@ -520,6 +520,121 @@
         </equipment>
     </character>
 
+    <character name="Craftsman">
+        <description>
+            <short>
+                The craftsman is a skilled professional.
+            </short>
+
+            <background>
+                <para>
+                    You may be a carpenter, blacksmith, armourer or one
+                    of any of the other crafts which require skilled
+                    professionals.
+                </para>
+            </background>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="3"/>
+                    <skill name="Guile" score="3"/>
+                    <skill name="Sleight" score="3"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak Rornic" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                </group>
+
+                <group name="Profession" type="skills">
+                    <skill name="Trade" score="3"/>
+                    <skill name="Craft (primary)" score="4"/>
+                    <skill name="Craft (secondary)" score="3"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Single weapon" score="2"/>
+                    <skill name="Etiquette" score="2"/>
+                </group>
+            </skills>
+        </statistics>
+
+        <equipment>
+            <cash value="20d"/>
+            <item name="Dagger"/>
+            <item name="Craft tools"/>
+            <item name="Good clothes"/>
+            <item name="Riding horse"/>
+        </equipment>
+    </character>
+
+    <character name="Cunning folk">
+        <description>
+            <short>
+                Cunning folk are repositories of knowledge
+                about the natural and supernatural world.
+            </short>
+
+            <background>
+                <para>
+                    Cunningfolk are often unmarried women,
+                    though a few are men. They generally
+                    live on the outskirts of a village,
+                    supported by donations of food and
+                    goods by villagers in return for
+                    medical aid, advice and magical
+                    blessings.
+                </para>
+
+                <para>
+                    Cunningfolk tend to be old, and most
+                    Player Characters will actually be an
+                    apprentice to a Cunningfolk.
+                </para>
+            </background>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="3"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="3"/>
+                    <skill name="Guile" score="4"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                    <skill name="Herb lore" score="4"/>
+                    <skill name="First aid" score="3"/>
+                    <skill name="Faerie lore" score="2"/>
+                    <skill name="Legend lore" score="2"/>
+                    <skill name="Astrology" score="2"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Intimidation" score="2"/>
+                    <skill name="Survival" score="2"/>
+                </group>
+            </skills>
+
+            <advantages>
+                <advantage name="Second sight" cost="5"/>
+            </advantages>
+        </statistics>
+    </character>
 
 </characters>
 

@@ -4,8 +4,8 @@
 <!--
     Standard Habisfern character packages: Nobles
 
-    Version: $Revision: 1.8 $
-    Date:    $Date: 2005-12-03 21:23:27 $
+    Version: $Revision: 1.9 $
+    Date:    $Date: 2006-01-05 16:54:08 $
 -->
 
 <characters xmlns="http://yagsbook.sourceforge.net/xml"
@@ -16,14 +16,32 @@
             <race>Human</race>
             <age>21</age>
             <short>
-                Thegns are landowners.
+                A ruler of a manorial village.
             </short>
 
             <background>
                 <para>
-                    A noble.
+                    You are the lord of a small village, or at least
+                    the son destined to inherit your father's estate.
+                    Your status provides you with many benefits, but
+                    you are expected to have knowledge of both
+                    warcraft and statecraft. By far the majority of
+                    thegns are male, but legally there is nothing
+                    preventing a woman from taking the title.
+                </para>
+
+                <para>
+                    As a child of a thegn, you have far more freedom,
+                    though less power. As an actual thegn, you have
+                    more power, but also greater responsibility,
+                    and leaving your estate for great lengths of
+                    time may cause it to be taken from you.
                 </para>
             </background>
+
+            <info xmlns="http://yagsbook.sourceforge.net/xml/yags">
+                <socialClass level="+4">Landed noble</socialClass>
+            </info>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
@@ -46,7 +64,7 @@
                 </group>
 
                 <group name="Profession" type="skills">
-                    <skill name="Seneschal" score="2"/>
+                    <skill name="Administration" score="2"/>
                     <skill name="Etiquette" score="2"/>
                     <skill name="Politics" score="2"/>
                 </group>
@@ -54,7 +72,7 @@
                 <group name="Other" type="skills">
                     <skill name="Weapon and shield" score="4"/>
                     <skill name="Second melee skill" score="4"/>
-                    <skill name="Battle" score="2"/>
+                    <skill name="Tactics" score="2"/>
                     <skill name="Ride" score="2"/>
                     <skill name="Hunting" score="2"/>
                 </group>
@@ -69,14 +87,274 @@
         </statistics>
 
         <equipment>
-            <cash value="10d"/>
-            <item name="Standard clothes"/>
-            <item name="Spear"/>
-            <item name="Scramasax"/>
-            <item name="Leather armour"/>
+            <cash value="40d"/>
+            <item name="Broadsword"/>
+            <item name="Mail hauberk"/>
+            <item name="Soft leather trousers"/>
+            <item name="Soft leather jacket"/>
+            <item name="Metal helm"/>
+            <item name="Riding horse"/>
         </equipment>
     </character>
 
+    <character name="Warrior">
+        <description>
+            <short>
+                A noble warrior dedicated to the art of war.
+            </short>
+
+            <background>
+                <para>
+                    As a warrior you are of a similar social class as
+                    to a <e>thegn</e>, however you do not have the
+                    burdens of responsibility which come with running
+                    a manor. You have dedicated yourself to learning
+                    the arts of combat, and serve as a warrior for
+                    your lord.
+                </para>
+            </background>
+
+            <info xmlns="http://yagsbook.sourceforge.net/xml/yags">
+                <socialClass level="+3">Landless noble</socialClass>
+            </info>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="3"/>
+                    <skill name="Charm" score="2"/>
+                    <skill name="Guile" score="2"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="4"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                    <skill name="Heraldry" score="2"/>
+                    <skill name="Law" score="1"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Ride" score="2"/>
+                    <skill name="Etiquette" score="1"/>
+                </group>
+
+                <group name="Combat" type="skills">
+                    <skill name="Longshaft weapon" score="2"/>
+                    <skill name="Weapon and shield" score="4"/>
+                    <skill name="Single weapon" score="2"/>
+                    <skill name="Great weapon" score="2"/>
+                    <skill name="Tactics" score="2"/>
+                </group>
+            </skills>
+        </statistics>
+
+        <equipment>
+            <cash value="10d"/>
+            <item name="Broadsword"/>
+            <item name="Mail hauberk"/>
+            <item name="Soft leather trousers"/>
+            <item name="Soft leather jacket"/>
+            <item name="Metal helm"/>
+            <item name="Riding horse"/>
+        </equipment>
+    </character>
+
+    <character name="Mercenary">
+        <description>
+            <socialClass level="+3">Landless knight</socialClass>
+            <short>
+                A warrior working for money rather than loyalty.
+            </short>
+
+            <background>
+                <para>
+                    You sell your sword for payment. In good times this
+                    may be silver and gold, in bad times it may just be
+                    a roof over your head and food in your belly. You
+                    may have been the child of a noble who would
+                    rather fight for pay than glory, or maybe you were
+                    a freeman or vagabound who taught himself to fight,
+                    and got a lucky break.
+                </para>
+            </background>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="2"/>
+                    <skill name="Guile" score="2"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="3"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                    <skill name="Heraldry" score="1"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Ride" score="2"/>
+                    <skill name="Etiquette" score="1"/>
+                    <skill name="Survival" score="2"/>
+                </group>
+
+                <group name="Combat" type="skills">
+                    <skill name="Weapon and shield" score="4"/>
+                    <skill name="Longshaft weapon" score="2"/>
+                    <skill name="Single weapon" score="2"/>
+                    <skill name="Great weapon" score="2"/>
+                    <skill name="Tactics" score="2"/>
+                    <skill name="Bow" score="2"/>
+                </group>
+            </skills>
+        </statistics>
+
+        <equipment>
+            <cash value="5d"/>
+            <item name="Broadsword"/>
+            <item name="Mail hauberk"/>
+            <item name="Soft leather trousers"/>
+            <item name="Soft leather jacket"/>
+            <item name="Metal helm"/>
+            <item name="Riding horse"/>
+        </equipment>
+    </character>
+
+    <character name="Courtier">
+        <description>
+            <socialClass level="+3">Noble</socialClass>
+            <short>
+                A typical noble's son who has no wish to
+                take up warfare but seeks a more relaxed
+                life.
+            </short>
+
+            <background>
+                <para>
+                    You are a courtier, a noble who spends their time
+                    involving themselves in politics, law or running an
+                    estate. You have little interest in martial things,
+                    preferring to leave that to others. You seek a
+                    life of riches and comfort, though that is never
+                    guaranteed.
+                </para>
+            </background>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="3"/>
+                    <skill name="Guile" score="3"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                    <skill name="Heraldry" score="3"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Single weapon" score="2"/>
+                    <skill name="Ride" score="2"/>
+                    <skill name="Etiquette" score="4"/>
+                    <skill name="Politics" score="4"/>
+                    <skill name="Administration" score="3"/>
+                </group>
+            </skills>
+
+            <advantages>
+                <advantage name="Literate" score="4"/>
+            </advantages>
+        </statistics>
+
+        <equipment>
+            <cash value="15d"/>
+            <item name="Good clothes"/>
+            <item name="Dagger"/>
+        </equipment>
+    </character>
+
+    <character name="Lady">
+        <description>
+            <socialClass level="+3">Noble</socialClass>
+            <short>
+                A Lady is the wife or daughter of a nobleman.
+            </short>
+
+            <background>
+                <para>
+                    Noblewomen are for the most part
+                    considered to be there to provide sons
+                    for their husband. However, they are
+                    expected to run their husband's
+                    estates when he is away, to entertain
+                    important guests and ensure the smooth
+                    running of the household.
+                </para>
+
+                <para>
+                    It is not expected that a Lady takes up
+                    arms in place of their husband, however
+                    it is not unknown for this to happen,
+                    and such a thing is considered to be
+                    proper behaviour.
+                </para>
+            </background>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="3"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="4"/>
+                    <skill name="Guile" score="3"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                    <skill name="Law" score="1"/>
+                    <skill name="Heraldry" score="2"/>
+                </group>
+
+                <group name="Profession" type="skills">
+                    <skill name="Handicraft" score="3"/>
+                    <skill name="Administration" score="3"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Ride" score="2"/>
+                    <skill name="Etiquette" score="4"/>
+                    <skill name="Perform" score="2"/>
+                    <skill name="Politics" score="2"/>
+                </group>
+            </skills>
+        </statistics>
+    </character>
 
 </characters>
 
