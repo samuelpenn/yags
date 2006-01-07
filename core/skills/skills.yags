@@ -11,7 +11,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.2 $
+    Version: $Revision: 1.3 $
     Author: Samuel Penn
     -->
 
@@ -49,33 +49,42 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                This skill covers all forms of athletics, gymnastics and
-                acrobatics, including running, jumping and climbing. It is a
-                very broad skill, but it is very rare for a character to be
-                interested in one facet of it, and not the others.
+                This is a broad skill covering all forms of athletics,
+                gymnastics and acrobatics. It does not, however, cover
+                swimming or flying. It is split into the following
+                tasks.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml" task="Running">
             <para>
-                A character can run at their full <e>move</e> score each
-                round. They gain a point of fatigue for every
+                Running represents a light jog which you can keep up for
+                many minutes without too much difficulty. When running,
+                you move a number of metres each round equal to your
+                <t>move</t> score. A point of fatigue is gained every
                 <y:skeq><y:attr>stamina</y:attr><y:sk>athletics</y:sk></y:skeq>
-                minutes of running.
+                minutes you are running.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml" task="Sprinting">
             <para>
-                A character can sprint at a speed equal to their
-                <e>move x 2</e> + <e>athletics</e> each round. A sprinting
-                character gains a level of fatigue each round.
+                Sprinting represents an all out sprint, moving as quickly
+                as you can. You cannot do anything else whilst sprinting,
+                and most people can only sprint for a few rounds before
+                becoming exhausted.
+            </para>
+
+            <para>
+                When sprinting, you may move a distance in metres equal to
+                <t>move</t> x 2 + <e>athletics</e> each round, and gain a
+                point of fatigue each round.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml" task="Jumping">
             <para>
-                Both long jumping and high jumping.
+                Jumping represents both long jumps and high jumps.
             </para>
         </description>
 
@@ -84,6 +93,11 @@
                 Climbing things.
             </para>
         </description>
+
+        <examples>
+            <example target="10">Jumping onto a table</example>
+            <example target="20">Jumping over a table</example>
+        </examples>
     </skill>
 
     <!-- Awareness -->
@@ -144,7 +158,7 @@
             <para>
                 A character may always use the <e>brawl</e> skill to dodge
                 even if they are using a weapon, but they don't get any
-                advantages of the weapon if they do so.
+                bonuses from the weapon if they do so.
             </para>
         </description>
     </skill>
@@ -158,19 +172,10 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The ability to be friendly and sociable. At its most
-                basic, it is a simple charisma skill check since it is not
-                normally resisted. The better the roll, the more well
-                disposed people will be towards the character.
-            </para>
-
-            <para>
-                <e>Charm</e> is charisma based when trying to make
-                a good impression, to cheer someone up, befriend them or
-                get them to open up about a subject they would not normally
-                want to talk about. All difficulties are modified by
-                circumstances (-30 to +30) depending on the initial attitude
-                of those being charmed.
+                A high <e>charm</e> allows you to appear friendly and
+                sociable. It is nearly always based on <t>charisma</t>,
+                and allows you to make a good impression and gain people's
+                interest and trust.
             </para>
 
             <para>
@@ -207,21 +212,14 @@
             <para>
                 Can try to seduce a person. Add appearance to Charisma
                 for purposes of seduction attempts, and resisted with
-                <y:skeq>
-                    <y:attr>Will</y:attr>
-                    <y:sk>temperance</y:sk>
-                </y:skeq>.
+                the target's <t>will</t>.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml" task="Persuade">
             <para>
                 If trying to change someone's mind by emotional arguments,
-                resisted with
-                <y:skeq>
-                    <y:attr>Will</y:attr>
-                    <y:sk>ego</y:sk>
-                </y:skeq>.
+                resisted with the target's <t>will</t>.
             </para>
         </description>
 

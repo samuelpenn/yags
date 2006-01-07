@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 
 <!--
-    Combat techniques.
-    Now split up and moved into the techniques directory.
+    Core techniques.
  -->
 
 <advantages xmlns="http://yagsbook.sourceforge.net/xml/yags">
@@ -13,8 +12,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2006-01-03 19:30:57 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2006-01-07 22:06:35 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -36,11 +35,32 @@
         <cost points="4"/>
         <skill name="Athletics"/>
 
+        <short>Run faster with less fatigue.</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is experienced in long distance running.
-                Those with this technique only need to make fatigue
-                rolls half as often when running (not sprinting).
+                You are an experienced long distance runner, and can add
+                your <e>athletics</e> score to your total movement each
+                round when running. You also gain less fatigue, and can
+                increase the time between gaining fatigue by a multiple
+                for every 4 points of <e>athletics</e> skill (x2 at 4,
+                x3 at 8 etc). This technique does not affect sprinting.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Sprinting" type="technique">
+        <cost points="6"/>
+        <skill name="Athletics"/>
+
+        <prerequisite>Running</prerequisite>
+
+        <short>Gain less fatigue when sprinting.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are an experienced sprinter, and gain fatigue only
+                half as often as other people when sprinting.
             </para>
         </description>
     </advantage>
@@ -598,401 +618,6 @@
         The following don't following the main trees.
     -->
 
-    <advantage name="Shield wall" type="technique">
-        <cost points="2"/>
-        <skill name="Weapon and shield"/>
-        <short>Form a solid defensive wall of shields.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The character is trained in fighting as part of a shield
-                wall. When they are fighting in a shield wall formation,
-                those either side of them that also know this technique
-                gain a bonus to defence rolls equal to this character's
-                <e>weapon and shield</e> score. If a character gains
-                from two people with this technique, they do not stack,
-                and the character only gains the highest.
-            </para>
-
-            <para>
-                <e>Defensive</e> or <e>normal</e> stance, declared.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Shield bash" type="technique">
-        <cost points="4"/>
-        <skill name="Weapon and shield"/>
-        <prerequisite>Shield wall</prerequisite>
-        <short>Can make an extra stunning attack with shield.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Character can use a defence slot to perform a second
-                attack with their shield at the same time as their
-                normal (first) attack. Does <e>stun</e> damage at a
-                bonus equal to their weapon skill.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Shielded attack" type="technique">
-        <cost points="6"/>
-        <skill name="Weapon and shield"/>
-        <prerequisite>Shield bash</prerequisite>
-        <short>Attack penalty due to multiple defences is halved.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If making multiple defences that round, and not fighting
-                defensively, then the character's attack penalty for
-                those defences is halved. Declared.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Secure defence" type="technique">
-        <cost points="8"/>
-        <skill name="Weapon and shield"/>
-        <prerequisite>Shielded attack</prerequisite>
-        <short>Ignore first fumble of the battle.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The first time the character fumbles their defence roll
-                in a battle, they can ignore the fumble. Further, knowing
-                this technique means that <e>Unstoppable attack</e> cannot
-                be used against the character when they are defending
-                with this skill. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Tricky defence" type="technique">
-        <cost points="10"/>
-        <skill name="Weapon and shield"/>
-        <prerequisite>Secure defence</prerequisite>
-        <short>Increase attacker's fumble chance.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If the character rolls a '20' when making a defence roll
-                with this skill, then their attacker is considered to have
-                fumbled their attack. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-
-
-
-
-
-
-    <advantage name="Spearman" type="technique">
-        <cost points="2"/>
-        <skill name="Longshaft weapon"/>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Trained in fighting with long weapons. When fighting
-                defensively with a weapon of longer reach than the
-                opponent, a character normally gets a +3 bonus to defence
-                per point of extra reach. With this technique, the bonus
-                also applies to attack.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Sweep attack" type="technique">
-        <cost points="4"/>
-        <skill name="Longshaft weapon"/>
-        <prerequisite>Spearman</prerequisite>
-        <short>Cause a trip if making a good attack.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                On a <e>good</e> attack, get a free trip attack against
-                the target after damage has been applied. Declared.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Defensive reach" type="technique">
-        <cost points="6"/>
-        <skill name="Longshaft weapon"/>
-        <prerequisite>Sweep attack</prerequisite>
-        <short>Ignore attack penalty if defensive.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                When using a <e>defensive</e> weapon, the defensive stance
-                does not provide any penalty to attack. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Deadly reach" type="technique">
-        <cost points="8"/>
-        <skill name="Longshaft weapon"/>
-        <prerequisite>Defensive reach</prerequisite>
-        <short>Turn a free strike into an automatic strike.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The first time that the character gets a <e>free strike</e>
-                in the round for any reason, then they may consider the
-                extra attack to be an <e>automatic strike</e> as long as
-                they have the advantage of reach. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Impaling attack" type="technique">
-        <cost points="10"/>
-        <skill name="Longshaft weapon"/>
-        <prerequisite>Deadly reach</prerequisite>
-        <short>Damage bonus when using impaling weapons.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If the character is using an impaling weapon, then they
-                get a +3 bonus to damage for each extra level of success
-                when making an attack. Declared.
-            </para>
-        </description>
-    </advantage>
-
-
-
-
-    <advantage name="Finesse" type="technique">
-        <cost points="2"/>
-        <skill name="Single weapon"/>
-
-        <short>+5 to attack, -5 to damage.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Character can choose to attack with speed and finesse
-                rather than power, getting a +5 to their attack but
-                suffering a -5 to the damage they do.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Acrobatic attack" type="technique">
-        <cost points="4"/>
-        <skill name="Single weapon"/>
-        <prerequisite>Finesse</prerequisite>
-
-        <short>Bonus when making performing a stunt.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                When performing a stunt before making an attack, the
-                character can gain a bonus to the athletics roll
-                equal to their <e>single weapon</e> skill. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Acrobatic dodge" type="technique">
-        <cost points="6"/>
-        <skill name="Single weapon"/>
-
-        <prerequisite>Acrobatic attack</prerequisite>
-
-        <short>Increases base soak.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Character is able to dodge away from blows, lessening the
-                impact of their strike. They gain a bonus to their soak
-                equal to their agility as long as they are unencumbered.
-                Automatic, as long as they are aware of the attack.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Acrobatic defence" type="technique">
-        <cost points="8"/>
-        <skill name="Single weapon"/>
-        <prerequisite>Acrobatic dodge</prerequisite>
-
-        <short>Increase difficulty to be hit.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                As long as the character is unencumbered, they can make
-                use of their skill to avoid attacks, increase the base
-                target number to hit them by their <e>Single weapon</e>
-                skill, as long as they are aware of the attack.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Counterstrike" type="technique">
-        <cost points="10"/>
-        <skill name="Single weapon"/>
-        <prerequisite>Acrobatic defence</prerequisite>
-
-        <short>Strike back at an attacker.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If the character makes a <e>good</e> defence, then they get
-                an immediate <e>free strike</e> against their attacker as
-                long as neither are defensive. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Greater range" type="technique">
-        <cost points="2"/>
-        <skill name="Missile"/>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Add +1 to strength for purposes of maximum range of a
-                thrown weapon.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Fire into melee" type="technique">
-        <cost points="4"/>
-        <skill name="Missile"/>
-
-        <prerequisite>Greater range</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Character is skilled at firing into combat. The increase
-                to the fumble chance when doing so is halved (generally
-                +1 per extra possible target instead of +2).
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Deadly shot" type="technique">
-        <cost points="6"/>
-        <skill name="Missile"/>
-
-        <prerequisite>Fire into melee</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Declared before an attack, there is a -10 to the attack
-                roll. If the target is successfully wounded, then they must
-                make a size x stamina roll against a target of 10 +
-                5 x wounds (not stuns) caused or immediately drop to be
-                fatally wounded.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Fast shot" type="technique">
-        <cost points="2"/>
-        <skill name="Bow"/>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The character is quick at using a short or long bow. An
-                arrow can be loaded and fired in a single round, and is
-                considered a normal (not slow) initiative action.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Improved pull" type="technique">
-        <cost points="4"/>
-        <skill name="Bow"/>
-
-        <prerequisite>Fast shot</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Due to extensive training with arm muscles, the archer
-                gets +1 to their strength for purposes of using a longbow
-                for every four points of <e>Bow</e> skill.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Improved aim" type="technique">
-        <cost points="6"/>
-        <skill name="Bow"/>
-
-        <prerequisite>Improved pull</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Character is exceptionally skilled at firing a long or
-                short bow. If a full round is spent aiming, then the
-                character can halve all range and circumstance penalties.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Spear catching" type="technique">
-        <cost points="2"/>
-        <skill name="Throw"/>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If the character makes a good brawl defence roll to dodge
-                a spear or javelin, and they have an empty hand, then they
-                may catch the weapon with a dexterity x throw check of 20+.
-                The catch attempt must be declared before the defence is
-                made.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Improved spear catching" type="technique">
-        <cost points="4"/>
-        <skill name="Throw"/>
-        <prerequisite>Spear catching</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                As for spear catching, plus the character can throw the
-                spear the same round instead of their normal attack action,
-                assuming they still have an attack left that round.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Mounted combat" type="technique">
-        <cost points="2"/>
-        <skill name="Ride"/>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                A character with <e>mounted combat</e> does not have to make
-                a <e>ride</e> check whenever they attack from horseback.
-                Further, they get a bonus equal to their <e>ride</e> skill
-                which applies to melee attack, defence and damage rolls
-                made when mounted.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Mounted archery" type="technique">
-        <cost points="4"/>
-        <skill name="Ride"/>
-
-        <prerequisite>Mounted combat</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                A character with <e>mounted archery</e> does not suffer the
-                doubling of effective range when using missile weapons from
-                the back of a moving mount. Further, they do not have to
-                make a <e>ride</e> roll in order to make a missile attack.
-            </para>
-        </description>
-    </advantage>
 
     <advantage name="Direction sense" type="technique">
         <cost points="2"/>
@@ -1125,7 +750,7 @@
         <cost points="4"/>
         <skill name="Survival"/>
 
-        <description xmlns="http://yagsbook.sourceforge.net">
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You have experience with surviving in arctic conditions.
                 If you do not have this technique, then there is an
@@ -1139,7 +764,7 @@
         <cost points="4"/>
         <skill name="Survival"/>
 
-        <description xmlns="http://yagsbook.sourceforge.net">
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You have experience with surviving in desert conditions.
                 If you do not have this technique, then there is an
@@ -1153,7 +778,7 @@
         <cost points="4"/>
         <skill name="Survival"/>
 
-        <description xmlns="http://yagsbook.sourceforge.net">
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You have experience with surviving in jungle conditions.
                 If you do not have this technique, then there is an
