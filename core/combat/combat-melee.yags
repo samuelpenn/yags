@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.3 $</version>
-            <date>$Date: 2006-01-02 11:27:58 $</date>
+            <version>$Revision: 1.4 $</version>
+            <date>$Date: 2006-01-08 19:28:05 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -936,27 +936,68 @@
                         in a single round, though other actions cannot
                         be taken that round.
                     </para>
+                </sect3>
+
+                <sect3>
+                    <title>Re-evaluating Initiative</title>
 
                     <para>
-                        A character may attempt to put a weapon away at
-                        the end of a round (after their attack, and after
-                        all defences have been made) by making a
-                        <y:skeq>
-                            <y:attr>dexterity</y:attr>
-                            <y:sk>weapon skill</y:sk>
-                        </y:skeq>
-                        check against a difficulty of 15 + 5 * reach of
-                        the weapon.
+                        If you got a really bad initiative, you may spend
+                        the round re-rolling it. This takes the entire
+                        round, and you may not move, attack nor defend
+                        that round. At the end of the round, roll initiative
+                        again and keep whatever is rolled.
                     </para>
                 </sect3>
+
+                <sect3>
+                    <title>Retreat</title>
+
+                    <para>
+                        If things are going really bad, then you may want
+                        to start considering retreating from combat. If
+                        you use the <e>defensive stance</e>, and give
+                        ground to your attacker, you can gain a bonus to
+                        your defense rolls.
+                    </para>
+
+                    <para>
+                        You may retreat up to a number of metres equal to
+                        your agility, and each metre gives a +3 bonus to
+                        your defence roll. However, you may not make any
+                        attacks that turn.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Stunts</title>
+
+                    <para>
+                        If the situation allows it, then you may attempt
+                        to take advantage of the scenary to give yourself
+                        an advantage in an attack by performing a
+                        <e>stunt</e>. A <e>stunt</e> may be as simple as
+                        leaping straight at your foe, or as complex as
+                        jumping over a bannister or swinging on a rope.
+                    </para>
+
+                    <para>
+                        The base difficulty of the stunt depends on how
+                        useful a stunt it actaully is. An
+                        <y:skeq>
+                            <y:attr>agility</y:attr>
+                            <y:sk>athletics</y:sk>
+                            <die/>
+                        </y:skeq>
+                        check is made, and if it succeeds it can be
+                        immediately followed by the attack roll. If it
+                        fails, then the attack is considered to be a
+                        fumble. Stunts are always <e>slow</e> actions.
+                    </para>
+                </sect3>
+
             </sect2>
-
         </sect1>
-
-
-
-
-
 
         <sect1>
             <title>Advanced Combat</title>
@@ -965,41 +1006,11 @@
                 <title>Special Actions</title>
 
                 <sect3>
-                    <title>Retreating defence</title>
-
-                    <para>
-                        If a character is willing to give ground, then
-                        they can gain a bonus to their defence if they
-                        are using the <e>defensive stance</e>. They
-                        can move backwards (away from their attacker)
-                        up to a number of metres equal to their agility.
-                        Each metre gives +3 to their defence roll,
-                        however they may not make any attacks.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Acrobatic stunts</title>
-
-                    <para>
-                        A character can attempt an acrobatic stunt in
-                        order to surprise their foe and gain an advantage.
-                        A stunt may be as simple as leaping straight at
-                        their foe, or as complex as jumping over a
-                        bannister and onto a rope, then striking as they
-                        swing back.
-                    </para>
-
                     <para>
                         The base difficulty of the action depends on how
                         tactically appropriate it is. Leaping onto someone
                         from above is appropriate for example. The check is
                         made with
-                        <y:skeq>
-                            <y:attr>agility</y:attr>
-                            <y:sk>athletics</y:sk>
-                            <die/>
-                        </y:skeq>
                     </para>
 
                     <targetlist targetFirst="false" bold="true">

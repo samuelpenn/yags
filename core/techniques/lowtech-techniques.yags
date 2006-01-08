@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2006-01-07 22:06:35 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2006-01-08 19:28:05 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -109,7 +109,8 @@
             <para>
                 If the character rolls a '20' when making a defence roll
                 with this skill, then their attacker is considered to have
-                fumbled their attack. Automatic.
+                fumbled their attack unless they have <e>Secure defence</e>
+                or <e>unstoppable attack</e>. Automatic.
             </para>
         </description>
     </advantage>
@@ -240,8 +241,9 @@
             <para>
                 Character is able to dodge away from blows, lessening the
                 impact of their strike. They gain a bonus to their soak
-                equal to their agility as long as they are unencumbered.
-                Automatic, as long as they are aware of the attack.
+                equal to their agility (modified by encumbrance and
+                armour). Automatic, as long as they are aware of the
+                attack.
             </para>
         </description>
     </advantage>
@@ -258,7 +260,8 @@
                 As long as the character is unencumbered, they can make
                 use of their skill to avoid attacks, increase the base
                 target number to hit them by their <e>Single weapon</e>
-                skill, as long as they are aware of the attack.
+                skill, as long as they are aware of the attack. This
+                does stack with <e>Reflex dodge</e>.
             </para>
         </description>
     </advantage>
@@ -329,9 +332,11 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is quick at using a short or long bow. An
-                arrow can be loaded and fired in a single round, and is
-                considered a normal (not slow) initiative action.
+                You are have sufficient practise with loading and firing
+                a bow that you can do it quicker than normal. The usual
+                load time of a bow is reduced by one. If this takes it
+                below zero, then the bow can be loaded and fired as a
+                normal action.
             </para>
         </description>
     </advantage>
@@ -421,6 +426,21 @@
                 doubling of effective range when using missile weapons from
                 the back of a moving mount. Further, they do not have to
                 make a <e>ride</e> roll in order to make a missile attack.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Grab" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+
+        <prerequisite>Wrestling</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                With this technique you can make a grab for something
+                being held by your opponent, such as a weapon or key,
+                without invoking a <e>free strike</e>.
             </para>
         </description>
     </advantage>
