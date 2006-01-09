@@ -8,7 +8,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.2 $
+    Version: $Revision: 1.3 $
     Author: Samuel Penn
 -->
 
@@ -18,6 +18,7 @@
             techniques="options/techniques.yags">
 
     <groups>
+        <group>General</group>
         <group>Science</group>
         <group>Combat</group>
         <group parent="Combat">Firearms</group>
@@ -27,8 +28,119 @@
         <group>Sport</group>
     </groups>
 
+    <skill name="Accountancy" type="skill">
+        <group>Business</group>
+        <default>Administration</default>
 
+        <short>Managing finances.</short>
 
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Accountancy provides you with the knowledge of how to
+                manage the finances of a business or organisation.
+                It includes knowledge of tax laws, legal requirements
+                and how to use common tools (including computers) needed
+                to do your job.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Archaeology" type="knowledge">
+        <group>Academic</group>
+
+        <short>How to dig up ruins.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This skill is mostly about digging up the ruins of
+                ancient civilisations, and covers the practical
+                skills needed to find, recognise and preserve items,
+                as well as basic management - social, equipment
+                and legal. It does also include knowledge of how to
+                identify and date ruins, as well as general knowledge
+                of specific civilisations. However, detailed
+                knowledge of ancient history requires the <e>History</e>
+                skill.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Architecture" type="knowledge">
+        <group>Craft</group>
+
+        <short>How to design buildings.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill and knowledge required to design buildings,
+                from simple houses up to huge cathedrals. Larger
+                constructs may require knowledge of techniques in
+                order to stand much chance of success.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Bicycling" type="skill">
+        <group>Sport</group>
+        <default>Athletics</default>
+
+        <short>Being able to ride a bycle well.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Riding a bicycle well. Most people in a modern setting
+                probably learnt to ride a bike at some point, and so
+                this skill defaults to <e>athletics</e>. If you have
+                practised stunts or mounting biking in harsh conditions,
+                then you probably have this skill however.
+            </para>
+        </description>
+
+        <examples>
+            <example target="5">Riding a bicycle in good conditions.</example>
+        </examples>
+    </skill>
+
+    <skill name="Skiing" type="skill">
+        <group>Sport</group>
+        <default>Athletics</default>
+
+        <short>Using skies.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of skiing. Includes practical experience, as well
+                as knowledge of identifying poor conditions.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Drive" type="skill">
+        <group>General</group>
+
+        <short>Driving a car or similar vehicle.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of driving a car or similar sized vehicle.
+                Larger vehicles (lorry, tank) use this skill, though
+                may require techniques for competence.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Pilot" type="skill">
+        <group>General</group>
+
+        <short>Piloting a powered aircraft.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of piloting a powered aircraft. By default it
+                assumes a small low performance aircraft.
+            </para>
+        </description>
+    </skill>
 
     <skill name="Science" type="knowledge">
         <group>Academic</group>
@@ -70,6 +182,21 @@
                 children with a Western education will have some
                 knowledge of Mathematics after leaving school, though
                 it's likely to be only a couple of points.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Cryptography" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <prerequisite>Mathematics</prerequisite>
+
+        <short>Designing and using cyphers.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Using and designing cyphers.
             </para>
         </description>
     </skill>
@@ -148,6 +275,19 @@
             <para>
                 Biology is a particular branch of <e>Science</e>, and
                 covers the study of living things.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Medicine" type="knowledge">
+        <group>Science</group>
+
+        <short>Diagnosis and healing.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of diagnosing illnesses, and knowing what to
+                do to cure an illness.
             </para>
         </description>
     </skill>
@@ -336,6 +476,36 @@
             <para>
                 It is not primarily about breaking into computers,
                 though this skill is required if that is the intent.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Security" type="skill">
+        <group>Technical</group>
+
+        <short>Electronic surveillance and security.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Experience with all forms of security and surveillance
+                gear, including cameras, locks, wiretaps and alarms.
+                It covers setting them up, managing them and avoiding
+                them.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Communications" type="skill">
+        <group>Technical</group>
+
+        <short>Knowledge of communications gear.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The use of all forms of eletronic communication
+                systems, including protocols. Covers radios, phones,
+                laser comm devices, satallite etc. May also cover
+                basic encryption, detection and spoofing.
             </para>
         </description>
     </skill>
