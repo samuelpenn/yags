@@ -21,8 +21,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2005-12-22 22:00:52 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2006-01-09 20:47:05 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -40,13 +40,42 @@
 
     <body>
         <sect1>
-            <title>Building a Character</title>
+            <title>Yags Modern</title>
 
             <para>
                 <e>Yags Modern</e> concerns itself with the modern era,
                 from around the time of the 19th century to the 21st
-                and onwards.
+                and onwards. The rules given here are genre neutral,
+                and designed to be simple and flexible.
             </para>
+
+            <para>
+                It is assumed that you have already read <e>Yags Core</e>,
+                since the basic concepts are covered in more detail there.
+            </para>
+        </sect1>
+
+        <sect1>
+            <title>Building a Character</title>
+
+            <para>
+                Designing a character for <e>Yags Modern</e> is a
+                relatively straightforward process. As always, you will
+                need a character concept before hand, which will depend
+                on the type of campaign being run by the GM, the type
+                of characters everybody else is taking, and your
+                personal preference.
+            </para>
+
+            <sect2>
+                <title>Attributes</title>
+
+                <para>
+                    All attributes default to a score of 3. You may raise
+                    up to two attributes to 4, but each attribute raised
+                    requires another to be lowered to 2.
+                </para>
+            </sect2>
         </sect1>
 
         <sect1>
@@ -55,13 +84,20 @@
             <sect2>
                 <title>Skill list</title>
 
-                <y:list-skills href="options/modern-skills.yags"/>
+                <y:list-skills>
+                    <y:skills>../core/skills/modern-skills.yags</y:skills>
+                </y:list-skills>
             </sect2>
 
             <sect2>
                 <title>Skill descriptions</title>
 
-                <y:import-skills href="options/modern-skills.yags"/>
+                <y:import-skills>
+                    <y:skills>../core/skills/modern-skills.yags</y:skills>
+
+                    <y:techniques>../core/techniques/techniques.yags</y:techniques>
+                    <y:techniques>../core/techniques/modern-techniques.yags</y:techniques>
+                </y:import-skills>
             </sect2>
         </sect1>
     </body>
