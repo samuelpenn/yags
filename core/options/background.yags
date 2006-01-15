@@ -2,16 +2,49 @@
 
 <advantages xmlns="http://yagsbook.sourceforge.net/xml/yags">
 
-    <advantage name="Age" type="background">
-        <cost points="-2" levels="1" max="9"/>
+    <advantage name="Contacts" type="background">
+        <cost points="+1"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Starting age is one year older than normal for each level of
-                this disadvantage. Standard starting age is 16. Maximum
-                starting age is 25. This disadvantage allows more skills and
-                other advantages to be purchased. A starting age above 25
-                does not grant any further points.
+                You have friends in powerful places, who may do you
+                favours on occasion. They will rarely intercede
+                directly on your behalf, but they may provide
+                information, or introductions.
+            </para>
+
+            <para>
+                Choose a group of people to have the contacts in.
+                It may be the underworld, a noble house, a city,
+                a profession.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Allies" type="background">
+        <cost points="+3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are allied with a small group of people who will
+                sometimes aid you when asked. The smaller the group,
+                the more likely they are to aid you. Aid may be in
+                the form of information, or direct physical
+                involvement.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Enemy" type="background">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have made (or inherited) enemies in the past, and
+                they still have a grudge against you. Choose a single
+                group or organisation as a long term enemy. The larger
+                and more powerful the group, the less likely they are
+                to send someone after you.
             </para>
         </description>
     </advantage>
@@ -22,12 +55,11 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has a criminal past, and has been caught and
-                punished for it. In a modern society, the character will
-                have a criminal record. In a low tech society, they may well
-                carry a brand which marks them as a criminal. In either
-                case, those that recognise them as a criminal will probably
-                react badly (though other criminals may react positively).
+                You have performed criminal acts in the past, and have
+                been caught and punished for it. Depending on the
+                setting, you have a reputation, criminal record or
+                disfigurment resulting from this. People who recognise
+                you for what you are will probably react badly to you.
             </para>
 
             <para>
@@ -40,121 +72,144 @@
 
     <advantage name="Dark secret" type="background">
         <cost points="-1"/>
-        <cost points="-3"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has a secret in their past which they do not
-                want found out, for others would react badly to the
-                character if they knew. Optionally, the character himself
-                may not know, and it may be somethig in the character's
-                ancestry. In this case, the player should choose the cost,
-                and it is up to the GM to decide the details.
-            </para>
-
-            <para>
-                The lower cost applies to secrets which would be more of
-                an embarresment than anything else. People may view the
-                character with suspician, but not much else. They would not
-                form a lynch mob to try and burn the character at the stake
-                for example. That is reserved for the higher cost of this
-                disadvantage.
+                You have a secret in your past which would cause serious
+                problems for you if it were found out. It may be a crime
+                that you have committed, or a secret of your ancestry
+                which you do not want others to know. Revealing the
+                secret to the public would make your life very
+                difficult.
             </para>
         </description>
     </advantage>
 
     <advantage name="Favours" type="background">
-        <cost points="-2"/>
+        <cost points="-1"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character owes favours to a person, who will call them
-                in at some point. Repaying the favours should not be a
-                great hardship, but ignoring them will gain the character
-                a powerful enemy.
+                You owe favours to a single person who will call them in
+                at some point. Repaying the favours should not be a
+                great hardship, but will create you an enemy (and maybe
+                give you a bad reputation) if you fail to honour your
+                debt.
             </para>
         </description>
     </advantage>
 
     <advantage name="Owed a favour" type="background">
-        <cost points="+3"/>
-        <cost points="+6"/>
+        <cost points="+1"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character is owed a favour by an influential person, such as
-                a powerful lord, rich merchant or criminal boss. If they're
-                willing to risk their life or reputation in order to repay
-                the debt, then it's +6, otherwise it's +3.
+                You are owed a favour by a powerful and influential
+                person. They will not be willing to risk their life
+                and reputation for you, but they will provide aid
+                and influence - once.
             </para>
         </description>
     </advantage>
 
+    <advantage name="Poor" type="background">
+        <cost points="-3"/>
 
-    <advantage name="Wealth" type="background">
-        <cost points="varies"/>
+        <forbiddon>Wealthy</forbiddon>
+        <forbiddon>Rich</forbiddon>
+        <forbiddon>Very rich</forbiddon>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Wealth provides the character with more (or less) starting
-                resources. As standard, a character will probably have
-                somewhere to live, clothes and food. In a modern society,
-                the character will probably own a car.
+                You start the game poor. What you own will be of low
+                quality, worn and probably second hand. You will have
+                little or no spare cash initially, and in a modern
+                setting you will probably be seriously in debt.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Wealthy" type="background">
+        <cost points="+3"/>
+
+        <forbiddon>Poor</forbiddon>
+        <forbiddon>Rich</forbiddon>
+        <forbiddon>Very rich</forbiddon>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are wealthy, and obviously so. What you own is of
+                good quality, and you have significantly more starting
+                money available to you (about five to ten times). You
+                probably also own good property, and have no debts.
             </para>
 
             <para>
-                Wealth does not guarantee an income, however the wealth can
-                be invested such that an income is provided. In a low tech
-                culture, wealth will nearly always take the form of land
-                which by its nature provides income (such land will often
-                come with peasantry). In a high tech culture, wealth may
-                be invested in property, a business or the financial
-                markets, any of which may provide a steady (or not so
-                steady) income. If land ownership requires social rank,
-                then this is not provided by this advantage, and is a
-                prerequisite for it.
+                You cannot afford to just go out and buy anything, and
+                you need an income to support your lifestyle. In a
+                modern setting, you have a total worth of around half
+                a million pounds (including house, cars and savings).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Rich" type="background">
+        <cost points="+5"/>
+
+        <forbiddon>Poor</forbiddon>
+        <forbiddon>Wealthy</forbiddon>
+        <forbiddon>Very rich</forbiddon>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are rich, to the point that you could comfortably
+                live the rest of your life without needing any income,
+                though you'd probably have to live carefully. You
+                have very good property, excellent clothes and
+                equipment and plenty of savings.
             </para>
 
-            <targetlist bold="true">
-                <targetLabel>Cost</targetLabel>
-                <valueLabel>Starting wealth</valueLabel>
+            <para>
+                In a modern setting, your total net worth is around
+                five to ten million pounds, and you will have a
+                reasonable income from investments.
+            </para>
 
-                <item target="-3" value="Very poor (x1/5).">
-                    The character only has a fifth of the normal starting
-                    wealth for the campaign.
-                </item>
+            <para>
+                In a low technology setting, you will have a large
+                estate, many servants, horses and fine and exotic
+                equipment and furnishings.
+            </para>
+        </description>
+    </advantage>
 
-                <item target="-1" value="Poor (x1/2).">
-                    The character has only half the normal starting wealth
-                    for the campaign.
-                </item>
+    <advantage name="Very rich" type="background">
+        <cost points="+10"/>
 
-                <item target="+2" value="Comfortable (x3).">
-                    The character has thrice the normal starting wealth for
-                    the campaign.
-                </item>
+        <forbiddon>Poor</forbiddon>
+        <forbiddon>Wealthy</forbiddon>
+        <forbiddon>Rich</forbiddon>
 
-                <item target="+4" value="Wealthy (x10).">
-                    The character has ten times the normal starting wealth
-                    for the campaign. The character is noticeably richer
-                    than other people, though not extravagently so.
-                </item>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are very rich, one of the richest people in the
+                land. In a modern setting, you have a net worth in
+                the low billions.
+            </para>
+        </description>
+    </advantage>
 
-                <item target="+6" value="Rich (x50).">
-                    The character has fifty times the normal starting
-                    wealth for the campaign. The character is probably
-                    quite well known
-                </item>
+    <advantage name="Linguist" type="background">
+        <cost points="+1"/>
 
-                <item target="+10" value="Very rich (x500).">
-                    The character has five hundred times the normal starting
-                    wealth for the campaign. The character is very probably
-                    a very influential person.
-                </item>
-            </targetlist>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have knowledge of other languages. You may
+                start with another language at 4. You may take
+                this advantage as many times as you want, each
+                time with a different language.
+            </para>
         </description>
     </advantage>
 
 </advantages>
-
-

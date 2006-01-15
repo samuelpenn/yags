@@ -3,8 +3,8 @@
 <!--
     These list generic advantages and disadvantages,
 
-    Version: $Revision: 1.14 $
-    Date:    $Date: 2005-12-20 18:01:05 $
+    Version: $Revision: 1.15 $
+    Date:    $Date: 2006-01-15 11:32:48 $
     Author:  Samuel Penn (sam@glendale.org.uk)
 
 -->
@@ -17,9 +17,10 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has one attribute at level 4 rather than 3.
-                This advantage can be taken multiple times on different
-                attributes.
+                You are above average in one attribute of your choice,
+                and have a score of 4, rather than 3, in it. You may
+                take this advantage multiple times, each time on a
+                different attribute.
             </para>
         </description>
     </advantage>
@@ -32,9 +33,10 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is truly exceptional in one attribute, and
-                can raise it from four to five. The character must
-                already have taken <e>Good attribute</e> in this attribute.
+                You are exceptionally good at one attribute of your
+                choice, which you must have already taken
+                <e>Good attribute</e> in. You may take this multiple
+                times, each time with a different attribute.
             </para>
         </description>
     </advantage>
@@ -45,8 +47,10 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has very good hearing, and gains a bonus
-                of +1 to their perception for purposes of hearing.
+                You have exceptional hearing, and gain a +1 bonus to
+                your <t>Perception</t> when making hearing checks.
+                When fighting in total darkness in close combat,
+                your <t>Perception</t> has a minimum of 1.
             </para>
         </description>
         <forbiddon>Poor hearing</forbiddon>
@@ -58,13 +62,23 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Gain a bonus to vision rolls to see things at a distance.
-                Any perception roll where the character is not working at
-                close range (e.g. looking for a trap) they get +1 to their
-                perception attribute.
+                You have exceptional vision, and gain a +1 bonus to
+                your <t>Perception</t> when making vision checks.
+                It does not grant a bonus for ranged attacks.
             </para>
         </description>
         <forbiddon>Poor vision</forbiddon>
+    </advantage>
+
+    <advantage name="Iron constitution" type="advantage">
+        <cost points="+1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have a particularly hardy consitition, and gain +1
+                to your <t>Stamina</t> to resist all forms of poison.
+            </para>
+        </description>
     </advantage>
 
     <advantage name="Musical talent" type="advantage">
@@ -73,9 +87,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has a natural talent with music, and gains
-                a +1 bonus to charisma or intelligence when playing a
-                musical instrument or composing for one.
+                You have a natural talent with music, and gain a +1 bonus
+                to <t>Charisma</t> or <t>Intelligence</t> when playing a
+                musical instrument, or composing for one.
             </para>
         </description>
         <forbiddon>Can't sing</forbiddon>
@@ -87,9 +101,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character is particularly adept at seeing in the dark.
-                All penalties to perception for darkness (except for full
-                darkness) are reduced by one.
+                You have particularly good night vision, and the
+                <t>Perception</t> penalty for darkness is reduced by
+                one except in total darkness.
             </para>
         </description>
     </advantage>
@@ -100,10 +114,11 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has exceptional beauty, and gets a +1 bonus
-                to their charisma when trying to charm or persuade someone
-                who finds them attractive. The character is also easy to
-                recognise.
+                You are exceptionally beautiful, and gain a +1 bonus to
+                your <t>Charisma</t> when trying to charm or persuade
+                somebody who may be sexually attracted to you. Being
+                beautiful also makes you easier to recognise. This does
+                not stack with <e>Voice</e>.
             </para>
         </description>
         <forbiddon>Ugly</forbiddon>
@@ -115,27 +130,13 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has a very clear and pleasant voice, getting
-                a +1 bonus to charisma when singing, orating or reading
-                poetry. This does not stack with similar advantages such
-                as <e>Beautiful</e>.
+                You have a clear and pleasant voice, and gain a +1 bonus
+                to <t>Charisma</t> when singing, orating or otherwise
+                entertaining with the sound of your voice. This does
+                not stack with <e>Beautiful</e>.
             </para>
         </description>
         <forbiddon>Can't sing</forbiddon>
-    </advantage>
-
-    <advantage name="Language talent" type="advantage">
-        <cost points="+3"/>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The character is adept at picking up new languages
-                quickly. Any experience placed on language skills
-                (excluding the starting score in speak own language) is
-                doubled. If <e>literate</e> has been taken, this also
-                affects written languages.
-            </para>
-        </description>
     </advantage>
 
     <advantage name="Literate" type="advantage">
@@ -143,22 +144,18 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character can read and write any languages they can
-                speak. The character starts with a scribe score equal to
-                the score of each language skill they start with.
-                Languages gained during play are not affected.
+                You may read and write any language you begin with. You
+                may take a scribe skill in a language equal to your
+                speak for that language for free. Languages gained
+                during play are not affected. At the GM's option, this
+                may not apply to some languages (especially those which
+                have no known written form).
             </para>
 
             <para>
                 In a campaign where literacy is common, this advantage
                 is had by everyone for free, unless <e>illiterate</e>
                 is taken.
-            </para>
-
-            <para>
-                This advantage does not affect languages which have no
-                written form, or dead languages which may have no known
-                spoken form.
             </para>
         </description>
     </advantage>
@@ -168,9 +165,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is particulary tough and resilient to
-                damage, and gains a +3 bonus to their basic soak
-                (15 instead of 12) to resist all forms of damage.
+                You are particularly tough and resilient to damage. You
+                have a +3 bonus to your basic soak to resist all forms
+                of damage.
             </para>
         </description>
     </advantage>
@@ -178,17 +175,16 @@
     <advantage name="Heavily built" type="advantage">
         <cost points="+3"/>
 
+        <prerequisite>Good attribute (Strength)</prerequisite>
+        <forbiddon>Small</forbiddon>
+        <forbiddon>Looks young</forbiddon>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is heavily built, being tougher and broader
-                than normal. They get a +5 bonus to their soak against
-                <e>stun</e> damage, and get a +1 bonus to strength for
-                purposes of knockdown, being tripped and the like.
-            </para>
-
-            <para>
-                The character must have a strength of at least four in
-                order to take this advantage.
+                You are heavily built, being tougher and broader than
+                normal. You get a +5 bonus to your soak versus all
+                <e>stun</e> attacks, plus a +1 bonus to <t>Strength</t>
+                for purposes of resisting knockdown, or being tripped.
             </para>
         </description>
     </advantage>
@@ -198,9 +194,8 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character suffers no penalty for performing actions
-                with her off hand. This does not affect <e>two weapon
-                fighting</e>.
+                You suffer no penalty for performing actions with your
+                off hand.
             </para>
         </description>
     </advantage>
@@ -209,13 +204,16 @@
     <advantage name="Large" type="advantage">
         <cost points="+5"/>
 
+        <prerequisite>Good attribute (strength)</prerequisite>
+        <forbiddon>Small</forbiddon>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is much larger than normal, being well built
-                and tall. He has a size of six, and has one more body level
-                than normal. Such a person must also take a strength of at
-                least four. In combat, any attacks they make which have a
-                reach of zero of one, count as being one reach longer.
+                You tower above other people, being taller and heavier
+                than the norm. You have a <t>Size</t> of 6, which grants
+                you an extra body level. In combat, any attacks that
+                you make which have a reach of zero count as having a
+                reach of one.
             </para>
         </description>
     </advantage>
@@ -225,11 +223,12 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has the ability to tell a person's nature
-                when they first meet. A raw Charisma check is made, and
-                on a 20+ the general personality of the character can be
-                'read', giving an indication to how trustworthy, kind
-                or honourable they are.
+                You have the ability to tell a person's nature on first
+                meeting them. A <t>Charisma</t> check is made, and on
+                a 20+ the general personality of the person can be
+                read, giving an indication to how trustworth, kind or
+                honourable they are. Each extra level of success provides
+                another item of information.
             </para>
         </description>
     </advantage>
@@ -239,8 +238,31 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is particularly quick on their feet,
-                and gains a +2 bonus to their basic move.
+                You are particularly quick on your feet, and gain a +2
+                bonus to your basic move score.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Reflexes" type="advantage">
+        <cost points="+1"/>
+
+        <description xmlns="http://yagsbook.souceforge.net/xml">
+            <para>
+                You have a +1 bonus to agility for purposes of
+                initiative.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Animal empathy" type="advantage">
+        <cost points="+1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have a natural ability to get on well with
+                animals. All animals react well to you, and have
+                their reaction shifted to one better category.
             </para>
         </description>
     </advantage>
@@ -253,9 +275,11 @@
     <advantage name="Poor attribute" type="disadvantage">
         <cost points="-3"/>
 
+        <forbiddon>Good attribute (same attribute)</forbiddon>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                One of the character's attributes has a score of two.
+                You have a score of two in one of your attributes.
                 This disadvantage may be taken multiple times, but
                 only once for any given attribute.
             </para>
@@ -266,18 +290,13 @@
     <advantage name="Albino" type="disadvantage">
         <cost points="-1"/>
 
+        <forbiddon>Exotic appearance</forbiddon>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is an albino. Skin and hair are white,
-                and eyes are pink. They will often suffer sun burn in
-                bright sunlight, and suffer double range penalties in
-                daylight.
-            </para>
-
-            <para>
-                An albino may find others reacting badly to him on first
-                sight, especially by those who are superstitious or
-                paranoid about strangers.
+                You are an albino. Your skin and hair are white and your
+                eyes are pink. You risk suffering sub burn in moderate
+                sunlight, and may find that others react badly to you due
+                to your unusual appearance.
             </para>
         </description>
     </advantage>
@@ -288,7 +307,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has no sense of taste nor smell.
+                You have no sense of taste or smell.
             </para>
         </description>
     </advantage>
@@ -297,13 +316,18 @@
     <advantage name="Blind" type="disadvantage">
         <cost points="-5"/>
 
+        <forbiddon>Poor vision</forbiddon>
+        <forbiddon>Keen hearing</forbiddon>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is completely blind. This disadvantage
-                cannot be combined with any other that affects sight.
+                You are completely blind. Your blindness means that you
+                have come to rely on your other senses more, and you
+                gain all the benefits of <e>Keen hearing</e>.
+                This disadvantage cannot be combined with any other that
+                affects sight.
             </para>
         </description>
-        <forbiddon>Poor vision</forbiddon>
     </advantage>
 
 
@@ -312,10 +336,10 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character cannot act in the first round of combat, due
-                to fear and indecision. If they have surprise, then they
-                gain no advantage from the surprise. They still roll
-                initiative as normal, and a fumble means that they are
+                You are fearful and indecisive, and react poorly in combat.
+                You are unable to act in the first round of combat. If
+                you have surprise, then you do not get any benefit from
+                the surprise. A fumbled initiative means that you are
                 indecisive for two rounds.
             </para>
         </description>
@@ -327,10 +351,10 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character does not know how to read or write, and
-                cannot start with any reading or writing skills in any
-                language. This disadvantage can only be taken in a
-                campaign where literacy is considered the norm.
+                You do not know how to read or right, and do not
+                start with reading or writing skills in any language.
+                This disadvantage can only be taken in a setting where
+                literacy is the norm.
             </para>
         </description>
     </advantage>
@@ -340,10 +364,11 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is unable to count above ten, and even that
-                requires the use of fingers and thumbs. Arithmetic is very
-                difficult, and estimating numbers of things is incredibly
-                difficult for groups larger than three.
+                You have never learnt to count, and have great difficulty
+                with numbers above ten (since you run out of fingers at
+                this point). Arithmetic is very difficult, and estimating
+                numbers of things is incredibly difficult for groups
+                larger than three.
             </para>
         </description>
     </advantage>
@@ -364,11 +389,12 @@
     <advantage name="Noticeable mark" type="disadvantage">
         <cost points="-1"/>
 
+        <forbiddon>Exotic appearance</forbiddon>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has a strange and obvious mark on their
-                body which makes they easy to recognise, but doesn't
-                otherwise affect their appearance.
+                You have a strange and obvious mark on your body which
+                makes you easy to recognise.
             </para>
         </description>
     </advantage>
@@ -376,6 +402,8 @@
 
     <advantage name="Sexually tantalising" type="disadvantage">
         <cost points="-3"/>
+
+        <prerequisite>Beautiful</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -413,6 +441,10 @@
     <advantage name="Small" type="disadvantage">
         <cost points="-5"/>
         <forbiddon>Large</forbiddon>
+
+        <forbiddon>Good attribute (strength)</forbiddon>
+        <forbiddon>Large</forbiddon>
+        <forbiddon>Heavily built</forbiddon>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -479,6 +511,10 @@
 
     <advantage name="Looks young" type="disadvantage">
         <cost points="-1"/>
+
+        <forbiddon>Good attribute (strength)</forbiddon>
+        <forbiddon>Large</forbiddon>
+        <forbiddon>Heavily built</forbiddon>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -759,7 +795,7 @@
     </advantage>
 
 
-    <advantage name="Terrible liar" type="disadvantage">
+    <advantage name="Cannot lie" type="disadvantage">
         <cost points="-3"/>
         <genre>Common</genre>
 
@@ -788,6 +824,32 @@
                 The character has an  uninspiring personality, to the
                 point of being utterly forgettable. They suffer a penalty
                 when trying to impress people.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Slow" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You suffer a -1 penalty to agility for purposes of
+                initiative.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Exotic looks" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Your appearance is out of the ordinary. This does not
+                mean that you are ugly or handsome (indeed, this
+                advantage is compatible with other appearance
+                affecting advantages), just that you are different
+                and stand out in a crowd. You can be easy to recognise,
+                and easy to blame because you look strange.
             </para>
         </description>
     </advantage>

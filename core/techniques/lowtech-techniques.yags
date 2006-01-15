@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.3 $</version>
-            <date>$Date: 2006-01-08 19:28:05 $</date>
+            <version>$Revision: 1.4 $</version>
+            <date>$Date: 2006-01-15 11:32:48 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -127,11 +127,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Trained in fighting with long weapons. When fighting
-                defensively with a weapon of longer reach than the
-                opponent, a character normally gets a +3 bonus to defence
-                per point of extra reach. With this technique, the bonus
-                also applies to attack.
+                You are trained to take advantage of the extra reach that
+                your weapon gives you. If you have a greater reach than
+                your opponent, then you gain an automatic +5 to attack.
             </para>
         </description>
     </advantage>
@@ -146,6 +144,22 @@
             <para>
                 On a <e>good</e> attack, get a free trip attack against
                 the target after damage has been applied. Declared.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Spear wall" type="technique">
+        <cost points="4"/>
+        <skill name="Longshaft weapon"/>
+        <prerequisite>Spearman</prerequisite>
+
+        <short>Gain a bonus against mounted opponents.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If you are on foot and fighting against a mounted foe,
+                then you gain a +5 bonus to attack and damage rolls if
+                you declare this technique.
             </para>
         </description>
     </advantage>
@@ -441,6 +455,93 @@
                 With this technique you can make a grab for something
                 being held by your opponent, such as a weapon or key,
                 without invoking a <e>free strike</e>.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Cleave" type="technique">
+        <cost points="2"/>
+        <skill name="Great weapon"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Automatic technique which allows you to always use the
+                half armour column against armour when using a great
+                weapon.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Great blow" type="technique">
+        <cost points="4"/>
+        <skill name="Great weapon"/>
+
+        <prerequisite>Cleave</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If you declare this technique when using the aggressive
+                stance, you gain an additional bonus to damage equal to
+                your weapon skill.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Mighty blow" type="technique">
+        <cost points="6"/>
+        <skill name="Great weapon"/>
+
+        <prerequisite>Great blow</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Whenever you roll a natural 20 in a damage roll your
+                opponent is knocked prone unless their <t>Size</t>
+                attribute is larger than yours. Further, if your
+                attack does wounding damage, then it also does equal
+                stun damage as they are knocked to the ground.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Secondary defence" type="technique">
+        <cost points="2"/>
+        <skill name="Two weapons"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                One a round you may re-roll any defence roll. You must
+                keep the second roll even if it is worse. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Combined strike" type="technique">
+        <cost points="4"/>
+        <skill name="Two weapons"/>
+
+        <prerequisite>Second defence</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Penalties to your attack rolls due to making multiple
+                defences are halved. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Secondary strike" type="technique">
+        <cost points="6"/>
+        <skill name="Two weapons"/>
+
+        <prerequisite>Combined strike</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Once a round, you may re-roll your damage roll. However,
+                you must keep the second roll even if it is worse.
+                Automatic.
             </para>
         </description>
     </advantage>
