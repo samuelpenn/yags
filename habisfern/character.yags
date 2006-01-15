@@ -19,8 +19,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.28 $</version>
-            <date>$Date: 2006-01-15 11:33:30 $</date>
+            <version>$Revision: 1.29 $</version>
+            <date>$Date: 2006-01-15 13:57:30 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -398,21 +398,19 @@
                 <sect3>
                     <title>Common Advantages</title>
 
-
-                    <y:import-advantages type="advantages">
+                    <y:import-advantages type="advantage">
                         <y:adv>options/advantages.yags</y:adv>
                         <y:adv>../core/options/advantages.yags</y:adv>
                     </y:import-advantages>
-
-                    <y:import-advantages href="options/advantages.yags"
-                                        type="advantage"/>
                 </sect3>
 
                 <sect3>
                     <title>Common Disadvantages</title>
 
-                    <y:import-advantages href="options/advantages.yags"
-                                        type="disadvantage"/>
+                    <y:import-advantages type="disadvantage">
+                        <y:adv>options/advantages.yags</y:adv>
+                        <y:adv>../core/options/advantages.yags</y:adv>
+                    </y:import-advantages>
                 </sect3>
 
                 <sect3>
@@ -470,7 +468,7 @@
                 traits.
             </para>
 
-            <termlist targetFirst="true">
+            <targetlist targetFirst="true">
                 <targetLabel>Chance</targetLabel>
                 <valueLabel>Cicumstance</valueLabel>
 
@@ -487,7 +485,7 @@
 
                 <item target="20" value="Improbable.">
                 </item>
-            </termlist>
+            </targetlist>
         </sect1>
     </body>
 </article>
