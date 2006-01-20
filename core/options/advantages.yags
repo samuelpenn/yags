@@ -3,8 +3,8 @@
 <!--
     These list generic advantages and disadvantages,
 
-    Version: $Revision: 1.16 $
-    Date:    $Date: 2006-01-15 16:32:48 $
+    Version: $Revision: 1.17 $
+    Date:    $Date: 2006-01-20 19:54:07 $
     Author:  Samuel Penn (sam@glendale.org.uk)
 
 -->
@@ -196,6 +196,8 @@
     <advantage name="Tough" type="advantage">
         <cost points="+5"/>
 
+        <forbiddon>Poor attribute (Strength or Stamina)</forbiddon>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You are particularly tough and resilient to damage. You
@@ -235,7 +237,7 @@
 
 
     <advantage name="Large" type="advantage">
-        <cost points="+5"/>
+        <cost points="+3"/>
 
         <prerequisite>Good attribute (strength)</prerequisite>
         <forbiddon>Small</forbiddon>
@@ -409,11 +411,15 @@
     <advantage name="Loud voice" type="disadvantage">
         <cost points="-1"/>
 
+        <forbiddon>Shy</forbiddon>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character has a very loud voice, and has difficulty
-                keeping it down. If trying to speak quietly, they must
-                make a will roll of difficulty 20 in order to succeed.
+                You have a very loud voice, and have difficulty speaking
+                quietly. If you have a need to keep your voice down, you
+                need to make a <t>Will</t> check at a difficulty of at
+                least 20 in order to do so. If you, the player, speaks
+                loudly in a situation, then your character does as well.
             </para>
         </description>
     </advantage>
@@ -440,17 +446,18 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                A sexually tantalising person is very attractive to the
-                opposite sex. She will often find herself the centre of
-                attention, but it is often a shallow, superficial
-                form of attention.
+                Everybody you meet who could be sexually attracted to
+                you will be. This may mean they react well to you, but
+                in lawless situations it could be dangerous. Even when
+                they are treating you nicely, people will view you as
+                a sex object rather than as a person with meaningful
+                opinions.
             </para>
 
             <para>
-                People will not see beyond the woman's good looks, seeing
-                her as a sex object rather than a person. This can sometimes
-                be useful, but gets annoying very quickly. Characters must
-                have <e>Beautiful</e> before taking this disdvantage.
+                People who aren't sexually attracted to you will view
+                you with jealousy, and probably react badly, especially
+                if they think you are fooling around with their partner.
             </para>
         </description>
     </advantage>
@@ -461,11 +468,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has a fast metabolism, and needs to eat
-                more than everyone else to prevent hunger. They are not
-                being greedy, since they will starve if they don't eat
-                their fill. The character must eat 50% more than a
-                normal person.
+                You eat a lot, not because you are greedy but because
+                you are hungry and need to eat a lot. You need to eat
+                50% more than other people in order to not starve.
             </para>
         </description>
     </advantage>
@@ -481,11 +486,10 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is smaller than average, being both shorter
-                and thinner. She has a size of four, and therefore has one
-                less body level than normal. She cannot have a strength
-                above three. Reach of <e>short</e> and <e>medium</e>
-                weapons is reduced by one level.
+                You are smaller than average, being both shorter and
+                thinner. You have a <t>Size</t> of 4, and therefore have
+                one less body level than normal. Reach of <e>short</e> and
+                <e>medium</e> weapons is reduced by one level.
             </para>
         </description>
     </advantage>
@@ -508,10 +512,9 @@
 
             <para>
                 Side effects include anything which can be detrimental to
-                the character during the general course of play. An
-                alcoholic who drinks himself into a stupor most nights
-                may not have much affect on the game. One who is mildly
-                drunk all the time will.
+                you during the general course of play. Drinking yourself
+                into a stupor most evenings may have less effect on the
+                game than being mildly drunk all the time.
             </para>
 
             <targetlist>
@@ -519,24 +522,23 @@
                 <targetLabel>Cost</targetLabel>
 
                 <item target="-1">
-                    Addiction does not have much affect on the addict,
-                    normally because it is mostly socially acceptable,
-                    reasonably cheap and has few side effects. Smoking
-                    of tobacco in the modern day would be an example.
+                    Your addiction is socially acceptable, reasonably
+                    cheap and has few short term side effects. Smoking
+                    is an example (you may get negative reactions in
+                    some places, but it's not illegal).
                 </item>
 
                 <item target="-3">
-                    Addiction is either not socially acceptable, has
-                    one or more side effects, or is expensive.
-                    Alcoholism is an example, since it can seriously
-                    degrade the skills of the addict, though is cheap
-                    and socially acceptable in many societies.
+                    Your addiction is either not socially acceptable,
+                    has bad side effects or is hard or expensive to
+                    get hold of. Alcoholism is an example.
                 </item>
 
                 <item target="-5">
-                    Addiction suffers from two of the problems.
-                    Alternatively, he suffers from one problem very
-                    badly.
+                    Your addiction suffers from two problems, or one
+                    very, very badly. Heroin is not sociably acceptable
+                    and is expensive, but most side effects are long
+                    term.
                 </item>
             </targetlist>
         </description>
@@ -551,13 +553,12 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character looks younger than she really is, possibly
-                thirteen or fourteen. As such, adults will not take her
-                seriously. A character who looks young cannot take the
-                age disadvantage. As the character ages during the game,
-                this disadvantage will disappear. The character should
-                probably also take <e>Small</e>, and cannot have a
-                strength above three to begin with.
+                You look much younger than you actually are. You cannot
+                start your character older than the base age (normally 16).
+                This has the effect that many adults won't take you
+                seriously. As you age, so you will gradually loose this
+                disadvantage (you may still look young, but looking 25
+                instead of 30 is generally an advantage).
             </para>
         </description>
     </advantage>
@@ -569,8 +570,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character has a penalty of -1 to stamina rolls to resist
-                the effects of alchohol and similar intoxicants.
+                You are easily intoxicated, and suffer a -1 penalty to
+                <t>Stamina</t> when resisting the effects of alchohol
+                and similar drugs.
             </para>
         </description>
     </advantage>
@@ -581,7 +583,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character suffers from very bad hangovers the morning
+                You suffer from very bad hangovers the morning
                 after a night of drinking. All penalties and effects of a
                 hangover are doubled.
             </para>
@@ -594,13 +596,13 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is not used to, and greatly dislikes, real
-                combat. They don't like hurting people or getting hurt,
-                the smell of blood or the clash of steel. They may be
-                skilled at martial arts for sporting events, but when
-                it comes to fighting in anger, their nature lets them
-                down. In a real combat, they suffer a penalty of -1 to
-                agility, dexterity and perception.
+                Either because you are a pacifist, or just because you
+                are a coward, you have a distinct dislike of combat.
+                Whenever you are in a real combat situation, you suffer
+                a -1 to <t>Agility</t>, <t>Dexterity</t> and
+                <t>Perception</t>. You do not suffer this penalty
+                in sporting events, so you can fence or perform target
+                practise without penalty.
             </para>
         </description>
     </advantage>
@@ -611,13 +613,13 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has a poor memory, and probably has a
-                reputation of being forgetful. The problem mainly
-                manifests itself when trying to remember everyday
-                mundane things, such as locking the front door,
-                putting out the fire or packing food for a journey.
+                You have a poor memory, and probably a reputation for
+                being forgetful. The problem mostly manifests when
+                trying to remember everyday mundane things, such as
+                locking the front door, packing food or putting your
+                clothes on in the morning.
                 At inconvenient moments, the GM will secretly make an
-                intelligence check for the character to see if they
+                <t>Intelligence</t> check for you to see if you
                 remembered doing something important.
             </para>
 
@@ -635,8 +637,8 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character does not get on well with animals.
-                The Reaction of animals to the character is always one
+                You do not get on well with animals.
+                The Reaction of animals to you is always one
                 level worse than it would be otherwise.
             </para>
         </description>
@@ -648,7 +650,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has a habit of spurting out the wrong thing
+                You have a habit of spurting out the wrong thing
                 at the worst possible time. If the player makes any snide
                 comments, asides or other such utterences whilst a social
                 situation is being roleplayed, then their character said
@@ -663,38 +665,34 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is particularly gullible. They cannot tell
-                if someone is lying, and tend to take things at face
-                value. They may well understand the concept of lying, and
-                might be very good at it themselves, but can't spot when
+                You are particularly gullible and cannot tell
+                if someone is lying, tending to take things at face
+                value. You may well understand the concept of lying, and
+                might be very good at it yourself, but can't spot when
                 others are doing it.
             </para>
 
             <para>
-                Normally the character will automatically any attempts to
-                detect lying. In really obvious situations, they can have
+                Normally the you will automatically fail any attempts to
+                detect lying. In really obvious situations, you may have
                 a roll but the final result is halved.
             </para>
         </description>
     </advantage>
 
     <advantage name="Clumsy" type="disadvantage">
-        <cost points="-3"/>
+        <cost points="-1"/>
         <genre>Common</genre>
+
+        <forbiddon>Graceful</forbiddon>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is particularly clumsy, and has a tendancy
-                to bump into things, stumble over their own feet and
-                generally lack any grace or finesse of movement. If trying
-                to move stealthily, they are doomed to failure.
-            </para>
-
-            <para>
-                If there is anything they can knock, bump or tread on
-                which will make a noise then they automatically fail
-                at any stealth attempts. In ideal situations, they can
-                make a stealth roll but the result is halved.
+                You are clumsy and awkward, every movement you make
+                looks like a disaster waiting to happen. Any attempt
+                you make to look graceful or skilled is likely to
+                fail, and the success of all such actions is reduced
+                by one level.
             </para>
         </description>
     </advantage>
@@ -705,16 +703,10 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is very bad at waking from sleep. If they
-                are sleeping, then they can only be awakened with lots
-                of physical discomfort (cold water, a kick, vigerous
-                shaking for a whole round), and are then at -1 to all
-                attributes for the next minute.
-            </para>
-
-            <para>
-                If dozing, then all perception rolls are quartered, as
-                for normal people who are in deep sleep.
+                You sleep heavily, and find it difficult to awaken.
+                When dozing, all perception checks are quartered
+                (as if in deep sleep), and when sleeping your total
+                roll is always zero.
             </para>
         </description>
     </advantage>
@@ -725,10 +717,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character really has no sense of direction and can
-                get lost getting out of bed. Except in the most simple
-                of situations (when their rolls are halved), they will
-                automatically fail any navigation attempts.
+                You have no sense of direction. You automatically fail
+                all but the simplest of navigation attempts. For very
+                simple checks, your roll is halved.
             </para>
         </description>
     </advantage>
@@ -739,11 +730,10 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is greatly overweight, and suffers a
-                penalty to athletics, brawl and stealth rolls, as well
-                as stamina for purposes of fatigue (including the number
-                of fatigue levels the character has) and strength for
-                purposes of encumbrence.
+                You are greatly overweight. Your <t>Strength</t> and
+                <t>Stamina</t> is one less for purposes of encumberance
+                and fatigue levels. You also suffer a -1 to your
+                attribute when performing any form of athletics.
             </para>
         </description>
     </advantage>
@@ -752,77 +742,72 @@
         <cost points="-1"/>
         <genre>Common</genre>
 
+        <forbiddon>Keen vision</forbiddon>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has very poor eyesight, and suffers a
-                penalty of -1 to their perception for all vision based
-                skill checks (including missile attacks).
+                You have poor eyesight. All vision penalties due to
+                range are doubled.
             </para>
         </description>
-        <forbiddon>Keen vision</forbiddon>
     </advantage>
 
     <advantage name="Poor hearing" type="disadvantage">
         <cost points="-1"/>
         <genre>Common</genre>
 
+        <forbiddon>Keen hearing</forbiddon>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has very poor hearing, and suffers a
-                penalty of -1 to their perception for all hearing based
-                perception checks.
+                You are hard of hearing. All range penalties for
+                hearing based checks are doubled. You suffer a -1 to
+                <t>Perception</t> for purposes of blind fighting.
             </para>
         </description>
-        <forbiddon>Keen hearing</forbiddon>
     </advantage>
 
     <advantage name="Repellent" type="disadvantage">
-        <cost points="-1"/>
+        <cost points="-3"/>
         <genre>Common</genre>
+
         <forbiddon>Sexually tantalising</forbiddon>
+        <forbiddon>Beautiful</forbiddon>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                People who would otherwise find this character sexually
-                attractive are instead repelled. Any attempts to seduce
-                such people will always fail. When the character first
-                meets someone so affected, then any reaction results
-                are always at one level worse.
+                You are unattractive to those who might be sexually
+                attracted to you. Any attempts at seduction will
+                automatically fail, and the result of all reaction
+                checks are at one worse level.
             </para>
         </description>
     </advantage>
 
     <advantage name="Ugly" type="disadvantage">
         <cost points="-3"/>
+
         <forbiddon>Beautiful</forbiddon>
+        <forbiddon>Sexually tantalising</forbiddon>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is not attractive to look at. When first
-                meeting people, reaction results will be at one level
-                worse than normal. At other times, the character may
-                suffer a -1 to their charisma if their appearance could
-                affect such rolls.
+                You are unattractive. Results of initial reaction checks
+                from people are at one worse level. Seduction attempts
+                etc are halved.
             </para>
         </description>
     </advantage>
 
     <advantage name="Shy" type="disadvantage">
-        <cost points="-3"/>
+        <cost points="-1"/>
         <genre>Common</genre>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is uncomfortable if strangers are taking
-                an interest in what they are doing. They suffer a -1 to
-                their attribute if performing some task in front of
-                people, or if trying to socialise with strangers.
-            </para>
-
-            <para>
-                If the character is really stressed, such as in the
-                middle of combat, then the penalty doesn't apply since
-                they'll be too worried to care.
+                You are uncomfortable around strangers, especially when
+                in front of lots of people. You suffer a -1 penalty to
+                <t>Charisma</t> when in front of strangers or crowds.
             </para>
         </description>
     </advantage>
@@ -834,15 +819,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is a really bad liar. If the character ever
-                tries to lie, then they will generally fail. Really easy
-                lies may allow them a skill check, though the result will
-                be halved.
-            </para>
-
-            <para>
-                A <e>terrible liar</e> lying to a <e>gullible</e> person
-                would be a very painful event to watch.
+                You are a very bad liar. You do not necessarily have
+                any moral objections to lying, but any attempts to do
+                so result in your skill check being halved.
             </para>
         </description>
     </advantage>
@@ -854,9 +833,8 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character has an  uninspiring personality, to the
-                point of being utterly forgettable. They suffer a penalty
-                when trying to impress people.
+                You suffer a -1 penalty to <t>Charisma</t> when trying
+                to impress people.
             </para>
         </description>
     </advantage>
