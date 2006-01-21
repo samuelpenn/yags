@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.4 $</version>
-            <date>$Date: 2006-01-08 19:28:05 $</date>
+            <version>$Revision: 1.5 $</version>
+            <date>$Date: 2006-01-21 20:30:26 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -184,6 +184,12 @@
                             If the reach of the weapon exceeds the reach
                             of the target, then the penalty to attack rolls
                             because of multiple defences is halved.
+                        </item>
+
+                        <item>
+                            When attacking, a great weapon grants a +50%
+                            bonus to the Size of the attacker, for the
+                            purposes of shifting damage types up or down.
                         </item>
                     </itemlist>
                 </sect3>
@@ -995,7 +1001,113 @@
                         fumble. Stunts are always <e>slow</e> actions.
                     </para>
                 </sect3>
+            </sect2>
+        </sect1>
 
+        <sect1 id="mounted">
+            <title>Mounted Combat</title>
+
+            <para>
+                Fighting from horse back can be tricky, but for a
+                skilled rider it can be a big advantage. Warriors who
+                wish to fight from horseback should look at the
+                <e>mounted combat</e> and <e>mounted archery</e>
+                techniques, since these mitigate most of the problems.
+            </para>
+
+            <para>
+                If a character wishes to make a melee attack from the
+                back of a mount, then they must make a agility riding
+                check at difficulty 15. One roll is required each round
+                that the character has declared any attacks or
+                defenses.
+            </para>
+
+            <para>
+                Failure of the riding roll means that the character
+                becomes unstable and looses their attack. A second roll
+                at the same difficulty to remain on the horse. If the
+                rider is not using saddle and stirrups, then both
+                difficulties are increased by 5.
+            </para>
+
+            <para>
+                The character's ride skill adds to attack rolls made
+                from horseback, against either infantry or other
+                mounted opponents. Characters with the <e>mounted
+                    combat</e> technique add this bonus to <e>all</e>
+                their combat rolls (initiative, attack, defence and
+                damage), as well as not needing to make ride rolls
+                each round.
+            </para>
+
+            <sect2>
+                <title>Archery from Horseback</title>
+
+                <para>
+                    As for melee combat, and missile combat requires a
+                    riding roll if firing from horseback. All penalties
+                    due to range are also doubled.
+                </para>
+
+                <para>
+                    Missile combat however suffers no penalty if the
+                    horse is stationary. No roll is required to stay
+                    mounted, and range penalties are not doubled.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Mounted charge</title>
+
+                <para>
+                    A <e>mounted charge</e> is a special kind of attack
+                    that uses a lance from horseback, and can only be
+                    used after at least a full round of charging. This
+                    can only be done from a trained warhorse.
+                </para>
+
+                <para>
+                    On a successful mounted attack, damage is done with
+                    a bonus equal to the strength of the mount (on top
+                    of any bonuses due to the <e>ride</e> skill).
+                    Furthermore, for each wound dealt, a stun is dealt
+                    as well from the shock of the attack.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Fighting Large Animals</title>
+
+                <para>
+                    It is always possible for someone on foot to strike
+                    directly at the mount. Mounts are often quite large
+                    however, and some may be more resistent to damage
+                    than the rider.
+                </para>
+
+                <para>
+                    Any animal that has a <t>Size</t> at least twice that
+                    of the attacker causes all damage against it to be
+                    reduced by one level of effectiveness - wounds become
+                    mixed damage, mixed become stuns and stuns become
+                    ineffective.
+                </para>
+
+                <para>
+                    The reverse is also true - if a creature's <t>Size</t>
+                    is twice that of the target it is attacking, then
+                    the damage is increased in effectiveness. Stuns become
+                    mixed, mixed becomes wounds. Wounds are already as
+                    deadly as it is possible to be, so are unaffected.
+                </para>
+
+                <para>
+                    <e>Very</e> large animals, those which have a
+                    <t>Size</t> four times that of their opponent, cause
+                    damage to be shifted by two categories. In this case,
+                    stuns do no damage.
+                </para>
             </sect2>
         </sect1>
 
@@ -1047,84 +1159,6 @@
             <sect2>
                 <title>Mounted combat</title>
 
-                <para>
-                    Fighting from horse back can be tricky, but for a
-                    skilled rider it can be a big advantage. Warriors who
-                    wish to fight from horseback should look at the
-                    <e>mounted combat</e> and <e>mounted archery</e>
-                    techniques, since these mitigate most of the problems.
-                </para>
-
-                <para>
-                    If a character wishes to make a melee attack from the
-                    back of a mount, then they must make a agility riding
-                    check at difficulty 15. One roll is required each round
-                    that the character has declared any attacks or
-                    defenses.
-                </para>
-
-                <para>
-                    Failure of the riding roll means that the character
-                    becomes unstable and looses their attack. A second roll
-                    at the same difficulty to remain on the horse. If the
-                    rider is not using saddle and stirrups, then both
-                    difficulties are increased by 5.
-                </para>
-
-                <para>
-                    The character's ride skill adds to attack rolls made
-                    from horseback, against either infantry or other
-                    mounted opponents. Characters with the <e>mounted
-                    combat</e> technique add this bonus to <e>all</e>
-                    their combat rolls (initiative, attack, defence and
-                    damage), as well as not needing to make ride rolls
-                    each round.
-                </para>
-
-                <sect3>
-                    <title>Archery from Horseback</title>
-
-                    <para>
-                        As for melee combat, and missile combat requires a
-                        riding roll if firing from horseback. All penalties
-                        due to range are also doubled.
-                    </para>
-
-                    <para>
-                        Missile combat however suffers no penalty if the
-                        horse is stationary. No roll is required to stay
-                        mounted, and range penalties are not doubled.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Mounted charge</title>
-
-                    <para>
-                        A <e>mounted charge</e> is a special kind of attack
-                        that uses a lance from horseback, and can only be
-                        used after at least a full round of charging. This
-                        can only be done from a trained warhorse.
-                    </para>
-
-                    <para>
-                        On a successful mounted attack, damage is done with
-                        a bonus equal to the strength of the mount (on top
-                        of any bonuses due to the <e>ride</e> skill).
-                        Furthermore, for each wound dealt, a stun is dealt
-                        as well from the shock of the attack.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Overbear</title>
-
-                    <para>
-                        A warhorse can be made to attack an opponent,
-                        knocking them back or to the ground.
-                    </para>
-                </sect3>
-            </sect2>
         </sect1>
     </body>
 </article>
