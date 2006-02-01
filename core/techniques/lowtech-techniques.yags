@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.4 $</version>
-            <date>$Date: 2006-01-15 11:32:48 $</date>
+            <version>$Revision: 1.5 $</version>
+            <date>$Date: 2006-02-01 22:37:52 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -172,8 +172,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When using a <e>defensive</e> weapon, the defensive stance
-                does not provide any penalty to attack. Automatic.
+                When using a <e>defensive</e> weapon, if you have the
+                advantage of reach then you do not suffer any penalty
+                to attack for making multiple defences. Automatic.
             </para>
         </description>
     </advantage>
@@ -204,7 +205,8 @@
             <para>
                 If the character is using an impaling weapon, then they
                 get a +3 bonus to damage for each extra level of success
-                when making an attack. Declared.
+                when making an attack. Stacks with other techniques such
+                as <e>skilled strike</e>. Automatic.
             </para>
         </description>
     </advantage>
@@ -463,6 +465,8 @@
         <cost points="2"/>
         <skill name="Great weapon"/>
 
+        <short>Halve armour of opponent.</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Automatic technique which allows you to always use the
@@ -477,6 +481,8 @@
         <skill name="Great weapon"/>
 
         <prerequisite>Cleave</prerequisite>
+
+        <short>Get bonus to damage when aggressive.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -494,13 +500,36 @@
 
         <prerequisite>Great blow</prerequisite>
 
+        <short>Knock opponent prone.</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Whenever you roll a natural 20 in a damage roll your
                 opponent is knocked prone unless their <t>Size</t>
                 attribute is larger than yours. Further, if your
                 attack does wounding damage, then it also does equal
-                stun damage as they are knocked to the ground.
+                stun damage as they are knocked to the ground. You
+                may get a <e>free strike</e> against them (and they
+                now count as being prone).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Killing blow" type="technique">
+        <cost points="8"/>
+        <skill name="Great weapon"/>
+
+        <prerequisite>Mighty blow</prerequisite>
+
+        <short>Increase chance of killing opponent.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When you declare a <e>Killing blow</e>, and damage that
+                takes your opponent to <e>critically</e> or <e>fatally</e>
+                wounded forces them to make a stamina check or die as
+                if they were fatally wounded. They get a penalty to this
+                check equal to your skill.
             </para>
         </description>
     </advantage>
@@ -509,9 +538,11 @@
         <cost points="2"/>
         <skill name="Two weapons"/>
 
+        <short>Re-roll a single defence roll.</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                One a round you may re-roll any defence roll. You must
+                Once per round you may re-roll any defence roll. You must
                 keep the second roll even if it is worse. Automatic.
             </para>
         </description>
@@ -521,12 +552,14 @@
         <cost points="4"/>
         <skill name="Two weapons"/>
 
-        <prerequisite>Second defence</prerequisite>
+        <prerequisite>Secondary defence</prerequisite>
+
+        <short>Reduce penalty to attack.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Penalties to your attack rolls due to making multiple
-                defences are halved. Automatic.
+                defences are halved. Declared.
             </para>
         </description>
     </advantage>
@@ -537,11 +570,30 @@
 
         <prerequisite>Combined strike</prerequisite>
 
+        <short>Re-roll one damage roll.</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Once a round, you may re-roll your damage roll. However,
                 you must keep the second roll even if it is worse.
                 Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Double strike" type="technique">
+        <cost points="8"/>
+        <skill name="Two weapons"/>
+
+        <prerequisite>Secondary strike</prerequisite>
+
+        <short>Twice as many free strike.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If you ever get a free or automatic strike, then you
+                get two such strikes instead of one. Both must be against
+                the same target. Automatic.
             </para>
         </description>
     </advantage>
