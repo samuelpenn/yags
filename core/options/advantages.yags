@@ -3,8 +3,8 @@
 <!--
     These list generic advantages and disadvantages,
 
-    Version: $Revision: 1.18 $
-    Date:    $Date: 2006-01-21 20:30:26 $
+    Version: $Revision: 1.19 $
+    Date:    $Date: 2006-02-01 22:21:23 $
     Author:  Samuel Penn (sam@glendale.org.uk)
 
 -->
@@ -157,7 +157,7 @@
         </description>
     </advantage>
 
-    <advantage name="Voice" type="edge">
+    <advantage name="Voice" type="advantage">
         <cost points="+3"/>
         <genre>Common</genre>
 
@@ -268,7 +268,8 @@
     <advantage name="Reflexes" type="advantage">
         <cost points="+1"/>
 
-        <description xmlns="http://yagsbook.souceforge.net/xml">
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You have a +1 bonus to agility for purposes of
                 initiative.
@@ -284,6 +285,21 @@
                 You have a natural ability to get on well with
                 animals. All animals react well to you, and have
                 their reaction shifted to one better category.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Reserves of strength" type="advantage">
+        <cost points="+1"/>
+
+        <forbiddon>Poor attribute (Strength)</forbiddon>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You may tap into reserves of strength at time, allowing
+                to to perform feats not normally possible. At any time,
+                you may have +1 to your <t>Strength</t> for a single roll,
+                though you gain one point of fatigue for doing so.
             </para>
         </description>
     </advantage>
@@ -847,6 +863,19 @@
                 affecting advantages), just that you are different
                 and stand out in a crowd. You can be easy to recognise,
                 and easy to blame because you look strange.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Lisp" type="disadvantage">
+        <cost points="-1"/>
+
+        <forbiddon>Voice</forbiddon>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have a lisp or similar speech impediment. You suffer
+                a -1 to your <t>Charisma</t> when trying to perform with
+                your voice (e.g. singing or orating).
             </para>
         </description>
     </advantage>
