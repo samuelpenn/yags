@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.89 $</version>
-            <date>$Date: 2006-01-21 20:30:26 $</date>
+            <version>$Revision: 1.90 $</version>
+            <date>$Date: 2006-02-03 22:34:53 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -526,9 +526,9 @@
                         a further wound for every 5 points of damage
                         above the soak roll. If you are already wounded,
                         then any new wounds add to the existing wounds.
-                        If you have two wounds (light, -1), and receive
+                        If you have two wounds (light, -5), and receive
                         another two wounds, you will now have four wounds
-                        (heavy, -6).
+                        (heavy, -15).
                     </para>
 
                     <targetlist bold="true" targetFirst="true">
@@ -542,26 +542,26 @@
                             Scratched and bruised, but no penalty.
                         </item>
 
-                        <item target="2" value="Light (-1).">
-                            Lightly wounded, with a small (-1) penalty
+                        <item target="2" value="Light (-5).">
+                            Lightly wounded, with a small (-5) penalty
                             to all actions.
                         </item>
 
-                        <item target="3" value="Medium (-3).">
+                        <item target="3" value="Medium (-10).">
                             Moderate wounds, significant pain.
                         </item>
 
-                        <item target="4" value="Heavy (-6).">
+                        <item target="4" value="Heavy (-15).">
                             Heavily wounded, with a large penalty.
                         </item>
 
-                        <item target="5" value="Critical (-10).">
+                        <item target="5" value="Critical (-25).">
                             Critically wounded. Most people will stop
                             fighting at this point. Heroes and professional
                             warriors will probably continue however.
                         </item>
 
-                        <item target="6+" value="Fatal (-15).">
+                        <item target="6+" value="Fatal (-40).">
                             A fatally wounded person must make stamina
                             rolls to remain conscious and alive every
                             round. Without medical aid, they will die.
@@ -626,10 +626,10 @@
                         <para>
                             For example, you are currently uninjured, but
                             are punched by someone who does you two stuns.
-                            You are now lightly stunned (at -1). You are
+                            You are now lightly stunned (at -5). You are
                             punched again for two stuns. This gives you
                             one extra stun, taking you to three stuns
-                            (moderate, -3). A third punch only does one
+                            (moderate, -10). A third punch only does one
                             stun, and since this is less than half your
                             current total, it does no damage.
                         </para>
@@ -638,7 +638,7 @@
                             The fourth punch is much harder, and does 5
                             stuns of damage. This is greater than your
                             current total (3), so puts you immediately
-                            at 5 stuns (critical, -10).
+                            at 5 stuns (critical, -25).
                         </para>
 
                         <para>
@@ -651,9 +651,9 @@
                         <para>
                             Note that stuns and wounds are kept track of
                             seperately, and their penalties add together.
-                            If you have 3 stuns (moderate, -3) and two
-                            wounds (light, -1) you have a total penalty of
-                            -4.
+                            If you have 3 stuns (moderate, -10) and two
+                            wounds (light, -5) you have a total penalty of
+                            -15.
                         </para>
                     </sect4>
 
@@ -682,13 +682,6 @@
                     book keeping can be performed. If stamina rolls
                     are needed to remain conscious, then they are
                     made now.
-                </para>
-
-                <para>
-                    <e>Mixed damage</e> is normally caused by small sharp
-                    weapons or animals. It represents attacks which can
-                    penetrate the skin, but which don't normally penetrate
-                    deeply enough to reach vital organs.
                 </para>
             </sect2>
         </sect1>

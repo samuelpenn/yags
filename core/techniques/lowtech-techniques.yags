@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2006-02-01 22:37:52 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2006-02-03 22:34:54 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -134,20 +134,6 @@
         </description>
     </advantage>
 
-    <advantage name="Sweep attack" type="technique">
-        <cost points="4"/>
-        <skill name="Longshaft weapon"/>
-        <prerequisite>Spearman</prerequisite>
-        <short>Cause a trip if making a good attack.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                On a <e>good</e> attack, get a free trip attack against
-                the target after damage has been applied. Declared.
-            </para>
-        </description>
-    </advantage>
-
     <advantage name="Spear wall" type="technique">
         <cost points="4"/>
         <skill name="Longshaft weapon"/>
@@ -167,14 +153,13 @@
     <advantage name="Defensive reach" type="technique">
         <cost points="6"/>
         <skill name="Longshaft weapon"/>
-        <prerequisite>Sweep attack</prerequisite>
+        <prerequisite>Spear wall</prerequisite>
         <short>Ignore attack penalty if defensive.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When using a <e>defensive</e> weapon, if you have the
-                advantage of reach then you do not suffer any penalty
-                to attack for making multiple defences. Automatic.
+                If you have the advantage of reach then any penalties to
+                attack due to multiple defences are halved. Automatic.
             </para>
         </description>
     </advantage>

@@ -3,8 +3,8 @@
 <!--
     These list generic advantages and disadvantages,
 
-    Version: $Revision: 1.19 $
-    Date:    $Date: 2006-02-01 22:21:23 $
+    Version: $Revision: 1.20 $
+    Date:    $Date: 2006-02-03 22:34:53 $
     Author:  Samuel Penn (sam@glendale.org.uk)
 
 -->
@@ -68,6 +68,7 @@
             </para>
         </description>
         <forbiddon>Poor vision</forbiddon>
+        <forbiddon>Missing eye</forbiddon>
     </advantage>
 
     <advantage name="Iron constitution" type="advantage">
@@ -203,9 +204,23 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You are heavily built, being tougher and broader than
-                normal. You get a +5 bonus to your soak versus all
-                <e>stun</e> attacks, plus a +1 bonus to <t>Strength</t>
-                for purposes of resisting knockdown, or being tripped.
+                normal. You get one extra level of <e>stun</e>,
+                plus a +1 bonus to <t>Strength</t> for purposes of
+                resisting knockdown, or being tripped.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="High pain threshold" type="advantage">
+        <cost points="+3"/>
+
+        <forbiddon>Low pain threshold</forbiddon>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Penalties due to stuns and wounds are reduced by one
+                level (so -5 becomes 0, -10 becomes -5 etc).
+                Penalties due to fatigue are unaffected.
             </para>
         </description>
     </advantage>
@@ -296,10 +311,24 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You may tap into reserves of strength at time, allowing
+                You may tap into reserves of strength at any time, allowing
                 to to perform feats not normally possible. At any time,
-                you may have +1 to your <t>Strength</t> for a single roll,
-                though you gain one point of fatigue for doing so.
+                you may have +1 or +2 to your <t>Strength</t> for a single
+                roll, though you gain one point of fatigue per point of
+                bonus for doing so.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Fit" type="advantage">
+        <cost points="+1"/>
+
+        <forbiddon>Unfit</forbiddon>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have one more fatigue level than you would normally
+                have from your <t>Stamina</t>.
             </para>
         </description>
     </advantage>
@@ -749,7 +778,9 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You have poor eyesight. All vision penalties due to
-                range are doubled.
+                range are doubled. Penalties for ranged attacks are
+                unaffected, but you may need to make a check to see
+                if you can actually see the target.
             </para>
         </description>
     </advantage>
@@ -867,15 +898,109 @@
         </description>
     </advantage>
 
-    <advantage name="Lisp" type="disadvantage">
+    <advantage name="Speech impediment" type="disadvantage">
         <cost points="-1"/>
+        <cost points="-3"/>
 
         <forbiddon>Voice</forbiddon>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You have a lisp or similar speech impediment. You suffer
-                a -1 to your <t>Charisma</t> when trying to perform with
-                your voice (e.g. singing or orating).
+                You have a lisp, stutter or similar speech impediment.
+                You suffer a -1 to your <t>Charisma</t> when trying to
+                perform with your voice (e.g. singing or orating). The
+                higher cost of this disadvantage <e>halves</e> your
+                total roll when performing vocally.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Unfit" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have one less fatigue level than you would
+                normally have from your <t>Stamina</t>.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Low pain threshold" type="disadvantage">
+        <cost points="-3"/>
+
+        <forbiddon>High pain threshold</forbiddon>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are affected by pain more so than others. Penalties
+                due to wounds and stuns are increased by one level
+                (so you are at -5 for minor wounds, -10 for light wounds
+                etc). Fatal wounds/stuns are unchanged.
+                Penalties from fatigue are unaffected.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Missing eye" type="disadvantage">
+        <cost points="-1"/>
+
+        <forbiddon>Keen vision</forbiddon>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are missing an eye, which affects your depth
+                perception. Ranged missile penalties are doubled.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Crippled" type="disadvantage">
+        <cost points="-5"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are crippled in one of your attributes. Choose an
+                attribute for which you already have <e>Poor attribute</e>,
+                and reduce it to one. It may never be improved. You may
+                only take this disadvantage for a single attribute.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Bad back" type="disadvantage">
+        <cost points="-3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have a bad back, which at moments of physical
+                exertion may fail you. If you ever roll a '1' when
+                making an <e>athletics</e> check, or when wrestling
+                or performing similar feats, then you put your back
+                out. Your <t>Agility</t> and <t>Dexterity</t> is
+                immediately reduced to one for the rest of the day.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Body odour" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have a very bad case of body odour. You suffer a -1
+                penalty to <t>Charisma</t> in social situations when
+                people get close to you.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Unpleasant voice" type="disadvantage">
+        <cost points="-1"/>
+
+        <forbiddon>Voice</forbiddon>
+        <description name="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have an unpleasant sounding voice, and suffer a -1
+                penalty to <t>Charisma</t> in social situations where
+                the quality of your voice matters.
             </para>
         </description>
     </advantage>
