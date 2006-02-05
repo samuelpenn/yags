@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.6 $</version>
-            <date>$Date: 2006-02-03 22:34:54 $</date>
+            <version>$Revision: 1.7 $</version>
+            <date>$Date: 2006-02-05 21:48:14 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -59,10 +59,11 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character can use a defence slot to perform a second
-                attack with their shield at the same time as their
-                normal (first) attack. Does <e>stun</e> damage at a
-                bonus equal to their weapon skill.
+                Declared action when using the <e>aggressive</e> stance.
+                Once a round you may choose to use a defence slot to
+                make a bash attack with your shield. The bash happens
+                immediately following your normal attack, and does
+                <e>stun</e> damage at a bonus equal to your weapon skill.
             </para>
         </description>
     </advantage>
@@ -71,52 +72,36 @@
         <cost points="6"/>
         <skill name="Weapon and shield"/>
         <prerequisite>Shield bash</prerequisite>
+
         <short>Attack penalty due to multiple defences is halved.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                If making multiple defences that round, and not fighting
-                defensively, then the character's attack penalty for
-                those defences is halved. Declared.
+                You are able to make more effective use of your shield
+                when attacking, halving the attack penalty caused by
+                multiple defences. Automatic.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Secure defence" type="technique">
+    <advantage name="Reliable defence" type="technique">
         <cost points="8"/>
         <skill name="Weapon and shield"/>
         <prerequisite>Shielded attack</prerequisite>
-        <short>Ignore first fumble of the battle.</short>
+
+        <short>Free defence and reduce wound penalties.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The first time the character fumbles their defence roll
-                in a battle, they can ignore the fumble. Further, knowing
-                this technique means that <e>Unstoppable attack</e> cannot
-                be used against the character when they are defending
-                with this skill. Automatic.
+                Your defence rolls only suffer half the normal penalty
+                from wounds, stuns and fatigue. Further, you get an
+                extra free defence (at the same penalty as your other
+                defences) which may be used to re-roll another defence
+                if it fails. Such a re-roll cancels the results of
+                any fumbles, even if caused by the attacker. Automatic.
             </para>
         </description>
     </advantage>
-
-    <advantage name="Tricky defence" type="technique">
-        <cost points="10"/>
-        <skill name="Weapon and shield"/>
-        <prerequisite>Secure defence</prerequisite>
-        <short>Increase attacker's fumble chance.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If the character rolls a '20' when making a defence roll
-                with this skill, then their attacker is considered to have
-                fumbled their attack unless they have <e>Secure defence</e>
-                or <e>unstoppable attack</e>. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-
-
 
 
 
@@ -129,7 +114,7 @@
             <para>
                 You are trained to take advantage of the extra reach that
                 your weapon gives you. If you have a greater reach than
-                your opponent, then you gain an automatic +5 to attack.
+                your opponent, then you gain a +5 to attack. Automatic.
             </para>
         </description>
     </advantage>
@@ -158,8 +143,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                If you have the advantage of reach then any penalties to
-                attack due to multiple defences are halved. Automatic.
+                If you have the advantage of reach then penalties
+                caused by making multiple defences are halved for
+                that attack or defence roll. Automatic.
             </para>
         </description>
     </advantage>
@@ -172,26 +158,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The first time that the character gets a <e>free strike</e>
-                in the round for any reason, then they may consider the
-                extra attack to be an <e>automatic strike</e> as long as
-                they have the advantage of reach. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Impaling attack" type="technique">
-        <cost points="10"/>
-        <skill name="Longshaft weapon"/>
-        <prerequisite>Deadly reach</prerequisite>
-        <short>Damage bonus when using impaling weapons.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If the character is using an impaling weapon, then they
-                get a +3 bonus to damage for each extra level of success
-                when making an attack. Stacks with other techniques such
-                as <e>skilled strike</e>. Automatic.
+                If you have the advantage of reach, then the first
+                <e>free strike</e> that you get in a round becomes an
+                <e>automatic strike</e> instead. Automatic.
             </para>
         </description>
     </advantage>
@@ -267,30 +236,20 @@
         </description>
     </advantage>
 
-    <advantage name="Counterstrike" type="technique">
-        <cost points="10"/>
-        <skill name="Single weapon"/>
-        <prerequisite>Acrobatic defence</prerequisite>
-
-        <short>Strike back at an attacker.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If the character makes a <e>good</e> defence, then they get
-                an immediate <e>free strike</e> against their attacker as
-                long as neither are defensive. Automatic.
-            </para>
-        </description>
-    </advantage>
 
     <advantage name="Greater range" type="technique">
         <cost points="2"/>
-        <skill name="Missile"/>
+        <skill name="Throw"/>
+
+        <short>Increase the range of thrown weapons.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Add +1 to strength for purposes of maximum range of a
-                thrown weapon.
+                Your skill enables you to throw weapons more effectively,
+                increasing their range. When throwing a weapon, increase
+                your <t>Strength</t> by +1 for purposes of the maximum
+                range of the attack. If your have a skill of 5 or more,
+                then the bonus is +2. Automatic.
             </para>
         </description>
     </advantage>
@@ -301,11 +260,14 @@
 
         <prerequisite>Greater range</prerequisite>
 
+        <short>Reduced fumble chance when firing into melee.</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character is skilled at firing into combat. The increase
-                to the fumble chance when doing so is halved (generally
-                +1 per extra possible target instead of +2).
+                Your have practised difficult shots at moving and obscured
+                targets, increasing your effectiveness when firing into the
+                middle of a melee. If your fumble chance is increased due
+                to such a shot, this increase is halved. Declared.
             </para>
         </description>
     </advantage>
@@ -316,13 +278,18 @@
 
         <prerequisite>Fire into melee</prerequisite>
 
+        <short>Kill a target with a single shot.</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Declared before an attack, there is a -10 to the attack
-                roll. If the target is successfully wounded, then they must
-                make a size x stamina roll against a target of 10 +
-                5 x wounds (not stuns) caused or immediately drop to be
-                fatally wounded.
+                If you decide to use this technique when declaring your
+                attack, then it enables you to shoot a person in their
+                vitals, possibly killing them immediately. You must use
+                the <e>focused stance</e>, and all range penalties are
+                doubled. If you hit and do wounding damage, then the
+                target must make a <t>Size</t> x <t>Stamina</t> check
+                against a difficulty of 10 + 5 x wounds caused, or
+                immediately be fatally wounded.
             </para>
         </description>
     </advantage>
@@ -350,9 +317,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Due to extensive training with arm muscles, the archer
-                gets +1 to their strength for purposes of using a longbow
-                for every four points of <e>Bow</e> skill.
+                Due to extensive training with firing a bow, you gain a
+                +1 to your strength for purposes of using a longbow for
+                every four points of <e>Bow</e> skill.
             </para>
         </description>
     </advantage>
@@ -365,9 +332,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character is exceptionally skilled at firing a long or
-                short bow. If a full round is spent aiming, then the
-                character can halve all range and circumstance penalties.
+                You are exceptionally skilled at firing a long or
+                short bow. If a full round is spent aiming, then you
+                can halve all range and circumstance penalties.
             </para>
         </description>
     </advantage>
@@ -431,20 +398,6 @@
         </description>
     </advantage>
 
-    <advantage name="Grab" type="technique">
-        <cost points="4"/>
-        <skill name="Brawl"/>
-
-        <prerequisite>Wrestling</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                With this technique you can make a grab for something
-                being held by your opponent, such as a weapon or key,
-                without invoking a <e>free strike</e>.
-            </para>
-        </description>
-    </advantage>
 
     <advantage name="Cleave" type="technique">
         <cost points="2"/>
@@ -510,7 +463,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When you declare a <e>Killing blow</e>, and damage that
+                When you declare a <e>Killing blow</e>, any damage that
                 takes your opponent to <e>critically</e> or <e>fatally</e>
                 wounded forces them to make a stamina check or die as
                 if they were fatally wounded. They get a penalty to this
@@ -518,6 +471,7 @@
             </para>
         </description>
     </advantage>
+
 
     <advantage name="Secondary defence" type="technique">
         <cost points="2"/>

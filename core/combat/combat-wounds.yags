@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2006-02-03 22:34:53 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2006-02-05 21:48:14 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -54,8 +54,8 @@
                 <title>Knockdown</title>
 
                 <para>
-                    As well as causing damage, an attack can knock a
-                    person off their feet. It is not always necessary
+                    As well as causing damage, an attack can knock you
+                    from your feet. It is not always necessary
                     for an attack to actually cause damage - a knight
                     in full plate armour may not be harmed by a blow,
                     but he may still be unbalanced and knocked to the
@@ -72,14 +72,19 @@
 
                     <item>
                         If the damage roll (before soak) is equal to or
-                        greater than size x strength + 20 of the
+                        greater than 5 x strength + 20 of the
                         target. Such a knockdown also causes 1 stun.
                     </item>
                 </itemlist>
 
                 <para>
-                    A character who has been knocked down is considered
-                    to be immediately <e>prone</e>.
+                    If you are knocked down then you are considered to be
+                    immediately <e>prone</e>. Whilst prone, all your
+                    actions are <e>slow</e>, and your <t>Dexterity</t>
+                    and <t>Agility</t> are capped to <t>Agility</t> -1.
+                    You may continue to fight from a prone position, or
+                    spend your next action getting up (even if you had
+                    declared your next action as something else).
                 </para>
             </sect2>
 
@@ -122,116 +127,109 @@
             <title>Healing and First aid</title>
 
             <sect2>
-                <title>Natural Recovery</title>
+                <title>Untended Wounds</title>
 
                 <para>
-                    Surviving the battle isn't always enough.
+                    Surviving the battle isn't always enough, and many
+                    more people may die of their wounds after a battle
+                    than during it - especially if there is no access to
+                    modern medicines.
                 </para>
 
-                <para>
-                    If you have been fatally wounded, then you will never
-                    recover unless your wounds are tended in some way.
-                    If resting or unconscious with fatal wounds, then a
-                    <t>Stamina</t> check must be made every minute against
-                    a target of 20 (remember your <e>hard to kill</e>
-                    bonuses, if any). If you fail, then you die. If you
-                    roll a '1', then you die. Eventually, you will die.
-                </para>
+                <sect3>
+                    <title>Fatal Wounds</title>
 
-                <para>
-                    If you insist on being active whilst fatally wounded,
-                    then you must make a check every <e>round</e>.
-                </para>
+                    <para>
+                        If you have been <e>fatally</e> wounded, then you
+                        will never recover naturally until you receive
+                        medical attention. Every minute if inactive, or
+                        every <e>round</e> if active, you must make a
+                        <t>Stamina</t> check at a target of 20 or die.
+                        If you fumble the check, then you also die.
+                    </para>
+                </sect3>
 
-                <para>
-                    If you are critically wounded, then you must make a
-                    similar stamina check every night. If you fail, then
-                    you drop to being fatally wounded.
-                </para>
+                <sect3>
+                    <title>Critical Wounds</title>
+
+                    <para>
+                        If you have been <e>critically</e> wounded, then
+                        you must make a <t>Stamina</t> check at a target
+                        of 20 every day if inactive, or hour if active.
+                        Failure or fumble will cause your wounds to
+                        worsen to <e>fatally</e> wounded and you fall
+                        into a coma. Continue to make similar checks
+                        every day, with another failure resulting in
+                        death.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Other Wounds</title>
+
+                    <para>
+                        If you have been wounded (but not critically
+                        or fatally), and you do not receive medical
+                        attention within an hour, then you must make
+                        a <t>Stamina</t> check at a target of 20.
+                        Failure means that the wound will worsen by
+                        one level, then stabalise (so no further
+                        checks are required). Success causes the wound
+                        to stabalise naturally.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Stuns</title>
+
+                    <para>
+                        Stuns do not require tending before they will
+                        begin to heal, and no <t>Stamina</t> checks are
+                        required to see if they worsen.
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
                 <title>First aid</title>
 
                 <para>
-                    After a character has become injured, it may be
-                    necessary for first aid to be applied to the wounds
-                    in order for them to heal. Fresh wounds need to be
-                    stabilised, a process which requires another
-                    character to make an intelligence x first aid roll
-                    on the wounded character.
+                    It is generally a good idea to get your wounds tended
+                    to by another. Tending a wound takes one minute, and
+                    requires a
+                    <y:skeq>
+                        <y:attr>Intelligence</y:attr>
+                        <y:sk>First aid</y:sk>
+                        <die/>
+                    </y:skeq>
+                    at a base target of 10. The target is modified by
+                    the total of your <e>wound</e> and <e>stun</e>
+                    penalties halved (round up).
                 </para>
 
                 <para>
-                    The base difficulty to successfully first aid a
-                    character's stuns is zero. To tend to a character's
-                    wounds, the base difficulty is 10. In both cases, the
-                    difficulty is modified upwards by the character's
-                    total stun and wound penalties.
+                    For example, you have moderate (-10) wounds and
+                    light (-5) stuns, so the first aid difficulty will
+                    be 10 + (10 + 5)/2 = 18.
                 </para>
 
                 <para>
-                    For example, a battered (-15) and lightly wounded (-5)
-                    character would be difficulty 20 to first aid their
-                    stuns, and 30 to first aid their wounds.
+                    On success, the wounds are stabalised. On a <e>good</e>
+                    success, one level of wounds is healed.
                 </para>
 
                 <para>
-                    A character may first aid themselves - as long as they
-                    are conscious - but they suffer all their wound
-                    penalties to their skill roll (as well as them adding
-                    to the difficulty of the task).
+                    <e>Stuns</e> can be first aided as well, except that
+                    the base target is 0, with the same modifiers. On
+                    success, one stun is healed, and each level of success
+                    beyond that heals another stun.
                 </para>
 
-                <sect3>
-                    <title>Tending to Stuns</title>
-
-                    <para>
-                        A successful first aid attempt against stuns will
-                        heal one level of stun immediately, plus a further
-                        level for every full 10 points the healer rolled
-                        above the difficulty.
-                    </para>
-
-                    <para>
-                        Stuns do not need to be stabalised, so there is no
-                        penalty from failing to have first aid performed as
-                        long as the character is only stunned.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Tending to Wounds</title>
-
-                    <para>
-                        A successful first aid attempt against wounds will
-                        stabalise the wound, preventing it from becoming
-                        infected or worsening. If the roll was at least 10
-                        points higher than the difficulty, then a single
-                        wound level is immediately healed.
-                    </para>
-
-                    <para>
-                        A character who is fatally wounded, does not have
-                        to roll to see if they die while the first aid
-                        attempt is in progress. However, if the first aid
-                        fails (at the end of the minute it takes), then
-                        the character has to start rolling again as per
-                        normal.
-                    </para>
-
-                    <para>
-                        If a wound is not successfully first aided within
-                        an hour, then there is a chance that it becomes
-                        infected and worsens. The character makes a stamina
-                        roll at difficulty 20, modified by wound penalties.
-                        Failure means that the wound is infected, and
-                        worsens by one level. Each day thereafter, until
-                        first aid is successfully attempted, another roll
-                        is needed, with each failure worsening the wound
-                        each time.
-                    </para>
-                </sect3>
+                <para>
+                    You may first aid yourself, though since you suffer
+                    your full penalties whilst trying to do so, it may
+                    be much harder than having someone else do it.
+                </para>
             </sect2>
 
             <sect2>
