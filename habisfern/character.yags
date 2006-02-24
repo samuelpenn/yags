@@ -19,8 +19,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.30 $</version>
-            <date>$Date: 2006-01-21 20:30:03 $</date>
+            <version>$Revision: 1.31 $</version>
+            <date>$Date: 2006-02-24 17:41:45 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -484,6 +484,22 @@
                 </sect3>
 
                 <sect3>
+                    <title>Techniques</title>
+
+                    <para>
+                        Techniques are purchased with skill points, and may be
+                        bought when all the prerequisites are met. The character
+                        must have at least one of the relevent skills at the
+                        required level.
+                    </para>
+
+                    <y:import-advantages tree="true" type="technique">
+                        <y:adv>../core/techniques/techniques.yags</y:adv>
+                        <y:adv>../core/techniques/lowtech-techniques.yags</y:adv>
+                    </y:import-advantages>
+                </sect3>
+
+                <sect3>
                     <title>Cults</title>
 
                     <para>
@@ -504,6 +520,43 @@
                         topic="habisfern"
                         role="technique"/>
                 </sect3>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Skills</title>
+
+            <sect2>
+                <title>Skills by Groups</title>
+
+                <para>
+                    The following lists all the skills according to
+                    various groups. Skills which belong to more than
+                    one group are listed multiple times. When
+                    designing a character that you want to be good at
+                    some type of thing, these grouping can give an
+                    idea about which skills to buy.
+                </para>
+
+                <y:list-skills>
+                    <y:skills>../core/skills/skills.yags</y:skills>
+                    <y:skills>../core/skills/lowtech-skills.yags</y:skills>
+
+                    <y:techniques>../core/techniques/techniques.yags</y:techniques>
+                    <y:techniques>../core/techniques/lowtech-techniques.yags</y:techniques>
+                </y:list-skills>
+            </sect2>
+
+            <sect2>
+                <title>Skill Descriptions</title>
+
+                <y:import-skills href="options/skills.yags">
+                    <y:skills>../core/skills/skills.yags</y:skills>
+                    <y:skills>../core/skills/lowtech-skills.yags</y:skills>
+
+                    <y:techniques>../core/techniques/techniques.yags</y:techniques>
+                    <y:techniques>../core/techniques/lowtech-techniques.yags</y:techniques>
+                </y:import-skills>
             </sect2>
         </sect1>
 

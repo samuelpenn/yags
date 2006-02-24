@@ -4,8 +4,8 @@
 <!--
     Standard Habisfern character packages: Nobles
 
-    Version: $Revision: 1.9 $
-    Date:    $Date: 2006-01-05 16:54:08 $
+    Version: $Revision: 1.10 $
+    Date:    $Date: 2006-02-24 17:41:45 $
 -->
 
 <characters xmlns="http://yagsbook.sourceforge.net/xml"
@@ -136,27 +136,31 @@
                     <skill name="Speak own" score="4"/>
                     <skill name="Area lore" score="4"/>
                     <skill name="Heraldry" score="2"/>
-                    <skill name="Law" score="1"/>
                 </group>
 
                 <group name="Other" type="skills">
                     <skill name="Ride" score="2"/>
-                    <skill name="Etiquette" score="1"/>
                 </group>
 
                 <group name="Combat" type="skills">
-                    <skill name="Longshaft weapon" score="2"/>
                     <skill name="Weapon and shield" score="4"/>
-                    <skill name="Single weapon" score="2"/>
-                    <skill name="Great weapon" score="2"/>
+                    <skill name="Second weapon skill" score="3"/>
+                    <skill name="Third weapon skill" score="2"/>
                     <skill name="Tactics" score="2"/>
                 </group>
             </skills>
+
+            <advantages>
+                <advantage name="Combat reflexes" skill="Melee"
+                           cost="2"/>
+                <advantage name="Shield wall" skill="Weapon and shield"
+                           cost="2"/>
+            </advantages>
         </statistics>
 
         <equipment>
             <cash value="10d"/>
-            <item name="Broadsword"/>
+            <item name="Primary weapon"/>
             <item name="Mail hauberk"/>
             <item name="Soft leather trousers"/>
             <item name="Soft leather jacket"/>
