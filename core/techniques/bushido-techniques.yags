@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+
+<!--
+    Bushido techniques.
+    Now split up and moved into the techniques directory.
+ -->
+
+<advantages xmlns="http://yagsbook.sourceforge.net/xml/yags">
+    <header>
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2006-02-27 22:43:16 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2005</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+            <url>http://www.glendale.org.uk/gpl.txt</url>
+        </license>
+    </header>
+
+    <advantage name="Way of the sword" type="technique">
+        <cost points="2"/>
+        <skill name="Kenjutsu"/>
+
+        <short>Strike quickly and accurately.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You may use either <t>agility</t> or <t>dexterity</t>
+                for defence rolls. You are trained to take advantage
+                of other's mistakes, and get a +1 to <t>dexterity</t>
+                when attacking in a free strike. These are automatic.
+            </para>
+
+            <para>
+                Finally, at your option, you may substitute
+                <t>dexterity</t> for <t>agility</t> in your initiative
+                for acting (not declaring) if striking using the
+                <e>Kenjutsu</e> skill.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Strike of the serpent" type="technique">
+        <cost points="4"/>
+        <skill name="Kenjutsu"/>
+        <prerequisite>Way of the sword</prerequisite>
+
+        <short>Focus and channel energy into an attack.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When making an aggressive attack, you may focus your
+                energies into a single devastating blow. For every
+                full two points of skill, you may gain +3 to both the
+                attack and damage rolls. However, each +3 causes you
+                to gain one point of fatigue. Declared.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Bite of the serpent" type="technique">
+        <cost points="6"/>
+        <skill name="Kenjutsu"/>
+        <prerequisite>Strike of the serpent</prerequisite>
+
+        <short>Kill with one blow.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If you ever make a <e>good</e> attack which causes
+                damage, then you may be considered to have made a
+                <e>deadly strike</e>. Combining this with
+                <e>deadly strike</e> has no extra effect. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Defence of steel" type="technique">
+        <cost points="8"/>
+        <skill name="Kenjutsu"/>
+
+        <prerequisite>Bite of the serpent</prerequisite>
+
+        <short>Bonus to base to be hit.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You may add your <e>kenjutsu</e> skill to the base
+                chance to be hit whenever you are fighting with the
+                <e>kenjutsu</e> skill that round. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Many strikes" type="technique">
+        <cost points="10"/>
+        <skill name="Kenjutsu"/>
+
+        <prerequisite>Defence of steel</prerequisite>
+
+        <short>Strike many times.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You may swap any number of defences for attacks in a
+                round. You suffer the usual penalties for making
+                multiple defences, and suffer the usual penalty for
+                not declaring a defence against a target if you do
+                not do so. Declared.
+            </para>
+
+            <para>
+                Note that this does allow you to strike twice at no
+                penalty (since you can use your normal free defence),
+                however this leaves you totally open to attack.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Daisho" type="technique">
+        <cost points="4"/>
+        <skill name="Niten"/>
+
+        <prerequisite>Way of the sword</prerequisite>
+
+        <short>Bonus to defence.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You may add your <e>Niten</e> skill to your base chance
+                to be hit in any round you are using the skill to
+                attack or defend. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Fast strike" type="technique">
+        <cost points="6"/>
+        <skill name="Niten"/>
+
+        <prerequisite>Daisho</prerequisite>
+
+        <short>Second attack if strike first.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If you have declared a defence against a target, and your
+                first strike happens before their action, then on a
+                successful hit you may swap your defence for a second
+                attack. If you fail to kill your opponent, they get a
+                free strike as if you hadn't declared a defence.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Parry and strike" type="technique">
+        <cost points="8"/>
+        <skill name="Niten"/>
+
+        <prerequisite>Fast strike</prerequisite>
+
+        <short>Halve attack penalties for multiple defences.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Penalties to your attacks due to making multiple
+                defences are halved.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Unstoppable strike" type="technique">
+        <cost points="10"/>
+        <skill name="Niten"/>
+
+        <prerequisite>Parry and strike</prerequisite>
+
+        <short>Free strikes become automatic strikes.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Whenever you get a free strike, it automatically
+                becomes an automatic strike.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Draw and strike" type="technique">
+        <cost points="2"/>
+        <skill name="Iajutsu"/>
+
+        <short>Draw and strike as a fast action.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When in an iajutsu duel, you may draw and strike as a
+                fast action. Your initiative is determined with
+                <t>agility</t> x <e>Iajutsu</e> whilst in the duel,
+                and you gain a bonus to damage equal to your
+                <e>Iajutsu</e> skill.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Iajutsu strike" type="technique">
+        <cost points="4"/>
+        <skill name="Iajutsu"/>
+
+        <prerequisite>Draw and strike</prerequisite>
+
+        <short>Bonus to attack and damage.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When in combat, any strike you make against someone who
+                has not yet attacked you gains a bonus to attack and
+                damage equal to your <e>Iajutsu</e> skill when you
+                are fighting using <e>Kenjutsu</e>. Automatic.
+            </para>
+        </description>
+    </advantage>
+</advantages>
+
+

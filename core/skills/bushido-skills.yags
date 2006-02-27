@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+
+<!--
+    Bushido skills, for use in an oriental style of campaign.
+    Crosslinked with talent techniques.
+
+    Copyright (c) 2005, Samuel Penn.
+    This document can be redistributed and/or modified under the terms
+    of the GNU Public License as published by the Free Software Foundation
+    version 2.
+
+    Version: $Revision: 1.1 $
+    Author: Samuel Penn
+    -->
+
+<skill-list xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:yb="http://yagsbook.sourceforge.net/xml"
+            techniques="options/techniques.yags">
+    <groups>
+        <group>Talents</group>
+        <group>Combat</group>
+        <group parent="Combat">Melee</group>
+        <group parent="Combat">Missile</group>
+        <group parent="Combat">Armed melee</group>
+        <group parent="Combat">Bushido</group>
+        <group>Rogue</group>
+        <group>Social</group>
+        <group>Artistic</group>
+        <group>Wilderness</group>
+        <group>Craft</group>
+        <group>Animal</group>
+        <group>Lore</group>
+        <group>Legal</group>
+        <group>Rural</group>
+        <group>Household</group>
+    </groups>
+
+    <techniques>options/techniques.yags</techniques>
+    <techniques>lowtech/lowtech-techniques.yags</techniques>
+
+
+    <!--
+        LORE skills.
+    -->
+
+    <skill name="Kenjutsu" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+        <group>Armed Melee</group>
+        <group>Bushido</group>
+
+        <short>Skill with Samurai weapons.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The Samurai art of fighting, with weapons such as the
+                Katana and No-dachi. This skill covers using either a
+                single one handed weapon or a two-handed weapon, as long
+                as they are those commonly used by Samurai. Commonly, this
+                includes the katana, ninja-to, no-dachi and wakizashi.
+            </para>
+
+            <para>
+                Uses <t>dexterity</t> for both attack and defence, and
+                adds the attack, defence and damage attributes of the
+                weapon to rolls.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Niten" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+        <group>Armed Melee</group>
+        <group>Bushido</group>
+
+        <prerequisite>Kenjutsu</prerequisite>
+
+        <short>Two sword Samurai style.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The Samurai art of fighting with both a wakizashi and a
+                katana or ninja-to.
+            </para>
+
+            <para>
+                Uses <t>dexterity</t> for both attack and defence, and
+                adds the attack, defence and damage attributes of the
+                primary weapon, plus the attack <e>or</e> defence
+                attribute of the secondary weapon to rolls.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Iajutsu" type="skill">
+        <group>Bushido</group>
+
+        <default>Kenjutsu</default>
+        <prerequisite>Kenjutsu</prerequisite>
+
+        <short>Ritualised sword duels.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of fighting a duel specialised in the fast
+                draw of a katana aiming to kill with a single blow.
+                It covers the meditative and psychological aspects
+                of the duel, as well as actually being able to land
+                a blow.
+            </para>
+        </description>
+    </skill>
+
+
+</skill-list>
+
+
+
