@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+                href="/home/sam/src/forge/yagsbook/xml/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+    <header>
+        <title>Bushido Characters</title>
+        <tagline>Yags Bushido</tagline>
+
+        <summary>
+            These rules are concerned with the characters and settings
+            commonly found in Asian films and history, specifically
+            covering Samurai characters and also more modern oriental
+            martial arts.
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2006-02-28 21:37:04 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2006</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+        </license>
+
+        <style name="character"/>
+    </header>
+
+    <body>
+        <sect1>
+            <title>Yags Bushido</title>
+
+            <para>
+                It is suggested that you use <e>Yags Modern</e> for the
+                character generation, since there are not specific
+                character generation rules here. Currently, these rules
+                are mostly concerned with detailing the skills and
+                techniques commonly found in <e>Bushido</e> style
+                settings.
+            </para>
+        </sect1>
+
+
+        <sect1>
+            <title>Skills</title>
+
+            <sect2>
+                <title>Skill list</title>
+
+                <y:list-skills>
+                    <y:skills>../core/skills/bushido-skills.yags</y:skills>
+                </y:list-skills>
+            </sect2>
+
+            <sect2>
+                <title>Skill descriptions</title>
+
+                <y:import-skills>
+                    <y:skills>../core/skills/bushido-skills.yags</y:skills>
+
+                    <y:techniques>../core/techniques/techniques.yags</y:techniques>
+                    <y:techniques>../core/techniques/lowtech-techniques.yags</y:techniques>
+                    <y:techniques>../core/techniques/bushido-techniques.yags</y:techniques>
+                </y:import-skills>
+            </sect2>
+        </sect1>
+    </body>
+
+</article>
+
+
