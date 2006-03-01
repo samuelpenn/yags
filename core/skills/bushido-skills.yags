@@ -9,7 +9,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.2 $
+    Version: $Revision: 1.3 $
     Author: Samuel Penn
 -->
 
@@ -18,22 +18,15 @@
             xmlns:yb="http://yagsbook.sourceforge.net/xml"
             techniques="options/techniques.yags">
     <groups>
-        <group>Talents</group>
         <group>Combat</group>
         <group parent="Combat">Melee</group>
         <group parent="Combat">Missile</group>
         <group parent="Combat">Armed melee</group>
         <group parent="Combat">Bushido</group>
-        <group>Rogue</group>
         <group>Social</group>
         <group>Artistic</group>
-        <group>Wilderness</group>
         <group>Craft</group>
-        <group>Animal</group>
         <group>Lore</group>
-        <group>Legal</group>
-        <group>Rural</group>
-        <group>Household</group>
     </groups>
 
     <techniques>options/techniques.yags</techniques>
@@ -95,6 +88,9 @@
     </skill>
 
     <skill name="Iajutsu" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+        <group>Armed Melee</group>
         <group>Bushido</group>
 
         <default>Kenjutsu</default>
@@ -113,6 +109,106 @@
         </description>
     </skill>
 
+    <skill name="Calligraphy" type="skill">
+        <group>Artistic</group>
+
+        <short>Artistic writing.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of writing artistically. With calligraphy you
+                are able to draw beautiful letters.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Tea ceremony" type="skill">
+        <group>Artistic</group>
+        <group>Social</group>
+
+        <default>Etiquette</default>
+        <short>The skilled art of making tea.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The making and serving of tea is considered a high art
+                form, and being able to arrange a perfect tea ceremony
+                is considered of high importance.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Ikebana" type="skill">
+        <group>Artistic</group>
+
+        <short>Flower arranging.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Being able to collect and arrange flowers artistically
+                is considered a respectable skill.
+            </para>
+        </description>
+    </skill>
+
+
+    <skill name="Kyujutsu" type="skill">
+        <group>Combat</group>
+        <group>Missile</group>
+        <group>Bushido</group>
+
+        <short>Using bows</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of shooting a bow. With Kyujutsu you know how
+                to use all types of bows.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="War fan" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+        <group>Armed Melee</group>
+
+        <short>Using a war fan in combat</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The war fan is a heavy type of metal fan used for
+                signalling in battles. It can be used as a weapon.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Jiujutsu" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+
+        <prerequisite score="4">Brawl</prerequisite>
+
+        <short>Unarmed combat</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                A particular style of unarmed combat.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Shinto" type="skill">
+        <group>Lore</group>
+
+        <short>Matters of the soul.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of writing artistically. With calligraphy you
+                are able to draw beautiful letters.
+            </para>
+        </description>
+    </skill>
 
 </skill-list>
 
