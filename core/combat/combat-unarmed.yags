@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.3 $</version>
-            <date>$Date: 2006-03-07 18:53:41 $</date>
+            <version>$Revision: 1.4 $</version>
+            <date>$Date: 2006-03-07 22:40:39 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -59,20 +59,33 @@
                 <title>Skills</title>
 
                 <para>
-                    Most unarmed combat comes under the <e>Brawl</e> skill.
-                    Certain martial arts disciplines may have their own
-                    unique skills (such as <e>Karate</e> or <e>Judo</e>),
-                    however these are not by themselves any better than
-                    the <e>Brawl</e> skill for close combat. The biggest
-                    advantage of these skills are the techniques which
-                    are based off them.
+                    The majority of unarmed combat will use the
+                    <e>Brawl</e> skill - indeed this skill is the basis
+                    of pretty much all melee combat (both armed and
+                    unarmed), and can act as the default for most other
+                    melee skills. <e>Brawl</e> should not be thought of
+                    as unskilled brawling, and at high skill levels it
+                    can be deadly. However, most people who fight with
+                    a katana have trained at <e>Kenjutsu</e>, whilst
+                    most people who fight in bars are simply using their
+                    default level of skill.
                 </para>
 
                 <para>
-                    <e>Brawl</e>, though its name may suggest unskilled
-                    bar brawls, is also used for trained hand to hand
-                    combat, and at high levels represents generic martial
-                    arts skills.
+                    Certain schools teach particular styles of unarmed
+                    combat - notably <e>Karate</e> or <e>Juijutsu</e>.
+                    These do have their own skills, and sets of
+                    techniques, but are not necessarily better than a
+                    good <e>brawl</e> skill. Instead they tend to be
+                    more focused, being better in a particular situation,
+                    but worse in others.
+                </para>
+
+                <para>
+                    Eastern style martial arts are not covered here,
+                    instead see the genre specific <e>Bushido</e> rules
+                    for Yags. However, those rules build upon the rules
+                    given here.
                 </para>
             </sect2>
 
@@ -98,7 +111,8 @@
 
                     <item name="Martial weapons">
                         Martial weapons are any melee weapon which does
-                        more than stun damage.
+                        more than stun damage and has a reach greater
+                        than zero.
                     </item>
                 </itemlist>
 
@@ -113,7 +127,7 @@
         </sect1>
 
         <sect1>
-            <title>Grappling and Wrestling</title>
+            <title>Brawling Manouevres</title>
 
             <para>
                 A brawl attack is performed like any other attack, except
@@ -133,20 +147,110 @@
                 available to them.
             </para>
 
+            <para>
+                A manouevre can be performed by anybody without
+                training (i.e. they are not techniques), and can be used
+                with the <e>brawl</e> skill or any skill related to it
+                (basically, has <e>brawl</e> as either a default or a
+                pre-requisite).
+            </para>
+
+            <para>
+                There are three types of manouevres - attack, defensive
+                (which counter attacks) and followup (which are used to
+                improve a previous attack).
+            </para>
+
+            <sect2>
+                <title>Attack Manouevres</title>
+
+                <para>
+                    All the following must be declared when the attack is
+                    declared at the start of the round. They cause a
+                    <e>free strike</e> (which happens first).
+                </para>
+
+                <sect3>
+                    <title>Grab</title>
+
+                    <para>
+                        Covers trying to grab the defender's limbs or neck
+                        in order to get a hold. Requires a <e>good</e>
+                        attack against a limb, and an <e>excellent</e>
+                        attack against the neck.
+                    </para>
+
+                    <para>
+                        On success, the target is held and an immediate
+                        contest of strength x brawl is made to see if
+                        the attacker can keep hold. A second success
+                        means that the defender looses the rest of their
+                        declared actions that round (if any).
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Trip</title>
+
+                    <para>
+                        Covers either grabbing a person and throwing them
+                        to the ground, or pushing or knocking them off
+                        their feet. Requires a <e>good</e> attack. On
+                        success, target is grabbed (as above) and contested
+                        strength x brawl rolls are made. If the attacker
+                        wins again, then defender is thrown and considered
+                        to be <e>prone</e>. Failure means that the grab
+                        is broken.
+                    </para>
+
+                    <para>
+                        Each extra level of success for the final throw
+                        allows the attacker to cause one stun if desired.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Unarmed disarm</title>
+
+                    <para>
+                        This is done when you want to disarm a foe. It
+                        requires a <e>good</e> attack, and on success
+                        requires a contest of agility x brawl to actually
+                        disarm the foe. If the second check fails, then
+                        the defender looses their next action that round
+                        (but only if their next action is in the same
+                        round).
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Defensive Manouevres</title>
+
+                <sect3>
+                    <title>Escape hold</title>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Followup Manouevres</title>
+
+                <sect3>
+                    <title>Improve Grab</title>
+                </sect3>
+
+                <sect3>
+                    <title>Break</title>
+                </sect3>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Grappling and Wrestling</title>
+
             <sect2>
                 <title>Attack Opportunities</title>
 
-                <para>
-                    Real brawls (or at least, those portrayed in cinematic
-                    fiction) tend to involve a lot of throwing people into
-                    things and knocking people over. In order to encourage
-                    this sort of behaviour, the attacker may optionally
-                    choose to turn his attack into a special attack if he
-                    gets a good roll. These special attacks do <e>not</e>
-                    have to be declared before hand - if the attack is
-                    good enough, then it is assumed that the attacker makes
-                    his choice as soon as he sees an opening.
-                </para>
 
                 <sect3>
                     <title>Grapple (Good)</title>
