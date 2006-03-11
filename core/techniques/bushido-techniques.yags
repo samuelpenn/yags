@@ -9,7 +9,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.3 $
+    Version: $Revision: 1.4 $
     Author: Samuel Penn
 -->
 
@@ -21,8 +21,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.3 $</version>
-            <date>$Date: 2006-03-01 20:58:04 $</date>
+            <version>$Revision: 1.4 $</version>
+            <date>$Date: 2006-03-11 23:11:28 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -249,11 +249,65 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                In an iajutsu duel, you may re-roll any iajutsu skill
+                In an Iajutsu duel, you may re-roll any iajutsu skill
                 check, damage roll or soak roll. In a single duel, you
                 may re-roll a number of times equal to your Honour.
                 You may also add your Honour score to all these rolls
                 as well.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Focus attack" type="technique">
+        <cost points="4"/>
+        <skill name="Karate"/>
+
+        <prerequisite>Close combat</prerequisite>
+
+        <short>Concentrated attack.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Halve penalty to attack for multiple defences. Ignore the
+                <e>free strike</e> against you if you do not defend against
+                the person you are attacking.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Fast strike" type="technique">
+        <cost points="6"/>
+        <skill name="Karate"/>
+
+        <prerequisite>Fast attack</prerequisite>
+
+        <short>All attacks are fast.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Normal attacks are <e>fast</e>. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Killing blow" type="technique">
+        <cost points="8"/>
+        <skill name="Karate"/>
+
+        <prerequisite>Fast strike</prerequisite>
+
+        <short>Can kill in a single blow.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When you attack you may concentrate your strike on the
+                vital organs of the target, aiming to kill them in a
+                single strike. This is an aggressive attack which uses
+                up a defence slot. If the target is injured by the
+                attack, they must make a size x stamina check against
+                a target of 10 + 5 x levels or immediately drop to
+                datally wounded. If they succeed their check, then they
+                take one less damage level from the attack than normal.
             </para>
         </description>
     </advantage>

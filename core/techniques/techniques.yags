@@ -12,8 +12,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.8 $</version>
-            <date>$Date: 2006-03-11 09:52:08 $</date>
+            <version>$Revision: 1.9 $</version>
+            <date>$Date: 2006-03-11 23:11:28 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -483,7 +483,7 @@
         </description>
     </advantage>
 
-    <advantage name="Double attack" type="technique">
+    <advantage name="Multiple attacks" type="technique">
         <cost points="10"/>
         <skill name="Melee"/>
 
@@ -493,10 +493,12 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Aggressive stance. You can attack twice, each time
-                at a -15 penalty to skill. The first attack is fast, the
-                second attack is slow, but both happen at the same
-                initiative.
+                Aggressive stance. You may attack multiple times each round
+                with a penalty of -15 per extra attack to all attacks. The
+                maximum number of attacks you can make is one per five
+                levels of skill (so 2 attacks, or 1 extra attack, at level
+                10). When declaring use of this technique, the first attack
+                is fast, the second slow and the third is normal.
             </para>
         </description>
     </advantage>
@@ -505,7 +507,7 @@
         <cost points="12"/>
         <skill name="Melee"/>
 
-        <prerequisite>Double attack</prerequisite>
+        <prerequisite>Multiple attacks</prerequisite>
 
         <short>Ignore free strikes.</short>
 
@@ -517,21 +519,6 @@
         </description>
     </advantage>
 
-    <advantage name="Triple attack" type="technique">
-        <cost points="15"/>
-        <skill name="Melee"/>
-        <prerequisite>Careful defence</prerequisite>
-
-        <short>Three attacks a round.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Aggressive stance. You may attack three times, each time
-                at a -30 penalty to skill. The first attack is fast, the
-                second attack is normal, and the third attack is slow.
-            </para>
-        </description>
-    </advantage>
 
     <advantage name="Deadly strike" type="technique">
         <cost points="6"/>
