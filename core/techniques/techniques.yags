@@ -12,8 +12,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.9 $</version>
-            <date>$Date: 2006-03-11 23:11:28 $</date>
+            <version>$Revision: 1.10 $</version>
+            <date>$Date: 2006-03-25 16:22:43 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -82,12 +82,33 @@
         <cost points="4"/>
         <skill name="Athletics"/>
 
+        <short>Improved climbing.</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Double basic movement whilst climbing.
             </para>
         </description>
     </advantage>
+
+    <advantage name="Acrobatic talent" type="technique">
+        <cost points="4"/>
+        <skill name="Athletics"/>
+
+        <short>Half athletics skill adds to other physical skills.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Your aptitude with athletics enables you to perform better
+                at other physical skills. All melee combat attack and
+                defence rolls, as well as stealth, dance, swim and ride
+                gain an automatic bonus equal to half (round down) of your
+                <e>athletics</e> skill. With an <e>athletics</e> skill
+                of 8 or more, the bonus is equal to your full skill.
+            </para>
+        </description>
+    </advantage>
+
 
     <!--
         Awareness.
@@ -163,7 +184,7 @@
             <para>
                 When the character is trying to disguise themselves,
                 any circumstance penalties are halved, and get a choice
-                of using either intelligence or charisma.
+                of using either <t>intelligence</t> or <t>empathy</t>.
             </para>
         </description>
     </advantage>
@@ -201,166 +222,10 @@
         </description>
     </advantage>
 
-    <advantage name="Ambush" type="technique">
-        <cost points="2"/>
-        <skill name="Stealth"/>
 
-        <short>Ignore unsuspecting foe's armour.</short>
 
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Allows the character to make an attack against an
-                unsuspecting target, bypassing armour. If an attack is
-                made with either the <e>brawl</e> or <e>single weapon</e>
-                skill against a target who is both unware of the attack
-                and also not in combat, then the attack ignores all
-                armour.
-            </para>
 
-            <para>
-                An <e>ambush</e> is a slow attack, and the ambusher is
-                considered to be using the <e>focused stance</e>. May be
-                combined with other techniques.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Combat ambush" type="technique">
-        <cost points="4"/>
-        <skill name="Stealth"/>
-        <prerequisite>Ambush</prerequisite>
-
-        <short>Ambush someone in the middle of combat.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                As for <e>Ambush</e>, but may be performed at any time the
-                defender is not aware of the attacker (even if the defender
-                is in combat). Still only applies to attacks made with
-                either the <e>Single weapon</e> or <e>Brawl</e> skills.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Sudden death" type="technique">
-        <cost points="8"/>
-        <skill name="Stealth"/>
-        <prerequisite>Combat ambush</prerequisite>
-
-        <short>Ambush anyone even if they can see you.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                As for <e>Ambush</e>, but applies whenever the defender
-                is not defending against the character's attack. The
-                character may use either an <e>aggressive</e> or a
-                <e>normal</e> stance. Still only applies to attacks made
-                with either the <e>Single weapon</e> or <e>Brawl</e>
-                skills.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Close combat" type="technique">
-        <cost points="2"/>
-        <skill name="Brawl"/>
-
-        <short>Bonus when grappling.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                When attempting a grapple or trip attack, you can ignore
-                the <e>free strike</e> against you unless your opponent
-                has a higher <e>brawl</e> skill than you.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Brute force" type="technique">
-        <cost points="4"/>
-        <skill name="Brawl"/>
-
-        <prerequisite>Close combat</prerequisite>
-
-        <short>Can use strength when making an attack.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                When making an attack roll, you may use <t>strength</t>
-                instead of agility. However, doing so uses up one defence
-                slot and you may not use the <e>defensive stance</e>.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Opportunity attack" type="technique">
-        <cost points="4"/>
-        <skill name="Brawl"/>
-
-        <prerequisite>Close combat</prerequisite>
-
-        <short>Can make a trip or grab without declaring.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If you make a <e>good</e> brawl attack, you may turn it
-                into a grab or trip manouevre, even if you haven't
-                declared it as one.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Unarmed combat" type="technique">
-        <cost points="6"/>
-        <skill name="Brawl"/>
-
-        <prerequisite>Opportunity</prerequisite>
-
-        <short>Reduces the risk of free strikes.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The character is trained in fighting with no weapons
-                against armed foes. A defender with a martial weapon only
-                gets a <e>free strike</e> if they make a <e>good</e>
-                defence roll.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Hard to kill" type="technique">
-        <cost points="2"/>
-        <skill name="Brawl"/>
-
-        <short>Bonus to staying alive.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You gain a bonus equal to your <e>Brawl</e> skill to
-                checks to remain conscious and alive because of being
-                fatally wounded or stunned. This applies all the time,
-                even when not using this skill.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Tough" type="technique">
-        <cost points="4"/>
-        <skill name="Brawl"/>
-
-        <prerequisite>Hard to kill</prerequisite>
-
-        <short>Bonus to soak.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You gain a bonus to your basic soak equal to
-                your <t>Strength</t>. This applies all the time, even
-                when not using this skill.
-            </para>
-        </description>
-    </advantage>
-
+<!--
     <advantage name="Stealthy in armour" type="technique">
         <cost points="4"/>
         <skill name="Stealth"/>
@@ -410,188 +275,11 @@
             </para>
         </description>
     </advantage>
-
-
-    <!--
-        Basic melee techniques.
-
-        The following techniques are common to all melee skills.
-    -->
-    <advantage name="Combat reflexes" type="technique">
-        <cost points="2"/>
-        <skill name="Melee"/>
-
-        <short>Best melee skill adds to initiative.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have a bonus to your <e>initiative</e> equal to
-                your best melee skill score. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Reflex dodge" type="technique">
-        <cost points="4"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Combat reflexes</prerequisite>
-
-        <short>Increases base chance to be hit.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You may add your best melee skill score to your base
-                chance to be hit for one attack you are aware of each
-                round. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-
-    <advantage name="Skilled strike" type="technique">
-        <cost points="6"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Reflex dodge</prerequisite>
-
-        <short>Do extra damage on good attacks.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Each extra level of success in an attack does an extra +3
-                damage. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Unstoppable attack" type="technique">
-        <cost points="8"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Skilled strike</prerequisite>
-
-        <short>Increase defender's chance of fumbling.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Automatic technique which applies when you roll a
-                natural '20' on your attack roll. If the
-                defender does not also have this technique, then any
-                defence is considered to be an automatic fumble.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Multiple attacks" type="technique">
-        <cost points="10"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Unstoppable attack</prerequisite>
-
-        <short>Two attacks a round.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Aggressive stance. You may attack multiple times each round
-                with a penalty of -15 per extra attack to all attacks. The
-                maximum number of attacks you can make is one per five
-                levels of skill (so 2 attacks, or 1 extra attack, at level
-                10). When declaring use of this technique, the first attack
-                is fast, the second slow and the third is normal.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Careful defence" type="technique">
-        <cost points="12"/>
-        <skill name="Melee"/>
-
-        <prerequisite>Multiple attacks</prerequisite>
-
-        <short>Ignore free strikes.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Any free strikes against you are ignored. Any automatic
-                strikes become free strikes instead. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-
-    <advantage name="Deadly strike" type="technique">
-        <cost points="6"/>
-        <skill name="Armed melee"/>
-
-        <prerequisite>Skilled strike</prerequisite>
-
-        <short>Kill foe in a single blow.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Aggressive attack which also uses up one defence slot.
-                If the target is successfully wounded, then
-                they must make a size x stamina roll against a target of
-                10 + 5 x wounds (not stuns) caused or immediately drop
-                to fatally wounded. If they succeed their roll, then
-                they take one less wound from the attack than normal.
-            </para>
-        </description>
-    </advantage>
-
-
-
-<!--
-    <advantage name="Sunder" type="technique">
-        <cost points="4"/>
-        <skill name="Armed melee"/>
-
-        <prerequisite>Improved attack</prerequisite>
-
-        <short>Try and break your foe's weapon.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                A <e>sunder</e> attack is an attempt to break the
-                defender's weapon. The attacker makes a dexterity based
-                attack roll, and the defender rolls their base
-                dexterity x weapon skill. If the attacker succeeds, then
-                there is a chance of breaking the weapon. Each extra level
-                of success gives the attacker +5 on the following checks.
-            </para>
-
-            <para>
-                To see if the weapon breaks, the attacker rolls their
-                strength x weapon strength (this is the minimum strength
-                required to use the weapon) versus the defender's
-                strength x weapon strength. The attacker gets +5 if they
-                are using a <e>heavy</e> weapon against a <e>light</e>
-                weapon, or a metal edged weapon against wood.
-            </para>
-
-            <para>
-                A <e>good</e> success is needed by the attacker in order
-                to <e>weaken</e> the defender's weapon. A weakened weapon
-                that is again sundered is broken and cannot be used. A
-                weakened weapon will also break if it fumbles an attack
-                or defence roll. If the weapon is classed as <e>weak</e>,
-                then only a normal success is required. A <e>strong</e>
-                weapon needs an <e>excellent</e> success.
-            </para>
-
-            <para>
-                On a successful sunder, a second check is made immediately,
-                and if this also succeeds, then the weapon is broken
-                immediately. If the defender has a shield and are using
-                the <e>weapon and shield</e> style, or are using two
-                weapons with the <e>two weapons</e> style, then the
-                defender can choose which weapon is attacked, otherwise
-                it is the attacker's choice.
-            </para>
-        </description>
-    </advantage>
 -->
+
+
+
+
 
 
     <!--
@@ -717,7 +405,7 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You are a gifted orator, and gain a +1 to your
-                charisma when giving a speech.
+                <t>empathy</t> when giving a speech.
             </para>
         </description>
     </advantage>

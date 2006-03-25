@@ -9,7 +9,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.4 $
+    Version: $Revision: 1.5 $
     Author: Samuel Penn
 -->
 
@@ -22,7 +22,7 @@
         <group parent="Combat">Melee</group>
         <group parent="Combat">Missile</group>
         <group parent="Combat">Armed melee</group>
-        <group parent="Combat">Bushido</group>
+        <group parent="Combat">Bugei</group>
         <group>Social</group>
         <group>Artistic</group>
         <group>Craft</group>
@@ -41,7 +41,7 @@
         <group>Combat</group>
         <group>Melee</group>
         <group>Armed Melee</group>
-        <group>Bushido</group>
+        <group>Bugei</group>
 
         <short>Skill with Samurai weapons.</short>
 
@@ -66,7 +66,7 @@
         <group>Combat</group>
         <group>Melee</group>
         <group>Armed Melee</group>
-        <group>Bushido</group>
+        <group>Bugei</group>
 
         <prerequisite>Kenjutsu</prerequisite>
 
@@ -91,7 +91,7 @@
         <group>Combat</group>
         <group>Melee</group>
         <group>Armed Melee</group>
-        <group>Bushido</group>
+        <group>Bugei</group>
 
         <default>Kenjutsu</default>
         <prerequisite>Kenjutsu</prerequisite>
@@ -155,14 +155,17 @@
     <skill name="Kyujutsu" type="skill">
         <group>Combat</group>
         <group>Missile</group>
-        <group>Bushido</group>
+        <group>Bugei</group>
 
         <short>Using bows</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The skill of shooting a bow. With Kyujutsu you know how
-                to use all types of bows.
+                to use all types of bows common to a Bushido setting.
+                Kyujutsu teaches that the firing of a bow should be a
+                single fluid action, and is based on <t>agility</t>
+                rather than <t>perception</t>.
             </para>
         </description>
     </skill>
@@ -171,6 +174,7 @@
         <group>Combat</group>
         <group>Melee</group>
         <group>Armed Melee</group>
+        <group>Bugei</group>
 
         <short>Using a war fan in combat</short>
 
@@ -185,6 +189,7 @@
     <skill name="Jiujutsu" type="skill">
         <group>Combat</group>
         <group>Melee</group>
+        <group>Bugei</group>
 
         <prerequisite score="4">Brawl</prerequisite>
 
@@ -192,7 +197,12 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                A particular style of unarmed combat.
+                A particular style of unarmed combat that is designed for
+                use in real combat situations. When using <e>Jiujutsu</e>,
+                you may use any weapon, which grants a full bonus to
+                damage and half bonus to attack and defence. If two weapons
+                are used, you gain the best full attack, defence and damage
+                bonus of either weapon.
             </para>
         </description>
     </skill>
@@ -204,8 +214,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The skill of writing artistically. With calligraphy you
-                are able to draw beautiful letters.
+                Knowledge of religious and spiritual matters. Provides
+                knowledge of the Celestial Court, as well as the philosophy
+                of <e>Shinto</e>.
             </para>
         </description>
     </skill>
@@ -260,12 +271,45 @@
 
             <para>
                 <e>Judo</e> is used like <e>brawl</e> in combat, though
-                use of weapons grants no bonus except to damage. You gain
+                does not teach the use of weapons. If a weapon is used,
+                the usual wrong-style penalties apply, plus you only get
+                the damage bonus of the weapon.
+            </para>
+
+            <para>
+                When using <e>Judo</e>, you gain
                 a +1 bonus to agility for defence (which can affect the
                 maximum number of defences) and grab or trip attacks.
                 However, you suffer -1 to agility for all other attacks.
                 Attacks aimed to directly damage (such as a punch or kick)
                 have a -4 penalty to damage.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Karate" type="skill">
+        <group>Combat</group>
+        <group>Sport</group>
+        <group>Melee</group>
+
+        <default>Brawl</default>
+
+        <short>The sport of judo.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                <e>Karate</e> is one of the popular (or at least, well
+                known) styles of unarmed combat in the modern world. It
+                is specialised in attack rather than defence. Though it
+                is often used as a sport, it is effective in a real fight
+                as well.
+            </para>
+
+            <para>
+                It is used in the same way as <e>brawl</e> in combat,
+                though it does not teach the use of weapons. When fighting
+                unarmed, you gain a bonus to damage equal to your skill,
+                but suffer a -1 penalty to agility for defence rolls.
             </para>
         </description>
     </skill>

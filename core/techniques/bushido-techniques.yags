@@ -9,7 +9,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.4 $
+    Version: $Revision: 1.5 $
     Author: Samuel Penn
 -->
 
@@ -21,8 +21,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.4 $</version>
-            <date>$Date: 2006-03-11 23:11:28 $</date>
+            <version>$Revision: 1.5 $</version>
+            <date>$Date: 2006-03-25 16:22:43 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -311,6 +311,57 @@
             </para>
         </description>
     </advantage>
+
+    <advantage name="Strength in speed" type="technique">
+        <cost points="4"/>
+        <skill name="Judo"/>
+        <prerequisite>Close combat</prerequisite>
+
+        <short>Used agility instead of strength.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When performing a trip or grab attack, or trying to break
+                or avoid one, then you may use your <t>agility</t> instead
+                of <t>strength</t>. If you do, you gain a bonus to your
+                <t>agility</t> of +1 per four levels of skill.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Dodging defence" type="technique">
+        <cost points="2"/>
+        <skill name="Boxing"/>
+
+        <short>Bonus to soak.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If you defended against an attack, and failed, then you
+                get a bonus to your soak equal to your Boxing skill.
+                Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Sheltered attack" type="technique">
+        <cost points="4"/>
+        <skill name="Boxing"/>
+        <prerequisite>Dodging defence</prerequisite>
+
+        <short>Improved aggressive and defensive stances.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Declare this when taking an aggressive or defensive
+                stance when using the Boxing skill. You ignore all
+                penalties to attack and defence from the stance (though
+                still act fast or slow as normal, and still get the
+                bonus).
+            </para>
+        </description>
+    </advantage>
+
 </advantages>
 
 

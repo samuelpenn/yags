@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+
+<!--
+    Core techniques.
+    -->
+
+<advantages xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+    <header>
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2006-03-25 16:22:43 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2006</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+            <url>http://www.glendale.org.uk/gpl.txt</url>
+        </license>
+    </header>
+
+
+    <advantage name="Close combat" type="technique">
+        <cost points="2"/>
+        <skill name="Brawl"/>
+
+        <short>Bonus when grappling.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When attempting a grapple or trip attack, you can ignore
+                the <e>free strike</e> against you caused by such an attack
+                (though still suffer strikes caused by reach or attacking
+                an armed foe for example).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Stunning attack" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        <prerequisite>Close combat</prerequisite>
+
+        <short>Target looses their attacks.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When this technique is used, it must be declared with the
+                aggressive stance, and it uses one defence. On a hit that
+                damages, the opponent must make a <y:stamina/> check against
+                10 + 5 x stuns or loose their attacks that round, and gain
+                a number of fatigue levels equal to the stuns they took.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Precision attack" type="technique">
+        <cost points="6"/>
+        <skill name="Brawl"/>
+        <prerequisite>Stunning attack</prerequisite>
+
+        <short>Damage type increased by one level.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Whenever the aggressive stance is used, the damage type
+                is increased by one level - e.g. stuns become mixed.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Dirty fighting" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+
+        <short>Turn attack into stun attack.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When making an attack with a martial weapon, after the
+                damage roll you may opt to re-roll the damage and do
+                <e>stun</e> damage at the same bonus. Represents hitting
+                the target with the hilt of the sword, or head butting
+                them, after the primary attack fails to get through
+                their armour.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Master of fighting" type="technique">
+        <cost points="8"/>
+        <skill name="Brawl"/>
+
+        <short>Gain bonus to all melee skills.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Gain a bonus to attack and defence rolls with all melee
+                skills (including brawl) equal to your brawl skill.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Brute force" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+
+        <short>Can use strength when making an attack.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When making an attack roll, you may use <t>strength</t>
+                instead of agility. However, doing so uses up one defence
+                slot and you may not use the <e>defensive stance</e>.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Unarmed combat" type="technique">
+        <cost points="6"/>
+        <skill name="Brawl"/>
+
+        <short>Reduces the risk of free strikes.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The character is trained in fighting with no weapons
+                against armed foes. A defender with a martial weapon only
+                gets a <e>free strike</e> if they make a <e>good</e>
+                defence roll.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Hard to kill" type="technique">
+        <cost points="2"/>
+        <skill name="Brawl"/>
+
+        <short>Bonus to staying alive.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You gain a bonus equal to your <e>Brawl</e> skill to
+                checks to remain conscious and alive because of being
+                fatally wounded or stunned. This applies all the time,
+                even when not using this skill.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Tough" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+
+        <prerequisite>Hard to kill</prerequisite>
+
+        <short>Bonus to soak.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You gain a bonus to your basic soak equal to
+                your <t>Strength</t>. This applies all the time, even
+                when not using this skill.
+            </para>
+        </description>
+    </advantage>
+
+
+    <!--
+        Basic melee techniques.
+
+        The following techniques are common to all melee skills.
+        -->
+    <advantage name="Combat reflexes" type="technique">
+        <cost points="2"/>
+        <skill name="Melee"/>
+
+        <short>Best melee skill adds to initiative.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have a bonus to your <e>initiative</e> equal to your
+                best melee skill. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Reflex dodge" type="technique">
+        <cost points="4"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Combat reflexes</prerequisite>
+
+        <short>Increases base chance to be hit.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Automatic technique which raises the target number to hit
+                you by your best melee skill whenever you defend against
+                an attack (i.e., it raises your minimum defence roll).
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Opportunity attack" type="technique">
+        <cost points="6"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Reflex dodge</prerequisite>
+
+        <short>Do not have to declare manouevres.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Your training enables you to take advantage of
+                opportunities as they present themselves, rather than
+                having to plan ahead. Whenever you make a <e>good</e>
+                attack or better, you may choose to use a
+                <e>manouevre</e> as long as other requirements (such
+                as stance) are met. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Improved damage" type="technique">
+        <cost points="8"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Opportunity attack</prerequisite>
+
+        <short>Do more damage in your attacks.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Automatic technique which allows you to focus your attacks
+                in order to cause maximum harm to your foe. You may add
+                your skill to any damage done.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Multiple attacks" type="technique">
+        <cost points="10"/>
+        <skill name="Melee"/>
+        <prerequisite>Improved damage</prerequisite>
+
+        <short>Two attacks a round.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Aggressive stance. You may attack multiple times each round
+                with a penalty of -15 per extra attack to all attacks. The
+                maximum number of attacks you can make is one per five
+                levels of skill (so 2 attacks, or 1 extra attack, at level
+                10). When declaring use of this technique, the first attack
+                is fast, the second slow and the third is normal.
+            </para>
+        </description>
+    </advantage>
+
+    <!--
+        Combat bonuses gained from non-combat skills.
+    -->
+
+    <advantage name="Ambush" type="technique">
+        <cost points="2"/>
+        <skill name="Stealth"/>
+
+        <short>Ignore unsuspecting foe's armour.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Allows the character to make an attack against an
+                unsuspecting target, bypassing armour. If an attack is
+                made with either the <e>brawl</e> or <e>single weapon</e>
+                skill against a target who is both unware of the attack
+                and also not in combat, then the attack ignores all
+                armour.
+            </para>
+
+            <para>
+                An <e>ambush</e> is a slow attack, and the ambusher is
+                considered to be using the <e>focused stance</e>. May be
+                combined with other techniques.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Combat ambush" type="technique">
+        <cost points="4"/>
+        <skill name="Stealth"/>
+        <prerequisite>Ambush</prerequisite>
+
+        <short>Ambush someone in the middle of combat.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                As for <e>Ambush</e>, but may be performed at any time the
+                defender is not aware of the attacker (even if the defender
+                is in combat). Still only applies to attacks made with
+                either the <e>Single weapon</e> or <e>Brawl</e> skills.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Sudden death" type="technique">
+        <cost points="8"/>
+        <skill name="Stealth"/>
+        <prerequisite>Combat ambush</prerequisite>
+
+        <short>Ambush anyone even if they can see you.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                As for <e>Ambush</e>, but applies whenever the defender
+                is not defending against the character's attack. The
+                character may use either an <e>aggressive</e> or a
+                <e>normal</e> stance. Still only applies to attacks made
+                with either the <e>Single weapon</e> or <e>Brawl</e>
+                skills.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Surprise attack" type="technique">
+        <cost points="2"/>
+        <skill name="Tactics"/>
+
+        <short>Gain bonus in a surprise attack.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When you have surprise against someone, you gain a bonus
+                equal to your <e>Tactics</e> to all attack, defence and
+                damage rolls.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Tactical move" type="technique">
+        <cost points="4"/>
+        <skill name="Tactics"/>
+        <prerequisite>Surprise attack</prerequisite>
+
+        <short>Initiative is based on skill.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are highly trained in combat, and can understand and
+                react to events much better than people who don't have your
+                training. When determining initiative, you may use your
+                <y:agility>Tactics</y:agility> instead of <y:agility/>.
+            </para>
+        </description>
+    </advantage>
+
+
+</advantages>

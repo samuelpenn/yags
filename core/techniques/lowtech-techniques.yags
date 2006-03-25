@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.7 $</version>
-            <date>$Date: 2006-02-05 21:48:14 $</date>
+            <version>$Revision: 1.8 $</version>
+            <date>$Date: 2006-03-25 16:22:43 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -36,13 +36,11 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is trained in fighting as part of a shield
-                wall. When they are fighting in a shield wall formation,
-                those either side of them that also know this technique
-                gain a bonus to defence rolls equal to this character's
-                <e>weapon and shield</e> score. If a character gains
-                from two people with this technique, they do not stack,
-                and the character only gains the highest.
+                You are trained in fighting as part of a shield wall.
+                When fighting in such a formation with others who know
+                this technique, you grant a bonus to the defence rolls
+                of those either side of you equal to your skill. A
+                person may only gain such a bonus from one person.
             </para>
 
             <para>
@@ -51,27 +49,10 @@
         </description>
     </advantage>
 
-    <advantage name="Shield bash" type="technique">
+    <advantage name="Shielded attack" type="technique">
         <cost points="4"/>
         <skill name="Weapon and shield"/>
         <prerequisite>Shield wall</prerequisite>
-        <short>Can make an extra stunning attack with shield.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Declared action when using the <e>aggressive</e> stance.
-                Once a round you may choose to use a defence slot to
-                make a bash attack with your shield. The bash happens
-                immediately following your normal attack, and does
-                <e>stun</e> damage at a bonus equal to your weapon skill.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Shielded attack" type="technique">
-        <cost points="6"/>
-        <skill name="Weapon and shield"/>
-        <prerequisite>Shield bash</prerequisite>
 
         <short>Attack penalty due to multiple defences is halved.</short>
 
@@ -85,7 +66,7 @@
     </advantage>
 
     <advantage name="Reliable defence" type="technique">
-        <cost points="8"/>
+        <cost points="6"/>
         <skill name="Weapon and shield"/>
         <prerequisite>Shielded attack</prerequisite>
 
@@ -94,11 +75,8 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Your defence rolls only suffer half the normal penalty
-                from wounds, stuns and fatigue. Further, you get an
-                extra free defence (at the same penalty as your other
-                defences) which may be used to re-roll another defence
-                if it fails. Such a re-roll cancels the results of
-                any fumbles, even if caused by the attacker. Automatic.
+                from wounds, stuns and fatigue. Further, you may re-roll
+                one defence roll each round.
             </para>
         </description>
     </advantage>
@@ -130,7 +108,8 @@
             <para>
                 If you are on foot and fighting against a mounted foe,
                 then you gain a +5 bonus to attack and damage rolls if
-                you declare this technique.
+                you declare this technique. You may combine this with
+                <e>Shield wall</e> if using a shield.
             </para>
         </description>
     </advantage>
@@ -145,22 +124,7 @@
             <para>
                 If you have the advantage of reach then penalties
                 caused by making multiple defences are halved for
-                that attack or defence roll. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Deadly reach" type="technique">
-        <cost points="8"/>
-        <skill name="Longshaft weapon"/>
-        <prerequisite>Defensive reach</prerequisite>
-        <short>Turn a free strike into an automatic strike.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If you have the advantage of reach, then the first
-                <e>free strike</e> that you get in a round becomes an
-                <e>automatic strike</e> instead. Automatic.
+                either attack or defence rolls that round. Automatic.
             </para>
         </description>
     </advantage>
@@ -218,23 +182,6 @@
         </description>
     </advantage>
 
-    <advantage name="Acrobatic defence" type="technique">
-        <cost points="8"/>
-        <skill name="Single weapon"/>
-        <prerequisite>Acrobatic dodge</prerequisite>
-
-        <short>Increase difficulty to be hit.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                As long as the character is unencumbered, they can make
-                use of their skill to avoid attacks, increase the base
-                target number to hit them by their <e>Single weapon</e>
-                skill, as long as they are aware of the attack. This
-                does stack with <e>Reflex dodge</e>.
-            </para>
-        </description>
-    </advantage>
 
 
     <advantage name="Greater range" type="technique">
@@ -424,40 +371,21 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                If you declare this technique when using the aggressive
-                stance, you gain an additional bonus to damage equal to
-                your weapon skill.
+                Whenever you use an aggressive stance, you gain a bonus to
+                damage equal to your <e>great weapon</e> skill.
+                Further, the level of success required
+                for the <e>Improved damage</e> and <e>Mighty damage</e>
+                manouevres is automatically reduced by one.
             </para>
         </description>
     </advantage>
 
 
-    <advantage name="Mighty blow" type="technique">
+    <advantage name="Finishing blow" type="technique">
         <cost points="6"/>
         <skill name="Great weapon"/>
 
         <prerequisite>Great blow</prerequisite>
-
-        <short>Knock opponent prone.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Whenever you roll a natural 20 in a damage roll your
-                opponent is knocked prone unless their <t>Size</t>
-                attribute is larger than yours. Further, if your
-                attack does wounding damage, then it also does equal
-                stun damage as they are knocked to the ground. You
-                may get a <e>free strike</e> against them (and they
-                now count as being prone).
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Killing blow" type="technique">
-        <cost points="8"/>
-        <skill name="Great weapon"/>
-
-        <prerequisite>Mighty blow</prerequisite>
 
         <short>Increase chance of killing opponent.</short>
 
@@ -487,52 +415,36 @@
         </description>
     </advantage>
 
-    <advantage name="Combined strike" type="technique">
+    <advantage name="Combined attack" type="technique">
         <cost points="4"/>
         <skill name="Two weapons"/>
 
         <prerequisite>Secondary defence</prerequisite>
 
-        <short>Reduce penalty to attack.</short>
+        <short>Re-roll damage rolls.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Penalties to your attack rolls due to making multiple
-                defences are halved. Declared.
+                You may re-roll your damage roll once a round. You must
+                keep the second roll. Automatic.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Secondary strike" type="technique">
+    <advantage name="Two blades" type="technique">
         <cost points="6"/>
         <skill name="Two weapons"/>
 
-        <prerequisite>Combined strike</prerequisite>
+        <prerequisite>Combined attack</prerequisite>
 
-        <short>Re-roll one damage roll.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Once a round, you may re-roll your damage roll. However,
-                you must keep the second roll even if it is worse.
-                Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Double strike" type="technique">
-        <cost points="8"/>
-        <skill name="Two weapons"/>
-
-        <prerequisite>Secondary strike</prerequisite>
-
-        <short>Twice as many free strike.</short>
+        <short>Get to damage twice.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                If you ever get a free or automatic strike, then you
-                get two such strikes instead of one. Both must be against
-                the same target. Automatic.
+                By declaring this technique with the aggressive stance,
+                and loosing one defence, you make a single attack which if
+                it hits allows you to roll damage twice. The target suffers
+                both damage rolls.
             </para>
         </description>
     </advantage>
