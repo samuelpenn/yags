@@ -9,7 +9,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.5 $
+    Version: $Revision: 1.6 $
     Author: Samuel Penn
 -->
 
@@ -21,8 +21,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2006-03-25 16:22:43 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2006-03-26 10:14:44 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -258,7 +258,7 @@
         </description>
     </advantage>
 
-    <advantage name="Focus attack" type="technique">
+    <advantage name="Defence in attack" type="technique">
         <cost points="4"/>
         <skill name="Karate"/>
 
@@ -275,17 +275,18 @@
         </description>
     </advantage>
 
-    <advantage name="Fast strike" type="technique">
+    <advantage name="Fast attack" type="technique">
         <cost points="6"/>
         <skill name="Karate"/>
 
-        <prerequisite>Fast attack</prerequisite>
+        <prerequisite>Defence in attack</prerequisite>
 
         <short>All attacks are fast.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Normal attacks are <e>fast</e>. Automatic.
+                Normal attacks are <e>fast</e> when using <e>Karate</e>.
+                Fast and slow attacks are unaffected. Automatic.
             </para>
         </description>
     </advantage>
@@ -306,7 +307,7 @@
                 up a defence slot. If the target is injured by the
                 attack, they must make a size x stamina check against
                 a target of 10 + 5 x levels or immediately drop to
-                datally wounded. If they succeed their check, then they
+                fatally wounded. If they succeed their check, then they
                 take one less damage level from the attack than normal.
             </para>
         </description>
@@ -361,6 +362,7 @@
             </para>
         </description>
     </advantage>
+
 
 </advantages>
 

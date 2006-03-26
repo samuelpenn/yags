@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.4 $</version>
-            <date>$Date: 2006-03-07 22:40:39 $</date>
+            <version>$Revision: 1.5 $</version>
+            <date>$Date: 2006-03-26 10:14:44 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -171,7 +171,7 @@
                 </para>
 
                 <sect3>
-                    <title>Grab</title>
+                    <title>Grab (good)</title>
 
                     <para>
                         Covers trying to grab the defender's limbs or neck
@@ -182,15 +182,23 @@
 
                     <para>
                         On success, the target is held and an immediate
-                        contest of strength x brawl is made to see if
-                        the attacker can keep hold. A second success
-                        means that the defender looses the rest of their
-                        declared actions that round (if any).
+                        contest of <y:strength>brawl</y:strength> is made
+                        to see if the attacker can keep hold. A second
+                        success means that the defender looses the rest of
+                        their declared actions that round (if any).
+                    </para>
+
+                    <para>
+                        Once a target is grappled, they are at -1 to their
+                        attribute for any actions. Each extra level of
+                        success of the strength check by the attacker
+                        increases this penalty by one. A held target looses
+                        all remaining actions that round.
                     </para>
                 </sect3>
 
                 <sect3>
-                    <title>Trip</title>
+                    <title>Trip (good)</title>
 
                     <para>
                         Covers either grabbing a person and throwing them
@@ -210,16 +218,16 @@
                 </sect3>
 
                 <sect3>
-                    <title>Unarmed disarm</title>
+                    <title>Unarmed disarm (good)</title>
 
                     <para>
                         This is done when you want to disarm a foe. It
                         requires a <e>good</e> attack, and on success
-                        requires a contest of agility x brawl to actually
-                        disarm the foe. If the second check fails, then
-                        the defender looses their next action that round
-                        (but only if their next action is in the same
-                        round).
+                        requires a contest of <y:agility>brawl</y:agility>
+                        to actually disarm the foe. If the second check
+                        fails, then the defender looses their next action
+                        that round (but only if their next action is in the
+                        same round).
                     </para>
                 </sect3>
             </sect2>
@@ -229,6 +237,11 @@
 
                 <sect3>
                     <title>Escape hold</title>
+
+                    <para>
+                        If you are being held, you may attempt to break
+                        free.
+                    </para>
                 </sect3>
             </sect2>
 
@@ -237,135 +250,21 @@
 
                 <sect3>
                     <title>Improve Grab</title>
+
+                    <para>
+                        If you are currently grappling someone, you may
+                        attempt to improve your grapple.
+                    </para>
                 </sect3>
 
                 <sect3>
                     <title>Break</title>
-                </sect3>
-            </sect2>
-        </sect1>
-
-        <sect1>
-            <title>Grappling and Wrestling</title>
-
-            <sect2>
-                <title>Attack Opportunities</title>
-
-
-                <sect3>
-                    <title>Grapple (Good)</title>
 
                     <para>
-                        A <e>grapple</e> represents an attempt to hold onto
-                        a person and stop them from acting. On a <e>good</e>
-                        brawl attack, the attacker can opt to try and
-                        grapple their opponent. It is assumed at this point
-                        that the attacker has managed to grab hold of some
-                        part of the defender - what happens next depends on
-                        what the defender does.
-                    </para>
-
-                    <para>
-                        If the defender wishes to break free, then both
-                        make a second opposed brawl check. The attacker
-                        uses strength, the defender may use strength or
-                        agility. If the defender succeeds, then the grapple
-                        is broken. If the attacker succeeds, then they have
-                        kept hold of the defender, and all future actions
-                        of the defender will be at -1 to their attribute
-                        for each level of success of the attacker. If this
-                        brings their agility or strength to less than one,
-                        then they are pinned and cannot act.
-                    </para>
-
-                    <para>
-                        If the defender wishes, they may perform a counter
-                        grapple, in which case both people make a strength
-                        based check against a target of 10, with the
-                        result being that both opponents are grappled and
-                        at penalty to actions.
+                        If you are grappling someone, you may attempt to
+                        break their limb.
                     </para>
                 </sect3>
-
-                <sect3>
-                    <title>Trip (Good)</title>
-
-                    <para>
-                        If the attacker gets a <e>good</e> attack, then he
-                        may try to trip his opponent, knocking them to the
-                        floor. In reality, a trip can be an actual trip, a
-                        throw or a push. Both combatents make opposed
-                        <y:skeq>
-                            <y:attr>strength</y:attr>
-                            <y:sk>brawl</y:sk>
-                            <die/>
-                        </y:skeq>
-                        checks, with the attacker gaining a +1 bonus to
-                        strength for each extra level of success in the
-                        initial attack.
-                    </para>
-
-                    <para>
-                        If the attacker fails, then nothing happens. On
-                        success, the defender is thrown to the ground
-                        making them prone. Optionally, they may also
-                        cause <e>stun</e> damage as normal. Each level
-                        of success gives a bonus of +3 to damage.
-                    </para>
-
-                    <para>
-                        Instead of causing extra damage, the attacker can
-                        choose to make the defender land somewhere specific.
-                        Somewhere nearby and relatively simple requires a
-                        <e>good</e> success (e.g., off an edge, onto a
-                        table), whereas a more complex target requires an
-                        <e>excellent</e> success (over a wall, through a
-                        window).
-                    </para>
-                </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Defence Opportunities</title>
-
-                <para>
-                    Similar to attacks, a defender making a brawl defence
-                    may get the opportunity to make a special move. If at
-                    least a <e>good</e> defence is made, then the defender
-                    can opt to perform a special action. Performing such
-                    an action negates any other benefits of a good defence,
-                    such as free strikes (though the attack is prevented).
-                </para>
-
-                <sect3>
-                    <title>Defensive trip (Good)</title>
-
-                    <para>
-                        Turns an attack into a Judo throw.
-                    </para>
-                </sect3>
-            </sect2>
-        </sect1>
-
-        <sect1 id="fightingdirty">
-            <title>Fighting Dirty</title>
-
-            <para>
-                Often, the winner of a combat will be whoever has the
-                best skill. Sometimes, the winner is the person who is
-                willing to cheat. Of course, if the other guy is trying
-                to kill you, kicking him in the balls and stabbing him
-                in the eye may be the best way to stay alive.
-            </para>
-
-            <sect2>
-                <title>Tricks</title>
-
-                <para>
-                    When making an attack, you may declare that you want
-                    to try a trick. A trick is any non-standard attack,
-                    such as throwing dirt in someone's eyes.
-                </para>
             </sect2>
         </sect1>
     </body>
