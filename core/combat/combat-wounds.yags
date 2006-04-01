@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.3 $</version>
-            <date>$Date: 2006-02-05 21:48:14 $</date>
+            <version>$Revision: 1.4 $</version>
+            <date>$Date: 2006-04-01 17:37:09 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -46,47 +46,9 @@
             <para>
                 Damage can take many forms, but it all comes down to one
                 of the three types - either <e>wounds</e>, <e>stuns</e> or
-                <e>mixed</e>. For weapon and attack forms not specifically
-                listed, the following guidelines are suggested.
+                <e>mixed</e>. Related to damage is <e>fatigue</e> and
+                <e>exhaustion</e>.
             </para>
-
-            <sect2>
-                <title>Knockdown</title>
-
-                <para>
-                    As well as causing damage, an attack can knock you
-                    from your feet. It is not always necessary
-                    for an attack to actually cause damage - a knight
-                    in full plate armour may not be harmed by a blow,
-                    but he may still be unbalanced and knocked to the
-                    ground. A knockdown will occur under the following
-                    circumstances.
-                </para>
-
-                <itemlist order="1">
-                    <item>
-                        If the number of damage levels caused in that
-                        attack is equal or greater than the strength of
-                        the target.
-                    </item>
-
-                    <item>
-                        If the damage roll (before soak) is equal to or
-                        greater than 5 x strength + 20 of the
-                        target. Such a knockdown also causes 1 stun.
-                    </item>
-                </itemlist>
-
-                <para>
-                    If you are knocked down then you are considered to be
-                    immediately <e>prone</e>. Whilst prone, all your
-                    actions are <e>slow</e>, and your <t>Dexterity</t>
-                    and <t>Agility</t> are capped to <t>Agility</t> -1.
-                    You may continue to fight from a prone position, or
-                    spend your next action getting up (even if you had
-                    declared your next action as something else).
-                </para>
-            </sect2>
 
             <sect2>
                 <title>Fatigue</title>
@@ -94,7 +56,7 @@
                 <para>
                     A character's fatigue is measured in a similar way to
                     wounds, though the number of fatigue levels they have
-                    is based on their stamina, ranging from OK to
+                    is based on their health, ranging from OK to
                     Exhausted. If a character becomes Exhausted then they
                     must immediately rest.
                 </para>
@@ -144,7 +106,7 @@
                         will never recover naturally until you receive
                         medical attention. Every minute if inactive, or
                         every <e>round</e> if active, you must make a
-                        <t>Stamina</t> check at a target of 20 or die.
+                        <t>health</t> check at a target of 20 or die.
                         If you fumble the check, then you also die.
                     </para>
                 </sect3>
@@ -154,7 +116,7 @@
 
                     <para>
                         If you have been <e>critically</e> wounded, then
-                        you must make a <t>Stamina</t> check at a target
+                        you must make a <t>health</t> check at a target
                         of 20 every day if inactive, or hour if active.
                         Failure or fumble will cause your wounds to
                         worsen to <e>fatally</e> wounded and you fall
@@ -171,7 +133,7 @@
                         If you have been wounded (but not critically
                         or fatally), and you do not receive medical
                         attention within an hour, then you must make
-                        a <t>Stamina</t> check at a target of 20.
+                        a <t>health</t> check at a target of 20.
                         Failure means that the wound will worsen by
                         one level, then stabalise (so no further
                         checks are required). Success causes the wound
@@ -184,7 +146,7 @@
 
                     <para>
                         Stuns do not require tending before they will
-                        begin to heal, and no <t>Stamina</t> checks are
+                        begin to heal, and no <t>health</t> checks are
                         required to see if they worsen.
                     </para>
                 </sect3>
@@ -196,13 +158,8 @@
                 <para>
                     It is generally a good idea to get your wounds tended
                     to by another. Tending a wound takes one minute, and
-                    requires a
-                    <y:skeq>
-                        <y:attr>Intelligence</y:attr>
-                        <y:sk>First aid</y:sk>
-                        <die/>
-                    </y:skeq>
-                    at a base target of 10. The target is modified by
+                    requires an <y:intelligence>First aid</y:intelligence>
+                    check at a base target of 10. The target is modified by
                     the total of your <e>wound</e> and <e>stun</e>
                     penalties halved (round up).
                 </para>
@@ -215,7 +172,7 @@
 
                 <para>
                     On success, the wounds are stabalised. On a <e>good</e>
-                    success, one level of wounds is healed.
+                    success, one level of wounds is immediately healed.
                 </para>
 
                 <para>
@@ -239,11 +196,11 @@
                     <title>Recovering from stuns</title>
 
                     <para>
-                        Stuns are healed after a night's rest. Each morning,
-                        the character makes a stamina roll at difficulty 0,
-                        modified by their current wound and stun penalties.
-                        Success means that one stun level is healed, and each
-                        10 above the difficulty heals a further stun level.
+                        Stuns heal themselves after a full night's rest.
+                        Each morning, a <t>health</t> check is made at a
+                        target of 0, modified by half the total wound and
+                        stun penalties currently suffered. Each level of
+                        success causes one level of stun to be healed.
                     </para>
                 </sect3>
 
@@ -252,13 +209,13 @@
 
                     <para>
                         Wounds heal naturally after a week. Each week, the
-                        character gets a stamina roll at difficulty 20,
+                        character gets a health roll at difficulty 20,
                         modified by their total stun and wound penalties.
                         On a success, a single level of wound is healed.
                     </para>
 
                     <para>
-                        If the character fumbles their stamina roll, then
+                        If the character fumbles their health roll, then
                         their injury worsens, and they gain an extra wound
                         level. A character who is already fatally wounded
                         will die.
@@ -293,9 +250,9 @@
                         Exhaustion counts towards fatigue, but cannot be
                         lost through a few minutes of rest. Four hours of
                         good sleep with remove all fatigue and one point
-                        of exhaustion for every two points of stamina
+                        of exhaustion for every two points of health
                         (rounded up, so 2 exhaustion is recovered by
-                        someone with a stamina of 3 or 4).
+                        someone with a health of 3 or 4).
                     </para>
                 </sect3>
             </sect2>

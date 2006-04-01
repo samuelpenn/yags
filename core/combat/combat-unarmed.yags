@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2006-03-26 10:14:44 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2006-04-01 17:37:09 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -193,7 +193,8 @@
                         attribute for any actions. Each extra level of
                         success of the strength check by the attacker
                         increases this penalty by one. A held target looses
-                        all remaining actions that round.
+                        all remaining actions (including defences) that
+                        round.
                     </para>
                 </sect3>
 
@@ -240,7 +241,17 @@
 
                     <para>
                         If you are being held, you may attempt to break
-                        free.
+                        free. This must be declared at the start of the
+                        round, and does not use a standard attack but is
+                        an opposed check between you and the person who
+                        has you held.
+                    </para>
+
+                    <para>
+                        You both roll <y:strength>brawl</y:strength>, and
+                        you suffer a penalty to strength depending on the
+                        quality of the hold. If you win, then the hold is
+                        broken, otherwise there is no effect.
                     </para>
                 </sect3>
             </sect2>
