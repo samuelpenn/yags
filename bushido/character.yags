@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2006-03-01 20:58:04 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2006-04-08 21:24:03 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -44,13 +44,62 @@
             <title>Yags Bushido</title>
 
             <para>
-                It is suggested that you use <e>Yags Modern</e> for the
-                character generation, since there are not specific
-                character generation rules here. Currently, these rules
-                are mostly concerned with detailing the skills and
-                techniques commonly found in <e>Bushido</e> style
-                settings.
+                <e>Yags Bushido</e> contains genre specific rules for
+                playing characters in feudal Japan or similar settings.
+                However, it also includes extended rules for unarmed
+                combat skills - commonly known as <e>martial arts</e>
+                (though technically, <e>all</e> combat skills, regardless
+                of whether they use a weapon or not, are martial arts).
+                This makes <e>Yags Bushido</e> also of use to those
+                playing in a Western or Modern setting. Because of this
+                somewhat wider remit, this article also covers specifically
+                Western combat sports such as <e>Boxing</e>.
             </para>
+
+            <sect2>
+                <title>The Martial Arts</title>
+
+                <para>
+                    By default, <e>Yags</e> uses a single skill
+                    (<e>brawl</e>) to cover all unarmed and close weapon
+                    combat. Though its name may suggest unskilled drunken
+                    bar room fights, a high level of <e>brawl</e>
+                    represents a high degree of training and expertise,
+                    on par with a 'traditional' martial arts such as
+                    Karate.
+                </para>
+
+                <para>
+                    In a sense, <e>brawl</e> represents no style and no
+                    constraints - pretty similar to the style of fighting
+                    favoured by Bruce Lee. It's aim is to take down the
+                    enemy with a minimum of fuss, and is the skill favoured
+                    and tought by modern special forces and police units
+                    in the West.
+                </para>
+
+                <para>
+                    By comparison, the specialist martial arts tend to
+                    concentrate on a single style of attack or defence, and
+                    though may be better in their given area, are weaker
+                    for all round combat. Many of them also teach a
+                    philosophy and etiquette (who to bow to, the meaning of
+                    the belt colours, who the current masters are) as well
+                    as combat skills. Some (such as Judo, or Boxing) are
+                    more suited to controlled fights in a sports hall and
+                    tend to be very limited on a battlefield.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Character Generation</title>
+
+                <para>
+                    There are no character generation rules specific for
+                    <e>Yags Bushido</e>. It is suggested that some form of
+                    the Modern rules are used.
+                </para>
+            </sect2>
         </sect1>
 
         <sect1>
@@ -123,6 +172,15 @@
                     <y:techniques>../core/techniques/bushido-techniques.yags</y:techniques>
                 </y:import-skills>
             </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Techniques</title>
+
+            <y:import-advantages href="options/techniques.yags"
+                                 type="technique" tree="true">
+                <y:adv>../core/techniques/bushido-techniques.yags</y:adv>
+            </y:import-advantages>
         </sect1>
     </body>
 

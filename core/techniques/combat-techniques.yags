@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2006-04-01 17:37:09 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2006-04-08 21:24:04 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -46,38 +46,54 @@
         </description>
     </advantage>
 
-    <advantage name="Stunning attack" type="technique">
+    <advantage name="Disabling hold" type="technique">
         <cost points="4"/>
         <skill name="Brawl"/>
         <prerequisite>Close combat</prerequisite>
+
+        <short>Cause pain when grappling.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When performing a grapple manouevre, you can apply pain
+                to the target through knowledge of pressure points,
+                preventing them from acting or crying out. Any time you
+                inflict a -2 penalty to the target for the initial
+                grapple check, then they are disabled and cannot act
+                (even to try to escape or cry out) all the time you
+                have them held.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Disabling attack" type="technique">
+        <cost points="6"/>
+        <skill name="Brawl"/>
+        <prerequisite>Disabling hold</prerequisite>
 
         <short>Target looses their attacks.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When this technique is used, it must be declared with the
-                aggressive stance, and it uses one defence. On a hit that
-                damages, the opponent must make a <y:health/> check against
-                10 + 5 x stuns or loose their attacks that round, and gain
-                a number of fatigue levels equal to the stuns they took.
+                An attack which aims to temporarily disable a foe by
+                striking at pressure points on the body. It is an open
+                hand attack that does not use a weapon.
             </para>
-        </description>
-    </advantage>
 
-    <advantage name="Precision attack" type="technique">
-        <cost points="6"/>
-        <skill name="Brawl"/>
-        <prerequisite>Stunning attack</prerequisite>
-
-        <short>Damage type increased by one level.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Whenever the aggressive stance is used, the damage type
-                is increased by one level - e.g. stuns become mixed.
+                Must be declared with the aggressive stance, and requires
+                a <e>good</e> attack. On a successfull attack which
+                causes damage, the target must make a <y:health/> check
+                against 10 + 5 x stuns or loose the rest of their attacks
+                and defences that round. On an <e>excellent</e> attack,
+                the target also gains fatigue levels equal to the number
+                of stuns taken and is unable to cry out.
             </para>
         </description>
     </advantage>
+
+
 
     <advantage name="Dirty fighting" type="technique">
         <cost points="4"/>
@@ -128,20 +144,48 @@
 
 
     <advantage name="Unarmed combat" type="technique">
-        <cost points="6"/>
+        <cost points="4"/>
         <skill name="Brawl"/>
+        <prerequisite>Close combat</prerequisite>
 
         <short>Reduces the risk of free strikes.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is trained in fighting with no weapons
-                against armed foes. A defender with a martial weapon only
-                gets a <e>free strike</e> if they make a <e>good</e>
-                defence roll.
+                You have some experience fighting armed opponents using
+                unarmed attacks. You may ignore the <e>free strike</e>
+                caused by not using a martial weapon, though still
+                suffer strikes due to reach or other circumstances.
+                This technique is automatic as long as you are using
+                <e>Brawl</e> or a skill associated with it.
             </para>
         </description>
     </advantage>
+
+    <advantage name="Out of reach" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        <prerequisite>Close combat</prerequisite>
+
+        <short>Ignore some reach penalties.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have some experience fighting against opponents who
+                have a greater reach than you. For every four points of
+                <e>Brawl</e> skill, you may ignore one point of reach of
+                the defender's weapon when making an attack. This can
+                never give you a bonus, but may reduce the penalties
+                you suffer for attacking someone with a longer reach.
+            </para>
+
+            <para>
+                This technique is automatic, and applies whichever melee
+                skill you are using.
+            </para>
+        </description>
+    </advantage>
+
 
     <advantage name="Hard to kill" type="technique">
         <cost points="2"/>

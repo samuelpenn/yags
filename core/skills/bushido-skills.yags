@@ -9,7 +9,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.5 $
+    Version: $Revision: 1.6 $
     Author: Samuel Penn
 -->
 
@@ -186,27 +186,6 @@
         </description>
     </skill>
 
-    <skill name="Jiujutsu" type="skill">
-        <group>Combat</group>
-        <group>Melee</group>
-        <group>Bugei</group>
-
-        <prerequisite score="4">Brawl</prerequisite>
-
-        <short>Unarmed combat</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                A particular style of unarmed combat that is designed for
-                use in real combat situations. When using <e>Jiujutsu</e>,
-                you may use any weapon, which grants a full bonus to
-                damage and half bonus to attack and defence. If two weapons
-                are used, you gain the best full attack, defence and damage
-                bonus of either weapon.
-            </para>
-        </description>
-    </skill>
-
     <skill name="Shinto" type="skill">
         <group>Lore</group>
 
@@ -256,8 +235,6 @@
         <group>Melee</group>
         <group>Sport</group>
 
-        <default>Brawl</default>
-
         <short>The sport of judo.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -287,14 +264,76 @@
         </description>
     </skill>
 
+    <skill name="Jujutsu" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+        <group>Bugei</group>
+
+        <prerequisites score="2">Brawl</prerequisite>
+
+        <short>Unarmed combat specialised in throws and holds.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                A particular style of unarmed combat that is designed for
+                use in real combat situations. It is specialised in making
+                throws and trips, but unlike <e>Judo</e> is also effective
+                in attack.
+            </para>
+
+            <para>
+                Jujutsu may be used in place of <e>Brawl</e> for all
+                unarmed combat manouevres. When making <t>strength</t>
+                checks for grapple and trip <e>attacks</e>, you may use
+                <t>agility</t> instead, and also gain a +1 bonus to
+                either attribute in each case.
+            </para>
+
+            <para>
+                Use of a weapon with this skill gives you the damage bonus
+                of the weapon, but not the attack or defence bonuses.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Aikijutsu" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+        <group>Bugei</group>
+
+        <prerequisites score="2">Brawl</prerequisite>
+
+        <short>Unarmed combat specialised in throws.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                A style of unarmed combat which concentrates on throws and
+                locks. It is designed for real combat.
+            </para>
+
+            <para>
+                You gain a +1 to your agility for all trip attacks and
+                defences, and always use <y:agility>Aikijutsu</y:agility>
+                for such manouevres. If fighting from the prone position,
+                you suffer no penalties. It can otherwise be used in place
+                of <e>Brawl</e> for punches, kicks, dodges and other
+                unarmed combat moves.
+            </para>
+
+            <para>
+                If using a weapon, you gain the damage bonus of the weapon
+                and suffer a +1 increase in the fumble chance.
+            </para>
+        </description>
+    </skill>
+
     <skill name="Karate" type="skill">
         <group>Combat</group>
-        <group>Sport</group>
         <group>Melee</group>
 
-        <default>Brawl</default>
+        <prerequisites score="2">Brawl</prerequisite>
 
-        <short>The sport of judo.</short>
+        <short>An aggressive unarmed combat style.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -314,6 +353,50 @@
         </description>
     </skill>
 
+    <skill name="Kobujutsu" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+        <group>Armed Melee</group>
+        <group>Bugei</group>
+
+        <short>Weapon skill specialised in sticks and chains.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This weapon skill was developed in Okinawa, and favours
+                the use of weapons such as Bo staves, Jo sticks, nunchuka
+                and the sai - basically weapons adapted from peasant tools.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Ninjutsu" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+        <group>Armed Melee</group>
+        <group>Bugei</group>
+
+        <prerequisite score="4">Brawl</prerequisite>
+
+        <short>Attack by stealth and surprise.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The infamous combat style taught by the Ninja, its focus
+                is on surprise and taking out the enemy quickly and quietly.
+                It does not perform well in an open battle, but most
+                practitioners seek to avoid open battles so that is not
+                often a problem. It has a mixture of armed and unarmed
+                melee, plus some ranged combat.
+            </para>
+
+            <para>
+                If the target is surprised, then you may add your
+                <e>Ninjutsu</e> skill to damage done. It also adds to all
+                <e>Stealth</e> rolls.
+            </para>
+        </description>
+    </skill>
 
 </skill-list>
 

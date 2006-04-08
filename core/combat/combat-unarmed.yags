@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.6 $</version>
-            <date>$Date: 2006-04-01 17:37:09 $</date>
+            <version>$Revision: 1.7 $</version>
+            <date>$Date: 2006-04-08 21:24:04 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -171,7 +171,7 @@
                 </para>
 
                 <sect3>
-                    <title>Grab (good)</title>
+                    <title>Grapple (good)</title>
 
                     <para>
                         Covers trying to grab the defender's limbs or neck
@@ -195,6 +195,45 @@
                         increases this penalty by one. A held target looses
                         all remaining actions (including defences) that
                         round.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Charge through (moderate)</title>
+
+                    <para>
+                        Such an attack is an attempt to run through a
+                        person, possibly knocking them prone or aside in
+                        the process. The main focus is to move past the
+                        defender however, not to take them down. Since it
+                        is a mixture of movement and action, it must always
+                        be declared, even if you have a technique which
+                        allows you to use manouevres undeclared.
+                    </para>
+
+                    <para>
+                        The attack is <y:strength>Brawl</y:strength>
+                        against the skill of the defender, who first gets a
+                        <e>free strike</e>. You may defend against the
+                        strike using a weapon and/or shield if desired -
+                        though you may be armed when performing this
+                        manouevre, the actual charge through always uses
+                        a brawl attack.
+                    </para>
+
+                    <para>
+                        The defender resists your attack by either avoiding
+                        it with <y:agility>Brawl</y:agility> or stopping it
+                        with <y:strength>Brawl</y:strength>. In the former
+                        success on your part allows you to move past with
+                        no effect on the defender. If they fail, then they
+                        are knocked <e>prone</e> and you move through
+                        anyway.
+                    </para>
+
+                    <para>
+                        If they choose to stop your charge, then the looser
+                        of the contest is knocked prone.
                     </para>
                 </sect3>
 
@@ -259,21 +298,55 @@
             <sect2>
                 <title>Followup Manouevres</title>
 
+                <para>
+                    The following actions may be performed if you have
+                    previously <e>grabbed</e> your foe. Remember to reduce
+                    their defence by any penalties for being grabbed.
+                </para>
+
                 <sect3>
-                    <title>Improve Grab</title>
+                    <title>Improve Grapple (good+)</title>
 
                     <para>
                         If you are currently grappling someone, you may
-                        attempt to improve your grapple.
+                        attempt to improve your grapple. Make a standard
+                        <y:agility>brawl</y:agility> attack against them,
+                        and on a <e>good</e> success their penalty to
+                        actions is increased by 1. Each level of success
+                        beyond this increases it by another 1.
                     </para>
                 </sect3>
 
                 <sect3>
-                    <title>Break</title>
+                    <title>Break limb (good)</title>
 
                     <para>
                         If you are grappling someone, you may attempt to
-                        break their limb.
+                        break one of their limbs. A standard
+                        <y:agility>Brawl</y:agility> attack is made
+                        requiring a <e>good</e> success. If achieved, roll
+                        damage as normal, and if two or more levels are
+                        caused, then the limb is broken. The target suffers
+                        one immediate wound on a broken limb and they are
+                        at an additional -40 to all attempts to use it.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Break neck (excellent)</title>
+
+                    <para>
+                        This is the same as breaking a limb, except that
+                        an <e>excellent</e> success is required, and three
+                        levels of damage need to be caused. On success, the
+                        target drops to <e>fatally wounded</e> and must
+                        make a <y:health/> check to remain alive against
+                        10 + number of levels caused.
+                    </para>
+
+                    <para>
+                        Results of a broken neck may be paralysis or
+                        suffocation.
                     </para>
                 </sect3>
             </sect2>

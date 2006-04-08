@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.93 $</version>
-            <date>$Date: 2006-04-01 17:37:08 $</date>
+            <version>$Revision: 1.94 $</version>
+            <date>$Date: 2006-04-08 21:24:03 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -536,6 +536,7 @@
                         <valueLabel>Effect</valueLabel>
 
                         <item target="0" value="Okay.">
+                            Completely uninjured.
                         </item>
 
                         <item target="1" value="Minor.">
@@ -617,6 +618,48 @@
                             had previously.
                         </para>
 
+                        <targetlist bold="true" targetFirst="true">
+                            <targetLabel>Stuns</targetLabel>
+                            <valueLabel>Effect</valueLabel>
+
+                            <item target="0" value="Okay.">
+                                Completely uninjured.
+                            </item>
+
+                            <item target="1" value="Minor.">
+                                Minor scratches, no penalty.
+                            </item>
+
+                            <item target="2" value="Light (-5).">
+                                Slightly bruised and in some pain, but
+                                likely to be recovered after the battle.
+                                Visible bruises and marks.
+                            </item>
+
+                            <item target="3" value="Medium (-10).">
+                                Moderate stuns, will look to be in quite
+                                bad shape.
+                            </item>
+
+                            <item target="4" value="Heavy (-15).">
+                                Heavily stunned, probably with most of
+                                body covered in bruises and cuts and in
+                                quite a bit of pain.
+                            </item>
+
+                            <item target="5" value="Critical (-25).">
+                                Critically stunned. Most people will stop
+                                fighting at this point, since they are
+                                quite close to falling over.
+                            </item>
+
+                            <item target="6+" value="Beaten (-40).">
+                                A beaten person must make a health check to
+                                remain conscious every round they wish to
+                                act.
+                            </item>
+                        </targetlist>
+
                         <para>
                             If you receive stuns equal or less than the
                             number you currently have, but more than
@@ -642,7 +685,7 @@
                         </para>
 
                         <para>
-                            If your stuns ever reach fatal, then you must
+                            If your stuns ever reach beaten, then you must
                             make a health check as for wounds, but failure
                             makes you unconscious, and success leaves you
                             standing.

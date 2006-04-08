@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.10 $</version>
-            <date>$Date: 2006-04-01 17:37:09 $</date>
+            <version>$Revision: 1.11 $</version>
+            <date>$Date: 2006-04-08 21:24:04 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -487,13 +487,14 @@
                     <itemlist order="1">
                         <item>
                             If the attacker has a longer weapon, then they
-                            ignore all free strikes against them by the
-                            defender. Automatic strikes become free strikes.
+                            ignore a counter strike in response to their
+                            attack.
                         </item>
 
                         <item>
                             If the defender has a longer reach, then they
-                            get a free strike if they make a good defence.
+                            get a free strike before the attacker gets a
+                            chance to hit.
                         </item>
                     </itemlist>
 
@@ -556,6 +557,123 @@
                         defence and damage add to the base ability for a
                         character when they are using that weapon.
                     </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Free Strikes</title>
+
+                <para>
+                    There are some actions which are very unwise to perform
+                    in a combat situation, since they leave you open to an
+                    attack from your foe. Within <e>Yags</e>, these are
+                    handled as <e>free strikes</e>.
+                </para>
+
+                <para>
+                    <e>Free strikes</e> always occur immediately before the
+                    action that triggers them. If an action triggers
+                    multiple <e>free strikes</e>, then all are merged into
+                    a single <e>automatic strike</e> (see below). If an
+                    action triggers strikes from multiple foes, then each
+                    foe handles their strikes independently (in initiative
+                    order).
+                </para>
+
+                <para>
+                    Some actions may trigger a <e>counter strike</e> after
+                    it has been completed. These are similar to
+                    <e>free strikes</e> except they occur after the action.
+                    Multiple <e>counter strikes</e> are ignored - a single
+                    foe will only get one <e>counter strike</e> against
+                    you for a single given action. However, multiple foes
+                    may each get a strike.
+                </para>
+
+                <para>
+                    Some circumstances allow you to ignore free strikes.
+                    In this case, the number of strikes against you is
+                    reduced by one. An <e>automatic strike</e> becomes a
+                    <e>free strike</e>, two <e>counter strikes</e> become
+                    a single one (which effectively means no effect).
+                </para>
+
+                <sect3>
+                    <title>Free Strikes</title>
+
+                    <para>
+                        If you gain a <e>free strike</e> against someone,
+                        then you get an immediate attack roll against them.
+                        This does not affect your other actions that round,
+                        and you may make multiple <e>free strikes</e> in a
+                        single round.
+                    </para>
+
+                    <para>
+                        A <e>free strike</e> is defended against in the
+                        same way as any other attack. Since a declared
+                        defence affects all attacks by a singler attacker,
+                        the target of a <e>free strike</e> does not need
+                        to declare new defences unless they weren't
+                        defending against you at all that round.
+                    </para>
+
+                    <itemlist order="1">
+                        <item>
+                            If you are attacked by someone with a shorter
+                            weapon, you gain a free strike against them.
+                        </item>
+
+                        <item>
+                            If someone tries to grapple or trip you, you
+                            gain a free stike against them.
+                        </item>
+
+                        <item>
+                            If someone tries to run past you in combat
+                            without attacking, and within reach of your
+                            weapon, then you gain a free strike against
+                            them.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+                <sect3>
+                    <title>Automatic Strikes</title>
+
+                    <para>
+                        An <e>automatic strike</e> is like a
+                        <e>free strike</e> but better. They occur if you
+                        do something really stupid, and don't permit any
+                        defence - the <e>automatic strike</e> is simply
+                        against your basic hit difficulty (normally 15).
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Counter Strikes</title>
+
+                    <para>
+                        <e>Counter strikes</e> are treated in the same way
+                        as <e>free strikes</e>, in that you get a defence
+                        against them. They are normally gained in response
+                        to an attack, and may be based on how well they
+                        defend against your attack.
+                    </para>
+
+                    <itemlist order="1">
+                        <item>
+                            If someone attacks you without declaring a
+                            defence against you, then you gain a counter
+                            strike if you are still standing.
+                        </item>
+
+                        <item>
+                            If you have a martial weapon, and your attacker
+                            does not, you gain a counter strike if you make
+                            a good defence.
+                        </item>
+                    </itemlist>
                 </sect3>
             </sect2>
 
@@ -1183,51 +1301,6 @@
                     damage to be shifted by two categories. In this case,
                     stuns do no damage.
                 </para>
-            </sect2>
-        </sect1>
-
-        <sect1>
-            <title>Advanced Combat</title>
-
-            <sect2>
-                <title>Special Actions</title>
-
-                <sect3>
-                    <para>
-                        The base difficulty of the action depends on how
-                        tactically appropriate it is. Leaping onto someone
-                        from above is appropriate for example. The check is
-                        made with
-                    </para>
-
-                    <targetlist targetFirst="false" bold="true">
-                        <targetLabel>Target</targetLabel>
-                        <valueLabel>Type of stunt</valueLabel>
-
-                        <item target="10" value="Appropriate.">
-                            Action would give tactical advantage.
-                        </item>
-
-                        <item target="20" value="Neutral.">
-                            Probably no real tactical advantage.
-                        </item>
-
-                        <item target="30" value="Silly.">
-                            Not a tactically sound move.
-                        </item>
-                    </targetlist>
-
-                    <para>
-                        If the stunt is particularly difficult, then add
-                        another +10 or +20 to the base difficulty.
-                    </para>
-
-                    <para>
-                        The character then attempts the stunt, and if
-                        they succeed they get +5 to their attack, plus a
-                        further +5 for each extra level of success.
-                    </para>
-                </sect3>
             </sect2>
         </sect1>
     </body>

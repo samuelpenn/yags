@@ -9,7 +9,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.7 $
+    Version: $Revision: 1.8 $
     Author: Samuel Penn
 -->
 
@@ -21,8 +21,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.7 $</version>
-            <date>$Date: 2006-04-01 17:37:09 $</date>
+            <version>$Revision: 1.8 $</version>
+            <date>$Date: 2006-04-08 21:24:04 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -261,16 +261,15 @@
     <advantage name="Defence in attack" type="technique">
         <cost points="4"/>
         <skill name="Karate"/>
-
         <prerequisite>Close combat</prerequisite>
 
-        <short>Concentrated attack.</short>
+        <short>Good at attack.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Halve penalty to attack for multiple defences. Ignore the
                 <e>free strike</e> against you if you do not defend against
-                the person you are attacking.
+                the person you are attacking. Automatic.
             </para>
         </description>
     </advantage>
@@ -278,7 +277,6 @@
     <advantage name="Fast attack" type="technique">
         <cost points="6"/>
         <skill name="Karate"/>
-
         <prerequisite>Defence in attack</prerequisite>
 
         <short>All attacks are fast.</short>
@@ -294,8 +292,7 @@
     <advantage name="Killing blow" type="technique">
         <cost points="8"/>
         <skill name="Karate"/>
-
-        <prerequisite>Fast strike</prerequisite>
+        <prerequisite>Fast attack</prerequisite>
 
         <short>Can kill in a single blow.</short>
 
@@ -362,6 +359,7 @@
             </para>
         </description>
     </advantage>
+
 
 
 </advantages>
