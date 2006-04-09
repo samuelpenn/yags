@@ -9,7 +9,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.6 $
+    Version: $Revision: 1.7 $
     Author: Samuel Penn
 -->
 
@@ -74,15 +74,21 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The Samurai art of fighting with both a wakizashi and a
-                katana or ninja-to.
+                The traditional swords of the Samurai are the katana and
+                wakizashi, and all Samurai carry both. However, it is
+                normal practise to fight with only one of the blades at a
+                time. Those who practise the <e>Niten</e> style are skilled
+                at using both blades at once. You may use a wakizashi and
+                either a katana or ninja-to with this style. It is highly
+                specialised, not suited to other weapons.
             </para>
 
             <para>
                 Uses <t>dexterity</t> for both attack and defence, and
                 adds the attack, defence and damage attributes of the
-                primary weapon, plus the attack <e>or</e> defence
-                attribute of the secondary weapon to rolls.
+                primary weapon, plus the full attack <e>or</e> defence
+                attribute of the secondary weapon to rolls. Choose which
+                at the start of the round.
             </para>
         </description>
     </skill>
@@ -269,7 +275,7 @@
         <group>Melee</group>
         <group>Bugei</group>
 
-        <prerequisites score="2">Brawl</prerequisite>
+        <prerequisite score="2">Brawl</prerequisite>
 
         <short>Unarmed combat specialised in throws and holds.</short>
 
@@ -291,7 +297,8 @@
 
             <para>
                 Use of a weapon with this skill gives you the damage bonus
-                of the weapon, but not the attack or defence bonuses.
+                of the weapon, but not the attack or defence bonuses unless
+                it is a brawling or longshaft weapon.
             </para>
         </description>
     </skill>
@@ -301,14 +308,16 @@
         <group>Melee</group>
         <group>Bugei</group>
 
-        <prerequisites score="2">Brawl</prerequisite>
+        <prerequisite score="2">Brawl</prerequisite>
 
         <short>Unarmed combat specialised in throws.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 A style of unarmed combat which concentrates on throws and
-                locks. It is designed for real combat.
+                locks. It is designed for real combat, and has a number of
+                techniques to get your opponent into a position ready to
+                be thrown or grabbed.
             </para>
 
             <para>
@@ -331,7 +340,7 @@
         <group>Combat</group>
         <group>Melee</group>
 
-        <prerequisites score="2">Brawl</prerequisite>
+        <prerequisite score="2">Brawl</prerequisite>
 
         <short>An aggressive unarmed combat style.</short>
 
@@ -360,7 +369,6 @@
         <group>Bugei</group>
 
         <short>Weapon skill specialised in sticks and chains.</short>
-
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 This weapon skill was developed in Okinawa, and favours
@@ -375,11 +383,9 @@
         <group>Melee</group>
         <group>Armed Melee</group>
         <group>Bugei</group>
-
         <prerequisite score="4">Brawl</prerequisite>
 
         <short>Attack by stealth and surprise.</short>
-
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The infamous combat style taught by the Ninja, its focus
@@ -394,6 +400,46 @@
                 If the target is surprised, then you may add your
                 <e>Ninjutsu</e> skill to damage done. It also adds to all
                 <e>Stealth</e> rolls.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Wing Chun" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+        <group>Bugei</group>
+        <prerequisite score="2">Brawl</prerequisite>
+
+        <short>A ancient variation of kung fu.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Wing Chun is specialised in close fighting, and as well as
+                unarmed attacks makes use of the knife, longstaff and
+                butterfly sword (the latter is often used in pairs). It is
+                good at counter strikes and fast punches.
+            </para>
+
+            <para>
+                When using <e>Wing Chun</e> you use <t>agility</t> in both
+                attack and defence, and gain a +1 attribute bonus when
+                making <e>free strikes</e> or <e>counter strikes</e>.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Jeet Kune Do" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+        <prerequisite score="4">Brawl</prerequisite>
+        <prerequisite score="4">Wing Chun</prerequisite>
+
+        <short>A modern style invented by Bruce Lee.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Jeet Kune Do is a modern style of fighting which aims to
+                take the best of many other styles. It's speciality is that
+                it has no speciality - it emphasises flexibility and
+                spontaneity.
             </para>
         </description>
     </skill>
