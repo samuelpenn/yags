@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.23 $
-    Date:    $Date: 2006-02-12 23:01:18 $
+    Version: $Revision: 1.24 $
+    Date:    $Date: 2006-04-16 21:17:56 $
 
     Categories
 
@@ -2621,7 +2621,7 @@
             </para>
         </description>
 
-        <weight>1000</weight>
+        <weight>1200</weight>
         <material>metal</material>
 
         <cost>1200</cost>
@@ -4189,6 +4189,197 @@
             </properties>
         </armour>
     </item>
+
+    <item name="Light Samurai Armour">
+        <category>Armour</category>
+        <importance>0</importance>
+        <availability>4</availability>
+
+        <short>Light samurai armour.</short>
+
+        <weight>2000</weight>
+        <material>metal</material>
+        <cost>250</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+6</protection>
+            <load>2</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+            </covers>
+
+            <properties>
+                <restrictive score="1"/>
+                <noisy score="1"/>
+                <light/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Heavy Samurai Armour">
+        <category>Armour</category>
+        <importance>0</importance>
+        <availability>4</availability>
+
+        <short>Heavy samurai armour.</short>
+
+        <weight>4000</weight>
+        <material>metal</material>
+        <cost>250</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+12</protection>
+            <load>4</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+            </covers>
+
+            <properties>
+                <restrictive score="1"/>
+                <noisy score="1"/>
+                <light/>
+            </properties>
+        </armour>
+    </item>
+
+
+
+    <item name="Katana">
+        <category>Weapon</category>
+        <importance>0</importance>
+
+        <short>A single edged two handed sword.</short>
+
+        <description>
+            <para>
+                A katana is a particular type of sword of Japanese origin.
+                It has a long, singled edged blade, with a two handed grip.
+                Like the European bastard sword, it can be used one or
+                two handed. The katana is designed for cutting, never for
+                stabbing - the rarity of metal in Japan meant there was
+                never a need to penetrate mail or metal plate armour.
+            </para>
+
+            <para>
+                Due to their rarity, most katanas are of high quality.
+            </para>
+        </description>
+
+        <weight>1100</weight>
+        <material>metal</material>
+
+        <cost>5000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Swords</category>
+            <class>great</class>
+
+            <combat>
+                <attack>+6</attack>
+                <defence>+5</defence>
+                <damage>+14</damage>
+            </combat>
+
+            <strength>3</strength>
+            <load>2</load>
+            <reach>2</reach>
+
+            <properties>
+                <twohanded/>
+                <heavy/>
+                <light/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Wakizashi">
+        <category>Weapon</category>
+        <importance>0</importance>
+
+        <short>A single edged short sword.</short>
+
+        <description>
+            <para>
+                A short Japanese single edged sword. Unlike the katana, it
+                could be used for thrusting with the point, but was still
+                designed to be used against lightly armoured opponents.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>metal</material>
+
+        <cost>1000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Swords</category>
+            <class>single</class>
+
+            <combat>
+                <attack>+3</attack>
+                <defence>+3</defence>
+                <damage>+10</damage>
+            </combat>
+
+            <strength>2</strength>
+            <load>2</load>
+            <reach>1</reach>
+
+            <properties>
+                <light/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="No-dachi">
+        <category>Weapon</category>
+        <importance>0</importance>
+
+        <short>A single edged great sword.</short>
+
+        <description>
+            <para>
+                A large Japanese great sword. It's blade has a single edge
+                and like the katana it is designed for cutting rather than
+                thrusting.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>metal</material>
+
+        <cost>2000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Swords</category>
+            <class>single</class>
+
+            <combat>
+                <attack>+9</attack>
+                <defence>+7</defence>
+                <damage>+17</damage>
+            </combat>
+
+            <strength>5</strength>
+            <load>2</load>
+            <reach>3</reach>
+
+            <properties>
+                <twohanded/>
+                <heavy/>
+                <light/>
+            </properties>
+        </weapon>
+    </item>
+
 </equipment>
 
 
