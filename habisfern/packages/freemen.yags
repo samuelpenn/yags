@@ -3,8 +3,8 @@
 <!--
     Standard Habisfern character packages.
 
-    Version: $Revision: 1.10 $
-    Date:    $Date: 2006-04-16 12:28:44 $
+    Version: $Revision: 1.11 $
+    Date:    $Date: 2006-04-16 16:05:50 $
 -->
 <characters xmlns="http://yagsbook.sourceforge.net/xml"
             xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
@@ -390,30 +390,33 @@
             <race>Human</race>
             <age>16</age>
             <short>
-                A dodgy character.
+                A conman and thief.
             </short>
 
             <background>
                 <para>
-                    Rogues are those who make a living through crime, or
-                    at least skirting close to the edge of what is legal
-                    and isn't. Many will use charm and wit to gain money
-                    from people, moving on quickly before their deceit is
-                    noticed. Though they may be as homeless as a vagabond,
-                    rogues try to pretend they are a person of good
-                    standing, and try to make money with as little work
-                    as possible. They are often more respectable than a
-                    vagabond, but generally less trustworthy.
+                    You make your living by being smarter than everyone
+                    else. Wit and charm are the tools of your trade,
+                    cheating people out of their money so that you can
+                    live as you please. It's their fault for being stupid
+                    enough to believe your lies.
                 </para>
 
                 <para>
-                    Due to the rural nature of most of civilisation, theft
-                    is normally of the opportunistic sort, rather than
-                    the sort of planned burglary which may be worthwhile in
-                    the larger cities. As such, though a rogue wouldn't
-                    object to taking a chicken or nice cloak when no-one
-                    was looking, it's not something that requires much
-                    skill, so they don't tend to have burglary skills.
+                    If the opportunity presents itself, then you're not
+                    above a bit of burglarly or robbery either. Basically
+                    anything which enables you to make a profit and get
+                    away before anyone notices without you having to do
+                    too much work.
+                </para>
+
+                <para>
+                    You try to look and act respectable, either posing as
+                    a travelling merchant, priest or noble. When the time
+                    calls for it however, you can just as easily be a
+                    vagabound or simpleton, the sort other people will try
+                    to cheat, and in so doing, open themselves up to being
+                    cheated themselves.
                 </para>
             </background>
         </description>
@@ -437,19 +440,26 @@
                 </group>
 
                 <group name="Rogue" type="skills">
-                    <skill name="Gambling" score="3"/>
+                    <skill name="Gambling" score="4"/>
                     <skill name="Streetwise" score="3"/>
+                    <skill name="Etiquette" score="1"/>
                 </group>
 
                 <group name="Other" type="skills">
                     <skill name="Trade" score="2"/>
                 </group>
             </skills>
+
+            <advantages>
+                <advantage name="Disguise" skill="Guile" score="2"/>
+            </advantages>
         </statistics>
 
         <equipment>
             <cash value="5d"/>
             <item name="Good clothes"/>
+            <item name="Set of dice"/>
+            <item name="Knife"/>
         </equipment>
     </character>
 
@@ -463,21 +473,27 @@
 
             <background>
                 <para>
-                    Vagabonds are those who either have no home, or
-                    have been forced to leave their homes. They may be
-                    nobles, freemen or slaves, though the most common
-                    are poor freemen who have decided to leave their
-                    lord. Many turn to crime to make a living, and
-                    because of this they are pretty much mistrusted
-                    wherever they go.
+                    Once, either you or your family was considered to be a
+                    free farmer, with land and responsibilities. Things
+                    became hard however, and you lost everything. Rather
+                    than giving up your freedom, you left to wander the
+                    land, begging, stealing or even working for food.
                 </para>
 
                 <para>
-                    Vagabounds are not necessarily outlaws, though some
-                    are. They generally hire themselves out to do whatever
-                    work is required, and hope they get paid at the end.
-                    Groups of vagabonds are seen as a threat, and so will
-                    often be forceably broken up.
+                    Whether you live by crime or not, many other vagabounds
+                    do, and so you will be mistrusted and disliked. However,
+                    where you can be used as cheap labor, you will be
+                    welcomed - at least until the time when you ask for
+                    payment.
+                </para>
+
+                <para>
+                    You are not quite an outlaw, though in practise your
+                    position in society is very similar. Few will care if
+                    you turn up dead, and nobody will avenge you. You will
+                    be treated worse than a slave, but at the end of the
+                    day you have your freedom.
                 </para>
             </background>
         </description>
@@ -487,7 +503,7 @@
                 <group name="Talents" type="talents">
                     <skill name="Athletics" score="2"/>
                     <skill name="Awareness" score="3"/>
-                    <skill name="Brawl" score="2"/>
+                    <skill name="Brawl" score="3"/>
                     <skill name="Charm" score="2"/>
                     <skill name="Guile" score="3"/>
                     <skill name="Sleight" score="4"/>
@@ -507,7 +523,7 @@
 
                 <group name="Other" type="skills">
                     <skill name="Survival" score="3"/>
-                    <skill name="Longshaft weapon" score="3"/>
+                    <skill name="Longshaft weapon" score="2"/>
                 </group>
             </skills>
         </statistics>
@@ -524,11 +540,24 @@
         <description>
             <race>Human</race>
             <age>16</age>
-            <short>
-                The woodsman cares for the Lord's orchards and grazing
-                lands. He has knowledge of the wild, of how to hunt it and
-                how to cultivate it.
-            </short>
+            <short>A woodsman looks after their lord's hunting lands</short>
+
+            <background>
+                <para>
+                    You have been appointed to take care of your lord's
+                    hunting lands and orchards. It is your job to manage
+                    the production of timber, ensure people do not hunt
+                    game without permission, and keep a look out for
+                    outlaws and banditry.
+                </para>
+
+                <para>
+                    Many woodsmen will live in the woods, enjoying the
+                    solitude and freedom it brings. Because of your skills
+                    at woodcraft you may be called in to serve in the
+                    fyrd as a scout or skirmisher in times of battle.
+                </para>
+            </background>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
@@ -551,12 +580,13 @@
 
                 <group name="Profession" type="skills">
                     <skill name="Copicing" score="4"/>
+                    <skill name="Hunting" score="2"/>
                     <skill name="Farming" score="1"/>
                 </group>
 
                 <group name="Other" type="skills">
                     <skill name="Bow" score="4"/>
-                    <skill name="Survival" score="4"/>
+                    <skill name="Survival" score="3"/>
                     <skill name="Single weapon" score="2"/>
                 </group>
             </skills>
@@ -567,63 +597,11 @@
             <item name="Standard outdoor clothes"/>
             <item name="Short bow"/>
             <item name="Spear"/>
+            <item name="Knife"/>
+            <item name="Trapping gear"/>
         </equipment>
     </character>
 
-    <character name="Craftsman">
-        <description>
-            <short>
-                The craftsman is a skilled professional.
-            </short>
-
-            <background>
-                <para>
-                    You may be a carpenter, blacksmith, armourer or one
-                    of any of the other crafts which require skilled
-                    professionals.
-                </para>
-            </background>
-        </description>
-
-        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <skills>
-                <group name="Talents" type="talents">
-                    <skill name="Athletics" score="2"/>
-                    <skill name="Awareness" score="2"/>
-                    <skill name="Brawl" score="2"/>
-                    <skill name="Charm" score="3"/>
-                    <skill name="Guile" score="3"/>
-                    <skill name="Sleight" score="3"/>
-                    <skill name="Stealth" score="2"/>
-                    <skill name="Throw" score="2"/>
-                </group>
-
-                <group name="Knowledges" type="knowledges">
-                    <skill name="Speak Rornic" score="4"/>
-                    <skill name="Area lore" score="4"/>
-                </group>
-
-                <group name="Profession" type="skills">
-                    <skill name="Trade" score="3"/>
-                    <skill name="Craft (primary)" score="4"/>
-                    <skill name="Craft (secondary)" score="3"/>
-                </group>
-
-                <group name="Other" type="skills">
-                    <skill name="Single weapon" score="2"/>
-                    <skill name="Etiquette" score="2"/>
-                </group>
-            </skills>
-        </statistics>
-
-        <equipment>
-            <cash value="20d"/>
-            <item name="Dagger"/>
-            <item name="Craft tools"/>
-            <item name="Good clothes"/>
-            <item name="Riding horse"/>
-        </equipment>
-    </character>
 
     <character name="Cunning folk">
         <description>
@@ -634,19 +612,20 @@
 
             <background>
                 <para>
-                    Cunningfolk are often unmarried women,
-                    though a few are men. They generally
-                    live on the outskirts of a village,
-                    supported by donations of food and
-                    goods by villagers in return for
-                    medical aid, advice and magical
-                    blessings.
+                    You are a young woman who has been granted the gift
+                    of <e>sight</e>, able to see the strangeness of the
+                    Other World. Since many consider you to be unlucky,
+                    you have been given to the local witch for training
+                    in the arts of healing, magic and folk lore. You are
+                    supported by the donations of villagers who seek
+                    medicine and advice.
                 </para>
 
                 <para>
-                    Cunningfolk tend to be old, and most
-                    Player Characters will actually be an
-                    apprentice to a Cunningfolk.
+                    The most important thing you have learnt is to always
+                    appear to know more than those who come seeking aid.
+                    Know what they will ask before they do, but never give
+                    more information than you need to.
                 </para>
             </background>
         </description>
