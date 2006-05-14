@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+
+<!--
+    Earth cantrips.
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2006-05-14 14:18:24 $
+-->
+<grimoire xmlns="http://yagsbook.sourceforge.net/xml/yags/habisfern"
+          xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
+          name="Earth">
+
+    <!--
+        Following are the core spells. Various other threads split off from
+        this one.
+     -->
+
+
+    <spell name="Aid" level="1" type="earth">
+        <range>Reach</range>
+        <duration>Momentary</duration>
+        <target>One</target>
+
+        <short>Diagnose what is wrong with a person.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                With this cantrip you can determine the physical ailments
+                of a person or animal. This knowledges provides you with a
+                bonus to any <e>first aid</e> check you may make when
+                trying to heal them. The bonus is +3 per level of success.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Cure" level="3" type="earth">
+        <range>Reach</range>
+        <duration>Special</duration>
+        <target>One</target>
+        <prerequisite>Aid</prerequisite>
+
+        <short>Help cure a person or poison or disease.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                By invoking this cantrip upon a person, you can help them
+                resist the effects of poison or disease. Each level of
+                success provides a +5 bonus to their next check.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Heal" level="5" type="earth">
+        <time>Minute</time>
+        <range>Reach</range>
+        <duration>Natural</duration>
+        <target>One</target>
+        <prerequisite>Cure</prerequisite>
+
+        <short>Heal stuns and wounds.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                For each level of success you may heal up to one level
+                of wounds or stuns in the target. For each level healed,
+                you gain one level of <e>exhaustion</e>.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Decay" level="5" type="earth">
+        <range>Short</range>
+        <duration>Momentary</duration>
+        <target>Few</target>
+        <prerequisite>Cure</prerequisite>
+
+        <short>Causes dead matter to decay.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The target of this cantrip will decay rapidly, turning to
+                dust within a few rounds. Each target can be a single
+                once-living being, such as a dead tree, dead person or
+                dead whale. A <e>moderate</e> success will turn the corpses
+                to a skeleton, a <e>good</e> success will decay most of
+                the skeleton and better success will leave nothing.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Age" level="7" type="earth">
+        <range>Short</range>
+        <duration>Natural</duration>
+        <target>Individual</target>
+        <prerequisite>Decay</prerequisite>
+        <resist>Health</resist>
+
+        <short>Causes a living being to age.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The target of this cantrip will begin to age rapidly.
+                The target gets a check to resist, but if they fail
+                then they will be wracked with pain (-5 to all actions
+                per level of success), and age according to the
+                success of the magic.
+            </para>
+
+            <targetlist targetFirst="true">
+                <targetLabel>Success</targetLabel>
+                <valueLabel>Effect</valueLabel>
+
+                <item target="Moderate">
+                    Target is aged by one year.
+                </item>
+
+                <item target="Good">
+                    Target is aged by 3 years.
+                </item>
+
+                <item target="Excellent">
+                    Target is aged by 10 years.
+                </item>
+
+                <item target="Superb">
+                    Target is aged by 30 years.
+                </item>
+
+                <item target="Fantastic">
+                    Target is aged by 90 years.
+                </item>
+            </targetlist>
+
+            <para>
+                The target will age one year per round. A success level
+                can be used to double the rate of aging, but obviously
+                reduces the total years aged by.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Fertility" level="7" type="earth">
+        <range>Self</range>
+        <duration>Concentration</duration>
+        <radius>Village</radius>
+        <resist>Will</resist>
+        <prerequisite>Heal</prerequisite>
+
+        <short>Causes all in area to be overcome with lust.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When invoked, this cantrip affects all animals within it.
+                Those who fail to resist have both their lustfulness
+                and fertility increased.
+            </para>
+
+            <para>
+                The effect is initially centered on you. You may choose to
+                have it follow you, or be fixed in place, when the cantrip
+                is first invoked.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Beauty" level="7" type="earth">
+        <range>Reach</range>
+        <duration>Special</duration>
+        <target>Individual</target>
+        <resist>Will</resist>
+        <prerequisite>Heal</prerequisite>
+
+        <short>Make a person look beautiful.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When you invoke this cantrip upon a person, you cause an
+                alteration of their body in order to make them more
+                beautiful. A <e>moderate</e> success will make minor
+                changes, but every two full levels of success is
+                equivalent to a +1 level of <e>Beauty</e> advantage.
+            </para>
+
+            <para>
+                The effect will undo itself over time, loosing a level
+                of beauty each day until the person is back to normal.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Ugly" level="7" type="earth">
+        <range>Short</range>
+        <duration>Special</duration>
+        <target>Individual</target>
+        <resist>Will</resist>
+        <prerequisite>Decay</prerequisite>
+
+        <short>Make a person look ugly.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This cantrip warps and twists a person's appearance to make
+                them appear ugly. Every level of success is equivalent to
+                one level of the <e>Ugly</e> disadvantage, and initially
+                levels of <e>Beauty</e> will be cancelled.
+            </para>
+
+            <para>
+                The effect will undo itself over time, loosing a level
+                of beauty each week until the person is back to normal.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Animate" level="7" type="earth">
+        <range>Reach</range>
+        <duration>Concentration</duration>
+        <target>Individual</target>
+        <prerequisite>Heal</prerequisite>
+
+        <short>Animate a corpse.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Causes a corpse to be animated for as long as you
+                concentrate. The better the condition of the corpse
+                the easier it is to animate. The better the success
+                of the invocation, the easier the animated corpse is
+                to control.
+            </para>
+        </description>
+    </spell>
+
+
+    <spell name="Wood" level="7" type="earth">
+        <range>Self</range>
+        <duration>Concentration</duration>
+        <target>Self</target>
+        <prerequisite>Heal</prerequisite>
+
+        <short>Toughens your skin.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Causes your skin to darken like bark, and to become
+                harder and better at resisting damage. Each level of
+                success provides you with +3 soak, but also gives a
+                penalty of -1 to <t>agility</t> and <t>dexterity</t>.
+            </para>
+
+            <para>
+                Extra success levels can be used to reduce the penalty.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Stone" level="9" type="earth">
+        <range>Self</range>
+        <duration>Concentration</duration>
+        <target>Self</target>
+        <prerequisite>Wood</prerequisite>
+
+        <short>Change yourself to stone.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Causes your flesh and bones to harden into stone. You also
+                gain the ability to move through earth and stone whilst in
+                this state. Each level of success provides you with +6 soak
+                and +1 to <t>strength</t>, but your <t>agility</t> and
+                <t>dexterity</t> are both reduced to one.
+            </para>
+        </description>
+    </spell>
+
+</grimoire>
+
+

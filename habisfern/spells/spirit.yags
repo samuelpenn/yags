@@ -2,8 +2,8 @@
 
 <!--
     Spirit cantrips.
-    Version: $Revision: 1.12 $
-    Date:    $Date: 2006-05-12 22:13:53 $
+    Version: $Revision: 1.13 $
+    Date:    $Date: 2006-05-14 14:18:24 $
 -->
 <grimoire xmlns="http://yagsbook.sourceforge.net/xml/yags/habisfern"
           xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
@@ -61,63 +61,101 @@
         </description>
     </spell>
 
-    <spell name="Pain" level="3" type="spirit">
-        <range>-1/1m</range>
-        <duration>Momentary</duration>
-        <resist>Stamina x Ego</resist>
+    <spell name="Thought" level="3" type="spirit">
+        <range>Short</range>
+        <duration>Natural</duration>
+        <target>Individual</target>
+        <resist>Will</resist>
+
         <prerequisite>Impress</prerequisite>
 
-        <short>Inflict pain on a person.</short>
+        <short>Implant a single thought in a person.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                With this cantrip, the wizard inflicts imaginary pain on
-                the target. Each success causes one level of stun damage.
+                You can telepathically send a thought to a target, causing
+                them to briefly act upon it. The thought must be simple
+                enough to be expressed in a single word, though that word
+                does not need to be spoken. For example, 'sit', 'stand'
+                or 'drink' would make the target think about, and probably
+                do, those things. A thought such as 'window' could cause
+                them to look at the window.
+            </para>
+
+            <para>
+                The target will get a bonus to resist if the action is
+                stupid or dangerous. They will continue the action until
+                they have a reason not to.
             </para>
         </description>
     </spell>
 
-    <spell name="Find" level="3" type="spirit">
-        <range>-1/1km</range>
-        <duration>Concentration</duration>
+    <spell name="Memory" level="5" type="spirit">
+        <range>Short</range>
+        <duration>Natural</duration>
+        <target>Individual</target>
         <resist>Will</resist>
-        <prerequisite>Impress</prerequisite>
 
-        <short>Find a known person.</short>
+        <prerequisite>Thought</prerequisite>
+
+        <short>Implant a memory in a person.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                With this cantrip the wizard may know the location of a
-                single person that they have met before. The target of
-                the cantrip gets to resist, unless they are actively
-                thinking about the wizard. On a moderate success, the
-                wizard will know the direction (within 30 degrees) and
-                distance (within +/- 50%) to the target. Each extra
-                level of success halves both of these errors.
+                With this cantrip, you can create a fake memory in the mind
+                of the target. They will remember that memory as if it were
+                their own. Memories of important events are harder to
+                implant than a small memory of something vaguely remembered.
+                The memory is of a single event, and doesn't change the
+                rest of the target's mind to match. You could implant a
+                memory of the target once being abused by their father as
+                a child, but it wouldn't affect their other memories of
+                their father, or what their feelings towards their father.
+                However, it probably would confuse them as to why they've
+                only just remembered this.
             </para>
 
-            <para>
-                The above assumes that the target is well known to the
-                wizard. Someone who isn't that well known (possibly
-                met often, but she doesn't really know that much about
-                them) adds +10 to the difficulty, and someone who has
-                simply been seen adds +20.
-            </para>
+            <targetlist targetFirst="true">
+                <valueLabel>Type of Memory</valueLabel>
+                <targetLabel>Success</targetLabel>
+
+                <item target="Moderate">
+                    An old vague memory, such as having met a person,
+                    or been to a place.
+                </item>
+
+                <item target="Good">
+                    Either a detailed memory of an event, or a memory of an
+                    important event, but not both.
+                </item>
+
+                <item target="Excellent">
+                    Memory of an event that is both detailed and quite
+                    important.
+                </item>
+
+                <item target="Superb">
+                    Memory of an event that is both detailed and quite
+                    important, that is also either unusual or exceptional,
+                    or quite long.
+                </item>
+            </targetlist>
         </description>
     </spell>
 
     <spell name="Dream" level="5" type="spirit">
-        <range>-1/1km</range>
+        <range>Relationship</range>
         <duration>Concentration</duration>
-
-        <prerequisite>Find</prerequisite>
+        <target>Individual</target>
+        <resist>Will</resist>
+        <prerequisite>Thought</prerequisite>
 
         <short>Send a message as a dream.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Send a dream to someone known. The wizard may make the
-                dream as detailed as they wish, however more detailed
+                Send a dream to someone known. You may make the dream as
+                detailed as you wish, however more detailed
                 dreams are harder to send, and have a greater risk of
                 corruption. Specifying a simple dream is more likely
                 to get through unbroken.
@@ -153,48 +191,47 @@
         </description>
     </spell>
 
-    <spell name="Obscure" level="7" type="spirit">
-        <range>-1/m</range>
-        <duration>Concentration</duration>
-        <target>-5/extra target</target>
-        <resist>Will x Ego</resist>
 
-        <prerequisite>Dream</prerequisite>
+
+    <spell name="Obscure" level="7" type="spirit">
+        <range>Short</range>
+        <duration>Concentration</duration>
+        <target>Few</target>
+        <resist>Will</resist>
+        <prerequisite>Memory</prerequisite>
 
         <short>Hide or obscure the wizard's appearance.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                With <e>Obscure</e> the wizard can affect the minds of
-                those around her by altering their perceptions, making
-                them believe that the wizard is either not there, or
-                someone else. The difficulty in doing this depends on
-                the degree of change in their perceptions.
+                With <e>Obscure</e> you can affect the minds of those
+                around you in order to alter their perception of you.
+                Ultimately it is possible to make them believe that you
+                are not there, though it is easier to make them think
+                you to be someone else of no importance, such as a
+                servent, beggar or guard.
             </para>
 
             <para>
-                Obscurement will not make the wizard invisible, but it
-                does prevent the target from considering the wizard an
-                issue that needs to be dealt with. Guards will let her
-                pass without question, beggers will ignore her, and
-                merchants may forget to ask her to pay for goods before
-                leaving the shop.
+                A successful result will cause people to ignore you,
+                or at least not question you. A guard may stand aside
+                for you, and may even unlock a door, as long as you
+                behave in an expected way. You may extend the protection
+                of this cantrip to cover companions, in which case they
+                must be included as an extra target.
             </para>
 
             <targetlist>
-                <item target="Moderate" value="Hiding.">
-                    In order to completely mask her presence, then the
-                    wizard requires a good success, which grants a +1
-                    bonus to her attribute for stealth attempts. Each
-                    extra level of success grants a further +1 bonus.
+                <item target="Moderate+" value="Hiding.">
+                    You can try to simply hide, in which case each level
+                    of success gives you a +1 to your attribute when
+                    attempting a stealth check.
                 </item>
 
                 <item target="Moderate" value="Nothing special.">
-                    If the targets have no reason to suspect the wizard,
-                    then they will not do so. For example, if guards are
-                    checking people at random, then they won't bother
-                    checking the wizard as long as they don't appear to
-                    be out of the ordinary.
+                    The target will ignore you unless they have a reason
+                    not to. A guard randomly checking people will not
+                    choose you, but a guard checking everyone will.
                 </item>
 
                 <item target="Good" value="Suspicious.">
@@ -222,75 +259,153 @@
         </description>
     </spell>
 
-    <spell name="Nightmare" level="9" type="spirit">
-        <range>-1/m</range>
-        <duration>Concentration</duration>
-        <target>-5/extra target</target>
-        <resist>Will x Ego</resist>
-
-        <prerequisite>Obscure</prerequisite>
-
-        <short>Plant a nightmare in someone's mind.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Plant a nightmare in the target's mind. The target must
-                be sleeping at the time.
-            </para>
-        </description>
-    </spell>
-
-    <spell name="Sleep" level="12" type="spirit">
-        <range>-1/10m</range>
-        <duration>Special</duration>
-        <target>-5/doubling of targets</target>
-        <resist>Ego</resist>
-
-        <prerequisite>Nightmare</prerequisite>
-
-        <short>Put the targets under a magical sleep.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The targets of the cantrip are placed into a magical
-                slumber from which they will not awaken for a specified
-                time. Affected targets will age by just a day for the
-                duration of the sleep, and food and water requirements
-                are likewise reduced.
-            </para>
-
-            <targetlist>
-                <targetLabel>Success</targetLabel>
-                <valueLabel>Duration of sleep</valueLabel>
-
-                <item target="Moderate" value="1 day"/>
-                <item target="Good" value="1 week"/>
-                <item target="Excellent" value="1 month"/>
-                <item target="Superb" value="1 year"/>
-            </targetlist>
-        </description>
-    </spell>
 
     <spell name="Terror" level="9" type="spirit">
-        <range>-1/10m</range>
+        <range>Short</range>
         <duration>Concentration</duration>
-        <resist>Bravery</resist>
-        <target>-5/doubling of targets</target>
+        <resist>Will</resist>
+        <target>Dozen</target>
         <prerequisite>Obscure</prerequisite>
 
         <short>Create a terrifying illusion.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Create the illusion of something terrifying, which can
-                only be seen by the targets of the cantrip. Success
-                makes the target of the cantrip cower in fear, a
-                <e>good</e> success will cause them to run for cover,
-                and an <e>excellent</e> success will cause them to flee
-                in mindless panic.
+                An illusion of terror is created in the minds of the
+                targets. The illusion cannot be seen by anyone else
+                save for those affected by the cantrip. The illusion is
+                of something dark, nameless and terrible which the
+                targets will find awful. They can see, hear and smell
+                the illusion, though if one of them manages to approach it,
+                then it will be banished for all of them.
+            </para>
+
+            <para>
+                If you get a moderate success, then the targets of the
+                magic will be afraid and unable to approach. On a
+                <e>good</e> success they will be fearful enough to
+                retreat, and on an <e>excellent</e> success they
+                will cower in terror and be unable to act.
             </para>
         </description>
     </spell>
+
+
+    <spell name="Confuse" level="1" type="spirit">
+        <range>Short</range>
+        <duration>Momentary</duration>
+        <resist>Will</resist>
+        <target>Individual</target>
+
+        <short>Briefly confuse the target.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                With this cantrip, the mind of the target is temporarily
+                confused. If they fail the resistence, then they loose
+                any remaining attacks that round if in combat, or are
+                prevented from carrying out some other action if not.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Pain" level="3" type="spirit">
+        <range>Short</range>
+        <duration>Momentary</duration>
+        <resist>Health</resist>
+        <target>Individual</target>
+        <prerequisite>Confuse</prerequisite>
+
+        <short>Inflict pain on a person.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When this cantrip is invoked, unless the target succeeds
+                at the resistence check, then they are wracked by a short,
+                sharp spasm of intense pain. They gain a <e>stun</e>, and
+                are at a -10 penalty to all actions for the rest of the
+                round. You may target a particular body location, which
+                requires an extra level of success. If a hand is targeted,
+                then they will drop whatever they are holding.
+            </para>
+        </description>
+    </spell>
+
+
+    <spell name="Sleep" level="5" type="spirit">
+        <range>Short</range>
+        <duration>Natural</duration>
+        <target>Few</target>
+        <resist>Health</resist>
+        <prerequisite>Pain</prerequisite>
+
+        <short>Put the targets under a magical sleep.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If the targets fail to resist then they will become
+                extremely tired, gaining one fatigue for each level
+                of success. If already resting, then they will fall
+                into a non-magical sleep. If any target is totally
+                exhausted (-40 penalty), then they will fall asleep
+                even if in the middle of combat.
+            </para>
+        </description>
+    </spell>
+
+
+
+
+
+
+    <spell name="Hear" level="1" type="spirit">
+        <range>Short</range>
+        <duration>Natural</duration>
+        <target>Range</target>
+
+        <short>Listen for the minds of others.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                With this cantrip you may listen for the minds of others.
+                You may not hear their thoughts, but you know that they
+                are there, and whether they are active, resting or asleep.
+                You do not need to be able to see your targets - anyone
+                within range will be detected.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Find" level="3" type="spirit">
+        <range>Relationship</range>
+        <duration>Concentration</duration>
+        <resist>Will</resist>
+        <target>Individual</target>
+        <prerequisite>Hear</prerequisite>
+
+        <short>Find a known person.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                With this cantrip the wizard may know the location of a
+                single person that they have met before. The target of
+                the cantrip gets to resist, unless they are actively
+                thinking about the wizard. On a moderate success, the
+                wizard will know the direction (within 30 degrees) and
+                distance (within +/- 50%) to the target. Each extra
+                level of success halves both of these errors.
+            </para>
+
+            <para>
+                The above assumes that the target is well known to the
+                wizard. Someone who isn't that well known (possibly
+                met often, but she doesn't really know that much about
+                them) adds +10 to the difficulty, and someone who has
+                simply been seen adds +20.
+            </para>
+        </description>
+    </spell>
+
 
 
 </grimoire>
