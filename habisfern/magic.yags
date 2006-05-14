@@ -21,8 +21,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.29 $</version>
-            <date>$Date: 2006-05-14 14:18:24 $</date>
+            <version>$Revision: 1.30 $</version>
+            <date>$Date: 2006-05-14 19:10:58 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -366,6 +366,264 @@
                     Using such a ritual still grants a +1 bonus
                     however.
                 </para>
+            </sect2>
+
+            <sect2>
+                <title>Cantrips</title>
+
+                <para>
+                    Though most wizards keep to using the basic powers of
+                    the Mysteries, a few strive to gain a deeper knowledge
+                    of magic, by learning <e>cantrips</e>. A cantrip is a
+                    simple invocation which is associated with a Mystery,
+                    and which provides a simple magical effect. Simple does
+                    not mean weak however, and some cantrips are capable
+                    of destroying a town or slaying someone with a word.
+                </para>
+
+                <para>
+                    Each cantrip must be learnt seperately, and is treated
+                    as a <e>technique</e>, in that they have a prerequisite
+                    of a skill level and other cantrips. However, they
+                    cannot be simply purchased with experience, but must
+                    be learnt through meditation and self-sacrifice.
+                </para>
+
+                <sect3>
+                    <title>Learning Cantrips</title>
+
+                    <para>
+                        Learning a cantrip takes a week, and an
+                        <y:intelligence>Mystery</y:intelligence> check is
+                        required at a difficulty of 10 * level of the
+                        cantrip.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Using Cantrips</title>
+
+                    <para>
+                        Most cantrips can be invoked in a single round, and
+                        require little in the way of gestures or
+                        incantations. Cantrips are described under the
+                        section for the individual Mysteries, and they all
+                        follow the same format. An example cantrip is given
+                        below.
+                    </para>
+
+                    <h:spell name="Example Cantrip" level="1" type="any">
+                        <h:time>Round</h:time>
+                        <h:range>Short</h:range>
+                        <h:duration>Concentration</h:duration>
+                        <h:area>Large</h:area>
+                        <h:target>Few</h:target>
+                        <h:resist>Will</h:resist>
+
+                        <h:prerequisite>Another cantrip</h:prerequisite>
+
+                        <description>
+                            <para>
+                                A description for an example cantrip. This is a
+                                simple cantrip for simple people.
+                            </para>
+                        </description>
+                    </h:spell>
+
+                    <para>
+                        The first part of the description lists basic
+                        properties of the cantrip. Their meanings are given
+                        below.
+                    </para>
+
+                    <sect4>
+                        <title>Time</title>
+
+                        <para>
+                            The time required to invoke the cantrip. Most
+                            cantrips will have a casting time of 1 round.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Range</title>
+
+                        <para>
+                            The range of the cantrip. If the cantrip affects
+                            multiple targets, then the range to the furthest
+                            target counts. The range will generally be the
+                            distance out to which there is no penalty. There
+                            is a -5 penalty for each multiple of the range
+                            (or part) beyond this.
+                        </para>
+
+                        <para>
+                            A cantrip with a range of <e>short</e>, has no
+                            penalty up to 10m, -5 up to 20m, -10 up to 30m
+                            etc. Unless otherwise stated, you must have
+                            line of sight to the target.
+                        </para>
+
+                        <itemlist order="strict">
+                            <item name="Self">
+                                The cantrip either can only affect you, or
+                                the effects are centred on you.
+                            </item>
+
+                            <item name="Touch">
+                                You must be touching the target.
+                            </item>
+
+                            <item name="Reach">
+                                There is no penalty if you are touching the
+                                target, but you can affect targets at range
+                                at a penalty of -5 per metre.
+                            </item>
+
+                            <item name="Short">
+                                There is no penalty out to 10m, and a -5
+                                penalty every 10m beyond that.
+                            </item>
+
+                            <item name="Medium">
+                                There is no penalty out to 50m, and a -5
+                                penalty every 50m beyond that.
+                            </item>
+
+                            <item name="Long">
+                                There is no penalty out to 1km, and a -5
+                                penalty every 1km beyond that.
+                            </item>
+
+                            <item name="Communication">
+                                You must be able to communicate with the
+                                target.
+                            </item>
+
+                            <item name="Relationship">
+                                There is no line of sight requirement, and
+                                the distance depends on how well you know
+                                the target. If the target is well known,
+                                then the distance is Long, moderalte known
+                                then half this, and poorly known quarter of
+                                Long.
+                            </item>
+                        </itemlist>
+                    </sect4>
+
+                    <sect4>
+                        <title>Duration</title>
+
+                        <para>
+                            How long the cantrip lasts after it has been
+                            invoked.
+                        </para>
+
+                        <itemlist order="strict">
+                            <item name="Momentary">
+                                The magic lasts only an instant.
+                            </item>
+
+                            <item name="Concentration">
+                                The magic lasts for as long as you
+                                concentrate.
+                            </item>
+
+                            <item name="Natural">
+                                The magic creates an effect, which lasts
+                                as long as it would naturally. Shaping
+                                earth into a wall for example, the shape
+                                will hold for as long as gravity allows.
+                            </item>
+                        </itemlist>
+                    </sect4>
+
+                    <sect4>
+                        <title>Target</title>
+
+                        <para>
+                            The target of the cantrip defines how many
+                            targets can be affected in a single invocation.
+                            As for range, it defines how many are affected
+                            for free, plus there is a penalty if more than
+                            that are targetted.
+                        </para>
+
+                        <itemlist order="strict">
+                            <item name="Self">
+                                This cantrip can only affect the caster.
+                            </item>
+
+                            <item name="One">
+                                The target can be a single individual,
+                                either you or someone within range.
+                            </item>
+
+                            <item name="Individual">
+                                Can affect one individual at no penalty,
+                                or more at -5 for each extra target.
+                            </item>
+
+                            <item name="Few">
+                                Can affect up to 3 targets at no penalty,
+                                and -5 for every 3 beyond that.
+                            </item>
+
+                            <item name="Dozen">
+                                Can affect up to 12 targets at no penalty
+                                and -5 for every 12 beyond that.
+                            </item>
+
+                            <item name="Crowd">
+                                Can affect up to 50 targets at no penalty
+                                and -5 for each 50 beyond that.
+                            </item>
+
+                            <item name="Range">
+                                All targets within range of the cantrip.
+                            </item>
+                        </itemlist>
+                    </sect4>
+
+                    <sect4>
+                        <title>Radius</title>
+
+                        <para>
+                            If a radius is given instead of a target, then
+                            the cantrip affects everything within this
+                            radius, focused on a point within the maximum
+                            range.
+                        </para>
+
+                        <itemlist order="strict">
+                            <item name="Tiny">
+                                Up to 1m for free, -5 each 1m beyond that.
+                            </item>
+
+                            <item name="Small">
+                                Up to 3m for free, -5 every 3m beyond that.
+                            </item>
+
+                            <item name="Medium">
+                                Up to 10 for free, -5 every 10m beyond that.
+                            </item>
+
+                            <item name="Large">
+                                Up to 25m for free, -5 every 25m beyond that.
+                            </item>
+
+                            <item name="Village">
+                                Up to 100m radius for free, -5 every 100m
+                                beyond that.
+                            </item>
+
+                            <item name="Town">
+                                Up to 500m radius for free, -5 every 500m
+                                beyond that.
+                            </item>
+                        </itemlist>
+                    </sect4>
+                </sect3>
             </sect2>
         </sect1>
 
@@ -1193,326 +1451,7 @@
             </sect2>
         </sect1>
 
-        <sect1>
-            <title>Elementals</title>
 
-            <para>
-                Elementals are spirits of the world. They often manifest
-                due to the magic of wizards, though a few free willed
-                spirits are known.
-            </para>
-        </sect1>
-
-        <sect1>
-            <title>Learning Magic</title>
-
-            <para>
-                A <e>Word</e> can be taught to anyone, there are no
-                restrictions on who can use magic. Often, just a week of
-                study is enough to learn the basics, and the mechanics of
-                learning <e>Words</e> is as any other skill.
-            </para>
-
-            <para>
-                A <e>Word</e> by itself is not a great deal of use. It can
-                be used to probe the theories of magic, to allow further
-                study, but it cannot be used to invoke magic itself. This
-                introspective study of magic is necessary in order for a
-                student to learn the various Cantrips. Self study is the
-                only way in which a cantrip can be learnt - they cannot be
-                taught by others, since the relationship between the Wizard
-                and the way that they use a cantrip is too personal to be
-                taught to another.
-            </para>
-
-            <para>
-                The set of known cantrips is small, and cannot be expanded
-                by mortal wizards. Once a wizard has achieved a high enough
-                understanding of a <e>Word</e>, then basic introspection
-                will make them aware of the cantrips within their power. It
-                is then up to them to spend time studying any given cantrip
-                in order to unleash its power.
-            </para>
-
-            <para>
-                Study of a cantrip does not follow normal skill progression.
-                An attempt to study a cantrip must be done all in one go,
-                and is both physically and mentally demanding, often done
-                away from the company of others.
-            </para>
-
-            <sect2>
-                <title>Unlocking the Secrets</title>
-
-                <para>
-                    To achieve understanding of a cantrip, the wizard must
-                    engage in continuous study for a week or more. Each
-                    week, the wizard rolls
-                    <skillequation>
-                        <attribute>intelligence</attribute>
-                        <skill>Word</skill>
-                        <die/>
-                    </skillequation>
-                    against a target of 5 x level of the cantrip.
-                </para>
-            </sect2>
-        </sect1>
-
-        <sect1>
-            <title>Mastery</title>
-
-            <para>
-                When a wizard achieves level 10 in a <e>Word</e>, then
-                they are considered to have mastered that type of magic,
-                and they can immediately choose a free mastery ability.
-                However, mastery of one side of magic precludes mastery
-                of others - only one Word may be mastered, and it is
-                always the first that the wizard achieves a score of 10
-                in. Further, the wizard's skill at magic in opposition
-                to their mastered form is weakened, and suffers a -1
-                to their Will when casting it.
-            </para>
-
-            <para>
-                When a Wizard achieves level 12 in their mastered (and
-                only their mastered) Word, then they can choose another
-                mastery ability. Their opposite Word now suffers a -2
-                to Will for casting cantrips, and Words either side of
-                the direct opposite suffer a -1.
-            </para>
-
-            <para>
-                Finally, at level 15, a third ability may be chosen,
-                and the direct opposite Word suffers a -3 penalty.
-            </para>
-        </sect1>
-
-        <sect1>
-            <title>Using Magic</title>
-
-            <para>
-                The following section describes the cantrips which may be
-                learnt by a wizard. They all follow the same pattern, which
-                is described here.
-            </para>
-
-            <y:spell name="Example Cantrip" level="1" type="any">
-                <y:time>1 round</y:time>
-                <y:range>-1/2m</y:range>
-                <y:duration>Concentration</y:duration>
-                <y:area>-1/m radius</y:area>
-                <y:target>-5/extra</y:target>
-                <y:resist>Resistance</y:resist>
-
-                <y:prerequisite>Another Spell</y:prerequisite>
-
-                <description>
-                    <para>
-                        A description for an example cantrip. This is a
-                        simple cantrip for simple people.
-                    </para>
-                </description>
-            </y:spell>
-
-            <para>
-                The name of the spell followed by its level. The wizard
-                must have a skill in the Word at least equal to the level
-                of the spell before learning it. The base difficulty to
-                cast the cantrip is always 10 however, and is not affected
-                by the level of the cantrip. Casting a cantrip is rolled
-                with will x word.
-            </para>
-
-            <para>
-                The <s>effect</s> of the cantrip is a measure of how powerful
-                it is. The effect may be damage, a skill bonus or modifier
-                on some roll. The effect is the difference between the
-                caster's roll and the level of the cantrip. As long as the
-                effect is zero or positive, the cantrip was cast.
-            </para>
-
-            <para>
-                The statistics block which immediately follows the cantrip's
-                name gives some modifiers to either the casting roll, or
-                the effect. These are not the same. A long range does not
-                make the cantrip harder to cast, but it may mean that the
-                effectiveness of the cantrip is reduced to zero before it
-                reaches the target. The cantrip is still cast, but fizzles
-                out before achieving anything.
-            </para>
-
-            <itemlist order="strict">
-                <item name="Time">
-                    The time to cast the cantrip. Most cantrips have a
-                    casting time of 1 round. In such a case, casting the
-                    cantrip is a slow action.
-                </item>
-
-                <item name="Range">
-                    By default, a cantrip has a range of Self, which means
-                    that it only affects the caster. Ranged cantrips have
-                    a penalty given for the range. -1/5m means that there
-                    is a -1 penalty to the cantrip's effect per 5m of
-                    range to the target. If there are multiple targets,
-                    then calculate the range to each target separately.
-                </item>
-
-                <item name="Duration">
-                    How long the cantrip lasts. This is normally either
-                    Momentary (a jet of flame appears, burns the target,
-                    then vanishes) or Concentration (as long as the
-                    wizard concentrates on that spell). Other durations
-                    will be obvious or explained in the description.
-                </item>
-
-                <item name="Resist">
-                    If the target gets a resistance roll, this is given
-                    here. May be will, health, soak or some other stat.
-                </item>
-
-                <item name="Area">
-                    If an area is given, then the cantrip affects an area.
-                    The size of the area is chosen at casting time, and
-                    the penalty comes off the casting roll.
-                </item>
-
-                <item name="Radius">
-                    If a radius is given (Area and Radius will not be given
-                    for the same Cantrip) then this means the cantrip has
-                    an area of effect centred on the target, and spreading
-                    out in a sphere or circle. The effect of the spell is
-                    reduced by the amount given here.
-                </item>
-
-                <item name="Target">
-                    A cantrip normally affects one target. If something
-                    like '-5/extra' is given, then there is a -5 to the
-                    casting roll per target beyond the first. If a scale
-                    is given ('-5/extra dozen') then the first dozen is
-                    affected for free, and each extra dozen has a penalty.
-                    A target may alternatively give a volume or Size.
-                    Again this comes off the casting roll.
-                </item>
-
-                <item name="Prerequisite">
-                    If a prerequisite is given, then the Wizard must have
-                    learnt that spell before learning this one.
-                </item>
-            </itemlist>
-
-            <sect2>
-                <title>Effect</title>
-
-                <para>
-                    The cantrip's <e>effect</e> is normally described in
-                    the cantrip description. If it isn't, and there isn't
-                    a direct relationship between the effect number and
-                    the result (e.g. the game result is not quantifiable
-                    as a number), then the effect gives an indication of
-                    how well the cantrip works.
-                </para>
-
-                <targetlist bold="true">
-                    <valueLabel>Quality of effect</valueLabel>
-                    <targetLabel>Effect</targetLabel>
-
-                    <item target="0-9" value="Normal.">
-                        The result of the cantrip is the minimum needed
-                        to be considered a success. It will give only basic
-                        information, or cause only minimal changes.
-                    </item>
-
-                    <item target="10-19" value="Good.">
-                        The result is respectable, and gives a decent level
-                        of information, or has a significant affect on the
-                        world.
-                    </item>
-
-                    <item target="20-29" value="Excellent.">
-                    </item>
-
-                    <item target="30-39" value="Superb.">
-                    </item>
-
-                    <item target="40-49" value="Fantastic.">
-                    </item>
-
-                    <item target="50+" value="Amazing">
-                    </item>
-                </targetlist>
-            </sect2>
-
-            <sect2>
-                <title>Resistance</title>
-
-                <para>
-                    Many cantrips don't provide any chance to resist the
-                    magic. The best way to avoid or reduce the effects of
-                    the spell is to not be targetted, stop the wizard
-                    from concentrating on the magic, or use some physical
-                    means of avoiding the effects. Physical effects created
-                    with magic are non-magical - there is no concept of
-                    'magic resistance' for example that can protect you
-                    from such magic. A jet of fire created with magic is
-                    exactly identical to a jet of fire created via any
-                    other means.
-                </para>
-
-                <para>
-                    Magic which causes direct damage will generally provide
-                    a soak roll. The damage from the effect of the spell
-                    adds a d20, and this is reduced by the target's soak
-                    roll. Some magic may bypass soak altogether - this is
-                    generally the case when the damage is internal.
-                </para>
-
-                <para>
-                    Other resistance checks may be based on attributes or
-                    skills. Sometimes it adds to some existing difficulty,
-                    so though the magic cannot be resisted, a normal skill
-                    check is made against the situation caused by the
-                    magic.
-                </para>
-
-                <para>
-                    Direct resistance rolls reduce the effect of the spell.
-                    A check is made against a target of 20, and if
-                    successful, the effect of the magic on the target is
-                    reduced by one level. For each full 5 points above this
-                    on the resistance roll, the magic is reduced by another
-                    level.
-                </para>
-            </sect2>
-
-            <sect2>
-                <title>Fatigue</title>
-
-                <para>
-                    A wizard may try to push themselves beyond their normal
-                    limits when casting a cantrip, in order to get a more
-                    powerful effect. Each point of fatigue that they spend
-                    gives them an extra +10 bonus to their casting roll.
-                </para>
-            </sect2>
-        </sect1>
-
-        <sect1>
-            <title>Cantrips</title>
-
-            <sect2>
-                <title>Air</title>
-
-                <h:import-spells href="spells/air.yags" type="air"/>
-            </sect2>
-
-            <sect2>
-                <title>Fire</title>
-
-                <h:import-spells href="spells/fire.yags" type="fire"/>
-            </sect2>
-
-
-        </sect1>
 
         <sect1>
             <title>Insanity</title>
