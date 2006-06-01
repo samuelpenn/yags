@@ -21,8 +21,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.30 $</version>
-            <date>$Date: 2006-05-14 19:10:58 $</date>
+            <version>$Revision: 1.31 $</version>
+            <date>$Date: 2006-06-01 19:27:55 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -1457,92 +1457,236 @@
             <title>Insanity</title>
 
             <para>
-                Whenever a wizard uses a cantrip, there is a chance that
-                the magic will have a negative effect on the mind of the
-                caster. This chance increases for more complex cantrips,
-                and in regions where the boundary between reality and
-                the dream worlds is weak.
+                The <e>Mysteries</e> provide you with mastery over the
+                different aspects of the world, enabling you to twist
+                reality to your will. Sometimes however, reality will twist
+                back, warping your mind in ways that make you not quite
+                human. Though this warping is seen as a bad thing, it can
+                lead to a greater understanding of the magic you are
+                trying to control.
+            </para>
+
+            <para>
+                Ultimately, any wizard who overuses magic will go insane.
+                The basic powers of each Mystery are the safest, which is
+                why many wizards do not go to the trouble of learning
+                cantrips. Those who strive for greater understanding though
+                must ultimately pay the price of magic.
+            </para>
+
+            <para>
+                There are two ways to gain insanity. The first is by fumbling
+                the use of magic, the second is by stretching your abilities
+                when trying to learn new magic.
             </para>
 
             <sect2>
-                <title>Fumbling a Cantrip</title>
+                <title>Levels of Insanity</title>
 
                 <para>
-                    In game terms, if a wizard fumbles when casting a
-                    cantrip, then there is a chance of some side effect.
-                    The fumble chance is normally '1', as for standard
-                    stressful actions, but is modified as follows.
+                    <e>Insanity</e> is a Trait, and like other traits it
+                    ranges from 0 (completely sane) to 5 (critically insane).
+                </para>
+
+                <targetlist targetFirst="true">
+                    <targetLabel>Insanity</targetLabel>
+                    <valueLabel>Description</valueLabel>
+
+                    <item target="0">
+                        Mundane and stable. No signs of abnormal insanity.
+                    </item>
+
+                    <item target="1">
+                        Mildly insane. You generally behave as normal,
+                        though your reactions to stress may be more
+                        extreme than others.
+                    </item>
+
+                    <item target="2">
+                        Moderate insanity. You will have a number of quirks
+                        which others will consider unusual, though which
+                        will not be immediately apparent.
+                    </item>
+
+                    <item target="3">
+                        High insanity. Your quirks and actions are quite
+                        severe, and people will mark you as being odd, and
+                        possibly dangerous.
+                    </item>
+
+                    <item target="4">
+                        Severe insanity. You find it difficult to function
+                        in normal society, and will have a number of mental
+                        defects which cause others to avoid you.
+                    </item>
+
+                    <item target="5">
+                        Critically insane. You cannot socialise normally,
+                        and in fact probably have difficulty living with
+                        yourself.
+                    </item>
+                </targetlist>
+            </sect2>
+
+            <sect2>
+                <title>Fumbling Magic</title>
+
+                <para>
+                    When invoking a cantrip or calling on a power, if you
+                    roll a natural '1', then the magic fails and there is
+                    a chance of something worse happening. In order to keep
+                    control of the magic, it is necessary to make a Will
+                    check.
                 </para>
 
                 <targetlist>
-                    <targetLabel>Fumble</targetLabel>
+                    <targetLabel>Target</targetLabel>
                     <valueLabel>Condition</valueLabel>
 
-                    <item target="+1">
-                        Level of cantrip is higher than intelligence of
-                        wizard.
+                    <item target="10">
+                        Using a Power.
                     </item>
 
-                    <item target="+aura">
-                        Wizard is in a region with a magical aura.
+                    <item target="10 + 5 x level">
+                        Using a cantrip.
                     </item>
 
-                    <item target="+1">
+                    <item target="+ 5 x aura">
+                        In a region with an aura.
+                    </item>
+
+                    <item target="+5">
                         It is night, between sunset and sunrise.
                     </item>
 
-                    <item target="+1">
+                    <item target="+5">
                         The moon is above the horizon and not hidden by
                         clouds. Being underground, or in a permanent
                         building out of sight of the moon can negate this.
                     </item>
 
-                    <item target="+1">
+                    <item target="+5">
                         The moon is full, regardless of whether it can be
                         seen.
                     </item>
                 </targetlist>
 
                 <para>
-                    On a fumble, the wizard must attempt to keep control
-                    of the magic. Luck may be spent in order to do this
-                    automatically (either to get a reroll, or to make the
-                    roll '10'), otherwise a will check is required, using
-                    the <e>Passion</e> associated with the Word being
-                    used.
-                </para>
-
-                <targetlist>
-                    <targetLabel>Passion</targetLabel>
-                    <valueLabel>Word</valueLabel>
-
-                    <item target="Bravery">
-                        Earth, Water.
-                    </item>
-
-                    <item target="Temperence">
-                        Spirit, Air.
-                    </item>
-
-                    <item target="Restraint">
-                        Fire, Metal.
-                    </item>
-                </targetlist>
-
-                <para>
-                    The difficulty is equal to 10 + 5 x level of cantrip.
-                    If this succeeds, then the cantrip can be cast normally
-                    as if nothing had happened.
+                    If you get a <e>good</e> success, then the magic simply
+                    fails and there are no side effects. On a <e>moderate</e>
+                    success you gain one level of <e>fatigue</e>, but are
+                    otherwise unaffected.
                 </para>
 
                 <para>
-                    On a failure, then the wizard is mentally stunned for
-                    the rest of the round. The following round, and each
-                    round thereafter, another check is made with the
-                    difficulty dropping by 10 each time until it is zero
-                    or lower. The number of failures then determines the
-                    result.
+                    On a failure, you gain one level of <e>fatigue</e> and
+                    are stunned for the remainder of the round, being unable
+                    to act or even defend yourself. The following round, and
+                    each round thereafter, you may try to gain control again,
+                    though the difficulty is reduced by 10. Failure results
+                    in continuing to be stunned.
                 </para>
+
+                <para>
+                    If you fail a number of checks greater than your current
+                    <e>Insanity</e>, then the magic threatens to overwhelm
+                    you completely (note that this means a single failure
+                    if you have no insanity). You may choose to either try
+                    to control the magic, or to let it wash over you. If you
+                    do the latter then you are stunned for one more round
+                    and then recover (no roll). However, the magic leaves a
+                    lasting imprint on you, and you gain a <e>quirk</e>. The
+                    quirk lasts for a week. At the end of the week, there
+                    is a 50% chance of the quirk becoming permanent and you
+                    gaining one level of insanity.
+                </para>
+
+                <para>
+                    If you try to control the magic, then make another
+                    check the following round. If this fails, then you are
+                    immediately <e>overwhelmed</e> for the next 1d20 minutes.
+                    No further checks are required, but the effect of being
+                    overwhelmed can be a lot worse.
+                </para>
+
+                <sect3>
+                    <title>Overwhelmed</title>
+
+                    <para>
+                        If you become <e>overwhelmed</e> by the magic, then
+                        you exhibit behaviour which is tied to the Mystery
+                        you were trying to control. The effect lasts for 1d20
+                        minutes.
+                    </para>
+
+                    <sect4>
+                        <title>Confused (Spirit)</title>
+
+                        <para>
+                            Your mind is confused by an overload of sensation.
+                            For the duration your <t>Perception</t> is doubled
+                            for noticing general things, but at -2 if you try
+                            to focus on anything (such as individual words),
+                            or trying to attack or dodge.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Depression (Water)</title>
+
+                        <para>
+                            You are severly depressed, and see no reason to
+                            act or do anything. If there is a good reason to
+                            move, then you must make a Will check at a target
+                            of 30 to do so. More focused actions (fighting,
+                            using magic) is impossible.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Lust (Earth)</title>
+
+                        <para>
+                            You are overcome with lust.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Catatonic (Iron)</title>
+
+                        <para>
+                            You are unable to think or act.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Rage (Fire)</title>
+
+                        <para>
+                            You are overcome with rage.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Mindless (Air)</title>
+
+                        <para>
+                            You are unable to concentrate on any one thing,
+                            finding it difficult to act in a coherent fashion.
+                        </para>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Quirks</title>
+
+                    <para>
+                        A quirk is minor personality defect. Quirks can last
+                        a short time or be permanent.
+                    </para>
+
+                    <y:import-advantages href="options/quirks.yags"/>
+                </sect3>
             </sect2>
         </sect1>
     </body>

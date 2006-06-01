@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.38 $</version>
-            <date>$Date: 2006-05-22 21:24:55 $</date>
+            <version>$Revision: 1.39 $</version>
+            <date>$Date: 2006-06-01 19:27:55 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -362,7 +362,8 @@
                         the number of skills given or the quality of background
                         benefits that they provide. However, they should be
                         roughly equal in the degree of usefulness of the
-                        character.
+                        character. Each package will also provide a bonus to
+                        one attribute.
                     </para>
                 </sect3>
 
@@ -615,12 +616,7 @@
             </para>
 
             <para>
-                A typical character will have 10 points to spend. The
-                player can opt to start the character older than the
-                default age of 16, in which case they gain an extra two
-                points each year up to a maximum of 18 points at age 25.
-                Taking an older, and therefore more experienced, character
-                can be quite beneficial.
+                A typical character will have 10 points to spend.
             </para>
 
             <para>
@@ -685,7 +681,7 @@
 
                     <targetlist targetFirst="true">
                         <targetLabel>Valour</targetLabel>
-                        <valueLable>Attitude</valueLabel>
+                        <valueLabel>Attitude</valueLabel>
 
                         <item target="1">
                             You are braver than then average person, and
@@ -694,15 +690,13 @@
                         </item>
 
                         <item target="2">
+                            You are used to danger, and though you are
+                            still careful you don't often show fear. Only
+                            serious danger will make you think twice.
                         </item>
 
                         <item target="3">
-                        </item>
-
-                        <item target="4">
-                        </item>
-
-                        <item target="5">
+                            You are heedless of danger.
                         </item>
                     </targetlist>
                 </sect3>
@@ -742,10 +736,10 @@
                 </sect3>
 
                 <sect3>
-                    <title>Indulgent and Temperance</title>
+                    <title>Indulgence and Temperance</title>
 
                     <para>
-                        A person with a trait of <e>Indulgent</e> enjoys
+                        A person with a trait of <e>Indulgence</e> enjoys
                         indulging in food and alcohol, often to excess.
                         A person with <e>Temperance</e> on the other
                         hand, has little fondness of such things and
@@ -800,6 +794,7 @@
                     <y:import-advantages type="advantage">
                         <y:adv>options/advantages.yags</y:adv>
                         <y:adv>../core/options/advantages.yags</y:adv>
+                        <y:adv>../core/options/background.yags</y:adv>
                     </y:import-advantages>
                 </sect3>
 
@@ -809,6 +804,7 @@
                     <y:import-advantages type="disadvantage">
                         <y:adv>options/advantages.yags</y:adv>
                         <y:adv>../core/options/advantages.yags</y:adv>
+                        <y:adv>../core/options/background.yags</y:adv>
                     </y:import-advantages>
                 </sect3>
 
