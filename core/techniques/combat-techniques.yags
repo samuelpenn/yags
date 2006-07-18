@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2006-07-03 21:11:14 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2006-07-18 19:26:53 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -200,23 +200,6 @@
         </description>
     </advantage>
 
-    <advantage name="Tough" type="technique">
-        <cost points="4"/>
-        <skill name="Brawl"/>
-
-        <prerequisite>Hard to kill</prerequisite>
-
-        <short>Bonus to soak.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You gain a bonus to your basic soak equal to
-                your <t>Strength</t>. This applies all the time, even
-                when not using this skill.
-            </para>
-        </description>
-    </advantage>
-
     <advantage name="Ignore pain" type="technique">
         <cost points="4"/>
         <skill name="Brawl"/>
@@ -235,6 +218,23 @@
             <para>
                 At a <e>Brawl</e> of 8+, reduce the penalty by twice
                 your skill, and at 12+ reduce by triple your skill.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Tough" type="technique">
+        <cost points="6"/>
+        <skill name="Brawl"/>
+
+        <prerequisite>Ignore pain</prerequisite>
+
+        <short>Bonus to soak.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You gain a bonus to your basic soak against <e>mixed</e>
+                and <e>stun</e> damage equal to your <t>Strength</t>. This
+                applies all the time, even when not using this skill.
             </para>
         </description>
     </advantage>
@@ -430,5 +430,35 @@
         </description>
     </advantage>
 
+    <advantage name="Melee tactics" type="technique">
+        <cost points="4"/>
+        <skill name="Any melee skill"/>
+
+        <short>Gives a bonus against a particular skill.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is not a single technique but many - one for each
+                melee skill (with the exception of <e>brawl</e>). The
+                technique gives a bonus against anyone using that skill
+                equal to your own skill level.
+            </para>
+
+            <para>
+                If you have a <e>Weapon and shield tactics</e> technique
+                with a <e>Weapon and shield</e> skill of 5, then you gain
+                a +5 bonus to attack and defence against someone using
+                the <e>Weapon and shield</e> skill against you, regardless
+                of which weapon style you happen to be using. You must buy
+                it seperately for each style in which you want to know
+                how to match.
+            </para>
+
+            <para>
+                Though it doesn't apply to brawl, it does apply to other
+                unarmed combat skills, such as <e>Karate</e>.
+            </para>
+        </description>
+    </advantage>
 
 </advantages>
