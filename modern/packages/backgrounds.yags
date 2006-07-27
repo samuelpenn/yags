@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+
+
+<characters xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <character name="High Tech" cost="0">
+        <description>
+            <short>
+                What everybody from a typical Western culture gets.
+            </short>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <package>
+                <cost>0</cost>
+            </package>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="2"/>
+                    <skill name="Guile" score="2"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                </group>
+            </skills>
+
+            <advantages>
+                <advantage name="Literate"/>
+            </advantages>
+        </statistics>
+    </character>
+
+
+    <character name="Poor Education" cost="1">
+        <description>
+            <short>
+                A poor quality Western education.
+            </short>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <package>
+                <type>Education</type>
+                <cost>1</cost>
+                <prerequisite>High Tech</prerequisite>
+            </package>
+
+            <skills>
+                <group name="Knowledges" type="knowledges">
+                    <skill name="History" score="2"/>
+                    <skill name="World lore" score="2"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Any sport" score="2"/>
+                    <skill name="Computer operation" score="2"/>
+                </group>
+            </skills>
+        </statistics>
+    </character>
+
+    <character name="Good Education" cost="2">
+        <description>
+            <short>
+                A decent education up to the age of about 16.
+            </short>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                    <skill name="History" score="2"/>
+                    <skill name="Geography" score="2"/>
+                    <skill name="World lore" score="4"/>
+                    <skill name="Science" score="2"/>
+                    <skill name="Mathematics" score="2"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Computer operation" score="3"/>
+                    <skill name="Any sport" score="2"/>
+                    <skill name="Pop culture" score="4"/>
+                </group>
+            </skills>
+        </statistics>
+    </character>
+
+    <character name="Higher Education" cost="2">
+        <description>
+            <short>
+                University education.
+            </short>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                    <skill name="History" score="2"/>
+                    <skill name="Geography" score="2"/>
+                    <skill name="World lore" score="4"/>
+                    <skill name="Science" score="2"/>
+                    <skill name="Mathematics" score="2"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Computer operation" score="3"/>
+                    <skill name="Any sport" score="2"/>
+                    <skill name="Pop culture" score="4"/>
+                </group>
+            </skills>
+        </statistics>
+    </character>
+
+    <character name="Street life" cost="1">
+        <description>
+            <short>
+                Not a formal education, but living on the street, petty
+                crime and the like.
+            </short>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="3"/>
+                    <skill name="Brawl" score="3"/>
+                    <skill name="Guile" score="3"/>
+                    <skill name="Sleight" score="3"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Streetwise" score="2"/>
+                    <skill name="Survival (Urban)" score="4"/>
+                </group>
+            </skills>
+        </statistics>
+    </character>
+
+    <character name="Crime" cost="2">
+        <description>
+            <short>
+                A criminal background.
+            </short>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="3"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Guile" score="4"/>
+                    <skill name="Sleight" score="3"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                    <skill name="Pop culture" score="4"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Streetwise" score="4"/>
+                    <skill name="Survival (Urban)" score="2"/>
+                    <skill name="Pistol" score="2"/>
+                </group>
+            </skills>
+        </statistics>
+    </character>
+
+    <character name="Army" cost="2">
+        <description>
+            <short>
+                Basic army training.
+            </short>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="4"/>
+                    <skill name="Brawl" score="4"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Area lore" score="4"/>
+                    <skill name="Military lore" score="4"/>
+                </group>
+
+                <group name="Military" type="skills">
+                    <skill name="Tactics" score="4"/>
+                    <skill name="Pistol" score="4"/>
+                    <skill name="Rifle" score="4"/>
+                    <skill name="Survival (Temperate)" score="4"/>
+                </group>
+            </skills>
+        </statistics>
+    </character>
+
+</characters>
+
+

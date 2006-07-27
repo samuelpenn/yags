@@ -21,8 +21,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2006-05-11 14:31:02 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2006-07-27 17:47:52 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -85,11 +85,15 @@
                     character. There are five broad categories you must
                     place in order of preference - <e>Advantages</e>,
                     <e>Experience</e>, <e>Background</e>,
-                    <e>Social class</e>, <e>Wealth</e> and <e>Unusual</e>.
+                    <e>Social class</e> and <e>Wealth</e>.
                     These are described below.
                 </para>
 
                 <itemlist order="sort">
+                    <item name="Attributes">
+                        Points to raise attributes.
+                    </item>
+
                     <item name="Advantages">
                         Covers special abilities which cannot be purchased
                         after character generation as well as raising
@@ -123,15 +127,6 @@
                         Wealth determines how much disposable income you
                         have. A high starting wealth also provides a
                         fortune which can make you financially indepedent.
-                    </item>
-
-                    <item name="Unusual">
-                        This is a blanket covering for anything that is
-                        unusual or special. Having supernatural powers,
-                        or access to unnatural knowledge in a game where
-                        such is rare would count as Unusual. The GM may
-                        rule that everyone must take Unusual at F, in
-                        which case nobody may have unusual backgrounds.
                     </item>
                 </itemlist>
 
@@ -168,33 +163,45 @@
 
                     <tbody>
                         <row>
-                            <entry>Advantages</entry>
-                            <entry>15/10</entry>
-                            <entry>10/10</entry>
-                            <entry>5/10</entry>
-                            <entry>0/10</entry>
-                            <entry>0/5</entry>
-                            <entry>0/0</entry>
+                            <entry>Attributes</entry>
+                            <entry>+15/8</entry>
+                            <entry>+10/7</entry>
+                            <entry>+6/6</entry>
+                            <entry>+3/5</entry>
+                            <entry>+0/4</entry>
+                            <entry>-3/3</entry>
                         </row>
 
                         <row>
                             <entry>Experience</entry>
-                            <entry>60/6</entry>
-                            <entry>45/5</entry>
-                            <entry>30/5</entry>
-                            <entry>20/4</entry>
+                            <entry>80/9</entry>
+                            <entry>55/8</entry>
+                            <entry>40/7</entry>
+                            <entry>30/6</entry>
+                            <entry>20/5</entry>
                             <entry>10/4</entry>
-                            <entry>5/3</entry>
                         </row>
+
                         <row>
                             <entry>Background</entry>
-                            <entry>EGGA</entry>
-                            <entry>EGA</entry>
-                            <entry>GA</entry>
-                            <entry>A</entry>
-                            <entry>P</entry>
-                            <entry>-</entry>
+                            <entry>5</entry>
+                            <entry>4</entry>
+                            <entry>3</entry>
+                            <entry>2</entry>
+                            <entry>1</entry>
+                            <entry>0</entry>
                         </row>
+
+                        <row>
+                            <entry>Advantages</entry>
+                            <entry>20/10</entry>
+                            <entry>15/10</entry>
+                            <entry>10/10</entry>
+                            <entry>5/10</entry>
+                            <entry>0/5</entry>
+                            <entry>-5/5</entry>
+                        </row>
+
                         <row>
                             <entry>Social</entry>
                             <entry>5</entry>
@@ -204,6 +211,7 @@
                             <entry>1</entry>
                             <entry>0</entry>
                         </row>
+
                         <row>
                             <entry>Wealth</entry>
                             <entry>5</entry>
@@ -213,17 +221,43 @@
                             <entry>1</entry>
                             <entry>0</entry>
                         </row>
-                        <row>
-                            <entry>Unusual</entry>
-                            <entry>2</entry>
-                            <entry>2</entry>
-                            <entry>1</entry>
-                            <entry>1</entry>
-                            <entry>-</entry>
-                            <entry>-</entry>
-                        </row>
                     </tbody>
                 </table>
+
+                <sect3>
+                    <title>Attributes</title>
+
+                    <para>
+                        Attributes are listed as the number of points
+                        available to spend, and the maximum level of
+                        attribute which may be purchased. The cost of each
+                        level is as follows. Attributes above 5 tend to be
+                        very rare, and anything above 7 is truly
+                        outstanding.
+                    </para>
+
+                    <targetlist targetFirst="true">
+                        <targetLabel>Score</targetLabel>
+                        <valueLabel>Cost</valueLabel>
+
+                        <item target="9" value="+15,"/>
+                        <item target="8" value="+10,"/>
+                        <item target="7" value="+7,"/>
+                        <item target="6" value="+5,"/>
+                        <item target="5" value="+3,"/>
+                        <item target="4" value="+1,">
+                            Significantly above average for an adult. About
+                            5% of the population has this level or above.
+                        </item>
+                        <item target="3" value="+0,">
+                            Typical average for an adult. About 90% of the
+                            population.
+                        </item>
+                        <item target="2" value="-1,">
+                            Significantly below average, the bottom 5%.
+                        </item>
+                    </targetlist>
+                </sect3>
 
                 <sect3>
                     <title>Advantages</title>
@@ -269,10 +303,24 @@
                     <title>Background</title>
 
                     <para>
-                        Your background determines what you have done up
-			until now, and covers education, military
-                        training or business experience.
+                        Your background determines what you have been doing
+                        up until this point. A background provides a number
+                        of benefits, including skills, contacts and possibly
+                        equipment. There are a number of backgrounds
+                        available, and each has a point cost associated with
+                        it. The level of background that you choose defines
+                        the number of points you can spend.
                     </para>
+
+                    <para>
+                        You may purchase as many backgrounds as you have
+                        points for, though you may not take the same
+                        background more than once. Where multiple
+                        backgrounds provide the same skills, take the
+                        highest level of skill provided.
+                    </para>
+
+                    <import-characters href="packages/backgrounds.yags"/>
                 </sect3>
 
                 <sect3>
