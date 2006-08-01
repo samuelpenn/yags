@@ -12,9 +12,7 @@
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <package>
-                <cost>0</cost>
-            </package>
+            <package cost="0"/>
 
             <skills>
                 <group name="Talents" type="talents">
@@ -49,9 +47,8 @@
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <package>
+            <package cost="1">
                 <type>Education</type>
-                <cost>1</cost>
                 <prerequisite>High Tech</prerequisite>
             </package>
 
@@ -77,9 +74,14 @@
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <package cost="2">
+                <prerequisite>High Tech</prerequisite>
+            </package>
+
             <skills>
                 <group name="Knowledges" type="knowledges">
                     <skill name="Speak own" score="4"/>
+                    <skill name="Speak other" score="4"/>
                     <skill name="Area lore" score="4"/>
                     <skill name="History" score="2"/>
                     <skill name="Geography" score="2"/>
@@ -105,16 +107,10 @@
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <package cost="1"/>
+
             <skills>
                 <group name="Knowledges" type="knowledges">
-                    <skill name="Speak own" score="4"/>
-                    <skill name="Area lore" score="4"/>
-                    <skill name="History" score="3"/>
-                    <skill name="Geography" score="3"/>
-                    <skill name="World lore" score="4"/>
-                    <skill name="Science" score="2"/>
-                    <skill name="Mathematics" score="2"/>
-
                     <skill name="Any academic" score="6"/>
                     <skill name="Any academic" score="5"/>
                     <skill name="Any academic" score="4"/>
@@ -124,8 +120,6 @@
                 <group name="Other" type="skills">
                     <skill name="Computer operation" score="4"/>
                     <skill name="Research" score="4"/>
-                    <skill name="Any sport" score="2"/>
-                    <skill name="Pop culture" score="4"/>
                 </group>
             </skills>
 
@@ -137,21 +131,21 @@
 
     <character name="Post Graduate Education" cost="4">
         <description>
+            <age>25</age>
             <short>
                 University education.
             </short>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <package cost="1">
+                <prerequisite>Higher Education</prerequisite>
+            </package>
+
             <skills>
                 <group name="Knowledges" type="knowledges">
                     <skill name="Speak own" score="4"/>
                     <skill name="Area lore" score="4"/>
-                    <skill name="History" score="3"/>
-                    <skill name="Geography" score="3"/>
-                    <skill name="World lore" score="4"/>
-                    <skill name="Science" score="2"/>
-                    <skill name="Mathematics" score="2"/>
 
                     <skill name="Any academic" score="8"/>
                     <skill name="Any academic" score="6"/>
@@ -175,7 +169,46 @@
         </statistics>
     </character>
 
-    <character name="Street life" cost="1">
+    <character name="Academia">
+        <description>
+            <age>35</age>
+            <short>
+                A researcher in academia.
+            </short>
+
+            <background>
+                <para>
+                    You have stayed in academia and become one of the
+                    leaders in your field of expertise.
+                </para>
+            </background>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <package cost="1">
+                <prerequisite>Post Graduate Education</prerequisite>
+            </package>
+            <skills>
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Any academic" score="12"/>
+                    <skill name="Any academic" score="10"/>
+                    <skill name="Any academic" score="8"/>
+                    <skill name="Any academic" score="8"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Research" score="7"/>
+                </group>
+            </skills>
+
+            <advantages>
+                <advantage name="Contacts (Academic field)"/>
+            </advantages>
+        </statistics>
+    </character>
+
+
+    <character name="Street life">
         <description>
             <short>
                 Not a formal education, but living on the street, petty
@@ -184,6 +217,7 @@
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <package cost="1"/>
             <skills>
                 <group name="Talents" type="talents">
                     <skill name="Athletics" score="3"/>
@@ -205,7 +239,7 @@
         </statistics>
     </character>
 
-    <character name="Crime" cost="2">
+    <character name="Crime">
         <description>
             <short>
                 A criminal background.
@@ -213,6 +247,7 @@
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <package cost="2"/>
             <skills>
                 <group name="Talents" type="talents">
                     <skill name="Athletics" score="3"/>
