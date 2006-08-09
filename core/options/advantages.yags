@@ -3,8 +3,8 @@
 <!--
     These list generic advantages and disadvantages,
 
-    Version: $Revision: 1.23 $
-    Date:    $Date: 2006-08-01 21:21:43 $
+    Version: $Revision: 1.24 $
+    Date:    $Date: 2006-08-09 19:29:47 $
     Author:  Samuel Penn (sam@glendale.org.uk)
 
 -->
@@ -733,8 +733,8 @@
             <para>
                 You sleep heavily, and find it difficult to awaken.
                 When dozing, all perception checks are quartered
-                (as if in deep sleep), and when sleeping your total
-                roll is always zero.
+                (as if in deep sleep), and when actually sleeping
+                your <t>Perception</t> is considered zero.
             </para>
         </description>
     </advantage>
@@ -883,6 +883,9 @@
     <advantage name="Exotic looks" type="disadvantage">
         <cost points="-1"/>
 
+        <forbiddon>Albino</forbiddon>
+        <forbiddon>Noticeable mark</forbiddon>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Your appearance is out of the ordinary. This does not
@@ -891,6 +894,13 @@
                 affecting advantages), just that you are different
                 and stand out in a crowd. You can be easy to recognise,
                 and easy to blame because you look strange.
+            </para>
+
+            <para>
+                If you are exotically beautiful, then in some cases it may
+                actually attract people to you, especially if there is
+                plenty of more mundanely beautiful people to compete with.
+                This will be quite rare however.
             </para>
         </description>
     </advantage>
@@ -957,7 +967,9 @@
                 You are crippled in one of your attributes. Choose an
                 attribute for which you already have <e>Poor attribute</e>,
                 and reduce it to one. It may never be improved. You may
-                only take this disadvantage for a single attribute.
+                only take this disadvantage for a single attribute. You
+                should explain why this attribute is so low as part of
+                your background.
             </para>
         </description>
     </advantage>
@@ -1026,20 +1038,6 @@
                 people). If people have a bad reaction to you, then it
                 is one step worse. People who have a neutral or better
                 reaction can overlook it.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Bad back" type="disadvantage">
-        <cost points="-1"/>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have a bad back, which sometimes plays up and causes
-                you extreme agony. If you ever fumble a <t>Strength</t>
-                or <t>Agility</t> check, then your back 'gives', and you
-                are at -1 to both <t>Agility</t> and <t>Dexterity</t>
-                for the rest of the day.
             </para>
         </description>
     </advantage>
