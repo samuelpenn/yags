@@ -16,8 +16,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.1 $</version>
-            <date>$Date: 2006-08-12 15:15:16 $</date>
+            <version>$Revision: 1.2 $</version>
+            <date>$Date: 2006-08-12 21:21:01 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -61,6 +61,80 @@
         </description>
     </advantage>
 
+    <advantage name="Rune ward" type="technique">
+        <cost points="4"/>
+        <skill name="Rune lore"/>
+        <short>Use runes to ward against evil.</short>
+
+        <prerequisite>Rune blessing</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                By carving a circle of runes you can provide a sanctuary
+                against spirits and other creatures which are affected by
+                such things. You can draw one metre of ward every minute
+                equal to your <t>Dexterity</t>. Roll once for each minute
+                spent drawing - the strength of the ward is equal to the
+                lowest <y:intelligence>Rune lore</y:intelligence> roll.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Rune magic" type="technique">
+        <cost points="4"/>
+        <skill name="Rune lore"/>
+        <short>Empower cantrips.</short>
+
+        <prerequisite>Rune blessing</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You know how to craft a rune stone which gives power to
+                a specific cantrip. You can only perform this for cantrips
+                that you know, so it is an ability only learnt by Wizards.
+                It takes an hour to craft the rune stone, and when used
+                gives a +1 bonus to your <t>Will</t> when the cantrip is
+                cast. The stone is consumed in the casting.
+            </para>
+
+            <para>
+                The rune stones used are about the size of your fist, and
+                crack and break on use.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Rune prison" type="technique">
+        <cost points="6"/>
+        <skill name="Rune lore"/>
+        <short>Summon and contain a spirit.</short>
+
+        <prerequisite>Rune ward</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You know how to draw runes in a way to summon and confine
+                a spirit creature. You can draw a rune as per
+                <e>Rune ward</e>, and if nearby the named creature is
+                summoned to the prison and confined.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Find the path" type="technique">
+        <cost points="4"/>
+        <skill name="Faerie lore"/>
+        <short>Find the path to faerie lands.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Your knowledge of the fey enables you to find the path into
+                faerie lands easily. When attempting to locate or follow a
+                faerie road, you may halve the normal difficulty. This
+                stacks with the halving provided by <e>Second sight</e>.
+            </para>
+        </description>
+    </advantage>
 </advantages>
 
 
