@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.54 $</version>
-            <date>$Date: 2006-04-08 21:24:04 $</date>
+            <version>$Revision: 1.55 $</version>
+            <date>$Date: 2006-08-21 18:42:42 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -755,6 +755,59 @@
         </sect1>
 
         <sect1>
+            <title>Size</title>
+
+            <para>
+                How large a creature is can be measured in a number of
+                ways - height, length and mass being the common criteria.
+                In <e>Yags</e>, the <t>Size</t> attribute is a measure
+                of the creature's capacity to absorb damage, and how easy
+                it is to hit. In general, the <t>Size</t> of a creature
+                will increase logarithmically with its mass - every +5
+                increase in <t>Size</t> represents a ten fold mass
+                increase.
+            </para>
+
+            <para>
+                The scale is based around an average of a 70kg human male.
+                A <t>Size</t> 10 creature would be 700kg, a <t>Size</t> 15
+                creature 7 tonnes, and a <t>Size</t> 20 creature 70 tonnes.
+            </para>
+
+            <targetlist targetFirst="true" bold="true">
+                <targetLabel>Size</targetLabel>
+                <valueLabel>Mass and examples</valueLabel>
+
+                <item target="0" value="7kg.">
+                </item>
+
+                <item target="1" value="11kg.">
+                    1 year old child.
+                </item>
+
+                <item target="2" value="18kg.">
+                    5 year old child.
+                </item>
+
+                <item target="3" value="28kg.">
+                    10 year old child.
+                </item>
+
+                <item target="4" value="44kg.">
+                    Small adult.
+                </item>
+
+                <item target="5" value="70kg.">
+                    Typical adult.
+                </item>
+
+                <item target="6" value="111kg.">
+                    Large adult.
+                </item>
+            </targetlist>
+        </sect1>
+
+        <sect1>
             <title>Movement and Encumbrance</title>
 
             <para>
@@ -887,7 +940,8 @@
 
                     <item target="4" value="Greatly (x10).">
                         A greatly burdened character has a -2 penalty to
-                        both agility and dexterity.
+                        both agility and dexterity. You cannot run or
+                        sprint.
                     </item>
 
                     <item target="5" value="Over encumbered.">

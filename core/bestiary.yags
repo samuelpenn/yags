@@ -17,8 +17,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.11 $</version>
-            <date>$Date: 2005-08-13 15:23:36 $</date>
+            <version>$Revision: 1.12 $</version>
+            <date>$Date: 2006-08-21 18:42:42 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -135,16 +135,16 @@
                     The size rating of a creature gives a rough indication
                     of how big it is. An average adult human is considered
                     to be size five - and very few adult humans will
-                    differ from this norm.
+                    differ from this norm. Every +5 increase in <t>Size</t>
+                    roughly represents a ten fold increase in body mass.
                 </para>
 
                 <para>
-                    The smallest possible size is zero - about the size
-                    of a robin or similar bird - something that fits
-                    easily into one hand. Creatures any smaller are also
-                    size zero, but are very rarely worth bothering about.
-                    There is no upper limit on size, and scaling is non
-                    linear.
+                    The smallest possible size is zero - a small cat or
+                    something similar. Anything smaller is difficulty to
+                    represent properly in <e>Yags</e> and is simply placed
+                    into the Size 0 category. Creatures such as mice and
+                    rats are covered under the rules for <e>Swarms</e>.
                 </para>
 
                 <para>
@@ -180,7 +180,7 @@
                         size 3.
                     </item>
 
-                    <item target="4-6" value="Medium">
+                    <item target="4-7" value="Medium">
                         Medium creatures cover the range of adult humans,
                         from about 130cm tall (size 4) to 210cm tall
                         (size 6). A size 5 creature is about 170cm long
@@ -188,41 +188,41 @@
                         or length.
                     </item>
 
-                    <item target="7-12" value="Large">
+                    <item target="8-11" value="Large">
                         Large creatures are noticeably larger than men,
                         though are by no means the largest. Most horses
-                        are covered (up to size 10 for the largest),
-                        with the largest predatory cats at the low end
-                        of the scale.
+                        are covered (up to size 10 for the largest), as
+                        are rhino (size 11).
                     </item>
 
-                    <item target="13-20" value="Huge">
-                        Huge animals fit into the category between horses
-                        and elephants.
+                    <item target="12-15" value="Huge">
+                        Very large land animals, such as the Elephant
+                        (size 15), or medium sized dinosaurs such as the
+                        Triceratops (size 14).
                     </item>
 
-                    <item target="21-30" value="Enormous">
-                        About as large as modern land animals get, the best
-                        example would be an Elephant (size 25), at around
-                        six tonnes in weight.
+                    <item target="16-20" value="Gigantic">
+                        The largest dinosaurs, such as the Apatosaurus (size 18)
+                        are Gigantic. There are no known land animals in the
+                        real world which are bigger than this.
                     </item>
 
-                    <item target="31-50" value="Gigantic">
-                        Near the top range of largest dinosaurs.
+                    <item target="21-25" value="Colossal">
+                        A female blue whale, at 150t, would be size 22. This
+                        is the largest known animal.
                     </item>
 
-                    <item target="51-80" value="Colossal">
-                        Largest land dinosaurs. Aptosaurus (size 55) is
-                        one example. Don't get much larger than this.
-                        They are very, very big.
-                    </item>
-
-                    <item target="81+" value="Titanic">
-                        No land animals of this size has ever been known in
-                        the real world, however the blue whale (size 100)
-                        comfortably fits into this category.
+                    <item target="26+" value="Titanic">
+                        Larger than anything known in the real world.
                     </item>
                 </targetlist>
+
+                <para>
+                    The fact that a blue whale is less than 5 times larger
+                    than a human in terms of <t>Size</t>, does not mean that
+                    they are only five times tougher. There are other factors
+                    to consider as well.
+                </para>
 
                 <sect3>
                     <title>Very Large Things</title>
@@ -468,21 +468,24 @@
                     <para>
                         However, whilst the blow from a whale's tail may
                         be considered stun damage by other whales, to a
-                        small human, such damage can be deadly.
+                        small human, such damage can be deadly. Likewise,
+                        whilst a sword blow can kill a human, it's going
+                        to be little more than a surface wound to the
+                        whale. For this reason, large differences in size
+                        can modify the type of damage done.
                     </para>
 
                     <para>
-                        If the attacking creature is two size categories
-                        larger than the defender, then all damage is
-                        shifted up a category in severity. Stun damage
-                        becomes mixed, and mixed becomes wound.
+                        If the attacking creature is at least twice the
+                        size of the defender, then the damage type is
+                        shifted up a category. If the attacker is three
+                        times the size, then shift up three categories.
                     </para>
 
                     <para>
-                        If the attacker is four size categories larger than
-                        the defender, then all damage is wound damage.
-                        A gigantic creature always does wound damage to a
-                        medium sized foe.
+                        Similarly, if the defender is at least twice as
+                        big, shift down one category, and for three times
+                        as big, shift down two categories.
                     </para>
 
                     <para>
@@ -519,8 +522,7 @@
                     <item target="9" value="Small"/>
                     <item target="12" value="Medium"/>
                     <item target="15" value="Large"/>
-                    <item target="18" value="Huge"/>
-                    <item target="21" value="Enormous"/>
+                    <item target="20" value="Huge"/>
                     <item target="25" value="Gigantic"/>
                     <item target="30" value="Colossal"/>
                     <item target="35" value="Titanic"/>
