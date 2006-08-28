@@ -8,7 +8,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.4 $
+    Version: $Revision: 1.5 $
     Author: Samuel Penn
 -->
 
@@ -481,7 +481,9 @@
             <para>
                 The skill of managing an organisation, from dealing with
                 people, basic finance, reception type duties and so on and
-                so forth.
+                so forth. You also know how to best short cut administration
+                enforced by others, cutting through bureacracy in the
+                shortest possible times.
             </para>
         </description>
     </skill>
@@ -505,6 +507,8 @@
 
     <skill name="Computer operation" type="skill">
         <group>Technical</group>
+        <default>Intelligence</default>
+        <default>Electronic operation</default>
 
         <short>The skill of using a computer.</short>
 
@@ -515,61 +519,159 @@
                 an email. High levels of skill will allow basic
                 programming tasks and diagnosing faults.
             </para>
+
+            <para>
+                If the computer system does not have a point-and-click,
+                or otherwise very simple, style of interface, then you
+                must use <e>Computer hacking</e> instead.
+            </para>
         </description>
+
+        <examples>
+            <example target="10">
+                Looking for a particular file using easy criteria.
+            </example>
+
+            <example target="20">
+                Filtering information from a database and analysing
+                it (producing graphs, finding correlations).
+            </example>
+
+            <example target="20">
+                Connecting a computer to a network, or software to a
+                server. Halved if you have the right System Administration
+                technique.
+            </example>
+        </examples>
     </skill>
 
-    <skill name="Hacking" type="skill">
+    <skill name="Computer hacking" type="skill">
         <group>Technical</group>
         <group>Rogue</group>
 
+        <prerequisite>Computer operation</prerequisite>
         <default>Computer operation</default>
 
         <short>Indepth knowledge of computers.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                This skill mostly covers programming a computer,
-                though it also includes knowing how they really work,
-                diagnosing software problems, some knowledge of
-                security and so on and so forth.
+                A hacker is someone who has in depth knowledge of how
+                computer systems work. Sometimes, this knowledge can be
+                put towards circumventing security on computer systems,
+                but doesn't have to. This skill covers programming,
+                system design, network administration and most other
+                advanced tasks.
             </para>
 
             <para>
-                It is not primarily about breaking into computers,
-                though this skill is required if that is the intent.
+                The point-and-click style of system administration can
+                be covered by <e>Computer operation</e>, though this skill
+                doesn't include much knowledge of why things work the
+                way they do.
             </para>
         </description>
     </skill>
 
-    <skill name="Security" type="skill">
-        <group>Technical</group>
 
-        <short>Electronic surveillance and security.</short>
+    <skill name="Electronics operation">
+        <group>Technical</group>
+        <default>Intelligence</default>
+
+        <short>Using electronic devices.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Experience with all forms of security and surveillance
-                gear, including cameras, locks, wiretaps and alarms.
-                It covers setting them up, managing them and avoiding
-                them.
+                Enables you to operate electronic devices, such as
+                radios, media recorders, surveillance cameras, medical
+                scanners and other similar equipment. Note that
+                <e>Computer operation</e> is a separate skill. Electronic
+                devices are generally considered those that have a fixed
+                and simplified interface for a particular task, whilst
+                a computer tends to be far more flexible.
+            </para>
+
+            <para>
+                There is a technique for each type of electronic device
+                that can be used. Knowing the correct technique halves
+                the difficulty for a task.
             </para>
         </description>
+
+        <examples>
+            <example target="10">
+                Switching a device on, and ensuring that it is at least
+                working more or less correctly. Very basic use of the
+                device (talking on a radio, figuring out what blips on
+                a radar represent, taking a picture).
+            </example>
+
+            <example target="20">
+                Configuring a device to use non-default options, or
+                collabrating it correctly.
+            </example>
+
+            <example target="30">
+                Performing something specific with the device, such as
+                selecting a very precise channel, or switching off
+                only parts of an alarm system.
+            </example>
+
+            <example target="+20">
+                Countering interference or other problems.
+            </example>
+
+            <example target="+20">
+                Obtaining very precise results.
+            </example>
+        </examples>
     </skill>
 
-    <skill name="Communications" type="skill">
+    <skill name="Electronics">
         <group>Technical</group>
+        <prerequisite>Electronics operation</prerequisite>
 
-        <short>Knowledge of communications gear.</short>
+        <short>Building electronic devices.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The use of all forms of eletronic communication
-                systems, including protocols. Covers radios, phones,
-                laser comm devices, satallite etc. May also cover
-                basic encryption, detection and spoofing.
+                You have skill in building electronic devices, as well as
+                a good understanding of how they work and the theories on
+                which they are constructed.
+            </para>
+
+            <para>
+                There is a technique for each type of electronic device
+                that can be built. Knowing the correct technique halves
+                the difficulty for a task.
             </para>
         </description>
     </skill>
+
+    <skill name="Machinest">
+        <group>Technical</group>
+
+        <short>Building tools</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of building high tech tools.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Engineer">
+        <group>Technical</group>
+
+        <short>Engineering.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Engineering.
+            </para>
+        </description>
+    </skill>
+
 
     <skill name="Fencing">
         <group>Sport</group>
