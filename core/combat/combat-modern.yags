@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.1 $</version>
-            <date>$Date: 2006-02-24 17:41:45 $</date>
+            <version>$Revision: 1.2 $</version>
+            <date>$Date: 2006-08-28 19:55:49 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -43,6 +43,178 @@
         <sect1 id="modern">
             <title>Modern Combat</title>
 
+            <para>
+                Combat in the modern or science fiction genre normally
+                consists of gun fights or unarmed combat. Unarmed combat
+                is covered by the low tech rules for combat, and expanded
+                further in the <e>Bushido</e> rules for those who want
+                an extended set of unarmed fighting styles. Gun fights are
+                what these rules are for.
+            </para>
+
+            <sect2>
+                <title>Realism or Fantasy?</title>
+
+                <para>
+                    <e>Yags</e> is mostly designed for low fantasy, though
+                    allows truly exceptional characters to be heroic. Where
+                    guns enter the picture, things are much the same. A
+                    gunshot can kill you, or at least put you out of action,
+                    so characters should avoid getting into gun battles
+                    unless they have some advantage.
+                </para>
+
+                <para>
+                    There's a lot of factors that can ensure that a heroic
+                    character doesn't get shot though. Mobsters with little
+                    proper training may spray automatic fire randomly in
+                    the direction of the target, whilst a veteran SAS
+                    soldier calmy picks them off one by one with single
+                    shots to the head.
+                </para>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Guns, Guns, Guns</title>
+
+            <para>
+                Firing a gun is made like any other attack. A standard
+                attack is a normal action and fires a single shot. Every
+                gun has an attack bonus and a damage bonus. As for other
+                missile weapons, it also has range penalties which affect
+                the difficulty to hit.
+            </para>
+
+            <y:import-weaponlist href="xml/modern.yags" importance="2" style="list">
+                <y:category>Firearms</y:category>
+            </y:import-weaponlist>
+
+            <para>
+                Regardless of the type of firearm, a standard action results
+                in a single shot being fired. Firing multiple shots requires
+                a special manouevre, which are described later.
+            </para>
+
+            <sect2>
+                <title>Initiative</title>
+
+                <para>
+                    Initiative in firearm combat is the same as in other
+                    types of combat. Actions are declared in reverse order
+                    of initiative, and then all fast actions happen in
+                    initiative order, all normal actions then all slow
+                    actions.
+                </para>
+
+                <sect3>
+                    <title>Snap shots</title>
+
+                    <para>
+                        You can take a quick shot without any aiming, which
+                        is a <e>fast</e> action. When you do so, all range
+                        increments are halved. Special manouevres may be
+                        used unless otherwise stated.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Careful shots</title>
+
+                    <para>
+                        If you take your time over a shot, then your actions
+                        are <e>slow</e>. This has the advantage of doubling
+                        the range increment of your weapon. You may combine
+                        this with special manouevres unless otherwise stated.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Firearm Manouevres</title>
+
+                <sect3>
+                    <title>Multiple shots</title>
+
+                    <para>
+                        Any semi-automatic weapon can be fired multiple
+                        times in a round. A round is 5 seconds, which is
+                        generally adequate for firing quite a few shots.
+                        This is not automatic fire, but separate squeezes
+                        of the trigger, potentially at different targets.
+                    </para>
+
+                    <para>
+                        If you are firing at multiple targets, there is a
+                        penalty that applies to every shot, which is -10
+                        for two targets, and doubles each target beyond
+                        that.
+                    </para>
+
+                    <para>
+                        If the number of shots you take exceed your skill
+                        in the weapon, then there is a further -10 penalty
+                        for each extra shot, that applies to all shots.
+                    </para>
+
+                    <para>
+                        When you declare your action, you must declare
+                        which targets you are aiming at, though you don't
+                        need to declare how many shots until you actually
+                        take your action. Each shot is a separate attack,
+                        with individual attack and damage rolls.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Burst fire</title>
+
+                    <para>
+                        If you have an automatic weapon, you can fire a
+                        single short burst instead of a single shot. When
+                        doing so, you gain a +10 bonus to your attack at
+                        short range, +0 at medium range and -20 at long
+                        range. On a successful attack, damage is rolled
+                        once. On a <e>good</e> attack, the number of
+                        wounds caused is doubled, on an <e>excellent</e>
+                        or better attack they are tripled.
+                    </para>
+
+                    <para>
+                        You can spread your burst amongst up to three
+                        targets, though each extra target gives you -10
+                        to your attack.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Full Auto</title>
+
+                    <para>
+                        A <e>full auto</e> attack will, for most weapons,
+                        empty the clip. When firing on full auto, the
+                        weapon fires a number of <e>burst attacks</e>, as
+                        per <e>Burst fire</e>. Most small arms weapons
+                        will empty their entire clip within a single round.
+                    </para>
+
+                    <para>
+                        Every subsequent burst after the first is at -10,
+                        or -20 if the burst is aimed at a different target.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Suppressive fire</title>
+
+                    <para>
+                        When performing suppressive fire, you spray bullets
+                        randomly over a large area. The main effect is that
+                        everyone in the area is forced to keep their heads
+                        down.
+                    </para>
+                </sect3>
+            </sect2>
         </sect1>
     </body>
 </article>
