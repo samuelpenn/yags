@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+
+<!--
+
+    General equipment lists.
+
+    Copyright 2005 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted provided that the following
+    conditions are met:
+
+    1) Redistributions of any source code (e.g. XML) must retain the
+    above copyright notice, this list of conditions and the following
+    disclaimer.
+
+    2) Redistributions in compiled form (transformed to other DTDs,
+    converted to PDF, PostScript, RTF and other formats) must
+    reproduce the above copyright notice, this list of conditions
+    and the following disclaimer in the documentation and/or other
+    materials provided with the distribution.
+
+    THIS CONTENT IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+    OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DIRECT,
+    INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+    STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+    ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
+    OF THE POSSIBILITY OF SUCH DAMAGE.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2006-08-28 19:55:59 $
+
+    Categories
+
+    Adventuring     The sort of things only adventurers have.
+    Rogue           Thieves/assassins tools and the like.
+    Food            Food and drink.genre
+    Animals         An animal which isn't livestock - horses and dogs.
+    Livestock       Animals bred for food, such as pigs and cows.
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+
+    Prices should be in farthings, but prices can't really be trusted yet.
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="Pistol">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A typical handgun.</short>
+
+        <description>
+            <para>
+                The pistol is a typical hand gun.
+            </para>
+        </description>
+
+        <weight>250</weight>
+        <material>metal</material>
+        <cost>20</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <class>pistol</class>
+
+            <combat>
+                <attack>+5</attack>
+                <damage>24</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>50</short>
+                    <medium>500</medium>
+                    <long>1500</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+
+            <rounds>12</rounds>
+            <rof>10</rof>
+
+            <properties>
+                <missile/>
+                <firearm/>
+                <semiauto/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Heavy Pistol">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A heavy handgun.</short>
+
+        <description>
+            <para>
+                The pistol is a typical hand gun.
+            </para>
+        </description>
+
+        <weight>250</weight>
+        <material>metal</material>
+        <cost>20</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <class>pistol</class>
+
+            <combat>
+                <attack>+3</attack>
+                <damage>28</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>75</short>
+                    <medium>750</medium>
+                    <long>2000</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+
+            <rounds>12</rounds>
+            <rof>10</rof>
+
+            <properties>
+                <missile/>
+                <firearm/>
+                <semiauto/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Hunting Rifle">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A rifle designed for hunting.</short>
+
+        <description>
+            <para>
+                A typical hunting rifle.
+            </para>
+        </description>
+
+        <weight>250</weight>
+        <material>metal</material>
+        <cost>20</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <class>rifle</class>
+
+            <combat>
+                <attack>+6</attack>
+                <damage>33</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>75</short>
+                    <medium>750</medium>
+                    <long>2000</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+
+            <properties>
+                <missile/>
+                <firearm/>
+                <semiauto/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Assualt Rifle">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A heavy rifle.</short>
+
+        <description>
+            <para>
+                The pistol is a typical hand gun.
+            </para>
+        </description>
+
+        <weight>250</weight>
+        <material>metal</material>
+        <cost>20</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <class>rifle</class>
+
+            <combat>
+                <attack>+8</attack>
+                <damage>38</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>75</short>
+                    <medium>750</medium>
+                    <long>2000</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+
+            <properties>
+                <missile/>
+                <firearm/>
+                <automatic/>
+            </properties>
+        </weapon>
+    </item>
+
+</equipment>
+
+
