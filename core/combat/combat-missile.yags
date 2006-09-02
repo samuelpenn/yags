@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.4 $</version>
-            <date>$Date: 2006-05-20 16:16:38 $</date>
+            <version>$Revision: 1.5 $</version>
+            <date>$Date: 2006-09-02 11:11:48 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -153,6 +153,27 @@
             </sect2>
 
             <sect2>
+                <title>Initiative</title>
+
+                <para>
+                    As with melee weapons, you may choose whether to act
+                    <e>fast</e>, <e>normal</e> or <e>slow</e> when attacking
+                    with a missile weapon. Unless otherwise stated, all
+                    attacks are assumed to be normal.
+                </para>
+
+                <para>
+                    You may make a <e>Snap Shot</e>, which is a <e>fast</e>
+                    action. This halves the range increment for the weapon.
+                </para>
+
+                <para>
+                    Alternatively, you may choose to be <e>careful</e>, in
+                    which case you double the range increment for the weapon.
+                </para>
+            </sect2>
+
+            <sect2>
                 <title>Weapon Types</title>
 
                 <sect3>
@@ -179,6 +200,11 @@
                         then the load times are increased by one or
                         doubled (whichever is greater).
                     </para>
+
+                    <para>
+                        Weapons which require loading do not get the
+                        benefits of <e>careful shot</e> or <e>snap shot</e>.
+                    </para>
                 </sect3>
             </sect2>
 
@@ -198,57 +224,16 @@
                     difficulty changes however.
                 </para>
 
-                <targetlist bold="true" targetFirst="false">
-                    <targetLabel>Difficulty</targetLabel>
-                    <valueLabel>Size of target</valueLabel>
-
-                    <item value="Diminutive" target="30">
-                        Size 0, which is about 10cm in length.
-                    </item>
-
-                    <item value="Tiny" target="25">
-                        Size 1, about 30cm in length. A small cat.
-                    </item>
-
-                    <item value="Small" target="20">
-                        Sizes 2 - 3. Cats and dogs, 60cm to 90cm in length.
-                    </item>
-
-                    <item value="Medium" target="15">
-                        Sizes 4 - 6, from 130cm to 210cm in length or height.
-                    </item>
-
-                    <item value="Large" target="10">
-                        Sizes 7 - 12, from 2m to 5m in length. Includes
-                        lions, horses and the like.
-                    </item>
-
-                    <item value="Huge" target="5">
-                        Sizes 13 - 20, up to 10m in length. Elephants,
-                        small houses and the like.
-                    </item>
-
-                    <item value="Enormous" target="0">
-                        Sizes 21 - 30, up to 16m in length. Dinosaurs.
-                    </item>
-
-                    <item value="Gigantic" target="-5">
-                        Sizes 31 - 50, up to 23m in length. The largest
-                        dinosaurs and whales are gigantic.
-                    </item>
-
-                    <item value="Colossal" target="-10">
-                        Sizes 51 - 80, up to 31m in length.
-                    </item>
-
-                    <item value="Titanic" target="-15">
-                        Sizes 81+. Anything larger.
-                    </item>
-                </targetlist>
+                <para>
+                    For every point of size the target is larger than you,
+                    you gain a +3 to your attack. For every point of size
+                    they are smaller than you, you suffer -3 to your
+                    attack.
+                </para>
 
                 <para>
                     The very largest creatures are very difficult to miss at
-                    close ranges. Groups of smaller creatures also count as
+                    close ranges. Groups of smaller creatures may count as
                     being of a larger size (but aiming for the group will
                     mean that a random individual is hit).
                 </para>
@@ -326,7 +311,7 @@
                     </para>
 
                     <para>
-                        Because of the angle the short will come down at, it
+                        Because of the angle the shot will come down at, it
                         is not possible to fire through narrow gaps, such as
                         a window or arrow slit at long range - the archer
                         can hit the window, but not someone behind the
@@ -368,8 +353,8 @@
                 <para>
                     If you declare an attack with a missile weapon, then
                     you are considered to be using the <e>normal</e>
-                    stance, unless you are aiming, in which case you
-                    are <e>Focused</e>.
+                    stance (so you can still dodge, but probably not parry),
+                    unless you are aiming, in which case you are <e>Focused</e>.
                 </para>
 
                 <sect3>
@@ -393,7 +378,8 @@
                         Bows, crossbows and similar weapons which fire a
                         fast and difficult to dodge projectile cause the
                         defence roll to be halved. Even faster projectile
-                        weapons (e.g. guns) do not allow any defence.
+                        weapons (e.g. guns) do not allow any standard
+                        defence.
                     </para>
 
                     <sect4>
