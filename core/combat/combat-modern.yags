@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.3 $</version>
-            <date>$Date: 2006-09-02 11:11:48 $</date>
+            <version>$Revision: 1.4 $</version>
+            <date>$Date: 2006-09-10 20:58:19 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -73,6 +73,16 @@
                     shots to the head.
                 </para>
             </sect2>
+
+            <sect2>
+                <title>Status</title>
+
+                <para>
+                    These rules are currently in alpha. The rules on
+                    automatic fire are considered to be a kludge until
+                    something better is found.
+                </para>
+            </sect2>
         </sect1>
 
         <sect1>
@@ -86,15 +96,106 @@
                 the difficulty to hit.
             </para>
 
-            <y:import-weaponlist href="../core/xml/modern.yags" importance="2" style="list">
-                <y:category>Firearms</y:category>
-            </y:import-weaponlist>
-
             <para>
                 Regardless of the type of firearm, a standard action results
                 in a single shot being fired. Firing multiple shots requires
                 a special manouevre, which are described later.
             </para>
+
+            <sect2>
+                <title>Firearm skills</title>
+
+                <para>
+                    There are a number of skills related to firearm use,
+                    though unlike thrown and melee skills, there is no
+                    default <e>Talent</e> which they are based off.
+                    Pretty much anyone who has seen a gun being fired can
+                    pick one up and fire it, though the chance of hitting
+                    anything will go down drastically with range.
+                </para>
+
+                <para>
+                    Someone who has no skill with a weapon halves the
+                    range increment of the weapon and doubles any recoil
+                    penalties. They can aim and use automatic fire as
+                    normal, though their lack of skill will be a problem.
+                    Finally, any fumble chances are doubled.
+                </para>
+
+                <sect3>
+                    <title>Pistol</title>
+
+                    <para>
+                        <e>Pistol</e> is a skill which covers the use of
+                        revolvers and auto-loading pistols. Since this
+                        defaults to any other <e>Firearms</e> skill
+                        (and vice-versa), it may be used with all types
+                        of firearms, though the skill roll is halved.
+                    </para>
+
+                    <itemlist order="1">
+                        <item>
+                            Attack rolls are based on Perception or
+                            Dexterity.
+                        </item>
+
+                        <item>
+                            Defence rolls are made as a standard brawling
+                            defence, and penalties for multiple defences
+                            applies to the pistol skill as normal.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+                <sect3>
+                    <title>Rifle</title>
+
+                    <para>
+                        This skill covers experience and training in the
+                        use of rifles of all types, including shotguns,
+                        assualt rifles and sniper rifles. It is generally
+                        of use in a combat situation at close to medium
+                        ranges.
+                    </para>
+
+                    <itemlist order="1">
+                        <item>
+                            Attack rolls are based on Perception.
+                        </item>
+
+                        <item>
+                            Defence rolls are made as a standard brawling
+                            defence, and penalties for multiple defences
+                            applies to the rifle skill as normal.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+                <sect3>
+                    <title>Sniper</title>
+
+                    <para>
+                        This skill covers the use of rifles in situations
+                        where long range, long preperation times and a low
+                        rate of fire are common. Though the <e>Rifle</e>
+                        skill can be used in these circumstances, the
+                        <e>Sniper</e> skill is effectively a specialisation
+                        learnt by elite marksmen.
+                    </para>
+
+                    <itemlist order="1">
+                        <item>
+                            Attack rolls are based on Perception.
+                        </item>
+
+                        <item>
+                            No defences may be made in a round using this
+                            skill.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+            </sect2>
 
             <sect2>
                 <title>Initiative</title>
@@ -131,7 +232,205 @@
             </sect2>
 
             <sect2>
+                <title>Automatic Fire</title>
+
+                <para>
+                    Automatic weapons are capable of firing a stream of
+                    bullets with a single press of the trigger. Most modern
+                    automatic weapons are fully capable of emptying their
+                    entire magazine within a single <e>Yags</e> combat
+                    round. When automatic fire is used, <e>Yags</e> uses
+                    an abstract process so that it isn't necessary to
+                    roll for every single bullet fired in the attack.
+                </para>
+
+                <para>
+                    Automatic fire is divided into <e>bursts</e>, each of
+                    up to 10 bullets. A burst will always consist of 10
+                    bullets unless there are fewer bullets left in the
+                    gun. In order to simplify things, automatic weapons in
+                    <e>Yags</e> will tend to have magazine capacities in
+                    multiples of 10. Every burst is considered a separate
+                    attack.
+                </para>
+
+                <para>
+                    There are two ways to use automatic fire - either aiming
+                    all bullets at a single target, or covering an area in
+                    the hope of hitting something.
+                </para>
+
+                <sect3>
+                    <title>Single target</title>
+
+                    <para>
+                        When firing at a single target, you gain an attack
+                        bonus equal to the number of bullets fired. If you
+                        hit, roll damage for a single bullet, with a special
+                        bonus to the die roll (<e>not</e> the damage) equal
+                        to the number of bullets, up to a maximum of 20.
+                    </para>
+
+                    <example>
+                        <para>
+                            You're attacking with an automatic pistol, which
+                            has a +5 attack bonus, 20 shots and does +24
+                            damage, and decide to fire a single burst which
+                            will be 10 bullets.
+                        </para>
+
+                        <para>
+                            Your first burst has an attack bonus of +15 (+5
+                            from the weapon's accuracy, and +10 from the
+                            number of bullets). If you hit, then you roll
+                            for damage, at 24 + d20.
+                        </para>
+
+                        <para>
+                            You roll a 14 on the damage die, and get a +10
+                            from the 10 bullets, which takes the roll up to
+                            its maximum of 20. Your total damage is 44.
+                        </para>
+                    </example>
+
+                    <para>
+                        Reduce the damage by soak as normal, and figure out
+                        how many wounds are caused. The number of wounds is
+                        doubled if you made a <e>good</e> attack, and tripled
+                        if you made an <e>excellent</e> attack or better.
+                    </para>
+
+                    <example>
+                        <para>
+                            Carrying on the above example, let's say that
+                            that attack resulted in a <e>good</e> success.
+                            If the soak roll of the target was 22 (average
+                            for someone without body armour), then the
+                            final damage is 22, which is 5 wounds. The
+                            <e>good</e> success doubles this however to 10
+                            wounds, probably killing the target.
+                        </para>
+                    </example>
+
+                    <para>
+                        The above assumes that the target is at short range.
+                        At medium range, halve the effective number of bullets
+                        (round down), and at long range quarter them. This
+                        may mean an automatic miss at medium or long range.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Area</title>
+
+                    <para>
+                        Instead of firing at a single target, you may cover
+                        an area with fire in an attempt to hit multiple
+                        targets. In this case, the targets hit are random.
+                        The advantage of this is that you will hit more
+                        targets than by concentrating each burst at a
+                        specific target.
+                    </para>
+
+                    <para>
+                        The area covered is a 60 degree arc. Each burst is
+                        considered separately, with potential targets being
+                        considered in order of increasing distance.
+                    </para>
+
+                    <para>
+                        For a burst with 10 bullets, roll an attack against
+                        the closest target in the area. If the d20 roll is
+                        less than 10, then you miss that target, regardless
+                        of whether the total attack roll was sufficient.
+                        On a hit, roll for damage for a single bullet. Move
+                        on to the next nearest target and make an attack
+                        roll. Range modifiers to each target should be taken
+                        into account. Up to a maximum of 3 targets will be
+                        hit from a single burst. However, if the d20 roll is
+                        a 19 or 20, then that target does not count towards
+                        the maximum.
+                    </para>
+
+                    <para>
+                        For multiple bursts, start again at the nearest target
+                        and work away as before. The above assumes that the
+                        burst consists of a full 10 bullets. If the burst has
+                        less than a full 10 bullets, then use the following
+                        chart to determine what happens.
+                    </para>
+
+                    <table>
+                        <colspec colwidth="17mm"/>
+                        <colspec colwidth="17mm"/>
+                        <colspec colwidth="20mm"/>
+                        <colspec colwidth="20mm"/>
+
+                        <thead>
+                            <row>
+                                <entry>Rounds</entry>
+                                <entry>Hit on</entry>
+                                <entry>Max targets</entry>
+                                <entry>More on</entry>
+                            </row>
+                        </thead>
+
+                        <tbody>
+                            <row>
+                                <entry>1-2</entry>
+                                <entry>19+</entry>
+                                <entry>1</entry>
+                                <entry>-</entry>
+                            </row>
+
+                            <row>
+                                <entry>3-5</entry>
+                                <entry>16+</entry>
+                                <entry>2</entry>
+                                <entry>-</entry>
+                            </row>
+
+                            <row>
+                                <entry>6-8</entry>
+                                <entry>13+</entry>
+                                <entry>3</entry>
+                                <entry>20</entry>
+                            </row>
+
+                            <row>
+                                <entry>9-10</entry>
+                                <entry>10+</entry>
+                                <entry>3</entry>
+                                <entry>19,20</entry>
+                            </row>
+                        </tbody>
+                    </table>
+                </sect3>
+            </sect2>
+
+            <sect2>
                 <title>Firearm Manouevres</title>
+
+                <para>
+                    A standard attack with a firearm assumes that a
+                    single bullet is fired. For most modern and SF firearms,
+                    which are capable of semi-automatic and automatic fire,
+                    this is not using the weapon to its full effect. Anyone
+                    (even those without any skill), may declare the
+                    following manouevres when using a suitable firearm.
+                </para>
+
+                <sect3>
+                    <title>Aimed shot</title>
+
+                    <para>
+                        You can spend a whole round aiming before firing a
+                        <e>careful shot</e> the following round. This allows
+                        you to quadruple the range increment for the shot.
+                        If the final round is not spent taking a careful
+                        shot, then you loose all benefits of an aimed shot.
+                    </para>
+                </sect3>
 
                 <sect3>
                     <title>Multiple shots</title>
@@ -167,23 +466,27 @@
                 </sect3>
 
                 <sect3>
-                    <title>Burst fire</title>
+                    <title>Controlled burst</title>
 
                     <para>
                         If you have an automatic weapon, you can fire a
-                        single short burst instead of a single shot. When
-                        doing so, you gain a +10 bonus to your attack at
-                        short range, +0 at medium range and -20 at long
-                        range. On a successful attack, damage is rolled
-                        once. On a <e>good</e> attack, the number of
-                        wounds caused is doubled, on an <e>excellent</e>
-                        or better attack they are tripled.
+                        single short burst instead of a single shot. Use
+                        the rules for automatic fire aimed at a single
+                        target.
                     </para>
 
                     <para>
-                        You can spread your burst amongst up to three
-                        targets, though each extra target gives you -10
-                        to your attack.
+                        You can fire as many bursts as the gun will allow
+                        in a single round, though all must be at the same
+                        target. Each subsequent burst suffers the recoil
+                        penalty of the weapon (if the penalty if -5, then
+                        the second burst is at -5, the third at -10 etc).
+                    </para>
+
+                    <para>
+                        You do not need to declare how many bursts you
+                        are firing, you simply decide whether to stop or
+                        continue after each burst.
                     </para>
                 </sect3>
 
@@ -193,14 +496,15 @@
                     <para>
                         A <e>full auto</e> attack will, for most weapons,
                         empty the clip. When firing on full auto, the
-                        weapon fires a number of <e>burst attacks</e>, as
-                        per <e>Burst fire</e>. Most small arms weapons
-                        will empty their entire clip within a single round.
+                        weapon fires a number of <e>burst attacks</e>
+                        over an area. Use the automatic fire rules for
+                        firing at an area.
                     </para>
 
                     <para>
-                        Every subsequent burst after the first is at -10,
-                        or -20 if the burst is aimed at a different target.
+                        Each subsequent burst may be at a different area,
+                        though the areas must be next to each other (or
+                        overlap).
                     </para>
                 </sect3>
 
@@ -212,6 +516,37 @@
                         randomly over a large area. The main effect is that
                         everyone in the area is forced to keep their heads
                         down.
+                    </para>
+
+                    <para>
+                        Use the rules for automatic fire against an area,
+                        except the area can be up to 90 degrees wide. Ignore
+                        the recoil penalty for each subsequent burst, but
+                        halve the effective number of bullets in each burst.
+                    </para>
+
+                    <para>
+                        This attack is <e>fast</e>, but does not negatively
+                        affect the range increment.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Blind fire</title>
+
+                    <para>
+                        Sometimes it is too dangerous to stick your head
+                        above cover, but you want to fire randomly at the
+                        enemy anyway. This is achieved by pointing your
+                        gun without looking, and blindly letting loose
+                        with suppressive fire.
+                    </para>
+
+                    <para>
+                        Treat as a suppressive fire attack, but your skill
+                        is effectively zero. If you have <e>Blind fighting</e>,
+                        then you can use your skill, though against an
+                        attribute of 1.
                     </para>
                 </sect3>
             </sect2>

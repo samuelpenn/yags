@@ -5,7 +5,8 @@
     Now split up and moved into the techniques directory.
  -->
 
-<advantages xmlns="http://yagsbook.sourceforge.net/xml/yags">
+<advantages xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
         <author>
             <fullname>Samuel Penn</fullname>
@@ -13,8 +14,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.3 $</version>
-            <date>$Date: 2006-08-28 19:55:27 $</date>
+            <version>$Revision: 1.4 $</version>
+            <date>$Date: 2006-09-10 20:58:19 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -90,36 +91,74 @@
     </advantage>
 
     <!--
-        Computer related techniques.
+        Firearms techniques.
     -->
 
-    <advantage name="Networking">
+
+    <advantage name="Quick load" type="technique">
+        <cost points="2"/>
+        <skill name="Firearms"/>
+
+        <short>Quickly load and fire a gun.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You can change the cartridge on an auto loading gun quickly
+                and reliably. At the start of any round, you can choose to
+                try to reload your gun before performing another action.
+                Make a <y:dexterity>Pistol</y:dexterity> or
+                <y:dexterity>Rifle</y:dexterity> check at a target of 15.
+                On success, the gun is loaded. On failure, you can choose
+                to either spend the rest of the round loading, or can
+                abort and carry on with your other actions.
+            </para>
+
+            <para>
+                Following actions are <e>slow</e>. If you are firing, you
+                do not get the benefits of <e>Careful shot</e>. If you wish
+                to try a snapshot fire, you can do this at <e>normal</e>
+                speed (instead of <e>fast</e>).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Sharp shooter" type="technique">
         <cost points="4"/>
-        <skill name="Hacking"/>
+        <skill name="Firearms"/>
+
+        <prerequisite>Quick load</prerequisite>
+
+        <short>Double the range increment of firearms.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Knowledge of how computer networks are configured,
-                designed and secured.
+                You are experienced with firing accurately, and can double
+                the range increment of any firearm. This stacks with other
+                manouevres and techniques which affect the range increment
+                with the exception of aimed shot. When making an aimed shot,
+                you instead double the attack bonus of the weapon.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Intrusion">
-        <cost points="6"/>
-        <skill name="Hacking"/>
+    <advantage name="Controlled fire" type="technique">
+        <cost points="2"/>
+        <skill name="Firearms"/>
 
-        <prerequisite>Networking</prerequisite>
+        <prerequisite>Quick load</prerequisite>
+
+        <short>Fire controlled bursts at multiple targets.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Knowledge of how to break security on computer
-                systems, gain passwords and otherwise compromise a
-                system's security.
+                When using automatic fire to shoot at a single target,
+                you can fire subsequent bursts at different targets.
+                All targets must be declared at the start of the
+                round, and each extra target gives you a -10 penalty
+                to all bursts fired.
             </para>
         </description>
     </advantage>
-
 
 </advantages>
 

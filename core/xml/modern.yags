@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2006-08-28 19:55:59 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2006-09-10 20:58:19 $
 
     Categories
 
@@ -64,13 +64,15 @@
 
         <description>
             <para>
-                The pistol is a typical hand gun.
+                The pistol is a generic semi-automatic hand gun. It is
+                reasonably light and reliable, with a large magazine
+                capacity and moderate stopping power.
             </para>
         </description>
 
-        <weight>250</weight>
+        <weight>700</weight>
         <material>metal</material>
-        <cost>20</cost>
+        <cost>2500</cost>
 
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
@@ -80,7 +82,7 @@
                 <attack>+5</attack>
                 <damage>24</damage>
                 <range>
-                    <increment>15</increment>
+                    <increment>10</increment>
                     <short>50</short>
                     <medium>500</medium>
                     <long>1500</long>
@@ -91,8 +93,9 @@
             <load>0.5</load>
             <reach>0</reach>
 
-            <rounds>12</rounds>
-            <rof>10</rof>
+            <capacity>12</capacity>
+            <rof>6</rof>
+            <recoil>-3</recoil>
 
             <properties>
                 <missile/>
@@ -101,6 +104,108 @@
             </properties>
         </weapon>
     </item>
+
+
+    <item name="Revolver">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A typical revolver.</short>
+
+        <description>
+            <para>
+                The revolver is a simpler gun then an autoloader. It is
+                less likely to jam, and jams can be cleared by simply
+                firing again. However, they are bulkier and carry fewer
+                bullets than most autoloaders.
+            </para>
+        </description>
+
+        <weight>800</weight>
+        <material>metal</material>
+        <cost>20</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <class>pistol</class>
+
+            <combat>
+                <attack>+5</attack>
+                <damage>27</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>50</short>
+                    <medium>400</medium>
+                    <long>1200</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+
+            <capacity>6</capacity>
+            <rof>6</rof>
+            <recoil>-3</recoil>
+
+            <properties>
+                <missile/>
+                <firearm/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Heavy Revolver">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A large revolver.</short>
+
+        <description>
+            <para>
+                The revolver is a simpler gun then an autoloader. It is
+                less likely to jam, and jams can be cleared by simply
+                firing again. However, they are bulkier and carry fewer
+                bullets than most autoloaders.
+            </para>
+        </description>
+
+        <weight>1200</weight>
+        <material>metal</material>
+        <cost>2500</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <class>pistol</class>
+
+            <combat>
+                <attack>+4</attack>
+                <damage>31</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>50</short>
+                    <medium>300</medium>
+                    <long>900</long>
+                </range>
+            </combat>
+
+            <strength>3</strength>
+            <load>1</load>
+            <reach>0</reach>
+
+            <capacity>6</capacity>
+            <rof>6</rof>
+            <recoil>-5</recoil>
+
+            <properties>
+                <missile/>
+                <firearm/>
+            </properties>
+        </weapon>
+    </item>
+
 
     <item name="Heavy Pistol">
         <category>Weapon</category>
@@ -115,7 +220,7 @@
             </para>
         </description>
 
-        <weight>250</weight>
+        <weight>1000</weight>
         <material>metal</material>
         <cost>20</cost>
 
@@ -124,8 +229,8 @@
             <class>pistol</class>
 
             <combat>
-                <attack>+3</attack>
-                <damage>28</damage>
+                <attack>+4</attack>
+                <damage>27</damage>
                 <range>
                     <increment>15</increment>
                     <short>75</short>
@@ -134,12 +239,13 @@
                 </range>
             </combat>
 
-            <strength>2</strength>
+            <strength>3</strength>
             <load>0.5</load>
             <reach>0</reach>
 
-            <rounds>12</rounds>
-            <rof>10</rof>
+            <capacity>15</capacity>
+            <rof>5</rof>
+            <recoil>-4</recoil>
 
             <properties>
                 <missile/>
