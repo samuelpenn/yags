@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+
+<!--
+    Skills unique to the Traveller campaign setting.
+
+    Copyright (c) 2005, Samuel Penn.
+    This document can be redistributed and/or modified under the terms
+    of the GNU Public License as published by the Free Software Foundation
+    version 2.
+
+    Version: $Revision: 1.1 $
+    Author: Samuel Penn
+-->
+
+<skill-list xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:yb="http://yagsbook.sourceforge.net/xml"
+            techniques="options/techniques.yags">
+
+    <groups>
+        <group>General</group>
+        <group>Science</group>
+        <group>Combat</group>
+        <group parent="Combat">Firearms</group>
+        <group>Business</group>
+        <group>Technical</group>
+        <group>Academic</group>
+        <group>Sport</group>
+        <group>Military</group>
+        <group>Rogue</group>
+        <group>Vehicle</group>
+        <group>Starship</group>
+    </groups>
+
+    <skill name="Orbital navigation" type="knowledge">
+        <group>Starship</group>
+        <prerequisite score="4">Mathematics</prerequisite>
+        <prerequisite>Physics</prerequisite>
+
+        <short>Plotting courses in a system.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Moving from A to B in a star system is rarely a case of
+                pointing in the right direction and accelerating. The
+                quickest path is often a curve, and the destination has
+                a habit of moving. Being able to calculate routes between
+                planets requires a lot of knowledge of orbital mechanics,
+                physics and maths.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Jump navigation" type="knowledge">
+        <group>Starship</group>
+        <prerequisite score="4">Mathematics</prerequisite>
+        <prerequisite score="4">Physics</prerequisite>
+
+        <short>Plotting a course through jump space.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Plotting a course through jump space is a difficult
+                process, and getting it wrong can result in a very messy
+                death. How good you are determines how long it takes. The
+                examples given below assume access to a basic computer,
+                and you only want to make a one parsec jump. Add +5 to the
+                difficulty for each extra parsec jumped.
+            </para>
+        </description>
+
+        <examples>
+            <example target="10">
+                Plotting a J1 course in 6 hours.
+            </example>
+
+            <example target="15">
+                Plotting a J1 course in 3 hours.
+            </example>
+
+            <example target="20">
+                Plotting a J1 course in 2 hours.
+            </example>
+
+            <example target="25">
+                Plotting a J1 course in 1 hour.
+            </example>
+
+            <example target="30">
+                Plotting a J1 course in 30 minutes.
+            </example>
+        </examples>
+    </skill>
+
+    <skill name="Spaceship piloting" type="skill">
+        <group>Starship</group>
+        <group>Vehicle</group>
+        <prerequisite>Physics</prerequisite>
+
+        <short>Piloting a small space craft.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of being able to pilot a small space craft, such
+                as a shuttle, fighter or cargo pod. Anything much larger
+                doesn't require <e>piloting</e> as such, and uses the
+                <e>Orbital navigation</e> or <e>Spaceship systems</e>
+                skills instead.
+            </para>
+
+            <para>
+                If you want to perform some clever manouevre making use
+                of gravity sling shots you need <e>Orbital navigation</e>.
+                This skill very much concentrates on the point-and-thrust
+                style of flying.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Spaceship systems" type="skill">
+        <group>Starship</group>
+        <prerequisite>Physics</prerequisite>
+
+        <short>Operating a large spaceship.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Knowledge of how to fly and operate a spaceship. This is
+                the skill needed by all bridge crew, and at least some
+                of the engineering crew as well. It covers the most
+                common protocols and etiquette involved in flying a
+                spaceship in an inhabited system, how to access ship
+                systems, how to provide the navigation computers with
+                instructions and so on.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Spaceship gunnery" type="skill">
+        <group>Starship</group>
+        <group>Military</group>
+
+        <default>Spaceship systems</default>
+        <default>Gunnery</default>
+
+        <short>Using spaceship weapons.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The distances and scales involved in spaceship combat make
+                the entire enterprise of conducting a battle completely
+                different from more mundane surface events. This skill
+                provides knowledge of how to judge distances and speeds,
+                the type of weapons deployed in most space battles, and
+                how to make best use of offensive and defensive systems.
+            </para>
+        </description>
+    </skill>
+</skill-list>
+

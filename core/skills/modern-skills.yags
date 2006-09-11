@@ -8,7 +8,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.6 $
+    Version: $Revision: 1.7 $
     Author: Samuel Penn
 -->
 
@@ -28,6 +28,7 @@
         <group>Sport</group>
         <group>Military</group>
         <group>Rogue</group>
+        <group>Vehicle</group>
     </groups>
 
     <skill name="Accountancy" type="skill">
@@ -119,6 +120,8 @@
 
     <skill name="Drive" type="skill">
         <group>General</group>
+        <group>Vehicle</group>
+        <default>Motorbike</default>
 
         <short>Driving a car or similar vehicle.</short>
 
@@ -131,8 +134,24 @@
         </description>
     </skill>
 
+    <skill name="Motorbike" type="skill">
+        <group>General</group>
+        <group>Vehicle</group>
+        <default>Drive</default>
+
+        <short>Driving a powered motorcycle.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of driving a motorcyle or similar two wheeled
+                vehicle.
+            </para>
+        </description>
+    </skill>
+
     <skill name="Pilot" type="skill">
         <group>General</group>
+        <group>Vehicle</group>
 
         <short>Piloting a powered aircraft.</short>
 
@@ -145,6 +164,7 @@
     </skill>
 
     <skill name="Gliding" type="skill">
+        <group>Vehicle</group>
         <group>Sport</group>
 
         <short>Piloting an unpowered aircraft.</short>
@@ -302,13 +322,29 @@
 
     <skill name="Medicine" type="knowledge">
         <group>Science</group>
+        <prerequisite>First aid</prerequisite>
 
         <short>Diagnosis and healing.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The skill of diagnosing illnesses, and knowing what to
-                do to cure an illness.
+                do to cure an illness. Provides knowledge of the currently
+                available drugs and how best to make use of them.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Surgery" type="skill">
+        <group>Science</group>
+        <default>Medicine</default>
+        <prerequisite score="4">Medicine</prerequisite>
+
+        <short>Performing complex surgery.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of surgery.
             </para>
         </description>
     </skill>
@@ -625,6 +661,7 @@
 
     <skill name="Communication systems">
         <group>Technical</group>
+        <group>Military</group>
 
         <short>Using radios and similar communications gear.</short>
 
@@ -643,6 +680,7 @@
 
     <skill name="Sensor systems">
         <group>Technical</group>
+        <group>Military</group>
 
         <short>Using radar, sonar and other sensor systems.</short>
 
@@ -664,6 +702,7 @@
 
     <skill name="Security systems">
         <group>Technical</group>
+        <group>Rogue</group>
 
         <short>Using and evading security.</short>
 
@@ -677,6 +716,44 @@
             </para>
         </description>
     </skill>
+
+    <skill name="Surveillance systems">
+        <group>Technical</group>
+        <group>Rogue</group>
+
+        <default>Security systems</default>
+
+        <short>Spying on people with electronic devices.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This skill provides knowledge of using and evading bugs,
+                hidden cameras, tracking devices and the like. You may
+                use this skill or <e>Awareness</e> to search for them.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Gunnery">
+        <group>Military</group>
+
+        <short>Firing large vehicle mounted guns.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The <e>gunnery</e> skill covers the use of very large
+                vehicle mounted or emplacement weapons, such as artillery
+                and battleship main guns. Whereas <e>Heavy weapons</e>
+                covers "barely man portable in a Hollywood action film"
+                weapons, Gunnery is only for the really big weapons which
+                often require several crew members to operate. Will
+                often use <t>Intelligence</t>, since doing the maths to
+                plot the trajectory is generally more important than
+                quick reflexes.
+            </para>
+        </description>
+    </skill>
+
 
     <skill name="Electronics operation">
         <group>Technical</group>
@@ -828,7 +905,11 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Firing a rifle over long distance with accuracy.
+                Firing a rifle over long distance with accuracy. Covers not
+                just accuracy with firing, but knowing how to find a good
+                position, keeping in cover, planning escape routes after
+                you've assassinated the target and other actions required
+                to be a good sniper.
             </para>
         </description>
     </skill>
@@ -836,6 +917,7 @@
     <skill name="Heavy weapons">
         <group>Combat</group>
         <group>Firearms</group>
+        <group>Vehicle</group>
 
         <short>Using heavy machine guns.</short>
 
@@ -843,7 +925,7 @@
             <para>
                 This skill provides you with knowledge of how to use
                 heavy weapons such as vehicle mounted machine guns,
-                grenade launchers, anti-tank weapons and the like.
+                grenade launchers, anti-tank weapons and mortars.
                 Most non-man portable weapons fall into this
                 category.
             </para>
