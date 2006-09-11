@@ -1,16 +1,16 @@
 <?xml version = '1.0' ?>
-<?xml-stylesheet
-    href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl"
-    type="text/xsl"?>
+<?xml-stylesheet href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl" type="text/xsl"?>
 
 <!--
-    $Revision: 1.3 $
-    $Date: 2005-04-07 22:04:02 $
+    $Revision: 1.4 $
+    $Date: 2006-09-11 11:15:52 $
 
     Bestiary containing information on bears.
+
+    Copyright Samuel Penn, GPL v2.
 -->
 
-<bestiary>
+<bestiary xmlns="http://yagsbook.sourceforge.net/xml">
 
     <!-- Basic Bear information -->
     <beast name="Bear" primary="true">
@@ -33,6 +33,23 @@
                 Large omnivorous animals which can be dangerous
                 if provoked.
             </short>
+
+            <physical>
+                <para>
+                    Bears are omnivorous mammals which range in size from
+                    slightly larger than a human to about a tonne in mass
+                    depending on species. They walk on all fours, though
+                    are capable of standing on their hind legs.
+                </para>
+
+                <para>
+                    The most common type of bears are brown bears and black
+                    bears, the former being much larger. Cave bears are
+                    extinct in the modern world. They are mostly solitary
+                    animals, though mothers can be highly protective of
+                    their cubs.
+                </para>
+            </physical>
 
             <training>
                 <para>
@@ -67,12 +84,6 @@
                 Any of the small species of bears.
             </short>
 
-            <image href="graphics/bear.jpg"/>
-
-            <movement>
-                <walk normal="10" max="5"/>
-            </movement>
-
             <scale length="2" width="1"/>
 
             <physical>
@@ -82,7 +93,8 @@
                     be darker - normally black or dark brown. Black bears
                     are about 110cm tall at the shoulder, and 150cm long,
                     and weigh about 135kg. Females are much smaller, being
-                    almost half this weight.
+                    almost half this weight (-1 to both <t>Size</t> and
+                    <t>Strength</t>).
                 </para>
 
                 <para>
@@ -108,14 +120,14 @@
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <attributes size="5" soak="12">
-                <attribute name="strength" score="4"/>
-                <attribute name="stamina" score="3"/>
+            <attributes size="6" soak="12">
+                <attribute name="strength" score="5"/>
+                <attribute name="health" score="3"/>
                 <attribute name="agility" score="3"/>
                 <attribute name="dexterity" score="1"/>
                 <attribute name="perception" score="4"/>
                 <attribute name="intelligence" score="1"/>
-                <attribute name="charisma" score="1"/>
+                <attribute name="empathy" score="2"/>
                 <attribute name="will" score="2"/>
             </attributes>
 
@@ -123,28 +135,26 @@
                 <group name="Talents" type="talents">
                     <skill name="Athletics" score="6"/>
                     <skill name="Awareness" score="4"/>
-                    <skill name="Brawl" score="4"/>
+                    <skill name="Brawl" score="3"/>
                     <skill name="Charm" score="1"/>
-                    <skill name="Guile" score="0"/>
+                    <skill name="Guile" score="1"/>
                     <skill name="Sleight" score="1"/>
                     <skill name="Stealth" score="5"/>
-                    <skill name="Throw" score="2"/>
+                    <skill name="Throw" score="1"/>
                 </group>
 
                 <group name="Misc" type="skills">
                     <skill name="Survival" score="4"/>
-                    <skill name="Tracking" score="1"/>
-                    <skill name="Swim" score="5"/>
+                    <skill name="Swim" score="4"/>
                 </group>
             </skills>
 
             <combat>
                 <combatstyle style="Bite and claw" skill="Brawl">
-                    <primary>None</primary>
-                    <initiative attribute="agility" bonus="+4"/>
                     <attack attribute="agility" bonus="+5"/>
-                    <defence attribute="agility" bonus="+0"/>
-                    <damage type="split" bonus="+1"/>
+                    <defence attribute="agility" bonus="+2"/>
+                    <damage type="mixed" bonus="+2"/>
+                    <reach bonus="2"/>
                 </combatstyle>
 
                 <armourstyle style="Base"/>
@@ -155,19 +165,14 @@
                 </armourstyle>
             </combat>
 
-            <passions>
-                <passion name="Bravery" score="2"/>
-                <passion name="Ego" score="2"/>
-                <passion name="Restraint" score="2"/>
-                <passion name="Temperence" score="2"/>
-            </passions>
-
             <advantages>
                 <advantage name="Animal"/>
-                <advantage name="Acute sense of smell" score="+1"/>
+                <advantage name="Acute sense of smell" score="+2"/>
                 <advantage name="Acute hearing" score="+1"/>
                 <advantage name="Poor eyesight" score="-1"/>
                 <advantage name="Good climber" score="+1"/>
+
+                <advantage name="Tracking" skill="Survival" score="4"/>
             </advantages>
         </statistics>
     </beast>
@@ -194,12 +199,6 @@
                 Any of the large species of bear.
             </short>
 
-            <image href="graphics/bear.jpg"/>
-
-            <movement>
-                <walk normal="10" max="5"/>
-            </movement>
-
             <scale length="2" width="1">
                 <reach>2</reach>
             </scale>
@@ -209,7 +208,7 @@
                     Brown bears are omnivores, though eat more
                     plants than meat. They can weigh up to 300kg
                     or more. They have light fur on the head and
-                    shoulders, with a darker body and lefs.
+                    shoulders, with a darker body and legs.
                 </para>
             </physical>
 
@@ -225,13 +224,13 @@
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <attributes size="7" soak="15">
-                <attribute name="strength" score="6"/>
-                <attribute name="stamina" score="4"/>
+                <attribute name="strength" score="7"/>
+                <attribute name="health" score="4"/>
                 <attribute name="agility" score="3"/>
                 <attribute name="dexterity" score="1"/>
                 <attribute name="perception" score="4"/>
                 <attribute name="intelligence" score="1"/>
-                <attribute name="charisma" score="1"/>
+                <attribute name="empathy" score="2"/>
                 <attribute name="will" score="2"/>
             </attributes>
 
@@ -239,9 +238,9 @@
                 <group name="Talents" type="talents">
                     <skill name="Athletics" score="3"/>
                     <skill name="Awareness" score="4"/>
-                    <skill name="Brawl" score="4"/>
+                    <skill name="Brawl" score="3"/>
                     <skill name="Charm" score="1"/>
-                    <skill name="Guile" score="0"/>
+                    <skill name="Guile" score="1"/>
                     <skill name="Sleight" score="1"/>
                     <skill name="Stealth" score="4"/>
                     <skill name="Throw" score="2"/>
@@ -249,18 +248,16 @@
 
                 <group name="Misc" type="skills">
                     <skill name="Survival" score="4"/>
-                    <skill name="Tracking" score="1"/>
                     <skill name="Swim" score="4"/>
                 </group>
             </skills>
 
             <combat>
-
                 <combatstyle style="Bite and claw" skill="Brawl">
-                    <initiative attribute="agility" bonus="+4"/>
                     <attack attribute="agility" bonus="+5"/>
                     <defence attribute="agility" bonus="+0"/>
-                    <damage type="split" bonus="+1"/>
+                    <damage type="mixed" bonus="+1"/>
+                    <reach bonus="2"/>
                 </combatstyle>
 
                 <armourstyle style="Base"/>
@@ -271,17 +268,13 @@
                 </armourstyle>
             </combat>
 
-            <passions>
-                <passion name="Bravery" score="3"/>
-                <passion name="Ego" score="2"/>
-                <passion name="Restraint" score="2"/>
-                <passion name="Temperence" score="2"/>
-            </passions>
-
             <advantages>
                 <advantage name="Animal"/>
-                <advantage name="Acute sense of smell" score="+1"/>
+                <advantage name="Acute sense of smell" score="+2"/>
                 <advantage name="Acute hearing" score="+1"/>
+                <advantage name="Poor eyesight" score="-1"/>
+
+                <advantage name="Tracking" skill="Survival" score="4"/>
             </advantages>
         </statistics>
     </beast>
@@ -307,12 +300,6 @@
             <short>
                 A very large ancestor of modern bears.
             </short>
-
-            <image href="graphics/bear.jpg"/>
-
-            <movement>
-                <walk normal="10" max="5"/>
-            </movement>
 
             <scale length="2" width="1">
                 <reach>2</reach>
@@ -343,14 +330,14 @@
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <attributes size="8" soak="15">
-                <attribute name="strength" score="7"/>
-                <attribute name="stamina" score="4"/>
+            <attributes size="10" soak="15">
+                <attribute name="strength" score="8"/>
+                <attribute name="health" score="4"/>
                 <attribute name="agility" score="3"/>
                 <attribute name="dexterity" score="1"/>
                 <attribute name="perception" score="4"/>
                 <attribute name="intelligence" score="1"/>
-                <attribute name="charisma" score="1"/>
+                <attribute name="empathy" score="2"/>
                 <attribute name="will" score="2"/>
             </attributes>
 
@@ -358,9 +345,9 @@
                 <group name="Talents" type="talents">
                     <skill name="Athletics" score="2"/>
                     <skill name="Awareness" score="4"/>
-                    <skill name="Brawl" score="7"/>
+                    <skill name="Brawl" score="5"/>
                     <skill name="Charm" score="1"/>
-                    <skill name="Guile" score="0"/>
+                    <skill name="Guile" score="1"/>
                     <skill name="Sleight" score="1"/>
                     <skill name="Stealth" score="4"/>
                     <skill name="Throw" score="2"/>
@@ -368,20 +355,16 @@
 
                 <group name="Misc" type="skills">
                     <skill name="Survival" score="4"/>
-                    <skill name="Tracking" score="1"/>
                     <skill name="Swim" score="2"/>
                 </group>
             </skills>
 
             <combat>
-                <weaponlist href="/usr/share/web/xml/yags/harn/weapons.xml"/>
-                <armourlist href="/usr/share/web/xml/yags/harn/armour.xml"/>
-
                 <combatstyle style="Bite and claw" skill="Brawl">
-                    <initiative attribute="agility" bonus="+4"/>
                     <attack attribute="agility" bonus="+7"/>
                     <defence attribute="agility" bonus="+4"/>
-                    <damage type="split" bonus="+4"/>
+                    <damage type="mixed" bonus="+4"/>
+                    <reach bonus="2"/>
                 </combatstyle>
 
                 <armourstyle style="Base"/>
@@ -392,16 +375,9 @@
                 </armourstyle>
             </combat>
 
-            <passions>
-                <passion name="Bravery" score="4"/>
-                <passion name="Ego" score="3"/>
-                <passion name="Restraint" score="2"/>
-                <passion name="Temperence" score="2"/>
-            </passions>
-
             <advantages>
                 <advantage name="Animal"/>
-                <advantage name="Acute sense of smell" score="+1"/>
+                <advantage name="Acute sense of smell" score="+2"/>
             </advantages>
         </statistics>
     </beast>

@@ -1,16 +1,16 @@
 <?xml version = '1.0' ?>
-<?xml-stylesheet
-    href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl"
-    type="text/xsl"?>
+<?xml-stylesheet href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl" type="text/xsl"?>
 
 <!--
-    $Revision: 1.5 $
-    $Date: 2005-04-07 22:04:02 $
+    $Revision: 1.6 $
+    $Date: 2006-09-11 11:15:52 $
 
     Bestiary containing information on boars.
+
+    Copyright Samuel Penn, GPL v2.
 -->
 
-<bestiary>
+<bestiary xmlns="http://yagsbook.sourceforge.net/xml">
     <beast name="Boar">
         <information>
             <type>Animal</type>
@@ -30,16 +30,14 @@
                 Wild pigs, with short brown fur.
             </short>
 
-            <movement>
-                <walk normal="10" max="4"/>
-            </movement>
-
             <scale length="1" width="1"/>
 
             <physical>
                 <para>
                     Boars are wild pigs, with viscious tusks. They are
-                    strong and quite dangerous.
+                    strong and very dangerous if provoked. They tend to
+                    be very heavy for their size, and can quite easily
+                    knock an adult over with a charge.
                 </para>
             </physical>
 
@@ -54,12 +52,12 @@
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <attributes size="3" soak="9">
                 <attribute name="strength" score="3"/>
-                <attribute name="stamina" score="5"/>
+                <attribute name="health" score="5"/>
                 <attribute name="agility" score="3"/>
                 <attribute name="dexterity" score="1"/>
                 <attribute name="perception" score="3"/>
                 <attribute name="intelligence" score="1"/>
-                <attribute name="charisma" score="1"/>
+                <attribute name="empathy" score="1"/>
                 <attribute name="will" score="3"/>
             </attributes>
 
@@ -68,11 +66,11 @@
                     <skill name="Athletics" score="3"/>
                     <skill name="Awareness" score="5"/>
                     <skill name="Brawl" score="5"/>
-                    <skill name="Charm" score="0"/>
-                    <skill name="Guile" score="0"/>
-                    <skill name="Sleight" score="0"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
+                    <skill name="Sleight" score="1"/>
                     <skill name="Stealth" score="2"/>
-                    <skill name="Throw" score="0"/>
+                    <skill name="Throw" score="1"/>
                 </group>
                 <group name="Misc">
                     <skill name="Survival" score="5"/>
@@ -82,17 +80,17 @@
 
             <combat>
                 <combatstyle style="Gore" skill="Brawl">
-                    <initiative attribute="agility" bonus="+4"/>
                     <attack attribute="agility" bonus="+3"/>
                     <defence attribute="agility" bonus="+3"/>
-                    <damage type="split" bonus="+6"/>
+                    <damage type="mixed" bonus="+6"/>
+                    <reach bonus="0"/>
                 </combatstyle>
 
                 <combatstyle style="Trample" skill="Brawl">
-                    <initiative attribute="agility" bonus="-5"/>
                     <attack attribute="agility" bonus="+10"/>
                     <defence attribute="agility" bonus="-10"/>
                     <damage type="stun" bonus="+10"/>
+                    <reach bonus="0"/>
                 </combatstyle>
 
                 <armourstyle style="Base"/>
