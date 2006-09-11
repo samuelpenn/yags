@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+                href="/home/sam/src/forge/yagsbook/xml/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+    <header>
+        <title>Yags Traveller</title>
+        <tagline>Yags Traveller</tagline>
+
+        <summary>
+            Creating characters for Traveller
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2006-09-11 11:15:22 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2006</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+        </license>
+
+        <style name="character"/>
+    </header>
+
+    <body>
+        <sect1>
+            <title>Yags Traveller</title>
+
+            <para>
+                <e>Yags Traveller</e> is all about designing characters
+                for use in the Traveller background.
+            </para>
+        </sect1>
+
+        <sect1>
+            <title>Building a Character</title>
+
+            <para>
+                Designing a character for <e>Yags Traveller</e> is a
+                relatively straightforward process. As always, you will
+                need a character concept before hand, which will depend
+                on the type of campaign being run by the GM, the type
+                of characters everybody else is taking, and your
+                personal preference.
+            </para>
+
+            <para>
+                If you have read the core character generation rules,
+                ignore them, since they are focused on a fantasy setting
+                where characters are more constrained into given roles
+                and social classes. Character design in Yags Traveller
+                provides a great deal of flexibility to allow you to design
+                the type of character you want.
+            </para>
+
+            <sect2>
+                <title>Priorities</title>
+
+                <para>
+                    Once you have determined the type of character you wish
+                    to play, it is time to determine the priorities of that
+                    character. There are five broad categories you must
+                    place in order of preference - <e>Advantages</e>,
+                    <e>Experience</e>, <e>Background</e>,
+                    <e>Social class</e> and <e>Wealth</e>.
+                    These are described below.
+                </para>
+
+                <itemlist order="sort">
+                    <item name="Attributes">
+                        Points to raise attributes.
+                    </item>
+
+                    <item name="Experience">
+                        Covers general experience and governs how many
+                        skills you start with, as well as the maximum skill
+                        level of any one skill at generation time.
+                    </item>
+
+                    <item name="Background">
+                        This covers what you have done up until this point.
+                        It is mostly a way to obtain a package of skills,
+                        either through education, military service or
+                        business experience. As well as skills, it can
+                        provide useful contacts.
+                    </item>
+
+                    <item name="Social class">
+                        Your social class determines how others view you. A
+                        high social rank provides you with a lot of power
+                        and responsibility (maybe you are a famous actor or
+                        a member of Parliment).
+                    </item>
+
+                    <item name="Wealth">
+                        Wealth determines how much disposable income you
+                        have. A high starting wealth also provides a
+                        fortune which can make you financially indepedent.
+                    </item>
+                </itemlist>
+
+                <sect3>
+                    <title>Ranks</title>
+
+                    <para>
+                        Each category provides you with the following. You
+                        should rate each one from A to E, using each letter
+                        only once. D is considered to be average.
+                    </para>
+
+                    <table>
+                        <title>Priority</title>
+                        <colspec colwidth="22mm"/>
+                        <colspec colwidth="11mm"/>
+                        <colspec colwidth="9mm"/>
+                        <colspec colwidth="9mm"/>
+                        <colspec colwidth="9mm"/>
+                        <colspec colwidth="9mm"/>
+                        <colspec colwidth="9mm"/>
+
+                        <thead>
+                            <row>
+                                <entry>Category</entry>
+                                <entry>A</entry>
+                                <entry>B</entry>
+                                <entry>C</entry>
+                                <entry>D</entry>
+                                <entry>E</entry>
+                            </row>
+                        </thead>
+
+                        <tbody>
+                            <row>
+                                <entry>Attributes</entry>
+                                <entry>+7/6</entry>
+                                <entry>+5/6</entry>
+                                <entry>+3/5</entry>
+                                <entry>+0/5</entry>
+                                <entry>-2/4</entry>
+                            </row>
+
+                            <row>
+                                <entry>Experience</entry>
+                                <entry>40/7</entry>
+                                <entry>30/6</entry>
+                                <entry>20/6</entry>
+                                <entry>15/5</entry>
+                                <entry>10/4</entry>
+                            </row>
+
+                            <row>
+                                <entry>Background</entry>
+                                <entry>4</entry>
+                                <entry>2</entry>
+                                <entry>1</entry>
+                                <entry>0</entry>
+                                <entry>0</entry>
+                            </row>
+
+                            <row>
+                                <entry>Social</entry>
+                                <entry>4</entry>
+                                <entry>3</entry>
+                                <entry>2</entry>
+                                <entry>1</entry>
+                                <entry>0</entry>
+                            </row>
+
+                            <row>
+                                <entry>Wealth</entry>
+                                <entry>4</entry>
+                                <entry>3</entry>
+                                <entry>2</entry>
+                                <entry>1</entry>
+                                <entry>0</entry>
+                            </row>
+                        </tbody>
+                    </table>
+                </sect3>
+
+                <sect3>
+                    <title>Attributes</title>
+
+                    <para>
+                        Attributes are listed as the number of points
+                        available to spend, and the maximum level of
+                        attribute which may be purchased. The cost of each
+                        level is as follows. Attributes above 5 tend to be
+                        very rare, and anything above 7 is truly
+                        outstanding.
+                    </para>
+
+                    <targetlist targetFirst="true">
+                        <targetLabel>Score</targetLabel>
+                        <valueLabel>Cost</valueLabel>
+
+                        <item target="9" value="+15,"/>
+                        <item target="8" value="+10,"/>
+                        <item target="7" value="+7,"/>
+                        <item target="6" value="+5,"/>
+                        <item target="5" value="+3,"/>
+                        <item target="4" value="+1,">
+                            Significantly above average for an adult. About
+                            5% of the population has this level or above.
+                        </item>
+                        <item target="3" value="+0,">
+                            Typical average for an adult. About 90% of the
+                            population.
+                        </item>
+                        <item target="2" value="-1,">
+                            Significantly below average, the bottom 5%.
+                        </item>
+                    </targetlist>
+                </sect3>
+
+                <sect3>
+                    <title>Experience</title>
+
+                    <para>
+                        Experience gives you experience points which may be
+                        spent on pretty much any skill. The table gives two
+                        numbers, in the form X/Y.
+                    </para>
+
+                    <para>
+                        The first number is the total number of experience
+                        points you may spend on skills. The second number
+                        is the maximum skill level any single skill can be
+                        raised to.
+                    </para>
+
+                    <para>
+                        Experience should be spent after any skills from
+                        background are chosen.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Background</title>
+
+                    <para>
+                        Your background determines what you have been doing
+                        up until this point. A background provides a number
+                        of benefits, including skills, contacts and possibly
+                        equipment. There are a number of backgrounds
+                        available, and each has a point cost associated with
+                        it. The level of background that you choose defines
+                        the number of points you can spend.
+                    </para>
+
+                    <para>
+                        You may purchase as many backgrounds as you have
+                        points for, though you may not take the same
+                        background more than once. Where multiple
+                        backgrounds provide the same skills, take the
+                        highest level of skill provided.
+                    </para>
+
+                    <y:import-advantages href="options/backgrounds.yags" type="advantage"/>
+                </sect3>
+
+                <sect3>
+                    <title>Social</title>
+
+                    <para>
+                        Your social rating allows you to buy reputation and
+                        power. With a social class of 0, you are a complete
+                        nobody, a petty criminal with a lot of enemies and
+                        no power over anyone. At 5, you are a powerful
+                        politician or celebrity with a lot of influence.
+                    </para>
+
+                    <targetlist targetFirst="true">
+                        <targetLabel>Rating</targetLabel>
+                        <valueLabel>Description</valueLabel>
+
+                        <item target="0" value="Outcast.">
+                            You are among the dregs of humanity. You are of
+                            no fixed abode, have several enemies and have
+                            probably been in trouble with the law. You may
+                            be guilty (or have been charged with) crimes
+                            considered dispicable (child rape, mass murder)
+                            and few people will be willing to help you.
+                        </item>
+
+                        <item target="1" value="Drifter.">
+                            You drift from place to place, never settling.
+                            People mistrust you because of your lifestyle,
+                            and few will give you the time of day.
+                        </item>
+
+                        <item target="2" value="Average joe.">
+                            You are an average person. You probably have a
+                            house (or at least, a mortgage) and have had
+                            steady jobs which can provide you with good
+                            references. You have a reasonable circle of
+                            friends, though most will be people like you.
+                        </item>
+
+                        <item target="3" value="Respectable.">
+                            You are a respected member of the community,
+                            and can call on others for help. You may be a
+                            doctor, lawyer, minor politician or community
+                            leader, and some people may have heard of you
+                            in your home country.
+                        </item>
+
+                        <item target="4" value="Celebrity.">
+                            You are famous in your country, or to a select
+                            group across the world. You know many people
+                            in high places, and more importantly, they
+                            consider you a friend. You may be a famous
+                            athlete, a rock star or a well known scientist.
+                            People such as Arthur C Clarke,
+                            David Attenborough or Richard Stallman.
+                        </item>
+
+                        <item target="5" value="World famous.">
+                            You are known and respected across the world.
+                            You have many contacts, and even where you
+                            don't know people personally, they will have
+                            heard of you, and some of them may be your
+                            fans. Examples are Madonna, Bill Clinton.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        Note that social class and wealth are not the same,
+                        and though they will normally be similar, it is
+                        possible for them to be widely different. A person
+                        with a wealth of +5 and social status of +0 would
+                        be unusual, and a good background will be required.
+                        Possibly you have access to a fortune, but in so
+                        much trouble with both criminals and the law that
+                        you are unable to settle down and make much use of
+                        it.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Wealth</title>
+
+                    <targetlist targetFirst="true">
+                        <targetLabel>Rating</targetLabel>
+                        <valueLabel>Description</valueLabel>
+
+                        <item target="0" value="Poor.">
+                            You are heavily in debt, and pretty much live
+                            hand to mouth. You own nothing of worth.
+                        </item>
+
+                        <item target="1" value="Struggling.">
+                            You have little of worth, and probably some
+                            debts as well. You earn enough to live, but
+                            you constantly have to think about how you
+                            are going to spend your money.
+                        </item>
+
+                        <item target="2" value="Comfortable.">
+                            You are used to a typical upper middle class
+                            standard of living. You own a car (possible
+                            two), have a decent house (or rent a good
+                            flat in the city) and have a steady income.
+                            You still need to work to keep that standard
+                            of life style however.
+                        </item>
+
+                        <item target="3" value="Wealthy.">
+                            You are probably worth close to a million
+                            pounds, and rarely have to worry about having
+                            enough money. You could survive the rest of
+                            your life without working, but only if you
+                            invested wisely and lived cheaply. You have
+                            maybe a tenth of your total wealth as easily
+                            spendable wealth.
+                        </item>
+
+                        <item target="4" value="Rich.">
+                            You are rich enough not to have to worry about
+                            working again, whilst still be able to maintain
+                            a good standard of living. Your total fortune
+                            is in the order of tens of millions.
+                        </item>
+
+                        <item target="5" value="Very rich.">
+                            You are very rich, and have a wealth in the
+                            order of hundreds of millions.
+                        </item>
+                    </targetlist>
+                </sect3>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Skills</title>
+
+            <sect2>
+                <title>Skill list</title>
+
+                <y:list-skills>
+                    <y:skills>../core/skills/traveller-skills.yags</y:skills>
+                    <y:skills>../core/skills/modern-skills.yags</y:skills>
+                    <y:skills>../core/skills/skills.yags</y:skills>
+                    <!-- <y:skills>../core/skills/combat-skills.yags</y:skills> -->
+                    <!-- <y:skills>../core/skills/bushido-skills.yags</y:skills> -->
+                </y:list-skills>
+            </sect2>
+
+            <sect2>
+                <title>Skill descriptions</title>
+
+                <y:import-skills>
+                    <y:skills>../core/skills/traveller-skills.yags</y:skills>
+                    <y:skills>../core/skills/modern-skills.yags</y:skills>
+                    <y:skills>../core/skills/skills.yags</y:skills>
+                    <!-- <y:skills>../core/skills/combat-skills.yags</y:skills> -->
+                    <!-- <y:skills>../core/skills/bushido-skills.yags</y:skills> -->
+
+                    <y:techniques>../core/techniques/techniques.yags</y:techniques>
+                    <y:techniques>../core/techniques/modern-techniques.yags</y:techniques>
+                    <y:techniques>../core/techniques/computing.yags</y:techniques>
+                    <y:techniques>../core/techniques/electronics.yags</y:techniques>
+                </y:import-skills>
+            </sect2>
+        </sect1>
+    </body>
+
+</article>
+
+
