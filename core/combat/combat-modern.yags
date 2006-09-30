@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.4 $</version>
-            <date>$Date: 2006-09-10 20:58:19 $</date>
+            <version>$Revision: 1.5 $</version>
+            <date>$Date: 2006-09-30 16:25:23 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -405,6 +405,14 @@
                             </row>
                         </tbody>
                     </table>
+
+                    <para>
+                        As for firing at a single target, it is assumed
+                        that the target is at short range. When firing at
+                        <e>medium</e> range, halve (rounding down) the
+                        effective number of bullets, and at <e>long</e>
+                        range quarter the number.
+                    </para>
                 </sect3>
             </sect2>
 
@@ -454,6 +462,9 @@
                         If the number of shots you take exceed your skill
                         in the weapon, then there is a further -10 penalty
                         for each extra shot, that applies to all shots.
+                        For each shot after the first, add the <e>recoil</e>
+                        penalty for the gun. If the penalty is -5, then it
+                        is -5 for the 2nd shot, -10 for the 3rd shot etc.
                     </para>
 
                     <para>
@@ -527,7 +538,9 @@
 
                     <para>
                         This attack is <e>fast</e>, but does not negatively
-                        affect the range increment.
+                        affect the range increment. It is not possible to
+                        use <e>careful shot</e> when performing suppressive
+                        fire.
                     </para>
                 </sect3>
 
