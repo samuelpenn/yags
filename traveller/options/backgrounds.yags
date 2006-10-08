@@ -2,6 +2,52 @@
 
 <advantages xmlns="http://yagsbook.sourceforge.net/xml/yags">
 
+    <advantage name="Citizen of the Imperium" type="advantage">
+        <cost points="0"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are a citizen of the Imperium, having been raised as
+                part of the galactic culture rather than simply as part
+                of the culture of a single world. You are comfortable with
+                the Imperium's technology, art, history and social
+                structures.
+            </para>
+
+            <para>
+                You gain the following skills:
+                <e>Area lore (Imperium)</e> (4/+0),
+                <e>Area lore (Home Sector)</e> (4/+0),
+                <e>Area lore (Home world)</e> (4/+0),
+                <e>Speak Ganglic</e> (4/+0),
+                <e>Write Ganglic</e> (4/+0),
+                <e>Computer Operation</e> (2/+0),
+                <e>Science</e> (2/+0).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Traveller" type="advantage">
+        <cost points="1"/>
+        <prerequisite>Citizen of the Imperium</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are widely travelled, or at least widely read, and have
+                a good knowledge of the Imperium and her neighbours.
+            </para>
+
+            <para>
+                You gain the following skills:
+                <e>Area lore (Imperium)</e> (4/+2),
+                <e>Area lore (any Sector)</e> (4/+2),
+                <e>Speak (any language)</e> (4/+0),
+                <e>Write (any language)</e> (2/+2),
+                <e>Current affairs</e> (2/+2).
+            </para>
+        </description>
+    </advantage>
+
     <advantage name="Academic background" type="advantage">
         <cost points="1"/>
 
@@ -17,14 +63,9 @@
             </para>
 
             <para>
-                If your <e>Research</e> skill is less than 4, it is raised
-                to 4. You may also add +2 to any 3 different Academic skills.
-            </para>
-
-            <para>
-                You may take this background multiple times, though
-                subsequent times only the skill bonuses stack. They may be
-                placed on the same skills as previously
+                You gain the following skills:
+                <e>Research</e> (4/+1),
+                any 3 other Academic skills (4/+2).
             </para>
         </description>
     </advantage>
@@ -43,13 +84,14 @@
             </para>
 
             <para>
-                As well as contacts, you start with a Streetwise skill of 4.
-                You may not take this background more than once.
+                You gain the following skills:
+                <e>Streetwise</e> (4/+1),
+                any 2 rogue skills (4/+1).
             </para>
         </description>
     </advantage>
 
-    <advantage name="Military background" type="advantage">
+    <advantage name="Army background" type="advantage">
         <cost points="2"/>
 
         <prerequisite>Strength 3+</prerequisite>
@@ -61,15 +103,25 @@
             <para>
                 You have had military training, and it is your choice
                 whether you are still in the military or whether you left
-                with a good reputation. Taking this background gives you
-                skills of <e>Military etiquette</e>, <e>Tactics</e>,
-                <e>Athletics</e> and<e>Brawl</e> at 4. You also gain a
-                bonus of +2 to any 4 suitable military skills, and a +1
-                bonus to <t>Health</t>.
+                with a good reputation. The first time you take this
+                background, you gain a +1 bonus to <t>Health</t>.
             </para>
 
             <para>
-                You may only take this background once.
+                You gain the following skills:
+                <e>Military etiquette</e> (4/+1),
+                <e>Tactics</e> (4/+1),
+                <e>Athletics</e> (4/+1),
+                <e>Brawl</e> (4/+1),
+                <e>Stealth</e> (3/+1),
+                <e>Pistol</e> (4/+1),
+                <e>Rifle</e> (4/+1),
+                any two other military or combat skills (4/+1).
+            </para>
+
+            <para>
+                You may also take up to 10 points on techniques for the
+                above skills.
             </para>
         </description>
     </advantage>
@@ -86,18 +138,19 @@
             </para>
 
             <para>
-                You have <e>Law</e>, <e>Streetwise</e> and
-                <e>Administration</e> skills of 4.
-            </para>
-
-            <para>
-                You cannot take this more than once.
+                You gain the following skills:
+                <e>Administration</e> (4/+0),
+                <e>Pistol</e> (4/+1),
+                <e>Streetwise</e> (3/+1),
+                <e>Law</e> (3/+1),
+                <e>Brawl</e> (3/+1),
+                <e>Athletics</e> (2/+1).
             </para>
         </description>
     </advantage>
 
     <advantage name="Special Forces" type="advantage">
-        <cost points="2"/>
+        <cost points="3"/>
 
         <prerequisite>Military background</prerequisite>
         <prerequisite>Agility 4+</prerequisite>
@@ -106,13 +159,107 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You may take this background if you already have a
-                <e>Military background</e>. You gain a skill of 6
-                in <e>Brawl</e> and <e>Tactics</e>, and gain +3 to any 3
-                different military skills.
+                <e>Military background</e>. You also gain +1 to <t>Health</t>
+                and <t>Perception</t> the first time you take this background.
             </para>
 
             <para>
-                You also gain +1 to <t>Health</t> and <t>Perception</t>.
+                You gain the following skills:
+                <e>Athletics</e> (6/+2),
+                <e>Brawl</e> (6/+2),
+                <e>Stealth</e> (6/+2),
+                <e>Rifle</e> (6/+2),
+                <e>Tactics</e> (6/+2)
+                <e>Sniper</e> (5/+2),
+                any 3 military, vehicle, combat or rogue skills (4/+3).
+            </para>
+
+            <para>
+                You may also take up to 12 points on techniques for the
+                above skills.
+            </para>
+
+            <para>
+                The any 3 skills may be taken on the named skills, though
+                only once per time this background is taken.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Imperial Navy" type="advantage">
+        <cost points="3"/>
+
+        <prerequisite>Intelligence 3+</prerequisite>
+        <prerequisite>Health 3+</prerequisite>
+        <prerequisite>Perception 3+</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have served a term in the Imperial Navy, and have
+                been part of the crew of a starship.
+            </para>
+
+            <para>
+                You gain the following skills:
+                <e>Science</e> (2/+0),
+                <e>Mathematics</e> (2/+1),
+                <e>Physics</e> (2/+1),
+                <e>Pistol</e> (2/+1),
+                <e>Starship systems</e> (4/+1),
+                any other two Starship or Technical skills (4/+2),
+                any two military skills (3/+1).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Imperial Marines" type="advantage">
+        <cost points="2"/>
+
+        <prerequisite>Intelligence 3+</prerequisite>
+        <prerequisite>Health 3+</prerequisite>
+        <prerequisite>Perception 3+</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have served a term in the Imperial Marines. The first
+                time you take this, you gain a +1 bonus to <t>Health</t>.
+            </para>
+
+            <para>
+                You gain the following skills:
+                <e>Starship systems</e> (2/+1),
+                <e>Pistol</e> (4/+1),
+                <e>Rifle</e> (4/+2),
+                <e>Brawl</e> (4/+2),
+                <e>Tactics</e> (4/+2),
+                any two other Military, Starship or Combat skills (4/+2).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Merchant Navy" type="advantage">
+        <cost points="1"/>
+
+        <prerequisite>Intelligence 3+</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have worked aboard Merchant starships, acting as crew
+                and/or support staff.
+            </para>
+
+            <para>
+                You gain the following skills:
+                <e>Science</e> (2/+0),
+                <e>Physics</e> (2/+1),
+                <e>Mathematics</e> (2/+1),
+                <e>Starship systems</e> (4+2),
+                <e>Trade</e> (4/+2),
+                one other starship or technical skill (3/+1).
+            </para>
+
+            <para>
+                You will have some contacts amongst shipping crews.
             </para>
         </description>
     </advantage>

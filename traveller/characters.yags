@@ -19,8 +19,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.1 $</version>
-            <date>$Date: 2006-09-11 11:15:22 $</date>
+            <version>$Revision: 1.2 $</version>
+            <date>$Date: 2006-10-08 18:23:20 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -42,7 +42,16 @@
 
             <para>
                 <e>Yags Traveller</e> is all about designing characters
-                for use in the Traveller background.
+                for use in the <tm>Traveller</tm> background.
+            </para>
+
+            <para>
+                The <tm>Traveller</tm> campaign is huge in scope, covering
+                many thousands of star systems, many different styles of
+                play, spanning many technology levels and can even be set
+                in different periods. <e>Yags Traveller</e> is focussed on
+                games within the Imperium, around the year 1120. It follows
+                the timeline set by <tm>GURPS</tm> Traveller.
             </para>
         </sect1>
 
@@ -59,12 +68,12 @@
             </para>
 
             <para>
-                If you have read the core character generation rules,
-                ignore them, since they are focused on a fantasy setting
-                where characters are more constrained into given roles
-                and social classes. Character design in Yags Traveller
-                provides a great deal of flexibility to allow you to design
-                the type of character you want.
+                Unlike in the fantasy versions of <e>Yags</e>, there are no
+                set packages to choose from. Social structures in the
+                3rd Imperium are relatively flexible, and education is
+                readily available to most people. The huge population
+                also means that exceptional characters are more likely,
+                and the available starting attributes reflects this.
             </para>
 
             <sect2>
@@ -74,7 +83,7 @@
                     Once you have determined the type of character you wish
                     to play, it is time to determine the priorities of that
                     character. There are five broad categories you must
-                    place in order of preference - <e>Advantages</e>,
+                    place in order of preference - <e>Attributes</e>,
                     <e>Experience</e>, <e>Background</e>,
                     <e>Social class</e> and <e>Wealth</e>.
                     These are described below.
@@ -82,13 +91,16 @@
 
                 <itemlist order="sort">
                     <item name="Attributes">
-                        Points to raise attributes.
+                        A typical adult human has a score of 3 in every
+                        attribute. By prioritising this, you may start
+                        with more attributes at a much higher level.
                     </item>
 
                     <item name="Experience">
                         Covers general experience and governs how many
                         skills you start with, as well as the maximum skill
-                        level of any one skill at generation time.
+                        level of any one skill at generation time. These
+                        points can be spent on any skills.
                     </item>
 
                     <item name="Background">
@@ -117,9 +129,12 @@
                     <title>Ranks</title>
 
                     <para>
-                        Each category provides you with the following. You
-                        should rate each one from A to E, using each letter
-                        only once. D is considered to be average.
+                        When designing your character, you should choose a
+                        rating for each area from A to E. For primary
+                        characters, you may choose one each of A, B, C, D
+                        and E. Secondary characters may choose B, C, D, D and E.
+                        Tertiary characters may choose C, C, D, D and E.
+                        D is considered to be average.
                     </para>
 
                     <table>
@@ -155,20 +170,20 @@
 
                             <row>
                                 <entry>Experience</entry>
-                                <entry>40/7</entry>
-                                <entry>30/6</entry>
-                                <entry>20/6</entry>
+                                <entry>50/7</entry>
+                                <entry>35/6</entry>
+                                <entry>25/6</entry>
                                 <entry>15/5</entry>
                                 <entry>10/4</entry>
                             </row>
 
                             <row>
                                 <entry>Background</entry>
+                                <entry>5</entry>
                                 <entry>4</entry>
+                                <entry>3</entry>
                                 <entry>2</entry>
                                 <entry>1</entry>
-                                <entry>0</entry>
-                                <entry>0</entry>
                             </row>
 
                             <row>
@@ -208,11 +223,17 @@
                         <targetLabel>Score</targetLabel>
                         <valueLabel>Cost</valueLabel>
 
-                        <item target="9" value="+15,"/>
-                        <item target="8" value="+10,"/>
-                        <item target="7" value="+7,"/>
-                        <item target="6" value="+5,"/>
-                        <item target="5" value="+3,"/>
+                        <item target="7" value="+7,">
+                            Outstanding.
+                        </item>
+                        <item target="6" value="+5,">
+                            Far above human average.
+                        </item>
+                        <item target="5" value="+3,">
+                            Obviously exceptional. Attributes higher than
+                            this are normally only attained through
+                            training and dedication.
+                        </item>
                         <item target="4" value="+1,">
                             Significantly above average for an adult. About
                             5% of the population has this level or above.
@@ -225,6 +246,11 @@
                             Significantly below average, the bottom 5%.
                         </item>
                     </targetlist>
+
+                    <para>
+                        You may take an attribute at 2, in order to spend
+                        the extra points on raising another attribute.
+                    </para>
                 </sect3>
 
                 <sect3>
@@ -245,7 +271,9 @@
 
                     <para>
                         Experience should be spent after any skills from
-                        background are chosen.
+                        background are chosen. Backgrounds tend to give
+                        a larger number of skill points, but in a more
+                        restricted area.
                     </para>
                 </sect3>
 
@@ -264,10 +292,18 @@
 
                     <para>
                         You may purchase as many backgrounds as you have
-                        points for, though you may not take the same
-                        background more than once. Where multiple
-                        backgrounds provide the same skills, take the
-                        highest level of skill provided.
+                        points for, and each can be taken more
+                        than once. Each background provides a number of
+                        skills, which give you a rating in the form X/+Y.
+                        The skill can be either raised to X, or increased
+                        by Y. You can take backgrounds in any order you
+                        want.
+                    </para>
+
+                    <para>
+                        If you take the same background multiple times,
+                        only the skills stack - bonuses to attributes,
+                        contacts and other benefits do not.
                     </para>
 
                     <y:import-advantages href="options/backgrounds.yags" type="advantage"/>
@@ -348,6 +384,11 @@
                         much trouble with both criminals and the law that
                         you are unable to settle down and make much use of
                         it.
+                    </para>
+
+                    <para>
+                        If you are in the military, then your social class
+                        can represent your military rank.
                     </para>
                 </sect3>
 
@@ -431,10 +472,23 @@
                     <!-- <y:skills>../core/skills/bushido-skills.yags</y:skills> -->
 
                     <y:techniques>../core/techniques/techniques.yags</y:techniques>
+                    <y:techniques>../core/techniques/combat-techniques.yags</y:techniques>
                     <y:techniques>../core/techniques/modern-techniques.yags</y:techniques>
                     <y:techniques>../core/techniques/computing.yags</y:techniques>
                     <y:techniques>../core/techniques/electronics.yags</y:techniques>
                 </y:import-skills>
+            </sect2>
+
+            <sect2>
+                <title>Techniques</title>
+
+                <y:import-advantages type="technique" tree="true">
+                    <y:adv>../core/techniques/techniques.yags</y:adv>
+                    <y:adv>../core/techniques/combat-techniques.yags</y:adv>
+                    <y:adv>../core/techniques/modern-techniques.yags</y:adv>
+                    <y:adv>../core/techniques/computing.yags</y:adv>
+                    <y:adv>../core/techniques/electronics.yags</y:adv>
+                </y:import-advantages>
             </sect2>
         </sect1>
     </body>
