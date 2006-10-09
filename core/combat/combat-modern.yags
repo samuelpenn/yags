@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2006-09-30 16:25:23 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2006-10-09 21:27:47 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -561,6 +561,149 @@
                         then you can use your skill, though against an
                         attribute of 1.
                     </para>
+                </sect3>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Extended Firearms</title>
+
+            <para>
+                Blah.
+            </para>
+
+            <sect2>
+                <title>Weapon Ranges</title>
+
+                <para>
+                    Firearms obey the same rules for range categories as do
+                    other missile weapons, namely that their damage is
+                    reduced by 5 at medium range, and by 10 at long range.
+                    This is where body armours really come in useful, since
+                    they can make you more or less impervious to enemy fire
+                    at long range.
+                </para>
+
+                <para>
+                    Strong winds and a moving target can make things harder
+                    for the firer, however the effect is reduced compared to
+                    slow weapons such as bows. The modifier to the difficulty
+                    is as follows.
+                </para>
+
+                <targetlist>
+                    <targetLabel>Modifier</targetLabel>
+                    <valueLabel>Environment</valueLabel>
+
+                    <item value="Moderate wind" target="+0"/>
+                    <item value="High wind" target="+5"/>
+                    <item value="Very high wind" target="+10"/>
+                    <item value="Target moving" target="+0"/>
+                    <item value="Target moving fast" target="+5"/>
+                    <item value="Firer is moving" target="+10"/>
+                </targetlist>
+
+                <para>
+                    The modifiers are per range band, so high winds give
+                    +5 at short range, +10 at medium and +15 at long. It
+                    should be noted that some weapons, such as lasers and
+                    particle beam weapons, are unaffected by winds.
+                </para>
+
+                <sect3>
+                    <title>Atmosphere Types</title>
+
+                    <para>
+                        In alien environments, the type of atmosphere can
+                        have an effect on the range bands of a weapon. The
+                        accuracy of the weapon is not affected.
+                    </para>
+
+                    <table>
+                        <title>Priority</title>
+                        <colspec colwidth="25mm"/>
+                        <colspec colwidth="12mm"/>
+                        <colspec colwidth="12mm"/>
+                        <colspec colwidth="12mm"/>
+                        <colspec colwidth="12mm"/>
+
+                        <thead>
+                            <row>
+                                <entry>Environment</entry>
+                                <entry>Laser</entry>
+                                <entry>Particle</entry>
+                                <entry>Plasma</entry>
+                                <entry>Slugthrower</entry>
+                            </row>
+                        </thead>
+
+                        <tbody>
+                            <row>
+                                <entry>Vacuum</entry>
+                                <entry>x10</entry>
+                                <entry>x5</entry>
+                                <entry>x3</entry>
+                                <entry>x1.5</entry>
+                            </row>
+
+                            <row>
+                                <entry>Trace</entry>
+                                <entry>x10</entry>
+                                <entry>x5</entry>
+                                <entry>x3</entry>
+                                <entry>x1.5</entry>
+                            </row>
+
+                            <row>
+                                <entry>Very thin</entry>
+                                <entry>x5</entry>
+                                <entry>x3</entry>
+                                <entry>x2</entry>
+                                <entry>x1.25</entry>
+                            </row>
+
+                            <row>
+                                <entry>Thin</entry>
+                                <entry>x2</entry>
+                                <entry>x2</entry>
+                                <entry>x1.5</entry>
+                                <entry>x1</entry>
+                            </row>
+
+                            <row>
+                                <entry>Standard</entry>
+                                <entry>x1</entry>
+                                <entry>x1</entry>
+                                <entry>x1</entry>
+                                <entry>x1</entry>
+                            </row>
+
+                            <row>
+                                <entry>Dense</entry>
+                                <entry>x0.5</entry>
+                                <entry>x.75</entry>
+                                <entry>x.75</entry>
+                                <entry>x1</entry>
+                            </row>
+
+                            <row>
+                                <entry>Very Dense</entry>
+                                <entry>x0.25</entry>
+                                <entry>x0.50</entry>
+                                <entry>x0.50</entry>
+                                <entry>x0.75</entry>
+                            </row>
+
+                            <row>
+                                <entry>Super Dense</entry>
+                                <entry>x0.10</entry>
+                                <entry>x0.50</entry>
+                                <entry>x0.25</entry>
+                                <entry>x0.75</entry>
+                            </row>
+                        </tbody>
+                    </table>
+
                 </sect3>
             </sect2>
         </sect1>

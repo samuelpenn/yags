@@ -14,8 +14,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2006-10-08 18:23:32 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2006-10-09 21:27:47 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -104,20 +104,11 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You can change the cartridge on an auto loading gun quickly
-                and reliably. At the start of any round, you can choose to
-                try to reload your gun before performing another action.
-                Make a <y:dexterity>Pistol</y:dexterity> or
-                <y:dexterity>Rifle</y:dexterity> check at a target of 15.
-                On success, the gun is loaded. On failure, you can choose
-                to either spend the rest of the round loading, or can
-                abort and carry on with your other actions.
-            </para>
-
-            <para>
-                Following actions are <e>slow</e>. If you are firing, you
-                do not get the benefits of <e>Careful shot</e>. If you wish
-                to try a snapshot fire, you can do this at <e>normal</e>
-                speed (instead of <e>fast</e>).
+                and reliably. At the start of any round, before you declare
+                you action, you can choose to try to reload your gun. Make a
+                <y:dexterity>Pistol</y:dexterity> or <y:dexterity>Rifle</y:dexterity>
+                check at a target of 15. On success, the gun is loaded. On a
+                failure you will have to spend time reloading as normal.
             </para>
         </description>
     </advantage>
@@ -142,7 +133,7 @@
     </advantage>
 
     <advantage name="Controlled fire" type="technique">
-        <cost points="2"/>
+        <cost points="4"/>
         <skill name="Firearms"/>
 
         <prerequisite>Quick load</prerequisite>
