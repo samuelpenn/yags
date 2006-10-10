@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2006-10-09 21:27:00 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2006-10-10 20:43:16 $
 
     Categories
 
@@ -825,6 +825,231 @@
                 <heavy/>
             </properties>
         </weapon>
+    </item>
+
+    <!--
+        Armour and other protective clothing.
+    -->
+    <item name="Combat vest">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A light combat vest.</short>
+
+        <description>
+            <para>
+                A protective vest consisting of stiffened cloth and
+                plastic covering the torso, and lighter more flexible
+                cloth around the arms.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>plastic</material>
+        <cost>150</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+5</protection>
+            <load>1</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+            </covers>
+
+            <properties>
+                <bp/>
+                <light/>
+                <vitals score="2"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Protective underwear">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>Light bulletproof cloth undergarment.</short>
+
+        <description>
+            <para>
+                A light undergarment which covers the torso, legs and
+                arms and can be worn under normal clothing.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>cloth</material>
+        <cost>250</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+3</protection>
+            <load>0</load>
+
+            <covers>
+                <torso/>
+                <groin/>
+                <arms/>
+                <legs/>
+            </covers>
+
+            <properties>
+                <bp/>
+                <light/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Combat helmet">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A had combat helmet.</short>
+
+        <description>
+            <para>
+                A hard plastic and cloth helmet.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>plastic</material>
+        <cost>500</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+1</protection>
+            <load>0.5</load>
+
+            <covers>
+                <head/>
+                <arms/>
+            </covers>
+
+            <properties>
+                <bp/>
+                <heavy/>
+                <vitals score="2"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Light combat armour">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A full suit of combat armour</short>
+
+        <description>
+            <para>
+                A full body suit of combat armour, consisting of plastic
+                and cloth, with stiff plates and bulletproof weave.
+            </para>
+        </description>
+
+        <weight>5000</weight>
+        <material>plastic</material>
+        <cost>1000</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+8</protection>
+            <load>5</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+            </covers>
+
+            <properties>
+                <bp/>
+                <light/>
+                <restrictive score="1"/>
+                <vitals score="3"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Heavy combat armour">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A full suit of heavy combat armour</short>
+        <description>
+            <para>
+                A full body suit of combat armour, consisting of plastic
+                and cloth, with stiff plates and bulletproof weave. Unlike
+                light combat armour, this is fully enclosed and protects
+                from chemical and biological weapons, as well as providing
+                limited vacuum life support. It includes a helmet.
+            </para>
+        </description>
+
+        <weight>8000</weight>
+        <material>plastic</material>
+        <cost>1500</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+15</protection>
+            <load>8</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+                <head/>
+            </covers>
+
+            <properties>
+                <bp/>
+                <heavy/>
+                <restrictive score="2"/>
+                <vitals score="5"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Battledress">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>Heavy powered armour</short>
+        <description>
+            <para>
+                A set of heavy powered armour.
+            </para>
+        </description>
+
+        <weight>100000</weight>
+        <material>plastic</material>
+        <cost>60000</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+40</protection>
+            <load>0</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+                <head/>
+            </covers>
+
+            <properties>
+                <bp/>
+                <heavy/>
+                <restrictive score="1"/>
+                <vitals score="10"/>
+            </properties>
+        </armour>
     </item>
 
 
