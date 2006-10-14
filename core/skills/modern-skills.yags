@@ -8,7 +8,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.8 $
+    Version: $Revision: 1.9 $
     Author: Samuel Penn
 -->
 
@@ -897,7 +897,7 @@
         </description>
     </skill>
 
-    <skill name="Sniper">
+    <skill name="Sniper" type="skill">
         <group>Combat</group>
         <group>Firearms</group>
 
@@ -914,7 +914,7 @@
         </description>
     </skill>
 
-    <skill name="Heavy weapons">
+    <skill name="Heavy weapons" type="skill">
         <group>Combat</group>
         <group>Firearms</group>
         <group>Vehicle</group>
@@ -932,7 +932,7 @@
         </description>
     </skill>
 
-    <skill name="Strategy">
+    <skill name="Strategy" type="skill">
         <group>Military</group>
 
         <short>Military strategy and logistics.</short>
@@ -967,7 +967,7 @@
         </description>
     </skill>
 
-    <skill name="Combat engineering">
+    <skill name="Combat engineering" type="skill">
         <group>Military</group>
 
         <short>Building things quickly.</short>
@@ -994,5 +994,109 @@
         </description>
     </skill>
 
+    <skill name="Melee weapon" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+        <group>Armed melee</group>
+
+        <short>Using a melee weapon in combat.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is the skill of fighting with a heavy or bladed
+                weapon. You are not specialised in any particular style
+                of fighting, but you have a good knowledge of how to
+                attack and defend.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Boxing" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+        <group>Sport</group>
+
+        <default>Brawl</default>
+
+        <short>The sport of boxing.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                <e>Boxing</e> is a specialised form of <e>brawl</e>,
+                which is designed for use under particular sporting
+                conditions. Though it can be used as a combat skill,
+                it is not designed to be, and can be ineffective
+                outside of the boxing ring. Knowledge of this skill
+                grants knowledge of the rules and etiquette of the
+                game, as well as skill at fighting.
+            </para>
+
+            <para>
+                Boxing is used like brawl to attack and defend. You
+                have +1 to your agility for purposes of defence, but
+                the penalty for making multiple defences is increased
+                by 50%. You get a bonus to punching damage equal to
+                your <e>Boxing</e> skill.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Aikijutsu" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+
+        <prerequisite score="2">Brawl</prerequisite>
+
+        <short>Unarmed combat specialised in throws.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                A style of unarmed combat which concentrates on throws and
+                locks. It is designed for real combat, and has a number of
+                techniques to get your opponent into a position ready to
+                be thrown or grabbed.
+            </para>
+
+            <para>
+                You gain a +1 to your agility for all trip attacks and
+                defences, and always use <y:agility>Aikijutsu</y:agility>
+                for such manouevres. If fighting from the prone position,
+                you suffer no penalties. It can otherwise be used in place
+                of <e>Brawl</e> for punches, kicks, dodges and other
+                unarmed combat moves.
+            </para>
+
+            <para>
+                If using a weapon, you gain the damage bonus of the weapon
+                and suffer a +1 increase in the fumble chance.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Karate" type="skill">
+        <group>Combat</group>
+        <group>Melee</group>
+
+        <prerequisite score="2">Brawl</prerequisite>
+
+        <short>An aggressive unarmed combat style.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                <e>Karate</e> is one of the popular (or at least, well
+                known) styles of unarmed combat in the modern world. It
+                is specialised in attack rather than defence. Though it
+                is often used as a sport, it is effective in a real fight
+                as well.
+            </para>
+
+            <para>
+                It is used in the same way as <e>brawl</e> in combat,
+                though it does not teach the use of weapons. When fighting
+                unarmed, you gain a bonus to damage equal to your skill,
+                but suffer a -1 penalty to agility for defence rolls.
+            </para>
+        </description>
+    </skill>
 </skill-list>
 

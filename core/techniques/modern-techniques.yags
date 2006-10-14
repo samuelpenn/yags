@@ -14,8 +14,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.6 $</version>
-            <date>$Date: 2006-10-09 21:27:47 $</date>
+            <version>$Revision: 1.7 $</version>
+            <date>$Date: 2006-10-14 22:36:09 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -113,12 +113,26 @@
         </description>
     </advantage>
 
+    <advantage name="Multiple targets" type="technique">
+        <cost points="4"/>
+        <skill name="Firearms"/>
+        <prerequisite>Quick load</prerequisite>
+        <short>Fire at multiple targets.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When firing multiple shots (as single shots, not using
+                automatic fire), you may fire at more than one target.
+                For every full four points of skill, you may fire at one
+                additional target each round.
+            </para>
+        </description>
+    </advantage>
+
     <advantage name="Sharp shooter" type="technique">
         <cost points="4"/>
         <skill name="Firearms"/>
-
         <prerequisite>Quick load</prerequisite>
-
         <short>Double the range increment of firearms.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -151,6 +165,118 @@
         </description>
     </advantage>
 
+
+
+    <advantage name="Improved automatic fire" type="technique">
+        <cost points="6"/>
+        <skill name="Firearms"/>
+
+        <prerequisite>Controlled fire</prerequisite>
+
+        <short>Ignore range penalty with automatic fire.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When using automatic fire against an area, you may
+                ignore the normal modifier to the range.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Selective fire" type="technique">
+        <cost points="8"/>
+        <skill name="Firearms"/>
+
+        <prerequisite>Improved automatic fire</prerequisite>
+
+        <short>Select targets with automatic fire.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When using automatic fire against an area, the first
+                target of each burst may be chosen from any of the
+                available targets. Targets after that start from the
+                nearest. That target is not selected a second time
+                in the burst, even if they are the next nearest target.
+            </para>
+
+            <para>
+                Every 4 points of skill beyond 8 allows you to
+                choose another target.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Triple shot" type="technique">
+        <cost points="6"/>
+        <skill name="Firearms"/>
+
+        <prerequisite>Sharp shooter</prerequisite>
+
+        <short>Three shots to the head and heart.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                A particular way of shooting designed to take a human
+                target out quickly and efficiently, consisting of firing
+                twice at the heart, and once in the head. This may be
+                performed as a snapshot or careful shot if desired, and
+                is a single attack action with one roll to hit. It
+                triples the effective range to the target (so a snapshot
+                is x4, and a careful shot is x2), and on success any
+                wounds caused are tripled. A health check must immediately
+                be made at +10 difficulty.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Fire on the run" type="technique">
+        <cost points="4"/>
+        <skill name="Firearms"/>
+
+        <prerequisite>Quick load</prerequisite>
+
+        <short>Firing whilst running.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You can ignore a level of penalty for firing whilst
+                running.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Awkward shot" type="technique">
+        <cost points="4"/>
+        <skill name="Firearms"/>
+
+        <prerequisite>Quick load</prerequisite>
+
+        <short>Firing from awkward positions.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You can ignore a level of penalty for firing from
+                awkward positions (such as whilst hanging on a rope,
+                clinging to a windowsill, or on an unstable platform).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Two guns" type="technique">
+        <cost points="6"/>
+
+        <prerequisite>Sharp shooter</prerequisite>
+
+        <short>Fire two guns without penalty.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You can fire two guns at once without suffering the normal
+                modifier to range.
+            </para>
+        </description>
+    </advantage>
 </advantages>
 
 
