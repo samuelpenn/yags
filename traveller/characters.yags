@@ -19,8 +19,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.6 $</version>
-            <date>$Date: 2006-10-11 21:35:53 $</date>
+            <version>$Revision: 1.7 $</version>
+            <date>$Date: 2006-10-14 22:35:16 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -139,8 +139,9 @@
 
                     <table>
                         <title>Priority</title>
-                        <colspec colwidth="22mm"/>
-                        <colspec colwidth="11mm"/>
+                        <colspec colwidth="16mm"/>
+                        <colspec colwidth="9mm"/>
+                        <colspec colwidth="9mm"/>
                         <colspec colwidth="9mm"/>
                         <colspec colwidth="9mm"/>
                         <colspec colwidth="9mm"/>
@@ -155,6 +156,7 @@
                                 <entry>C</entry>
                                 <entry>D</entry>
                                 <entry>E</entry>
+                                <entry>F</entry>
                             </row>
                         </thead>
 
@@ -166,6 +168,7 @@
                                 <entry>+3/5</entry>
                                 <entry>+0/5</entry>
                                 <entry>-2/4</entry>
+                                <entry>-2/3</entry>
                             </row>
 
                             <row>
@@ -175,6 +178,7 @@
                                 <entry>25/6</entry>
                                 <entry>15/5</entry>
                                 <entry>10/4</entry>
+                                <entry>10/3</entry>
                             </row>
 
                             <row>
@@ -184,6 +188,7 @@
                                 <entry>3</entry>
                                 <entry>2</entry>
                                 <entry>1</entry>
+                                <entry>0</entry>
                             </row>
 
                             <row>
@@ -191,6 +196,7 @@
                                 <entry>4</entry>
                                 <entry>3</entry>
                                 <entry>2</entry>
+                                <entry>1</entry>
                                 <entry>1</entry>
                                 <entry>0</entry>
                             </row>
@@ -201,7 +207,18 @@
                                 <entry>3</entry>
                                 <entry>2</entry>
                                 <entry>1</entry>
+                                <entry>1</entry>
                                 <entry>0</entry>
+                            </row>
+
+                            <row>
+                                <entry>Traits</entry>
+                                <entry>4</entry>
+                                <entry>3</entry>
+                                <entry>2</entry>
+                                <entry>1</entry>
+                                <entry>0</entry>
+                                <entry>-1</entry>
                             </row>
                         </tbody>
                     </table>
@@ -215,18 +232,19 @@
                         available to spend, and the maximum level of
                         attribute which may be purchased. The cost of each
                         level is as follows. Attributes above 5 tend to be
-                        very rare, and anything above 7 is truly
-                        outstanding.
+                        very rare, and anything above 7 is approaching
+                        super human.
                     </para>
 
                     <targetlist targetFirst="true">
                         <targetLabel>Score</targetLabel>
                         <valueLabel>Cost</valueLabel>
 
-                        <item target="7" value="+7,">
-                            Outstanding.
+                        <item target="7" value="+10,">
+                            Outstanding, at the limit of normal human
+                            ability.
                         </item>
-                        <item target="6" value="+5,">
+                        <item target="6" value="+6,">
                             Far above human average.
                         </item>
                         <item target="5" value="+3,">
@@ -300,12 +318,6 @@
                         want.
                     </para>
 
-                    <para>
-                        If you take the same background multiple times,
-                        only the skills stack - bonuses to attributes,
-                        contacts and other benefits do not.
-                    </para>
-
                     <y:import-advantages href="options/backgrounds.yags" type="advantage"/>
                 </sect3>
 
@@ -318,6 +330,14 @@
                         nobody, a petty criminal with a lot of enemies and
                         no power over anyone. At 5, you are a powerful
                         politician or celebrity with a lot of influence.
+                    </para>
+
+                    <para>
+                        If you have a military background, then your social
+                        rank may be military. In a military campaign, social
+                        rank is not much of a problem, though a rank of 0
+                        puts you at the bottom of the pile - you get the
+                        worst jobs and are generally considered expendable.
                     </para>
 
                     <targetlist targetFirst="true">
@@ -395,6 +415,10 @@
                 <sect3>
                     <title>Wealth</title>
 
+                    <para>
+                        The level of your wealth.
+                    </para>
+
                     <targetlist targetFirst="true">
                         <targetLabel>Rating</targetLabel>
                         <valueLabel>Description</valueLabel>
@@ -442,6 +466,12 @@
                             order of hundreds of millions.
                         </item>
                     </targetlist>
+                </sect3>
+
+                <sect3>
+                    <title>Special</title>
+
+                    <y:import-advantages href="options/advantages.yags" type="advantage"/>
                 </sect3>
             </sect2>
         </sect1>
@@ -626,6 +656,18 @@
                 <y:import-armourlist href="equipment/equipment.yags"/>
 
             </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Example Characters</title>
+
+            <para>
+                The following example characters should give an idea of what
+                is possible using <s>Yags</s>. They have all been built using
+                the character generation system given here.
+            </para>
+
+            <import-characters href="options/examples.yags"/>
         </sect1>
     </body>
 

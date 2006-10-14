@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2006-10-11 19:45:36 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2006-10-14 22:35:16 $
 
     Categories
 
@@ -54,6 +54,56 @@
     Prices should be in farthings, but prices can't really be trusted yet.
  -->
 <equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+
+    <item name="Flintlock Pistol">
+        <category>Weapon</category>
+        <importance>1</importance>
+        <availability>3</availability>
+
+        <short>An archaic handgun.</short>
+
+        <description>
+            <para>
+                Tech level 5 handgun.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>metal</material>
+        <cost>2500</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+
+            <combat>
+                <attack>+3</attack>
+                <damage>20</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>25</short>
+                    <medium>100</medium>
+                    <long>200</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+
+            <capacity>1</capacity>
+            <rof>1</rof>
+            <recoil>-5</recoil>
+
+            <properties>
+                <missile/>
+                <firearm/>
+            </properties>
+        </weapon>
+    </item>
+
 
     <item name="Pistol">
         <category>Weapon</category>
@@ -96,7 +146,7 @@
 
             <capacity>12</capacity>
             <rof>6</rof>
-            <recoil>-3</recoil>
+            <recoil>-1</recoil>
 
             <properties>
                 <missile/>
@@ -248,7 +298,7 @@
 
             <capacity>15</capacity>
             <rof>5</rof>
-            <recoil>-4</recoil>
+            <recoil>-3</recoil>
 
             <properties>
                 <missile/>
@@ -363,11 +413,11 @@
         <importance>3</importance>
         <availability>3</availability>
 
-        <short>A heavy rifle.</short>
+        <short>A heavy automatic rifle.</short>
 
         <description>
             <para>
-                The pistol is a typical hand gun.
+                A fully automatic weapon design for use in combat.
             </para>
         </description>
 
@@ -396,7 +446,7 @@
             <reach>0</reach>
 
             <capacity>30</capacity>
-            <rof>60</rof>
+            <rof>30</rof>
             <recoil>-3</recoil>
 
             <properties>
