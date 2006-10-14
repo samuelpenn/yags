@@ -27,6 +27,9 @@
         </description>
     </advantage>
 
+    <!--
+        Traveller.
+    -->
     <advantage name="Traveller" type="advantage">
         <cost points="1"/>
         <prerequisite>Citizen of the Imperium</prerequisite>
@@ -44,6 +47,81 @@
                 <e>Speak (any language)</e> (4/+0),
                 <e>Write (any language)</e> (2/+2),
                 <e>Current affairs</e> (2/+2).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Businessman" type="advantage">
+        <cost points="1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are a merchant and trader, with a good sense for profit.
+                You have probably worked in a number of different industries,
+                on a number of different worlds.
+            </para>
+
+            <para>
+                You gain the following skills:
+                <e>Charm</e> (4/+1),
+                <e>Guile</e> (4/+1),
+                <e>Trade</e> (4/+2),
+                <e>Accountancy</e> (2/+1),
+                <e>Administration</e> (2/+1).
+                <e>Economics</e> (2/+1),
+                <e>Etiquette</e> (2/+1),
+                <e>Law</e> (2/+2),
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Bureaucrat" type="advantage">
+        <cost points="1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You've worked as a civil servant, as part of the bureacracy
+                of a large government or multi-national corporation. You
+                know how these organisations work, and how best to take
+                advantage of them when you need things done quickly.
+            </para>
+
+            <para>
+                You gain the following skills:
+                <e>Guile</e> (4/+1),
+                <e>Accountancy</e> (4/+2),
+                <e>Administration</e> (4/+2),
+                <e>Computer Operation</e> (4/+2),
+                <e>Politics</e> (2/+2),
+                <e>Law</e> (2/+2).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Hacker" type="advantage">
+        <cost points="2"/>
+        <prerequisite>Intelligence 4+</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You've had plenty of experience working with computers and
+                other electronic devices. You know how to get the best out
+                of them, including getting them to do things they're not
+                meant to do.
+            </para>
+
+            <para>
+                You gain the following skills:
+                <e>Computer operation</e> (4/+3),
+                <e>Computer hacking</e> (4/+2),
+                <e>Administration</e> (2/+1),
+                <e>Research</e> (2/+1),
+                any other two technical skills (4/+2).
+            </para>
+
+            <para>
+                You may take up to 10 points worth of techniques for
+                any Technical skills.
             </para>
         </description>
     </advantage>
@@ -66,6 +144,10 @@
                 You gain the following skills:
                 <e>Research</e> (4/+1),
                 any 3 other Academic skills (4/+2).
+            </para>
+
+            <para>
+                You may have up to 8 points of techniques in Academic skills.
             </para>
         </description>
     </advantage>
@@ -103,17 +185,17 @@
             <para>
                 You have had military training, and it is your choice
                 whether you are still in the military or whether you left
-                with a good reputation. The first time you take this
-                background, you gain a +1 bonus to <t>Health</t>.
+                with a good reputation.
             </para>
 
             <para>
                 You gain the following skills:
-                <e>Military etiquette</e> (4/+1),
+                <e>Military etiquette</e> (4/+0),
                 <e>Tactics</e> (4/+1),
-                <e>Athletics</e> (4/+1),
+                <e>Athletics</e> (3/+1),
+                <e>Awareness</e> (3/+1),
                 <e>Brawl</e> (4/+1),
-                <e>Stealth</e> (3/+1),
+                <e>Stealth</e> (2/+1),
                 <e>Pistol</e> (4/+1),
                 <e>Rifle</e> (4/+1),
                 any two other military or combat skills (4/+1).
@@ -159,19 +241,19 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You may take this background if you already have a
-                <e>Military background</e>. You also gain +1 to <t>Health</t>
-                and <t>Perception</t> the first time you take this background.
+                <e>Military background</e> of some kind.
             </para>
 
             <para>
                 You gain the following skills:
-                <e>Athletics</e> (6/+2),
+                <e>Athletics</e> (4/+1),
+                <e>Awareness</e> (4/+1),
                 <e>Brawl</e> (6/+2),
-                <e>Stealth</e> (6/+2),
+                <e>Stealth</e> (4/+1),
                 <e>Rifle</e> (6/+2),
                 <e>Tactics</e> (6/+2)
                 <e>Sniper</e> (5/+2),
-                any 3 military, vehicle, combat or rogue skills (4/+3).
+                any 3 military, vehicle, combat or rogue skills (4/+2).
             </para>
 
             <para>
@@ -260,6 +342,37 @@
 
             <para>
                 You will have some contacts amongst shipping crews.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Imperial Scout Service" type="advantage">
+        <cost points="2"/>
+
+        <prerequisite>Intelligence 3+</prerequisite>
+        <prerequisite>Perception 3+</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are, or have been, a member of the Scount Service,
+                spending your time exploring strange new worlds. This
+                frequently requires working alone in harsh environments
+                amongst hostile natives.
+            </para>
+
+            <para>
+                You gain the following skills:
+                <e>Alien races</e> (2/+1),
+                <e>Archaeology</e> (2/+1),
+                <e>Biology</e> (2/+1),
+                <e>Ecology</e> (4/+2),
+                <e>Science</e> (2/+2),
+                <e>Pistol</e> (3/+1),
+                <e>Jump navigation</e> (4/+1),
+                <e>Spaceship systems</e> (4/+1),
+                <e>Orbital navigation</e> (4/+1),
+                <e>Sensor systems</e> (4/+2),
+                any vehicle skill (4/+1).
             </para>
         </description>
     </advantage>
