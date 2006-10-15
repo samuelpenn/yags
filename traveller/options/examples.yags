@@ -5,6 +5,14 @@
     <character name="Special Forces">
         <description>
             <short>A special forces soldier.</short>
+
+            <background>
+                <para>
+                    A special forces soldier, trained for black ops missions.
+                    Priorities were (A) Background, (B) Attributes, (C) Experience,
+                    (D) Traits, (E) Social and (F) Wealth.
+                </para>
+            </background>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
@@ -22,7 +30,7 @@
             <skills>
                 <group name="Talents" type="talents">
                     <skill name="Athletics" score="6"/>
-                    <skill name="Awareness" score="2"/>
+                    <skill name="Awareness" score="3"/>
                     <skill name="Brawl" score="9"/>
                     <skill name="Charm" score="2"/>
                     <skill name="Guile" score="2"/>
@@ -51,10 +59,25 @@
                     <skill name="Military etiquette" score="4"/>
                     <skill name="Combat engineering" score="4"/>
                 </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Motorbike" score="3"/>
+                    <skill name="Drive" score="4"/>
+                    <skill name="Survival" score="3"/>
+                </group>
             </skills>
 
             <advantages>
+                <advantage name="Cool"/>
                 <advantage name="Combat reflexes" skill="Melee" cost="2"/>
+                <advantage name="Close combat" skill="Brawl" cost="2"/>
+                <advantage name="Disabling hold" skill="Brawl" cost="4"/>
+                <advantage name="Hard to kill" skill="Brawl" cost="2"/>
+
+                <advantage name="Quick load" skill="Firearms" cost="2"/>
+                <advantage name="Sharp shooter" skill="Firearms" cost="4"/>
+                <advantage name="Surprise attack" skill="Tactics" cost="2"/>
+                <advantage name="Tactical move" skill="Tactics" cost="4"/>
             </advantages>
         </statistics>
     </character>
