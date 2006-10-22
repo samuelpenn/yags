@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2006-09-02 11:11:48 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2006-10-22 21:13:35 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -198,13 +198,29 @@
                     <para>
                         If you have zero skill in the right weapon skill,
                         then the load times are increased by one or
-                        doubled (whichever is greater).
+                        doubled (whichever is greater). Modifiers (such
+                        as <e>techniques</e>) which bring the load time to
+                        less than zero may ignore delays due to reloading
+                        weapons.
                     </para>
 
                     <para>
                         Weapons which require loading do not get the
-                        benefits of <e>careful shot</e> or <e>snap shot</e>.
+                        benefits of <e>careful shot</e> or <e>snap shot</e>
+                        except in the round after loading has been
+                        completed.
                     </para>
+
+                    <sect4>
+                        <title>Magazines and reloading</title>
+
+                        <para>
+                            Some weapons may have a magazine capacity and
+                            a reload time. In this case, the reload time is
+                            to reload the magazine - reloads between each
+                            shot is not required.
+                        </para>
+                    </sect4>
                 </sect3>
             </sect2>
 
@@ -225,17 +241,10 @@
                 </para>
 
                 <para>
-                    For every point of size the target is larger than you,
-                    you gain a +3 to your attack. For every point of size
-                    they are smaller than you, you suffer -3 to your
-                    attack.
-                </para>
-
-                <para>
-                    The very largest creatures are very difficult to miss at
-                    close ranges. Groups of smaller creatures may count as
-                    being of a larger size (but aiming for the group will
-                    mean that a random individual is hit).
+                    For every point of size that the target is larger than
+                    you, there is -3 to the difficulty. For every point of
+                    size they are smaller than you, there is +3 to the
+                    difficulty.
                 </para>
             </sect2>
 
@@ -378,8 +387,8 @@
                         Bows, crossbows and similar weapons which fire a
                         fast and difficult to dodge projectile cause the
                         defence roll to be halved. Even faster projectile
-                        weapons (e.g. guns) do not allow any standard
-                        defence.
+                        weapons (anything with a weapon type of
+                        <e>Firearm</e>) quarter defence rolls.
                     </para>
 
                     <sect4>
@@ -393,6 +402,7 @@
                             is easier to do this if you have a higher
                             initiative, otherwise you will have to guess
                             from which direction the attack is coming from.
+                            Full dodges occur at normal initiative.
                         </para>
 
                         <para>
@@ -455,6 +465,23 @@
                         how bad a shot it is. In all cases, a luck point
                         can be spent before hand to negate, or at
                         least reduce, the chance of hitting a friend.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Firing at a crowd</title>
+
+                    <para>
+                        In some circumstances, you don't care who you hit
+                        as long as you hit someone. If firing at a group
+                        of potential targets, then you can reduce the
+                        range difficulty by 10 for each doubling of the
+                        number of targets.
+                    </para>
+
+                    <para>
+                        The range modifier cannot be reduced below zero.
+                        If you hit, then you hit a random target.
                     </para>
                 </sect3>
             </sect2>
