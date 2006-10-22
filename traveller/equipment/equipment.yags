@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.4 $
-    Date:    $Date: 2006-10-15 20:11:52 $
+    Version: $Revision: 1.5 $
+    Date:    $Date: 2006-10-22 21:12:44 $
 
     Categories
 
@@ -51,26 +51,29 @@
 
     All units are in cgs.
 
-    Prices should be in farthings, but prices can't really be trusted yet.
+    Prices are in credits.
+
+    Tech Level
+     4 1450-1700
+     5 1700-1900
+     6 1900-1950
+     7 1950-1980
+     8 1980-2020
+     9 2020+ (Interplanetary)
+    10 Interstellar (early jump)
+    11 Interstellar (Jump)
+    12 Interstellar (Imperium)
  -->
 <equipment xmlns="http://yagsbook.sourceforge.net/xml">
 
 
     <item name="Flintlock Pistol">
         <category>Weapon</category>
-        <importance>1</importance>
-        <availability>3</availability>
+        <importance>2</importance>
+        <availability>2</availability>
+        <techLevel>4</techLevel>
 
-        <short>An archaic handgun.</short>
-
-        <description>
-            <para>
-                Tech level 5 handgun.
-            </para>
-        </description>
-
-        <weight>1000</weight>
-        <material>metal</material>
+        <weight>1500</weight>
         <cost>50</cost>
 
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
@@ -80,10 +83,10 @@
 
             <combat>
                 <attack>+3</attack>
-                <damage>20</damage>
+                <damage>18</damage>
                 <range>
                     <increment>10</increment>
-                    <short>25</short>
+                    <short>50</short>
                     <medium>100</medium>
                     <long>200</long>
                 </range>
@@ -98,17 +101,144 @@
             <recoil>-5</recoil>
 
             <properties>
+                <reload score="5"/>
                 <missile/>
                 <firearm/>
             </properties>
         </weapon>
     </item>
 
+    <item name="Colt Revolver">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <techLevel>5</techLevel>
 
-    <item name="Pistol">
+        <weight>1000</weight>
+        <cost>50</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+
+            <combat>
+                <attack>+3</attack>
+                <damage>18</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>150</short>
+                    <medium>300</medium>
+                    <long>600</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>1</load>
+            <reach>0</reach>
+
+            <capacity>5</capacity>
+            <rof>5</rof>
+            <recoil>-5</recoil>
+
+            <properties>
+                <missile/>
+                <firearm/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Enfield Rifle">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <techLevel>5</techLevel>
+
+        <weight>4000</weight>
+        <cost>50</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+
+            <combat>
+                <attack>+4</attack>
+                <damage>25</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>500</short>
+                    <medium>1000</medium>
+                    <long>2000</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>4</load>
+            <reach>1</reach>
+
+            <capacity>1</capacity>
+            <rof>1</rof>
+            <recoil>-5</recoil>
+
+            <properties>
+                <missile/>
+                <firearm/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Holdout Pistol">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>3</availability>
+        <techLevel>8</techLevel>
+
+        <short>A small handgun.</short>
+
+        <weight>200</weight>
+        <cost>300</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+
+            <combat>
+                <attack>+3</attack>
+                <damage>21</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>80</short>
+                    <medium>300</medium>
+                    <long>1000</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>0</load>
+            <reach>0</reach>
+
+            <capacity>5</capacity>
+            <rof>5</rof>
+            <recoil>-1</recoil>
+
+            <properties>
+                <missile/>
+                <firearm/>
+                <semiauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Auto Pistol">
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>8</techLevel>
 
         <short>A typical handgun.</short>
 
@@ -120,9 +250,8 @@
             </para>
         </description>
 
-        <weight>700</weight>
-        <material>metal</material>
-        <cost>2500</cost>
+        <weight>500</weight>
+        <cost>400</cost>
 
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
@@ -134,7 +263,7 @@
                 <damage>24</damage>
                 <range>
                     <increment>10</increment>
-                    <short>50</short>
+                    <short>100</short>
                     <medium>500</medium>
                     <long>1500</long>
                 </range>
@@ -144,7 +273,7 @@
             <load>0.5</load>
             <reach>0</reach>
 
-            <capacity>12</capacity>
+            <capacity>15</capacity>
             <rof>6</rof>
             <recoil>-1</recoil>
 
@@ -152,6 +281,7 @@
                 <missile/>
                 <firearm/>
                 <semiauto/>
+                <reload score="1"/>
             </properties>
         </weapon>
     </item>
@@ -173,7 +303,7 @@
             </para>
         </description>
 
-        <weight>800</weight>
+        <weight>700</weight>
         <material>metal</material>
         <cost>20</cost>
 
@@ -181,6 +311,7 @@
             <category>Firearms</category>
             <category>Pistols</category>
             <class>pistol</class>
+            <techLevel>8</techLevel>
 
             <combat>
                 <attack>+5</attack>
@@ -204,6 +335,7 @@
             <properties>
                 <missile/>
                 <firearm/>
+                <reload score="2"/>
             </properties>
         </weapon>
     </item>
@@ -212,6 +344,7 @@
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>8</techLevel>
 
         <short>A large revolver.</short>
 
@@ -224,7 +357,7 @@
             </para>
         </description>
 
-        <weight>1200</weight>
+        <weight>900</weight>
         <material>metal</material>
         <cost>2500</cost>
 
@@ -255,6 +388,7 @@
             <properties>
                 <missile/>
                 <firearm/>
+                <reload score="2"/>
             </properties>
         </weapon>
     </item>
@@ -263,6 +397,7 @@
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>8</techLevel>
 
         <short>A heavy handgun.</short>
 
@@ -304,14 +439,16 @@
                 <missile/>
                 <firearm/>
                 <semiauto/>
+                <reload score="1"/>
             </properties>
         </weapon>
     </item>
 
-    <item name="Auto Pistol">
+    <item name="Uzi">
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>8</techLevel>
 
         <short>Fully automatic machine pistol.</short>
 
@@ -354,6 +491,7 @@
                 <missile/>
                 <firearm/>
                 <automatic/>
+                <reload score="1"/>
             </properties>
         </weapon>
     </item>
@@ -363,6 +501,7 @@
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>8</techLevel>
 
         <short>A rifle designed for hunting.</short>
 
@@ -404,6 +543,7 @@
                 <missile/>
                 <firearm/>
                 <semiauto/>
+                <reload score="1"/>
             </properties>
         </weapon>
     </item>
@@ -412,6 +552,7 @@
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>8</techLevel>
 
         <short>A heavy automatic rifle.</short>
 
@@ -454,6 +595,7 @@
                 <firearm/>
                 <threeshots/>
                 <automatic/>
+                <reload score="1"/>
             </properties>
         </weapon>
     </item>
@@ -463,6 +605,7 @@
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>8</techLevel>
 
         <short>A shotgun.</short>
         <description>
@@ -501,6 +644,8 @@
                 <missile/>
                 <firearm/>
                 <semiauto/>
+                <light/>
+                <reload score="2"/>
             </properties>
         </weapon>
     </item>
@@ -509,6 +654,7 @@
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>8</techLevel>
 
         <short>A fully automatic shotgun.</short>
         <description>
@@ -547,6 +693,8 @@
                 <missile/>
                 <firearm/>
                 <automatic/>
+                <light/>
+                <reload score="1"/>
             </properties>
         </weapon>
     </item>
@@ -555,6 +703,7 @@
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>8</techLevel>
 
         <short>A rapid fire rifle firing light rounds.</short>
         <description>
@@ -594,6 +743,7 @@
                 <firearm/>
                 <automatic/>
                 <light/>
+                <reload score="2"/>
             </properties>
         </weapon>
     </item>
@@ -604,6 +754,7 @@
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>9</techLevel>
 
         <short>A self contained laser pistol.</short>
 
@@ -654,6 +805,7 @@
                 <missile/>
                 <firearm/>
                 <semiauto/>
+                <reload score="1"/>
             </properties>
         </weapon>
     </item>
@@ -662,6 +814,7 @@
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>9</techLevel>
 
         <short>A self contained laser rifle.</short>
 
@@ -712,6 +865,7 @@
                 <missile/>
                 <firearm/>
                 <semiauto/>
+                <reload score="1"/>
             </properties>
         </weapon>
     </item>
@@ -720,6 +874,7 @@
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>9</techLevel>
 
         <short>A laser rifle plus power pack.</short>
 
@@ -771,6 +926,7 @@
                 <missile/>
                 <firearm/>
                 <semiauto/>
+                <reload score="2"/>
             </properties>
         </weapon>
     </item>
@@ -779,6 +935,7 @@
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>10</techLevel>
 
         <short>A rifle firing plasma bursts.</short>
 
@@ -823,6 +980,7 @@
                 <missile/>
                 <firearm/>
                 <automatic/>
+                <reload score="1"/>
             </properties>
         </weapon>
     </item>
@@ -831,6 +989,7 @@
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>11</techLevel>
 
         <short>A rifle firing fusion bursts.</short>
 
@@ -874,6 +1033,7 @@
                 <firearm/>
                 <automatic/>
                 <heavy/>
+                <reload score="1"/>
             </properties>
         </weapon>
     </item>
@@ -881,23 +1041,41 @@
     <!--
         Armour and other protective clothing.
     -->
-    <item name="Combat vest">
+    <item name="Combat vest (TL8)">
         <category>Armour</category>
         <importance>3</importance>
         <availability>3</availability>
-
+        <techLevel>8</techLevel>
         <short>A light combat vest.</short>
 
-        <description>
-            <para>
-                A protective vest consisting of stiffened cloth and
-                plastic covering the torso, and lighter more flexible
-                cloth around the arms.
-            </para>
-        </description>
+        <weight>1500</weight>
+        <cost>150</cost>
 
-        <weight>1000</weight>
-        <material>plastic</material>
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+4</protection>
+            <load>1</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <light/>
+                <vitals score="1"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Combat vest (TL10)">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>10</techLevel>
+        <short>A light combat vest.</short>
+
+        <weight>1200</weight>
         <cost>150</cost>
 
         <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
@@ -910,7 +1088,42 @@
             </covers>
 
             <properties>
-                <bp/>
+                <bulletproof/>
+                <light/>
+                <vitals score="2"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Combat vest (TL12)">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+        <short>A light combat vest.</short>
+
+        <description>
+            <para>
+                A protective vest consisting of stiffened cloth and
+                plastic covering the torso, and lighter more flexible
+                cloth around the arms.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <cost>150</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+5</protection>
+            <load>0.5</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
                 <light/>
                 <vitals score="2"/>
             </properties>
@@ -921,6 +1134,7 @@
         <category>Armour</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>10</techLevel>
 
         <short>Light bulletproof cloth undergarment.</short>
 
@@ -947,7 +1161,7 @@
             </covers>
 
             <properties>
-                <bp/>
+                <bulletproof/>
                 <light/>
             </properties>
         </armour>
@@ -957,6 +1171,7 @@
         <category>Armour</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>10</techLevel>
 
         <short>A had combat helmet.</short>
 
@@ -980,17 +1195,18 @@
             </covers>
 
             <properties>
-                <bp/>
+                <bulletproof/>
                 <heavy/>
                 <vitals score="2"/>
             </properties>
         </armour>
     </item>
 
-    <item name="Light combat armour">
+    <item name="Light combat armour (TL10)">
         <category>Armour</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>10</techLevel>
 
         <short>A full suit of combat armour</short>
 
@@ -1006,7 +1222,7 @@
         <cost>1000</cost>
 
         <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <protection>+8</protection>
+            <protection>+7</protection>
             <load>5</load>
 
             <covers>
@@ -1017,7 +1233,7 @@
             </covers>
 
             <properties>
-                <bp/>
+                <bulletproof/>
                 <light/>
                 <restrictive score="1"/>
                 <vitals score="3"/>
@@ -1025,10 +1241,49 @@
         </armour>
     </item>
 
-    <item name="Heavy combat armour">
+    <item name="Light combat armour (TL12)">
         <category>Armour</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>A full suit of combat armour</short>
+
+        <description>
+            <para>
+                A full body suit of combat armour, consisting of plastic
+                and cloth, with stiff plates and bulletproof weave.
+            </para>
+        </description>
+
+        <weight>3500</weight>
+        <material>plastic</material>
+        <cost>1000</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+8</protection>
+            <load>2</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <light/>
+                <vitals score="3"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Heavy combat armour (TL10)">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>10</techLevel>
 
         <short>A full suit of heavy combat armour</short>
         <description>
@@ -1046,7 +1301,7 @@
         <cost>1500</cost>
 
         <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <protection>+15</protection>
+            <protection>+13</protection>
             <load>8</load>
 
             <covers>
@@ -1058,7 +1313,7 @@
             </covers>
 
             <properties>
-                <bp/>
+                <bulletproof/>
                 <heavy/>
                 <restrictive score="2"/>
                 <vitals score="5"/>
@@ -1066,10 +1321,54 @@
         </armour>
     </item>
 
-    <item name="Battledress">
+
+    <item name="Heavy combat armour (TL12)">
         <category>Armour</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>A full suit of heavy combat armour</short>
+        <description>
+            <para>
+                A full body suit of combat armour, consisting of plastic
+                and cloth, with stiff plates and bulletproof weave. Unlike
+                light combat armour, this is fully enclosed and protects
+                from chemical and biological weapons, as well as providing
+                limited vacuum life support. It includes a helmet.
+            </para>
+        </description>
+
+        <weight>6000</weight>
+        <material>plastic</material>
+        <cost>1500</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+15</protection>
+            <load>5</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+                <head/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <heavy/>
+                <restrictive score="1"/>
+                <vitals score="5"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Battledress (TL12)">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
 
         <short>Heavy powered armour</short>
         <description>
@@ -1095,7 +1394,7 @@
             </covers>
 
             <properties>
-                <bp/>
+                <bulletproof/>
                 <heavy/>
                 <restrictive score="1"/>
                 <vitals score="10"/>
