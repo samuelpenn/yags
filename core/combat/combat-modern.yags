@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.12 $</version>
-            <date>$Date: 2006-10-15 20:06:35 $</date>
+            <version>$Revision: 1.13 $</version>
+            <date>$Date: 2006-10-24 18:52:19 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -338,59 +338,30 @@
                     <title>Single target</title>
 
                     <para>
-                        When firing at a single target, you gain an attack
-                        bonus equal to the number of bullets fired. If you
-                        hit, roll damage for a single bullet, with a special
-                        bonus to the die roll (<e>not</e> the damage) equal
-                        to the number of bullets, up to a maximum of 20.
+                        When firing at a single target you gain an attack
+                        bonus equal to the number of bullets in the burst,
+                        which will normally be +10. However, because of the
+                        uncontrolled nature of the burst, the effective
+                        range to the target (for purposes of hitting) are
+                        doubled. This doubling stacks with other range
+                        modifiers in the normal way, so a burst taken as a
+                        snapshot will triple the range.
                     </para>
-
-                    <example>
-                        <para>
-                            You're attacking with an automatic pistol, which
-                            has a +5 attack bonus, 20 shots and does +24
-                            damage, and decide to fire a single burst which
-                            will be 10 bullets.
-                        </para>
-
-                        <para>
-                            Your first burst has an attack bonus of +15 (+5
-                            from the weapon's accuracy, and +10 from the
-                            number of bullets). If you hit, then you roll
-                            for damage, at 24 + d20.
-                        </para>
-
-                        <para>
-                            You roll a 14 on the damage die, and get a +10
-                            from the 10 bullets, which takes the roll up to
-                            its maximum of 20. Your total damage is 44.
-                        </para>
-                    </example>
 
                     <para>
-                        Reduce the damage by soak as normal, and figure out
-                        how many wounds are caused. The number of wounds is
-                        doubled if you made a <e>good</e> attack, and tripled
-                        if you made an <e>excellent</e> attack or better.
+                        If you get a <e>moderate</e> success, then you hit
+                        and roll damage as if you hit with a single bullet.
+                        On a <e>good</e> success, you gain +1 to the damage
+                        roll per bullet. On an <e>excellent</e> success
+                        you get a +2 per bullet.
                     </para>
-
-                    <example>
-                        <para>
-                            Carrying on the above example, let's say that
-                            that attack resulted in a <e>good</e> success.
-                            If the soak roll of the target was 22 (average
-                            for someone without body armour), then the
-                            final damage is 22, which is 5 wounds. The
-                            <e>good</e> success doubles this however to 10
-                            wounds, probably killing the target.
-                        </para>
-                    </example>
 
                     <para>
                         The above assumes that the target is at short range.
                         At medium range, halve the effective number of bullets
                         (round down), and at long range quarter them. This
-                        may mean an automatic miss at medium or long range.
+                        may mean an automatic miss at medium or long range
+                        if the number of bullets drops below one.
                     </para>
                 </sect3>
 
@@ -407,7 +378,7 @@
                     </para>
 
                     <para>
-                        The area covered is a 60 degree arc. Each burst is
+                        The area covered is a 30 degree arc. Each burst is
                         considered separately, with potential targets being
                         considered in order of increasing distance. The
                         effective range to targets is doubled.
@@ -701,7 +672,7 @@
 
                     <para>
                         Use the rules for automatic fire against an area,
-                        except the area can be up to 90 degrees wide. Ignore
+                        except the area can be up to 60 degrees wide. Ignore
                         the recoil penalty for each subsequent burst, but
                         halve the effective number of bullets in each burst.
                     </para>
