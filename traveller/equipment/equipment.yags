@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.5 $
-    Date:    $Date: 2006-10-22 21:12:44 $
+    Version: $Revision: 1.6 $
+    Date:    $Date: 2006-10-28 22:29:29 $
 
     Categories
 
@@ -66,8 +66,54 @@
  -->
 <equipment xmlns="http://yagsbook.sourceforge.net/xml">
 
+    <!--
+        Tech Level 4 Weapons
+    -->
 
-    <item name="Flintlock Pistol">
+    <item name="Musket (TL4)">
+        <category>Weapon</category>
+        <importance>1</importance>
+        <availability>2</availability>
+        <techLevel>4</techLevel>
+
+        <weight>8000</weight>
+        <cost>400</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+
+            <combat>
+                <attack>+5</attack>
+                <damage>25</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>100</short>
+                    <medium>200</medium>
+                    <long>800</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>8</load>
+            <reach>1</reach>
+
+            <capacity>1</capacity>
+            <rof>1</rof>
+            <recoil>-5</recoil>
+
+            <properties>
+                <unreliable score="3"/>
+                <reload score="12"/>
+                <missile/>
+                <firearm/>
+                <light/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Flintlock Pistol (TL4)">
         <category>Weapon</category>
         <importance>2</importance>
         <availability>2</availability>
@@ -86,9 +132,9 @@
                 <damage>18</damage>
                 <range>
                     <increment>10</increment>
-                    <short>50</short>
-                    <medium>100</medium>
-                    <long>200</long>
+                    <short>65</short>
+                    <medium>130</medium>
+                    <long>360</long>
                 </range>
             </combat>
 
@@ -101,21 +147,27 @@
             <recoil>-5</recoil>
 
             <properties>
+                <unreliable score="3"/>
                 <reload score="5"/>
                 <missile/>
                 <firearm/>
+                <light/>
             </properties>
         </weapon>
     </item>
 
-    <item name="Colt Revolver">
+    <!--
+        Tech Level 5 Weapons
+    -->
+
+    <item name="Colt Peacemaker (TL5)">
         <category>Weapon</category>
         <importance>2</importance>
         <availability>2</availability>
         <techLevel>5</techLevel>
 
         <weight>1000</weight>
-        <cost>50</cost>
+        <cost>15</cost>
 
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
@@ -124,12 +176,12 @@
 
             <combat>
                 <attack>+3</attack>
-                <damage>18</damage>
+                <damage>20</damage>
                 <range>
                     <increment>10</increment>
                     <short>150</short>
                     <medium>300</medium>
-                    <long>600</long>
+                    <long>1500</long>
                 </range>
             </combat>
 
@@ -145,18 +197,19 @@
                 <missile/>
                 <firearm/>
                 <reload score="2"/>
+                <light/>
             </properties>
         </weapon>
     </item>
 
-    <item name="Enfield Rifle">
+    <item name="Enfield Rifle (TL5)">
         <category>Weapon</category>
         <importance>2</importance>
         <availability>2</availability>
         <techLevel>5</techLevel>
 
         <weight>4000</weight>
-        <cost>50</cost>
+        <cost>15</cost>
 
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
@@ -164,12 +217,12 @@
             <class>rifle</class>
 
             <combat>
-                <attack>+4</attack>
+                <attack>+10</attack>
                 <damage>25</damage>
                 <range>
-                    <increment>15</increment>
-                    <short>500</short>
-                    <medium>1000</medium>
+                    <increment>20</increment>
+                    <short>600</short>
+                    <medium>1200</medium>
                     <long>2000</long>
                 </range>
             </combat>
@@ -185,335 +238,20 @@
             <properties>
                 <missile/>
                 <firearm/>
-                <reload score="1"/>
+                <unreliable score="2"/>
+                <reload score="3"/>
             </properties>
         </weapon>
     </item>
 
-    <item name="Holdout Pistol">
+    <item name="Mauser 98 (TL5)">
         <category>Weapon</category>
         <importance>2</importance>
-        <availability>3</availability>
-        <techLevel>8</techLevel>
+        <availability>2</availability>
+        <techLevel>5</techLevel>
 
-        <short>A small handgun.</short>
-
-        <weight>200</weight>
-        <cost>300</cost>
-
-        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <category>Firearms</category>
-            <category>Pistols</category>
-            <class>pistol</class>
-
-            <combat>
-                <attack>+3</attack>
-                <damage>21</damage>
-                <range>
-                    <increment>10</increment>
-                    <short>80</short>
-                    <medium>300</medium>
-                    <long>1000</long>
-                </range>
-            </combat>
-
-            <strength>2</strength>
-            <load>0</load>
-            <reach>0</reach>
-
-            <capacity>5</capacity>
-            <rof>5</rof>
-            <recoil>-1</recoil>
-
-            <properties>
-                <missile/>
-                <firearm/>
-                <semiauto/>
-                <reload score="1"/>
-            </properties>
-        </weapon>
-    </item>
-
-    <item name="Auto Pistol">
-        <category>Weapon</category>
-        <importance>3</importance>
-        <availability>3</availability>
-        <techLevel>8</techLevel>
-
-        <short>A typical handgun.</short>
-
-        <description>
-            <para>
-                The pistol is a generic semi-automatic hand gun. It is
-                reasonably light and reliable, with a large magazine
-                capacity and moderate stopping power.
-            </para>
-        </description>
-
-        <weight>500</weight>
-        <cost>400</cost>
-
-        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <category>Firearms</category>
-            <category>Pistols</category>
-            <class>pistol</class>
-
-            <combat>
-                <attack>+6</attack>
-                <damage>24</damage>
-                <range>
-                    <increment>10</increment>
-                    <short>100</short>
-                    <medium>500</medium>
-                    <long>1500</long>
-                </range>
-            </combat>
-
-            <strength>2</strength>
-            <load>0.5</load>
-            <reach>0</reach>
-
-            <capacity>15</capacity>
-            <rof>6</rof>
-            <recoil>-1</recoil>
-
-            <properties>
-                <missile/>
-                <firearm/>
-                <semiauto/>
-                <reload score="1"/>
-            </properties>
-        </weapon>
-    </item>
-
-
-    <item name="Revolver">
-        <category>Weapon</category>
-        <importance>3</importance>
-        <availability>3</availability>
-
-        <short>A typical revolver.</short>
-
-        <description>
-            <para>
-                The revolver is a simpler gun then an autoloader. It is
-                less likely to jam, and jams can be cleared by simply
-                firing again. However, they are bulkier and carry fewer
-                bullets than most autoloaders.
-            </para>
-        </description>
-
-        <weight>700</weight>
-        <material>metal</material>
-        <cost>20</cost>
-
-        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <category>Firearms</category>
-            <category>Pistols</category>
-            <class>pistol</class>
-            <techLevel>8</techLevel>
-
-            <combat>
-                <attack>+5</attack>
-                <damage>27</damage>
-                <range>
-                    <increment>10</increment>
-                    <short>50</short>
-                    <medium>400</medium>
-                    <long>1200</long>
-                </range>
-            </combat>
-
-            <strength>2</strength>
-            <load>0.5</load>
-            <reach>0</reach>
-
-            <capacity>6</capacity>
-            <rof>6</rof>
-            <recoil>-3</recoil>
-
-            <properties>
-                <missile/>
-                <firearm/>
-                <reload score="2"/>
-            </properties>
-        </weapon>
-    </item>
-
-    <item name="Heavy Revolver">
-        <category>Weapon</category>
-        <importance>3</importance>
-        <availability>3</availability>
-        <techLevel>8</techLevel>
-
-        <short>A large revolver.</short>
-
-        <description>
-            <para>
-                The revolver is a simpler gun then an autoloader. It is
-                less likely to jam, and jams can be cleared by simply
-                firing again. However, they are bulkier and carry fewer
-                bullets than most autoloaders.
-            </para>
-        </description>
-
-        <weight>900</weight>
-        <material>metal</material>
-        <cost>2500</cost>
-
-        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <category>Firearms</category>
-            <category>Pistols</category>
-            <class>pistol</class>
-
-            <combat>
-                <attack>+4</attack>
-                <damage>31</damage>
-                <range>
-                    <increment>10</increment>
-                    <short>50</short>
-                    <medium>300</medium>
-                    <long>900</long>
-                </range>
-            </combat>
-
-            <strength>3</strength>
-            <load>1</load>
-            <reach>0</reach>
-
-            <capacity>6</capacity>
-            <rof>6</rof>
-            <recoil>-5</recoil>
-
-            <properties>
-                <missile/>
-                <firearm/>
-                <reload score="2"/>
-            </properties>
-        </weapon>
-    </item>
-
-    <item name="Heavy Pistol">
-        <category>Weapon</category>
-        <importance>3</importance>
-        <availability>3</availability>
-        <techLevel>8</techLevel>
-
-        <short>A heavy handgun.</short>
-
-        <description>
-            <para>
-                The pistol is a typical hand gun.
-            </para>
-        </description>
-
-        <weight>1000</weight>
-        <material>metal</material>
-        <cost>20</cost>
-
-        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <category>Firearms</category>
-            <category>Pistols</category>
-            <class>pistol</class>
-
-            <combat>
-                <attack>+5</attack>
-                <damage>27</damage>
-                <range>
-                    <increment>10</increment>
-                    <short>75</short>
-                    <medium>750</medium>
-                    <long>2000</long>
-                </range>
-            </combat>
-
-            <strength>3</strength>
-            <load>0.5</load>
-            <reach>0</reach>
-
-            <capacity>15</capacity>
-            <rof>5</rof>
-            <recoil>-3</recoil>
-
-            <properties>
-                <missile/>
-                <firearm/>
-                <semiauto/>
-                <reload score="1"/>
-            </properties>
-        </weapon>
-    </item>
-
-    <item name="Uzi">
-        <category>Weapon</category>
-        <importance>3</importance>
-        <availability>3</availability>
-        <techLevel>8</techLevel>
-
-        <short>Fully automatic machine pistol.</short>
-
-        <description>
-            <para>
-                Widely inaccurate, however can be useful at close
-                range against lightly armoured targets.
-            </para>
-        </description>
-
-        <weight>1000</weight>
-        <material>plastic</material>
-        <cost>400</cost>
-
-        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <category>Firearms</category>
-            <category>Pistols</category>
-            <class>pistol</class>
-
-            <combat>
-                <attack>+3</attack>
-                <damage>23</damage>
-                <range>
-                    <increment>10</increment>
-                    <short>100</short>
-                    <medium>600</medium>
-                    <long>2000</long>
-                </range>
-            </combat>
-
-            <strength>3</strength>
-            <load>0.5</load>
-            <reach>0</reach>
-
-            <capacity>20</capacity>
-            <rof>20</rof>
-            <recoil>-5</recoil>
-
-            <properties>
-                <missile/>
-                <firearm/>
-                <automatic/>
-                <reload score="1"/>
-            </properties>
-        </weapon>
-    </item>
-
-
-    <item name="Hunting Rifle">
-        <category>Weapon</category>
-        <importance>3</importance>
-        <availability>3</availability>
-        <techLevel>8</techLevel>
-
-        <short>A rifle designed for hunting.</short>
-
-        <description>
-            <para>
-                A typical hunting rifle.
-            </para>
-        </description>
-
-        <weight>250</weight>
-        <material>metal</material>
-        <cost>20</cost>
+        <weight>4000</weight>
+        <cost>25</cost>
 
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
@@ -521,129 +259,373 @@
             <class>rifle</class>
 
             <combat>
-                <attack>+9</attack>
-                <damage>33</damage>
+                <attack>+10</attack>
+                <damage>25</damage>
                 <range>
                     <increment>20</increment>
-                    <short>75</short>
-                    <medium>750</medium>
-                    <long>2000</long>
+                    <short>900</short>
+                    <medium>1800</medium>
+                    <long>3600</long>
                 </range>
             </combat>
 
             <strength>2</strength>
-            <load>0.5</load>
-            <reach>0</reach>
+            <load>4</load>
+            <reach>1</reach>
 
-            <capacity>10</capacity>
-            <rof>5</rof>
-            <recoil>-4</recoil>
+            <capacity>5</capacity>
+            <rof>3</rof>
+            <recoil>-5</recoil>
 
             <properties>
                 <missile/>
                 <firearm/>
-                <semiauto/>
                 <reload score="1"/>
             </properties>
         </weapon>
     </item>
 
-    <item name="Assualt Rifle">
+    <!--
+        Tech Level 8
+    -->
+
+    <item name="Magnum Revolver, 9mm">
         <category>Weapon</category>
-        <importance>3</importance>
-        <availability>3</availability>
+        <importance>3</importance><availability>3</availability>
         <techLevel>8</techLevel>
+        <weight>1200</weight>
+        <cost>100</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+3</attack><damage>27</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>125</short><medium>250</medium><long>1000</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>1</load><reach>0</reach>
+            <capacity>6</capacity><rof>6</rof><recoil>-3</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
 
-        <short>A heavy automatic rifle.</short>
+    <item name="Body Pistol, 5mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>8</techLevel>
+        <weight>400</weight>
+        <cost>75</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+2</attack><damage>19</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>100</short><medium>200</medium><long>1500</long>
+                </range>
+            </combat>
+            <strength>1</strength><load>0</load><reach>0</reach>
+            <capacity>6</capacity><rof>3</rof><recoil>-1</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
 
-        <description>
-            <para>
-                A fully automatic weapon design for use in combat.
-            </para>
-        </description>
+    <item name="Auto Pistol, 9mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>8</techLevel>
+        <weight>1000</weight>
+        <cost>400</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+3</attack><damage>24</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>150</short><medium>300</medium><long>1800</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>1</load><reach>0</reach>
+            <capacity>15</capacity><rof>5</rof><recoil>-1</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
 
-        <weight>250</weight>
-        <material>metal</material>
-        <cost>20</cost>
+    <item name="Gauss Pistol, 4mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>10</techLevel>
+        <weight>800</weight>
+        <cost>1300</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+6</attack><damage>24</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>250</short><medium>500</medium><long>1500</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>1</load><reach>0</reach>
+            <capacity>15</capacity><rof>8</rof><recoil>-1</recoil>
+            <properties>
+                <missile/><firearm/><tripleauto/>
+                <light/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
 
+    <item name="Rifle, 9mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>8</techLevel>
+        <weight>4000</weight>
+        <cost>750</cost>
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
             <category>Rifles</category>
             <class>rifle</class>
-
             <combat>
-                <attack>+7</attack>
-                <damage>33</damage>
+                <attack>+10</attack><damage>40</damage>
                 <range>
-                    <increment>15</increment>
-                    <short>200</short>
-                    <medium>1000</medium>
-                    <long>3000</long>
+                    <increment>25</increment>
+                    <short>500</short><medium>1000</medium><long>3000</long>
                 </range>
             </combat>
-
-            <strength>2</strength>
-            <load>0.5</load>
-            <reach>0</reach>
-
-            <capacity>30</capacity>
-            <rof>30</rof>
-            <recoil>-3</recoil>
-
+            <strength>3</strength><load>4</load><reach>1</reach>
+            <capacity>10</capacity><rof>5</rof><recoil>-2</recoil>
             <properties>
-                <missile/>
-                <firearm/>
-                <threeshots/>
-                <automatic/>
+                <missile/><firearm/><semiauto/>
                 <reload score="1"/>
             </properties>
         </weapon>
     </item>
 
+    <item name="Rifle, 13mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>8</techLevel>
+        <weight>15000</weight>
+        <cost>4000</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+16</attack><damage>50</damage>
+                <range>
+                    <increment>40</increment>
+                    <short>1000</short><medium>2000</medium><long>5000</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>15</load><reach>1</reach>
+            <capacity>10</capacity><rof>3</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <heavy/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Assualt Rifle, 5.5mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>8</techLevel>
+        <weight>4000</weight>
+        <cost>540</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+10</attack><damage>33</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>400</short><medium>800</medium><long>3000</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>4</load><reach>1</reach>
+            <capacity>30</capacity><rof>30</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><automatic/>
+                <heavy/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Assualt Rifle, 7.5mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>9</techLevel>
+        <weight>5000</weight>
+        <cost>900</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+10</attack><damage>37</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>800</short><medium>1600</medium><long>5000</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>5</load><reach>1</reach>
+            <capacity>20</capacity><rof>10</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="SMG, 9mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>7</techLevel>
+        <weight>3000</weight>
+        <cost>150</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+7</attack><damage>27</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>150</short><medium>300</medium><long>1500</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>3</load><reach>1</reach>
+            <capacity>30</capacity><rof>30</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><automatic/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="ACR, 7mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>9</techLevel>
+        <weight>3000</weight>
+        <cost>1200</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+12</attack><damage>35</damage>
+                <range>
+                    <increment>30</increment>
+                    <short>600</short><medium>1200</medium><long>3500</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>3</load><reach>1</reach>
+            <capacity>20</capacity><rof>8</rof><recoil>-2</recoil>
+            <properties>
+                <missile/><firearm/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="ACR, 9mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>9</techLevel>
+        <weight>4000</weight>
+        <cost>1200</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+10</attack><damage>40</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>900</short><medium>1800</medium><long>4500</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>4</load><reach>1</reach>
+            <capacity>20</capacity><rof>7</rof><recoil>-3</recoil>
+            <properties>
+                <missile/><firearm/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Gauss Rifle, 4mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>10</techLevel>
+        <weight>3000</weight>
+        <cost>3000</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+15</attack><damage>40</damage>
+                <range>
+                    <increment>30</increment>
+                    <short>500</short><medium>1000</medium><long>2500</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>3</load><reach>1</reach>
+            <capacity>60</capacity><rof>60</rof><recoil>-2</recoil>
+            <properties>
+                <missile/><firearm/><automatic/><tripleauto/>
+                <light/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
 
     <item name="Shotgun">
         <category>Weapon</category>
-        <importance>3</importance>
-        <availability>3</availability>
+        <importance>3</importance><availability>3</availability>
         <techLevel>8</techLevel>
-
-        <short>A shotgun.</short>
-        <description>
-            <para>
-                Useful in close assualt.
-            </para>
-        </description>
         <weight>3000</weight>
-        <material>plastic</material>
-        <cost>20</cost>
-
+        <cost>235</cost>
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
             <category>Shotguns</category>
             <class>rifle</class>
-
             <combat>
-                <attack>+15</attack>
-                <damage>30</damage>
+                <attack>+8</attack><damage>40</damage>
                 <range>
-                    <increment>10</increment>
-                    <short>10</short>
-                    <medium>25</medium>
-                    <long>50</long>
+                    <increment>20</increment>
+                    <short>25</short><medium>50</medium><long>150</long>
                 </range>
             </combat>
-
-            <strength>3</strength>
-            <load>3</load>
-            <reach>0</reach>
-            <capacity>5</capacity>
-            <rof>5</rof>
-            <recoil>-5</recoil>
-
+            <strength>3</strength><load>3</load><reach>1</reach>
+            <capacity>5</capacity><rof>5</rof><recoil>-4</recoil>
             <properties>
-                <missile/>
-                <firearm/>
-                <semiauto/>
+                <missile/><firearm/><semiauto/>
                 <light/>
                 <reload score="2"/>
             </properties>
@@ -652,96 +634,25 @@
 
     <item name="Auto Shotgun">
         <category>Weapon</category>
-        <importance>3</importance>
-        <availability>3</availability>
+        <importance>3</importance><availability>3</availability>
         <techLevel>8</techLevel>
-
-        <short>A fully automatic shotgun.</short>
-        <description>
-            <para>
-                Useful in close assualt.
-            </para>
-        </description>
-        <weight>4000</weight>
-        <material>plastic</material>
-        <cost>20</cost>
-
+        <weight>5000</weight>
+        <cost>570</cost>
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
             <category>Shotguns</category>
             <class>rifle</class>
-
             <combat>
-                <attack>+15</attack>
-                <damage>30</damage>
+                <attack>+8</attack><damage>40</damage>
                 <range>
-                    <increment>10</increment>
-                    <short>10</short>
-                    <medium>25</medium>
-                    <long>50</long>
+                    <increment>20</increment>
+                    <short>25</short><medium>50</medium><long>150</long>
                 </range>
             </combat>
-
-            <strength>3</strength>
-            <load>4</load>
-            <reach>0</reach>
-            <capacity>10</capacity>
-            <rof>10</rof>
-            <recoil>-5</recoil>
-
+            <strength>3</strength><load>5</load><reach>1</reach>
+            <capacity>10</capacity><rof>5</rof><recoil>-4</recoil>
             <properties>
-                <missile/>
-                <firearm/>
-                <automatic/>
-                <light/>
-                <reload score="1"/>
-            </properties>
-        </weapon>
-    </item>
-
-    <item name="Gauss rifle">
-        <category>Weapon</category>
-        <importance>3</importance>
-        <availability>3</availability>
-        <techLevel>8</techLevel>
-
-        <short>A rapid fire rifle firing light rounds.</short>
-        <description>
-            <para>
-                Designed for use against unarmoured targets.
-            </para>
-        </description>
-        <weight>5000</weight>
-        <material>plastic</material>
-        <cost>20</cost>
-
-        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <category>Firearms</category>
-            <category>Rifles</category>
-            <class>rifle</class>
-
-            <combat>
-                <attack>+7</attack>
-                <damage>25</damage>
-                <range>
-                    <increment>15</increment>
-                    <short>75</short>
-                    <medium>250</medium>
-                    <long>1000</long>
-                </range>
-            </combat>
-
-            <strength>3</strength>
-            <load>5</load>
-            <reach>0</reach>
-            <capacity>200</capacity>
-            <rof>100</rof>
-            <recoil>-3</recoil>
-
-            <properties>
-                <missile/>
-                <firearm/>
-                <automatic/>
+                <missile/><firearm/><semiauto/><tripleauto/>
                 <light/>
                 <reload score="2"/>
             </properties>
