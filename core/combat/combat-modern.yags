@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.13 $</version>
-            <date>$Date: 2006-10-24 18:52:19 $</date>
+            <version>$Revision: 1.14 $</version>
+            <date>$Date: 2006-10-29 18:21:48 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -213,9 +213,20 @@
                         </item>
 
                         <item>
+                            Add the full attack bonus of the weapon unless
+                            you are making a snapshot.
+                        </item>
+
+                        <item>
                             Defence rolls are made as a standard brawling
                             defence, and penalties for multiple defences
                             applies to the pistol skill as normal.
+                        </item>
+
+                        <item>
+                            If you are in close melee combat with the
+                            target (they are attacking with a reach 0
+                            weapon) you loose your attack bonus.
                         </item>
                     </itemlist>
                 </sect3>
@@ -238,9 +249,20 @@
                         </item>
 
                         <item>
+                            If making a careful or aimed shot, add the full
+                            attack bonus of the weapon. For a normal shot,
+                            add half the attack bonus.
+                        </item>
+
+                        <item>
                             Defence rolls are made as a standard brawling
                             defence, and penalties for multiple defences
                             applies to the rifle skill as normal.
+                        </item>
+
+                        <item>
+                            If you are in melee combat with the target
+                            (any reach) you loose your attack bonus.
                         </item>
                     </itemlist>
                 </sect3>
@@ -266,9 +288,37 @@
                             No defences may be made in a round using this
                             skill.
                         </item>
+
+                        <item>
+                            If you are in melee combat of any kind, then
+                            you loose all attack bonuses of the weapon
+                            and any attack roll is halved.
+                        </item>
                     </itemlist>
                 </sect3>
+            </sect2>
 
+            <sect2>
+                <title>Range</title>
+
+                <para>
+                    Each weapon has three ranges listed for <e>short</e>,
+                    <e>medium</e> and <e>long</e> range. <e>Short</e> range
+                    is effectively point blank, and is the range over which
+                    the firearm is most effective.
+                </para>
+
+                <para>
+                    At <e>medium</e> range, the weapon is less effective
+                    and has its damage reduced by 5. It also looses the
+                    weapon's attack bonus and will always miss on a roll
+                    of 1-5 against a man sized target.
+                </para>
+
+                <para>
+                    At <e>long</e> range the firearm does -10 damage and
+                    will miss on a roll of 1-15 against a man sized target.
+                </para>
             </sect2>
 
             <sect2>
@@ -734,7 +784,7 @@
                         weapon firing a very fast projectile, though lasers
                         and similar weapons also count. Any attempts to
                         dodge or defend (except for a full dodge) are
-                        quartered.
+                        quartered unless the target is in melee with you.
                     </para>
 
                     <para>
