@@ -8,7 +8,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.3 $
+    Version: $Revision: 1.4 $
     Author: Samuel Penn
 -->
 
@@ -127,14 +127,14 @@
     <skill name="Computer operation" type="skill">
         <group>Technical</group>
 
-        <short>The skill of using a computer.</short>
+        <short>Using electronic devices.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                This covers basic computer use, from switching it on
-                to using a word processor, browsing the web or sending
-                an email. High levels of skill will allow basic
-                programming tasks and diagnosing faults.
+                You are experienced in the use of computer and electronic
+                devices including but not limited to computers, communication
+                systems and sensor systems. Normally it is used for writing
+                documents, searching for information, or monitoring displays.
             </para>
 
             <para>
@@ -190,43 +190,22 @@
         </description>
     </skill>
 
-    <skill name="Communication systems">
+    <skill name="Signal intelligence">
         <group>Technical</group>
         <group>Military</group>
 
-        <short>Using radios and similar communications gear.</short>
+        <short>Using sensor and communications equipment.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                This skill provides advanced knowledge of how to use
-                communication devices such as radios. It does not just
-                cover how to switch a device on and talk into it, since
-                that is covered by basic <t>Intelligence</t>, but provides
-                in depth knowledge of how to fix it when things go wrong,
-                how to get around jamming, how to jam someone else's
-                communications, and how to improve signal strength.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Sensor systems">
-        <group>Technical</group>
-        <group>Military</group>
-
-        <short>Using radar, sonar and other sensor systems.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Provides knowledge and experience with using advanced
-                sensor systems, interpreting raw sensor data, knowing
-                how to evade and block sensors, and how to make best
-                use of an existing sensor network.
-            </para>
-
-            <para>
-                This provides far more knowledge than a person working in
-                traffic control would have, and it is a skill normally
-                only found in the military, in labs or amongst hackers.
+                You have been trained in the use of both communications and
+                sensor systems. Anyone can talk into a microphone or watch
+                a radar display, but you have indepth knowledge of how such
+                things actually work, and how best to interpret data from
+                them. You have been trained in the use of electronic warfare,
+                how to get the best range out of communications gear, how
+                to interpret poor quality signals, and how to make best
+                use of signals intelligence.
             </para>
         </description>
     </skill>
@@ -248,75 +227,65 @@
         </description>
     </skill>
 
-    <skill name="Spaceship repair">
+    <skill name="Mechanics">
         <group>Technical</group>
+        <group>Vehicle</group>
         <group>Starship</group>
 
-        <short>Repairing spaceships</short>
+        <short>Repairing mechanical and electronic devices.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Knowledge of repairing spaceships, from fixing the hull to
-                looking after the reactor and drive systems.
+                This is a broad skill which covers both fixing machines
+                and fixing electronics. You have some knowledge of the
+                tasks required to fix cars, boats, planes, tanks,
+                spacecraft and computers. Since this is a very broad skill,
+                specialisations may be bought as techniques.
+            </para>
+
+            <para>
+                The base skill allows you to fix and repair things as long
+                as spare parts are readily available. If no spares can be
+                obtained, then difficulties are doubled in order to jury
+                rig a fix unless you also know a suitable technique.
+                Normally, fixing an item will require a diagnosis check
+                to figure out what is wrong (which may only take a few
+                minutes) followed by a repair check to actually fix it
+                (which may take many hours). Checks are based on
+                <t>Intelligence</t>.
+            </para>
+
+            <para>
+                Knowledge of a technique also halves penalties for complex
+                fixes, lack of proper tools, or needing to fix something
+                quickly.
             </para>
         </description>
+
+        <examples>
+            <example target="10">Routine checkup.</example>
+            <example target="15">Diagnosing or fixing light damage.</example>
+            <example target="20">Diagnosing or fixing moderate damage.</example>
+            <example target="25">Diagnosing or fixing heavy damage.</example>
+            <example target="+10">Somewhat tricky to fix.</example>
+            <example target="+20">Very tricky to fix.</example>
+            <example target="+10">Partial or wrong set of tools.</example>
+            <example target="+30">Improvised set of tools.</example>
+            <example target="+10">Quick fix (75% normal time).</example>
+            <example target="+20">Very quick fix (50% normal time).</example>
+            <example target="+40">Miracle fix (25% normal time).</example>
+        </examples>
     </skill>
 
-    <skill name="Grav vehicle repair">
+    <skill name="Engineering">
         <group>Technical</group>
-        <group>Vehicle</group>
 
-        <short>Repairing grav vehicles</short>
+        <short>Designing and building things.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Knowledge and experience with repairing ground based grav
-                vehicles, such as hover sleds, grav tanks and the like.
-                The skill is covers vehicles which are designed to hover
-                close to the ground rather than aircraft which use
-                grav technology to fly.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Aircraft repair">
-        <group>Technical</group>
-        <group>Vehicle</group>
-
-        <short>Repairing aircrafts.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Covers the repair and maintanence of aircraft, regardless
-                of the form of propulsion they use (either jet, propeller
-                or grav).
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Ground vehicle repair">
-        <group>Technical</group>
-        <group>Vehicle</group>
-
-        <short>Repairing ground vehicles.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Covers the repair and maintanence of ground based vehicles,
-                such as cars, bikes and tanks.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Electronics">
-        <group>Technical</group>
-
-        <short>Fixing and building electronic devices.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                A general skill that covers all electronic devices, from
-                radios to computers.
+                Designing physical things, such as bridges, cars, spacecraft
+                and the like. Take a <e>technique</e> to specialise.
             </para>
         </description>
     </skill>
