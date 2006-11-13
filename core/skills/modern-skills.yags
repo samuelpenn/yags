@@ -8,7 +8,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.10 $
+    Version: $Revision: 1.11 $
     Author: Samuel Penn
 -->
 
@@ -763,60 +763,6 @@
         </description>
     </skill>
 
-
-    <skill name="Electronics operation">
-        <group>Technical</group>
-        <default>Intelligence</default>
-
-        <short>Using electronic devices.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Enables you to operate electronic devices, such as
-                radios, media recorders, surveillance cameras, medical
-                scanners and other similar equipment. Note that
-                <e>Computer operation</e> is a separate skill. Electronic
-                devices are generally considered those that have a fixed
-                and simplified interface for a particular task, whilst
-                a computer tends to be far more flexible.
-            </para>
-
-            <para>
-                There is a technique for each type of electronic device
-                that can be used. Knowing the correct technique halves
-                the difficulty for a task.
-            </para>
-        </description>
-
-        <examples>
-            <example target="10">
-                Switching a device on, and ensuring that it is at least
-                working more or less correctly. Very basic use of the
-                device (talking on a radio, figuring out what blips on
-                a radar represent, taking a picture).
-            </example>
-
-            <example target="20">
-                Configuring a device to use non-default options, or
-                collabrating it correctly.
-            </example>
-
-            <example target="30">
-                Performing something specific with the device, such as
-                selecting a very precise channel, or switching off
-                only parts of an alarm system.
-            </example>
-
-            <example target="+20">
-                Countering interference or other problems.
-            </example>
-
-            <example target="+20">
-                Obtaining very precise results.
-            </example>
-        </examples>
-    </skill>
-
     <skill name="Electronics">
         <group>Technical</group>
         <prerequisite>Electronics operation</prerequisite>
@@ -840,24 +786,58 @@
 
     <skill name="Machinest">
         <group>Technical</group>
+        <default>Mechanics</default>
 
         <short>Building tools</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The skill of building high tech tools.
+                The skill of building high tech tools. Though absolutely
+                vital to a high tech society, most mechanics and engineers
+                can get away with buying standard parts from a local shop.
+                In a society where there isn't a ready availability of tools
+                and parts, most (if not all) engineers will have some
+                level of skill in <e>Machinest</e>.
             </para>
         </description>
     </skill>
 
-    <skill name="Engineer">
+    <skill name="Engineering">
         <group>Technical</group>
 
-        <short>Engineering.</short>
+        <short>The science of building things.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Engineering.
+                The knowledge and skill of designing, building and repairing
+                machines, buildings and other structures. Engineering tends
+                towards the theoretical side of things, and does not
+                necessarily cover the everyday maintenance of such items.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Mechanics">
+        <group>Technical</group>
+        <default>Engineering</default>
+
+        <short>Fixing machines.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of fixing mechanical devices when they break.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Electrician">
+        <group>Technical</group>
+
+        <short>Fixing electrical things.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of fixing electrical systems when they break.
             </para>
         </description>
     </skill>
