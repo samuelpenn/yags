@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.12 $</version>
-            <date>$Date: 2006-11-13 00:19:59 $</date>
+            <version>$Revision: 1.13 $</version>
+            <date>$Date: 2006-11-13 18:00:56 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -96,11 +96,7 @@
                 <para>
                     Once you have determined the type of character you wish
                     to play, it is time to determine the priorities of that
-                    character. There are five broad categories you must
-                    place in order of preference - <e>Attributes</e>,
-                    <e>Experience</e>, <e>Background</e>,
-                    <e>Social class</e> and <e>Wealth</e>.
-                    These are described below.
+                    character.
                 </para>
 
                 <itemlist order="sort">
@@ -118,121 +114,59 @@
                     </item>
 
                     <item name="Background">
-                        This covers what you have done up until this point.
-                        It is mostly a way to obtain a package of skills,
-                        either through education, military service or
-                        business experience. As well as skills, it can
-                        provide useful contacts.
-                    </item>
-
-                    <item name="Social class">
-                        Your social class determines how others view you. A
-                        high social rank provides you with a lot of power
-                        and responsibility (maybe you are a famous actor or
-                        a member of Parliment).
-                    </item>
-
-                    <item name="Wealth">
-                        Wealth determines how much disposable income you
-                        have. A high starting wealth also provides a
-                        fortune which can make you financially indepedent.
+                        Allows you to choose some special advantages for
+                        your character, from wealth and social status to
+                        psionic ability.
                     </item>
                 </itemlist>
 
                 <sect3>
-                    <title>Ranks</title>
+                    <title>Ranking Priorities</title>
 
                     <para>
-                        When designing your character, you should choose a
-                        rating for each area from A to E. For primary
-                        characters, you may choose one each of A, B, C, D
-                        and E. Secondary characters may choose B, C, D, D and E.
-                        Tertiary characters may choose C, C, D, D and E.
-                        D is considered to be average.
+                        When designing your character, you should choose which
+                        area will be primary, which secondary and which tertiary.
+                        Your choice only affects the number of points placed
+                        into each area at character generation, and has no
+                        effect after this point.
                     </para>
 
                     <table>
                         <title>Priority</title>
                         <colspec colwidth="16mm"/>
-                        <colspec colwidth="9mm"/>
-                        <colspec colwidth="9mm"/>
-                        <colspec colwidth="9mm"/>
-                        <colspec colwidth="9mm"/>
-                        <colspec colwidth="9mm"/>
-                        <colspec colwidth="9mm"/>
-                        <colspec colwidth="9mm"/>
+                        <colspec colwidth="20mm"/>
+                        <colspec colwidth="20mm"/>
+                        <colspec colwidth="20mm"/>
 
                         <thead>
                             <row>
                                 <entry>Category</entry>
-                                <entry>A</entry>
-                                <entry>B</entry>
-                                <entry>C</entry>
-                                <entry>D</entry>
-                                <entry>E</entry>
-                                <entry>F</entry>
+                                <entry>Primary</entry>
+                                <entry>Secondary</entry>
+                                <entry>Tertiary</entry>
                             </row>
                         </thead>
 
                         <tbody>
                             <row>
                                 <entry>Attributes</entry>
-                                <entry>+9/7</entry>
+                                <entry>+12/7</entry>
                                 <entry>+6/6</entry>
                                 <entry>+3/5</entry>
-                                <entry>+0/5</entry>
-                                <entry>-2/4</entry>
-                                <entry>-2/3</entry>
                             </row>
 
                             <row>
                                 <entry>Experience</entry>
-                                <entry>60/8</entry>
-                                <entry>40/7</entry>
-                                <entry>25/6</entry>
-                                <entry>15/5</entry>
-                                <entry>10/4</entry>
-                                <entry>10/3</entry>
+                                <entry>250/8</entry>
+                                <entry>150/7</entry>
+                                <entry>100/6</entry>
                             </row>
 
                             <row>
-                                <entry>Background</entry>
+                                <entry>Advantages</entry>
                                 <entry>5</entry>
-                                <entry>4</entry>
                                 <entry>3</entry>
-                                <entry>2</entry>
                                 <entry>1</entry>
-                                <entry>0</entry>
-                            </row>
-
-                            <row>
-                                <entry>Social</entry>
-                                <entry>4</entry>
-                                <entry>3</entry>
-                                <entry>2</entry>
-                                <entry>1</entry>
-                                <entry>1</entry>
-                                <entry>0</entry>
-                            </row>
-
-                            <row>
-                                <entry>Wealth</entry>
-                                <entry>4</entry>
-                                <entry>3</entry>
-                                <entry>2</entry>
-                                <entry>1</entry>
-                                <entry>1</entry>
-                                <entry>0</entry>
-                            </row>
-
-                            <row>
-                                <entry>Traits</entry>
-                                <entry>4</entry>
-                                <entry>3</entry>
-                                <entry>2</entry>
-                                <entry>1</entry>
-                                <entry>0</entry>
-                                <entry>-1</entry>
                             </row>
                         </tbody>
                     </table>
@@ -252,7 +186,7 @@
 
                     <targetlist targetFirst="true">
                         <targetLabel>Score</targetLabel>
-                        <valueLabel>Cost</valueLabel>
+                        <valueLabel>Cost and description</valueLabel>
 
                         <item target="7" value="+10,">
                             Outstanding, at the limit of normal human
@@ -274,7 +208,7 @@
                             Typical average for an adult. About 90% of the
                             population.
                         </item>
-                        <item target="2" value="-1,">
+                        <item target="2" value="-2,">
                             Significantly below average, the bottom 5%.
                         </item>
                     </targetlist>
@@ -300,192 +234,30 @@
                         is the maximum skill level any single skill can be
                         raised to.
                     </para>
-
-                    <para>
-                        Experience should be spent after any skills from
-                        background are chosen. Backgrounds tend to give
-                        a larger number of skill points, but in a more
-                        restricted area.
-                    </para>
                 </sect3>
 
                 <sect3>
                     <title>Background</title>
 
                     <para>
-                        Your background determines what you have been doing
-                        up until this point. A background provides a number
-                        of benefits, including skills, contacts and possibly
-                        equipment. There are a number of backgrounds
-                        available, and each has a point cost associated with
-                        it. The level of background that you choose defines
-                        the number of points you can spend.
+                        You may select one or more background options, which
+                        may be <e>advantages</e> or <e>disadvantages</e>. You
+                        may take as many advantages as you have points for,
+                        plus optionally one disadvantage which gives you an
+                        extra point to spend on an advantage.
                     </para>
 
-                    <para>
-                        You may purchase as many backgrounds as you have
-                        points for, and each can be taken more
-                        than once. Each background provides a number of
-                        skills, which give you a rating in the form X/+Y.
-                        The skill can be either raised to X, or increased
-                        by Y. You can take backgrounds in any order you
-                        want.
-                    </para>
+                    <sect4>
+                        <title>Advantages</title>
 
-                    <y:import-advantages href="options/backgrounds.yags" type="advantage"/>
-                </sect3>
+                        <y:import-advantages href="options/advantages.yags" type="advantage"/>
+                    </sect4>
 
-                <sect3>
-                    <title>Social</title>
+                    <sect4>
+                        <title>Disadvantages</title>
 
-                    <para>
-                        Your social rating allows you to buy reputation and
-                        power. With a social class of 0, you are a complete
-                        nobody, a petty criminal with a lot of enemies and
-                        no power over anyone. At 5, you are a powerful
-                        politician or celebrity with a lot of influence.
-                    </para>
-
-                    <para>
-                        If you have a military background, then your social
-                        rank may be military. In a military campaign, social
-                        rank is not much of a problem, though a rank of 0
-                        puts you at the bottom of the pile - you get the
-                        worst jobs and are generally considered expendable.
-                    </para>
-
-                    <targetlist targetFirst="true">
-                        <targetLabel>Rating</targetLabel>
-                        <valueLabel>Description</valueLabel>
-
-                        <item target="0" value="Outcast.">
-                            You are among the dregs of humanity. You are of
-                            no fixed abode, have several enemies and have
-                            probably been in trouble with the law. You may
-                            be guilty (or have been charged with) crimes
-                            considered dispicable (child rape, mass murder)
-                            and few people will be willing to help you.
-                        </item>
-
-                        <item target="1" value="Drifter.">
-                            You drift from place to place, never settling.
-                            People mistrust you because of your lifestyle,
-                            and few will give you the time of day.
-                        </item>
-
-                        <item target="2" value="Average joe.">
-                            You are an average person. You probably have a
-                            house (or at least, a mortgage) and have had
-                            steady jobs which can provide you with good
-                            references. You have a reasonable circle of
-                            friends, though most will be people like you.
-                        </item>
-
-                        <item target="3" value="Respectable.">
-                            You are a respected member of the community,
-                            and can call on others for help. You may be a
-                            doctor, lawyer, minor politician or community
-                            leader, and some people may have heard of you
-                            in your home country.
-                        </item>
-
-                        <item target="4" value="Celebrity.">
-                            You are famous in your country, or to a select
-                            group across the world. You know many people
-                            in high places, and more importantly, they
-                            consider you a friend. You may be a famous
-                            athlete, a rock star or a well known scientist.
-                            People such as Arthur C Clarke,
-                            David Attenborough or Richard Stallman.
-                        </item>
-
-                        <item target="5" value="World famous.">
-                            You are known and respected across the world.
-                            You have many contacts, and even where you
-                            don't know people personally, they will have
-                            heard of you, and some of them may be your
-                            fans. Examples are Madonna, Bill Clinton.
-                        </item>
-                    </targetlist>
-
-                    <para>
-                        Note that social class and wealth are not the same,
-                        and though they will normally be similar, it is
-                        possible for them to be widely different. A person
-                        with a wealth of +5 and social status of +0 would
-                        be unusual, and a good background will be required.
-                        Possibly you have access to a fortune, but in so
-                        much trouble with both criminals and the law that
-                        you are unable to settle down and make much use of
-                        it.
-                    </para>
-
-                    <para>
-                        If you are in the military, then your social class
-                        can represent your military rank.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Wealth</title>
-
-                    <para>
-                        The level of your wealth.
-                    </para>
-
-                    <targetlist targetFirst="true">
-                        <targetLabel>Rating</targetLabel>
-                        <valueLabel>Description</valueLabel>
-
-                        <item target="0" value="Poor.">
-                            You are heavily in debt, and pretty much live
-                            hand to mouth. You own nothing of worth.
-                        </item>
-
-                        <item target="1" value="Struggling.">
-                            You have little of worth, and probably some
-                            debts as well. You earn enough to live, but
-                            you constantly have to think about how you
-                            are going to spend your money.
-                        </item>
-
-                        <item target="2" value="Comfortable.">
-                            You are used to a typical upper middle class
-                            standard of living. You own a car (possible
-                            two), have a decent house (or rent a good
-                            flat in the city) and have a steady income.
-                            You still need to work to keep that standard
-                            of life style however.
-                        </item>
-
-                        <item target="3" value="Wealthy.">
-                            You are probably worth close to a million
-                            pounds, and rarely have to worry about having
-                            enough money. You could survive the rest of
-                            your life without working, but only if you
-                            invested wisely and lived cheaply. You have
-                            maybe a tenth of your total wealth as easily
-                            spendable wealth.
-                        </item>
-
-                        <item target="4" value="Rich.">
-                            You are rich enough not to have to worry about
-                            working again, whilst still be able to maintain
-                            a good standard of living. Your total fortune
-                            is in the order of tens of millions.
-                        </item>
-
-                        <item target="5" value="Very rich.">
-                            You are very rich, and have a wealth in the
-                            order of hundreds of millions.
-                        </item>
-                    </targetlist>
-                </sect3>
-
-                <sect3>
-                    <title>Traits</title>
-
-                    <y:import-advantages href="options/advantages.yags" type="advantage"/>
+                        <y:import-advantages href="options/advantages.yags" type="disadvantage"/>
+                    </sect4>
                 </sect3>
             </sect2>
         </sect1>
@@ -515,6 +287,20 @@
                 The average level of most 'just-earning-a-living' workers
                 however is still '4'
             </para>
+
+            <sect2>
+                <title>Basic skills</title>
+
+                <para>
+                    All characters who are part of the <e>Imperium</e> start
+                    with the following skills for free.
+                </para>
+
+                <para>
+                    Area lore (Imperium), Area lore (home sector),
+                    Area lore (home planet), Speak Ganglic.
+                </para>
+            </sect2>
 
             <sect2>
                 <title>Skill list</title>

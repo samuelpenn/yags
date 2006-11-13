@@ -8,18 +8,10 @@
 
             <background>
                 <para>
-                    A special forces soldier, trained for black ops missions.
-                    Priorities were (A) Attributes, (B) Experience, (C) Background,
-                    (D) Traits, (E) Social and (F) Wealth.
-                </para>
-
-                <para>
-                    Backgrounds: <e>Citizen of the Imperium</e>, <e>Imperial army</e>,
-                    <e>Special forces</e>.
-                </para>
-
-                <para>
-                    40pts of experience, 18 spent on techniques.
+                    A special forces soldier, trained for black ops missions. The
+                    priorities where chosen in the order Experience, Attributes and
+                    Background. This provides a wide range of skills at high levels
+                    together with a good selection of techniques.
                 </para>
             </background>
         </description>
@@ -28,29 +20,122 @@
             <attributes size="5" soak="12">
                 <attribute name="strength" score="4"/>
                 <attribute name="health" score="4"/>
-                <attribute name="agility" score="5"/>
-                <attribute name="dexterity" score="5"/>
+                <attribute name="agility" score="4"/>
+                <attribute name="dexterity" score="6"/>
                 <attribute name="perception" score="4"/>
                 <attribute name="intelligence" score="3"/>
                 <attribute name="empathy" score="2"/>
-                <attribute name="will" score="3"/>
+                <attribute name="will" score="2"/>
             </attributes>
 
             <skills>
                 <group name="Talents" type="talents">
                     <skill name="Athletics" score="4"/>
+                    <skill name="Awareness" score="5"/>
+                    <skill name="Brawl" score="6"/>
+                    <skill name="Charm" score="2"/>
+                    <skill name="Guile" score="2"/>
+                    <skill name="Sleight" score="3"/>
+                    <skill name="Stealth" score="6"/>
+                    <skill name="Throw" score="6"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak Ganglic" score="4"/>
+                    <skill name="Area lore (Imperium)" score="4"/>
+                    <skill name="Area lore (Sector: Spinward Marches)" score="4"/>
+                    <skill name="Area lore (Planet: Bonn)" score="4"/>
+                </group>
+
+                <group name="Combat" type="skills">
+                    <skill name="Rifle" score="8"/>
+                    <skill name="Tactics" score="6"/>
+                    <skill name="Pistol" score="4"/>
+                    <skill name="Karate" score="4"/>
+                </group>
+
+                <group name="Military" type="skills">
+                    <skill name="Survival" score="4"/>
+                    <skill name="Psionic block" score="4"/>
+                    <skill name="Demolitions" score="3"/>
+                    <skill name="Strategy" score="2"/>
+                    <skill name="Mechanics" score="1"/>
+                    <skill name="Combat engineering" score="1"/>
+                    <skill name="Parachuting" score="3"/>
+                </group>
+
+                <group name="Vehicle">
+                    <skill name="Heavy weapons" score="4"/>
+                    <skill name="Drive" score="4"/>
+                </group>
+            </skills>
+
+            <advantages>
+                <advantage name="Cool"/>
+
+                <advantage name="Blind fighting" skill="Awareness" cost="4"/>
+                <advantage name="Climbing" skill="Athletics" cost="4"/>
+                <advantage name="Swimming" skill="Athletics" cost="2"/>
+
+                <advantage name="Close combat" skill="Brawl" cost="2"/>
+                <advantage name="Combat reflexes" skill="Melee" cost="2"/>
+                <advantage name="Reflex dodge" skill="Melee" cost="4"/>
+
+                <advantage name="Jungle survival" skill="Survival" cost="4"/>
+
+                <advantage name="Hard to kill" skill="Brawl" cost="2"/>
+                <advantage name="Ignore pain" skill="Brawl" cost="4"/>
+
+                <advantage name="Quick load" skill="Firearms" cost="2"/>
+                <advantage name="Sharp shooter" skill="Firearms" cost="4"/>
+                <advantage name="Triple shot" skill="Firearms" cost="6"/>
+                <advantage name="Controlled fire" skill="Firearms" cost="4"/>
+
+                <advantage name="Surprise attack" skill="Tactics" cost="2"/>
+                <advantage name="Tactical move" skill="Tactics" cost="4"/>
+            </advantages>
+        </statistics>
+    </character>
+
+    <character name="Mercenary">
+        <description>
+            <short>A special forces soldier.</short>
+
+            <background>
+                <para>
+                    A mercenary soldier, with a good amount of military training
+                    but also a lot of natural talent. The priorities were chosen
+                    in the order Attributes, Experience and Background.
+                </para>
+            </background>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12">
+                <attribute name="strength" score="4"/>
+                <attribute name="health" score="3"/>
+                <attribute name="agility" score="6"/>
+                <attribute name="dexterity" score="6"/>
+                <attribute name="perception" score="5"/>
+                <attribute name="intelligence" score="3"/>
+                <attribute name="empathy" score="2"/>
+                <attribute name="will" score="2"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="3"/>
                     <skill name="Awareness" score="4"/>
                     <skill name="Brawl" score="6"/>
                     <skill name="Charm" score="2"/>
                     <skill name="Guile" score="2"/>
                     <skill name="Sleight" score="2"/>
                     <skill name="Stealth" score="4"/>
-                    <skill name="Throw" score="4"/> <!-- 4 from xp -->
+                    <skill name="Throw" score="4"/>
                 </group>
 
                 <group name="Knowledges" type="knowledges">
                     <skill name="Speak Ganglic" score="4"/>
-                    <skill name="Write Ganglic" score="4"/>
                     <skill name="Area lore (Imperium)" score="4"/>
                     <skill name="Area lore (Sector: Spinward Marches)" score="4"/>
                     <skill name="Area lore (Planet: Bonn)" score="4"/>
@@ -59,77 +144,57 @@
                 <group name="Combat" type="skills">
                     <skill name="Rifle" score="6"/>
                     <skill name="Tactics" score="6"/>
-                    <skill name="Pistol" score="3"/>
-                    <skill name="Melee weapon" score="1"/>
+                    <skill name="Pistol" score="4"/>
                 </group>
 
                 <group name="Military" type="skills">
-                    <skill name="Military etiquette" score="4"/>
-                    <skill name="Combat engineering" score="2"/>
-                    <skill name="Demolitions" score="6"/>
-                    <skill name="Psionic block" score="4"/>
-                </group>
-
-                <group name="Other" type="skills">
-                    <skill name="Computer operation" score="2"/>
-                    <skill name="Drive" score="4"/>
-                    <skill name="Heavy weapons" score="4"/>
                     <skill name="Survival" score="4"/>
+                    <skill name="Demolitions" score="3"/>
+                    <skill name="Combat engineering" score="2"/>
                     <skill name="Parachuting" score="1"/>
                 </group>
+
+                <group name="Vehicle">
+                    <skill name="Heavy weapons" score="3"/>
+                    <skill name="Drive" score="4"/>
+                </group>
+
+                <group name="Technical">
+                    <skill name="Security systems" score="2"/>
+                </group>
             </skills>
-            <!-- 50pts techniques - have 68 -->
+
             <advantages>
                 <advantage name="Cool"/>
 
-                <advantage name="Blind fighting" skill="Awareness" cost="4"/>
+                <advantage name="Swimming" skill="Athletics" cost="2"/>
 
                 <advantage name="Close combat" skill="Brawl" cost="2"/>
-                <advantage name="Disabling hold" skill="Brawl" cost="4"/>
-
                 <advantage name="Combat reflexes" skill="Melee" cost="2"/>
-                <advantage name="Reflex dodge" skill="Melee" cost="4"/>
 
-                <advantage name="Direction sense" skill="Survival" cost="2"/>
-                <advantage name="Hiking" skill="Survival" cost="4"/>
-                <advantage name="Jungle survival" skill="Survival" cost="4"/>
                 <advantage name="Desert survival" skill="Survival" cost="4"/>
 
                 <advantage name="Hard to kill" skill="Brawl" cost="2"/>
-                <advantage name="Ignore pain" skill="Brawl" cost="4"/>
 
                 <advantage name="Quick load" skill="Firearms" cost="2"/>
                 <advantage name="Sharp shooter" skill="Firearms" cost="4"/>
-                <advantage name="Multiple targets" skill="Firearms" cost="4"/>
                 <advantage name="Triple shot" skill="Firearms" cost="6"/>
-                <advantage name="Controlled fire" skill="Firearms" cost="4"/>
-
-                <advantage name="Swimming" skill="Athletics" cost="2"/>
 
                 <advantage name="Surprise attack" skill="Tactics" cost="2"/>
-                <advantage name="Tactical move" skill="Tactics" cost="4"/>
             </advantages>
         </statistics>
     </character>
 
 
-    <character name="Combat Technician">
+    <character name="Army Mechanic">
         <description>
             <short>Mechanic with combat experience.</short>
 
             <background>
                 <para>
-                    Priorities were (A) Experience, (B) Attributes, (C) Social,
-                    (D) Background, (E) Wealth and (F) Traits.
-                </para>
-
-                <para>
-                    Backgrounds: <e>Citizen of the Imperium</e>, <e>Imperial army</e>,
-                    <e>Technician</e>.
-                </para>
-
-                <para>
-                    50pts of experience.
+                    A mechanic and technical operative with military
+                    experience. Priorities are in the order Experience,
+                    Attributes, Background.
                 </para>
             </background>
         </description>
@@ -139,21 +204,21 @@
                 <attribute name="strength" score="3"/>
                 <attribute name="health" score="3"/>
                 <attribute name="agility" score="3"/>
-                <attribute name="dexterity" score="4"/>
-                <attribute name="perception" score="2"/>
+                <attribute name="dexterity" score="5"/>
+                <attribute name="perception" score="3"/>
                 <attribute name="intelligence" score="5"/>
-                <attribute name="empathy" score="2"/>
+                <attribute name="empathy" score="3"/>
                 <attribute name="will" score="3"/>
             </attributes>
 
             <skills>
                 <group name="Talents" type="talents">
-                    <skill name="Athletics" score="3"/>
-                    <skill name="Awareness" score="2"/>
-                    <skill name="Brawl" score="4"/>
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="3"/>
+                    <skill name="Brawl" score="3"/>
                     <skill name="Charm" score="2"/>
                     <skill name="Guile" score="2"/>
-                    <skill name="Sleight" score="2"/>
+                    <skill name="Sleight" score="3"/>
                     <skill name="Stealth" score="2"/>
                     <skill name="Throw" score="2"/>
                 </group>
@@ -168,46 +233,59 @@
 
                 <group name="Combat" type="skills">
                     <skill name="Rifle" score="4"/>
-                    <skill name="Tactics" score="3"/>
-                    <skill name="Pistol" score="3"/>
+                    <skill name="Pistol" score="4"/>
                 </group>
 
                 <group name="Military" type="skills">
-                    <skill name="Military etiquette" score="4"/>
-                    <skill name="Combat engineering" score="2"/>
-                    <skill name="Demolitions" score="2"/>
+                    <skill name="Combat engineering" score="8"/>
+                    <skill name="Demolitions" score="6"/>
+                    <skill name="First aid" score="2"/>
                 </group>
 
+                <group name="Academic" type="skills">
+                    <skill name="Research" score="1"/>
+                    <skill name="Astronomy" score="1"/>
+                </group>
 
                 <group name="Technical" type="skills">
-                    <skill name="Computer operation" score="4"/>
-                    <skill name="Administration" score="2"/>
-                    <skill name="Research" score="2"/>
-                    <skill name="Computer hacking" score="5"/>
-                    <skill name="Mechanical" score="4"/>
-                    <skill name="Security systems" score="6"/>
+                    <skill name="Mechanics" score="8"/>
                     <skill name="Science" score="4"/>
+                    <skill name="Mathematics" score="4"/>
+                    <skill name="Engineering" score="4"/>
+                    <skill name="Computer operation" score="4"/>
+                    <skill name="Scrounging" score="6"/>
+                    <skill name="Spaceship systems" score="2"/>
+                    <skill name="Security systems" score="4"/>
+                </group>
 
-                    <skill name="Spaceship operation" score="2"/>
-                    <skill name="Signal intelligence" score="2"/>
+                <group name="Vehicle" type="skills">
+                    <skill name="Drive" score="2"/>
+                    <skill name="Pilot" score="2"/>
+                    <skill name="Spaceship piloting" score="2"/>
                 </group>
             </skills>
 
             <advantages>
-                <advantage name="Cool"/>
+                <advantage name="Good looking"/>
 
-                <advantage name="Combat reflexes" skill="Melee" cost="2"/>
-                <advantage name="Hard to kill" skill="Brawl" cost="2"/>
+                <advantage name="Grav tech" skill="Mechanics" cost="4"/>
+                <advantage name="Medical" skill="Mechanics" cost="2"/>
+                <advantage name="Computers" skill="Mechanics" score="4"/>
+                <advantage name="Sensors" skill="Mechanics" score="2"/>
+                <advantage name="Power plants" skill="Mechanics" score="4"/>
+                <advantage name="Spaceships" skill="Mechanics" score="4"/>
+                <advantage name="Jump drives" skill="Mechanics" score="6"/>
+                <advantage name="Cars" skill="Mechanics" score="2"/>
+
+                <advantage name="Zero gravity" skill="Athletics" cost="2"/>
 
                 <advantage name="Quick load" skill="Firearms" cost="2"/>
                 <advantage name="Sharp shooter" skill="Firearms" cost="4"/>
+                <advantage name="Combat reflexes" skill="Melee" cost="2"/>
+                <advantage name="Hard to kill" skill="Brawl" cost="2"/>
 
-                <advantage name="Computers" skill="Mechanics" score="4"/>
-                <advantage name="System Administration" skill="Computer operation" score="4"/>
-                <advantage name="Computer Intrusion" skill="Computer operation" score="4"/>
-
-                <advantage name="Computer Security" skill="Computer operation" score="4"/>
-                <advantage name="Grav tech" skill="Mechanics" score="4"/>
+                <advantage name="Physics" skill="Science" cost="2"/>
+                <advantage name="Nuclear physics" skill="Science" cost="4"/>
             </advantages>
         </statistics>
     </character>
