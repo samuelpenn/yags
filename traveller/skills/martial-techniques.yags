@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+
+<!--
+    Bushido techniques.
+    Now split up and moved into the techniques directory.
+
+    Copyright (c) 2006, Samuel Penn.
+    This document can be redistributed and/or modified under the terms
+    of the GNU Public License as published by the Free Software Foundation
+    version 2.
+
+    Version: $Revision: 1.1 $
+    Author: Samuel Penn
+-->
+
+<advantages xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+    <header>
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2006-11-13 21:11:26 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2006</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+            <url>http://www.glendale.org.uk/gpl.txt</url>
+        </license>
+    </header>
+
+
+    <advantage name="Attack is defence" type="technique">
+        <cost points="4"/>
+        <skill name="Karate"/>
+        <prerequisite>Close combat</prerequisite>
+
+        <short>A good attack is a strong defence.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Halve penalty to attack for multiple defences. Ignore the
+                <e>free strike</e> against you if you do not defend against
+                the person you are attacking. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Fast attack" type="technique">
+        <cost points="6"/>
+        <skill name="Karate"/>
+        <prerequisite>Attack is defence</prerequisite>
+
+        <short>All attacks are fast.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Normal attacks are <e>fast</e> when using <e>Karate</e>.
+                Aggressive and defensive stances are unaffected. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Karate blow" type="technique">
+        <cost points="8"/>
+        <skill name="Karate"/>
+        <prerequisite>Fast attack</prerequisite>
+
+        <short>Can kill in a single blow.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When you attack you may concentrate your strike on the
+                vital organs of the target, aiming to kill them in a
+                single strike. This is an aggressive attack which uses
+                up a defence slot. If the target is injured by the
+                attack, they must make a size x health check against
+                a target of 10 + 5 x levels or immediately drop to
+                fatally wounded. If they succeed their check, then they
+                take one less damage level from the attack than normal.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Master of karate" type="technique">
+        <cost points="10"/>
+        <skill name="Karate"/>
+        <prerequisite>Karate blow</prerequisite>
+
+        <short>Use techniques with brawl</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                By mastering the style of karate until it becomes second
+                nature, you are able to use its techniques with any unarmed
+                combat skill (either brawl, or one with a prerequisite of
+                brawl). You also gain a +1 bonus to melle attack and defence
+                rolls for such skills per 2 points of karate. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Dodging defence" type="technique">
+        <cost points="2"/>
+        <skill name="Boxing"/>
+
+        <short>Bonus to soak.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If you defended against an attack using <e>Boxing</e>, and
+                failed, then you get a bonus to your soak equal to your
+                Boxing skill. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Sheltered attack" type="technique">
+        <cost points="4"/>
+        <skill name="Boxing"/>
+        <prerequisite>Dodging defence</prerequisite>
+
+        <short>Improved aggressive and defensive stances.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Declare this when taking an aggressive or defensive
+                stance when using the Boxing skill. You ignore all
+                penalties to attack and defence from the stance (though
+                still act fast or slow as normal, and still get the
+                bonus).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Aikijutsu defence" type="technique">
+        <cost points="2"/>
+        <skill name="Aikijutsu"/>
+        <prerequisite>Close combat</prerequisite>
+
+        <short>Counterstrike with a trip.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If you make a <e>good</e> defence whilst using Aikijutsu,
+                then once a round you may counterstrike with a trip attack.
+                Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Aikijutsu grapple" type="technique">
+        <cost points="4"/>
+        <skill name="Aikijutsu"/>
+        <prerequisite>Aikijutsu defence</prerequisite>
+
+        <short>Counterstrike with an armlock.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The difficulty of trip and grapple manouevres when using
+                Aikijutsu is reduced by one level - for example, instead of
+                a <e>good</e> attack to initiate a grapple, you only
+                require a moderate attack.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Aikijutsu throw" type="technique">
+        <cost points="6"/>
+        <skill name="Aikijutsu"/>
+        <prerequisite>Aikijutsu grapple</prerequisite>
+
+        <short>Specialisation in throws.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When performing a trip manouevre, gain an additional +1 to
+                your <t>agility</t> for both attack and defence.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Jujutsu blow" type="technique">
+        <cost points="2"/>
+        <skill name="Jujutsu"/>
+
+        <short>Punches are more effective.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Whenever you make a <e>good</e> openhand attack with
+                Jujutsu, and cause damage to your target, then the target
+                gains at least one stun, even if you do less than half
+                the target's current stuns. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Strike and fade" type="technique">
+        <cost points="4"/>
+        <skill name="Jujutsu"/>
+        <prerequisite>Jujutsu blow</prerequisite>
+
+        <short>Bonus to defence if hit opponent.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are able to strike at a foe to put them off balance
+                preventing them from hitting back at you. If you ever
+                succeed in an attack on a target, then any attacks they
+                make against you for the rest of the round give you a
+                +1 bonus to your agility for Jujutsu defence. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Improved strike" type="technique">
+        <cost points="6"/>
+        <skill name="Jujutsu"/>
+        <prerequisite>Strike and fade</prerequisite>
+
+        <short>Free strikes become automatic strikes.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are trained to make best advantage of the mistakes of
+                others. Whenever you have declared a Jujutsu attack against
+                someone, then any <e>free strikes</e> you gain against them
+                that round become <e>automatic strikes</e>.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Revenge strike" type="technique">
+        <cost points="8"/>
+        <skill name="Jujutsu"/>
+        <prerequisite>Improved strike</prerequisite>
+
+        <short>Counterstrike on good defence.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If you ever make a <e>good</e> jujutsu defence against
+                an attacker, then you gain a jujutsu <e>counterstrike</e>
+                in response.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Master of Jujutsu" type="technique">
+        <cost points="10"/>
+        <skill name="Jujutsu"/>
+        <prerequisite>Revenge strike</prerequisite>
+
+        <short>Use techniques with brawl.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                By mastering the style of jujutsu until it becomes second
+                nature, you are able to use its techniques with any unarmed
+                combat skill (either brawl, or one with a prerequisite of
+                brawl). You also gain a +1 bonus to attack and defence
+                rolls for such skills per 2 points of jujutsu. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+
+</advantages>
+
+
