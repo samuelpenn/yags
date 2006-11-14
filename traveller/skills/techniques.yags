@@ -14,8 +14,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.1 $</version>
-            <date>$Date: 2006-11-13 22:48:53 $</date>
+            <version>$Revision: 1.2 $</version>
+            <date>$Date: 2006-11-14 20:55:37 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -129,21 +129,10 @@
         </description>
     </advantage>
 
-    <advantage name="Physics" type="technique">
-        <cost points="2"/>
-        <skill name="Science"/>
-        <short>Advanced knowledge of physics.</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have a detailed knowledge of physics.
-            </para>
-        </description>
-    </advantage>
 
     <advantage name="Nuclear physics" type="technique">
         <cost points="4"/>
-        <skill name="Science"/>
-        <prerequisite>Physics</prerequisite>
+        <skill name="Physics"/>
         <short>The study of nuclear physics.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -156,8 +145,7 @@
 
     <advantage name="Quantum physics" type="technique">
         <cost points="4"/>
-        <skill name="Science"/>
-        <prerequisite>Physics</prerequisite>
+        <skill name="Physics"/>
         <short>The study of quantum physics.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -174,7 +162,7 @@
 
     <advantage name="Quantum gravity" type="technique">
         <cost points="6"/>
-        <skill name="Science"/>
+        <skill name="Physics"/>
         <prerequisite>Quantum physics</prerequisite>
         <short>The study of quantum gravity.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -188,8 +176,7 @@
 
     <advantage name="Relativity" type="technique">
         <cost points="4"/>
-        <skill name="Science"/>
-        <prerequisite>Physics</prerequisite>
+        <skill name="Physics"/>
         <short>The study of relativity.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -200,7 +187,7 @@
 
     <advantage name="Jump physics" type="technique">
         <cost points="6"/>
-        <skill name="Science"/>
+        <skill name="Physics"/>
         <prerequisite>Relativity</prerequisite>
         <short>The study of jump space.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -211,24 +198,25 @@
         </description>
     </advantage>
 
-    <advantage name="Chemistry" type="technique">
-        <cost points="2"/>
-        <skill name="Science"/>
-        <short>Advanced knowledge of chemistry.</short>
+    <advantage name="Biochemistry" type="technique">
+        <cost points="4"/>
+        <skill name="Chemistry"/>
+        <short>Advanced knowledge of biochemistry.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You have a detailed knowledge of chemistry.
+                You have a detailed knowledge of biochemistry.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Biology" type="technique">
-        <cost points="2"/>
-        <skill name="Science"/>
-        <short>Advanced knowledge of biology.</short>
+    <advantage name="Genetics" type="technique">
+        <cost points="4"/>
+        <skill name="Biology"/>
+        <prerequisite>Biochemistry</prerequisite>
+        <short>Advanced knowledge of genetics.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You have a detailed knowledge of biology.
+                You have a detailed knowledge of genetics.
             </para>
         </description>
     </advantage>

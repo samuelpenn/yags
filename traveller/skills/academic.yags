@@ -8,7 +8,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.4 $
+    Version: $Revision: 1.5 $
     Author: Samuel Penn
 -->
 
@@ -73,15 +73,57 @@
     <skill name="Science" type="knowledge">
         <group>Academic</group>
 
-        <short>The main sciences.</short>
+        <short>Basic science, logic and reasoning.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 <e>Science</e> covers both scientific theory and
-                reasoning, as well as the main sciences of physics,
-                chemistry and biology. It is a very broad skill,
-                and most actual scientists will have specialisations
-                within it.
+                reasoning, as well as the basics of current scientific
+                knowledge. It does not cover any one subject in depth,
+                but provides a solid foundation of scientific
+                methodology. A high skill also assumes a wide reading
+                of all the fields of science.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Physics" type="knowledge">
+        <group>Academic</group>
+        <prerequisite>Science</prerequisite>
+        <prerequisite>Mathematics</prerequisite>
+
+        <short>The science of physics.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The indepth study of physics, including nuclear,
+                quantum, relativity and gravity.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Chemistry" type="knowledge">
+        <group>Academic</group>
+        <prerequisite>Science</prerequisite>
+
+        <short>The science of chemistry.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The indepth study of chemicals and chemistry.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Biology" type="knowledge">
+        <group>Academic</group>
+        <prerequisite>Science</prerequisite>
+
+        <short>The science of biology.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The indepth study of biology.
             </para>
         </description>
     </skill>
