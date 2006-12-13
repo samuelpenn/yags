@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.15 $</version>
-            <date>$Date: 2006-11-17 21:20:54 $</date>
+            <version>$Revision: 1.16 $</version>
+            <date>$Date: 2006-12-13 21:02:20 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -67,6 +67,111 @@
                     knowledge.
                 </para>
             </sect2>
+
+            <sect2>
+                <title>Some Definitions</title>
+
+                <sect3>
+                    <title>Attributes</title>
+
+                    <para>
+                        There are 8 primary attributes to define, and all
+                        begin with a score of 3 (which is average for an
+                        adult human). The minimum for any attribute is 2,
+                        the maximum is 7, though anything above 5 is
+                        considered to be <e>very</e> exceptional.
+                    </para>
+
+                    <itemlist order="strict">
+                        <item name="Strength">
+                            How strong you are, including your ability to
+                            lift and hurt things. If you have a high
+                            strength then you will tend to be larger as
+                            well.
+                        </item>
+
+                        <item name="Health">
+                            A measure of your physical fitness and stamina.
+                            Health is used in checks to remain alive after
+                            being seriously wounded.
+                        </item>
+
+                        <item name="Agility">
+                            Your agility represents your quickness, athletic
+                            prowess and balance. It is used for brawling,
+                            wrestling, sneaking, reaction tests and acrobatics.
+                        </item>
+
+                        <item name="Dexterity">
+                            Dexterity is your hand-eye coordination,
+                            sleight-of-hand and skill with melee weapons.
+                            Pistols also use dexterity, and rifles may
+                            use dexterity or perception.
+                        </item>
+
+                        <item name="Perception">
+                            How alert you are, and the general quality of
+                            your senses. If perceptive, you are good at
+                            hiding and noticing things. Rifles and larger
+                            weapons use perception.
+                        </item>
+
+                        <item name="Intelligence">
+                            A measure of your wit, cunning, memory and
+                            intuition. Knowledges are based on intelligence,
+                            as are logic and reasoning skills.
+                        </item>
+
+                        <item name="Empathy">
+                            Empathy is your ability to understand others.
+                            It is used to make friends, convince people
+                            emotionally, or to tell if someone is lying to
+                            you. Empathy doesn't affect your intentions
+                            to be nice or nasty, but does affect how well
+                            you notice other people's feelings.
+                        </item>
+
+                        <item name="Will">
+                            Your Will is a measure of mental fortitude,
+                            being used to resist psi, instincts and
+                            emotions. A high Will makes you a good liar,
+                            a low Will means you are gullible and likely
+                            to give in to fear, lust and greed.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+                <sect3>
+                    <title>Skills</title>
+
+                    <para>
+                        Skills are abilities which are gained through study,
+                        experience and training. There are 8 basic skills
+                        (talents) which all being at a score of 2, all other
+                        skills are assumed to start at zero unless stated
+                        otherwise for your background.
+                    </para>
+
+                    <para>
+                        A skill of 4 is considered to be a trained
+                        professional, 6 is an expert, 8 is elite and 10+
+                        is a true master of the profession. Skills above
+                        15 are pretty much unheard of.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Techniques</title>
+
+                    <para>
+                        Techniques are specialities bought within a
+                        particular skill. They enable you to perform actions
+                        that would be impossible or hard without it, or
+                        grant a bonus in certain situations (sometimes to
+                        related skills).
+                    </para>
+                </sect3>
+            </sect2>
         </sect1>
 
         <sect1>
@@ -82,12 +187,17 @@
             </para>
 
             <para>
-                Unlike in the fantasy versions of <e>Yags</e>, there are no
-                set packages to choose from. Social structures in the
-                3rd Imperium are relatively flexible, and education is
-                readily available to most people. The huge population
-                also means that exceptional characters are more likely,
-                and the available starting attributes reflects this.
+                There are no set character classes to choose from, instead
+                abilities are purchased from a number of point pools -
+                attributes, experience and background. Which of these is
+                given priority (and so has the most points available) is
+                up to you.
+            </para>
+
+            <para>
+                Characters begin the game very experienced, potentially
+                equivalent to action heroes. However, there will be others
+                who are better than they are.
             </para>
 
             <sect2>
@@ -110,7 +220,7 @@
                         Covers general experience and governs how many
                         skills you start with, as well as the maximum skill
                         level of any one skill at generation time. These
-                        points can be spent on any skills.
+                        points can be spent on any skills and techniques.
                     </item>
 
                     <item name="Background">
@@ -119,6 +229,11 @@
                         psionic ability.
                     </item>
                 </itemlist>
+
+                <para>
+                    The above three groups determine all aspects of your
+                    character according to the rules.
+                </para>
 
                 <sect3>
                     <title>Ranking Priorities</title>
@@ -163,13 +278,18 @@
                             </row>
 
                             <row>
-                                <entry>Advantages</entry>
-                                <entry>5</entry>
+                                <entry>Background</entry>
+                                <entry>6</entry>
                                 <entry>3</entry>
                                 <entry>1</entry>
                             </row>
                         </tbody>
                     </table>
+
+                    <para>
+                        The meaning of these values is described in the
+                        sections below.
+                    </para>
                 </sect3>
 
                 <sect3>
@@ -178,10 +298,11 @@
                     <para>
                         Attributes are listed as the number of points
                         available to spend, and the maximum level of
-                        attribute which may be purchased. The cost of each
-                        level is as follows. Attributes above 5 tend to be
-                        very rare, and anything above 7 is approaching
-                        super human.
+                        attribute which may be purchased (as +points/maximum).
+                        The cost of each level is as follows. An attribute
+                        of 5 is exceptional, 6 amazing and 7 at the limits
+                        of what is possible, with the exception of a few
+                        truly outstanding individuals.
                     </para>
 
                     <targetlist targetFirst="true">
@@ -225,7 +346,7 @@
                     <para>
                         Experience gives you experience points which may be
                         spent on pretty much any skill. The table gives two
-                        numbers, in the form X/Y.
+                        numbers, in the form points/maximum.
                     </para>
 
                     <para>
@@ -284,8 +405,36 @@
             </para>
 
             <para>
-                The average level of most 'just-earning-a-living' workers
-                however is still '4'
+                A skill at a level of '2' represents those who have basic
+                familiarity with the skill. A skill of 2 is sufficient to
+                drive a car safely, operate a computer with confidence,
+                or fire a gun reasonably on a firing range.
+            </para>
+
+            <para>
+                A skill at a level of '4' represents having good knowledge
+                of a subject. Most people will have a skill of at least 4
+                in the primary skills necessary for their jobs, or in those
+                skills they've been using on a regular basis for a long
+                time. A person who has driven a car for many years probably
+                has a Drive of 4; office administrators probably have
+                Computer operation and Administration at 4. Most regular
+                army personel will have 4 in basic combat skills.
+            </para>
+
+            <para>
+                A skill of '6' represents special training or lots of
+                experience. The difference between someone who has done
+                something a lot, and someone who has had advanced training,
+                is often represented by the latter knowing a lot of
+                <e>techniques</e> related to that skill.
+            </para>
+
+            <para>
+                A skill of '8' or above is normally only held by those who
+                have studied or trained very hard. Special forces operatives
+                may have 8 or more in their primary skill, and well known
+                acamedics will also have this sort of level.
             </para>
 
             <sect2>
@@ -293,12 +442,17 @@
 
                 <para>
                     All characters who are part of the <e>Imperium</e> start
-                    with the following skills for free.
+                    with the following skills for free at a score of 4:
                 </para>
 
                 <para>
                     Area lore (Imperium), Area lore (home sector),
                     Area lore (home planet), Speak Ganglic.
+                </para>
+
+                <para>
+                    Unless you are <e>illiterate</e>, you can automatically
+                    read and write any language you have a skill in.
                 </para>
             </sect2>
 
