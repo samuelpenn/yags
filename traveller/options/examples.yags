@@ -21,11 +21,11 @@
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <attributes size="5" soak="12">
-                <attribute name="strength" score="4"/>
+                <attribute name="strength" score="5"/>
                 <attribute name="health" score="3"/>
                 <attribute name="agility" score="6"/>
                 <attribute name="dexterity" score="6"/>
-                <attribute name="perception" score="5"/>
+                <attribute name="perception" score="4"/>
                 <attribute name="intelligence" score="3"/>
                 <attribute name="empathy" score="2"/>
                 <attribute name="will" score="2"/>
@@ -52,7 +52,7 @@
 
                 <group name="Combat" type="skills">
                     <skill name="Rifle" score="6"/>
-                    <skill name="Tactics" score="2"/>
+                    <skill name="Tactics" score="3"/>
                     <skill name="Pistol" score="5"/>
                 </group>
 
@@ -69,12 +69,12 @@
                 </group>
 
                 <group name="Technical">
-                    <skill name="Security systems" score="3"/>
+                    <skill name="Security systems" score="2"/>
                 </group>
             </skills>
 
             <advantages>
-                <advantage name="Cool"/>
+                <advantage name="Large"/>
 
                 <advantage name="Swimming" skill="Athletics" cost="2"/>
                 <advantage name="Zero gravity" skill="Athletics" cost="2"/>
@@ -97,15 +97,28 @@
     </character>
 
 
-    <character name="Army Mechanic">
+    <character name="Shana Uamder">
         <description>
-            <short>Mechanic with combat experience.</short>
+            <short>Imperial navy starship mechanic.</short>
+            <race>Vilani</race>
+            <gender>Female</gender>
+            <age>35</age>
 
             <background>
                 <para>
-                    A mechanic and technical operative with military
-                    experience. Priorities are in the order Experience,
-                    Attributes, Background.
+                    Shana is an engineer for the Imperial Navy, and she has
+                    a reputation of being able to fix anything under the
+                    worst of combat conditions. Initially she began training
+                    as a marine, but was discovered to have an aptitude for
+                    fixing and building things.
+                </para>
+
+                <para>
+                    Though she spends most of her time overseeing the
+                    maintainence of fighter wings aboard Imperial capital
+                    ships, she is also happy to operate in more front line
+                    roles, advising and aiding in military operations
+                    planetside.
                 </para>
             </background>
         </description>
@@ -176,7 +189,7 @@
             </skills>
 
             <advantages>
-                <advantage name="Good looking"/>
+                <advantage name="Minor reputation"/>
 
                 <advantage name="Grav tech" skill="Mechanics" cost="4"/>
                 <advantage name="Medical" skill="Mechanics" cost="2"/>
@@ -666,6 +679,80 @@
             </advantages>
         </statistics>
     </character>
+
+    <character name="Eneri Riisha">
+        <description>
+            <short>Idle rich.</short>
+            <race>Vilani</race>
+            <gender>Male</gender>
+            <age>31</age>
+
+            <background>
+                <para>
+                    Eneri is a minor noble with a <e>lot</e> of money.
+                    Apart from sport, attending parties, flirting, and running
+                    around the Imperium in one of your expensive yachts, he
+                    doesn't have a lot to do.
+                </para>
+            </background>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12">
+                <attribute name="strength" score="3"/>
+                <attribute name="health" score="3"/>
+                <attribute name="agility" score="3"/>
+                <attribute name="dexterity" score="3"/>
+                <attribute name="perception" score="4"/>
+                <attribute name="intelligence" score="4"/>
+                <attribute name="empathy" score="5"/>
+                <attribute name="will" score="4"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="3"/>
+                    <skill name="Awareness" score="3"/>
+                    <skill name="Brawl" score="3"/>
+                    <skill name="Charm" score="6"/>
+                    <skill name="Guile" score="6"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak Ganglic" score="4"/>
+                    <skill name="Area lore (Imperium)" score="4"/>
+                    <skill name="Area lore (Sector: Spinward Marches)" score="4"/>
+                    <skill name="Area lore (Planet: Bonn)" score="4"/>
+                </group>
+
+                <group name="Combat" type="skills">
+                    <skill name="Rifle" score="4"/>
+                    <skill name="Pistol" score="2"/>
+                </group>
+
+                <group name="Vehicle">
+                    <skill name="Drive" score="4"/>
+                    <skill name="Pilot" score="4"/>
+                    <skill name="Spaceship piloting" score="4"/>
+                </group>
+
+                <group name="Sport">
+                    <skill name="Fencing" score="3"/>
+                    <skill name="Hypersledding" score="3"/>
+                </group>
+            </skills>
+
+            <advantages>
+                <advantage name="Very rich"/>
+                <advantage name="Noble"/>
+                <advantage name="Blackmailed"/>
+            </advantages>
+        </statistics>
+    </character>
+
 
 </characters>
 
