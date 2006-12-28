@@ -1,0 +1,904 @@
+<?xml version="1.0"?>
+
+<!--
+
+    General equipment lists.
+
+    Copyright 2005 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted provided that the following
+    conditions are met:
+
+    1) Redistributions of any source code (e.g. XML) must retain the
+    above copyright notice, this list of conditions and the following
+    disclaimer.
+
+    2) Redistributions in compiled form (transformed to other DTDs,
+    converted to PDF, PostScript, RTF and other formats) must
+    reproduce the above copyright notice, this list of conditions
+    and the following disclaimer in the documentation and/or other
+    materials provided with the distribution.
+
+    THIS CONTENT IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+    OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DIRECT,
+    INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+    STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+    ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
+    OF THE POSSIBILITY OF SUCH DAMAGE.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2006-12-28 22:55:44 $
+
+    Categories
+
+    Adventuring     The sort of things only adventurers have.
+    Rogue           Thieves/assassins tools and the like.
+    Food            Food and drink.genre
+    Animals         An animal which isn't livestock - horses and dogs.
+    Livestock       Animals bred for food, such as pigs and cows.
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+
+    Prices are in credits.
+
+    Tech Level
+     4 1450-1700
+     5 1700-1900
+     6 1900-1950
+     7 1950-1980
+     8 1980-2020
+     9 2020+ (Interplanetary)
+    10 Interstellar (early jump)
+    11 Interstellar (Jump)
+    12 Interstellar (Imperium)
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="Gauss Pistol, 4mm (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>12</techLevel>
+        <weight>650</weight>
+        <cost>300</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+6</attack><damage>25</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>50</short><medium>100</medium><long>200</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>1</load><reach>0</reach>
+            <capacity>15</capacity><rof>10</rof><recoil>-2</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Auto Pistol, 7mm (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>12</techLevel>
+        <weight>750</weight>
+        <cost>500</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+5</attack><damage>29</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>75</short><medium>150</medium><long>300</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>0.5</load><reach>0</reach>
+            <capacity>10</capacity><rof>5</rof><recoil>-3</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Railgun, 13mm (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>12</techLevel>
+        <weight>5000</weight>
+        <cost>7500</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+12</attack><damage>55</damage>
+                <range>
+                    <increment>40</increment>
+                    <short>2000</short><medium>4000</medium><long>8000</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>5</load><reach>1</reach>
+            <capacity>20</capacity><rof>5</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/><heavy/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Gauss Rifle, 4mm (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>12</techLevel>
+        <weight>2800</weight>
+        <cost>3000</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+10</attack><damage>35</damage>
+                <range>
+                    <increment>30</increment>
+                    <short>500</short><medium>1000</medium><long>2000</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>3</load><reach>1</reach>
+            <capacity>40</capacity><rof>10</rof><recoil>-2</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Grenade Launcher, 20mm (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>12</techLevel>
+        <weight>-</weight>
+        <cost>-</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+5</attack><damage>40</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>50</short><medium>100</medium><long>150</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>0</load><reach>1</reach>
+            <capacity>5</capacity><rof>5</rof><recoil>-3</recoil>
+            <properties>
+                <missile/><semiauto/><explosive score="2"/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+
+    <item name="Gauss SMG, 4mm (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>12</techLevel>
+        <weight>3400</weight>
+        <cost>3000</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+8</attack><damage>35</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>400</short><medium>800</medium><long>1600</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>3</load><reach>1</reach>
+            <capacity>60</capacity><rof>50</rof><recoil>-2</recoil>
+            <properties>
+                <missile/><firearm/><automatic/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Shotgun (TL12) [solid slug]">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>12</techLevel>
+        <weight>4000</weight>
+        <cost>570</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Shotguns</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+6</attack><damage>45</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>100</short><medium>200</medium><long>400</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>4</load><reach>1</reach>
+            <capacity>10</capacity><rof>10</rof><recoil>-4</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <heavy/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Shotgun (TL12) [shot]">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>12</techLevel>
+        <weight>4000</weight>
+        <cost>570</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Shotguns</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+15</attack><damage>40</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>25</short><medium>50</medium><long>150</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>4</load><reach>1</reach>
+            <capacity>10</capacity><rof>10</rof><recoil>-4</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <light/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+
+    <item name="Laser pistol (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>A self contained laser pistol.</short>
+
+        <description>
+            <para>
+                A pistol capable of firing a laser, powered from its own
+                power pack. Its range is not particularly great, but it
+                has a good accuracy and can be recharged from a mains
+                power supply.
+            </para>
+
+            <para>
+                Wounds caused are less likely to get infected and they don't
+                ricochet, so are favoured for use in civilian defence. They
+                also have no recoil.
+            </para>
+        </description>
+
+        <weight>250</weight>
+        <material>metal</material>
+        <cost>1300</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+
+            <combat>
+                <attack>+8</attack>
+                <damage>24</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>100</short><medium>200</medium><long>400</long>
+                </range>
+            </combat>
+
+            <strength>1</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+
+            <capacity>8</capacity>
+            <rof>3</rof>
+            <recoil>0</recoil>
+
+            <properties>
+                <missile/><semiauto/><laser/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Xaser rifle (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>A self contained laser rifle.</short>
+
+        <description>
+            <para>
+                A rifle capable of firing a laser, powered from its own
+                power pack. Its range is not particularly great, but it
+                has a good accuracy and can be recharged from a mains
+                power supply.
+            </para>
+
+            <para>
+                Wounds caused are less likely to get infected and they don't
+                ricochet, so are favoured for use in civilian defence. They
+                also have no recoil.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>metal</material>
+        <cost>2000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Energy</category>
+            <class>rifle</class>
+
+            <combat>
+                <attack>+12</attack>
+                <damage>35</damage>
+                <range>
+                    <increment>50</increment>
+                    <short>1000</short>
+                    <medium>2000</medium>
+                    <long>4000</long>
+                </range>
+            </combat>
+
+            <strength>2</strength><load>2</load><reach>0</reach>
+            <capacity>20</capacity><rof>5</rof><recoil>0</recoil>
+
+            <properties>
+                <missile/><semiauto/><laser/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Heavy Xaser rifle (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>A laser rifle plus power pack.</short>
+
+        <description>
+            <para>
+                Similar to a laser rifle, but powered from an external
+                power source. This is usually a power pack strapped to the
+                back of the user. It has much better damaging ability,
+                range and capacity than its lighter cousins.
+            </para>
+
+            <para>
+                Such a weapon can be modified to give fully automatic
+                ability, but there is a danger of overheating. It is
+                possible to plug the rifle into a larger power supply,
+                such as one provided by a vehicle.
+            </para>
+        </description>
+
+        <weight>8000</weight>
+        <material>metal</material>
+        <cost>2500</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Energy</category>
+            <class>rifle</class>
+
+            <combat>
+                <attack>+12</attack>
+                <damage>45</damage>
+                <range>
+                    <increment>50</increment>
+                    <short>1500</short><medium>3000</medium><long>6000</long>
+                </range>
+            </combat>
+
+            <strength>3</strength><load>8</load><reach>0</reach>
+            <capacity>60</capacity><rof>5</rof><recoil>0</recoil>
+
+            <properties>
+                <missile/><semiauto/><laser/><heavy/><tripleauto/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Heavy Plasma Rifle (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>A rifle firing plasma bursts.</short>
+
+        <description>
+            <para>
+                Heavier than a laser rifle, the plasma rifle fires bursts of
+                super heated plasma. It tends to have a short range, but is
+                capable of considerable damage. It comes with an attached
+                power supply which must be worn as a back pack.
+            </para>
+        </description>
+
+        <weight>9000</weight>
+        <material>metal</material>
+        <cost>15000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Energy</category>
+            <class>rifle</class>
+
+            <combat>
+                <attack>+7</attack>
+                <damage>42</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>100</short>
+                    <medium>150</medium>
+                    <long>250</long>
+                </range>
+            </combat>
+
+            <strength>3</strength><load>9</load><reach>1</reach>
+            <capacity>80</capacity><rof>10</rof><recoil>0</recoil>
+
+            <properties>
+                <missile/><automatic/><plasma/>
+                <explosive score="1"/>
+                <reload score="3"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Heavy Fusion Rifle (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>A rifle firing fusion bursts.</short>
+
+        <description>
+            <para>
+                Counts as barely man portable, this is a really nasty weapon
+                which infantry really don't like to face.
+            </para>
+        </description>
+
+        <weight>13000</weight>
+        <material>metal</material>
+        <cost>65000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Energy</category>
+            <class>rifle</class>
+
+            <combat>
+                <attack>+8</attack>
+                <damage>50</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>250</short>
+                    <medium>500</medium>
+                    <long>750</long>
+                </range>
+            </combat>
+
+            <strength>4</strength><load>13</load><reach>0</reach>
+
+            <capacity>60</capacity><rof>30</rof><recoil>0</recoil>
+
+            <properties>
+                <missile/><automatic/>
+                <heavy/><plasma/><explosive score="2"/>
+                <reload score="3"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <!--
+        Armour and other protective clothing.
+    -->
+    <item name="Combat vest (TL8)">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>8</techLevel>
+        <short>A light combat vest.</short>
+
+        <weight>1500</weight>
+        <cost>150</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+4</protection>
+            <load>1</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <light/>
+                <vitals score="1"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Combat vest (TL10)">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>10</techLevel>
+        <short>A light combat vest.</short>
+
+        <weight>1200</weight>
+        <cost>150</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+5</protection>
+            <load>1</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <light/>
+                <vitals score="2"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Combat vest (TL12)">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+        <short>A light combat vest.</short>
+
+        <description>
+            <para>
+                A protective vest consisting of stiffened cloth and
+                plastic covering the torso, and lighter more flexible
+                cloth around the arms.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <cost>150</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+5</protection>
+            <load>0.5</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <light/>
+                <vitals score="2"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Protective underwear">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>10</techLevel>
+
+        <short>Light bulletproof cloth undergarment.</short>
+
+        <description>
+            <para>
+                A light undergarment which covers the torso, legs and
+                arms and can be worn under normal clothing.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>cloth</material>
+        <cost>250</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+3</protection>
+            <load>0</load>
+
+            <covers>
+                <torso/>
+                <groin/>
+                <arms/>
+                <legs/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <light/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Combat helmet">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>10</techLevel>
+
+        <short>A had combat helmet.</short>
+
+        <description>
+            <para>
+                A hard plastic and cloth helmet.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>plastic</material>
+        <cost>500</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+1</protection>
+            <load>0.5</load>
+
+            <covers>
+                <head/>
+                <arms/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <heavy/>
+                <vitals score="2"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Light combat armour (TL10)">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>10</techLevel>
+
+        <short>A full suit of combat armour</short>
+
+        <description>
+            <para>
+                A full body suit of combat armour, consisting of plastic
+                and cloth, with stiff plates and bulletproof weave.
+            </para>
+        </description>
+
+        <weight>5000</weight>
+        <material>plastic</material>
+        <cost>1000</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+7</protection>
+            <load>5</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <light/>
+                <restrictive score="1"/>
+                <vitals score="3"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Light combat armour (TL12)">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>A full suit of combat armour</short>
+
+        <description>
+            <para>
+                A full body suit of combat armour, consisting of plastic
+                and cloth, with stiff plates and bulletproof weave.
+            </para>
+        </description>
+
+        <weight>3500</weight>
+        <material>plastic</material>
+        <cost>1000</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+8</protection>
+            <load>2</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <light/>
+                <vitals score="3"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Heavy combat armour (TL10)">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>10</techLevel>
+
+        <short>A full suit of heavy combat armour</short>
+        <description>
+            <para>
+                A full body suit of combat armour, consisting of plastic
+                and cloth, with stiff plates and bulletproof weave. Unlike
+                light combat armour, this is fully enclosed and protects
+                from chemical and biological weapons, as well as providing
+                limited vacuum life support. It includes a helmet.
+            </para>
+        </description>
+
+        <weight>8000</weight>
+        <material>plastic</material>
+        <cost>1500</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+13</protection>
+            <load>8</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+                <head/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <heavy/>
+                <restrictive score="2"/>
+                <vitals score="5"/>
+            </properties>
+        </armour>
+    </item>
+
+
+    <item name="Heavy combat armour (TL12)">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>A full suit of heavy combat armour</short>
+        <description>
+            <para>
+                A full body suit of combat armour, consisting of plastic
+                and cloth, with stiff plates and bulletproof weave. Unlike
+                light combat armour, this is fully enclosed and protects
+                from chemical and biological weapons, as well as providing
+                limited vacuum life support. It includes a helmet.
+            </para>
+        </description>
+
+        <weight>6000</weight>
+        <material>plastic</material>
+        <cost>1500</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+15</protection>
+            <load>5</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+                <head/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <heavy/>
+                <restrictive score="1"/>
+                <vitals score="5"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Battledress (TL12)">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>Heavy powered armour</short>
+        <description>
+            <para>
+                A set of heavy powered armour.
+            </para>
+        </description>
+
+        <weight>100000</weight>
+        <material>plastic</material>
+        <cost>60000</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+40</protection>
+            <load>0</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+                <head/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <heavy/>
+                <restrictive score="1"/>
+                <vitals score="10"/>
+            </properties>
+        </armour>
+    </item>
+
+
+</equipment>
+
+

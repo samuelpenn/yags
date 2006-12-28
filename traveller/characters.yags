@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.17 $</version>
-            <date>$Date: 2006-12-14 18:38:00 $</date>
+            <version>$Revision: 1.18 $</version>
+            <date>$Date: 2006-12-28 22:55:44 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -273,8 +273,8 @@
                             <row>
                                 <entry>Experience</entry>
                                 <entry>200/10</entry>
-                                <entry>125/8</entry>
-                                <entry>75/6</entry>
+                                <entry>150/8</entry>
+                                <entry>100/6</entry>
                             </row>
 
                             <row>
@@ -532,7 +532,6 @@
 
                 <y:import-advantages type="technique" tree="true">
                     <y:adv>../core/techniques/techniques.yags</y:adv>
-                    <y:adv>../core/techniques/combat-techniques.yags</y:adv>
                     <y:adv>../core/techniques/modern-techniques.yags</y:adv>
                     <y:adv>../core/techniques/computing.yags</y:adv>
                     <y:adv>../core/techniques/electronics.yags</y:adv>
@@ -566,11 +565,13 @@
                         </item>
 
                         <item name="Au">
-                            Fully automatic weapon.
+                            Fully automatic weapon, capable of firing multiple
+                            shots or burst fire.
                         </item>
 
                         <item name="SA">
-                            Semi-automatic weapon.
+                            Semi-automatic weapon, can fire multiple shots in a
+                            single round but is not capable of burst fire.
                         </item>
 
                         <item name="Li">
@@ -580,8 +581,37 @@
                         </item>
 
                         <item name="Hv">
-                            Heavy weapon. Halves bulletproof armour,
+                            Heavy weapon. Halves non-heavy bulletproof armour,
                             ignores all weaker types of armour.
+                        </item>
+
+                        <item name="TA">
+                            Automatic weapon that can fire automatic bursts of
+                            3 rounds as a single attack. Counts as a single
+                            attack, but any wounds caused are doubled.
+                        </item>
+
+                        <item name="Ls">
+                            Laser weapon, unaffected by wind, though may suffer
+                            in fog and thick atmospheres. Does not loose accuracy
+                            or suffer fumble increase at medium and long range.
+                            Counts as a firearm for defence rolls.
+                        </item>
+
+                        <item name="Pl">
+                            Plasma weapon. Often does explosive damage. Does not
+                            count as a firearm for purposes of defence and armour
+                            (so only halves defence rolls).
+                        </item>
+
+                        <item name="Ex-X">
+                            Explosive damage. Does full damage to the target and
+                            those within X metres. Does mixed damage at -5 out to
+                            double X, and stun damage at -10 out to triple X.
+                        </item>
+
+                        <item name="Lo-X">
+                            Weapon must be reloaded. X is number of rounds to reload.
                         </item>
                     </itemlist>
                 </sect3>
@@ -600,10 +630,10 @@
 
                     <para>
                         Most are cheap and easy to obtain, and are often made
-                        from touch plastics. All use the <e>Pistol</e> skill.
+                        from tough plastics. All use the <e>Pistol</e> skill.
                     </para>
 
-                    <y:import-weaponlist href="equipment/equipment.yags" importance="2" style="list">
+                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
                         <y:category>Pistols</y:category>
                     </y:import-weaponlist>
                 </sect3>
@@ -623,7 +653,7 @@
                         weapons.
                     </para>
 
-                    <y:import-weaponlist href="equipment/equipment.yags" importance="2" style="list">
+                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
                         <y:category>Rifles</y:category>
                     </y:import-weaponlist>
                 </sect3>
@@ -635,7 +665,7 @@
                         Useful short range weapons.
                     </para>
 
-                    <y:import-weaponlist href="equipment/equipment.yags" importance="2" style="list">
+                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
                         <y:category>Shotguns</y:category>
                     </y:import-weaponlist>
                 </sect3>
@@ -657,7 +687,7 @@
                         an external power pack and tend to lack full auto capability.
                     </para>
 
-                    <y:import-weaponlist href="equipment/equipment.yags" importance="2" style="list">
+                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
                         <y:category>Energy</y:category>
                     </y:import-weaponlist>
                 </sect3>
