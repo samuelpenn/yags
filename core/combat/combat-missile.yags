@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.6 $</version>
-            <date>$Date: 2006-10-22 21:13:35 $</date>
+            <version>$Revision: 1.7 $</version>
+            <date>$Date: 2007-01-01 22:36:03 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -335,23 +335,63 @@
                     <title>Other Modifiers</title>
 
                     <para>
-                        Other modifiers to the target difficulty for
-                        missile weapons are as follows. All modifiers are
-                        per range category, so use the listed modifier at
-                        short range, double the modifier at medium range
-                        and triple the modifier at long range.
+                        Firing at a stationary target on a firing range is one
+                        thing, firing at a moving target that's firing back
+                        is another thing entirely. There are a lot of
+                        environmental factors which can make it harder to
+                        shoot at a target, and they can all stack together
+                        to make life difficult.
                     </para>
 
-                    <targetlist>
+                    <para>
+                        Each negative factor increases the effective range by
+                        a multiple, for purposes of whether you hit (not damage).
+                        This stacks with using either a <e>careful shot</e> or
+                        a <e>snapshot</e> - positive modifiers reduce the
+                        multiple.
+                    </para>
+
+                    <para>
+                        For example, if taking a snapshot (x2) at a moving
+                        target (x2) whilst running (x2), then the effective
+                        range will be at x4.
+                    </para>
+
+                    <targetlist bold="true">
                         <targetLabel>Modifier</targetLabel>
                         <valueLabel>Environment</valueLabel>
 
-                        <item value="Moderate wind" target="+5"/>
-                        <item value="High wind" target="+10"/>
-                        <item value="Very high wind" target="+20"/>
-                        <item value="Target moving" target="+5"/>
-                        <item value="Target moving fast" target="+10"/>
-                        <item value="Firer is moving" target="+10"/>
+                        <item value="Moderate wind" target="x2">
+                            Shooting in consistently moderate winds.
+                        </item>
+
+                        <item value="High wind" target="x3">
+                            Shooting in consistently high winds.
+                        </item>
+
+                        <item value="Very high wind" target="x5">
+                            Assumes the middle of a hurricane.
+                        </item>
+
+                        <item value="Target moving" target="x2">
+                            Lateral movement at slower than running speed.
+                        </item>
+
+                        <item value="Target moving fast" target="x3">
+                            Lateral movement at running speed or quicker.
+                        </item>
+
+                        <item value="Firer is moving" target="x2">
+                            If you are running in the round you try to
+                            shoot, then you suffer the penalty. Normal
+                            movement assumes you have time to stop and
+                            shoot. Does not count if you are in a vehicle.
+                        </item>
+
+                        <item value="Unstable platform" target="x2">
+                            Any randomly moving platform, including a
+                            weaving car or a swaying rope bridge.
+                        </item>
                     </targetlist>
                 </sect3>
             </sect2>
