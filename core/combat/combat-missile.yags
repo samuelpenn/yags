@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.7 $</version>
-            <date>$Date: 2007-01-01 22:36:03 $</date>
+            <version>$Revision: 1.8 $</version>
+            <date>$Date: 2007-01-09 23:26:55 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -163,13 +163,17 @@
                 </para>
 
                 <para>
-                    You may make a <e>Snap Shot</e>, which is a <e>fast</e>
-                    action. This halves the range increment for the weapon.
+                    If you choose to act <e>fast</e> that round, then your
+                    attack is considered a <e>snapshot</e>. A snapshot doubles
+                    the effective distance to the target.
                 </para>
 
                 <para>
-                    Alternatively, you may choose to be <e>careful</e>, in
-                    which case you double the range increment for the weapon.
+                    If you choose to act <e>slow</e> that round, then you
+                    may make a <e>careful shot</e>. This halves the
+                    effective distance to the target. This will often
+                    preclude other actions (such as running, but you may
+                    still defend).
                 </para>
             </sect2>
 
@@ -253,44 +257,47 @@
 
                 <para>
                     There are two range factors to take into account - the
-                    <e>range increment</e> of the weapon, and the <e>range
-                    category</e> it is being fired at.
+                    <e>distance increment</e> of the weapon, and the
+                    <e>range band</e> it is being fired at.
                 </para>
 
                 <sect3>
-                    <title>Range Increment</title>
+                    <title>Distance Increment</title>
 
                     <para>
-                        The range increment is a measure of how accurate the
-                        weapon is at range. It is given as a distance, and
-                        each multiple of this distance gives a +5 modifier
-                        to the target difficulty.
+                        The distance increment of a weapon is a measure of
+                        how accurate it is over range. Improvised thrown
+                        weapons have an increment of 5m, bows 10m and modern
+                        sniper rifles about 50m.
                     </para>
 
                     <para>
-                        A long bow has a range increment of 25m. Targets
-                        less than 25m away have no modifier. Targets which
-                        are 25m or further away have +5 to the difficulty,
-                        50m or further have +10 etc.
+                        At distances up to the increment, there is no modifier
+                        to the difficulty to hit the target. At ranges greater
+                        than this, and each multiple of the increment, there
+                        is a +5 to the target difficulty.
                     </para>
 
                     <para>
-                        Shooting a long bow against a <e>Colossal</e> target
-                        at 200m, would be difficulty 30 (-10 for size, + 40
-                        for the range).
+                        For a bow with an increment of 10m, there is no
+                        modifier to the target difficulty up to and including
+                        10m. Up to 20m, there is a +5 modifier, up to 30m a
+                        +10 modifier and so on.
                     </para>
                 </sect3>
 
                 <sect3>
-                    <title>Range Category</title>
+                    <title>Range Band</title>
 
                     <para>
-                        The range category is either <e>short</e>,
+                        The range band is either <e>short</e>,
                         <e>medium</e> or <e>long</e>. A weapon cannot hit
-                        targets beyond long range. The range category
-                        affects the performance of the weapon, though not
-                        the difficulty to hit. In most cases, this is just
-                        the damage the weapon does.
+                        targets beyond long range. Short range is the
+                        effective range of the weapon - at ranges beyond
+                        this there are penalties to damage and accuracy.
+                        The range band is independant of the distance
+                        increment, and doesn't effect the target difficulty
+                        directly.
                     </para>
 
                     <targetlist>
@@ -316,7 +323,8 @@
                         equal to one tenth the range. At long range, quarter
                         the range is needed in height. Firing a long bow at
                         a target 200m away, requires 50m of height, since
-                        this is at long range.
+                        this is at long range. The attack bonus of the weapon
+                        is also lost at medium and long range.
                     </para>
 
                     <para>
@@ -344,8 +352,8 @@
                     </para>
 
                     <para>
-                        Each negative factor increases the effective range by
-                        a multiple, for purposes of whether you hit (not damage).
+                        Each negative factor increases the effective distance
+                        by a multiple. It does not effect the range band.
                         This stacks with using either a <e>careful shot</e> or
                         a <e>snapshot</e> - positive modifiers reduce the
                         multiple.
@@ -354,7 +362,7 @@
                     <para>
                         For example, if taking a snapshot (x2) at a moving
                         target (x2) whilst running (x2), then the effective
-                        range will be at x4.
+                        distance will be at x4.
                     </para>
 
                     <targetlist bold="true">
@@ -402,8 +410,9 @@
                 <para>
                     If you declare an attack with a missile weapon, then
                     you are considered to be using the <e>normal</e>
-                    stance (so you can still dodge, but probably not parry),
-                    unless you are aiming, in which case you are <e>Focused</e>.
+                    stance (so you can still dodge, but probably not parry)
+                    for purposes of melee, unless you are aiming, in which
+                    case you are <e>Focused</e>.
                 </para>
 
                 <sect3>
@@ -426,9 +435,10 @@
                     <para>
                         Bows, crossbows and similar weapons which fire a
                         fast and difficult to dodge projectile cause the
-                        defence roll to be halved. Even faster projectile
-                        weapons (anything with a weapon type of
-                        <e>Firearm</e>) quarter defence rolls.
+                        defence roll to be halved at short range. Even
+                        faster projectile weapons (anything with a weapon
+                        type of <e>Firearm</e>) halve defence rolls at all
+                        ranges.
                     </para>
 
                     <sect4>
@@ -474,11 +484,11 @@
                         but sometimes it is done anyway. If the target of
                         a missile attack is in close combat with anyone
                         else, then the fumble chance of the attack is
-                        increased by two for each extra person. Firing
-                        into a melee involving six people, would give a +10
+                        increased by three for each extra person. Firing
+                        into a melee involving six people, would give a +18
                         to the fumble chance, meaning the attacker has a
-                        chance of hitting the wrong target if the d20 rolls
-                        less than 12.
+                        chance of hitting a random target if the d20 roll
+                        is anything other than a 20.
                     </para>
 
                     <para>
@@ -496,7 +506,7 @@
                         random target. Chance of hitting each target
                         should be based on size, and ideally distance from
                         the intended target. In reality, just assigning
-                        equal chance to everyone is good enough.
+                        equal chance to everyone is a simple approach.
                     </para>
 
                     <para>
@@ -523,6 +533,156 @@
                         The range modifier cannot be reduced below zero.
                         If you hit, then you hit a random target.
                     </para>
+                </sect3>
+
+                <sect3>
+                    <title>Shooting from Cover</title>
+
+                    <para>
+                        If you are behind cover, then the difficulty to hit
+                        you is increased. The increase depends on whether
+                        the cover is hard or soft, and how much of you it
+                        actually covers.
+                    </para>
+
+                    <targetlist bold="true">
+                        <targetLabel>Modifier</targetLabel>
+                        <valueLabel>Type of cover</valueLabel>
+
+                        <item target="+5" value="Crouched.">
+                            If you are crouched or kneeling, you are
+                            slightly harder to hit. You can only move
+                            combat move however, but can dodge missile
+                            attacks.
+                        </item>
+
+                        <item target="+10" value="Prone.">
+                            You are harder to be hit if prone, but cannot
+                            dodge. You can move half your combat move.
+                        </item>
+
+                        <item target="+5" value="50% Soft.">
+                            About half of your body is obscured by soft
+                            cover such as a bush, sheets or other material
+                            that obscures rather than protects.
+                        </item>
+
+                        <item target="+10" value="90% Soft.">
+                            Most of your body (except head and shoulders)
+                            is covered by soft, obscuring cover such as
+                            bush.
+                        </item>
+
+                        <item target="+10" value="50% Hard.">
+                            About half your body is protected by hard
+                            cover which stops attacks.
+                        </item>
+
+                        <item target="+20" value="90% Hard.">
+                            About 90% of your body is completely
+                            protected from attack.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        If you are fully behind hard cover then you cannot
+                        be hit unless you step out. If you want to make an
+                        attack that round, then you must either choose to
+                        be in 90% cover for the entire round, or perform
+                        a 'step out and shoot' action.
+                    </para>
+
+                    <para>
+                        There are three main ways in which this can be
+                        played out.
+                    </para>
+
+                    <sect4>
+                        <title>Out, shoot, hide</title>
+
+                        <para>
+                            In this case you pop out from behind cover, take
+                            a shot and hide back in cover again.
+                        </para>
+
+                        <itemlist order="1">
+                            <item>
+                                The attack is always a snapshot at slow
+                                initiative.
+                            </item>
+
+                            <item>
+                                Get a full dodge as a defence over the
+                                entire round, even against fast attacks,
+                                but no bonus from cover.
+                            </item>
+                        </itemlist>
+                    </sect4>
+
+                    <sect4>
+                        <title>Out, shoot</title>
+
+                        <para>
+                            In this case you pop out from cover and take a
+                            shot, but remain out of cover for the rest of
+                            the round. You may not move more than your
+                            combat move distance.
+                        </para>
+
+                        <itemlist order="1">
+                            <item>
+                                The attack may be a snapshot at normal
+                                initiative or a normal shot at slow
+                                initiative.
+                            </item>
+
+                            <item>
+                                You get defences as normal, but with no
+                                cover bonus.
+                            </item>
+                        </itemlist>
+                    </sect4>
+
+                    <sect4>
+                        <title>Out, shoot, run for cover</title>
+
+                        <para>
+                            In this case you pop out from cover and take a
+                            shot, then run for more cover nearby.
+                        </para>
+
+                        <itemlist order="1">
+                            <item>
+                                The attack is always a snapshot, at slow
+                                initiative.
+                            </item>
+
+                            <item>
+                                You also get a full dodge as normal, and
+                                no bonus from cover.
+                            </item>
+                        </itemlist>
+                    </sect4>
+
+                    <sect4>
+                        <title>Out, run for cover</title>
+
+                        <para>
+                            You don't want to shoot, but move from one area
+                            of cover to another.
+                        </para>
+
+                        <itemlist order="1">
+                            <item>
+                                You do not get any attacks.
+                            </item>
+
+                            <item>
+                                You get a full dodge, against all attacks
+                                that round even if they are fast.
+                            </item>
+                        </itemlist>
+                    </sect4>
                 </sect3>
             </sect2>
         </sect1>

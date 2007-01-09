@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.95 $</version>
-            <date>$Date: 2006-04-16 21:17:56 $</date>
+            <version>$Revision: 1.96 $</version>
+            <date>$Date: 2007-01-09 23:26:55 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -185,6 +185,12 @@
                         declared.
                     </item>
 
+                    <item name="Counter strike">
+                        An extra attack which make be taken immediately
+                        after the opponent's action which triggered it,
+                        but otherwise treated as a free strike.
+                    </item>
+
                     <item name="Automatic strike">
                         An extra attack which may be taken immediately
                         against a given opponent. The opponent does not get
@@ -263,11 +269,10 @@
 
             <para>
                 Once characters enter into a combat, game time is
-                measured in <e>rounds</e>, each round being approximately
-                five seconds. When combat begins, everybody involved
-                determines their <e>initiative</e>. Initiative is rolled
-                once at the start of the combat, and tends to remain
-                fixed for the rest of the combat. Initiative is rolled
+                measured in <e>rounds</e> of approximately
+                five seconds. At the start of each combat everybody
+                determines their <e>initiative</e> which remains
+                fixed for the entire combat. Initiative is rolled
                 using:
             </para>
 
@@ -281,8 +286,9 @@
             <para>
                 If you fumble your initiative roll, then you may not act
                 for the first round of combat. If you were in the middle
-                of doing something (running, picking something up), then
-                you may continue doing that.
+                of doing something (running, picking something up) then
+                you may continue doing that however (but cannot attack,
+                or declare defences).
             </para>
 
             <sect2>
@@ -363,13 +369,12 @@
                     <title>Declaring Defenses</title>
 
                     <para>
-                        You must declare the number of defences
-                        you are making that round, though you do not
-                        need to declare who the defences are against.
-                        Each declared defence will defend against any
-                        number of attacks from a single attacker. If
-                        you make more than one defence then you suffer
-                        penalty to all actions they perform that round.
+                        You must declare the number of defences though do
+                        not need to declare who they are against. Each
+                        declared defence will defend against any number of
+                        attacks from a single attacker. Defending against
+                        multiple attackers means you suffer a penalty to
+                        all attacks and defences that round.
                     </para>
 
                     <targetlist>
@@ -392,11 +397,10 @@
                     </para>
 
                     <para>
-                        If you are making an attack, then you <e>should</e>
-                        declare a defence against the target unless the
-                        target is unable to act against you. If you do not,
-                        then they get a <e>free strike</e> against you
-                        after your attack has been resolved.
+                        If you are making a melee attack but do not declare
+                        a defence against the target, then they get a
+                        <e>counter strike</e> against you after your attack
+                        has been resolved.
                     </para>
                 </sect3>
 
@@ -407,8 +411,7 @@
                         If you have lost the initiative, you may declare
                         a wait action. You must say what event you are
                         waiting for, and what you will do if it occurs.
-                        There cannot be an <e>else</e> clause to this -
-                        if the event doesn't happen, then you don't do
+                        If the event doesn't happen, then you don't do
                         anything that round.
                     </para>
                 </sect3>
@@ -570,10 +573,8 @@
                     </targetlist>
 
                     <para>
-                        Being fatally wounded is the worst state a living
-                        creature can be in. If you receive more wounds
-                        after being fatally wounded, then you are still
-                        considered to be fatally wounded.
+                        As long as you are alive, you will never be in a
+                        state worse than <e>fatally wounded</e>.
                     </para>
 
                     <para>
@@ -599,12 +600,9 @@
                         <title>Stun Damage</title>
 
                         <para>
-                            Wounds represent damage that is likely to kill
-                            you. Not all damage is as deadly as this
-                            however, and the rest is represented as
-                            <e>stuns</e>. Whilst wounds take weeks to heal,
-                            even the worst stuns can be recovered in a
-                            couple of days.
+                            Whilst wounds represent damage that is likely to
+                            kill you, stuns represent scratches and bruises
+                            that will heal naturally within a few days.
                         </para>
 
                         <para>
@@ -615,7 +613,8 @@
                             cumulative. If you receive more stuns in a
                             single blow than you currently have, then
                             the new number of stuns replaces what you
-                            had previously.
+                            had previously. If you receive at least half
+                            your current stun level, you gain one stun.
                         </para>
 
                         <targetlist bold="true" targetFirst="true">
@@ -659,12 +658,6 @@
                                 act.
                             </item>
                         </targetlist>
-
-                        <para>
-                            If you receive stuns equal or less than the
-                            number you currently have, but more than
-                            half, then you gain one stun.
-                        </para>
 
                         <para>
                             For example, you are currently uninjured, but
