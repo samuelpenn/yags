@@ -14,8 +14,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.10 $</version>
-            <date>$Date: 2006-11-17 21:12:11 $</date>
+            <version>$Revision: 1.11 $</version>
+            <date>$Date: 2007-01-12 23:16:15 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -48,11 +48,22 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You can change the cartridge on an auto loading gun quickly
-                and reliably. At the start of any round, before you declare
-                you action, you can choose to try to reload your gun. Make a
-                <y:dexterity>Pistol</y:dexterity> or <y:dexterity>Rifle</y:dexterity>
-                check at a target of 15. On success, the gun is loaded. On a
-                failure you will have to spend time reloading as normal.
+                and reliably. Reduce the load time of a gun by 1, plus a
+                further 1 per full 4 levels of skill.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Quick draw" type="technique">
+        <cost points="2"/>
+        <skill name="Pistol"/>
+        <prerequisite>Quick load</prerequisite>
+        <short>Quickly draw and fire a pistol.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You can draw and fire a pistol in the same round without
+                any penalty.
             </para>
         </description>
     </advantage>
@@ -66,9 +77,12 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 When firing multiple shots (as single shots, not using
-                automatic fire), you may fire at more than one target.
-                For every full four points of skill, you may fire at one
-                additional target each round.
+                automatic fire), you may split your shots between
+                multiple targets. For every full four points of skill,
+                you may fire at one additional target each round.
+                Each extra target gives you a -10 penalty to all
+                shots fired, and the targets must be declared at the
+                start of the round.
             </para>
         </description>
     </advantage>
@@ -183,8 +197,8 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You can ignore a level of penalty for firing whilst
-                running.
+                You can ignore the usual penalty of doubling target
+                distance when firing a gun whilst running.
             </para>
         </description>
     </advantage>
@@ -208,7 +222,7 @@
 
     <advantage name="Two guns" type="technique">
         <cost points="6"/>
-        <skill name="Firearms"/>
+        <skill name="Pistol"/>
 
         <prerequisite>Sharp shooter</prerequisite>
 
@@ -216,8 +230,8 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You can fire two guns at once without suffering the normal
-                modifier to range.
+                You can fire two guns at once without suffering the
+                penalty of doubled distance.
             </para>
         </description>
     </advantage>

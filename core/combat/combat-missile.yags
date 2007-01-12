@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.8 $</version>
-            <date>$Date: 2007-01-09 23:26:55 $</date>
+            <version>$Revision: 1.9 $</version>
+            <date>$Date: 2007-01-12 23:16:15 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -59,6 +59,12 @@
                     other ranged combat skills.
                 </para>
 
+                <para>
+                    If the wrong skill is being used, then you do not gain
+                    any attack bonus from the weapon and the effective
+                    distance is doubled.
+                </para>
+
                 <sect3>
                     <title>Throw</title>
 
@@ -77,18 +83,13 @@
 
                     <itemlist order="1">
                         <item>
-                            Attack and damage bonuses of the weapon add to
-                            the combat rolls.
+                            Attack rolls are based on dexterity.
                         </item>
 
                         <item>
-                            Attack rolls are based on perception.
-                        </item>
-
-                        <item>
-                            Defence rolls are never made with the throw
-                            skill, though the character may dodge using
-                            brawl.
+                            The attack bonus of the weapon is added at
+                            short range. The damage bonus applies at
+                            all ranges.
                         </item>
                     </itemlist>
                 </sect3>
@@ -106,18 +107,24 @@
 
                     <itemlist order="1">
                         <item>
-                            Attack and damage bonuses of the weapon add to
-                            the combat rolls.
-                        </item>
-
-                        <item>
                             Attack rolls are based on perception.
                         </item>
 
                         <item>
-                            Defence rolls are never made with the bow
-                            skill, though the character may dodge using
-                            brawl.
+                            At short range, you get the full attack bonus of
+                            the weapon unless you are making a snapshot. The
+                            damage bonus applies at all ranges.
+                        </item>
+
+                        <item>
+                            You get your strength as the base damage, but a
+                            bow must be made for your particular strength.
+                            A stronger or weaker bow is less effective.
+                        </item>
+
+                        <item>
+                            If you are in melee combat, your attack roll is
+                            halved and you loose the weapon bonus.
                         </item>
                     </itemlist>
                 </sect3>
@@ -135,18 +142,129 @@
                     <itemlist order="1">
                         <item>
                             Attack bonus of the weapon adds to the combat
-                            rolls. Weapon damage is unaffected by user's
-                            strength.
+                            rolls at short range unless you are making a
+                            snapshot. Weapon damage is unaffected
+                            by your strength.
                         </item>
 
                         <item>
-                            Attack rolls are based on perception.
+                            Attack rolls can be based on either perception
+                            or dexterity.
                         </item>
 
                         <item>
-                            Defence rolls are never made with the crossbow
-                            skill, though the character may dodge using
-                            brawl.
+                            If you are in melee combat, your attack roll is
+                            halved and you loose the weapon bonus.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+                <sect3>
+                    <title>Pistol</title>
+
+                    <para>
+                        <e>Pistol</e> is a skill which covers the use of
+                        revolvers and auto-loading pistols. Since this
+                        defaults to any other <e>Firearms</e> skill
+                        (and vice-versa), it may be used with all types
+                        of firearms, though the skill roll is halved.
+                    </para>
+
+                    <itemlist order="1">
+                        <item>
+                            Attack rolls are based on Dexterity.
+                        </item>
+
+                        <item>
+                            At short range, you add the full attack bonus
+                            of the weapon unless you are making a snapshot.
+                        </item>
+
+                        <item>
+                            If you are in close melee combat with the
+                            target (they are attacking with a reach 0
+                            weapon) you loose your attack bonus.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+                <sect3>
+                    <title>Rifle</title>
+
+                    <para>
+                        This skill covers experience and training in the
+                        use of rifles of all types, including shotguns,
+                        assualt rifles and sniper rifles. It is generally
+                        of use in a combat situation at close to medium
+                        ranges.
+                    </para>
+
+                    <itemlist order="1">
+                        <item>
+                            Attack rolls are based on Dexterity or
+                            Perception.
+                        </item>
+
+                        <item>
+                            Add the full attack bonus of the weapon unless
+                            you are making a snapshot.
+                        </item>
+
+                        <item>
+                            Defence rolls are made as a standard brawling
+                            defence, and penalties for multiple defences
+                            applies to the rifle skill as normal.
+                        </item>
+
+                        <item>
+                            If you are in melee combat with the target
+                            (any reach) you loose your attack bonus.
+                        </item>
+
+                        <item>
+                            If you are in close combat anyone, your attack
+                            roll is halved.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+                <sect3>
+                    <title>Sniper</title>
+
+                    <para>
+                        This skill covers the use of rifles in situations
+                        where long range, long preperation times and a low
+                        rate of fire are common. Though the <e>Rifle</e>
+                        skill can be used in these circumstances, the
+                        <e>Sniper</e> skill is effectively a specialisation
+                        learnt by elite marksmen.
+                    </para>
+
+                    <itemlist order="1">
+                        <item>
+                            Attack rolls are based on Perception.
+                        </item>
+
+                        <item>
+                            Twice the attack bonus of the weapon is added
+                            when making careful or aimed shots. Normal or
+                            snapshots are not possible with this skill.
+                        </item>
+
+                        <item>
+                            If taking an aimed shot, quarter rather than
+                            third the effective distance to the target.
+                        </item>
+
+                        <item>
+                            No defences may be made in a round using this
+                            skill.
+                        </item>
+
+                        <item>
+                            If you are in melee combat of any kind, then
+                            you loose all attack bonuses of the weapon
+                            and any attack roll is halved.
                         </item>
                     </itemlist>
                 </sect3>
@@ -162,23 +280,43 @@
                     attacks are assumed to be normal.
                 </para>
 
-                <para>
-                    If you choose to act <e>fast</e> that round, then your
-                    attack is considered a <e>snapshot</e>. A snapshot doubles
-                    the effective distance to the target.
-                </para>
+                <sect3>
+                    <title>Snap shots</title>
 
-                <para>
-                    If you choose to act <e>slow</e> that round, then you
-                    may make a <e>careful shot</e>. This halves the
-                    effective distance to the target. This will often
-                    preclude other actions (such as running, but you may
-                    still defend).
-                </para>
-            </sect2>
+                    <para>
+                        You can take a quick shot without any aiming, which
+                        is a <e>fast</e> action. This doubles the effective
+                        distance to the target. Special manouevres may be
+                        used unless otherwise stated.
+                    </para>
+                </sect3>
 
-            <sect2>
-                <title>Weapon Types</title>
+                <sect3>
+                    <title>Careful shots</title>
+
+                    <para>
+                        If you take your time over a shot, then your actions
+                        are <e>slow</e>. This has the advantage of halving
+                        the effective distance to the target. You may combine
+                        this with special manouevres unless otherwise stated.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Drawing a weapon</title>
+
+                    <para>
+                        As for melee weapons, a missile weapon can be drawn
+                        and used in the same round. Regardless of what else
+                        you are doing, drawing a weapon means that any attack
+                        with it will be a snapshot, and will be slow.
+                    </para>
+
+                    <para>
+                        You also suffer a -5 penalty to the attack, plus a
+                        further -5 per reach of the weapon.
+                    </para>
+                </sect3>
 
                 <sect3>
                     <title>Reloading Weapons</title>
@@ -195,7 +333,7 @@
                         Such weapons will be marked as <e>Lo-X</e>, to
                         denote the load time. If <e>X</e> is zero, then
                         the weapon may be loaded and fired in the first
-                        round, though as a slow action. Bows are
+                        round, though as a slow snap shot. Bows are
                         examples of Lo-0 weapons.
                     </para>
 
@@ -208,13 +346,6 @@
                         weapons.
                     </para>
 
-                    <para>
-                        Weapons which require loading do not get the
-                        benefits of <e>careful shot</e> or <e>snap shot</e>
-                        except in the round after loading has been
-                        completed.
-                    </para>
-
                     <sect4>
                         <title>Magazines and reloading</title>
 
@@ -225,6 +356,99 @@
                             shot is not required.
                         </para>
                     </sect4>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Missile Weapon Properties</title>
+
+                <sect3>
+                    <title>Firearms (Fi)</title>
+
+                    <para>
+                        Any weapon listed as being a firearm is a ranged
+                        weapon firing a very fast projectile, though lasers
+                        and similar weapons also count. You cannot use other
+                        missile skills with firearms and vice versa
+                        (including <e>throw</e>).
+                    </para>
+
+                    <para>
+                        Any armour not listed as bullet-proof is halved. A
+                        firearm may also be listed as being <e>Heavy</e>,
+                        in which case non-bullet proof armour is ignored
+                        and light bullet-proof armour is halved.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Light (Li)</title>
+
+                    <para>
+                        Melee weapons obey all the normal rules for
+                        <e>light</e> weapons. A firearm which is counted as
+                        <e>light</e> still halves non-bullet proof armour,
+                        however against both <e>Heavy</e> and
+                        <e>Bullet-Proof</e> armour the damage caused is
+                        reduced by a category (e.g. from Wounds to Mixed).
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Automatic (Au)</title>
+
+                    <para>
+                        An <e>automatic</e> weapon is capable of firing
+                        in burst mode, up to its maximum rate of fire.
+                        The size of a burst will be 10 bullets unless
+                        otherwise noted.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Semi-Automatic (SA)</title>
+
+                    <para>
+                        Semi-automatic weapons are capable of multiple
+                        shots a round, but cannot be fired in burst mode.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Three Shots (TS)</title>
+
+                    <para>
+                        A limited form of automatic fire that can be
+                        selected on some fully automatic weapons. It
+                        fires a single burst of 3 rounds, which is
+                        more accurate than a full burst. Treat as a
+                        normal attack (range is not doubled), but
+                        any wounds caused are doubled.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Armour Piercing (AP)</title>
+
+                    <para>
+                        Armour piercing rounds are very good at getting
+                        through armour, but not very good at causing damage.
+                        All armour is halved (or ignored, if already halved),
+                        but damage caused is mixed.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Laser (Ls)</title>
+
+                    <para>
+                        Laser weapons are generally unaffected by wind and
+                        gravity. They suffer against <e>reflective</e>
+                        armour. A laser beam capable of causing serious
+                        damage to a human will tend to vapourise air
+                        between the gun and the target, giving a lightning
+                        like effect and a clap similar to thunder.
+                    </para>
                 </sect3>
             </sect2>
 
@@ -292,7 +516,7 @@
                     <para>
                         The range band is either <e>short</e>,
                         <e>medium</e> or <e>long</e>. A weapon cannot hit
-                        targets beyond long range. Short range is the
+                        targets beyond long range. Short range is the most
                         effective range of the weapon - at ranges beyond
                         this there are penalties to damage and accuracy.
                         The range band is independant of the distance
@@ -300,13 +524,26 @@
                         directly.
                     </para>
 
-                    <targetlist>
+                    <targetlist bold="true">
                         <targetLabel>Damage</targetLabel>
                         <valueLabel>Range category</valueLabel>
 
-                        <item value="Short" target="+0"/>
-                        <item value="Medium" target="-5"/>
-                        <item value="Long" target="-10"/>
+                        <item value="Short." target="+0">
+                            This is the range over which the weapon is most
+                            effective.
+                        </item>
+
+                        <item value="Medium." target="-5">
+                            Most weapons loose their attack bonus at medium
+                            range or greater. Except for thrown weapons,
+                            most weapons have a fumble chance of 3 at this
+                            range.
+                        </item>
+
+                        <item value="Long." target="-10">
+                            Except for thrown weapons, most weapons have a
+                            fumble chance of 10 at this range.
+                        </item>
                     </targetlist>
 
                     <para>
@@ -371,14 +608,17 @@
 
                         <item value="Moderate wind" target="x2">
                             Shooting in consistently moderate winds.
+                            Firearms may ignore this penalty.
                         </item>
 
                         <item value="High wind" target="x3">
                             Shooting in consistently high winds.
+                            For firearms, this is just a x2 penalty.
                         </item>
 
                         <item value="Very high wind" target="x5">
-                            Assumes the middle of a hurricane.
+                            Assumes the middle of a hurricane. For firearms
+                            this is just a x3 penalty.
                         </item>
 
                         <item value="Target moving" target="x2">
@@ -402,6 +642,32 @@
                         </item>
                     </targetlist>
                 </sect3>
+
+                <sect3>
+                    <title>Scopes</title>
+
+                    <para>
+                        Some weapons come with scopes already fitted, and
+                        others can have them fitted. If used - and they can
+                        only be used if taking a <e>careful</e> or
+                        <e>aimed</e> shot - they provide an attack bonus
+                        for the weapon.
+                    </para>
+
+                    <para>
+                        Most scopes give a bonus of +5 to +15, with +10
+                        being the most common, and +5 reserved only for
+                        reasonably low tech or poor quality scopes.
+                    </para>
+
+                    <para>
+                        A laser scope (which places a laser dot on the
+                        target) provides a +20 bonus. The laser scope has
+                        the advantage that it can also provide a +10 bonus
+                        when not using <e>careful</e> or <e>aimed</e> shots.
+                        It can make it obvious who you are aiming at though.
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
@@ -419,26 +685,24 @@
                     <title>Defending against missile attacks</title>
 
                     <para>
-                        The main problem with defending against missile
-                        attacks, is that the target often doesn't have the
-                        advantage of being aware of the attack. If the
-                        defender is unaware of the attack, then they are
-                        not allowed to defend.
+                        Thrown weapons may be dodged or blocked just as
+                        melee attacks are. They are generally slow enough
+                        that you have time to see the attack coming and to
+                        try to step out of the way. However, thrown weapons
+                        cannot be parried with anything other than a shield.
                     </para>
 
                     <para>
-                        Thrown weapons may be dodged or blocked normally.
-                        Defence bonuses from any weapon other than a shield
-                        do not count.
+                        Projectile weapons such as slings, bows and crossbows
+                        which fire a small, fast moving projectile are harder
+                        to dodge. At <e>short range</e> and defence rolls are
+                        halved against these weapons unless you are in melee
+                        combat with the attacker.
                     </para>
 
                     <para>
-                        Bows, crossbows and similar weapons which fire a
-                        fast and difficult to dodge projectile cause the
-                        defence roll to be halved at short range. Even
-                        faster projectile weapons (anything with a weapon
-                        type of <e>Firearm</e>) halve defence rolls at all
-                        ranges.
+                        Firearms are hard to dodge at all ranges, and halve
+                        defence rolls at medium and long range as well.
                     </para>
 
                     <sect4>
@@ -448,30 +712,25 @@
                             You may choose to declare a <e>full dodge</e>
                             against a missile attack. When you do so, you
                             dive for the nearest cover to put something
-                            solid between you and the attack. Obviously, it
-                            is easier to do this if you have a higher
-                            initiative, otherwise you will have to guess
-                            from which direction the attack is coming from.
-                            Full dodges occur at normal initiative.
+                            solid between you and the attack. This is a
+                            full round action and you may not attack or
+                            perform other actions that round.
                         </para>
 
                         <para>
-                            When you declare a <e>full dodge</e> it is
-                            assumed that you are spending the entire round
-                            moving for cover, so you loose all attack
-                            actions and may not make any melee defences.
-                            However, you do get to use your full dodging
-                            defence against the attack, whatever it is.
-                            You may use <e>Athletics</e> instead of
-                            <e>Brawl</e> when making a full dodge.
+                            The advantage of the <e>full dodge</e> is that
+                            you get your full defence against all missile
+                            attacks, including from firearms. The only
+                            limitation is that there must be some full
+                            cover within your base move distance.
                         </para>
 
                         <para>
-                            If there is no nearby cover, and you have a
-                            shield, you may take shelter under your shield
-                            instead. As before, you may not make any other
-                            defences or actions that round, but you do
-                            get your full shield defence.
+                            The dodge is considered to last all round,
+                            regardless of your initiative, however you
+                            also gain cover bonuses for 90% cover against
+                            <e>normal</e> attacks, and count as being in
+                            full cover against <e>slow</e> attacks.
                         </para>
                     </sect4>
                 </sect3>
@@ -683,6 +942,290 @@
                             </item>
                         </itemlist>
                     </sect4>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Firearms and Automatic Fire</title>
+
+                <para>
+                    Modern automatic firearms are capable of firing a large
+                    number of bullets in quick succession, often quickly
+                    enough to totally empty a complete clip of ammo within
+                    a single Yags round. In order to try and keep things
+                    quick and simple, Yags uses an abstracted system for
+                    automatic fire.
+                </para>
+
+                <para>
+                    Automatic fire is divided into <e>bursts</e> each of
+                    up to 10 bullets. A burst will always consist of 10
+                    bullets unless there are fewer bullets left in the
+                    gun. Every burst is considered to be one attack.
+                </para>
+
+                <para>
+                    Firing weapons in burst mode doubles the effective
+                    distance, though you may fire a burst as a
+                    <e>careful shot</e> to offset this if you wish.
+                </para>
+
+                <sect3>
+                    <title>Bursts at a single target</title>
+
+                    <para>
+                        When firing at a single target you gain an attack
+                        bonus equal to the number of bullets in the burst
+                        (normally +10).
+                    </para>
+
+                    <para>
+                        If you get a <e>moderate</e> success, then you hit
+                        and roll damage as if you hit with a single bullet.
+                        On a <e>good</e> success, you gain +1 to the damage
+                        roll per bullet. On an <e>excellent</e> success
+                        you get a +2 per bullet.
+                    </para>
+
+                    <para>
+                        The above assumes that the target is at short range.
+                        At medium range, halve the effective number of bullets
+                        (round down), and at long range quarter them. This
+                        may mean an automatic miss at medium or long range
+                        if the number of bullets drops below one.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Bursts at an area</title>
+
+                    <para>
+                        Instead of firing at a single target you may aim a
+                        burst over a 30 degree arc in the hope of hitting
+                        lots of people. You do not get to choose who you
+                        hit, instead targets are randomly determined, though
+                        biased towards the nearest.
+                    </para>
+
+                    <para>
+                        Roll an attack as normal against the nearest possible
+                        target in the arc with a fumble chance of 9. If you
+                        hit, then roll for damage as normal as if you had hit
+                        with a single bullet. After resolving that hit, roll
+                        against for the next target. Up to 3 targets may be
+                        hit with a single burst.
+                    </para>
+
+                    <para>
+                        If you miss a target then simply move on to the next
+                        target, and keep on checking until you reach the
+                        maximum range of the weapon, run out of targets or
+                        hit three targets.
+                    </para>
+
+                    <para>
+                        If the burst has less than 10 bullets, then the chance
+                        of hitting is lower and you can hit fewer targets. At
+                        medium range halve (round down) the number of bullets,
+                        and at long range quarter them.
+                    </para>
+
+                    <table>
+                        <colspec colwidth="17mm"/>
+                        <colspec colwidth="17mm"/>
+                        <colspec colwidth="20mm"/>
+                        <colspec colwidth="20mm"/>
+
+                        <thead>
+                            <row>
+                                <entry>Rounds</entry>
+                                <entry>Hit on</entry>
+                                <entry>Max targets</entry>
+                                <entry>Auto hit</entry>
+                            </row>
+                        </thead>
+
+                        <tbody>
+                            <row>
+                                <entry>1-2</entry>
+                                <entry>19+</entry>
+                                <entry>1</entry>
+                                <entry>-</entry>
+                            </row>
+
+                            <row>
+                                <entry>3-4</entry>
+                                <entry>16+</entry>
+                                <entry>2</entry>
+                                <entry>-</entry>
+                            </row>
+
+                            <row>
+                                <entry>5-7</entry>
+                                <entry>13+</entry>
+                                <entry>3</entry>
+                                <entry>20</entry>
+                            </row>
+
+                            <row>
+                                <entry>8-10</entry>
+                                <entry>10+</entry>
+                                <entry>3</entry>
+                                <entry>19,20</entry>
+                            </row>
+                        </tbody>
+                    </table>
+
+                    <para>
+                        A roll of 19 or 20 can be an automatic hit. Because
+                        of the random unpredictability of automatic fire,
+                        everyone in the area is at risk of being hit
+                        regardless of how well they dodge or how bad the
+                        shooter is. On an automatic hit, the target does
+                        <e>not</e> count towards the normal maximum of 3
+                        targets.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Missile Manouevres</title>
+
+                <para>
+                    As with melee weapons, there are a number of manouevres
+                    available which can be used to perform a special action
+                    with a missile weapon. Some manouevres are only available
+                    to certain types of missile weapons (such as firearms),
+                    and this is noted in the description.
+                </para>
+
+                <sect3>
+                    <title>Aimed shot</title>
+
+                    <para>
+                        You can spend a whole round aiming before firing a
+                        <e>careful shot</e> the following round. This allows
+                        you to third the effective distance for the shot.
+                        If the final round is not spent taking a careful
+                        shot, then you loose all benefits of an aimed shot.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Multiple shots (firearms)</title>
+
+                    <para>
+                        If you have an automatic or semi-automatic weapon
+                        then you can fire it multiple times in a single
+                        round at the same target. This is not burst fire,
+                        but separate squeezes of the trigger.
+                    </para>
+
+                    <para>
+                        For each shot after the first, add a cumulative
+                        recoil penalty for the weapon. If the penalty is
+                        -5, then the 2nd shot is at -5, the 3rd at -10 etc.
+                        The number of shots you are firing does not need
+                        to be declared until you actually shoot, but must
+                        be done before the first shot. Each shot is
+                        considered a separate attack and damage roll.
+                    </para>
+
+                    <para>
+                        You can fire as many shots up to the Rate of Fire
+                        of the weapon. If the number exceeds your skill,
+                        then there is a further -10 that applies to
+                        <e>all</e> shots that round per shot over your
+                        skill. If your skill is zero, you're at a large
+                        penalty when firing multiple shots.
+                    </para>
+
+                    <sect4>
+                        <title>Two guns</title>
+
+                        <para>
+                            If you want to fire two pistols at the same
+                            time, then treat it as if firing multiple shots.
+                            However, shots from your off-hand are at -10,
+                            and the distance for all shots is doubled.
+                        </para>
+
+                        <para>
+                            Recoil penalties apply to each gun independantly,
+                            but your skill still limits the total number of
+                            shots you can make.
+                        </para>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Burst fire (firearms)</title>
+
+                    <para>
+                        When you choose this manouevre you fire one or more
+                        automatic bursts at a single target. Each subsequent
+                        burst suffers double the recoil penalty of the weapon,
+                        but you can keep on firing bursts until you run out
+                        of bullets or want to stop.
+                    </para>
+
+                    <para>
+                        Use the rules for automatic fire at a single target.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Full auto (firearms)</title>
+
+                    <para>
+                        A <e>full auto</e> attack will, for most weapons,
+                        empty the clip. When firing on full auto, the
+                        weapon fires a number of <e>burst attacks</e>
+                        over an area. Use the automatic fire rules for
+                        firing at an area.
+                    </para>
+
+                    <para>
+                        Each subsequent burst may be at a different area,
+                        though the areas must be next to each other (or
+                        overlap).
+                    </para>
+
+                    <sect4>
+                        <title>Suppressive fire</title>
+
+                        <para>
+                            If you wish, you can fire over a 60 degree arc
+                            instead of a 30 degree arc. Halve the effective
+                            number of bullets, but otherwise treat it as
+                            automatic fire.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Blind fire</title>
+
+                        <para>
+                            This is suppressive fire when you aren't looking
+                            at what you're firing at. Consider yourself to
+                            have an attribute of zero, but you can count as
+                            being completely in cover (rather than 90% cover).
+                            You must declare the number of bursts before
+                            firing any.
+                        </para>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Three Shots (firearms)</title>
+
+                    <para>
+                        Some modern automatic firearms have an option to
+                        only fire 3 shots in a single burst. If selected,
+                        this is treated as an attack. It does not use the
+                        normal automatic fire rules, but on a successful
+                        hit any wounds are doubled.
+                    </para>
                 </sect3>
             </sect2>
         </sect1>
