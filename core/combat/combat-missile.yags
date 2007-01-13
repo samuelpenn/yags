@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.9 $</version>
-            <date>$Date: 2007-01-12 23:16:15 $</date>
+            <version>$Revision: 1.10 $</version>
+            <date>$Date: 2007-01-13 16:42:30 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -72,7 +72,8 @@
                         The <e>Throw</e> skill is the missile equivalent
                         of the <e>Brawl</e> skill, and is used for all
                         simple missile weapons, including rocks, bottles,
-                        knives, axes and slings.
+                        knives, axes and slings but excluding complex
+                        weapons such as bows, crossbows and firearms.
                     </para>
 
                     <para>
@@ -100,9 +101,8 @@
                     <para>
                         Covers the use of the short and long bow for
                         ranged combat. A character without any skill
-                        cannot default to <e>throw</e>, and must spend
-                        a full round aiming or have all range penalties
-                        doubled.
+                        cannot default to <e>throw</e>, and the
+                        effective distance is doubled.
                     </para>
 
                     <itemlist order="1">
@@ -136,7 +136,9 @@
                         Covers the use of all types of crossbow. Does
                         not default to <e>throw</e>. A character without
                         any skill takes twice as long to load a crossbow
-                        but can fire it normally.
+                        but can fire it normally with no other penalties.
+                        This is one reason crossbows are preferred to bows
+                        for untrained peasant militia.
                     </para>
 
                     <itemlist order="1">
@@ -153,7 +155,7 @@
                         </item>
 
                         <item>
-                            If you are in melee combat, your attack roll is
+                            If you are in close combat, your attack roll is
                             halved and you loose the weapon bonus.
                         </item>
                     </itemlist>
@@ -194,7 +196,7 @@
                     <para>
                         This skill covers experience and training in the
                         use of rifles of all types, including shotguns,
-                        assualt rifles and sniper rifles. It is generally
+                        assault rifles and sniper rifles. It is generally
                         of use in a combat situation at close to medium
                         ranges.
                     </para>
@@ -211,19 +213,13 @@
                         </item>
 
                         <item>
-                            Defence rolls are made as a standard brawling
-                            defence, and penalties for multiple defences
-                            applies to the rifle skill as normal.
-                        </item>
-
-                        <item>
                             If you are in melee combat with the target
                             (any reach) you loose your attack bonus.
                         </item>
 
                         <item>
-                            If you are in close combat anyone, your attack
-                            roll is halved.
+                            If you are in close combat with anyone, your
+                            attack roll is halved.
                         </item>
                     </itemlist>
                 </sect3>
@@ -233,7 +229,7 @@
 
                     <para>
                         This skill covers the use of rifles in situations
-                        where long range, long preperation times and a low
+                        where long range, long preparation times and a low
                         rate of fire are common. Though the <e>Rifle</e>
                         skill can be used in these circumstances, the
                         <e>Sniper</e> skill is effectively a specialisation
@@ -247,8 +243,9 @@
 
                         <item>
                             Twice the attack bonus of the weapon is added
-                            when making careful or aimed shots. Normal or
-                            snapshots are not possible with this skill.
+                            when making careful or aimed shots at all
+                            range bands. Normal or snapshots are not
+                            possible with this skill.
                         </item>
 
                         <item>
@@ -286,7 +283,7 @@
                     <para>
                         You can take a quick shot without any aiming, which
                         is a <e>fast</e> action. This doubles the effective
-                        distance to the target. Special manouevres may be
+                        distance to the target. Special manoeuvres may be
                         used unless otherwise stated.
                     </para>
                 </sect3>
@@ -298,7 +295,7 @@
                         If you take your time over a shot, then your actions
                         are <e>slow</e>. This has the advantage of halving
                         the effective distance to the target. You may combine
-                        this with special manouevres unless otherwise stated.
+                        this with special manoeuvres unless otherwise stated.
                     </para>
                 </sect3>
 
@@ -415,7 +412,7 @@
                 </sect3>
 
                 <sect3>
-                    <title>Three Shots (TS)</title>
+                    <title>Triple Auto (TA)</title>
 
                     <para>
                         A limited form of automatic fire that can be
@@ -477,7 +474,7 @@
             </sect2>
 
             <sect2>
-                <title>Missile Ranges</title>
+                <title>Range Bands and Distance</title>
 
                 <para>
                     There are two range factors to take into account - the
@@ -508,6 +505,12 @@
                         10m. Up to 20m, there is a +5 modifier, up to 30m a
                         +10 modifier and so on.
                     </para>
+
+                    <para>
+                        The distance modifier adds to the (possibly halved)
+                        defence roll of the target (or to 15, whichever is
+                        greater).
+                    </para>
                 </sect3>
 
                 <sect3>
@@ -519,7 +522,7 @@
                         targets beyond long range. Short range is the most
                         effective range of the weapon - at ranges beyond
                         this there are penalties to damage and accuracy.
-                        The range band is independant of the distance
+                        The range band is independent of the distance
                         increment, and doesn't effect the target difficulty
                         directly.
                     </para>
@@ -599,7 +602,8 @@
                     <para>
                         For example, if taking a snapshot (x2) at a moving
                         target (x2) whilst running (x2), then the effective
-                        distance will be at x4.
+                        distance will be at x4 (<e>not</e> x8 - treat x2 as
+                        +100%).
                     </para>
 
                     <targetlist bold="true">
@@ -682,6 +686,17 @@
                 </para>
 
                 <sect3>
+                    <title>Missile fumbles</title>
+
+                    <para>
+                        A fumble with a missile weapon normally counts as
+                        an automatic miss, unless the weapon is listed as
+                        being <e>unreliable</e>. An unreliable weapon will
+                        jam or break when a fumble occurs.
+                    </para>
+                </sect3>
+
+                <sect3>
                     <title>Defending against missile attacks</title>
 
                     <para>
@@ -695,7 +710,7 @@
                     <para>
                         Projectile weapons such as slings, bows and crossbows
                         which fire a small, fast moving projectile are harder
-                        to dodge. At <e>short range</e> and defence rolls are
+                        to dodge. At <e>short range</e> any defence rolls are
                         halved against these weapons unless you are in melee
                         combat with the attacker.
                     </para>
@@ -730,7 +745,8 @@
                             regardless of your initiative, however you
                             also gain cover bonuses for 90% cover against
                             <e>normal</e> attacks, and count as being in
-                            full cover against <e>slow</e> attacks.
+                            full cover against <e>slow</e> attacks (so will
+                            be immune to most attacks at this point).
                         </para>
                     </sect4>
                 </sect3>
@@ -784,12 +800,12 @@
                         In some circumstances, you don't care who you hit
                         as long as you hit someone. If firing at a group
                         of potential targets, then you can reduce the
-                        range difficulty by 10 for each doubling of the
+                        distance modifier by 5 for each doubling of the
                         number of targets.
                     </para>
 
                     <para>
-                        The range modifier cannot be reduced below zero.
+                        The distance modifier cannot be reduced below zero.
                         If you hit, then you hit a random target.
                     </para>
                 </sect3>
@@ -872,8 +888,7 @@
 
                             <item>
                                 Get a full dodge as a defence over the
-                                entire round, even against fast attacks,
-                                but no bonus from cover.
+                                entire round, but no bonus from cover.
                             </item>
                         </itemlist>
                     </sect4>
@@ -897,7 +912,7 @@
 
                             <item>
                                 You get defences as normal, but with no
-                                cover bonus.
+                                cover bonus and no full dodge.
                             </item>
                         </itemlist>
                     </sect4>
@@ -917,8 +932,8 @@
                             </item>
 
                             <item>
-                                You also get a full dodge as normal, and
-                                no bonus from cover.
+                                You get normal defences but no cover bonus
+                                and no full dodge.
                             </item>
                         </itemlist>
                     </sect4>
@@ -1039,7 +1054,7 @@
                         <thead>
                             <row>
                                 <entry>Rounds</entry>
-                                <entry>Hit on</entry>
+                                <entry>Fumble</entry>
                                 <entry>Max targets</entry>
                                 <entry>Auto hit</entry>
                             </row>
@@ -1048,28 +1063,28 @@
                         <tbody>
                             <row>
                                 <entry>1-2</entry>
-                                <entry>19+</entry>
+                                <entry>18</entry>
                                 <entry>1</entry>
                                 <entry>-</entry>
                             </row>
 
                             <row>
                                 <entry>3-4</entry>
-                                <entry>16+</entry>
+                                <entry>15</entry>
                                 <entry>2</entry>
                                 <entry>-</entry>
                             </row>
 
                             <row>
                                 <entry>5-7</entry>
-                                <entry>13+</entry>
+                                <entry>12</entry>
                                 <entry>3</entry>
                                 <entry>20</entry>
                             </row>
 
                             <row>
                                 <entry>8-10</entry>
-                                <entry>10+</entry>
+                                <entry>9</entry>
                                 <entry>3</entry>
                                 <entry>19,20</entry>
                             </row>
@@ -1089,12 +1104,12 @@
             </sect2>
 
             <sect2>
-                <title>Missile Manouevres</title>
+                <title>Missile Manoeuvres</title>
 
                 <para>
-                    As with melee weapons, there are a number of manouevres
+                    As with melee weapons, there are a number of manoeuvres
                     available which can be used to perform a special action
-                    with a missile weapon. Some manouevres are only available
+                    with a missile weapon. Some manoeuvres are only available
                     to certain types of missile weapons (such as firearms),
                     and this is noted in the description.
                 </para>
@@ -1151,7 +1166,7 @@
                         </para>
 
                         <para>
-                            Recoil penalties apply to each gun independantly,
+                            Recoil penalties apply to each gun independently,
                             but your skill still limits the total number of
                             shots you can make.
                         </para>
@@ -1162,7 +1177,7 @@
                     <title>Burst fire (firearms)</title>
 
                     <para>
-                        When you choose this manouevre you fire one or more
+                        When you choose this manoeuvre you fire one or more
                         automatic bursts at a single target. Each subsequent
                         burst suffers double the recoil penalty of the weapon,
                         but you can keep on firing bursts until you run out
@@ -1212,6 +1227,11 @@
                             being completely in cover (rather than 90% cover).
                             You must declare the number of bursts before
                             firing any.
+                        </para>
+
+                        <para>
+                            If you have <e>blind fighting</e>, then you can
+                            assume an attribute of 1, rather than 0.
                         </para>
                     </sect4>
                 </sect3>

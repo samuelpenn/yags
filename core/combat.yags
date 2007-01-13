@@ -11,9 +11,10 @@
         <tagline>Yags</tagline>
 
         <summary>
-            Basic combat rules, mostly for fantasy/historical combat.
-            Includes both melee and missile combat, as well as basic
-            movement, damage and armour rules.
+            Basic core rules for the Yags combat system, aiming for a
+            gritty-cinematic style of play. Includes rules for melee,
+            unarmed combat, missile combat and modern firearms. Rules
+            for getting wounded, and getting healed are also included.
         </summary>
 
         <author>
@@ -22,8 +23,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.97 $</version>
-            <date>$Date: 2007-01-12 23:16:15 $</date>
+            <version>$Revision: 1.98 $</version>
+            <date>$Date: 2007-01-13 16:42:30 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -44,30 +45,42 @@
             <title>Basic Combat</title>
 
             <para>
-                Indirectly, the combat system of any roleplaying game
-                influences how the game is played. A grim and deadly system
-                will tend to discourage characters getting involved in
-                combat, whilst a heroic system allows them to fight their
-                way out of most situations when things go bad, so falling
-                back to combat becomes a valid choice when other solutions
-                go bad.
+                The combat system of any roleplaying game is probably one
+                of the most important aspects of the whole game, even if
+                combat isn't itself meant to be the focus of the game.
+                In some ways, it is the only part of the system that can
+                lead to character death - even a botched etiquette skill
+                check in front of a king will only kill you if the combat
+                system says that you can't dodge or fight the guards.
             </para>
 
             <para>
-                The core Yags combat system tries to aim for something
-                between realism and cinematic combat. A skilled hero can
-                fight off many adverseries in the style of <e>Azumi</e> or
-                <e>Kill Bill</e>, however if they make a mistake, a blow
-                to the head will take them out just as well as it would
-                one of the unskilled hordes they are fighting.
+                Yags combat is reasonably detailed, providing a lot of
+                choices to players and their characters, both at character
+                design time and during combat itself. However, the aim is
+                for something that is simple and fast flowing most of the
+                time, with options for doing complex stuff when the need
+                arises.
             </para>
 
             <para>
-                One feature is that it can be quite hard to kill someone
-                instantly. A person may go down, bleeding and unconscious,
-                but as long as their friends survive, their wounds can be
-                tended and their life saved. It is easy to be taken out,
-                but it is harder to die.
+                In terms of style, Yags tries for a gritty-cinematic
+                approach. Combat can be deadly, especially if you try to
+                bite off more than you can chew. A single lucky roll is
+                unlikely to kill you, but it can put you on the floor
+                bleeding to death. Unless you are very good, taking on
+                multiple opponents can be suicide, and the core system
+                is meant to be reasonably realistic in this regard.
+            </para>
+
+            <para>
+                However, Yags does allow for very skilled characters. A
+                sword thrust, or a bullet, can kill anyone, however much
+                of a hero they think they are. On the other hand, if you
+                are of the skill of <e>Azumi</e>, <e>Beatrice Kiddo</e>
+                or <e>River</e> then you should be able to disarm, kill
+                or evade everyone before they get to stick you with
+                something sharp.
             </para>
 
             <sect2>
@@ -211,6 +224,26 @@
                         actions happen first, then normal actions, then
                         slow actions.
                     </item>
+
+                    <item name="Martial weapon">
+                        Any melee weapon which does better than stun damage
+                        and has a reach greater than zero.
+                    </item>
+
+                    <item name="Distance">
+                        The distance to a target for missile weapons,
+                        measured in metres. This affects how hard it is
+                        to hit the target, and my be modified up or down
+                        depending on other factors (such as if you're
+                        running whilst trying to shoot).
+                    </item>
+
+                    <item name="Range band">
+                        The effective range of missile weapons, measured in
+                        metres. This is unaffected by modifiers to the
+                        Distance, and effects how much damage the weapon
+                        does.
+                    </item>
                 </itemlist>
             </sect2>
 
@@ -335,10 +368,11 @@
 
                 <para>
                     At the start of each round, all combatants declare
-                    their actions in order of increasing initiative.
-                    This means that characters with a high initiative
-                    get to see what lower initiative people are doing
-                    before they get to act.
+                    their actions in order of increasing initiative. This
+                    gives characters with a high initiative a big tactical
+                    advantage over everybody else. Initiative should be
+                    thought of as an abstraction of both physical speed and
+                    tactical ability.
                 </para>
 
                 <para>
@@ -757,11 +791,6 @@
             Pull in advanced missile combat rules.
         -->
         <sect1 href="combat/combat-missile.yags"/>
-
-        <!--
-            Pull in unarmed combat rules.
-        -->
-        <sect1 href="combat/combat-unarmed.yags"/>
     </body>
 </article>
 

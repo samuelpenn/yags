@@ -11,9 +11,7 @@
         <tagline>Yags</tagline>
 
         <summary>
-            Basic combat rules, mostly for fantasy/historical combat.
-            Includes both melee and missile combat, as well as basic
-            movement, damage and armour rules.
+            Basic core rules for the Yags melee combat.
         </summary>
 
         <author>
@@ -22,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.13 $</version>
-            <date>$Date: 2007-01-12 23:16:15 $</date>
+            <version>$Revision: 1.14 $</version>
+            <date>$Date: 2007-01-13 16:42:30 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -139,8 +137,8 @@
 
                         <item>
                             If using a second weapon, half (round up) of the
-                            attack, defence and damage bonuses of the second
-                            weapon are added.
+                            attack and defence bonuses of the second weapon
+                            are added.
                         </item>
                     </itemlist>
                 </sect3>
@@ -388,6 +386,42 @@
                             weapon at all.
                         </item>
                     </itemlist>
+
+                    <sect4>
+                        <title>Martial and non-Martial Weapons</title>
+
+                        <para>
+                            <e>Martial</e> weapons are any melee weapon
+                            which does more than <e>stun</e> damage. They
+                            are items designed to kill people, rather
+                            than improvised heavy objects. Natural attacks
+                            do not normally count as martial weapons,
+                            regardless of the damage type they do.
+                        </para>
+
+                        <itemlist order="sort">
+                            <item name="Unarmed attack">
+                                An unarmed attack (or defence) is one using only
+                                natural weapons (such as a fist, or a bite) or
+                                one using non-martial weapons with a reach of
+                                zero.
+                            </item>
+
+                            <item name="Martial weapons">
+                                Martial weapons are any melee weapon which does
+                                more than stun damage and has a reach greater
+                                than zero.
+                            </item>
+                        </itemlist>
+
+                        <para>
+                            When making an unarmed attack against someone who is
+                            defending with martial weapons, the attacker risks
+                            being harmed. If the defender makes a successful
+                            defence, then they get an immediate
+                            <e>counter strike</e> against the attacker.
+                        </para>
+                    </sect4>
                 </sect3>
 
                 <sect3>
@@ -481,7 +515,7 @@
 
                     <para>
                         Long weapons are best in open spaces, especially
-                        when used in massed ranks. In a narrow corrider,
+                        when used in massed ranks. In a narrow corridor,
                         they can actually be a hindrance to the user.
                         Examples of various weapon reaches is given in the
                         table below.
@@ -563,36 +597,6 @@
                             normal stance.
                         </para>
                     </sect4>
-
-                </sect3>
-
-                <sect3>
-                    <title>Weapon statistics</title>
-
-                    <para>
-                        There are a variety of different weapons, all with
-                        their own advantages and disadvantages. The table
-                        lists the most common weapons, together with the
-                        statistics which are required in combat.
-                    </para>
-
-                    <y:import-weaponlist href="xml/equipment.yags"
-                                       importance="3"
-                                       style="list">
-                        <y:category>Axes</y:category>
-                        <y:category>Bows</y:category>
-                        <y:category>Clubs</y:category>
-                        <y:category>Knives</y:category>
-                        <y:category>Shields</y:category>
-                        <y:category>Spears</y:category>
-                        <y:category>Swords</y:category>
-                    </y:import-weaponlist>
-
-                    <para>
-                        The three ability modifiers - attack,
-                        defence and damage add to the base ability for a
-                        character when they are using that weapon.
-                    </para>
                 </sect3>
             </sect2>
 
@@ -648,7 +652,7 @@
                     <para>
                         A <e>free strike</e> is defended against in the
                         same way as any other attack. Since a declared
-                        defence affects all attacks by a singler attacker,
+                        defence affects all attacks by a single attacker,
                         the target of a <e>free strike</e> does not need
                         to declare new defences unless they weren't
                         defending against you at all that round.
@@ -662,7 +666,7 @@
 
                         <item>
                             If someone tries to grapple or trip you, you
-                            gain a free stike against them.
+                            gain a free strike against them.
                         </item>
 
                         <item>
@@ -789,20 +793,6 @@
                             automatically count as heavy.
                         </item>
 
-                        <item name="Nuclear-Biological-Chemical">
-                            Completely sealed armour designed to resist
-                            corrosive chemicals and germ warfare attacks.
-                            May use filters or have its own air supply.
-                        </item>
-
-                        <item name="Vacuum">
-                            Completely sealed with its own air supply and
-                            capable of operating in airless conditions.
-                        </item>
-
-                        <item name="Reflective">
-                            Provides double soak bonus against lasers.
-                        </item>
                     </itemlist>
                 </sect3>
 
@@ -813,8 +803,7 @@
                         A full set of armour can consist of several parts, and a
                         character can mix and match according to preference and
                         finances. Unless otherwise stated, armour cannot be
-                        layered - it is not possible to wear two chain hauberks
-                        at the same time.
+                        layered (if it is, simply take the best protection value).
                     </para>
 
                     <para>
@@ -890,22 +879,6 @@
                             be worn over a chain mail coif.
                         </para>
                     </sect4>
-                </sect3>
-
-                <sect3>
-                    <title>Armour statistics</title>
-
-                    <para>
-                        The total protection of all armour worn adds to the soak
-                        of the wearer. Likewise, the load of each piece of
-                        armour adds to the load carried by the character.
-                    </para>
-
-                    <para>
-                        A description of the common armour types is given below.
-                    </para>
-
-                    <y:import-armourlist href="xml/equipment.yags"/>
                 </sect3>
             </sect2>
 
@@ -1012,7 +985,7 @@
                         the following results.
                     </para>
 
-                    <itemlist order="unordered">
+                    <itemlist order="1">
                         <item>
                             You gain a point of fatigue.
                         </item>
@@ -1039,7 +1012,7 @@
                         option is chosen.
                     </para>
 
-                    <itemlist order="unordered">
+                    <itemlist order="1">
                         <item>
                             Defender gains a point of fatigue.
                         </item>
@@ -1089,13 +1062,18 @@
                         It is normally considered a full action to put a
                         weapon away. Dropping a weapon is free however,
                         so a weapon may be dropped, another one drawn
-                        and an attack made in the same round.
+                        and an attack made in the same round. In this case,
+                        any defence rolls are made with the new weapon at
+                        the normal penalty, even if you are attacked before
+                        your initiative comes up.
                     </para>
 
                     <para>
                         One weapon may be put away, and a second drawn
                         in a single round, though other actions cannot
-                        be taken that round.
+                        be taken that round except for defences, at a
+                        penalty equal to 5 + 5 x (total reach of both
+                        weapons).
                     </para>
                 </sect3>
 
@@ -1135,56 +1113,133 @@
 
                     <para>
                         If the situation allows it, then you may attempt
-                        to take advantage of the scenary to give yourself
+                        to take advantage of the scenery to give yourself
                         an advantage in an attack by performing a
                         <e>stunt</e>. A <e>stunt</e> may be as simple as
                         leaping straight at your foe, or as complex as
-                        jumping over a bannister or swinging on a rope.
+                        jumping over a banister or swinging on a rope.
                     </para>
 
                     <para>
                         The base difficulty of the stunt depends on how
-                        useful a stunt it actaully is. An
-                        <y:skeq>
-                            <y:attr>agility</y:attr>
-                            <y:sk>athletics</y:sk>
-                            <die/>
-                        </y:skeq>
-                        check is made, and if it succeeds it can be
-                        immediately followed by the attack roll. If it
-                        fails, then the attack is considered to be a
-                        fumble. Stunts are always <e>slow</e> actions.
+                        useful a stunt it actually is. An
+                        <y:agility>athletics</y:agility> check is made,
+                        and if it succeeds it can be immediately followed
+                        by the attack roll. If it fails, then the attack is
+                        considered to be a fumble. Stunts are always
+                        <e>slow</e> actions.
+                    </para>
+
+                    <para>
+                        A successful stunt gives you a +5 to attack or
+                        damage per level of success of the stunt. The
+                        difficulty of the stunt is up to the GM.
                     </para>
                 </sect3>
             </sect2>
         </sect1>
 
-        <sect1 id="manouevres">
-            <title>Manouevres</title>
+        <sect1 id="manoeuvres">
+            <title>Melee Manoeuvres</title>
 
             <para>
-                Manouevres are special actions which anyone can try to
+                Manoeuvres are special actions which anyone can try to
                 perform. They must normally be declared at the time that
-                the attack is declared, and require a <e>good</e> or
+                the attack is declared, and often require a <e>good</e> or
                 better attack success. Failure to achieve the required
                 level of success results in failure.
             </para>
 
             <para>
-                The available manouevres are listed below. The required
-                level of success is provided in parenthesis after the name
-                of the manouevre. If a stance is also listed, then that
-                stance must be used when making the attack.
+                The available melee manoeuvres are listed below. The
+                required level of success is provided in parenthesis
+                after the name of the manoeuvre. If a stance is also
+                listed, then that stance must be used when making the
+                attack.
             </para>
 
             <sect2>
-                <title>Attack Manouevres</title>
+                <title>Attack Manoeuvres</title>
+
+                <sect3>
+                    <title>Charge through (unarmed)</title>
+
+                    <para>
+                        A charge through is an attempt to run through a
+                        person, possibly knocking them down, and must always
+                        be declared. The defender has the option to either
+                        to step aside, or to stand their ground - in either
+                        case they get a <e>free strike</e> against you if
+                        they wish.
+                    </para>
+
+                    <para>
+                        If the defender decides to dodge, then no rolls are
+                        made and you charge through the area uncontested.
+                        If they try to block, then it is a contest of
+                        <y:strength>Brawl</y:strength>. The loser of the
+                        contest is knocked <e>prone</e>.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Disarm (excellent)</title>
+
+                    <para>
+                        You disarm your foe. They loose a single weapon
+                        of your choice, which falls to the ground within
+                        a few metres of them. If made as an unarmed
+                        attack, then invokes an additional
+                        <e>counter strike</e> if it fails. On a
+                        <e>superb</e> success, you may grab the disarmed
+                        weapon if you have a free hand.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Grapple (good, unarmed)</title>
+
+                    <para>
+                        Unarmed combat manoeuvre where you try to grab
+                        the target's limbs or neck in order to get a hold.
+                        Requires a <e>good</e> attack against a limb, and
+                        an <e>excellent</e> attack against the neck.
+                    </para>
+
+                    <para>
+                        On success, the target is held and an immediate
+                        contest of <y:strength>brawl</y:strength> is made
+                        to see if the attacker can keep hold. A second
+                        success means that the defender loses the rest of
+                        their declared actions that round (if any).
+                    </para>
+
+                    <para>
+                        Once a target is grappled, they are at -1 to their
+                        attribute for any actions. Each extra level of
+                        success of the strength check by the attacker
+                        increases this penalty by one.
+                    </para>
+                </sect3>
 
                 <sect3>
                     <title>Improved Damage (excellent, aggressive)</title>
 
                     <para>
                         Your attack does +5 damage if it hits.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Knockdown (good, aggressive)</title>
+
+                    <para>
+                        Your attack aims to force your foe to the ground.
+                        If your damage roll (ignoring armour and soak) is
+                        greater than your foe's strength x 10, then they
+                        are knocked to the ground, <e>prone</e>. Damage
+                        caused is <e>stun</e> damage, regardless of the
+                        weapon.
                     </para>
                 </sect3>
 
@@ -1197,37 +1252,34 @@
                 </sect3>
 
                 <sect3>
-                    <title>Overwhelming attacks (good)</title>
+                    <title>Overwhelming attacks</title>
 
                     <para>
                         Rather than attacking to harm, you aim to prevent
                         your foe from striking. If you succeed, you do no
-                        damage, but your foe receives -5 to any further
-                        attacks or defences that they make that round,
-                        against anyone.
+                        damage, but your foe receives -5 per level of
+                        success to any further attacks or defences that
+                        they make that round against anyone.
                     </para>
                 </sect3>
 
                 <sect3>
-                    <title>Disarm (excellent)</title>
+                    <title>Trip (good, unarmed)</title>
 
                     <para>
-                        You disarm your foe. They loose a single weapon
-                        of your choice, which falls to the ground within
-                        a few metres of the foe.
+                        Covers either grabbing a person and throwing them
+                        to the ground, or pushing or knocking them off
+                        their feet. Generates a <e>free strike</e>.
+                        On a <e>good</e> attack, the target is grabbed and
+                        a contest of <y:strength>brawl</y:strength> is
+                        made. If the second attack roll succeeds, then the
+                        defender is thrown and considered <e>prone</e>,
+                        otherwise the grab is considered broken.
                     </para>
-                </sect3>
-
-                <sect3>
-                    <title>Knockdown (good, aggressive)</title>
 
                     <para>
-                        Your attack aims to force your foe to the ground.
-                        If your damage roll (ignoring armour and soak) is
-                        greater than your foe's strength x 10, then they
-                        are knocked to the ground, <e>prone</e>. Damage
-                        causes is <e>stun</e> damage, regardless of the
-                        weapon.
+                        Each extra level of success for the final throw
+                        allows the attacker to cause one stun if desired.
                     </para>
                 </sect3>
 
@@ -1246,11 +1298,92 @@
                     <para>
                         If using a weapon that does <e>mixed</e> or
                         <e>stun</e> damage, the difficulty is based on
-                        the number of stuns, and failure of the check
-                        results in the foe falling to the ground in shock.
+                        the total number of wounds or stuns caused, and
+                        failure of the check results in the foe falling
+                        to the ground unconscious.
                     </para>
                 </sect3>
             </sect2>
+
+            <sect2>
+                <title>Defensive Manoeuvres</title>
+
+                <sect3>
+                    <title>Escape hold</title>
+
+                    <para>
+                        If you are being grappled, you may attempt to break
+                        free. This must be declared at the start of the
+                        round, and does not use a standard attack but is
+                        an opposed check between you and the person who
+                        has you held.
+                    </para>
+
+                    <para>
+                        You both roll <y:strength>brawl</y:strength>, and
+                        you suffer a penalty to strength depending on the
+                        quality of the hold. If you win, then the hold is
+                        broken, otherwise there is no effect.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Grapple Manoeuvres</title>
+
+                <para>
+                    The following actions may be performed if you have
+                    previously <e>grabbed</e> your foe. Remember to reduce
+                    their defence by any penalties for being grabbed.
+                </para>
+
+                <sect3>
+                    <title>Improve Grapple (good)</title>
+
+                    <para>
+                        If you are currently grappling someone, you may
+                        attempt to improve your grapple. Make a standard
+                        <y:agility>brawl</y:agility> attack against them,
+                        and on a <e>good</e> success their penalty to
+                        actions is increased by 1. Each level of success
+                        beyond this increases it by another 1.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Break limb (good)</title>
+
+                    <para>
+                        If you are grappling someone, you may attempt to
+                        break one of their limbs. A standard
+                        <y:agility>Brawl</y:agility> attack is made
+                        requiring a <e>good</e> success. If achieved, roll
+                        damage as normal, and if two or more levels are
+                        caused, then the limb is broken. The target suffers
+                        one immediate wound on a broken limb and they are
+                        at an additional -40 to all attempts to use it.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Break neck (excellent)</title>
+
+                    <para>
+                        This is the same as breaking a limb, except that
+                        an <e>excellent</e> success is required, and three
+                        levels of damage need to be caused. On success, the
+                        target drops to <e>fatally wounded</e> and must
+                        make a <y:health/> check to remain alive against
+                        10 + number of levels caused.
+                    </para>
+
+                    <para>
+                        Results of a broken neck may be paralysis or
+                        suffocation if the victim doesn't die immediately.
+                    </para>
+                </sect3>
+            </sect2>
+
         </sect1>
 
         <sect1 id="mounted">
@@ -1266,15 +1399,15 @@
 
             <para>
                 If a character wishes to make a melee attack from the
-                back of a mount, then they must make a agility riding
-                check at difficulty 15. One roll is required each round
-                that the character has declared any attacks or
-                defenses.
+                back of a mount, then they must make an
+                <y:agility>riding</y:agility> check at difficulty 15.
+                One roll is required each round that the character has
+                declared any attacks or defenses.
             </para>
 
             <para>
                 Failure of the riding roll means that the character
-                becomes unstable and looses their attack. A second roll
+                becomes unstable and loses their attack. Make a second roll
                 at the same difficulty to remain on the horse. If the
                 rider is not using saddle and stirrups, then both
                 difficulties are increased by 5.
@@ -1285,7 +1418,7 @@
                 from horseback, against either infantry or other
                 mounted opponents. Characters with the <e>mounted
                     combat</e> technique add this bonus to <e>all</e>
-                their combat rolls (initiative, attack, defence and
+                their melee rolls (initiative, attack, defence and
                 damage), as well as not needing to make ride rolls
                 each round.
             </para>
@@ -1295,14 +1428,14 @@
 
                 <para>
                     As for melee combat, and missile combat requires a
-                    riding roll if firing from horseback. All penalties
-                    due to range are also doubled.
+                    riding roll if firing from horseback. The distance
+                    to the target is doubled when firing from horseback.
                 </para>
 
                 <para>
                     Missile combat however suffers no penalty if the
                     horse is stationary. No roll is required to stay
-                    mounted, and range penalties are not doubled.
+                    mounted, and the distance is not doubled.
                 </para>
             </sect2>
 
@@ -1331,13 +1464,14 @@
                 <para>
                     It is always possible for someone on foot to strike
                     directly at the mount. Mounts are often quite large
-                    however, and some may be more resistent to damage
+                    however, and some may be more resistant to damage
                     than the rider.
                 </para>
 
                 <para>
-                    Any animal that has a <t>Size</t> at least twice that
-                    of the attacker causes all damage against it to be
+                    Any animal that has a <t>Size</t> which is either
+                    5 levels higher than, or twice the <t>Size</t> of
+                    the attacker, causes all damage against it to be
                     reduced by one level of effectiveness - wounds become
                     mixed damage, mixed become stuns and stuns become
                     ineffective.
@@ -1345,7 +1479,8 @@
 
                 <para>
                     The reverse is also true - if a creature's <t>Size</t>
-                    is twice that of the target it is attacking, then
+                    is twice that of the target it is attacking, or at
+                    least 5 levels higher, then
                     the damage is increased in effectiveness. Stuns become
                     mixed, mixed becomes wounds. Wounds are already as
                     deadly as it is possible to be, so are unaffected.
@@ -1353,9 +1488,9 @@
 
                 <para>
                     <e>Very</e> large animals, those which have a
-                    <t>Size</t> four times that of their opponent, cause
-                    damage to be shifted by two categories. In this case,
-                    stuns do no damage.
+                    <t>Size</t> three times (or 15 higher) that of their
+                    opponent, cause damage to be shifted by two categories.
+                    In this case, stuns do no damage if shifted down.
                 </para>
             </sect2>
         </sect1>
