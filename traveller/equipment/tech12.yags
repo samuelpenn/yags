@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2006-12-28 22:55:44 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2007-01-14 20:19:27 $
 
     Categories
 
@@ -135,7 +135,7 @@
                     <short>2000</short><medium>4000</medium><long>8000</long>
                 </range>
             </combat>
-            <strength>3</strength><load>5</load><reach>1</reach>
+            <strength>3</strength><load>5</load><reach>3</reach>
             <capacity>20</capacity><rof>5</rof><recoil>-5</recoil>
             <properties>
                 <missile/><firearm/><semiauto/><heavy/>
@@ -161,7 +161,7 @@
                     <short>500</short><medium>1000</medium><long>2000</long>
                 </range>
             </combat>
-            <strength>2</strength><load>3</load><reach>1</reach>
+            <strength>2</strength><load>3</load><reach>2</reach>
             <capacity>40</capacity><rof>10</rof><recoil>-2</recoil>
             <properties>
                 <missile/><firearm/><semiauto/><tripleauto/>
@@ -377,7 +377,7 @@
                 </range>
             </combat>
 
-            <strength>2</strength><load>2</load><reach>0</reach>
+            <strength>2</strength><load>2</load><reach>2</reach>
             <capacity>20</capacity><rof>5</rof><recoil>0</recoil>
 
             <properties>
@@ -429,7 +429,7 @@
                 </range>
             </combat>
 
-            <strength>3</strength><load>8</load><reach>0</reach>
+            <strength>3</strength><load>8</load><reach>2</reach>
             <capacity>60</capacity><rof>5</rof><recoil>0</recoil>
 
             <properties>
@@ -476,7 +476,7 @@
                 </range>
             </combat>
 
-            <strength>3</strength><load>9</load><reach>1</reach>
+            <strength>3</strength><load>9</load><reach>3</reach>
             <capacity>80</capacity><rof>10</rof><recoil>0</recoil>
 
             <properties>
@@ -522,7 +522,7 @@
                 </range>
             </combat>
 
-            <strength>4</strength><load>13</load><reach>0</reach>
+            <strength>4</strength><load>13</load><reach>3</reach>
 
             <capacity>60</capacity><rof>30</rof><recoil>0</recoil>
 
@@ -537,59 +537,6 @@
     <!--
         Armour and other protective clothing.
     -->
-    <item name="Combat vest (TL8)">
-        <category>Armour</category>
-        <importance>3</importance>
-        <availability>3</availability>
-        <techLevel>8</techLevel>
-        <short>A light combat vest.</short>
-
-        <weight>1500</weight>
-        <cost>150</cost>
-
-        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <protection>+4</protection>
-            <load>1</load>
-
-            <covers>
-                <torso/>
-                <arms/>
-            </covers>
-
-            <properties>
-                <bulletproof/>
-                <light/>
-                <vitals score="1"/>
-            </properties>
-        </armour>
-    </item>
-
-    <item name="Combat vest (TL10)">
-        <category>Armour</category>
-        <importance>3</importance>
-        <availability>3</availability>
-        <techLevel>10</techLevel>
-        <short>A light combat vest.</short>
-
-        <weight>1200</weight>
-        <cost>150</cost>
-
-        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <protection>+5</protection>
-            <load>1</load>
-
-            <covers>
-                <torso/>
-                <arms/>
-            </covers>
-
-            <properties>
-                <bulletproof/>
-                <light/>
-                <vitals score="2"/>
-            </properties>
-        </armour>
-    </item>
 
     <item name="Combat vest (TL12)">
         <category>Armour</category>
@@ -663,17 +610,22 @@
         </armour>
     </item>
 
-    <item name="Combat helmet">
+    <item name="Combat helmet (TL12)">
         <category>Armour</category>
         <importance>3</importance>
         <availability>3</availability>
-        <techLevel>10</techLevel>
+        <techLevel>12</techLevel>
 
-        <short>A had combat helmet.</short>
+        <short>A hard combat helmet.</short>
 
         <description>
             <para>
-                A hard plastic and cloth helmet.
+                A hard helmet made of the latest advanced alloys and plastics.
+                It does not fully enclose the face, though can have filters
+                attached to provide some extra life support. Visor includes
+                low light and thermal sensors which are super imposed on a HUD
+                display. In built communication system provides encrypted
+                networked comms with team members.
             </para>
         </description>
 
@@ -683,56 +635,16 @@
 
         <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <protection>+1</protection>
-            <load>0.5</load>
+            <load>0</load>
 
             <covers>
                 <head/>
-                <arms/>
             </covers>
 
             <properties>
                 <bulletproof/>
                 <heavy/>
                 <vitals score="2"/>
-            </properties>
-        </armour>
-    </item>
-
-    <item name="Light combat armour (TL10)">
-        <category>Armour</category>
-        <importance>3</importance>
-        <availability>3</availability>
-        <techLevel>10</techLevel>
-
-        <short>A full suit of combat armour</short>
-
-        <description>
-            <para>
-                A full body suit of combat armour, consisting of plastic
-                and cloth, with stiff plates and bulletproof weave.
-            </para>
-        </description>
-
-        <weight>5000</weight>
-        <material>plastic</material>
-        <cost>1000</cost>
-
-        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <protection>+7</protection>
-            <load>5</load>
-
-            <covers>
-                <torso/>
-                <arms/>
-                <groin/>
-                <legs/>
-            </covers>
-
-            <properties>
-                <bulletproof/>
-                <light/>
-                <restrictive score="1"/>
-                <vitals score="3"/>
             </properties>
         </armour>
     </item>
@@ -752,13 +664,13 @@
             </para>
         </description>
 
-        <weight>3500</weight>
+        <weight>1500</weight>
         <material>plastic</material>
         <cost>1000</cost>
 
         <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <protection>+8</protection>
-            <load>2</load>
+            <load>1</load>
 
             <covers>
                 <torso/>
@@ -775,11 +687,11 @@
         </armour>
     </item>
 
-    <item name="Heavy combat armour (TL10)">
+    <item name="Heavy combat armour (TL11)">
         <category>Armour</category>
         <importance>3</importance>
         <availability>3</availability>
-        <techLevel>10</techLevel>
+        <techLevel>11</techLevel>
 
         <short>A full suit of heavy combat armour</short>
         <description>
@@ -788,60 +700,23 @@
                 and cloth, with stiff plates and bulletproof weave. Unlike
                 light combat armour, this is fully enclosed and protects
                 from chemical and biological weapons, as well as providing
-                limited vacuum life support. It includes a helmet.
+                limited vacuum life support. It includes a helmet with
+                thermal and low light sensors displayed on the HUD.
+            </para>
+
+            <para>
+                The surface of the suit has cameleon properties to
+                automatically blend in with the surroundings.
             </para>
         </description>
 
         <weight>8000</weight>
         <material>plastic</material>
-        <cost>1500</cost>
+        <cost>2500</cost>
 
         <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <protection>+13</protection>
-            <load>8</load>
-
-            <covers>
-                <torso/>
-                <arms/>
-                <groin/>
-                <legs/>
-                <head/>
-            </covers>
-
-            <properties>
-                <bulletproof/>
-                <heavy/>
-                <restrictive score="2"/>
-                <vitals score="5"/>
-            </properties>
-        </armour>
-    </item>
-
-
-    <item name="Heavy combat armour (TL12)">
-        <category>Armour</category>
-        <importance>3</importance>
-        <availability>3</availability>
-        <techLevel>12</techLevel>
-
-        <short>A full suit of heavy combat armour</short>
-        <description>
-            <para>
-                A full body suit of combat armour, consisting of plastic
-                and cloth, with stiff plates and bulletproof weave. Unlike
-                light combat armour, this is fully enclosed and protects
-                from chemical and biological weapons, as well as providing
-                limited vacuum life support. It includes a helmet.
-            </para>
-        </description>
-
-        <weight>6000</weight>
-        <material>plastic</material>
-        <cost>1500</cost>
-
-        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <protection>+15</protection>
-            <load>5</load>
+            <load>4</load>
 
             <covers>
                 <torso/>
@@ -860,6 +735,63 @@
         </armour>
     </item>
 
+
+    <item name="Heavy combat armour (TL12)">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>A full suit of heavy combat armour</short>
+        <description>
+            <para>
+                A full suit of enclosed armour made of the latest high tech
+                materials, including plastic, cloths and metal alloys. The
+                armour is light and flexible, and the wearer suffers no
+                measurable reduction in mobility. It provides full protection
+                from chemical and biological weapons, as well as limited
+                vacuum life support.
+            </para>
+
+            <para>
+                The helmet comes fully equipped with both IR and low light
+                sensors, which are automatically overlayed on the HUD to
+                provide the wearer with a multi-view capability, with the
+                onboard computer automatically switching translucency of
+                each layer to give maximum visibility. IFF and mission
+                parameters can also be overlayed.
+            </para>
+
+            <para>
+                Includes limited contra-grav technology which can double
+                jumping distances and chameleon camouflage.
+            </para>
+        </description>
+
+        <weight>6000</weight>
+        <material>plastic</material>
+        <cost>7500</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+15</protection>
+            <load>3</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+                <head/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <heavy/>
+                <vitals score="5"/>
+            </properties>
+        </armour>
+    </item>
+
     <item name="Battledress (TL12)">
         <category>Armour</category>
         <importance>3</importance>
@@ -869,7 +801,17 @@
         <short>Heavy powered armour</short>
         <description>
             <para>
-                A set of heavy powered armour.
+                A set of heavy powered armour, providing the most advanced
+                personal protection available. The armour is fully enclosing,
+                providing all the benefits of heavy combat armour, but also
+                includes full vacuum support and contra-grav ability,
+                allowing 5 hours flight time on a full charge.
+            </para>
+
+            <para>
+                The surface of the suit provides full chameleon properties,
+                and hooks for heavy weapon power accessories at no extra
+                load.
             </para>
         </description>
 
@@ -896,6 +838,34 @@
                 <vitals score="10"/>
             </properties>
         </armour>
+    </item>
+
+    <!-- Misc Stuff -->
+    <item name="Medipack (TL12)">
+        <category>Medical</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>Field medical kit.</short>
+        <description>
+            <para>
+                Provides materials and drugs for tending wounds in the
+                field. This is a one-shot pack which provides pain
+                relief, nano-reconstructors and insta-skin. Gives a
+                +20 bonus to <e>first aid</e> checks.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>0.25</load>
+            <uses>1</uses>
+            <skill name="First aid" bonus="20"/>
+        </tool>
+
+        <weight>500</weight>
+        <material>plastic</material>
+        <cost>250</cost>
     </item>
 
 
