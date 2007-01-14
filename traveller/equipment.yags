@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+                href="/home/sam/src/forge/yagsbook/xml/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+    <header>
+        <title>Yags Traveller Equipment</title>
+        <tagline>Yags Traveller</tagline>
+
+        <summary>
+            Equipment lists for Yags Traveller.
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.4 $</version>
+            <date>$Date: 2007-01-14 20:19:39 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2006</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+        </license>
+
+        <style name="combat"/>
+    </header>
+
+    <body>
+        <sect1>
+            <title>Equipment</title>
+
+            <para>
+                <e>Yags Traveller</e> is all about designing characters
+                for use in GDW's <tm>Traveller</tm> background.
+            </para>
+
+            <import-equipment style="full" href="equipment/tech12.yags"/>
+        </sect1>
+
+
+        <sect1 format="wide">
+            <title>Weapons and Armour Tables</title>
+
+            <sect2>
+                <title>Weapons</title>
+
+                <para>
+                    The following weapons are available in the Imperium. Slug throwers
+                    still make for good, general purpose, weapons and are the least
+                    likely to break when put through the sort of abuse most equipment
+                    sees in the battlefield.
+                </para>
+
+                <sect3>
+                    <title>Notes</title>
+
+                    <itemlist order="sort">
+                        <item name="Fi">
+                            Firearm. Missile weapon firing a high velocity round.
+                            Halves all armour which isn't rated as bullet proof.
+                            Quarters most defence rolls (except full defence).
+                        </item>
+
+                        <item name="Au">
+                            Fully automatic weapon, capable of firing multiple
+                            shots or burst fire.
+                        </item>
+
+                        <item name="SA">
+                            Semi-automatic weapon, can fire multiple shots in a
+                            single round but is not capable of burst fire.
+                        </item>
+
+                        <item name="Li">
+                            Light weapon. Double the value of heavy or
+                            bulletproof armour (overrides the effects of
+                            being a firearm).
+                        </item>
+
+                        <item name="Hv">
+                            Heavy weapon. Halves non-heavy bulletproof armour,
+                            ignores all weaker types of armour.
+                        </item>
+
+                        <item name="TA">
+                            Automatic weapon that can fire automatic bursts of
+                            3 rounds as a single attack. Counts as a single
+                            attack, but any wounds caused are doubled.
+                        </item>
+
+                        <item name="Ls">
+                            Laser weapon, unaffected by wind, though may suffer
+                            in fog and thick atmospheres. Does not loose accuracy
+                            or suffer fumble increase at medium and long range.
+                            Counts as a firearm for defence rolls.
+                        </item>
+
+                        <item name="Pl">
+                            Plasma weapon. Often does explosive damage. Does not
+                            count as a firearm for purposes of defence and armour
+                            (so only halves defence rolls).
+                        </item>
+
+                        <item name="Ex-X">
+                            Explosive damage. Does full damage to the target and
+                            those within X metres. Does mixed damage at -5 out to
+                            double X, and stun damage at -10 out to triple X.
+                        </item>
+
+                        <item name="Lo-X">
+                            Weapon must be reloaded. X is number of rounds to reload.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+
+                <sect3>
+                    <title>Pistols</title>
+
+                    <para>
+                        Pistols covers all short barreled weapons designed
+                        to be used with a single hand. They are generally
+                        suffer from a shorter range and poorer accuracy than
+                        rifles, but have the advantage of being much easier
+                        to carry.
+                    </para>
+
+                    <para>
+                        Most are cheap and easy to obtain, and are often made
+                        from tough plastics. All use the <e>Pistol</e> skill.
+                    </para>
+
+                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
+                        <y:category>Pistols</y:category>
+                    </y:import-weaponlist>
+                </sect3>
+
+                <sect3>
+                    <title>Rifles</title>
+
+                    <para>
+                        Designed for hunting or combat. Pretty obvious to
+                        carry around, but have better range and accuracy
+                        than pistols. All use the <e>Rifle</e> skill.
+                    </para>
+
+                    <para>
+                        The rifles here are all of the slugthrower type.
+                        For lasers and plasma rifles, see under energy
+                        weapons.
+                    </para>
+
+                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
+                        <y:category>Rifles</y:category>
+                    </y:import-weaponlist>
+                </sect3>
+
+                <sect3>
+                    <title>Shotguns</title>
+
+                    <para>
+                        Useful short range weapons.
+                    </para>
+
+                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
+                        <y:category>Shotguns</y:category>
+                    </y:import-weaponlist>
+                </sect3>
+
+                <sect3>
+                    <title>Energy Weapons</title>
+
+                    <para>
+                        Lasers are excellent as sniping weapons, though power limitations
+                        can be their downfall, and fully automatic lasers aren't man
+                        portable. Lasers which don't have an external power pack suffer
+                        from range limitations, especially within an atmosphere.
+                    </para>
+
+                    <para>
+                        Plasma weapons pack a heavy punch, but are short range. The plasma
+                        bolt tends to loose heat rapidly in an atmosphere but are good at
+                        getting through powered armour. As for lasers, they often require
+                        an external power pack and tend to lack full auto capability.
+                    </para>
+
+                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
+                        <y:category>Energy</y:category>
+                    </y:import-weaponlist>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Armour</title>
+
+                <para>
+                    The following types of armour are commonly available.
+                    Low-tech worlds will of course have plenty of low tech
+                    armour available, but this is of limited use against
+                    firearms.
+                </para>
+
+                <y:import-armourlist href="equipment/equipment.yags"/>
+
+            </sect2>
+        </sect1>
+    </body>
+
+</article>
+
+
