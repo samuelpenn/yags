@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <header>
+        <title>Vehicle Combat</title>
+        <tagline>Yags</tagline>
+
+        <summary>
+            Rules for vehicle combat.
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2007-01-19 21:43:22 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2007</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+        </license>
+
+        <style name="combat"/>
+    </header>
+
+    <body>
+        <sect1>
+            <title>Vehicle Combat</title>
+
+            <para>
+                For the most part, vehicles can be treated as just a tool
+                to get from A to B, and don't require rules any more
+                detailed than how long it takes, and possibly what they
+                cost to buy and run. Occassionally however, it is useful
+                to know a bit more about how vehicles fit into the world
+                in <e>Yags</e>, especially if they are used in combat
+                situations.
+            </para>
+
+            <para>
+                As well as looking at vehicles themselves, these rules also
+                cover the use of large vehicle mounted and infantry support
+                weapons. Most characters will never need to worry about
+                these, even in modern campaigns, but the occassional
+                scenario will call for their use.
+            </para>
+
+            <sect2>
+                <title>Scaling Vehicles</title>
+
+                <para>
+                    <e>Yags</e> uses a generic <t>Size</t> attribute for
+                    all creatures within the game, and this is extended
+                    to cover vehicles as well. Since <t>Size</t> is
+                    logarithmic, it will rarely get above 20 for ground
+                    vehicles, or even 100 for something like the
+                    Death Star. This does lead to a degree of imprecision
+                    at the higher levels, but at that point a large level
+                    of abstraction is probably a good thing.
+                </para>
+
+                <para>
+                    A <t>Size</t> of 10 is considered to be a vehicle of
+                    10m^3, and each +5 <t>Size</t> increases this by a
+                    multiple of 10. <t>Size</t> 10 is more than enough for
+                    a family car, and <t>Size</t> 15 is adequate for a
+                    large tank.
+                </para>
+
+                <para>
+                    Weapons and armour have a special <e>Vehicle</e>
+                    property - Vc - which mark them as being of Vehicle
+                    Scale. Standard weapons do considerably less damage
+                    to vehicles, and vehicle weapons pretty much ignore
+                    the armour and soak of people.
+                </para>
+
+                <sect3>
+                    <title>Damage</title>
+
+                    <para>
+                        Damage against vehicles is considered to be either
+                        <e>Major</e> or <e>Minor</e>. In some ways,
+                        <e>Major</e> damage is equivalent to <e>Wounds</e>
+                        against people, and <e>Minor</e> is similar to
+                        <e>Stun</e> damage.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Vehicle Attributes</title>
+
+                <para>
+                    All vehicles have the following attributes.
+                </para>
+
+                <itemlist order="sort">
+                    <item name="Size">
+                        The general size of the vehicle, normally based on
+                        the volume. Volume is used instead of Mass (which
+                        animal Size is based on) because this is normally
+                        easier to obtain for real world vehicles.
+                    </item>
+
+                    <item name="Soak">
+                        How good the vehicle is at resisting damage. This
+                        normally defaults to the Size of the vehicle.
+                    </item>
+
+                    <item name="Move">
+                        How fast the vehicle can move, in metres/round.
+                        This is normally the top speed of the vehicle
+                        in metres per round. This is about 2.2 times
+                        (or twice) the miles per hour speed.
+                    </item>
+
+                    <item name="Acceleration">
+                        How quickly the vehicle accelerates, in metres
+                        per round per round.
+                    </item>
+                </itemlist>
+            </sect2>
+        </sect1>
+    </body>
+</article>
+
+
