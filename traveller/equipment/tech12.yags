@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.4 $
-    Date:    $Date: 2007-01-19 21:42:52 $
+    Version: $Revision: 1.5 $
+    Date:    $Date: 2007-01-20 00:12:50 $
 
     Categories
 
@@ -72,10 +72,12 @@
         <techLevel>12</techLevel>
         <weight>650</weight>
         <cost>300</cost>
+
+        <short>An advanced guass pistol.</short>
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
-            <category>Rifles</category>
-            <class>rifle</class>
+            <category>Pistols</category>
+            <class>pistol</class>
             <combat>
                 <attack>+6</attack><damage>25</damage>
                 <range>
@@ -98,6 +100,7 @@
         <techLevel>12</techLevel>
         <weight>750</weight>
         <cost>500</cost>
+        <short>A heavy pistol.</short>
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
             <category>Pistols</category>
@@ -124,6 +127,24 @@
         <techLevel>12</techLevel>
         <weight>5000</weight>
         <cost>7500</cost>
+        <short>Very high power sniper rifle.</short>
+
+        <description>
+            <para>
+                The TL12 railgun is the probably the peak of man portable
+                kinetic energy weapons. It fires a 13mm round at very high
+                velocity over a very long distance, and is capable of
+                getting through most armour, including full battledress.
+            </para>
+
+            <para>
+                They are normally used by snipers, not being terribly useful
+                in close combat due to their length and weight. On some
+                worlds range is actually limited by the horizon. The rounds
+                are fin stabalised on leaving the rifle, providng a degree
+                of accuracy only bested by laser weapons.
+            </para>
+        </description>
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
             <category>Rifles</category>
@@ -136,7 +157,7 @@
                 </range>
             </combat>
             <strength>3</strength><load>5</load><reach>3</reach>
-            <capacity>20</capacity><rof>5</rof><recoil>-5</recoil>
+            <capacity>8</capacity><rof>3</rof><recoil>-5</recoil>
             <properties>
                 <missile/><firearm/><semiauto/><heavy/>
                 <reload score="1"/>
@@ -150,6 +171,17 @@
         <techLevel>12</techLevel>
         <weight>2800</weight>
         <cost>3000</cost>
+        <short>Standard gauss rifle.</short>
+
+        <description>
+            <para>
+                Semi-automatic gauss rifle, the standard weapon of the
+                Imperial Army, and available to civilians as well. It is
+                not fully automatic, but is capable of selective fire.
+                Some governments only allow modified versions which have
+                the selective fire capability removed.
+            </para>
+        </description>
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
             <category>Rifles</category>
@@ -165,6 +197,44 @@
             <capacity>40</capacity><rof>10</rof><recoil>-2</recoil>
             <properties>
                 <missile/><firearm/><semiauto/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Gauss Assualt Rifle, 4mm (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance><availability>2</availability>
+        <techLevel>12</techLevel>
+        <weight>2800</weight>
+        <cost>3000</cost>
+        <short>Military combat rifle.</short>
+
+        <description>
+            <para>
+                This is a slightly modified form of the gauss rifle, with
+                the capability of fully automatic fire. It is sometimes
+                favoured by infantry, though military command tends to
+                prefer the selective fire varient. It's availability to
+                civilians is often limited.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+9</attack><damage>35</damage>
+                <range>
+                    <increment>30</increment>
+                    <short>500</short><medium>1000</medium><long>2000</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>3</load><reach>2</reach>
+            <capacity>40</capacity><rof>40</rof><recoil>-2</recoil>
+            <properties>
+                <missile/><firearm/><automatic/><tripleauto/>
                 <reload score="1"/>
             </properties>
         </weapon>
@@ -197,25 +267,35 @@
     </item>
 
 
-    <item name="Gauss SMG, 4mm (TL12)">
+    <item name="Gauss Carbine, 4mm (TL12)">
         <category>Weapon</category>
         <importance>3</importance><availability>3</availability>
         <techLevel>12</techLevel>
-        <weight>3400</weight>
-        <cost>3000</cost>
+        <weight>2000</weight>
+        <cost>2200</cost>
+        <short>Short automatic rifle.</short>
+
+        <description>
+            <para>
+                A fully automatic weapon in a slightly designed to be smaller
+                than a rifle and delivering less damage. It is desgined for
+                use in close quarters combat, or where weight and size
+                constraints apply.
+            </para>
+        </description>
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
             <category>Rifles</category>
             <class>rifle</class>
             <combat>
-                <attack>+8</attack><damage>35</damage>
+                <attack>+8</attack><damage>30</damage>
                 <range>
-                    <increment>25</increment>
-                    <short>400</short><medium>800</medium><long>1600</long>
+                    <increment>20</increment>
+                    <short>250</short><medium>500</medium><long>1000</long>
                 </range>
             </combat>
-            <strength>2</strength><load>3</load><reach>1</reach>
-            <capacity>60</capacity><rof>50</rof><recoil>-2</recoil>
+            <strength>2</strength><load>2</load><reach>1</reach>
+            <capacity>30</capacity><rof>30</rof><recoil>-3</recoil>
             <properties>
                 <missile/><firearm/><automatic/><tripleauto/>
                 <reload score="1"/>
@@ -497,8 +577,16 @@
 
         <description>
             <para>
-                Counts as barely man portable, this is a really nasty weapon
-                which infantry really don't like to face.
+                One of the heaviest man-portable weapons available, it is
+                really an anti-armour weapon which also happens to be
+                truly nasty against infantry. It is often seen in use by
+                <e>battledress</e> troops, since the heavy weight and
+                power requirements are best served by powered armour.
+            </para>
+
+            <para>
+                It's main disadvantage is that the plasma burst is
+                sub-sonic, making it possible to avoid beyond short range.
             </para>
         </description>
 
@@ -510,10 +598,11 @@
             <category>Firearms</category>
             <category>Energy</category>
             <class>rifle</class>
+            <class>heavy</class>
 
             <combat>
                 <attack>+8</attack>
-                <damage>50</damage>
+                <damage>25</damage>
                 <range>
                     <increment>20</increment>
                     <short>250</short>
@@ -524,15 +613,112 @@
 
             <strength>4</strength><load>13</load><reach>3</reach>
 
-            <capacity>60</capacity><rof>30</rof><recoil>0</recoil>
+            <capacity>60</capacity><rof>4</rof><recoil>0</recoil>
 
             <properties>
-                <missile/><automatic/>
-                <heavy/><plasma/><explosive score="2"/>
+                <missile/><semiauto/><vehicle/><heavy/>
+                <plasma/><explosive score="2"/>
                 <reload score="3"/>
             </properties>
         </weapon>
     </item>
+
+    <item name="Chaingun 20mm (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>A vehicle mounted weapon.</short>
+
+        <description>
+            <para>
+                Designed to be vehicle mounted, this fires heavy slugs
+                designed to be used against soft vehicles or buildings,
+                or sometimes against infantry.
+            </para>
+        </description>
+
+        <weight>70000</weight>
+        <material>metal</material>
+        <cost>30000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+
+            <combat>
+                <attack>+10</attack>
+                <damage>20</damage>
+                <range>
+                    <increment>30</increment>
+                    <short>1000</short>
+                    <medium>2000</medium>
+                    <long>6000</long>
+                </range>
+            </combat>
+
+            <strength>8</strength><load>70</load><reach>4</reach>
+
+            <capacity>1000</capacity><rof>100</rof><recoil>-20</recoil>
+
+            <properties>
+                <missile/><firearm/><automatic/><vehicle/>
+                <reload score="5"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="VRF Gauss 4mm (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>Very rapid fire gauss machine gun.</short>
+
+        <description>
+            <para>
+                This vehicle mounted gauss weapon is designed for use
+                against infantry rather than as an anti-armour weapon.
+                Per-round, it lacks the stopping power of the chaingun,
+                but is more than capable of suppressing and/or killing
+                any infantry that come into range.
+            </para>
+        </description>
+
+        <weight>20000</weight>
+        <material>metal</material>
+        <cost>20000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+
+            <combat>
+                <attack>+10</attack>
+                <damage>38</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>1000</short>
+                    <medium>2000</medium>
+                    <long>4000</long>
+                </range>
+            </combat>
+
+            <strength>5</strength><load>20</load><reach>4</reach>
+
+            <capacity>1000</capacity><rof>200</rof><recoil>-15</recoil>
+
+            <properties>
+                <missile/><firearm/><automatic/><heavy/>
+                <reload score="5"/>
+            </properties>
+        </weapon>
+    </item>
+
 
     <!--
         Armour and other protective clothing.

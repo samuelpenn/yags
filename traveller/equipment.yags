@@ -19,8 +19,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.4 $</version>
-            <date>$Date: 2007-01-14 20:19:39 $</date>
+            <version>$Revision: 1.5 $</version>
+            <date>$Date: 2007-01-20 00:12:50 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -41,8 +41,8 @@
             <title>Equipment</title>
 
             <para>
-                <e>Yags Traveller</e> is all about designing characters
-                for use in GDW's <tm>Traveller</tm> background.
+                The following lists equipment commonly available throughout
+                the 3rd Imperium.
             </para>
 
             <import-equipment style="full" href="equipment/tech12.yags"/>
@@ -121,6 +121,12 @@
                         <item name="Lo-X">
                             Weapon must be reloaded. X is number of rounds to reload.
                         </item>
+
+                        <item name="Vc">
+                            Vehicle weapon. Against non-vehicle targets, completely
+                            ignores all soak unless heavy armour is worn, in which
+                            case the soak roll is merely halved.
+                        </item>
                     </itemlist>
                 </sect3>
 
@@ -197,6 +203,20 @@
 
                     <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
                         <y:category>Energy</y:category>
+                    </y:import-weaponlist>
+                </sect3>
+
+                <sect3>
+                    <title>Heavy Weapons</title>
+
+                    <para>
+                        These weapons are normally vehicle mounted, and not
+                        designed to be used by infantry except from fixed
+                        emplacements.
+                    </para>
+
+                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
+                        <y:category>Heavy</y:category>
                     </y:import-weaponlist>
                 </sect3>
             </sect2>
