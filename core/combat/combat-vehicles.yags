@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.1 $</version>
-            <date>$Date: 2007-01-19 21:43:22 $</date>
+            <version>$Revision: 1.2 $</version>
+            <date>$Date: 2007-01-20 00:13:09 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -39,7 +39,7 @@
 
     <body>
         <sect1>
-            <title>Vehicle Combat</title>
+            <title>Vehicles</title>
 
             <para>
                 For the most part, vehicles can be treated as just a tool
@@ -134,6 +134,33 @@
                         per round per round.
                     </item>
                 </itemlist>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Vehicle Combat</title>
+
+            <sect2>
+                <title>Vehicle Weapons and Armour</title>
+
+                <para>
+                    Weapons which have a property of <e>Vehicle (Vc)</e>
+                    completely ignore the <e>Soak</e> of standard targets
+                    unless they are in Heavy armour. This means that the
+                    total soak roll is always zero for these targets.
+                </para>
+
+                <para>
+                    Standard targets with heavy armour have their total
+                    soak roll halved. If the vehicle weapon is also heavy,
+                    then heavy armour is treated as normal armour, and the
+                    soak total is zero.
+                </para>
+
+                <para>
+                    Any target which has Vehicle armour halves the damage
+                    from standard weapons, and all damage done is Minor.
+                </para>
             </sect2>
         </sect1>
     </body>
