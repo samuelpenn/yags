@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.14 $</version>
-            <date>$Date: 2007-01-13 16:42:30 $</date>
+            <version>$Revision: 1.15 $</version>
+            <date>$Date: 2007-01-21 13:28:25 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -1218,7 +1218,9 @@
                         Once a target is grappled, they are at -1 to their
                         attribute for any actions. Each extra level of
                         success of the strength check by the attacker
-                        increases this penalty by one.
+                        increases this penalty by one. If this penalty
+                        equals or exceeds the target's <t>Strength</t> or
+                        <t>Agility</t>, then they can no longer act.
                     </para>
                 </sect3>
 
@@ -1226,7 +1228,9 @@
                     <title>Improved Damage (excellent, aggressive)</title>
 
                     <para>
-                        Your attack does +5 damage if it hits.
+                        Your attack does +5 damage if it hits. If you fail
+                        to get an <e>excellent</e> attack, then your entire
+                        attack fails completely.
                     </para>
                 </sect3>
 
@@ -1237,7 +1241,7 @@
                         Your attack aims to force your foe to the ground.
                         If your damage roll (ignoring armour and soak) is
                         greater than your foe's strength x 10, then they
-                        are knocked to the ground, <e>prone</e>. Damage
+                        are knocked to the ground <e>prone</e>. Damage
                         caused is <e>stun</e> damage, regardless of the
                         weapon.
                     </para>
@@ -1247,7 +1251,9 @@
                     <title>Massive Damage (superb, aggressive)</title>
 
                     <para>
-                        Your attack does +10 damage if it hits.
+                        Your attack does +10 damage if it hits. If you fail
+                        to get a <e>superb</e> attack, then your entire
+                        attack fails completely.
                     </para>
                 </sect3>
 
@@ -1290,17 +1296,11 @@
                         By aiming for your foe's vitals, you can try to
                         take them out in a single blow. If you hit, you
                         cause damage as normal, and your foe must make a
-                        <t>health</t> check at 10 + 5 x wounds caused.
-                        Failure means that they immediately fall to the
-                        ground fatally wounded.
-                    </para>
-
-                    <para>
-                        If using a weapon that does <e>mixed</e> or
-                        <e>stun</e> damage, the difficulty is based on
-                        the total number of wounds or stuns caused, and
-                        failure of the check results in the foe falling
-                        to the ground unconscious.
+                        <y:health>Size</y:health> check at 20 + 5 x wounds
+                        caused. Failure means that they immediately fall
+                        to the ground fatally wounded. Only wounds, not
+                        stuns, are considered, and at least one wound must
+                        be caused.
                     </para>
                 </sect3>
             </sect2>
