@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.6 $
-    Date:    $Date: 2007-01-20 16:59:15 $
+    Version: $Revision: 1.7 $
+    Date:    $Date: 2007-01-21 18:13:35 $
 
     Categories
 
@@ -1132,6 +1132,48 @@
         <cost>750</cost>
     </item>
 
+    <item name="Combat knife">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>A large survival/combat knife.</short>
+
+        <description>
+            <para>
+                A large single edged knife, of the type often used by
+                special forces. It is designed for heavy use, and its
+                blade is long enough to cause serious wounds.
+            </para>
+        </description>
+
+        <weight>300</weight>
+        <material>metal</material>
+
+        <cost>75</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Melee</category>
+            <class>brawl</class>
+            <class>melee</class>
+
+            <combat>
+                <attack>+2</attack>
+                <defence>+3</defence>
+                <damage>+5</damage>
+            </combat>
+
+            <strength>1</strength>
+            <load>0.5</load>
+            <reach>0.5</reach>
+
+            <properties>
+                <light/><strong/>
+            </properties>
+        </weapon>
+    </item>
+
     <item name="Knife">
         <category>Weapon</category>
         <importance>3</importance>
@@ -1173,6 +1215,7 @@
             </properties>
         </weapon>
     </item>
+
 
     <item name="Dueling sabre">
         <category>Weapon</category>
