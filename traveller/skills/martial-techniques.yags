@@ -9,7 +9,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.4 $
+    Version: $Revision: 1.5 $
     Author: Samuel Penn
 -->
 
@@ -22,12 +22,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.4 $</version>
-            <date>$Date: 2007-01-19 21:42:52 $</date>
+            <version>$Revision: 1.5 $</version>
+            <date>$Date: 2007-01-21 13:29:23 $</date>
         </cvsinfo>
 
         <license type="Yags">
-            <year>2006</year>
+            <year>2007</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -39,6 +39,94 @@
     </header>
 
 
+    <!--
+        Karate technique chain.
+        This version has them all based on the brawl skill, with no actual
+        skill in Karate.
+    -->
+    <advantage name="Karate" type="technique">
+        <cost points="2"/>
+        <skill name="Brawl"/>
+        <trained/>
+        <short>The karate style of martial arts.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have been trained in the martial style of Karate, which
+                focuses on fast offensive attacks. When making an unarmed
+                attack, you can ignore the <e>counter strike</e> against
+                you if you do not declare a defence against your target.
+                If you are making multiple defences, your attack penalty
+                is halved. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Fast attack" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        <trained/>
+        <prerequisite>Karate</prerequisite>
+        <short>All attacks are fast.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When making a <e>Brawl</e> attack either unarmed or with a
+                reach 0 weapon, your attack is <e>fast</e> unless some other
+                aspect of your attack (e.g., using the <e>defensive</e>
+                stance or using the <e>Ambush</e> technique) says otherwise.
+                Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Karate blow" type="technique">
+        <cost points="6"/>
+        <skill name="Brawl"/>
+        <trained/>
+        <prerequisite>Fast attack</prerequisite>
+        <short>Unarmed attacks do extra damage.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When making a <e>Brawl</e> attack either unarmed or with a
+                reach 0 weapon, you automatically add your <e>Brawl</e>
+                skill to the amount of damage done.
+            </para>
+
+            <para>
+                In addition, you may choose to declare your attack as
+                causing <e>mixed</e> damage. This requires the attack to be
+                <e>aggressive</e>, and cannot be combined with other
+                techniques or manoeuvres.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Fatal blow" type="technique">
+        <cost points="8"/>
+        <skill name="Brawl"/>
+        <trained/>
+        <prerequisite>Karate blow</prerequisite>
+
+        <short>Can kill in a single blow.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When you attack you may concentrate your strike on the
+                vital organs of the target, aiming to kill them in a
+                single strike. This is an aggressive attack which uses
+                up a defence slot. If the target is injured by the
+                attack, they must make a <y:health>Size</y:health> check
+                against a target of 20 + 5 x levels or immediately drop to
+                fatally wounded. If they succeed their check, then they
+                take one less damage level from the attack than normal.
+            </para>
+        </description>
+    </advantage>
+
+    <!-- End of Karate based techniques -->
+<!--
     <advantage name="Attack is defence" type="technique">
         <cost points="4"/>
         <skill name="Karate"/>
@@ -120,8 +208,9 @@
             </para>
         </description>
     </advantage>
+    -->
 
-
+<!--
     <advantage name="Dodging defence" type="technique">
         <cost points="2"/>
         <skill name="Boxing"/>
@@ -152,7 +241,72 @@
             </para>
         </description>
     </advantage>
+-->
 
+    <!--
+        Aikijutsu technique chain.
+        This version has them all based on the brawl skill, with no actual
+        skill in Aikijutsu.
+    -->
+    <advantage name="Aikijutsu" type="technique">
+        <cost points="2"/>
+        <skill name="Brawl"/>
+        <trained/>
+        <short>Aikijutsu specialises in throws and trips.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have trained in the martial art style of Aikijutsu.
+                Once per round, if you make a <e>good</e> Brawl defence
+                you may <e>counter strike</e> with a trip attack. This
+                action does not generate a <e>free strike</e>. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Aikijutsu grapple" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        <trained/>
+        <prerequisite>Aikijutsu</prerequisite>
+        <short>It is easier to performs grapples and trips.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The difficulty of trip and grapple manoeuvres is reduced by
+                one level. For example, instead of requiring a <e>good</e>
+                attack to initiate a grapple, you only require a
+                <e>moderate</e> attack.
+            </para>
+
+            <para>
+                Further, you may choose to use <t>Agility</t> instead of
+                <t>Strength</t> to keep hold of, or break out of, a grapple
+                or trip manoeuvre. Both of these abilities are automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Aikijutsu expert" type="technique">
+        <cost points="6"/>
+        <skill name="Brawl"/>
+        <trained/>
+        <prerequisite>Aikijutsu grapple</prerequisite>
+
+        <short>Gain a bonus with grapples and trips.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When performing a trip or grapple manoeuvre, you gain a +1
+                bonus to <t>Agility</t> and <t>Strength</t> for both attack
+                and defence. This delays the point at which you are
+                immobilised if you are being grappled yourself. Automatic.
+            </para>
+        </description>
+    </advantage>
+    <!-- End of Aikijutsu techniques -->
+
+
+<!--
     <advantage name="Aikijutsu defence" type="technique">
         <cost points="2"/>
         <skill name="Aikijutsu"/>
@@ -197,7 +351,69 @@
             </para>
         </description>
     </advantage>
+-->
 
+
+    <!--
+        Jujutsu technique chain.
+        This version has them all based on the brawl skill, with no actual
+        skill in Jujutsu.
+    -->
+    <advantage name="Jujutsu" type="technique">
+        <cost points="2"/>
+        <skill name="Brawl"/>
+        <trained/>
+        <short>Punches are more effective.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are trained in the combat style of <e>Jujutsu</e>.
+                Whenever you make a <e>good</e> unarmed Brawl attack
+                and cause damage to your target, then the target gains
+                at least one stun, even if you do less than half the
+                target's current stuns. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Strike and fade" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        <trained/>
+        <prerequisite>Jujutsu</prerequisite>
+
+        <short>Bonus to defence if hit opponent.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are able to strike at a foe to put them off balance
+                preventing them from hitting back at you. If you ever
+                succeed in a brawl attack on a target, then any attacks they
+                make against you for the rest of the round give you a
+                +1 bonus to your agility for defence. Automatic.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Improved strike" type="technique">
+        <cost points="6"/>
+        <skill name="Brawl"/>
+        <trained/>
+        <prerequisite>Strike and fade</prerequisite>
+
+        <short>Free strikes become automatic strikes.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are trained to make best advantage of the mistakes of
+                others. Whenever you have declared a brawl attack against
+                someone, then any <e>free strikes</e> you gain against them
+                that round become <e>automatic strikes</e>.
+            </para>
+        </description>
+    </advantage>
+
+    <!-- End of Jujutsu techniques -->
+
+<!--
     <advantage name="Jujutsu blow" type="technique">
         <cost points="2"/>
         <skill name="Jujutsu"/>
@@ -254,8 +470,8 @@
         <short>Counterstrike on good defence.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                If you ever make a <e>good</e> jujutsu defence against
-                an attacker, then you gain a jujutsu <e>counterstrike</e>
+                If you ever make a <e>good</e> Jujutsu defence against
+                an attacker, then you gain a Jujutsu <e>counterstrike</e>
                 in response.
             </para>
         </description>
@@ -269,20 +485,21 @@
         <short>Use techniques with brawl.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                By mastering the style of jujutsu until it becomes second
+                By mastering the style of Jujutsu until it becomes second
                 nature, you are able to use its techniques with any unarmed
                 combat skill (either brawl, or one with a prerequisite of
                 brawl). You also gain a +1 bonus to attack and defence
-                rolls for such skills per 2 points of jujutsu. Automatic.
+                rolls for such skills per 2 points of Jujutsu. Automatic.
             </para>
         </description>
     </advantage>
+-->
 
     <advantage name="Close combat" type="technique">
         <cost points="2"/>
         <skill name="Brawl"/>
 
-        <short>Bonus when grappling.</short>
+        <short>Ignore free strikes when grappling.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -359,6 +576,7 @@
         </description>
     </advantage>
 
+    <!--
     <advantage name="Master of fighting" type="technique">
         <cost points="10"/>
         <skill name="Brawl"/>
@@ -371,6 +589,7 @@
             </para>
         </description>
     </advantage>
+    -->
 
     <advantage name="Brute force" type="technique">
         <cost points="4"/>
@@ -616,7 +835,8 @@
             <para>
                 When you perform an <e>ambush</e> that attack is <e>slow</e>
                 and you are considered to be using the <e>focused stance</e>
-                so cannot declare any defences yourself.
+                so cannot declare any defences yourself. You may combine
+                with other techniques and/or manoeuvres.
             </para>
         </description>
     </advantage>
@@ -646,9 +866,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                As for <e>Ambush</e>, but applies whenever the defender
-                is not defending against the character's attack. The
-                character may use either an <e>aggressive</e> or a
+                As for <e>Ambush</e>, but applies whenever your target is
+                not defending against your attack, even if they are aware
+                of you. May be used with either an <e>aggressive</e> or a
                 <e>normal</e> stance.
             </para>
         </description>
