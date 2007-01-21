@@ -262,6 +262,70 @@
         </statistics>
     </character>
 
+    <character name="Mercenary">
+        <description>
+            <short>Typical mercenary soldier.</short>
+
+            <background>
+                <para>
+                    Infantry soldier who is a member of a mercenary unit.
+                </para>
+            </background>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12">
+                <attribute name="strength" score="4"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="3"/>
+                <attribute name="dexterity" score="3"/>
+                <attribute name="perception" score="3"/>
+                <attribute name="intelligence" score="3"/>
+                <attribute name="empathy" score="3"/>
+                <attribute name="will" score="3"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="4"/>
+                    <skill name="Awareness" score="3"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="2"/>
+                    <skill name="Guile" score="2"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Knowledges" type="knowledges">
+                    <skill name="Speak Galanglic" score="4"/>
+                    <skill name="Area lore (Imperium)" score="4"/>
+                    <skill name="Area lore (Home sector)" score="4"/>
+                    <skill name="Area lore (Home planet)" score="4"/>
+                </group>
+
+                <group name="Combat" type="skills">
+                    <skill name="Rifle" score="4"/>
+                    <skill name="Pistol" score="2"/>
+                    <skill name="Tactics" score="2"/>
+                </group>
+
+                <group name="Military" type="skills">
+                    <skill name="Combat engineering" score="2"/>
+                    <skill name="First aid" score="2"/>
+                    <skill name="Survival" score="2"/>
+                    <skill name="Drive" score="2"/>
+                </group>
+            </skills>
+
+            <advantages>
+                <advantage name="Combat reflexes" skill="Melee" cost="2"/>
+                <advantage name="Hard to kill" skill="Brawl" cost="2"/>
+                <advantage name="Quick load" skill="Firearms" cost="2"/>
+                <advantage name="Sharp shooter" skill="Firearms" cost="4"/>
+            </advantages>
+        </statistics>
+    </character>
 
 
     <character name="Imperial Army">
