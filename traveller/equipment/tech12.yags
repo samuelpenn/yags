@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.7 $
-    Date:    $Date: 2007-01-21 18:13:35 $
+    Version: $Revision: 1.8 $
+    Date:    $Date: 2007-01-28 21:55:21 $
 
     Categories
 
@@ -1349,6 +1349,85 @@
                 <heavy/><light/><strong/><twohanded/>
             </properties>
         </weapon>
+    </item>
+
+    <item name="Stims">
+        <category>Medical</category>
+        <importance>2</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <cost>150</cost>
+
+        <short>Stimulent designed to help you stay awake.</short>
+
+        <drug xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <addictive strength="1">
+                <duration time="weeks"/>
+                <reduction/>
+            </addictive>
+
+            <offsetter statistic="Fatigue">
+                <strength>50</strength>
+                <onset time="rounds"/>
+                <duration time="hours"/>
+            </offsetter>
+        </drug>
+    </item>
+
+    <item name="Universal Antidote">
+        <category>Medical</category>
+        <importance>2</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <cost>75</cost>
+
+        <short>Antidote for poisons, infections and disease.</short>
+
+        <description>
+            <para>
+                A universal antidote which works with most common
+                diseases, infections and poisons.
+            </para>
+        </description>
+
+        <drug xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <helper event="Poisons, infections, disease">
+                <bonus>25</bonus>
+                <duration time="hours"/>
+            </helper>
+        </drug>
+    </item>
+
+    <item name="Boost">
+        <category>Medical</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <techLevel>12</techLevel>
+
+        <cost>500</cost>
+
+        <short>Boosts physical ability.</short>
+
+        <description>
+            <para>
+                Increases dexterity.
+            </para>
+        </description>
+
+        <drug xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <addictive strength="1">
+                <duration time="weeks"/>
+                <reduction/>
+            </addictive>
+
+            <adder attribute="Dexterity">
+                <onset time="rounds"/>
+                <duration time="hours"/>
+                <bonus>1</bonus>
+            </adder>
+        </drug>
     </item>
 </equipment>
 
