@@ -22,12 +22,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.10 $</version>
-            <date>$Date: 2007-01-13 16:42:30 $</date>
+            <version>$Revision: 1.11 $</version>
+            <date>$Date: 2007-02-18 19:00:49 $</date>
         </cvsinfo>
 
         <license type="Yags">
-            <year>2004</year>
+            <year>2007</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -45,8 +45,79 @@
 
             <para>
                 Missile combat includes all forms of ranged combat, from
-                throwing sticks and stones to spears, bows and guns.
+                throwing sticks and stones to spears, bows, modern firearms
+                and laser weapons.
             </para>
+
+            <sect2>
+                <title>Weapon types</title>
+
+                <para>
+                    There are a number of different classes of missile
+                    weapons, ranging from thrown weapons to rifles. They
+                    each have their uses, and some are limited by the
+                    available technology.
+                </para>
+
+                <para>
+                    For firearms, the classes define the role of the weapon,
+                    and limit how it can be used.
+                </para>
+
+                <itemlist order="sort">
+                    <item name="Thrown">
+                        Thrown weapons are designed to be hurled using
+                        nothing more than the strength of the user. They
+                        are only have a short range, the distance being
+                        proportial to the thrower's strength.
+                    </item>
+
+                    <item name="Bow">
+                        A typical bow, mostly effective at medium ranges
+                        and unweildy in close combat. The standard skill
+                        to use is throw.
+                    </item>
+
+                    <item name="Crossbow">
+                        A mechanical crossbow. Easier to use than bows,
+                        generally with a heavier bolt. More effective at
+                        short range, but slow to load. Typically used
+                        with the Crossbow skill.
+                    </item>
+
+                    <item name="Pistol">
+                        Small firearms typically fired from a single hand.
+                        Includes revolvers, semi-automatic and machine
+                        pistols.
+                    </item>
+
+                    <item name="SMG">
+                        Sub-machine guns, small calibre firearms larger
+                        than pistols but smaller than carbines and rifles.
+                        Used with either the Pistol or Rifle skills.
+                    </item>
+
+                    <item name="Carbine">
+                        A shorter, easier to use rifle. Used with the Rifle
+                        skill.
+                    </item>
+
+                    <item name="Assualt weapon">
+                        Any rifle or shotgun that is designed for, or can be
+                        used in, close quarters fighting. They are generally
+                        shorter and lighter than full rifles, and are quicker
+                        and easier to use. Uses the Rifle skill.
+                    </item>
+
+                    <item name="Rifle">
+                        A firearm classed as a Rifle is typically a sniper's
+                        rifle or the old style long arms. This class also
+                        includes heavier weapons such as light machine guns
+                        which aren't designed to be used in close combat,
+                        but are effective at range.
+                    </item>
+                </itemlist>
+            </sect2>
 
             <sect2>
                 <title>Ranged combat skills</title>
@@ -160,111 +231,6 @@
                         </item>
                     </itemlist>
                 </sect3>
-
-                <sect3>
-                    <title>Pistol</title>
-
-                    <para>
-                        <e>Pistol</e> is a skill which covers the use of
-                        revolvers and auto-loading pistols. Since this
-                        defaults to any other <e>Firearms</e> skill
-                        (and vice-versa), it may be used with all types
-                        of firearms, though the skill roll is halved.
-                    </para>
-
-                    <itemlist order="1">
-                        <item>
-                            Attack rolls are based on Dexterity.
-                        </item>
-
-                        <item>
-                            At short range, you add the full attack bonus
-                            of the weapon unless you are making a snapshot.
-                        </item>
-
-                        <item>
-                            If you are in close melee combat with the
-                            target (they are attacking with a reach 0
-                            weapon) you loose your attack bonus.
-                        </item>
-                    </itemlist>
-                </sect3>
-
-                <sect3>
-                    <title>Rifle</title>
-
-                    <para>
-                        This skill covers experience and training in the
-                        use of rifles of all types, including shotguns,
-                        assault rifles and sniper rifles. It is generally
-                        of use in a combat situation at close to medium
-                        ranges.
-                    </para>
-
-                    <itemlist order="1">
-                        <item>
-                            Attack rolls are based on Dexterity or
-                            Perception.
-                        </item>
-
-                        <item>
-                            Add the full attack bonus of the weapon unless
-                            you are making a snapshot.
-                        </item>
-
-                        <item>
-                            If you are in melee combat with the target
-                            (any reach) you loose your attack bonus.
-                        </item>
-
-                        <item>
-                            If you are in close combat with anyone, your
-                            attack roll is halved.
-                        </item>
-                    </itemlist>
-                </sect3>
-
-                <sect3>
-                    <title>Sniper</title>
-
-                    <para>
-                        This skill covers the use of rifles in situations
-                        where long range, long preparation times and a low
-                        rate of fire are common. Though the <e>Rifle</e>
-                        skill can be used in these circumstances, the
-                        <e>Sniper</e> skill is effectively a specialisation
-                        learnt by elite marksmen.
-                    </para>
-
-                    <itemlist order="1">
-                        <item>
-                            Attack rolls are based on Perception.
-                        </item>
-
-                        <item>
-                            Twice the attack bonus of the weapon is added
-                            when making careful or aimed shots at all
-                            range bands. Normal or snapshots are not
-                            possible with this skill.
-                        </item>
-
-                        <item>
-                            If taking an aimed shot, quarter rather than
-                            third the effective distance to the target.
-                        </item>
-
-                        <item>
-                            No defences may be made in a round using this
-                            skill.
-                        </item>
-
-                        <item>
-                            If you are in melee combat of any kind, then
-                            you loose all attack bonuses of the weapon
-                            and any attack roll is halved.
-                        </item>
-                    </itemlist>
-                </sect3>
             </sect2>
 
             <sect2>
@@ -358,6 +324,96 @@
 
             <sect2>
                 <title>Missile Weapon Properties</title>
+
+                <sect3>
+                    <title>Reach</title>
+
+                    <para>
+                        Missile weapons, like melee weapons, have a
+                        <e>reach</e> defined for them. Though they are not
+                        meant for use in melee combat, the reach determines
+                        how slow the weapon is to aim, and how clumsy it is
+                        in close quarters battle. A low reach is generally
+                        good, though high reach weapons tend to be more
+                        accurate.
+                    </para>
+
+                    <para>
+                        As well as the short, medium and long range
+                        categories, there are some more categories for very
+                        short ranges.
+                    </para>
+
+                    <itemlist order="sort">
+                        <item name="Close">
+                            Grappling, or fighting with reach 0 melee
+                            weapons, such as fists or knives.
+                        </item>
+
+                        <item name="Melee">
+                            Melee combat is anytime the target is fighting
+                            you with a melee weapon (of any reach), or if
+                            they are within 3m.
+                        </item>
+
+                        <item name="Threat">
+                            Threat range is within the target's combat move
+                            (not your combat move).
+                        </item>
+                    </itemlist>
+
+                    <sect4>
+                        <title>Reach 0 (Pistols)</title>
+
+                        <para>
+                            These weapons are highly suited to CQB. They
+                            loose their accuracy bonus in close combat,
+                            and at melee range or less the target gets
+                            their full normal defence.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Reach 1 (SMGs, carbines, crossbows)</title>
+
+                        <para>
+                            At <e>close</e> range attacks are automatically
+                            <e>slow</e>, and at <e>melee</e> or less the
+                            target gets their full defence.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Reach 2 (Assualt rifles, shotguns, bows)</title>
+
+                        <para>
+                            At <e>close</e> range the attack roll is halved.
+                        </para>
+
+                        <para>
+                            At <e>melee</e> or less, the attack is slow.
+                        </para>
+
+                        <para>
+                            At <e>threat</e> or less, the target gets their
+                            full normal defence.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Reach 3 (Sniper rifles, longbows)</title>
+
+                        <para>
+                            At <e>melee</e> range or less, the attack roll
+                            is halved and is also slow.
+                        </para>
+
+                        <para>
+                            At <e>threat</e> range or less, the attack is
+                            slow and the target gets their full defence.
+                        </para>
+                    </sect4>
+                </sect3>
 
                 <sect3>
                     <title>Firearms (Fi)</title>
