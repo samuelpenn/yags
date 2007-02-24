@@ -8,7 +8,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.7 $
+    Version: $Revision: 1.8 $
     Author: Samuel Penn
 -->
 
@@ -18,7 +18,7 @@
             techniques="options/techniques.yags">
 
 
-    <skill name="Melee weapon" type="skill">
+    <skill name="Melee" type="skill">
         <group>Combat</group>
         <group>Melee</group>
         <group>Armed melee</group>
@@ -38,8 +38,9 @@
     <skill name="Pistol">
         <group>Combat</group>
         <group>Firearms</group>
+        <default>Rifle</default>
 
-        <short>Using pistols.</short>
+        <short>Firing pistols, revolvers and SMGs.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -52,84 +53,31 @@
 
             <para>
                 At short range, you may normally add the attack bonus of
-                the weapon to your attack roll. Instead of making a normal
-                attack, you may choose to fire a <e>snapshot</e> at fast
-                initiative or take a <e>careful</e> shot at slow initiative.
+                the weapon to your attack roll unless you are making a
+                <e>snapshot</e>.
             </para>
-
-            <itemlist order="1">
-                <item>
-                    If you are using any form of weapon, you do not get to
-                    add the attack bonus of the weapon if you are in close
-                    combat with someone.
-                </item>
-
-                <item>
-                    If you are using an SMG, you also lose the attack bonus
-                    if you are in any form of melee combat.
-                </item>
-            </itemlist>
         </description>
     </skill>
 
     <skill name="Rifle">
         <group>Combat</group>
         <group>Firearms</group>
+        <default>Pistol</default>
 
         <short>Firing rifles.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The use and handling of rifles, shotguns
+                The use and handling of rifles, carbines, shotguns
                 and the like. It is not very effective at very close range,
                 but is designed for short to medium ranges. Can be used
                 with either <t>Dexterity</t> or <t>Perception</t>.
             </para>
 
-            <itemlist order="1">
-                <item>
-                    Attack rolls are based on Dexterity or
-                    Perception.
-                </item>
-
-                <item>
-                    Add the full attack bonus of the weapon unless
-                    you are making a snapshot.
-                </item>
-
-                <item>
-                    If you are in melee combat with the target
-                    (any reach) you loose your attack bonus.
-                </item>
-
-                <item>
-                    If you are in close combat with anyone, your
-                    attack roll is halved.
-                </item>
-            </itemlist>
-        </description>
-    </skill>
-
-    <skill name="Sniper" type="skill">
-        <group>Combat</group>
-        <group>Firearms</group>
-
-        <short>Long range single shots.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Firing a rifle over long distance with accuracy. Covers not
-                just accuracy with firing, but knowing how to find a good
-                position, keeping in cover, planning escape routes after
-                you've assassinated the target and other actions required
-                to be a good sniper.
-            </para>
-
-            <para>
-                Treated like the <e>rifle</e> skill, but you gain the weapon's
-                accuracy bonus over all ranges, and fumble chance is reduced
-                by your skill. Cannot be used for automatic fire, only single
-                or multiple shots. Always based on <e>Perception</e>.
+                At short range, you may normally add the attack bonus of
+                the weapon to your attack roll unless you are making a
+                <e>snapshot</e>.
             </para>
         </description>
     </skill>
@@ -251,6 +199,7 @@
         <group>Combat</group>
         <group>Firearms</group>
         <group>Vehicle</group>
+        <default>Rifle</default>
 
         <short>Using heavy machine guns.</short>
 
@@ -260,7 +209,8 @@
                 heavy weapons such as vehicle mounted machine guns,
                 grenade launchers, anti-tank weapons and mortars.
                 Most non-man portable weapons fall into this
-                category. Uses <t>Perception</t>.
+                category. Always uses <t>Perception</t> when
+                firing weapons.
             </para>
         </description>
     </skill>
