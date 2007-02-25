@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.9 $
-    Date:    $Date: 2007-02-21 20:39:22 $
+    Version: $Revision: 1.10 $
+    Date:    $Date: 2007-02-25 17:35:13 $
 
     Categories
 
@@ -190,7 +190,7 @@
                 <attack>+10</attack><damage>30</damage>
                 <range>
                     <increment>30</increment>
-                    <short>500</short><medium>1000</medium><long>2000</long>
+                    <short>500</short><medium>1000</medium><long>2500</long>
                 </range>
             </combat>
             <strength>2</strength><load>3</load><reach>2</reach>
@@ -233,6 +233,43 @@
             </combat>
             <strength>2</strength><load>3</load><reach>2</reach>
             <capacity>40</capacity><rof>40</rof><recoil>-2</recoil>
+            <properties>
+                <missile/><firearm/><automatic/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Gauss SMG, 4mm (TL12)">
+        <category>Weapon</category>
+        <importance>3</importance><availability>2</availability>
+        <techLevel>12</techLevel>
+        <weight>1900</weight>
+        <cost>2500</cost>
+        <short>Gauss sub-machine gun.</short>
+
+        <description>
+            <para>
+                This is an SMG designed to fire 4mm gauss ammunition.
+                It is slightly more powerful than a pistol, and much
+                shorter than carbines or assualt rifles, making it well
+                suited for close quarters combat.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+6</attack><damage>25</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>250</short><medium>500</medium><long>1500</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>2</load><reach>1</reach>
+            <capacity>30</capacity><rof>30</rof><recoil>-2</recoil>
             <properties>
                 <missile/><firearm/><automatic/><tripleauto/>
                 <reload score="1"/>
@@ -283,6 +320,7 @@
                 constraints apply.
             </para>
         </description>
+
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
             <category>Rifles</category>
@@ -290,11 +328,11 @@
             <combat>
                 <attack>+8</attack><damage>27</damage>
                 <range>
-                    <increment>20</increment>
-                    <short>250</short><medium>500</medium><long>1000</long>
+                    <increment>25</increment>
+                    <short>400</short><medium>800</medium><long>1600</long>
                 </range>
             </combat>
-            <strength>2</strength><load>2</load><reach>1</reach>
+            <strength>2</strength><load>2</load><reach>2</reach>
             <capacity>30</capacity><rof>30</rof><recoil>-3</recoil>
             <properties>
                 <missile/><firearm/><automatic/><tripleauto/>
