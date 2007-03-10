@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2007-01-20 00:13:09 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2007-03-10 22:26:37 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -73,6 +73,23 @@
                     of abstraction is probably a good thing.
                 </para>
 
+                <note title="Vehicle Scale">
+                    <para>
+                        <e>Vehicles</e> are treated somewhat differently
+                        to characters and creatures, and are considered to
+                        be at a different <e>Scale</e> for purposes of
+                        damage. If this wasn't done, then vehicle weapons
+                        and armour would be in the 100+ level, and the
+                        d20 wouldn't provide much in the way of randomness.
+                    </para>
+
+                    <para>
+                        It also doesn't make sense for a vehicle to suffer
+                        from <e>Stuns</e> or <e>Fatigue</e>, so damage
+                        tracks are taken slightly differently as well.
+                    </para>
+                </note>
+
                 <para>
                     A <t>Size</t> of 10 is considered to be a vehicle of
                     10m^3, and each +5 <t>Size</t> increases this by a
@@ -93,11 +110,46 @@
                     <title>Damage</title>
 
                     <para>
-                        Damage against vehicles is considered to be either
-                        <e>Major</e> or <e>Minor</e>. In some ways,
-                        <e>Major</e> damage is equivalent to <e>Wounds</e>
-                        against people, and <e>Minor</e> is similar to
-                        <e>Stun</e> damage.
+                        Vehicles have a single damage track, with a number
+                        of states: <e>Okay</e>, <e>Superficial</e>,
+                        <e>Medium</e>, <e>Critical</e> and <e>Destroyed</e>.
+                        The latter is equivalent to <e>Fatal</e> wounds for
+                        characters, and results in the vehicle being
+                        rendered completely inoperable.
+                    </para>
+
+                    <para>
+                        All damage is applied to this track, and is of two
+                        types - <e>Major</e> and <e>Minor</e>. All vehicle
+                        scale weapons cause <e>Major</e> damage to vehicles.
+                        Such damage is equivalent to <e>wounds</e> against
+                        characters, and is additive.
+                    </para>
+
+                    <para>
+                        Character scale weapons may cause <e>Minor</e>
+                        damage to vehicles. This is treated like stuns, in
+                        that it is non-cumulative. If the damage caused is
+                        less than half the current damage, then the attack
+                        is ignored. If it is more than half, but not more
+                        than the current damage, then one level of damage
+                        is caused. If the damage is greater than the current
+                        damage, then the total damage is equal to the
+                        damage caused.
+                    </para>
+
+                    <para>
+                        Major damage may cause critical hits against the
+                        vehicle. Minor damage is normally superficial.
+                    </para>
+
+                    <para>
+                        The damage levels for a vehicle are split equally
+                        between <e>Superficial</e>, <e>Medium</e> and
+                        <e>Critical</e>, with extra levels going to the
+                        lower bands first. A size 10 car would have 4
+                        levels of Superficiail, 3 of Medium and 3 of
+                        Critical.
                     </para>
                 </sect3>
             </sect2>
@@ -129,16 +181,47 @@
                         (or twice) the miles per hour speed.
                     </item>
 
+                    <item name="Critical">
+                        The threshold at which the vehicle suffers
+                        criticals. It is equal to the number of damage
+                        levels the vehicle has in its Superficial
+                        level.
+                    </item>
+
                     <item name="Acceleration">
                         How quickly the vehicle accelerates, in metres
                         per round per round.
                     </item>
                 </itemlist>
             </sect2>
-        </sect1>
 
-        <sect1>
-            <title>Vehicle Combat</title>
+            <sect2>
+                <title>Example Vehicle</title>
+
+                <para>
+                    Below is an example vehicle, to help put things into
+                    perspective.
+                </para>
+
+                <vehicle name="Family Car">
+                    <description>
+                        <short>5 door hatch back.</short>
+
+                        <year>2005</year>
+                        <cost>15000</cost>
+                        <techLevel>8</techLevel>
+                        <topSpeed units="km">200</topSpeed>
+                    </description>
+
+                    <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+                        <attributes size="10" soak="10" move="220" acceleration="20">
+                            <attribute name="strength" score="10"/>
+                            <attribute name="health" score="3"/>
+                            <attribute name="agility" score="3"/>
+                        </attributes>
+                    </statistics>
+                </vehicle>
+            </sect2>
 
             <sect2>
                 <title>Vehicle Weapons and Armour</title>
