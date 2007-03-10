@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2007-01-19 21:43:05 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2007-03-10 22:25:17 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -42,8 +42,14 @@
     <body>
         <sect1 href="../core/combat/combat-vehicles.yags"/>
 
-        <sect1 format="wide">
+        <sect1>
             <title>Modern Equipment</title>
+
+            <import-equipment href="../core/xml/modern.yags" style="full"/>
+        </sect1>
+
+        <sect1 format="wide">
+            <title>Modern Firearms</title>
 
             <para>
                 The following lists some weapons and armour types which are
@@ -51,7 +57,9 @@
             </para>
 
             <y:import-weaponlist href="../core/xml/modern.yags" importance="2" style="list">
-                <y:category>Firearms</y:category>
+                <y:category>Pistols</y:category>
+                <y:category>Rifles</y:category>
+                <y:category>SMG</y:category>
             </y:import-weaponlist>
         </sect1>
     </body>
