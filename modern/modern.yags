@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <header>
+        <title>Yags Modern</title>
+        <tagline>Yags</tagline>
+
+        <summary>
+            Rules for covering modern and futuristic worlds.
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2007-03-10 22:25:44 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2007</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+        </license>
+
+        <style name="combat"/>
+    </header>
+
+    <body>
+        <sect1>
+            <title>Yags Modern</title>
+
+            <para>
+                Yags can be used for games set in pretty much any kind of
+                setting, from stone age hunter gatherers to star travelling
+                mercenaries.
+            </para>
+
+            <targetlist targetFirst="true">
+                <targetLabel>TL</targetLabel>
+                <valueLabel>Technology</valueLabel>
+
+                <item target="0" value="Stone age"/>
+                <item target="1" value="Bronze age"/>
+                <item target="2" value="Iron age"/>
+                <item target="3" value="Medieval"/>
+                <item target="4" value="Renaissence"/>
+                <item target="5" value="Enlightenment"/>
+                <item target="6" value="Mechanisation"/>
+                <item target="7" value="Atomic"/>
+                <item target="8" value="Digital (now)"/>
+                <item target="9" value="Microtech (future)"/>
+            </targetlist>
+        </sect1>
+
+        <sect1 href="../core/combat/combat-vehicles.yags"/>
+
+        <sect1 href="articles/computers.yags"/>
+
+        <sect1>
+            <title>Modern Equipment</title>
+
+            <import-equipment href="../core/xml/modern.yags" style="full"/>
+        </sect1>
+
+        <sect1 format="wide">
+            <title>Modern Firearms</title>
+
+            <para>
+                The following lists some weapons and armour types which are
+                commonly available in a late 20th/early 21st century campaign.
+            </para>
+
+            <y:import-weaponlist href="../core/xml/modern.yags" importance="2" style="list">
+                <y:category>Pistols</y:category>
+                <y:category>Rifles</y:category>
+                <y:category>SMG</y:category>
+            </y:import-weaponlist>
+        </sect1>
+    </body>
+</article>
+
+
