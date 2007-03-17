@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.3 $</version>
-            <date>$Date: 2007-03-10 22:26:37 $</date>
+            <version>$Revision: 1.4 $</version>
+            <date>$Date: 2007-03-17 22:06:30 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -39,24 +39,31 @@
 
     <body>
         <sect1>
-            <title>Vehicles</title>
+            <title>Vehicles and Constructs</title>
 
             <para>
-                For the most part, vehicles can be treated as just a tool
-                to get from A to B, and don't require rules any more
-                detailed than how long it takes, and possibly what they
-                cost to buy and run. Occassionally however, it is useful
-                to know a bit more about how vehicles fit into the world
-                in <e>Yags</e>, especially if they are used in combat
+                For the most part, adventures in Yags will revolve around
+                people and sometimes animals. Objects such as vehicles and
+                buildings exist, but only as part of the backdrop, or as
+                mechanisms to get from one event to another.
+            </para>
+
+            <para>
+                Occassionally however, such things become a focal point
+                of the game, and it becomes useful to know a bit more about
+                how vehicles and buildings fit into the world as described
+                by <e>Yags</e> - especially if the are used in combat
                 situations.
             </para>
 
             <para>
-                As well as looking at vehicles themselves, these rules also
-                cover the use of large vehicle mounted and infantry support
-                weapons. Most characters will never need to worry about
-                these, even in modern campaigns, but the occassional
-                scenario will call for their use.
+                These rules cover the description and use of vehicles
+                within the game. Also covered are buildings and other
+                non-living things. The generic term used is <e>Construct</e>.
+                Also covered are the use of large vehicle mounted and
+                infantry support weapons. Most characters will never need
+                to worry about these, even in modern campaigns, but the
+                occassional scenario will call for their use.
             </para>
 
             <sect2>
@@ -67,10 +74,11 @@
                     all creatures within the game, and this is extended
                     to cover vehicles as well. Since <t>Size</t> is
                     logarithmic, it will rarely get above 20 for ground
-                    vehicles, or even 100 for something like the
-                    Death Star. This does lead to a degree of imprecision
-                    at the higher levels, but at that point a large level
-                    of abstraction is probably a good thing.
+                    vehicles, it will generally be below 100 (even objects
+                    such as the <e>Death Star</e> or
+                    <e>Skylark of Valeron</e>). This does lead to a degree
+                    of imprecision at the higher levels, but at that point
+                    a large level of abstraction is probably a good thing.
                 </para>
 
                 <note title="Vehicle Scale">
@@ -94,8 +102,9 @@
                     A <t>Size</t> of 10 is considered to be a vehicle of
                     10m^3, and each +5 <t>Size</t> increases this by a
                     multiple of 10. <t>Size</t> 10 is more than enough for
-                    a family car, and <t>Size</t> 15 is adequate for a
-                    large tank.
+                    a family car, <t>Size</t> 15 is adequate for a
+                    large tank and a WWII battleship would be in the
+                    high twenties.
                 </para>
 
                 <para>
@@ -105,6 +114,124 @@
                     to vehicles, and vehicle weapons pretty much ignore
                     the armour and soak of people.
                 </para>
+
+                <sect3>
+                    <title>Soak</title>
+
+                    <para>
+                        A construct will normally have a base soak equal to
+                        its size. If it is stronger or weaker than usual
+                        then this can vary. The following guide can be used
+                        to determine the base soak of a vehicle or building.
+                        These are guidelines only, and any values inbetween
+                        (or outside) those given can be used.
+                    </para>
+
+                    <targetlist targetFirst="true" bold="true">
+                        <targetLabel>Soak</targetLabel>
+                        <valueLabel>Type of construct</valueLabel>
+
+                        <item target="x0.5" value="Weak.">
+                            A very weak object, normally poorly constructed
+                            or delibrately designed to be light.
+                        </item>
+
+                        <item target="x1" value="Average.">
+                            Any typical building or vehicle will have a
+                            base soak equal to its size.
+                        </item>
+
+                        <item target="x1.5" value="Reinforced.">
+                            If the object has been reinforced, such as a
+                            rally car, SUV or heavily constructed building.
+                            About the strongest most flying vehicles will be.
+                        </item>
+
+                        <item target="x2" value="Strong.">
+                            Object has been designed from the start to be
+                            tough and durable. A tank, battleship or bunker
+                            will tend to be this strong.
+                        </item>
+
+                        <item target="x3" value="Very strong.">
+                            A heavily built vehicle, such as the strongest
+                            tanks, or a heavily toughened bunker. The entire
+                            design of the construct is geared towards making
+                            it strong, rather than pretty or fast.
+                        </item>
+
+                        <item target="x4" value="Super strong.">
+                            A heavily built vehicle made from ultra-tech
+                            materials (TL10+), or one which is designed to
+                            do little more than resist damage at the expense
+                            of being very space inefficient.
+                        </item>
+
+                        <item target="x5" value="Ultra strong.">
+                            Ultra-tech object which does little more than
+                            resist damage which is also very space inefficient,
+                            but also highly resistant to damage.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        This is the base soak of the construct, and is not
+                        affected by heavy weapons or other effects.
+                    </para>
+
+                    <para>
+                        As for characters, vehicles and buildings may be
+                        armoured. Many heavily armoured vehicles will have
+                        two armour ratings - one for the heavy front armour,
+                        and the second for the lighter sides and rear.
+                        Most armour on vehicles is considered to be
+                        <e>Light vehicle</e>. <e>Heavy vehicle</e> weapons
+                        (normally armour piercing weapons, such as HEAT)
+                        halve such armour.
+                    </para>
+
+                    <targetlist targetFirst="true" bold="true">
+                        <targetLabel>Armour</targetLabel>
+                        <valueLabel>Examples of armour</valueLabel>
+
+                        <item target="5-10" value="Armoured vehicle.">
+                            Armoured vehicles (such as APCs, armoured limo)
+                            will tend to have armour in the 5-10 range.
+                        </item>
+
+                        <item target="10-20" value="Light tank.">
+                            Heavily armoured vehicles, such as tanks, will
+                            tend to have up to 20 points of front armour.
+                        </item>
+
+                        <item target="20-40" value="Heavy tank.">
+                            The toughest of tanks will have armours in this
+                            sort of range.
+                        </item>
+
+                        <item target="30-50" value="Battleships.">
+                            Heavy battleships.
+                        </item>
+
+                        <item target="-10" value="Tech -6.">
+                            At tech levels prior to 7, materials are limited
+                            so reduce armour values by 10.
+                        </item>
+
+                        <item target="-5" value="Tech 7.">
+                            For tech level 7 era vehicles, reduce armour
+                            levels by 5.
+                        </item>
+
+                        <item target="+5" value="Tech 9-10.">
+                            At tech levels 9-10, increase armour by +5.
+                        </item>
+
+                        <item target="+10" value="Tech 11+">
+                            At tech levels above 10, increase armour by +10.
+                        </item>
+                    </targetlist>
+                </sect3>
 
                 <sect3>
                     <title>Damage</title>
@@ -148,7 +275,7 @@
                         between <e>Superficial</e>, <e>Medium</e> and
                         <e>Critical</e>, with extra levels going to the
                         lower bands first. A size 10 car would have 4
-                        levels of Superficiail, 3 of Medium and 3 of
+                        levels of Superficial, 3 of Medium and 3 of
                         Critical.
                     </para>
                 </sect3>
@@ -196,31 +323,15 @@
             </sect2>
 
             <sect2>
-                <title>Example Vehicle</title>
+                <title>Example Vehicles</title>
 
                 <para>
-                    Below is an example vehicle, to help put things into
-                    perspective.
+                    Listed below are some sample vehicles, showing a range
+                    of sizes and capabilities from the modern day and
+                    recent history.
                 </para>
 
-                <vehicle name="Family Car">
-                    <description>
-                        <short>5 door hatch back.</short>
-
-                        <year>2005</year>
-                        <cost>15000</cost>
-                        <techLevel>8</techLevel>
-                        <topSpeed units="km">200</topSpeed>
-                    </description>
-
-                    <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-                        <attributes size="10" soak="10" move="220" acceleration="20">
-                            <attribute name="strength" score="10"/>
-                            <attribute name="health" score="3"/>
-                            <attribute name="agility" score="3"/>
-                        </attributes>
-                    </statistics>
-                </vehicle>
+                <import-vehicles href="vehicles.yags"/>
             </sect2>
 
             <sect2>
