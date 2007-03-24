@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.22 $</version>
-            <date>$Date: 2007-01-28 21:55:21 $</date>
+            <version>$Revision: 1.23 $</version>
+            <date>$Date: 2007-03-24 22:20:33 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -239,7 +239,8 @@
                     <item name="Background">
                         Allows you to choose some special advantages for
                         your character, from wealth and social status to
-                        psionic ability.
+                        psionic ability. If you want to play a non-human,
+                        then this is also a background cost.
                     </item>
                 </itemlist>
 
@@ -300,8 +301,11 @@
                     </table>
 
                     <para>
-                        The meaning of these values is described in the
-                        sections below.
+                        Where two numbers are given (e.g. 12/8), the first
+                        number is the number of points that may be spent,
+                        and the second number is the maximum level that an
+                        attribute or skill may be raised to. The meaning of
+                        these values is described in the sections below.
                     </para>
                 </sect3>
 
@@ -309,50 +313,78 @@
                     <title>Attributes</title>
 
                     <para>
-                        Attributes are listed as the number of points
-                        available to spend, and the maximum level of
-                        attribute which may be purchased (as +points/maximum).
-                        The cost of each level is as follows.
+                        For player characters, attributes are generally
+                        rated on a scale of 1 to 10. Humans are limited to
+                        a range of 2 to 8, though some aliens can go outside
+                        of this. A typical adult human is considered to have
+                        a score of 3 in each attribute. A description of what
+                        the various levels represent, and their costs, are
+                        given in the table below.
                     </para>
 
-                    <targetlist targetFirst="true">
+                    <para>
+                        The number of points that may be spent on buying
+                        up an attribute depends on the priority you chose
+                        for attributes - 12 points for primary, 6 for
+                        secondary and only 3 for tertiary. This choice
+                        also limits the maximum you may buy an attribute up
+                        to.
+                    </para>
+
+                    <targetlist targetFirst="true" bold="true">
                         <targetLabel>Score</targetLabel>
                         <valueLabel>Cost and description</valueLabel>
 
-                        <item target="8" value="+15,">
-                            Amazing, at the limit of human ability, which
-                            only a few people in human history have
-                            attained.
+                        <item target="10" value="Super alien.">
+                            The limit of what most aliens can achieve, and
+                            far ahead of any human.
                         </item>
-                        <item target="7" value="+10,">
-                            Outstanding, the best olympic athletes and most
-                            renowned of academics will have this level.
+                        <item target="9" value="Super human.">
+                            Beyond want humans can achieve, and only found
+                            in a select few alien species.
                         </item>
-                        <item target="6" value="+6,">
+                        <item target="8" value="Amazing (+15 points).">
+                            At the limit of human ability, which only a few
+                            people in human history have attained.
+                        </item>
+                        <item target="7" value="Outstanding (+10 points).">
+                            The best olympic athletes and the most renowned
+                            of academics will have this level of attribute.
+                        </item>
+                        <item target="6" value="Superb (+6 points).">
                             Far above human average, attained not by chance
                             but through dedicated training.
                         </item>
-                        <item target="5" value="+3,">
+                        <item target="5" value="Exceptional (+3 points).">
                             Obviously exceptional. Attributes higher than
                             this are normally only attained through
                             training and dedication.
                         </item>
-                        <item target="4" value="+1,">
+                        <item target="4" value="Good (+1 point).">
                             Significantly above average for an adult. About
                             5% of the population has this level or above.
                         </item>
-                        <item target="3" value="+0,">
+                        <item target="3" value="Average (0 points).">
                             Typical average for an adult. About 90% of the
                             population.
                         </item>
-                        <item target="2" value="-2,">
+                        <item target="2" value="Poor (-2 points).">
                             Significantly below average, the bottom 5%.
+                        </item>
+                        <item target="1" value="Terrible.">
+                            Obviously impaired compared to a typical human.
+                            An attribute of this level is almost worthless.
                         </item>
                     </targetlist>
 
                     <para>
-                        You may take an attribute at 2, in order to spend
-                        the extra points on raising another attribute.
+                        Levels outside of the range 2-8 cannot be purchased,
+                        but are reserved for alien species. Some aliens get
+                        a bonus or penalty to a given attribute, and this
+                        bonus applies after you have purchased the attribute.
+                        You may not purchase an attribute to a level that
+                        would cause it to be shifted outside of the 1-10
+                        range once species modifiers have been applied.
                     </para>
                 </sect3>
 

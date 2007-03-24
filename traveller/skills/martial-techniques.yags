@@ -9,7 +9,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.6 $
+    Version: $Revision: 1.7 $
     Author: Samuel Penn
 -->
 
@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.6 $</version>
-            <date>$Date: 2007-01-21 18:13:35 $</date>
+            <version>$Revision: 1.7 $</version>
+            <date>$Date: 2007-03-24 22:20:33 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -748,11 +748,20 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Automatic technique which raises the target number to hit
-                you by your best melee skill whenever you defend against
-                an attack (i.e., it raises your minimum defence roll).
-                If you don't declare a defence against that attack, then
-                your base defence is unmodified.
+                Automatic technique which raises the base target number
+                to hit you by your best melee skill whenever you defend
+                against an attack (i.e., it raises your minimum defence
+                roll, but not the defence roll itself). If you don't
+                declare a defence against that attack, then your base
+                defence is unmodified.
+            </para>
+
+            <para>
+                Since your base 'to be hit' number is unaffected by the
+                number of defences you make, or by attacks from missile
+                weapons which halve your dodge, this technique is mostly
+                of use when you are outnumbered or dodging arrows and
+                bullets.
             </para>
         </description>
     </advantage>
