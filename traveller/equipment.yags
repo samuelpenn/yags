@@ -6,11 +6,11 @@
 <article xmlns="http://yagsbook.sourceforge.net/xml"
          xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
-        <title>Yags Traveller Equipment</title>
+        <title>Yags Traveller Equipment TL12</title>
         <tagline>Yags Traveller</tagline>
 
         <summary>
-            Equipment lists for Yags Traveller.
+            Equipment lists for Yags Traveller at Tech Level 12.
         </summary>
 
         <author>
@@ -19,12 +19,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.6 $</version>
-            <date>$Date: 2007-01-20 16:59:15 $</date>
+            <version>$Revision: 1.7 $</version>
+            <date>$Date: 2007-03-25 19:34:28 $</date>
         </cvsinfo>
 
         <license type="Yags">
-            <year>2006</year>
+            <year>2007</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -41,11 +41,72 @@
             <title>Equipment</title>
 
             <para>
-                The following lists equipment commonly available throughout
-                the 3rd Imperium.
+                There is a wide variety of equipment available throughout
+                the Imperium. The full set of equipment lists for TL 12
+                is given here.
             </para>
 
-            <import-equipment style="full" href="equipment/tech12.yags"/>
+            <sect2>
+                <title>General Equipment</title>
+
+                <para>
+                    Generic equipment, tools, drugs and other things which
+                    aren't weapons, armour or vehicles.
+                </para>
+
+                <import-equipment style="full"
+                    href="../equipment/traveller/tech12/generic.yags"/>
+            </sect2>
+
+            <sect2>
+                <title>Weapons and Armour</title>
+
+                <sect3>
+                    <title>Armour</title>
+
+                    <import-equipment style="full"
+                        href="../equipment/traveller/tech12/armour.yags"/>
+                </sect3>
+
+                <sect3>
+                    <title>Small arms</title>
+
+                    <import-equipment style="full"
+                        href="../equipment/traveller/tech12/smallarms.yags"/>
+                </sect3>
+
+                <sect3>
+                    <title>Heavy Weapons</title>
+
+                    <import-equipment style="full"
+                        href="../equipment/traveller/tech12/heavy-weapons.yags"/>
+                </sect3>
+
+                <sect3>
+                    <title>Melee Weapons</title>
+
+                    <import-equipment style="full"
+                        href="../equipment/traveller/tech12/melee.yags"/>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Vehicles</title>
+
+                <sect3>
+                    <title>Civilian</title>
+
+                    <import-equipment style="full"
+                        href="../equipment/traveller/tech12/vehicles/transport.yags"/>
+                </sect3>
+
+                <sect3>
+                    <title>Military</title>
+
+                    <import-equipment style="full"
+                        href="../equipment/traveller/tech12/vehicles/tanks.yags"/>
+                </sect3>
+            </sect2>
         </sect1>
 
 
@@ -132,77 +193,19 @@
 
 
                 <sect3>
-                    <title>Pistols</title>
+                    <title>Small arms</title>
 
                     <para>
-                        Pistols covers all short barreled weapons designed
-                        to be used with a single hand. They are generally
-                        suffer from a shorter range and poorer accuracy than
-                        rifles, but have the advantage of being much easier
-                        to carry.
+                        These are small weapons designed to be easily man
+                        portable. They range from pistols up to rifles.
                     </para>
 
-                    <para>
-                        Most are cheap and easy to obtain, and are often made
-                        from tough plastics. All use the <e>Pistol</e> skill.
-                    </para>
-
-                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
-                        <y:category>Pistols</y:category>
-                    </y:import-weaponlist>
-                </sect3>
-
-                <sect3>
-                    <title>Rifles</title>
-
-                    <para>
-                        Designed for hunting or combat. Pretty obvious to
-                        carry around, but have better range and accuracy
-                        than pistols. All use the <e>Rifle</e> skill.
-                    </para>
-
-                    <para>
-                        The rifles here are all of the slugthrower type.
-                        For lasers and plasma rifles, see under energy
-                        weapons.
-                    </para>
-
-                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
-                        <y:category>Rifles</y:category>
-                    </y:import-weaponlist>
-                </sect3>
-
-                <sect3>
-                    <title>Shotguns</title>
-
-                    <para>
-                        Useful short range weapons.
-                    </para>
-
-                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
-                        <y:category>Shotguns</y:category>
-                    </y:import-weaponlist>
-                </sect3>
-
-                <sect3>
-                    <title>Energy Weapons</title>
-
-                    <para>
-                        Lasers are excellent as sniping weapons, though power limitations
-                        can be their downfall, and fully automatic lasers aren't man
-                        portable. Lasers which don't have an external power pack suffer
-                        from range limitations, especially within an atmosphere.
-                    </para>
-
-                    <para>
-                        Plasma weapons pack a heavy punch, but are short range. The plasma
-                        bolt tends to loose heat rapidly in an atmosphere but are good at
-                        getting through powered armour. As for lasers, they often require
-                        an external power pack and tend to lack full auto capability.
-                    </para>
-
-                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
+                    <y:import-weaponlist href="../equipment/traveller/tech12/smallarms.yags"
+                                         importance="2" style="list">
                         <y:category>Energy</y:category>
+                        <y:category>Pistols</y:category>
+                        <y:category>Rifles</y:category>
+                        <y:category>Shotguns</y:category>
                     </y:import-weaponlist>
                 </sect3>
 
@@ -210,12 +213,15 @@
                     <title>Heavy Weapons</title>
 
                     <para>
-                        These weapons are normally vehicle mounted, and not
-                        designed to be used by infantry except from fixed
-                        emplacements.
+                        These weapons are either normally vehicle mounted,
+                        or considered to be squad support weapons, often used
+                        by troops in full battledress. At the very least they
+                        require backpacks for energy or ammunition.
                     </para>
 
-                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
+                    <y:import-weaponlist href="../equipment/traveller/tech12/heavy-weapons.yags"
+                                         importance="2" style="list">
+                        <y:category>Energy</y:category>
                         <y:category>Heavy</y:category>
                     </y:import-weaponlist>
                 </sect3>
@@ -230,24 +236,11 @@
                         of ancient weapons.
                     </para>
 
-                    <y:import-weaponlist href="equipment/tech12.yags" importance="2" style="list">
+                    <y:import-weaponlist href="../equipment/traveller/tech12/melee.yags"
+                                         importance="2" style="list">
                         <y:category>Melee</y:category>
                     </y:import-weaponlist>
                 </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Armour</title>
-
-                <para>
-                    The following types of armour are commonly available.
-                    Low-tech worlds will of course have plenty of low tech
-                    armour available, but this is of limited use against
-                    firearms.
-                </para>
-
-                <y:import-armourlist href="equipment/tech12.yags"/>
-
             </sect2>
         </sect1>
     </body>
