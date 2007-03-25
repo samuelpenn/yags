@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<equipment xmlns="http://yagsbook.sourceforge.net/xml"
+           xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <item name="M-3 Halftrack APC">
+        <category>Vehicle</category>
+        <genre>WWII</genre>
+        <techLevel>6</techLevel>
+        <legality>2</legality>
+        <availability>2</availability>
+        <importance>3</importance>
+
+        <short>Light infantry transport.</short>
+        <cost>2600</cost>
+        <weight>10200000</weight>
+
+        <construction>
+            <manufacturer>US</manufacturer>
+            <year>1942</year>
+        </construction>
+
+        <description>
+            <para>
+                A half-tracked armoured personel carrier with an open
+                top.
+            </para>
+        </description>
+
+        <performance realm="ground">
+            <speed>64</speed>
+            <acceleration>3</acceleration>
+            <range>450</range>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+
+            <attributes size="12" soak="18" move="65" acceleration="10">
+                <attribute name="strength" score="56"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="3"/>
+            </attributes>
+
+            <combat>
+                <armour score="15"/>
+
+                <weapon name="Heavy machine gun">
+                    <attack score="15"/>
+                    <damage score="45"/>
+                    <increment>30</increment>
+                    <rof>10</rof><capacity>700</capacity>
+                    <recoil>-10</recoil>
+                    <range>
+                        <short>1000</short>
+                        <medium>2000</medium>
+                        <long>4000</long>
+                    </range>
+                    <properties>
+                        <firearm/><heavy/><automatic/>
+                    </properties>
+                </weapon>
+
+                <weapon name="Light Machine Gun">
+                    <attack score="15"/>
+                    <damage score="35"/>
+                    <increment>25</increment>
+                    <rof>10</rof><capacity>7000</capacity>
+                    <recoil>-5</recoil>
+                    <range>
+                        <short>750</short>
+                        <medium>2000</medium>
+                        <long>4000</long>
+                    </range>
+                    <properties>
+                        <firearm/><heavy/><automatic/>
+                    </properties>
+                </weapon>
+            </combat>
+        </vehicle>
+    </item>
+
+    <item name="Sherman M4">
+        <category>Vehicle</category>
+        <genre>WWII</genre>
+        <techLevel>6</techLevel>
+        <legality>1</legality>
+        <short>Light tank.</short>
+
+        <cost>31000</cost>
+        <weight>33200000</weight>
+
+        <construction>
+            <manufacturer>US</manufacturer>
+            <year>1941</year>
+        </construction>
+
+        <description>
+            <para>
+                The standard US tank, which was used throughout the war
+                by the US and her allies.
+            </para>
+        </description>
+
+        <performance realm="ground">
+            <speed>45</speed>
+            <acceleration>3</acceleration>
+            <range>330</range>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="9" soak="18" move="65" acceleration="10">
+                <attribute name="strength" score="45"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="2"/>
+            </attributes>
+
+            <combat>
+                <armour location="Front" score="20"/>
+                <armour location="Side" score="15"/>
+
+                <weapon name="75mm medium tank gun">
+                    <attack score="25"/>
+                    <damage score="45"/>
+                    <increment>30</increment>
+                    <rof>1</rof><capacity>90</capacity>
+                    <recoil>0</recoil>
+                    <range>
+                        <short>1000</short>
+                        <medium>4000</medium>
+                        <long>10000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <vehicle/>
+                        <explosive score="2"/>
+                    </properties>
+                </weapon>
+
+                <weapon name="Light Machine Gun (x2)">
+                    <attack score="15"/>
+                    <damage score="35"/>
+                    <increment>25</increment>
+                    <rof>10</rof><capacity>2000</capacity>
+                    <recoil>-5</recoil>
+                    <range>
+                        <short>750</short>
+                        <medium>2000</medium>
+                        <long>4000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <heavy/>
+                        <automatic/>
+                    </properties>
+                </weapon>
+            </combat>
+        </vehicle>
+    </item>
+
+    <item name="Panzer IV">
+        <category>Vehicle</category>
+        <genre>WWII</genre>
+        <techLevel>6</techLevel>
+        <legality>1</legality>
+        <short>German light tank.</short>
+        <cost>26000</cost>
+        <weight>27500000</weight>
+
+        <construction>
+            <manufacturer>Germany</manufacturer>
+            <year>1939</year>
+        </construction>
+
+        <description>
+            <para>
+                German tank common at the start of the war, over ten
+                thousand were constructed, with varying models being
+                based on the standard design.
+            </para>
+        </description>
+
+        <performance realm="ground">
+            <speed>46</speed>
+            <acceleration>3</acceleration>
+            <range>280</range>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+
+            <attributes size="8" soak="16" move="65" acceleration="10">
+                <attribute name="strength" score="44"/>
+                <attribute name="health" score="3"/>
+                <attribute name="agility" score="2"/>
+            </attributes>
+
+            <combat>
+                <armour location="Front" score="25"/>
+                <armour location="Side" score="15"/>
+
+                <weapon name="75mm long tank gun">
+                    <attack score="28"/>
+                    <damage score="50"/>
+                    <increment>40</increment>
+                    <rof>1</rof><capacity>87</capacity>
+                    <recoil>0</recoil>
+                    <range>
+                        <short>1500</short>
+                        <medium>6000</medium>
+                        <long>15000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <vehicle/>
+                        <explosive score="2"/>
+                    </properties>
+                </weapon>
+
+                <weapon name="Light Machine Gun (x2)">
+                    <attack score="15"/>
+                    <damage score="35"/>
+                    <increment>25</increment>
+                    <rof>10</rof><capacity>1500</capacity>
+                    <recoil>-5</recoil>
+                    <range>
+                        <short>750</short>
+                        <medium>2000</medium>
+                        <long>4000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <heavy/>
+                        <automatic/>
+                    </properties>
+                </weapon>
+            </combat>
+        </vehicle>
+    </item>
+
+    <item name="Panzer VI - Tiger">
+        <category>Vehicle</category>
+        <genre>WWII</genre>
+        <legality>1</legality>
+        <cost>56000</cost>
+        <techLevel>6</techLevel>
+        <weight>62600000</weight>
+
+        <short>WWII German heavy tank.</short>
+
+        <construction>
+            <year>1942</year>
+            <manufacturer>Germany</manufacturer>
+        </construction>
+
+        <description>
+            <para>
+                The best of the German tanks.
+            </para>
+        </description>
+
+        <performance realm="ground">
+            <speed>46</speed>
+            <acceleration>3</acceleration>
+            <range>140</range>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+
+            <attributes size="10" soak="20" move="65" acceleration="10">
+                <attribute name="strength" score="51"/>
+                <attribute name="health" score="3"/>
+                <attribute name="agility" score="2"/>
+            </attributes>
+
+            <combat>
+                <armour location="Front" score="35"/>
+                <armour location="Side" score="20"/>
+
+                <weapon name="88mm medium tank gun">
+                    <attack score="25"/>
+                    <damage score="50"/>
+                    <increment>30</increment>
+                    <rof>1</rof><capacity>92</capacity>
+                    <recoil>0</recoil>
+                    <range>
+                        <short>1500</short>
+                        <medium>6000</medium>
+                        <long>15000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <vehicle/>
+                        <explosive score="2"/>
+                    </properties>
+                </weapon>
+
+                <weapon name="Light Machine Gun (x2)">
+                    <attack score="15"/>
+                    <damage score="35"/>
+                    <increment>25</increment>
+                    <rof>10</rof><capacity>2000</capacity>
+                    <recoil>-5</recoil>
+                    <range>
+                        <short>750</short>
+                        <medium>2000</medium>
+                        <long>4000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <heavy/>
+                        <automatic/>
+                    </properties>
+                </weapon>
+            </combat>
+        </vehicle>
+    </item>
+
+    <item name="T-34">
+        <category>Vehicle</category>
+        <genre>WWII</genre>
+        <legality>1</legality>
+        <cost>65000</cost>
+        <techLevel>6</techLevel>
+        <weight>28600000</weight>
+
+        <short>WWII Russian heavy tank.</short>
+
+        <description>
+            <para>
+                Russian heavy tank.
+            </para>
+        </description>
+
+        <construction>
+            <year>1940</year>
+            <manufacturer>Russia</manufacturer>
+        </construction>
+
+        <performance realm="ground">
+            <speed>58</speed>
+            <acceleration>3</acceleration>
+            <range>180</range>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+
+            <attributes size="11" soak="22" move="80" acceleration="15">
+                <attribute name="strength" score="40"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="2"/>
+            </attributes>
+
+            <combat>
+                <armour location="Front" score="35"/>
+                <armour location="Side" score="20"/>
+
+                <weapon name="75mm medium tank gun">
+                    <attack score="25"/>
+                    <damage score="45"/>
+                    <increment>30</increment>
+                    <rof>1</rof><capacity>77</capacity>
+                    <recoil>0</recoil>
+                    <range>
+                        <short>1000</short>
+                        <medium>4000</medium>
+                        <long>10000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <vehicle/>
+                        <explosive score="2"/>
+                    </properties>
+                </weapon>
+
+                <weapon name="Light Machine Gun (x2)">
+                    <attack score="15"/>
+                    <damage score="35"/>
+                    <increment>25</increment>
+                    <rof>10</rof><capacity>2000</capacity>
+                    <recoil>-5</recoil>
+                    <range>
+                        <short>750</short>
+                        <medium>2000</medium>
+                        <long>4000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <heavy/>
+                        <automatic/>
+                    </properties>
+                </weapon>
+            </combat>
+        </vehicle>
+    </item>
+
+
+</equipment>
+
+

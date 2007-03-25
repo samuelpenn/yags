@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+
+<!--
+
+    General equipment lists.
+
+    Copyright 2005 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted provided that the following
+    conditions are met:
+
+    1) Redistributions of any source code (e.g. XML) must retain the
+    above copyright notice, this list of conditions and the following
+    disclaimer.
+
+    2) Redistributions in compiled form (transformed to other DTDs,
+    converted to PDF, PostScript, RTF and other formats) must
+    reproduce the above copyright notice, this list of conditions
+    and the following disclaimer in the documentation and/or other
+    materials provided with the distribution.
+
+    THIS CONTENT IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+    OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DIRECT,
+    INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+    STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+    ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
+    OF THE POSSIBILITY OF SUCH DAMAGE.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-03-25 19:33:58 $
+
+    Categories
+
+    Adventuring     The sort of things only adventurers have.
+    Rogue           Thieves/assassins tools and the like.
+    Food            Food and drink.genre
+    Animals         An animal which isn't livestock - horses and dogs.
+    Livestock       Animals bred for food, such as pigs and cows.
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+
+    Prices are in credits.
+
+    Tech Level
+     4 1450-1700
+     5 1700-1900
+     6 1900-1950
+     7 1950-1980
+     8 1980-2020
+     9 2020+ (Interplanetary)
+    10 Interstellar (early jump)
+    11 Interstellar (Jump)
+    12 Interstellar (Imperium)
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+
+    <!-- Misc Stuff -->
+    <item name="Medipack">
+        <category>Medical</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>Field medical kit.</short>
+        <description>
+            <para>
+                Provides materials and drugs for tending wounds in the
+                field. This is a one-shot pack which provides pain
+                relief, nano-reconstructors and insta-skin.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>0.25</load>
+            <uses>1</uses>
+            <skill name="First aid" bonus="+20"/>
+        </tool>
+
+        <weight>500</weight>
+        <material>plastic</material>
+        <cost>250</cost>
+    </item>
+
+    <item name="Security toolset">
+        <category>Medical</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>Electronic tools for breaking secure locks.</short>
+        <description>
+            <para>
+                A set of electronic tools and software for breaking
+                most types of electronic locks. Provides iris scan,
+                finger print and key card faking/recording devices.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>0</load>
+            <skill name="Security systems" bonus="+10"/>
+        </tool>
+
+        <weight>250</weight>
+        <material>plastic</material>
+        <cost>5000</cost>
+    </item>
+
+    <item name="Security toolset (advanced)">
+        <category>Medical</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>Electronic tools for breaking secure locks.</short>
+        <description>
+            <para>
+                A set of electronic tools and software for breaking
+                most types of electronic locks. Provides iris scan,
+                finger print and key card faking/recording devices.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>0</load>
+            <skill name="Security systems" bonus="+20"/>
+        </tool>
+
+        <weight>250</weight>
+        <material>plastic</material>
+        <cost>15000</cost>
+    </item>
+
+    <item name="Lock picks">
+        <category>Medical</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <short>High tech lock picks.</short>
+        <description>
+            <para>
+                Using the latest in micro-engineering, this set of lock
+                picks can break most standard mechanical locks in a short
+                period of time. Just insert the tool, and it automatically
+                adjusts itself to fit the lock, and open it. It is the
+                existence of tools such as these which have made plain
+                mechanical locks obsolete.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>0</load>
+            <skill name="Burglary" bonus="+40"/>
+        </tool>
+
+        <weight>150</weight>
+        <material>plastic</material>
+        <cost>750</cost>
+    </item>
+
+
+    <item name="Stims">
+        <category>Medical</category>
+        <importance>2</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <cost>150</cost>
+
+        <short>Stimulent designed to help you stay awake.</short>
+
+        <description>
+            <para>
+                Designed to boost wakefulness, continued taking of this
+                drug can lead to addiction. Every dose reduces fatigue
+                and exhaustion penalties by the designated amount.
+            </para>
+        </description>
+
+        <drug xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <addictive strength="1">
+                <duration time="weeks"/>
+                <reduction/>
+            </addictive>
+
+            <offsetter statistic="Fatigue">
+                <strength>50</strength>
+                <onset time="rounds"/>
+                <duration time="hours"/>
+            </offsetter>
+        </drug>
+    </item>
+
+    <item name="Universal Antidote">
+        <category>Medical</category>
+        <importance>2</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+
+        <cost>75</cost>
+
+        <short>Antidote for poisons, infections and disease.</short>
+
+        <description>
+            <para>
+                A universal antidote which works with most common
+                diseases, infections and poisons.
+            </para>
+        </description>
+
+        <drug xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <helper event="Poisons, infections, disease">
+                <bonus>25</bonus>
+                <duration time="hours"/>
+            </helper>
+        </drug>
+    </item>
+
+    <item name="Boost">
+        <category>Medical</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <techLevel>12</techLevel>
+
+        <cost>500</cost>
+
+        <short>Boosts physical ability.</short>
+
+        <description>
+            <para>
+                Provides a boost to <t>Dexterity</t>.
+            </para>
+        </description>
+
+        <drug xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <addictive strength="1">
+                <duration time="weeks"/>
+                <reduction/>
+            </addictive>
+
+            <adder attribute="Dexterity">
+                <onset time="rounds"/>
+                <duration time="hours"/>
+                <bonus>1</bonus>
+            </adder>
+        </drug>
+    </item>
+</equipment>
+
+

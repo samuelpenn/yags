@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<equipment xmlns="http://yagsbook.sourceforge.net/xml"
+           xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <item name="Intrepid Heavy Grav Tank">
+        <category>Vehicle</category>
+        <genre>Traveller</genre>
+        <techLevel>12</techLevel>
+        <legality>1</legality>
+        <availability>1</availability>
+        <importance>3</importance>
+
+        <short>Imperium's main battle tank.</short>
+
+        <cost units="Cr">18200000</cost>
+        <mass>192000000</mass>
+
+        <construction>
+            <year>1000</year>
+            <manufacturer>Vilani</manufacturer>
+        </construction>
+
+        <performance realm="Air">
+            <speed>960</speed>
+            <acceleration>85</acceleration>
+            <altitude>75000</altitude>
+            <range>2500</range>
+        </performance>
+
+        <description>
+            <para>
+                The <e>Intrepid</e> is the Imperium's heaviest battle
+                tank. It is capable of being dropped from orbit (it's
+                contra-grav won't kick in until around 75km, but that's
+                enough to slow it safely before landing).
+            </para>
+
+            <para>
+                As standard, the Intrepid has stealth and chameleon armour,
+                with good quality ECM and sensor systems.
+            </para>
+        </description>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="14" soak="56" move="1330" acceleration="120">
+                <attribute name="strength" score="57"/>
+                <attribute name="health" score="6"/>
+                <attribute name="agility" score="3"/>
+            </attributes>
+
+            <combat>
+                <armour location="Front" score="60">
+                    <heavy/>
+                </armour>
+                <armour location="Side" score="45">
+                    <heavy/>
+                </armour>
+            </combat>
+
+            <weapon name="Heavy Fusion Gun">
+                <attack score="25"/>
+                <damage score="120"/>
+                <increment>50</increment>
+                <rof>1</rof><capacity>40</capacity><recoil>0</recoil>
+                <range>
+                    <short>1500</short>
+                    <medium>3000</medium>
+                    <long>10000</long>
+                </range>
+                <properties>
+                    <missile/><heavy/><vehicle/>
+                    <plasma/><explosive score="5"/>
+                </properties>
+            </weapon>
+
+            <weapon name="VRF Gauss Cannon, 4mm">
+                <attack score="20"/>
+                <damage score="35"/>
+                <increment>25</increment>
+                <rof>200</rof><capacity>5000</capacity>
+                <recoil>0</recoil>
+                <range>
+                    <short>1000</short>
+                    <medium>2000</medium>
+                    <long>5000</long>
+                </range>
+                <properties>
+                    <missile/><firearm/><automatic/><heavy/>
+                    <reload score="5"/>
+                </properties>
+            </weapon>
+
+            <weapon name="PD Xaser">
+                <attack score="40"/>
+                <damage score="45"/>
+                <increment>50</increment>
+                <rof>20</rof><capacity>1000</capacity>
+                <recoil>0</recoil>
+                <range>
+                    <short>2000</short>
+                    <medium>3000</medium>
+                    <long>4000</long>
+                </range>
+                <properties>
+                    <missile/><firearm/><automatic/><heavy/>
+                    <laser/><reload score="3"/>
+                </properties>
+            </weapon>
+        </vehicle>
+    </item>
+
+    <item name="Bergstrom Light Grav Tank">
+        <category>Vehicle</category>
+        <genre>Traveller</genre>
+        <techLevel>12</techLevel>
+        <legality>1</legality>
+        <availability>1</availability>
+        <importance>3</importance>
+
+        <short>A light tank used for scouting and infantry support.</short>
+
+        <cost units="Cr">6600000</cost>
+        <mass>47800000</mass>
+
+        <construction>
+            <year>1025</year>
+            <manufacturer>Vilani</manufacturer>
+        </construction>
+
+        <performance realm="Air">
+            <speed>1000</speed>
+            <acceleration>90</acceleration>
+            <altitude>50000</altitude>
+            <range>2800</range>
+        </performance>
+
+        <description>
+            <para>
+                The <e>Bergstrom</e> is the <e>Intrepid's</e> little brother.
+                It is cheaper and smaller, making it easier to deploy
+                quickly into the battle zone.
+            </para>
+        </description>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="12" soak="36" move="1390" acceleration="125">
+                <attribute name="strength" score="40"/>
+                <attribute name="health" score="6"/>
+                <attribute name="agility" score="4"/>
+            </attributes>
+
+            <combat>
+                <armour location="Front" score="50">
+                    <heavy/>
+                </armour>
+                <armour location="Side" score="30">
+                    <heavy/>
+                </armour>
+            </combat>
+
+            <weapon name="Medium Fusion Gun">
+                <attack score="25"/>
+                <damage score="90"/>
+                <increment>50</increment>
+                <rof>1</rof><capacity>40</capacity><recoil>0</recoil>
+                <range>
+                    <short>1000</short>
+                    <medium>2000</medium>
+                    <long>5000</long>
+                </range>
+                <properties>
+                    <missile/><heavy/><vehicle/>
+                    <plasma/><explosive score="5"/>
+                </properties>
+            </weapon>
+
+            <weapon name="PD Xaser">
+                <attack score="40"/>
+                <damage score="45"/>
+                <increment>50</increment>
+                <rof>20</rof><capacity>1000</capacity>
+                <recoil>0</recoil>
+                <range>
+                    <short>2000</short>
+                    <medium>3000</medium>
+                    <long>4000</long>
+                </range>
+                <properties>
+                    <missile/><firearm/><automatic/><heavy/>
+                    <laser/><reload score="3"/>
+                </properties>
+            </weapon>
+        </vehicle>
+    </item>
+
+    <item name="Astrin Grav APC">
+        <category>Vehicle</category>
+        <genre>Traveller</genre>
+        <techLevel>12</techLevel>
+        <legality>1</legality>
+        <availability>1</availability>
+        <importance>3</importance>
+
+        <short>Heavy APC for moving troops to the front line.</short>
+
+        <cost units="Cr">1200000</cost>
+        <mass>15500000</mass>
+
+        <construction>
+            <year>1030</year>
+            <manufacturer>Vilani</manufacturer>
+        </construction>
+
+        <performance realm="Air">
+            <speed>1000</speed>
+            <acceleration>90</acceleration>
+            <altitude>50000</altitude>
+            <range>3500</range>
+        </performance>
+
+        <description>
+            <para>
+                This contra-grav APC is the mainstay of troop deployment in
+                the Imperium's army. Though it can't stand up to a modern
+                tank, it is armed and armoured enough to defend itself against
+                most infantry weapons, and most things low tech armies can
+                throw at it.
+            </para>
+
+            <para>
+                It has 3 crew (driver, gunner and commander) and up to 10
+                passengers in heavy combat armour.
+            </para>
+        </description>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="12" soak="24" move="1390" acceleration="125">
+                <attribute name="strength" score="25"/>
+                <attribute name="health" score="5"/>
+                <attribute name="agility" score="4"/>
+            </attributes>
+
+            <combat>
+                <armour location="Front" score="35"/>
+                <armour location="Side" score="30"/>
+            </combat>
+
+            <weapon name="Fusion Cannon">
+                <attack score="12"/>
+                <damage score="45"/>
+                <increment>25</increment>
+                <rof>5</rof><capacity>120</capacity><recoil>0</recoil>
+                <range>
+                    <short>500</short>
+                    <medium>750</medium>
+                    <long>1250</long>
+                </range>
+                <properties>
+                    <missile/><heavy/><vehicle/>
+                    <plasma/><explosive score="2"/>
+                </properties>
+            </weapon>
+
+            <weapon name="VRF Gauss Cannon, 4mm">
+                <attack score="20"/>
+                <damage score="35"/>
+                <increment>25</increment>
+                <rof>200</rof><capacity>3000</capacity>
+                <recoil>0</recoil>
+                <range>
+                    <short>1000</short>
+                    <medium>2000</medium>
+                    <long>5000</long>
+                </range>
+                <properties>
+                    <missile/><firearm/><automatic/><heavy/>
+                    <reload score="5"/>
+                </properties>
+            </weapon>
+        </vehicle>
+    </item>
+
+    <item name="Thresher Close Support Speeder">
+        <category>Vehicle</category>
+        <genre>Traveller</genre>
+        <techLevel>12</techLevel>
+        <legality>1</legality>
+        <availability>1</availability>
+        <importance>3</importance>
+
+        <short>Fast and agile attack craft.</short>
+
+        <cost units="Cr">7700000</cost>
+        <mass>29600000</mass>
+
+        <construction>
+            <year>1075</year>
+            <manufacturer>Vilani</manufacturer>
+        </construction>
+
+        <performance realm="Air">
+            <speed>4160</speed>
+            <acceleration>65</acceleration>
+            <altitude>90000</altitude>
+            <range>6200</range>
+        </performance>
+
+        <description>
+            <para>
+                This is a fast attack craft, used more in a air support
+                role rather than as a ground vehicle. It's high ceiling
+                allows it to reach targets at the edge of space, whilst
+                it is fully capable of ground hugging attacks.
+            </para>
+        </description>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="12" soak="24" move="5700" acceleration="90">
+                <attribute name="strength" score="20"/>
+                <attribute name="health" score="5"/>
+                <attribute name="agility" score="7"/>
+            </attributes>
+
+            <combat>
+                <armour location="Front" score="25"/>
+                <armour location="Side" score="15"/>
+            </combat>
+
+            <weapon name="PD Xaser (x2)">
+                <attack score="40"/>
+                <damage score="45"/>
+                <increment>50</increment>
+                <rof>20</rof><capacity>1000</capacity>
+                <recoil>0</recoil>
+                <range>
+                    <short>2000</short>
+                    <medium>3000</medium>
+                    <long>4000</long>
+                </range>
+                <properties>
+                    <missile/><firearm/><automatic/><heavy/>
+                    <laser/><reload score="3"/>
+                </properties>
+            </weapon>
+
+            <weapon name="Heavy Xaser">
+                <attack score="40"/>
+                <damage score="55"/>
+                <increment>50</increment>
+                <rof>5</rof><capacity>100</capacity>
+                <recoil>0</recoil>
+                <range>
+                    <short>1500</short>
+                    <medium>2500</medium>
+                    <long>3500</long>
+                </range>
+                <properties>
+                    <missile/><firearm/><semiauto/><vehicle/>
+                    <laser/><reload score="3"/>
+                </properties>
+            </weapon>
+        </vehicle>
+    </item>
+
+</equipment>
+
+
