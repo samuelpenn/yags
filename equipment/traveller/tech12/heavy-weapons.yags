@@ -32,22 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2007-03-25 19:33:58 $
-
-    Categories
-
-    Adventuring     The sort of things only adventurers have.
-    Rogue           Thieves/assassins tools and the like.
-    Food            Food and drink.genre
-    Animals         An animal which isn't livestock - horses and dogs.
-    Livestock       Animals bred for food, such as pigs and cows.
-
-    Importance
-    0               Only include in complete lists.
-    1               Detail, not often needed.
-    2               Normally list.
-    3               Very important. Always list
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2007-03-26 22:00:22 $
 
     All units are in cgs.
 
@@ -68,7 +54,7 @@
 
 
 
-    <item name="Heavy Xaser rifle (TL12)">
+    <item name="Heavy Xaser rifle">
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
@@ -120,7 +106,7 @@
         </weapon>
     </item>
 
-    <item name="Heavy Plasma Rifle (TL12)">
+    <item name="Heavy Plasma Rifle">
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
@@ -168,7 +154,7 @@
         </weapon>
     </item>
 
-    <item name="Heavy Fusion Rifle (TL12)">
+    <item name="Heavy Fusion Rifle">
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
@@ -203,7 +189,7 @@
 
             <combat>
                 <attack>+8</attack>
-                <damage>45</damage>
+                <damage>60</damage>
                 <range>
                     <increment>20</increment>
                     <short>250</short>
@@ -212,7 +198,7 @@
                 </range>
             </combat>
 
-            <strength>6</strength><load>13</load><reach>3</reach>
+            <strength>6</strength><load>15</load><reach>3</reach>
             <capacity>60</capacity><rof>4</rof><recoil>0</recoil>
 
             <properties>
@@ -223,7 +209,7 @@
         </weapon>
     </item>
 
-    <item name="Chaingun 20mm (TL12)">
+    <item name="Chaingun 20mm">
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
@@ -270,7 +256,7 @@
         </weapon>
     </item>
 
-    <item name="VRF Gauss 4mm (TL12)">
+    <item name="VRF Gauss 4mm">
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
@@ -318,6 +304,54 @@
         </weapon>
     </item>
 
+    <item name="MANPAT-60">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>1</availability>
+        <techLevel>12</techLevel>
+        <legality>1</legality>
+
+        <short>Single shot man portable missile.</short>
+
+        <description>
+            <para>
+                A disposable missile system designed to be easily portable
+                by an infantry squad. It comes with a single short range
+                missile which is capable of taking out heavily armoured
+                targets. The launcher fires a grav assisted 60mm missile
+                with smart homing, stealth and a 5km range.
+            </para>
+        </description>
+
+        <weight>5000</weight>
+        <material>metal</material>
+        <cost>5000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+
+            <combat>
+                <attack>+25</attack>
+                <damage>110</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>50</short>
+                    <medium>500</medium>
+                    <long>5000</long>
+                </range>
+            </combat>
+
+            <strength>3</strength><load>5</load><reach>2</reach>
+            <capacity>1</capacity><rof>1</rof><recoil>-10</recoil>
+
+            <properties>
+                <missile/><guided/><vehicle/>
+                <heavy/><explosive score="5"/>
+            </properties>
+        </weapon>
+    </item>
 </equipment>
 
 
