@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.2 $
-    Date:    $Date: 2007-03-26 22:00:22 $
+    Version: $Revision: 1.3 $
+    Date:    $Date: 2007-03-27 12:00:18 $
 
     All units are in cgs.
 
@@ -147,7 +147,7 @@
             <capacity>80</capacity><rof>10</rof><recoil>0</recoil>
 
             <properties>
-                <missile/><automatic/><plasma/>
+                <missile/><automatic/><plasma/><heavy/>
                 <explosive score="1"/>
                 <reload score="3"/>
             </properties>
@@ -319,8 +319,15 @@
                 by an infantry squad. It comes with a single short range
                 missile which is capable of taking out heavily armoured
                 targets. The launcher fires a grav assisted 60mm missile
-                with smart homing, stealth and a 5km range.
+                with clever homing, stealth and a 5km range.
             </para>
+
+			<para>
+			    The <e>clever</e> guidance system is capable of tracking
+				its designated target after launch with no further input
+				from its operator, or to be programmed to locate its own
+				target based on a simple profile.
+			</para>
         </description>
 
         <weight>5000</weight>
@@ -336,9 +343,9 @@
                 <attack>+25</attack>
                 <damage>110</damage>
                 <range>
-                    <increment>20</increment>
+                    <increment>0</increment>
                     <short>50</short>
-                    <medium>500</medium>
+                    <medium>2500</medium>
                     <long>5000</long>
                 </range>
             </combat>
@@ -347,7 +354,7 @@
             <capacity>1</capacity><rof>1</rof><recoil>-10</recoil>
 
             <properties>
-                <missile/><guided/><vehicle/>
+                <missile/><guided type="clever"/><vehicle/>
                 <heavy/><explosive score="5"/>
             </properties>
         </weapon>
