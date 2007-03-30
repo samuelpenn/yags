@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2007-03-28 19:20:10 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2007-03-30 22:18:59 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -51,8 +51,48 @@
             <sect2>
                 <title>Guidance Systems</title>
 
+                <para>
+                    The main distinction between <e>missiles</e> and
+                    <e>rockets</e> is that the latter lack any means of
+                    guidance after launch. A missile is, in theory, able to
+                    track its target as it tries to evade. The capability
+                    of the guidance system is an important feature of any
+                    missile.
+                </para>
+
+                <para>
+                    In a missiles weapon description, it will be described
+                    as Gu(X/n), where X is the type of guidance system, and
+                    n is the 'skill' of the system.
+                </para>
+
                 <sect3>
-                    <title>Smart</title>
+                    <title>Manual</title>
+
+                    <para>
+                        Very basic missiles are manually guided, being
+                        controlled remotely by an observer (normally the
+                        firer) with a simple joystick. The missile has no
+                        guidance system of its own. Such a missile always
+                        uses the <e>Heavy weapons</e> skill of the
+                        controller.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Homing (H)</title>
+
+                    <para>
+                        A <e>homing</e> missile locks onto its target using
+                        very simple criteria, such as heat signature or noise.
+                        Once fired, the target cannot be changed, and they
+                        can be confused very easily, by sending out decoys
+                        which are brighter/noisier than the target itself.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Smart (S)</title>
 
                     <para>
                         A <e>smart</e> missile is remote controlled by an
@@ -60,10 +100,32 @@
                         has no intelligence itself, and the observer must
                         maintain control until the last moment.
                     </para>
+
+                    <para>
+                        In some ways they aren't as good as a homing missile,
+                        since they aren't fire-and-forget. However, they
+                        can lock onto any target, not just those giving out
+                        heat or noise, and the human operator is often harder
+                        to fool with decoys than a simple homing missile is.
+                    </para>
                 </sect3>
 
                 <sect3>
-                    <title>Clever</title>
+                    <title>Brilliant (B)</title>
+
+                    <para>
+                        <e>Brilliant</e> missiles are capable of homing in
+                        on a designated target. Designation is by a human
+                        operator, but after the missile is fired, no further
+                        designation is required (unlike for smart missiles).
+                        Brilliant missiles may use a number of techniques
+                        for recognising the target, but are mostly based on
+                        visual or signature recognition.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Clever (C)</title>
 
                     <para>
                         <e>Clever</e> missiles are capable of making their
@@ -78,12 +140,12 @@
                     <para>
                         Clever missiles may be fired in the general direction
                         of the enemy, and is capable of choosing a target
-                        itself based on profile.
+                        itself based on a pre-defined profile.
                     </para>
                 </sect3>
 
                 <sect3>
-                    <title>Genius</title>
+                    <title>Genius (G)</title>
 
                     <para>
                         <e>Genius</e> missiles are capable of selecting a
@@ -114,9 +176,8 @@
                     Guided missiles are treated as missile weapons. They
                     generally have a range increment of 0 (distance to
                     target does not affect accuracy). Self guided missiles
-                    (normally <e>clever</e> and <e>genius</e>) only use
-                    their attack bonus - they don't add any other skill
-                    to their attack roll.
+                    (normally <e>clever</e> and <e>genius</e>) use their
+                    own skill in an attack.
                 </para>
 
                 <para>
