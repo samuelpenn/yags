@@ -3,23 +3,27 @@
     href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
     type="text/xsl"?>
 
-<vehicles xmlns="http://yagsbook.sourceforge.net/xml"
+<equipment xmlns="http://yagsbook.sourceforge.net/xml"
           xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
 
 
-    <vehicle name="Bismark">
-        <description>
-            <short>WWII German Battleship.</short>
+    <item name="Bismark">
+        <category>Vehicle</category>
+        <genre>WWII</genre>
+        <techLevel>6</techLevel>
+        <legality>0</legality>
+        <availability>1</availability>
+        <importance>2</importance>
 
-            <type>Battleship</type>
-            <manufacturer>Germany</manufacturer>
-            <year>1940</year>
-            <cost>65000</cost>
-            <techLevel>6</techLevel>
-            <topSpeed units="km/h">5</topSpeed>
-        </description>
+        <short>German Battleship</short>
 
-        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+        <performance realm="Water">
+            <speed>30</speed>
+            <acceleration>1</acceleration>
+            <range>17200</range>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <attributes size="28" soak="70" move="80" acceleration="15">
                 <attribute name="strength" score="50"/>
                 <attribute name="health" score="5"/>
@@ -48,10 +52,10 @@
                     </properties>
                 </weapon>
             </combat>
-        </statistics>
-    </vehicle>
+        </vehicle>
+    </item>
 
 
-</vehicles>
+</equipment>
 
 
