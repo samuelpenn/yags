@@ -17,19 +17,19 @@
         <availability>1</availability>
         <importance>3</importance>
 
-        <short>Old style grav tank.</short>
+        <short>Light grav tank.</short>
 
         <cost units="Cr">4000000</cost>
         <mass>95000000</mass>
 
         <construction>
-            <year>800</year>
+            <year>400</year>
             <manufacturer>Instellarms</manufacturer>
         </construction>
 
         <performance realm="Air">
             <speed>150</speed>
-            <acceleration>75</acceleration>
+            <acceleration>10</acceleration>
             <altitude>15</altitude>
             <range>900</range>
         </performance>
@@ -37,7 +37,10 @@
         <description>
             <para>
                 A cheap and simple design that is popular in many local
-                armies because of its ease of support and maintainence.
+                and private armies because of its ease of support and
+                maintainence. Even when it was first designed, it did not
+                stand up well to Imperium main battle tanks, however it
+                was good enough for less well equipped armies.
             </para>
         </description>
 
@@ -52,7 +55,89 @@
                 <armour location="Front" score="35"/>
                 <armour location="Side" score="25"/>
 
-                <weapon name="Light Fusion Gun">
+                <weapon name="Light Plasma Gun">
+                    <attack score="20"/>
+                    <damage score="60"/>
+                    <increment>30</increment>
+                    <rof>1</rof><capacity>40</capacity><recoil>0</recoil>
+                    <range>
+                        <short>2000</short>
+                        <medium>4000</medium>
+                        <long>8000</long>
+                    </range>
+                    <properties>
+                        <missile/><heavy/><vehicle/>
+                        <plasma/><explosive score="3"/>
+                    </properties>
+                </weapon>
+
+                <weapon name="VRF Gauss Cannon, 4mm">
+                    <attack score="15"/>
+                    <damage score="32"/>
+                    <increment>25</increment>
+                    <rof>100</rof><capacity>6000</capacity>
+                    <recoil>0</recoil>
+                    <range>
+                        <short>1000</short>
+                        <medium>2000</medium>
+                        <long>5000</long>
+                    </range>
+                    <properties>
+                        <missile/><firearm/><automatic/><heavy/>
+                        <reload score="5"/>
+                    </properties>
+                </weapon>
+            </combat>
+        </vehicle>
+    </item>
+
+    <item name="Instellarms Medium Grav Tank">
+        <category>Vehicle</category>
+        <genre>Traveller</genre>
+        <techLevel>10</techLevel>
+        <legality>1</legality>
+        <availability>1</availability>
+        <importance>3</importance>
+
+        <short>Medium grav tank.</short>
+
+        <cost units="Cr">4000000</cost>
+        <mass>95000000</mass>
+
+        <construction>
+            <year>400</year>
+            <manufacturer>Instellarms</manufacturer>
+        </construction>
+
+        <performance realm="Air">
+            <speed>140</speed>
+            <acceleration>10</acceleration>
+            <altitude>12</altitude>
+            <range>900</range>
+        </performance>
+
+        <description>
+            <para>
+                A more robust version of their light tank, this was the
+                least well received of their three basic tank designs.
+                It is more expensive than the light tank, but still
+                doesn't do well against main battle tanks of the major
+                governments, so always had a problem in finding a role.
+            </para>
+        </description>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="12" soak="25" move="200" acceleration="120">
+                <attribute name="strength" score="60"/>
+                <attribute name="health" score="6"/>
+                <attribute name="agility" score="2"/>
+            </attributes>
+
+            <combat>
+                <armour location="Front" score="45"/>
+                <armour location="Side" score="30"/>
+
+                <weapon name="Medium Plasma Gun">
                     <attack score="20"/>
                     <damage score="70"/>
                     <increment>30</increment>
@@ -87,6 +172,96 @@
             </combat>
         </vehicle>
     </item>
+
+    <item name="Liberator Medium Tank Mk IV">
+        <category>Vehicle</category>
+        <genre>Traveller</genre>
+        <techLevel>10</techLevel>
+        <legality>1</legality>
+        <availability>1</availability>
+        <importance>3</importance>
+
+        <short>Imperium medium grav tank.</short>
+
+        <cost units="Cr">4000000</cost>
+        <mass>95000000</mass>
+
+        <construction>
+            <year>520</year>
+            <manufacturer>Vilani</manufacturer>
+        </construction>
+
+        <performance realm="Air">
+            <speed>140</speed>
+            <acceleration>10</acceleration>
+            <altitude>12</altitude>
+            <range>900</range>
+        </performance>
+
+        <description>
+            <para>
+                This was the main battle tank of the Third Imperium through
+                much of its early years. Built by a number of government
+                contractors, it was found throughout the Imperium until
+                fairly recently. The initial Mk I entered service in 120,
+                and an upgrade was made available almost every 100 years
+                until the Mk IV. Other than thickening the armour, and
+                increasing the output of the main gun however, little has
+                changed over the basic design.
+            </para>
+        </description>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="12" soak="30" move="200" acceleration="120">
+                <attribute name="strength" score="60"/>
+                <attribute name="health" score="6"/>
+                <attribute name="agility" score="3"/>
+            </attributes>
+
+            <combat>
+                <armour location="Front" score="50">
+                    <heavy/>
+                </armour>
+                <armour location="Side" score="40">
+                    <heavy/>
+                </armour>
+
+                <weapon name="Medium Plasma Gun">
+                    <attack score="20"/>
+                    <damage score="70"/>
+                    <increment>30</increment>
+                    <rof>1</rof><capacity>40</capacity><recoil>0</recoil>
+                    <range>
+                        <short>2500</short>
+                        <medium>5000</medium>
+                        <long>10000</long>
+                    </range>
+                    <properties>
+                        <missile/><heavy/><vehicle/>
+                        <plasma/><explosive score="3"/>
+                    </properties>
+                </weapon>
+
+                <weapon name="VRF Gauss Cannon, 4mm">
+                    <attack score="15"/>
+                    <damage score="30"/>
+                    <increment>20</increment>
+                    <rof>80</rof><capacity>4000</capacity>
+                    <recoil>0</recoil>
+                    <range>
+                        <short>1000</short>
+                        <medium>2000</medium>
+                        <long>5000</long>
+                    </range>
+                    <properties>
+                        <missile/><firearm/><automatic/><heavy/>
+                        <reload score="5"/>
+                    </properties>
+                </weapon>
+            </combat>
+        </vehicle>
+    </item>
+
 
 </equipment>
 
