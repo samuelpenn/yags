@@ -8,7 +8,9 @@
         <tagline>Yags</tagline>
 
         <summary>
-            Rules for managing the environment.
+            How to survive in harsh environments, or 101 ways to die a
+			horrible and painful death. This article looks at extremes
+			of environment, and how they are modelled in Yags.
         </summary>
 
         <author>
@@ -17,8 +19,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.6 $</version>
-            <date>$Date: 2005-11-24 18:08:00 $</date>
+            <version>$Revision: 1.7 $</version>
+            <date>$Date: 2007-03-31 17:42:59 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -32,7 +34,7 @@
         </license>
 
 
-        <style name="combat"/>
+        <style name="core"/>
     </header>
 
     <body>
@@ -64,6 +66,9 @@
                 <para>
                     Not really the weather, but describes what sort of
                     clothing gives good protection against the weather.
+					How well protected you are from the environment is
+					defined as a level from 0 (totally naked) to 5 or
+					more (modern arctic clothing).
                 </para>
 
                 <targetlist targetFirst="true" bold="true">
@@ -120,6 +125,11 @@
                     levels of wind reduces the temperature by one level.
                 </para>
 
+                <para>
+                    Note that these temperatures assume a temperature which
+                    is comfortable for humans to be the average.
+                </para>
+
                 <targetlist>
                     <item target="-5" value="Extreme cold.">
                         Arctic winter conditions, temperature around -50C.
@@ -151,23 +161,31 @@
                     </item>
 
                     <item target="+1" value="Warm.">
-                        A warm 25C.
+                        A warm 30C. Very pleasantly warm, though can be
+                        too warm if you are also exerting yourself.
                     </item>
 
                     <item target="+2" value="Hot.">
-                        A hot 30C.
+                        An unpleasantly hot 40C. Nice if you are sunbathing,
+                        but too hot to get much work done. One level of
+                        exhaustion each hour unless plenty of water is
+                        being drunk.
                     </item>
 
                     <item target="+3" value="Very hot.">
-                        About 40C.
+                        About 50C, which is unbearably hot. Even with lots
+                        of water, you will gain a level of exhaustion each
+                        hour. Without sufficient water, double the rate.
                     </item>
 
                     <item target="+4" value="Severe heat.">
-                        About 50C.
+                        About 70C, which is hotter than temperatures get
+                        naturally anywhere on Earth (except for actual fires).
+                        Gain exhaustion every minute. Drinking doesn't help.
                     </item>
 
                     <item target="+5" value="Extreme heat.">
-                        About 70C.
+                        About 100C. Gain a level of stun every round.
                     </item>
                 </targetlist>
             </sect2>
