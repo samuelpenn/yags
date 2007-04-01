@@ -6,12 +6,13 @@
     Place holder for combat skills. Simply declares the skill groups to
     collect.
 
-    Copyright (c) 2006, Samuel Penn.
+    Copyright (c) 2007, Samuel Penn.
     This document can be redistributed and/or modified under the terms
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.1 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2007-04-01 20:34:26 $
     Author: Samuel Penn
     -->
 
@@ -19,12 +20,200 @@
             xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
             xmlns:yb="http://yagsbook.sourceforge.net/xml"
             techniques="options/techniques.yags">
-    <groups>
+
+    <skill name="Tactics" type="standard">
         <group>Combat</group>
-        <group parent="Combat">Melee</group>
-        <group parent="Combat">Missile</group>
-        <group parent="Combat">Armed melee</group>
-    </groups>
+        <group>Military</group>
+
+        <short>Knowledge of combat tactics.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Tactics, strategy and leadership when planning and fighting
+                a battle involving small groups. It can be used to
+                choose a suitable site for battle, to determine weaknesses
+                in the enemy's strategy and defences, and to plan the
+                logistics of travel and supply.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Melee weapon" type="standard">
+        <group>Combat</group>
+        <group>Armed melee</group>
+        <default>Brawl</default>
+        <short>Using a sword, club or spear.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of using a simple melee weapon, such as blades,
+                spears and clubs. This skill covers all such weapons, as
+                their use with a shield or a second parrying weapon.
+                Exotic weapons, such as chain weapons, aren't covered
+                since they are used in a completely different way. Small
+                weapons such as knives however are used with the <e>Brawl</e>
+                skill.
+            </para>
+
+            <para>
+                Melee weapon is used with <t>Dexterity</t>.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Chain weapon" type="standard">
+        <group>Combat</group>
+        <group>Armed melee</group>
+        <default>Melee weapon</default>
+        <short>Using chains, nunchuk or similar weapons.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Using flexible chain melee weapons.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Bow" type="standard">
+        <group>Combat</group>
+        <group>Missile</group>
+
+        <short>Using all sorts of bows, except crossbows.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The knowledge of how to use a bow such as a short bow, long
+                bow or composite bow. For long bows, for every full four
+                points of skill, the effective strength of the character is
+                increased by one for purposes of determining the <e>pull</e>
+                of the bow that they can draw.
+            </para>
+
+            <para>
+                This skill can be used with crossbows, though reload times
+                are doubled, and attacks fumble on a 1-3.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Crossbow" type="standard">
+        <group>Combat</group>
+        <group>Missile</group>
+
+        <short>Using crossbows.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Covers the use of all varieties of hand held crossbows.
+                Skill in this provides accuracy, and also enables
+                quicker reloading of the heavier versions of the crossbow.
+            </para>
+
+            <para>
+                The skill can be used with bows, though range penalties
+                are doubled, and attacks fumble on a 1-3, due to the
+                extra complexity of bows over crossbows.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Pistol">
+        <group>Combat</group>
+        <group>Firearms</group>
+        <default>Rifle</default>
+
+        <short>Firing pistols, revolvers and SMGs.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are skilled in firing pistols and similar small hand
+                guns, including revolvers, automatic pistols and SMGs.
+                This skill is most effective at short ranges and when in
+                close combat with the target. It is always based on
+                <t>Dexterity</t>.
+            </para>
+
+            <para>
+                At short range, you may normally add the attack bonus of
+                the weapon to your attack roll unless you are making a
+                <e>snapshot</e>.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Rifle">
+        <group>Combat</group>
+        <group>Firearms</group>
+        <default>Pistol</default>
+
+        <short>Firing rifles.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The use and handling of rifles, carbines, shotguns
+                and the like. It is not very effective at very close range,
+                but is designed for short to medium ranges. Can be used
+                with either <t>Dexterity</t> or <t>Perception</t>.
+                Add-ons to rifles such as an underslung grenade launcher
+                may also be used with this skill instead of the more
+                usual <e>Heavy Weapons</e> skill, but always use
+                <t>Perception</t>.
+            </para>
+
+            <para>
+                At short range, you may normally add the attack bonus of
+                the weapon to your attack roll unless you are making a
+                <e>snapshot</e>.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Heavy weapons" type="skill">
+        <group>Combat</group>
+        <group>Firearms</group>
+        <group>Vehicle</group>
+        <default>Rifle</default>
+
+        <short>Using heavy machine guns.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This skill provides you with knowledge of how to use
+                heavy weapons such as vehicle mounted machine guns,
+                grenade launchers, anti-tank weapons and mortars.
+                Most non-man portable weapons fall into this
+                category. Always uses <t>Perception</t> when
+                firing weapons.
+            </para>
+
+            <para>
+                <e>Very</e> large weapons (naval guns, tank guns,
+                starship mounted particle accelerators) come under the
+                <e>Gunnery</e> skill. If it requires more maths than
+                judgement, then it's probably <e>Gunnery</e>.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Gunnery">
+        <group>Military</group>
+
+        <short>Firing large vehicle mounted guns.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The <e>gunnery</e> skill covers the use of very large
+                vehicle mounted or emplacement weapons, such as artillery
+                and battleship main guns. Whereas <e>Heavy weapons</e>
+                covers "barely man portable in a Hollywood action film"
+                weapons, Gunnery is only for the really big weapons which
+                often require several crew members to operate. Will
+                often use <t>Intelligence</t>, since doing the maths to
+                plot the trajectory is generally more important than
+                quick reflexes.
+            </para>
+        </description>
+    </skill>
 
 </skill-list>
 

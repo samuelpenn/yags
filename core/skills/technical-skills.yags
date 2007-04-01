@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+
+<!--
+    Modern skills, mostly sciences and engineering skills.
+
+    Copyright (c) 2005, Samuel Penn.
+    This document can be redistributed and/or modified under the terms
+    of the GNU Public License as published by the Free Software Foundation
+    version 2.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-04-01 20:34:26 $
+    Author: Samuel Penn
+-->
+
+<skill-list xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:yb="http://yagsbook.sourceforge.net/xml"
+            techniques="options/techniques.yags">
+
+
+
+    <skill name="Computer operation" type="skill">
+        <group>Technical</group>
+        <default>Intelligence</default>
+        <default>Electronic operation</default>
+
+        <short>The skill of using a computer.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This covers basic computer use, from switching it on
+                to using a word processor, browsing the web or sending
+                an email. High levels of skill will allow basic
+                programming tasks and diagnosing faults.
+            </para>
+
+            <para>
+                If the computer system does not have a point-and-click,
+                or otherwise very simple, style of interface, then you
+                must use <e>Computer hacking</e> instead.
+            </para>
+        </description>
+
+        <examples>
+            <example target="10">
+                Looking for a particular file using easy criteria.
+            </example>
+
+            <example target="20">
+                Filtering information from a database and analysing
+                it (producing graphs, finding correlations).
+            </example>
+
+            <example target="20">
+                Connecting a computer to a network, or software to a
+                server. Halved if you have the right System Administration
+                technique.
+            </example>
+        </examples>
+    </skill>
+
+    <skill name="Computer hacking" type="skill">
+        <group>Technical</group>
+        <group>Rogue</group>
+
+        <prerequisite>Computer operation</prerequisite>
+        <default>Computer operation</default>
+
+        <short>Indepth knowledge of computers.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                A hacker is someone who has in depth knowledge of how
+                computer systems work. Sometimes, this knowledge can be
+                put towards circumventing security on computer systems,
+                but doesn't have to. This skill covers programming,
+                system design, network administration and most other
+                advanced tasks.
+            </para>
+
+            <para>
+                The point-and-click style of system administration can
+                be covered by <e>Computer operation</e>, though this skill
+                doesn't include much knowledge of why things work the
+                way they do.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Communication systems">
+        <group>Technical</group>
+        <group>Military</group>
+
+        <short>Using radios and similar communications gear.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This skill provides advanced knowledge of how to use
+                communication devices such as radios. It does not just
+                cover how to switch a device on and talk into it, since
+                that is covered by basic <t>Intelligence</t>, but provides
+                in depth knowledge of how to fix it when things go wrong,
+                how to get around jamming, how to jam someone else's
+                communications, and how to improve signal strength.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Sensor systems">
+        <group>Technical</group>
+        <group>Military</group>
+
+        <short>Using radar, sonar and other sensor systems.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Provides knowledge and experience with using advanced
+                sensor systems, interpreting raw sensor data, knowing
+                how to evade and block sensors, and how to make best
+                use of an existing sensor network.
+            </para>
+
+            <para>
+                This provides far more knowledge than a person working in
+                traffic control would have, and it is a skill normally
+                only found in the military, in labs or amongst hackers.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Security systems">
+        <group>Technical</group>
+        <group>Rogue</group>
+
+        <short>Using and evading security.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Provides knowledge of using and by-passing electronic
+                security systems such as short range sensors, pressure
+                pads, electronic locks, iris and fingerprint scanners
+                etc. It can be used to forge ID to try and bypass such
+                systems.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Surveillance systems">
+        <group>Technical</group>
+        <group>Rogue</group>
+
+        <default>Security systems</default>
+
+        <short>Spying on people with electronic devices.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This skill provides knowledge of using and evading bugs,
+                hidden cameras, tracking devices and the like. You may
+                use this skill or <e>Awareness</e> to search for them.
+            </para>
+        </description>
+    </skill>
+
+
+    <skill name="Electronics">
+        <group>Technical</group>
+        <prerequisite>Electronics operation</prerequisite>
+
+        <short>Building electronic devices.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have skill in building electronic devices, as well as
+                a good understanding of how they work and the theories on
+                which they are constructed.
+            </para>
+
+            <para>
+                There is a technique for each type of electronic device
+                that can be built. Knowing the correct technique halves
+                the difficulty for a task.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Machinest">
+        <group>Technical</group>
+        <default>Mechanics</default>
+
+        <short>Building tools</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of building high tech tools. Though absolutely
+                vital to a high tech society, most mechanics and engineers
+                can get away with buying standard parts from a local shop.
+                In a society where there isn't a ready availability of tools
+                and parts, most (if not all) engineers will have some
+                level of skill in <e>Machinest</e>.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Engineering">
+        <group>Technical</group>
+
+        <short>The science of building things.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The knowledge and skill of designing, building and repairing
+                machines, buildings and other structures. Engineering tends
+                towards the theoretical side of things, and does not
+                necessarily cover the everyday maintenance of such items.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Mechanics">
+        <group>Technical</group>
+        <default>Engineering</default>
+
+        <short>Fixing machines.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of fixing mechanical devices when they break.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Electrician">
+        <group>Technical</group>
+        <default>Electronics</default>
+
+        <short>Fixing electrical things.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of fixing electrical systems when they break.
+            </para>
+        </description>
+    </skill>
+
+</skill-list>
+

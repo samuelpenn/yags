@@ -18,12 +18,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.25 $</version>
-            <date>$Date: 2006-04-01 17:37:08 $</date>
+            <version>$Revision: 1.26 $</version>
+            <date>$Date: 2007-04-01 20:34:26 $</date>
         </cvsinfo>
 
         <license type="Yags">
-            <year>2003</year>
+            <year>2007</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -134,270 +134,722 @@
         </sect1>
 
         <sect1>
-            <title>Character Packages</title>
+            <title>Building a Character</title>
 
             <para>
-                When building a new character for Yags, players have to
-                make a number of choices about the type of character
-                they want, and what they want that character to do.
-                The main choice to be made is which <e>package</e> to
-                choose. A <e>package</e> provides the character with a
-                set of skills and a rough background. The number and
-                type of packages will vary from campaign to campaign,
-                but possible generic examples include a <e>Warrior</e>,
-                a <e>Rogue</e> or a <e>Nobleman</e>.
+                Building a character for <e>Yags</e> is a relatively
+                straightforward process. There are many choices
+                available however, and as always it helps to have a good
+                idea of your character concept before you start. The
+                setting of the campaign will tend to limit this, and
+                your GM may have some suggestions as to what type of
+                characters will find a useful role to play.
             </para>
 
             <para>
-                A campaign world may provide more specific packages.
-                <e>Northern Border Guard</e>, <e>Sea Raider</e> or
-                even <e>Temple Guard of the Red Goddess</e> are all
-                possible warrior-like packages. Such packages provide
-                some automatic background, friends and enemies for
-                the character, as well as a variety of skills. A
-                Temple Guard will probably have some skills involving
-                religion and etiquette, whilst the Sea Raider will
-                have shiphandling and navigation skills.
+                <e>Yags</e> is point based, and the number of points you
+                get to spend depend on the level of the game that the
+                GM will be running. You get three point pools to spend
+                from - <s>Attributes</s>, <s>Experience</s> and
+                <s>Adavantages</s>. Your first task is to prioritise
+                these according to the type of character you wish to
+                play. You must choose one pool as your <e>primary</e>,
+                one as your <e>secondary</e> and the last as your
+                <e>tertiary</e> pool. The Primary pool gets the most
+                points to spend, and the Tertiary the least.
             </para>
-
-            <para>
-                As far as what skills and abilities are available to a
-                character, choice of package <e>only</e> affects
-                character generation. Once the character has been
-                created, then the PC is free to develop any skills
-                and abilities that they want to, limited only by the
-                realities of the game world (to learn the religious
-                rituals of the Red Goddess the character may need to
-                be friendly with Her priests, something that a Temple
-                Guard will start with, but a Border Guard will have to
-                earn through role playing and actions).
-            </para>
-
-            <para>
-                Once a package has been chosen, the player is free to
-                customise that package by purchasing skills and
-                advantages for their character. How many extra skills
-                and advantages can be purchased depends on the starting
-                level of the campaign.
-            </para>
-
 
             <sect2>
-                <title>The Basic Template</title>
+                <title>The Pools</title>
 
-                <para>
-                    All characters will start with a basic template
-                    which provides them with the default abilities for
-                    their race. The basic human template is as follows.
-                </para>
+                <sect3>
+                    <title>Attributes</title>
 
-                <character name="The Basic Character">
-                    <description/>
-                    <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-                        <attributes size="5" soak="12" luck="0">
-                            <attribute name="strength" score="3"/>
-                            <attribute name="health" score="3"/>
-                            <attribute name="agility" score="3"/>
-                            <attribute name="dexterity" score="3"/>
-                            <attribute name="perception" score="3"/>
-                            <attribute name="intelligence" score="3"/>
-                            <attribute name="empathy" score="3"/>
-                            <attribute name="will" score="3"/>
-                        </attributes>
+                    <para>
+                        Your <e>attributes</e> define the raw potential of
+                        your character. A character with good attributes
+                        tends to be able to pick up new things reasonably
+                        quickly. They can be fit, healthy, intelligent and
+                        charismatic. Attributes are difficult or impossible
+                        to raise after character generation (depending on
+                        the campaign style), so can be more useful long
+                        term than experience or advantages.
+                    </para>
 
-                        <skills>
-                            <group name="Talents" type="talents">
-                                <skill name="Athletics" score="2"/>
-                                <skill name="Awareness" score="2"/>
-                                <skill name="Brawl" score="2"/>
-                                <skill name="Charm" score="2"/>
-                                <skill name="Guile" score="2"/>
-                                <skill name="Sleight" score="2"/>
-                                <skill name="Stealth" score="2"/>
-                                <skill name="Throw" score="2"/>
-                            </group>
+                    <para>
+                        Hollywood action heroes will tend to have high
+                        attributes. A character with high attributes and
+                        low skills represents the gifted amateur who learns
+                        to quickly supercede their mentors.
+                    </para>
+                </sect3>
 
-                            <group name="Knowledges" type="skills">
-                                <skill name="Speak own language" score="4"/>
-                                <skill name="Area lore" score="4"/>
-                            </group>
-                        </skills>
+                <sect3>
+                    <title>Experience</title>
 
-                        <passions>
-                            <passion name="Bravery" score="4"/>
-                            <passion name="Ego" score="4"/>
-                            <passion name="Restraint" score="4"/>
-                            <passion name="Temperance" score="4"/>
-                        </passions>
-                    </statistics>
-                </character>
+                    <para>
+                        <e>Experience</e> represents skills and knowledge,
+                        generally gained through training and real world
+                        experience. A character with a lot of experience is
+                        probably older than those who lack it.
+                    </para>
 
-                <para>
-                    All packages will at least have these ability levels
-                    defined. Campaigns where humans are the only choice
-                    will tend to have just a single basic template.
-                    Campaigns were there are a variety of races will
-                    have probably have one template per race.
-                </para>
+                    <para>
+                        Academics, scientists and businessmen will tend to
+                        have a high experience. These are often the support
+                        characters in fiction - less heroic, but providing
+                        useful skills in specialised areas.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Advantages</title>
+
+                    <para>
+                        Heroes often have some out of the ordinary feature
+                        which separates them from normal people.
+                        <e>Advantages</e> represent these features. By
+                        purchasing advantages, you can make your character
+                        special in a certain way, either through extremely
+                        good looks, large size, speed or luck.
+                    </para>
+
+                    <para>
+                        Advantages also allow you to purchase certain
+                        background options, such as wealth or high status.
+                        An otherwise normal character can be extremely useful
+                        to a group by being able to provide large sums of
+                        money to fund their adventures.
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
-                <title>Choosing a Package</title>
+                <title>The Priorities</title>
 
                 <para>
-                    The player should choose a package based on the
-                    skills that they want the character to have, and
-                    the sort of background that interests them. Not all
-                    packages are equal in the number of points they
-                    provide to a character, however many of the points
-                    will be assigned to skills and abilities that the
-                    player would never choose if they were given a
-                    pool of points, but which it makes sense for the
-                    character to have (skills such as <e>farming</e>
-                    and <e>gaming</e> will be known by most people in
-                    rural low-tech campaigns for example).
-                </para>
-
-                <para>
-                    Nobles may have lots of legal and administration
-                    skills that aren't often of use in an adventure
-                    but which will be used by the character in day to
-                    day life (i.e. 'downtime'). So again, just because
-                    one package gives 50pts of skills and another only
-                    gives 30pts, doesn't mean that the first is
-                    necessarily better from the perspective of the game.
-                </para>
-
-                <para>
-                    Finally, some character concepts require more skills.
-                    A warrior can often get away with having a single
-                    weapon skill, whilst a rogue may need several skills
-                    for sneaking, climbing and thieving.
+                    Before you can begin character generation, the GM will
+                    have set the level of the campaign. This determines how
+                    many points you get to spend on the three areas.
                 </para>
 
                 <sect3>
-                    <title>Low Tech Packages</title>
+                    <title>Mundane</title>
 
                     <para>
-                        The following packages are examples of what is
-                        available to characters in a medieval European type
-                        of campaign.
+                        Mundane campaigns are about normal people in abnormal
+                        situations (or even normal people in normal situations).
+                        In this type of campaign, characters are somewhat
+                        above average, but not significantly so.
                     </para>
 
-                    <import-characters href="packages/lowtech.yags"/>
+                    <para>
+                        This level of campaign is suitable for modern horror,
+                        or stories about young, inexperienced knights at
+                        the start of their careers. There is no reason that
+                        characters in such campaigns can't grow to become
+                        heroic, but the story is often about their progression
+                        rather than what they do once they become heroes.
+                    </para>
+
+                    <para>
+                        The majority of people in the world will be of the
+                        <e>Mundane</e> level - indeed, most will have a
+                        <e>Tertiary</e> level in each of the three categories.
+                    </para>
+
+                    <table>
+                        <title>Priority</title>
+                        <colspec colwidth="30mm"/>
+                        <colspec colwidth="15mm"/>
+                        <colspec colwidth="15mm"/>
+                        <colspec colwidth="15mm"/>
+
+                        <thead>
+                            <row>
+                                <entry>Category</entry>
+                                <entry>Primary</entry>
+                                <entry>Secondary</entry>
+                                <entry>Tertiary</entry>
+                            </row>
+                        </thead>
+
+                        <tbody>
+                            <row>
+                                <entry>Attributes</entry>
+                                <entry>+5/5</entry>
+                                <entry>+2/4</entry>
+                                <entry>0/4</entry>
+                            </row>
+
+                            <row>
+                                <entry>Experience</entry>
+                                <entry>50/6</entry>
+                                <entry>30/5</entry>
+                                <entry>20/4</entry>
+                            </row>
+
+                            <row>
+                                <entry>Advantages</entry>
+                                <entry>3</entry>
+                                <entry>1</entry>
+                                <entry>0</entry>
+                            </row>
+                        </tbody>
+                    </table>
+
+                    <para>
+                        For a truly mundane experience, characters may be
+                        limited to taking two <e>Secondary</e> and one
+                        <e>Tertiary</e> selections, or even a single
+                        <e>Secondary</e> and two <e>Tertiary</e>.
+                    </para>
                 </sect3>
+
+                <sect3>
+                    <title>Exceptional</title>
+
+                    <para>
+                        <e>Exceptional</e> campaigns begin with the characters
+                        well above average.
+                    </para>
+
+                    <table>
+                        <title>Priority</title>
+                        <colspec colwidth="30mm"/>
+                        <colspec colwidth="15mm"/>
+                        <colspec colwidth="15mm"/>
+                        <colspec colwidth="15mm"/>
+
+                        <thead>
+                            <row>
+                                <entry>Category</entry>
+                                <entry>Primary</entry>
+                                <entry>Secondary</entry>
+                                <entry>Tertiary</entry>
+                            </row>
+                        </thead>
+
+                        <tbody>
+                            <row>
+                                <entry>Attributes</entry>
+                                <entry>+7/6</entry>
+                                <entry>+5/5</entry>
+                                <entry>+2/4</entry>
+                            </row>
+
+                            <row>
+                                <entry>Experience</entry>
+                                <entry>100/7</entry>
+                                <entry>75/6</entry>
+                                <entry>50/5</entry>
+                            </row>
+
+                            <row>
+                                <entry>Advantages</entry>
+                                <entry>4</entry>
+                                <entry>2</entry>
+                                <entry>1</entry>
+                            </row>
+                        </tbody>
+                    </table>
+
+                    <para>
+                        Exceptional characters will have few, if any, flaws.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Heroic</title>
+
+                    <para>
+                        Heroic characters are truly exceptional people.
+                    </para>
+
+                    <table>
+                        <title>Priority</title>
+                        <colspec colwidth="30mm"/>
+                        <colspec colwidth="15mm"/>
+                        <colspec colwidth="15mm"/>
+                        <colspec colwidth="15mm"/>
+
+                        <thead>
+                            <row>
+                                <entry>Category</entry>
+                                <entry>Primary</entry>
+                                <entry>Secondary</entry>
+                                <entry>Tertiary</entry>
+                            </row>
+                        </thead>
+
+                        <tbody>
+                            <row>
+                                <entry>Attributes</entry>
+                                <entry>+12/8</entry>
+                                <entry>+6/6</entry>
+                                <entry>+3/5</entry>
+                            </row>
+
+                            <row>
+                                <entry>Experience</entry>
+                                <entry>200/10</entry>
+                                <entry>150/8</entry>
+                                <entry>100/6</entry>
+                            </row>
+
+                            <row>
+                                <entry>Advantages</entry>
+                                <entry>6</entry>
+                                <entry>3</entry>
+                                <entry>1</entry>
+                            </row>
+                        </tbody>
+                    </table>
+                </sect3>
+
+                <para>
+                    Heroic characters are very, very good.
+                </para>
             </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Attributes</title>
+
+            <para>
+                For player characters, attributes are generally rated on a
+                scale of 1 to 10, with human PCs falling within the range
+                of 2-8. Anything outside of the range 2-5 however is
+                significantly unusual for an adult human, and a typical
+                adult will have all their attributes at 3.
+            </para>
+
+            <para>
+                The number of points that may be spent on buying
+                up an attribute depends on the priority you chose
+                for attributes - 12 points for primary, 6 for
+                secondary and only 3 for tertiary. This choice
+                also limits the maximum you may buy an attribute up
+                to.
+            </para>
+
+            <targetlist targetFirst="true" bold="true">
+                <targetLabel>Score</targetLabel>
+                <valueLabel>Cost and description</valueLabel>
+
+                <item target="10" value="Super alien.">
+                    The limit of what most aliens can achieve, and
+                    far ahead of any human.
+                </item>
+                <item target="9" value="Super human.">
+                    Beyond want humans can achieve, and only found
+                    in a select few alien species.
+                </item>
+                <item target="8" value="Amazing (+15 points).">
+                    At the limit of human ability, which only a few
+                    people in human history have attained.
+                </item>
+                <item target="7" value="Outstanding (+10 points).">
+                    The best olympic athletes and the most renowned
+                    of academics will have this level of attribute.
+                </item>
+                <item target="6" value="Superb (+6 points).">
+                    Far above human average, attained not by chance
+                    but through dedicated training.
+                </item>
+                <item target="5" value="Exceptional (+3 points).">
+                    Obviously exceptional. Attributes higher than
+                    this are normally only attained through
+                    training and dedication.
+                </item>
+                <item target="4" value="Good (+1 point).">
+                    Significantly above average for an adult. About
+                    5% of the population has this level or above.
+                </item>
+                <item target="3" value="Average (0 points).">
+                    Typical average for an adult. About 90% of the
+                    population.
+                </item>
+                <item target="2" value="Poor (-2 points).">
+                    Significantly below average, the bottom 5%.
+                </item>
+                <item target="1" value="Terrible.">
+                    Obviously impaired compared to a typical human.
+                    An attribute of this level is almost worthless.
+                </item>
+            </targetlist>
+
+            <para>
+                Levels outside of the range 2-8 cannot be purchased,
+                but are reserved for alien species. Some aliens get
+                a bonus or penalty to a given attribute, and this
+                bonus applies after you have purchased the attribute.
+                You may not purchase an attribute to a level that
+                would cause it to be shifted outside of the 1-10
+                range once species modifiers have been applied.
+            </para>
         </sect1>
 
         <sect1>
             <title>Advantages</title>
 
             <para>
-                Advantages allow a player to personalise their character
+                Advantages allow you to personalise your character
                 by choosing traits which make the character stand out
-                above the rest of their society. The normal number of
-                advantages a character can start with is zero. More
-                advantages can be purchased by taking disadvantages - up
-                to 10 points of disadvantages can be taken.
+                above the rest of their society. Most people will have
+                no advantages.
             </para>
 
-            <para>
-                Some campaigns may start at a more heroic level, in
-                which case a PC may start with a number of 'free'
-                advantages that don't need to be paid for. The following
-                table gives a rough guide to the number of points for
-                different types of campaigns.
-            </para>
-
-            <targetlist bold="true" targetFirst="true">
-                <targetLabel>Advantages</targetLabel>
-                <valueLabel>Type of campaign</valueLabel>
-
-                <item target="0" value="Normal.">
-                    A normal campaign where PCs are above average
-                    individuals.
-                </item>
-
-                <item target="5" value="Exceptional.">
-                    PCs are significantly better than everyone else.
-                </item>
-
-                <item target="10" value="Heroic.">
-                    PCs are heroes from the start. They can begin with
-                    three attributes at four without taking any
-                    disadvantages.
-                </item>
-            </targetlist>
-
             <sect2>
-                <title>Attributes</title>
+                <title>Advantages</title>
 
-                <para>
-                    Attributes can be raised with advantages. To raise
-                    an attribute from 3 to 4 is a +3 advantage. To
-                    raise an attribute from 4 to 5 is another +5
-                    advantage (so a total cost of +8).
-                </para>
-
-                <para>
-                    Attributes can be lowered from 3 to 2, which is a
-                    -3 point disadvantage.
-                </para>
-
-                <para>
-                    Attributes can be raised during game play like any
-                    skill, though the cost is tripled.
-                </para>
+                <y:import-advantages href="options/advantages.yags"
+                                     type="advantage"/>
             </sect2>
 
-
             <sect2>
-                <title>Passions</title>
+                <title>Disadvantages</title>
 
-                <para>
-                    Passions can be bought up, or lowered. Raising a
-                    passion to 5 is a +1 advantage, raising it from
-                    4 to 6 is a +3 advantage.
-                </para>
-
-                <para>
-                    Lowering a Passion from 4 to 3 is a -1 disadvantage,
-                    lowering it from 4 to 2 is a -3 disadvantage.
-                </para>
-
-                <para>
-                    Passions can be raised during game play just as
-                    normal skills can, at normal cost. Passions can go
-                    down as well as up, depending on how the character is
-                    roleplayed by the Player.
-                </para>
+                <y:import-advantages href="options/disadvantages.yags"
+                                     type="disadvantage"/>
             </sect2>
+
         </sect1>
 
         <sect1>
-            <title>Skills and Age</title>
+            <title>Skills</title>
 
             <para>
-                Most of a new character's skills will come from their
-                <e>Package</e>. A character may start with more skills
-                if their character begins the game older than the
-                default age (normally 16). Every year older than the
-                default gives the Player 2 points to spend on buying
-                extra skills for their character.
+                Skills are those abilities which a character develops
+                throughout their life, and tend to change a lot more
+                regularly than attributes do.
             </para>
 
             <para>
-                No skill may be raised above 5, and no character can
-                begin the game older than 25 (or at least, no extra
-                points are gained for older characters).
+                How good a character is at a skill is rated as a value
+                from zero upwards. A skill of four is acceptable for
+                someone wanting to make a living with the skill. Higher
+                skills are possible, though skills above six will be
+                rare amongst the common population
             </para>
 
             <para>
-                As well as skills, <e>techniques</e> may be purchased,
-                as long as the character meets the prerequisites for
-                the technique.
+                Initial character development is divided into three
+                broad categories - general skills, professional
+                skills and adulthood. These should be worked through
+                in the order given below.
             </para>
+
+            <sect2>
+                <title>Types of Skills</title>
+
+                <sect3>
+                    <title>Standard skills</title>
+
+                    <para>
+                        Most skills are considered to be <e>standard
+                        skills</e>. Such skills can be learnt relatively
+                        easily, including being self taught. They can also
+                        be used by a character who has a skill of zero,
+                        though such an attempt fumbles on a natural one
+                        or two.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Talents</title>
+
+                    <para>
+                        Talents are skills which are known by everyone
+                        from childhood onwards. They are treated just as
+                        standard skills, with the exception that all
+                        characters start with a skill level of two in all
+                        talents.
+                    </para>
+
+                    <para>
+                        There are only eight talents, and are listed by
+                        default on the character sheet. Talents are
+                        sometimes marked with an asterix (*).
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Knowledges</title>
+
+                    <para>
+                        A knowledge is a special type of skill which cannot
+                        be attempted unless the character has a skill level
+                        of at least one. They can rarely be self taught,
+                        requiring a teacher or study aid (such as a book)
+                        to learn from.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Languages</title>
+
+                    <para>
+                        Language skills are treated on a scale from
+                        one to four, and are not normally 'rolled'
+                        like other skills. Instead, the level of skill
+                        gives a guide to how much of a conversation a
+                        character can understand.
+                    </para>
+
+                    <itemlist order="strict">
+                        <item name="Level one">
+                            The character can recognise the language
+                            and knows a few words, but cannot put
+                            sentences together.
+                        </item>
+
+                        <item name="Level two">
+                            The character can understand and form basic
+                            sentences. The character can probably get by
+                            in the market or in an inn.
+                        </item>
+
+                        <item name="Level three">
+                            The character has a good grasp of the
+                            language and can hold a decent
+                            conversation. They will obviously still be
+                            a foreigner however, and many unusual words
+                            will be beyond their understanding.
+                        </item>
+
+                        <item name="Level four">
+                            The character is fluent in the language.
+                            If they are a foreigner, then they may
+                            still have an accent, but they will not
+                            have any problems communicating.
+                        </item>
+
+                        <item name="Level five and above">
+                            If the character is a non-native speaker,
+                            then they can speak without an accent. This
+                            level and beyond gives detailed knowledge of
+                            different dialects and really obscure words,
+                            but is not of use in everyday conversation.
+                        </item>
+                    </itemlist>
+
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Skill Rules</title>
+
+                <sect3>
+                    <title>Defaults</title>
+
+                    <para>
+                        Some skills have a default - this will generally be
+                        one of the <e>talents</e>. If desired, the default
+                        can be used instead, but the result (after the die
+                        roll) is halved, plus the chance of fumbling is
+                        doubled.
+                    </para>
+
+                    <para>
+                        A default skill may also restrict the type of
+                        tasks which are possible. For example, <e>Trade</e>
+                        defaults to <e>Guile</e>, but the latter can only
+                        be used to barter, and isn't much use if the
+                        character needs to know the real value of goods.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Pre-requisites</title>
+
+                    <para>
+                        A few skills have pre-requisites. Before this skill
+                        can be purchased at level one, all pre-requisites
+                        must be met. A skill like Physics might have a
+                        pre-requisite of Mathematics-2 and Science-2 for
+                        example, which means both skills must be known at
+                        level 2 before buying physics.
+                    </para>
+
+                    <para>
+                        Further, the main skill may never be more than
+                        double the level of any of the pre-requisites. A
+                        physicist would have to raise their Mathematics
+                        and Science to at least 3, before raising
+                        Physics to 6.
+                    </para>
+
+                    <para>
+                        A character cannot put points into a skill if the
+                        next level of skill is not allowed.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Limited Skills</title>
+
+                    <para>
+                        Under some genres, a skill may be <e>limited</e>
+                        by another skill. This concept is mostly limited to
+                        knowledge or science skills. When a skill is limited
+                        by another skill, the first skill may never be more
+                        than half the score of the second.
+                    </para>
+
+                    <para>
+                        For example, during the <e>Enlightenment</e>, when
+                        Science was being discovered, the Science skill is
+                        limited by Natural Philosophy. If a character has
+                        a Natural Philosophy of 7, then their Science
+                        cannot be higher than 3 (since raising it any higher
+                        would make it greater than 3.5). Once the
+                        character's Natural Philosophy has been raised to
+                        8, then they can begin to raise their Science to 4.
+                    </para>
+
+                    <para>
+                        A character cannot put points into a skill if the
+                        next level of skill is not allowed.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Techniques</title>
+
+                    <para>
+                        <e>Techniques</e> are advantages and are described
+                        in full in the <s>Advantages</s> article.
+                    </para>
+
+                    <para>
+                        Some skills have techniques associated with them.
+                        When the skill reaches a certain level (the level
+                        of the technique) then the technique may be
+                        purchased as an advantage. Techniques generally
+                        allow the skill to be used in a different way, or
+                        give bonuses to certain uses of the skill.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Skills</title>
+
+                <para>
+                    The following list of skills is not exhaustive, but
+                    covers the most common set of skills found in a low
+                    tech campaign setting. The following example shows
+                    what a skill entry looks like.
+                </para>
+
+                <y:skill-list>
+                    <y:skill name="Medicine Example" type="knowledge">
+                        <y:group>Science</y:group>
+                        <y:group>Healing</y:group>
+                        <y:default>First aid</y:default>
+                        <y:prerequisite score="4">First aid</y:prerequisite>
+
+                        <description>
+                            <para>
+                                This skill can be used to try and make people
+                                better when they aren't feeling very well.
+                            </para>
+                        </description>
+
+                        <description task="Diagnosis">
+                            <para>
+                                Try to figure out what is wrong with someone.
+                            </para>
+                        </description>
+
+                        <y:examples>
+                            <y:example target="10">Cure a headache.</y:example>
+                            <y:example target="20">Put a leg back on.</y:example>
+                        </y:examples>
+                    </y:skill>
+                </y:skill-list>
+
+                <para>
+                    The heading gives the name of the skill, followed by
+                    whether it is a <e>knowledge</e>, <e>talent</e> or
+                    <e>language</e> in parenthesis.
+                </para>
+
+                <para>
+                    The second line displays all the skill groups that the
+                    skill belongs to. These are sometimes used for purposes
+                    of bonuses which apply to a category of skills.
+                </para>
+
+                <para>
+                    Next is given the skill <e>default</e> and
+                    <e>pre-requisites</e> (if any). The score given for the
+                    pre-requisite is the minimum score that is needed in
+                    the required skill before this skill can be bought.
+                </para>
+
+                <para>
+                    For skills which have <e>techniques</e> associated with
+                    them, then these will be listed as well.
+                </para>
+
+                <para>
+                    The main body of text describes the skill - what it
+                    does and how it can be used. Some skills can be used in
+                    different ways for different tasks, and if these sub
+                    tasks are sufficiently different or important, then
+                    they will be listed under a sub heading (for our
+                    Medicine example, Diagnosis is listed as a sub-task).
+                </para>
+
+                <para>
+                    Finally, example skill difficulties may be given. These
+                    are suggested target numbers for achieving given tasks.
+                </para>
+
+            </sect2>
+
+            <sect2>
+                <title>Skills by Groups</title>
+
+                <para>
+                    The following lists all the skills according to
+                    various groups. Skills which belong to more than
+                    one group are listed multiple times. When
+                    designing a character that you want to be good at
+                    some type of thing, these grouping can give an
+                    idea about which skills to buy.
+                </para>
+
+                <y:list-skills>
+                    <y:skills>skills/standard-skills.yags</y:skills>
+                    <y:skills>skills/vehicle-skills.yags</y:skills>
+                    <y:skills>skills/combat-skills.yags</y:skills>
+                    <y:skills>skills/academic-skills.yags</y:skills>
+                    <y:skills>skills/technical-skills.yags</y:skills>
+                    <y:skills>skills/business-skills.yags</y:skills>
+
+                    <y:techniques>techniques/techniques.yags</y:techniques>
+                    <y:techniques>techniques/lowtech-techniques.yags</y:techniques>
+                    <y:techniques>techniques/combat-techniques.yags</y:techniques>
+                </y:list-skills>
+            </sect2>
+<!--
+            <sect2>
+                <title>Skill Descriptions</title>
+
+                <y:import-skills>
+                    <y:skills>skills/skills.yags</y:skills>
+
+                    <y:techniques>techniques/techniques.yags</y:techniques>
+                    <y:techniques>techniques/lowtech-techniques.yags</y:techniques>
+                    <y:techniques>techniques/combat-techniques.yags</y:techniques>
+                </y:import-skills>
+            </sect2>
+-->
         </sect1>
+
     </body>
 </article>
 

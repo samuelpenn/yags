@@ -3,43 +3,14 @@
 <!--
     These list generic advantages and disadvantages,
 
-    Version: $Revision: 1.25 $
-    Date:    $Date: 2006-08-21 18:42:42 $
+    Version: $Revision: 1.26 $
+    Date:    $Date: 2007-04-01 20:34:26 $
     Author:  Samuel Penn (sam@glendale.org.uk)
 
 -->
 
 <advantages xmlns="http://yagsbook.sourceforge.net/xml/yags">
 
-    <advantage name="Good attribute" type="advantage">
-        <cost points="+3"/>
-        <genre>Common</genre>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You are above average in one attribute of your choice,
-                and have a score of 4, rather than 3, in it. You may
-                take this advantage multiple times, each time on a
-                different attribute.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Excellent attribute" type="advantage">
-        <cost points="+5"/>
-        <genre>Common</genre>
-
-        <prerequisite>Good attribute</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You are exceptionally good at one attribute of your
-                choice, which you must have already taken
-                <e>Good attribute</e> in. You may take this multiple
-                times, each time with a different attribute.
-            </para>
-        </description>
-    </advantage>
 
     <advantage name="Keen hearing" type="advantage">
         <cost points="+1"/>
@@ -47,7 +18,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You have exceptional hearing, and gain a +1 bonus to
+                You have exceptional hearing, and gain a +2 bonus to
                 your <t>Perception</t> when making hearing checks.
                 When fighting in total darkness in close combat,
                 your <t>Perception</t> has a minimum of 1.
@@ -62,7 +33,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You have exceptional vision, and gain a +1 bonus to
+                You have exceptional vision, and gain a +2 bonus to
                 your <t>Perception</t> when making vision checks.
                 It does not grant a bonus for ranged attacks.
             </para>
@@ -76,8 +47,9 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You have a particularly hardy consitition, and gain +1
-                to your <t>Health</t> to resist all forms of poison.
+                You have a particularly hardy consitition, and gain +2
+                to your <t>Health</t> to resist all forms of poison,
+                disease and other forms of illness.
             </para>
         </description>
     </advantage>
@@ -88,7 +60,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You have a natural talent with music, and gain a +1 bonus
+                You have a natural talent with music, and gain a +2 bonus
                 to <t>Empathy</t> or <t>Intelligence</t> when playing a
                 musical instrument, or composing for one.
             </para>
@@ -115,15 +87,17 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You have particularly good night vision, and the
-                <t>Perception</t> penalty for darkness is reduced by
-                one except in total darkness.
+                You have particularly good night vision. Except in total
+                darkness, any penalties to your <t>Perception</t> are
+                halved (round down) when either making vision checks, or
+                when your <t>Perception</t> is used to cap other
+                attributes.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Beautiful" type="advantage">
-        <cost points="+3"/>
+    <advantage name="Good looking" type="advantage">
+        <cost points="+1"/>
         <genre>Common</genre>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -131,11 +105,25 @@
                 You are exceptionally beautiful, and gain a +1 bonus to
                 your <t>Empathy</t> when trying to charm or persuade
                 somebody who may be sexually attracted to you. Being
-                beautiful also makes you easier to recognise. This does
-                not stack with <e>Voice</e>.
+                beautiful also makes you easier to recognise.
             </para>
         </description>
         <forbiddon>Ugly</forbiddon>
+    </advantage>
+
+    <advantage name="Sexy" type="advantage">
+        <cost points="+3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                As well as being <e>good looking</e>, the way in which you
+                walk, talk and dress comes across as very sexy to anyone
+                who would be sexually attracted to you. Others will tend
+                to flirt with you given a chance, and you may gain +2
+                to <t>Empathy</t> in such situations.
+            </para>
+        </description>
     </advantage>
 
     <advantage name="Graceful" type="advantage">
@@ -183,11 +171,10 @@
                 not stack with <e>Beautiful</e>.
             </para>
         </description>
-        <forbiddon>Can't sing</forbiddon>
     </advantage>
 
     <advantage name="Literate" type="advantage">
-        <cost points="+3"/>
+        <cost points="+1"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -208,11 +195,10 @@
     </advantage>
 
     <advantage name="Heavily built" type="advantage">
-        <cost points="+3"/>
+        <cost points="+1"/>
 
-        <prerequisite>Good attribute (Strength)</prerequisite>
+        <prerequisite>Strength 4</prerequisite>
         <forbiddon>Small</forbiddon>
-        <forbiddon>Looks young</forbiddon>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -224,19 +210,6 @@
         </description>
     </advantage>
 
-    <advantage name="High pain threshold" type="advantage">
-        <cost points="+3"/>
-
-        <forbiddon>Low pain threshold</forbiddon>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Penalties due to stuns and wounds are reduced by one
-                level (so -5 becomes 0, -10 becomes -5 etc).
-                Penalties due to fatigue are unaffected.
-            </para>
-        </description>
-    </advantage>
 
     <advantage name="Ambidexterity" type="advantage">
         <cost points="+1"/>
@@ -251,18 +224,19 @@
 
 
     <advantage name="Large" type="advantage">
-        <cost points="+3"/>
+        <cost points="+1"/>
 
-        <prerequisite>Good attribute (strength)</prerequisite>
+        <prerequisite>Strength 4</prerequisite>
         <forbiddon>Small</forbiddon>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You tower above other people, being taller and heavier
-                than the norm. You have a <t>Size</t> of 6, which grants
-                you an extra body level. In combat, any attacks that
-                you make which have a reach of zero count as having a
-                reach of one.
+                You are very large, being both tall and heavily built. You
+                have a bonus of +1 to your <t>Size</t> (raising it to 6 for
+                humans), which provides you with an extra level of wounds
+                and stuns. You also have extra reach, and any reach 0
+                melee attacks are instead considered reach 1. You may not
+                have a <t>Strength</t> below 4.
             </para>
         </description>
     </advantage>
@@ -279,25 +253,15 @@
         </description>
     </advantage>
 
-    <advantage name="Quick" type="advantage">
-        <cost points="+1"/>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You are particularly quick on your feet, and gain a +2
-                bonus to your basic move score.
-            </para>
-        </description>
-    </advantage>
-
     <advantage name="Reflexes" type="advantage">
         <cost points="+1"/>
 
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You have a +1 bonus to agility for purposes of
-                initiative.
+                You have a +1 bonus to <t>Agility</t> for purposes of
+                initiative. See the combat rules for a description of
+                how initiative works.
             </para>
         </description>
     </advantage>

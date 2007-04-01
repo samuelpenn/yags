@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+
+<!--
+    Modern skills, mostly sciences and engineering skills.
+
+    Copyright (c) 2005, Samuel Penn.
+    This document can be redistributed and/or modified under the terms
+    of the GNU Public License as published by the Free Software Foundation
+    version 2.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-04-01 20:34:26 $
+    Author: Samuel Penn
+-->
+
+<skill-list xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:yb="http://yagsbook.sourceforge.net/xml"
+            techniques="options/techniques.yags">
+
+
+
+
+    <skill name="Archaeology" type="knowledge">
+        <group>Academic</group>
+
+        <short>How to dig up ruins.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This skill is mostly about digging up the ruins of
+                ancient civilisations, and covers the practical
+                skills needed to find, recognise and preserve items,
+                as well as basic management - social, equipment
+                and legal. It does also include knowledge of how to
+                identify and date ruins, as well as general knowledge
+                of specific civilisations. However, detailed
+                knowledge of ancient history requires the <e>History</e>
+                skill.
+            </para>
+        </description>
+    </skill>
+
+
+
+    <skill name="Science" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+        <tech level="5"/>
+
+        <short>Basic science, logic and reasoning.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Science covers basic scientific knowledge, logical
+                reasoning and ballony detection. Most Western schools will
+                teach <e>science</e> to some degree. The skill provides
+                basic knowledge of the various sciences, an understanding
+                of the philosophy of science, and the ability to tell the
+                difference between a scientific theory and dodgy
+                pseudo-science.
+            </para>
+
+            <para>
+                All scientists will have <e>Science</e> to a greater or
+                lesser degree, as will those in science based professions
+                such as engineering or mathematics.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Mathematics" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <short>Geometry, aglebra etc.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Mathematics is the knowledge of advanced mathematics.
+                Simple arithmetic is considered to be basic intelligence.
+                Mathematics covers geometry, algebra, set theory,
+                probability and other branches of mathematics. Most
+                children with a Western education will have some
+                knowledge of Mathematics after leaving school, though
+                it's likely to be only a couple of points.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Cryptography" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <prerequisite>Mathematics</prerequisite>
+
+        <short>Designing and using cyphers.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Using and designing cyphers.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Physics" type="knowledge">
+        <group>Academic</group>
+
+        <short>The science of physics.</short>
+
+        <prerequisite score="2">Science</prerequisite>
+        <prerequisite score="2">Mathematics</prerequisite>
+        <default>Science</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Physics is a particular branch of <e>Science</e>, concerned
+                with forces and motion, energy and matter at the smallest
+                scales. Particular branches of physics are treated as
+                <e>techniques</e> - not knowing the technique doubles the
+                difficulty.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Chemistry" type="knowledge">
+        <group>Academic</group>
+
+        <short>The science of chemistry.</short>
+
+        <prerequisite score="2">Science</prerequisite>
+        <default>Science</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Chemistry is a particular branch of <e>Science</e>, which
+                is concerned with the study of chemicals and elements.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Biology" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <short>The science of biology.</short>
+
+        <prerequisite score="2">Science</prerequisite>
+        <default>Science</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Biology is a particular branch of <e>Science</e>, and
+                covers the study of living things.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Medicine" type="knowledge">
+        <group>Academic</group>
+        <prerequisite>First aid</prerequisite>
+        <prerequisite>Biology</prerequisite>
+
+        <short>Diagnosis and healing.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of diagnosing illnesses, and knowing what to
+                do to cure an illness. Provides knowledge of the currently
+                available drugs and how best to make use of them. Whilst
+                first aid is focused on basic wounds (mostly cuts and
+                bruises) and tends to be quite simple in its solutions,
+                medicine provides a wide range of knowledge about how
+                the body works, what drugs are available, and how best
+                to diagnose illness and injuries.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Surgery" type="skill">
+        <group>Academic</group>
+        <default>Medicine</default>
+        <prerequisite score="4">Medicine</prerequisite>
+
+        <short>Performing complex surgery.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is a particular specialisation of medicine, focused on
+                cutting people open and fixing their insides. It is considered
+                to be quite a difficult skill, and failure can often be fatal
+                for the patient.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Astronomy" type="knowledge">
+        <group>Academic</group>
+        <short>The study of the stars and planets.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is concerned with the study of stars and planets,
+                their motions, positions and general behaviour. It does
+                not provide full detail on their formation and physical
+                makeup (that is left to <e>Astrophysics</e>).
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Botany" type="knowledge">
+        <group>Academic</group>
+
+        <default>Biology</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is the study of plants.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Zoology" type="knowledge">
+        <group>Academic</group>
+
+        <default>Biology</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is the study of animals.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Anthropology" type="knowledge">
+        <group>Academic</group>
+
+        <short>The study of Homonids.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is the study of humans, including their origins,
+                cultural and physical attributes, history and
+                environment.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Ecology" type="knowledge">
+        <group>Academic</group>
+        <group>Science</group>
+
+        <prerequisite score="2">Biology</prerequisite>
+        <prerequisite score="2">Zoology</prerequisite>
+
+        <default>Botany</default>
+        <default>Zoology</default>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is knowledge of ecosystems, of the relationships
+                between plants and animals living together in balance.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="History" type="knowledge">
+        <group>Academic</group>
+
+        <short>Knowledge of the past.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The study of historical events. As standard, it gives a
+                knowledge of a broad range of recorded history without
+                specialisation in any one area. Most people will know
+                more about their own culture than others, so there's a
+                +10 or +20 increase to the difficulty to know the history
+                of cultures outside your own (note that some historical
+                events, such as who built the pyramids, is popular
+                knowledge even in non-Middle Eastern cultures).
+            </para>
+
+            <para>
+                There are many techniques which allow you to specialise
+                in a period or culture. These are 4 points each.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Occult" type="knowledge">
+        <group>Academic</group>
+        <group>Occult</group>
+
+        <short>Knowledge of the supernatural.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Knowledge of the occult and things related to it. It
+                includes such topics as astrology, spirits, demons
+                and other things man was not mean to know. In a realistic
+                setting, it provides no special powers apart from possibly
+                the ability to con people out of their money. In a
+                fantastic setting, it could unlock the secrets of the
+                universe.
+            </para>
+        </description>
+    </skill>
+
+
+    <skill name="Research" type="skill">
+        <group>Academic</group>
+
+        <default>Any Academic skill</default>
+
+        <short>Being able to find information.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of being able to find information in books, on
+                a computer system, or in any other knowledge source which
+                doesn't require interaction with people (beyond standard
+                dealing with librarians etc).
+            </para>
+        </description>
+    </skill>
+</skill-list>
+

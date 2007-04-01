@@ -6,12 +6,13 @@
     Full list of skills available.
     Crosslinked with talent techniques.
 
-    Copyright (c) 2005, Samuel Penn.
+    Copyright (c) 2007, Samuel Penn.
     This document can be redistributed and/or modified under the terms
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.10 $
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-04-01 20:34:26 $
     Author: Samuel Penn
     -->
 
@@ -32,6 +33,8 @@
         <group>Business</group>
         <group>Rural</group>
         <group>Vehicle</group>
+        <group>Technical</group>
+        <group>Military</group>
     </groups>
 
     <techniques>options/techniques.yags</techniques>
@@ -363,22 +366,6 @@
     </skill>
 
 
-    <skill name="Tactics" type="standard">
-        <group>Combat</group>
-        <group>Military</group>
-
-        <short>Knowledge of combat tactics.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Tactics, strategy and leadership when planning and fighting
-                a battle involving small groups. It can be used to
-                choose a suitable site for battle, to determine weaknesses
-                in the enemy's strategy and defences, and to plan the
-                logistics of travel and supply.
-            </para>
-        </description>
-    </skill>
 
 
     <!--
@@ -1114,224 +1101,6 @@
         </description>
     </skill>
 
-    <!--
-        VEHICLE SKILLS
-
-        Skills concerned with the use of vehicles such as cars, boats and aircraft.
-    -->
-    <skill name="Boating" type="standard">
-        <group>Vehicle</group>
-        <group>Rural</group>
-
-        <short>Handling small watercraft.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Being able to use a small oared boat. Based on intelligence
-                for judging travel conditions, strength for speed or
-                dexterity for fine navigation.
-            </para>
-        </description>
-
-        <examples>
-            <example target="10">
-                Row a boat in a straight line in calm conditions.
-            </example>
-            <example target="15">Row a boat in choppy conditions</example>
-            <example target="20">Row a boat in rough conditions (open sea)</example>
-            <example target="30">Very rough conditions</example>
-            <example target="40">Row in a storm</example>
-        </examples>
-    </skill>
-
-    <skill name="Drive" type="skill">
-        <group>Vehicle</group>
-
-        <short>Driving simple ground vehicles.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of driving a car or similar sized
-                vehicle. Larger vehicles (lorry, tank) use this skill,
-                though may require techniques for competence.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Motorbike" type="skill">
-        <group>Vehicle</group>
-        <default>Drive</default>
-        <short>Riding a motorbike.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of driving a motorcycle, or similar two wheeled
-                vehicles.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Pilot" type="skill">
-        <group>Vehicle</group>
-
-        <short>Piloting a powered aircraft.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of piloting a powered aircraft. By default it
-                assumes a small low performance aircraft.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Gliding" type="skill">
-        <group>Vehicle</group>
-        <group>Sport</group>
-
-        <short>Piloting an unpowered aircraft.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have experience in flying gliders. This skill provides
-                you with the ability to fly a glider, to know how to find
-                and use thermals and geographic features for lift and how
-                to look after and maintain a glider. You'll also have
-                some knowledge of aviation law and etiquette.
-            </para>
-        </description>
-    </skill>
-
-    <!-- Combat skills -->
-    <skill name="Melee weapon" type="standard">
-        <group>Combat</group>
-        <group>Armed melee</group>
-        <default>Brawl</default>
-        <short>Using a sword, club or spear.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of using a simple melee weapon, such as blades,
-                spears and clubs. This skill covers all such weapons, as
-                their use with a shield or a second parrying weapon.
-                Exotic weapons, such as chain weapons, aren't covered
-                since they are used in a completely different way. Small
-                weapons such as knives however are used with the <e>Brawl</e>
-                skill.
-            </para>
-
-            <para>
-                Melee weapon is used with <t>Dexterity</t>.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Chain weapon" type="standard">
-        <group>Combat</group>
-        <group>Armed melee</group>
-        <default>Melee weapon</default>
-        <short>Using chains, nunchuk or similar weapons.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Using flexible chain melee weapons.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Bow" type="standard">
-        <group>Combat</group>
-        <group>Missile</group>
-        <short>Using a short bow or long bow.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of using a bow as a ranged weapon.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Crossbow" type="standard">
-        <group>Combat</group>
-        <group>Missile</group>
-        <short>Using a crossbow.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of using a crossbow as a ranged weapon.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Pistol">
-        <group>Combat</group>
-        <group>Firearms</group>
-        <default>Rifle</default>
-
-        <short>Firing pistols, revolvers and SMGs.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You are skilled in firing pistols and similar small hand
-                guns, including revolvers, automatic pistols and SMGs.
-                This skill is most effective at short ranges and when in
-                close combat with the target. It is always based on
-                <t>Dexterity</t>.
-            </para>
-
-            <para>
-                At short range, you may normally add the attack bonus of
-                the weapon to your attack roll unless you are making a
-                <e>snapshot</e>.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Rifle">
-        <group>Combat</group>
-        <group>Firearms</group>
-        <default>Pistol</default>
-
-        <short>Firing rifles.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The use and handling of rifles, carbines, shotguns
-                and the like. It is not very effective at very close range,
-                but is designed for short to medium ranges. Can be used
-                with either <t>Dexterity</t> or <t>Perception</t>.
-                Add-ons to rifles such as an underslung grenade launcher
-                may also be used with this skill instead of the more
-                usual <e>Heavy Weapons</e> skill, but always use
-                <t>Perception</t>.
-            </para>
-
-            <para>
-                At short range, you may normally add the attack bonus of
-                the weapon to your attack roll unless you are making a
-                <e>snapshot</e>.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Heavy weapons" type="skill">
-        <group>Combat</group>
-        <group>Firearms</group>
-        <group>Vehicle</group>
-        <default>Rifle</default>
-
-        <short>Using heavy machine guns.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                This skill provides you with knowledge of how to use
-                heavy weapons such as vehicle mounted machine guns,
-                grenade launchers, anti-tank weapons and mortars.
-                Most non-man portable weapons fall into this
-                category. Always uses <t>Perception</t> when
-                firing weapons.
-            </para>
-        </description>
-    </skill>
 </skill-list>
 
 
