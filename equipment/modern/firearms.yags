@@ -1,0 +1,490 @@
+<?xml version="1.0"?>
+
+<!--
+
+    Modern firearms, mostly small arms weapons.
+
+    Copyright 2007 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted provided that the following
+    conditions are met:
+
+    1) Redistributions of any source code (e.g. XML) must retain the
+    above copyright notice, this list of conditions and the following
+    disclaimer.
+
+    2) Redistributions in compiled form (transformed to other DTDs,
+    converted to PDF, PostScript, RTF and other formats) must
+    reproduce the above copyright notice, this list of conditions
+    and the following disclaimer in the documentation and/or other
+    materials provided with the distribution.
+
+    THIS CONTENT IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+    OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DIRECT,
+    INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+    STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+    ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
+    OF THE POSSIBILITY OF SUCH DAMAGE.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-04-20 19:33:52 $
+
+    All units are in cgs.
+
+    Prices should be in dollars, but prices can't really be trusted yet.
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+
+    <item name="Bullet proof vest">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>8</techLevel>
+
+        <short>A standard kevlar vest.</short>
+
+        <description>
+            <para>
+                Light body armour, designed to be reasonably comfortable
+                and provide a minimum amount of protection.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>plastic</material>
+        <cost>1000</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+5</protection>
+            <load>1</load>
+
+            <covers>
+                <torso/>
+            </covers>
+
+            <properties>
+                <bulletproof/><light/>
+                <vitals score="2"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Body armour">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>8</techLevel>
+
+        <short>Modern body armour.</short>
+
+        <description>
+            <para>
+                Military body armour, which is bulky, but provides reasonable
+                all-round protection.
+            </para>
+        </description>
+
+        <weight>4000</weight>
+        <material>plastic</material>
+        <cost>1000</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+10</protection>
+            <load>4</load>
+
+            <covers>
+                <torso/><arms/><legs/><head/>
+            </covers>
+
+            <properties>
+                <bulletproof/><heavy/>
+                <vitals score="2"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Walter PPK">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>6</techLevel>
+
+        <short>A 9mm pistol.</short>
+
+        <description>
+            <para>
+                The Walter PPK is a typical handgun first produced 1931.
+                It fires a .380 ACP cartridge (9x17mm) which is about the
+                minimum required for self defence.
+            </para>
+        </description>
+
+        <weight>600</weight>
+        <material>metal</material>
+        <cost>200</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+
+            <combat>
+                <attack>+5</attack>
+                <damage>22</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>50</short>
+                    <medium>100</medium>
+                    <long>500</long>
+                </range>
+            </combat>
+
+            <strength>2</strength><load>0.5</load><reach>0</reach>
+            <capacity>7</capacity><rof>7</rof><recoil>-3</recoil>
+
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Browning Hi-Power">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>6</techLevel>
+
+        <short>A 9mm pistol.</short>
+
+        <description>
+            <para>
+                The Browning Hi-Power is a high capacity pistol that uses a
+                9x19mm cartridge.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>metal</material>
+        <cost>250</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+
+            <combat>
+                <attack>+5</attack>
+                <damage>23</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>50</short>
+                    <medium>150</medium>
+                    <long>500</long>
+                </range>
+            </combat>
+
+            <strength>2</strength><load>1</load><reach>0</reach>
+            <capacity>14</capacity><rof>10</rof><recoil>-3</recoil>
+
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Colt Python">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>7</techLevel>
+
+        <short>A .357 Magnum revolver.</short>
+
+        <description>
+            <para>
+                Introduced in 1955, the <e>Colt Python</e> is a double action
+                revolver designed to fire the .357 Magnum cartridge from
+                Smith and Wesson. Production was discontinued in 1999.
+            </para>
+
+            <para>
+                The calibre of round is capable of pentrating body armour
+                and car doors, and is considered to have excellent stopping
+                power compared to other pistols, but has been largely replaced
+                by semi-automatic pistols with larger capacities.
+            </para>
+        </description>
+
+        <weight>1100</weight>
+        <material>metal</material>
+        <cost>800</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+
+            <combat>
+                <attack>+6</attack>
+                <damage>24</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>50</short>
+                    <medium>400</medium>
+                    <long>1200</long>
+                </range>
+            </combat>
+
+            <strength>3</strength><load>1</load><reach>0</reach>
+            <capacity>6</capacity><rof>6</rof><recoil>-5</recoil>
+
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="3"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Colt Anaconda">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>7</techLevel>
+
+        <short>A .44 Magnum revolver.</short>
+
+        <description>
+            <para>
+                Designed to fire the heavy .44 Magnum round, this is a large
+                and bulky hand weapon generally considered unsuitable for
+                anything other than sport.
+            </para>
+        </description>
+
+        <weight>1500</weight>
+        <material>metal</material>
+        <cost>1000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+
+            <combat>
+                <attack>+7</attack>
+                <damage>26</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>50</short>
+                    <medium>400</medium>
+                    <long>1200</long>
+                </range>
+            </combat>
+
+            <strength>4</strength><load>2</load><reach>0</reach>
+            <capacity>6</capacity><rof>6</rof><recoil>-5</recoil>
+
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="3"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="FN P90">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>8</techLevel>
+
+        <short>Submachine gun.</short>
+
+        <description>
+            <para>
+                A compact submachine gun, considered a personal defence weapon.
+                It uses a 5.7x28mm round. It is a relatively modern weapon,
+                being introduced in 1994, and is used by military and law
+                enforcement agencies in a number of countries.
+            </para>
+        </description>
+
+        <weight>3000</weight>
+        <material>metal</material>
+        <cost>2000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>SMG</category>
+            <class>s</class>
+
+            <combat>
+                <attack>+6</attack>
+                <damage>26</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>200</short>
+                    <medium>700</medium>
+                    <long>2500</long>
+                </range>
+            </combat>
+
+            <strength>2</strength><load>3</load><reach>1</reach>
+            <capacity>50</capacity><rof>50</rof><recoil>-2</recoil>
+
+            <properties>
+                <missile/><firearm/><automatic/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="M16 Assualt Rifle">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>7</techLevel>
+
+        <short>A typical assualt rifle.</short>
+
+        <description>
+            <para>
+                The M16 is a typical assualt rifle of the period. It uses
+                a 5.56x45mm round, and has a high accuracy.
+            </para>
+        </description>
+
+        <weight>2900</weight>
+        <material>metal</material>
+        <cost>500</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+
+            <combat>
+                <attack>+9</attack>
+                <damage>27</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>550</short>
+                    <medium>1000</medium>
+                    <long>3600</long>
+                </range>
+            </combat>
+
+            <strength>2</strength><load>3</load><reach>2</reach>
+            <capacity>30</capacity><rof>30</rof><recoil>-4</recoil>
+
+            <properties>
+                <missile/><firearm/><automatic/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="AK47 Assualt Rifle">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>7</techLevel>
+
+        <short>A typical assualt rifle.</short>
+
+        <description>
+            <para>
+                The AK47 fires a 7.62x39mm round. It is less accurate and has
+                shorter range than the M16, but this is rarely important in
+                most fire fights. It is much more reliable and durable, and
+                the larger calibre gives it a better stopping power.
+            </para>
+        </description>
+
+        <weight>4300</weight>
+        <material>metal</material>
+        <cost>300</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+
+            <combat>
+                <attack>+7</attack>
+                <damage>29</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>300</short>
+                    <medium>700</medium>
+                    <long>1500</long>
+                </range>
+            </combat>
+
+            <strength>2</strength><load>4</load><reach>2</reach>
+            <capacity>30</capacity><rof>30</rof><recoil>-5</recoil>
+
+            <properties>
+                <missile/><firearm/><automatic/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="FN FAL battle rifle">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>7</techLevel>
+
+        <short>A typical assualt rifle.</short>
+
+        <description>
+            <para>
+                The FN FAL uses a full power rifle cartridge, a 7.62x51mm
+                round. It is accurate and reliable, and considered to be
+                a prime example of a main battle rifle.
+            </para>
+        </description>
+
+        <weight>4200</weight>
+        <material>metal</material>
+        <cost>3000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+
+            <combat>
+                <attack>+9</attack>
+                <damage>31</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>600</short>
+                    <medium>1500</medium>
+                    <long>3500</long>
+                </range>
+            </combat>
+
+            <strength>2</strength><load>4</load><reach>2</reach>
+            <capacity>20</capacity><rof>20</rof><recoil>-3</recoil>
+
+            <properties>
+                <missile/><firearm/><automatic/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+</equipment>
+
+
