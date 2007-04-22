@@ -11,8 +11,8 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2007-04-01 20:34:26 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2007-04-22 21:30:03 $
     Author: Samuel Penn
     -->
 
@@ -374,9 +374,7 @@
 
     <skill name="Etiquette" type="standard">
         <group>Social</group>
-
         <default>Charm</default>
-
         <short>How to behave in polite company.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -425,14 +423,13 @@
     <skill name="Politics" type="standard">
         <group>Social</group>
         <default>Guile</default>
-
-        <short>Intrigue and knowledge of politics.</short>
+        <short>Intrigue and the knowledge of politics.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The skill of dealing with the intrigues of a political
-                court. With it, it is possible to find out relationships
-                within the court, and to obtain information from people, or
+                arena. With it, it is possible to find out relationships
+                within the arena, and to obtain information from people, or
                 even to spread information without it being obvious that
                 the plotter is trying to spread information.
             </para>
@@ -448,11 +445,8 @@
     </skill>
 
     <skill name="Streetwise" type="standard">
-        <group>Social</group>
         <group>Criminal</group>
-
         <default>Guile</default>
-
         <short>Dealing with the criminal underworld.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -470,7 +464,6 @@
         <group>Social</group>
         <group>Criminal</group>
         <default>Guile</default>
-
         <short>Skill at playing card and dice games.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -492,7 +485,6 @@
 
     <skill name="Game" type="standard">
         <group>Social</group>
-
         <short>Skill at a board game.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -529,13 +521,16 @@
 
     <skill name="Sport" type="standard">
         <group>Social</group>
-
         <short>Skill at a particular sport.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge of, and skill at, playing a particular sport such
-                as Cricket, Football or Squash.
+                as Cricket, Football or Squash. There is one version of
+                this skill for each different sport. If you wish, you may
+                take a generic <e>Sport</e> skill, which all others default
+                to (i.e., you always halve your roll when trying something
+                in a particular sport).
             </para>
         </description>
 
@@ -547,8 +542,7 @@
 
     <skill name="Lip reading" type="standard">
         <group>Social</group>
-
-        <short>Understanding people by reading their lips.</short>
+        <short>Understanding speech by reading lips.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -634,7 +628,6 @@
 
     <skill name="Musician" type="standard">
         <group>Artistic</group>
-
         <short>Playing musical instruments.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -652,9 +645,7 @@
 
     <skill name="Dance" type="standard">
         <group>Artistic</group>
-
         <default>Athletics</default>
-
         <short>Dancing with skill and grace.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -726,7 +717,6 @@
 
     <skill name="Calligraphy" type="standard">
         <group>Artistic</group>
-
         <short>Writing beautifully.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -762,8 +752,8 @@
 
         <examples>
             <example target="10">
-                Knowledge that everyone knows, such as who the ruler is,
-                to names of major cities.
+                Knowledge that everyone knows, such as who the ruler is
+                to the names of major cities.
             </example>
         </examples>
     </skill>
@@ -827,7 +817,8 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge of the past, especially the last few hundred
-                years. Based on intelligence.
+                years. Based on intelligence. By default, assumes the
+                history of your own culture.
             </para>
         </description>
     </skill>
