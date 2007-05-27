@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.13 $</version>
-            <date>$Date: 2007-03-10 22:26:37 $</date>
+            <version>$Revision: 1.14 $</version>
+            <date>$Date: 2007-05-27 10:45:52 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -1019,13 +1019,15 @@
                         If you have an automatic or semi-automatic weapon
                         then you can fire it multiple times in a single
                         round at the same target. This is not burst fire,
-                        but separate squeezes of the trigger.
+                        but separate squeezes of the trigger. Each extra
+                        shot increases the fumble chance for all shots by 1.
                     </para>
 
                     <para>
-                        For each shot after the first, add a cumulative
-                        recoil penalty for the weapon. If the penalty is
-                        -5, then the 2nd shot is at -5, the 3rd at -10 etc.
+                        If the weapon has a recoil penalty, then each shot
+                        after the first gains a cumulative recoil penalty.
+                        If the penalty is -5, then the 2nd shot is at -5,
+                        the 3rd at -10 etc.
                         The number of shots you are firing does not need
                         to be declared until you actually shoot, but must
                         be done before the first shot. Each shot is
@@ -1034,7 +1036,8 @@
 
                     <para>
                         You can fire as many shots up to the Rate of Fire
-                        of the weapon. If the number exceeds your skill,
+                        of the weapon, or 10, whichever is the least.
+                        If the number exceeds your skill,
                         then there is a further -10 that applies to
                         <e>all</e> shots that round per shot over your
                         skill. If your skill is zero, you're at a large
@@ -1123,7 +1126,7 @@
                 </sect3>
 
                 <sect3>
-                    <title>Three Shots (firearms)</title>
+                    <title>Three Round Burst (firearms)</title>
 
                     <para>
                         Some modern automatic firearms have an option to
@@ -1131,6 +1134,11 @@
                         this is treated as an attack. It does not use the
                         normal automatic fire rules, but on a successful
                         hit any wounds are doubled.
+                    </para>
+
+                    <para>
+                        You may make as many 3 round burts as you could
+                        normally make automatic bursts.
                     </para>
                 </sect3>
             </sect2>

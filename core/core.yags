@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.59 $</version>
-            <date>$Date: 2007-04-01 21:56:38 $</date>
+            <version>$Revision: 1.60 $</version>
+            <date>$Date: 2007-05-27 10:45:52 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -792,61 +792,69 @@
                         attribute will be able to get by with less skill.
                     </para>
 
+                    <para>
+                        Most tasks will be against a fixed target number. If
+                        you are competing against another character, then
+                        they get a skill check with a modifier. The modifier
+                        is given in parenthesis below, and adds to the
+                        other person's check.
+                    </para>
+
                     <targetlist targetFirst="false" bold="true">
                         <title>Task Difficulties</title>
 
                         <valueLabel>Type of Task</valueLabel>
                         <targetLabel>Target</targetLabel>
 
-                        <item target="10" value="Very easy.">
+                        <item target="10 (-10)" value="Very easy.">
                             Such a task can be achieved by a
                             person with little or no skill with
                             a good chance of success. A
                             professional will always succeed.
                         </item>
-                        <item target="15" value="Easy.">
+                        <item target="15 (-5)" value="Easy.">
                             Anyone with a small amount of skill
                             will be able to achieve this with a
                             good chance of success, though it will
                             be difficult for someone without any
                             training at all.
                         </item>
-                        <item target="20" value="Moderate.">
+                        <item target="20 (+0)" value="Moderate.">
                             Such tasks can be achieved without difficulty
                             by a professional in ideal conditions. Those
                             without proper training can find it difficult
                             however.
                         </item>
-                        <item target="25" value="Challenging.">
+                        <item target="25 (+5)" value="Challenging.">
                             People with less than professional
                             level of skill will find it hard to
                             succeed, and it is out of league of
                             someone with only basic familiarity.
                         </item>
-                        <item target="30" value="Difficult.">
+                        <item target="30 (+10)" value="Difficult.">
                             Such tasks require a highly skilled
                             person. Anyone with less than
                             professional competence will always
                             fail, and even professionals will be
                             hard pressed.
                         </item>
-                        <item target="40" value="Very difficult.">
+                        <item target="40 (+20)" value="Very difficult.">
                             A master of the skill can achieve such tasks
                             with confidence, others will fail. About the
                             highest level of difficulty under normal
                             circumstances.
                         </item>
-                        <item target="50" value="Extreme.">
+                        <item target="50 (+30)" value="Extreme.">
                             A very difficult task under poor conditions.
                         </item>
-                        <item target="60" value="Heroic.">
+                        <item target="60 (+40)" value="Heroic.">
                             Truly heroic.
                         </item>
-                        <item target="75" value="Sheer folly.">
+                        <item target="75 (+55)" value="Sheer folly.">
                             Someone with superhuman level of skill will be
                             hard pressed to achieve this difficulty.
                         </item>
-                        <item target="100" value="Absurd.">
+                        <item target="100 (+80)" value="Absurd.">
                             Well beyond what most people could achieve.
                             Above average attributes are required to have
                             even a chance of success.
@@ -854,7 +862,7 @@
                     </targetlist>
 
                     <para>
-                        Tasks above very difficult will be very rare,
+                        Tasks above <e>Very difficult</e> will be very rare,
                         and often because of less than perfect
                         conditions, rather than the nature of the
                         task itself.
@@ -1238,7 +1246,7 @@
             </sect2>
         </sect1>
 
-        <sect1 format="wide">
+        <sect1 id="gpl">
             <title>GNU GENERAL PUBLIC LICENSE</title>
 
             <para>

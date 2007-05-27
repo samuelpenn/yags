@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.31 $</version>
-            <date>$Date: 2007-04-22 21:30:03 $</date>
+            <version>$Revision: 1.32 $</version>
+            <date>$Date: 2007-05-27 10:45:52 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -184,7 +184,7 @@
                 </sect3>
 
                 <sect3>
-                    <title>Techniques</title>
+                    <title>Speciality Techniques</title>
 
                     <para>
                         Techniques are specialities bought within a
@@ -862,20 +862,64 @@
                 </sect3>
 
                 <sect3>
-                    <title>Techniques</title>
+                    <title>Skill Techniques</title>
 
                     <para>
-                        <e>Techniques</e> are advantages and are described
-                        in full in the <s>Advantages</s> article.
+                        A <e>Technique</e> is a specialisation of a skill,
+                        and may provide bonuses or allow some particular
+                        special action to be attempted. A skill may have
+                        several techniques associated with it, and some
+                        techniques can be used with more than one skill.
+                        In the latter case, the technique only needs to
+                        be purchased once - it can then be used with any
+                        skill which uses it, as long as the skill is of
+                        sufficient level.
                     </para>
 
                     <para>
-                        Some skills have techniques associated with them.
-                        When the skill reaches a certain level (the level
-                        of the technique) then the technique may be
-                        purchased as an advantage. Techniques generally
-                        allow the skill to be used in a different way, or
-                        give bonuses to certain uses of the skill.
+                        A technique has a cost associated with it, which is
+                        the number of experience points which need to be
+                        spent to buy it. A level 6 technique costs 6 points
+                        to buy. The cost of the technique is also the
+                        minimum skill level that must be achieved before
+                        the technique can be purchased. If you do not have
+                        the required skill at a sufficient level, then the
+                        technique can't be bought.
+                    </para>
+
+                    <para>
+                        Finally, a technique may have a prerequisite. These
+                        are the techniques which must be known before this
+                        technique can be learnt.
+                    </para>
+
+                    <example title="Buying a technique">
+                        <para>
+                            <e>Hard to kill</e> is a level 2 technique
+                            which is based on the <e>Brawl</e> skill. To
+                            buy it, you must have a brawl of at least 2,
+                            at which point you can spend 2 points to buy
+                            <e>Hard to kill</e>.
+                        </para>
+
+                        <para>
+                            <e>Ignore pain</e> is a level 4 technique
+                            which is based on <e>Brawl</e> and which has
+                            <e>Hard to kill</e> as a prequisite. If you
+                            have a <e>Brawl</e> skill of 4 or more, and
+                            have already purchased <e>Hard to kill</e>,
+                            then you can spend 4 points to buy
+                            <e>Ignore Pain</e>.
+                        </para>
+                    </example>
+
+                    <para>
+                        Some techniques will be based on a skill group
+                        rather than a skill. In this case the technique
+                        can be purchased when <e>any</e> skill in that
+                        group reaches the technique's level, but it can
+                        only be used with those skills of sufficient
+                        level.
                     </para>
                 </sect3>
             </sect2>
@@ -999,8 +1043,47 @@
                     <y:techniques>techniques/combat-techniques.yags</y:techniques>
                 </y:import-skills>
             </sect2>
-        </sect1>
 
+            <sect2>
+                <title>Techniques</title>
+
+                <para>
+                    Techniques represent specialist training in a particular
+                    use of a skill. They can provide a bonus in certain
+                    situations, or allow you to perform an action which
+                    wouldn't otherwise be possible.
+                </para>
+
+                <note title="Optional techniques">
+                    <para>
+                        Techniques can be viewed as an optional part of
+                        the game system. They add a lot of flavour and
+                        detail to the skill system, and provide a means
+                        to differentiate between characters who simply
+                        have raw talent (high attributes and basic skill)
+                        and those how are highly trained (high skill
+                        with a lot of techniques). However, there can be
+                        quite a few to keep track of.
+                    </para>
+
+                    <para>
+                        If you wish a simpler system, then ignoring
+                        techniques is perfectly possible without causing
+                        major problems. Adding them in later is also
+                        possible, simply by allowing players to start
+                        purchasing them.
+                    </para>
+                </note>
+
+                <para>
+                    The standard techniques are available below.
+                </para>
+
+                <y:import-advantages type="technique" tree="true">
+                    <y:adv>techniques/techniques.yags</y:adv>
+                </y:import-advantages>
+            </sect2>
+        </sect1>
     </body>
 </article>
 
