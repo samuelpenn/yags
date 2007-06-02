@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.2 $
-    Date:    $Date: 2007-06-02 17:13:43 $
+    Version: $Revision: 1.3 $
+    Date:    $Date: 2007-06-02 22:09:50 $
 
     Categories
 
@@ -99,6 +99,7 @@
         <importance>3</importance>
         <availability>3</availability>
         <techLevel>12</techLevel>
+        <legality>1</legality>
 
         <short>Electronic tools for breaking secure locks.</short>
         <description>
@@ -124,6 +125,7 @@
         <importance>3</importance>
         <availability>3</availability>
         <techLevel>12</techLevel>
+        <legality>1</legality>
 
         <short>Electronic tools for breaking secure locks.</short>
         <description>
@@ -135,20 +137,21 @@
         </description>
 
         <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <load>0</load>
+            <load>1</load>
             <skill name="Security systems" bonus="+20"/>
         </tool>
 
-        <weight>250</weight>
+        <weight>1500</weight>
         <material>plastic</material>
         <cost>15000</cost>
     </item>
 
     <item name="Lock picks">
-        <category>Medical</category>
+        <category>Spy</category>
         <importance>3</importance>
-        <availability>3</availability>
+        <availability>1</availability>
         <techLevel>12</techLevel>
+        <legality>1</legality>
 
         <short>High tech lock picks.</short>
         <description>
@@ -170,6 +173,33 @@
         <weight>150</weight>
         <material>plastic</material>
         <cost>750</cost>
+    </item>
+
+    <item name="Medical scanner">
+        <category>Medical</category>
+        <importance>3</importance>
+        <availability>2</availability>
+        <techLevel>12</techLevel>
+        <legality>5</legality>
+
+        <short>Handheld medical scanner.</short>
+        <description>
+            <para>
+                Provides information on the person scanned, including
+                basic information such as heart rate, DNA profile,
+                blood pressure and type. Given 5 minutes and a blood
+                sample it can detect most known diseases or poisons.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>0</load>
+            <skill name="Medicine" bonus="+10"/>
+        </tool>
+
+        <weight>250</weight>
+        <material>plastic</material>
+        <cost>5000</cost>
     </item>
 
     <item name="Grav belt">
@@ -426,6 +456,7 @@
         <category>Media</category>
         <importance>2</importance>
         <availability>2</availability>
+        <techLevel>12</techLevel>
         <legality>2</legality>
 
         <cost>5000</cost>
@@ -449,6 +480,123 @@
             <load>2</load>
             <skill name="RPV Operation" bonus="+15"/>
         </tool>
+    </item>
+
+    <item name="Mood cloth">
+        <category>Clothing</category>
+        <importance>2</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+        <legality>5</legality>
+
+        <cost>500</cost>
+        <weight>500</weight>
+
+        <short>Clothing which adjusts to you.</short>
+        <description>
+            <para>
+                Mood cloth is a type of clothing which is capable of shifting
+                its colour and style depending on your mood. The way it behaves
+                varies from type to type, but it determines your mood through
+                sensors in contact with your skin. It can change colour, loosen,
+                tighten, and even grow and shrink (using tightly woven
+                nano filaments which can stretch out, or curl up).
+            </para>
+
+            <para>
+                Normally available as business suits, party dresses, swimwear or
+                just standard casual clothing. Some types are networked, and can
+                react to the mood of those around you.
+            </para>
+        </description>
+
+        <task xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Computer hacking" score="50">
+                To hack appearance of networked models.
+            </skill>
+            <skill name="Computer hacking" score="80">
+                Force clothing to exceed safe parameters (causing discomfort,
+                or breaking itself).
+            </skill>
+        </task>
+    </item>
+
+    <item name="Spray cloth">
+        <category>Clothing</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <techLevel>12</techLevel>
+        <legality>4</legality>
+
+        <cost>200</cost>
+        <weight>200</weight>
+
+        <short>Spray on clothing for any occassion.</short>
+        <description>
+            <para>
+                Available normally in a can, onced sprayed on naked skin it
+                toughens into a flexible, skin-tight gel that can keep you
+                warm and covered. Available in anything from swimwear to
+                cold weather clothing forms, it can be used either for
+                emergencies or as a fashion statement. May be transparent
+                or coloured. Some varieties provide a small amount of
+                armour. Method of removal depends on brand, but can be
+                anything from plain water to special chemicals or just
+                ripping it off.
+            </para>
+
+            <para>
+                Also available in 'pill' form, just add water to make the
+                gel. Normally hardens within a minute of contact with skin.
+                Ten times cost for electronic version which can display
+                moving video. Ten times <e>that</e> for chameleon coating.
+            </para>
+        </description>
+
+        <task xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Computer hacking" score="50">
+                To control what is displayed on video models.
+            </skill>
+        </task>
+    </item>
+
+    <item name="Fashion skin">
+        <category>Clothing</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <techLevel>12</techLevel>
+        <legality>4</legality>
+
+        <cost>500</cost>
+        <weight>200</weight>
+
+        <short>Spray on fake textured skin.</short>
+        <description>
+            <para>
+                For when the latest fashion requires a certain look, changeling
+                skin provides a quick and easy way to change your appearance.
+                Sprayed onto your skin, it forms into a gell that grafts onto
+                your skin providing a colouring and texture of your desires.
+                Once set (takes about 15 minutes), it lasts from a few hours
+                to a couple of days depending on how active you are.
+            </para>
+
+            <para>
+                It can increase your build, give you breasts, make you look
+                older or younger, lighter or darker. In most locations it is
+                illegal to copy another person without their permission.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Disguise" bonus="+25"/>
+        </tool>
+
+        <task xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Medicine" score="20">
+                Detect the fake skin on an examination.
+            </skill>
+        </task>
     </item>
 </equipment>
 
