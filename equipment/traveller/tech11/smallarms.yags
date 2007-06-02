@@ -1,0 +1,502 @@
+<?xml version="1.0"?>
+
+<!--
+
+    General equipment lists.
+
+    Copyright 2007 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted provided that the following
+    conditions are met:
+
+    1) Redistributions of any source code (e.g. XML) must retain the
+    above copyright notice, this list of conditions and the following
+    disclaimer.
+
+    2) Redistributions in compiled form (transformed to other DTDs,
+    converted to PDF, PostScript, RTF and other formats) must
+    reproduce the above copyright notice, this list of conditions
+    and the following disclaimer in the documentation and/or other
+    materials provided with the distribution.
+
+    THIS CONTENT IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+    OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DIRECT,
+    INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+    STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+    ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
+    OF THE POSSIBILITY OF SUCH DAMAGE.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-06-02 17:38:00 $
+
+
+    TL11 Small weapons. Mostly gauss.
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="IARMS 420 Gauss Pistol">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>11</techLevel>
+        <legality>3</legality>
+        <weight>650</weight>
+        <cost>300</cost>
+
+        <short>4mm guass pistol.</short>
+
+        <description>
+            <para>
+                The standard backup sidearm created by Instellarms
+                which has been issued to Imperium forces for the last
+                few hundred years. It is highly reliable, lightweight
+                and cheap, but lacks the stopping power often required
+                against armoured troops.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+6</attack><damage>23</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>50</short><medium>100</medium><long>200</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>1</load><reach>0</reach>
+            <capacity>20</capacity><rof>10</rof><recoil>-2</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="IARMS 440 SMG">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>11</techLevel>
+        <legality>2</legality>
+        <weight>1900</weight>
+        <cost>2500</cost>
+
+        <short>Gauss 4mm sub-machine gun.</short>
+        <description>
+            <para>
+                This is actually little more than than the 420, but with
+                a slightly longer barrel and hand grip, and tweaked to
+                allow automatic fire. It uses the same ammunition as the
+                IARMS 420 pistol, but the longer acceleration chamber
+                provides a slightly higher muzzle velocity.
+            </para>
+
+            <para>
+                Officially, the Imperium issues it to guards and sometimes
+                commandos for building clearance, since it's size makes it
+                well suited for close combat. However, the "Four-Forty" is
+                often found in the hands of gangs, criminals, private
+                security forces and anyone else who wants a small automatic
+                weapon and isn't expecting to face armoured opposition.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+6</attack><damage>25</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>250</short><medium>500</medium><long>1500</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>2</load><reach>1</reach>
+            <capacity>40</capacity><rof>30</rof><recoil>-2</recoil>
+            <properties>
+                <missile/><firearm/><automatic/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="KG56S Gauss Rifle">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>11</techLevel>
+        <legality>3</legality>
+        <weight>2800</weight>
+        <cost>3000</cost>
+
+        <short>4mm gauss rifle.</short>
+        <description>
+            <para>
+                Semi-automatic gauss rifle, the standard weapon of the
+                Imperial Army, and available to civilians as well. It is
+                not fully automatic, but is capable of selective fire.
+                Some governments only allow modified versions which have
+                the selective fire capability removed.
+            </para>
+        </description>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+10</attack><damage>30</damage>
+                <range>
+                    <increment>30</increment>
+                    <short>500</short><medium>1000</medium><long>2500</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>3</load><reach>2</reach>
+            <capacity>40</capacity><rof>10</rof><recoil>-2</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="KG56A Assualt Rifle">
+        <category>Weapon</category>
+        <importance>3</importance><availability>2</availability>
+        <techLevel>11</techLevel>
+        <legality>2</legality>
+        <weight>2800</weight>
+        <cost>3000</cost>
+
+        <short>4mm automatic gauss rifle.</short>
+        <description>
+            <para>
+                This is a slightly modified form of the KG56S rifle, with
+                the capability of fully automatic fire. It is sometimes
+                favoured by infantry, though military command tends to
+                prefer the selective fire varient. It's availability to
+                civilians is often limited.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+9</attack><damage>30</damage>
+                <range>
+                    <increment>30</increment>
+                    <short>500</short><medium>1000</medium><long>2000</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>3</load><reach>2</reach>
+            <capacity>40</capacity><rof>40</rof><recoil>-2</recoil>
+            <properties>
+                <missile/><firearm/><automatic/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="RI-8 Battle Rifle">
+        <category>Weapon</category>
+        <importance>3</importance><availability>2</availability>
+        <techLevel>11</techLevel><legality>2</legality>
+        <weight>3900</weight><cost>3000</cost>
+
+        <short>Heavy gauss battle rifle.</short>
+        <description>
+            <para>
+                This is a heavy 7mm battle rifle, with greater stopping power
+                than the more common 4mm assualt rifles. It is preferred
+                in use against heavy infantry. It is somewhat longer, is
+                heavier, and carries fewer rounds than its lighter
+                counterparts, but is more useful against heavy armour.
+                It also has greater range.
+            </para>
+
+            <para>
+                The battle rifle is produced by Rhylanor Industries in the
+                Spinward Marches. It is liked by infantry for its stopping
+                power and high effective range, though disliked by Administration
+                since it doesn't use standard ammunition.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+10</attack><damage>35</damage>
+                <range>
+                    <increment>30</increment>
+                    <short>700</short><medium>1500</medium><long>4000</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>4</load><reach>2</reach>
+            <capacity>30</capacity><rof>30</rof><recoil>-2</recoil>
+            <properties>
+                <missile/><firearm/><automatic/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Grenade Launcher, 20mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>10</techLevel>
+        <weight>-</weight>
+        <cost>-</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+5</attack><damage>40</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>50</short><medium>100</medium><long>150</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>0</load><reach>1</reach>
+            <capacity>5</capacity><rof>5</rof><recoil>-3</recoil>
+            <properties>
+                <missile/><semiauto/><explosive score="2"/><heavy/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+
+    <item name="TXR 98 Carbine">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>11</techLevel><legality>2</legality>
+        <weight>2000</weight><cost>2200</cost>
+
+        <short>Short automatic rifle.</short>
+        <description>
+            <para>
+                A fully automatic weapon in a slightly designed to be smaller
+                than a rifle and delivering less damage. It is designed for
+                use in close quarters combat, or where weight and size
+                constraints apply. It uses the same ammunition as the other
+                4mm gauss rifles.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+8</attack><damage>27</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>400</short><medium>800</medium><long>1600</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>2</load><reach>2</reach>
+            <capacity>30</capacity><rof>30</rof><recoil>-3</recoil>
+            <properties>
+                <missile/><firearm/><automatic/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+
+    <item name="Railgun, 13mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>11</techLevel>
+        <legality>1</legality>
+        <weight>5000</weight>
+        <cost>7500</cost>
+        <short>Very high power sniper rifle.</short>
+
+        <description>
+            <para>
+                The TL12 railgun is the probably the peak of man portable
+                kinetic energy weapons. It fires a 13mm round at very high
+                velocity over a very long distance, and is capable of
+                getting through most armour, including full battledress.
+            </para>
+
+            <para>
+                They are normally used by snipers, not being terribly useful
+                in close combat due to their length and weight. On some
+                worlds range is actually limited by the horizon. The rounds
+                are fin stabalised on leaving the rifle, providng a degree
+                of accuracy only bested by laser weapons.
+            </para>
+        </description>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+12</attack><damage>55</damage>
+                <range>
+                    <increment>40</increment>
+                    <short>2000</short><medium>4000</medium><long>8000</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>5</load><reach>3</reach>
+            <capacity>8</capacity><rof>3</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/><heavy/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Tributus P4 Avenger">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>11</techLevel>
+        <legality>1</legality>
+        <weight>5000</weight>
+        <cost>7500</cost>
+        <short>Single shot snipers rifle.</short>
+
+        <description>
+            <para>
+                This is a heavy snipers rifle which is basically a 13mm
+                railgun designed for single shot, high accuracy work. It
+                is preferred by some snipers due to the higher accuracy
+                afforded by the simpler firing mechanism.
+            </para>
+        </description>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+14</attack><damage>55</damage>
+                <range>
+                    <increment>40</increment>
+                    <short>2000</short><medium>4000</medium><long>8000</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>5</load><reach>3</reach>
+            <capacity>1</capacity><rof>1</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><heavy/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="JMS-HX PPG rifle">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>11</techLevel>
+        <legality>3</legality>
+
+        <short>Rapid fire plasma rifle.</short>
+
+        <description>
+            <para>
+                The most popular of the early plasma rifles, it suffers from
+                lack of range and low penetration against armour. It's main
+                advantage over rivals is that it uses an accelerated plasma
+                shot giving a bolt velocity comparable to projectile weapons.
+            </para>
+        </description>
+
+        <weight>4200</weight>
+        <material>metal</material>
+        <cost>6000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Energy</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+
+            <combat>
+                <attack>+5</attack>
+                <damage>25</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>250</short>
+                    <medium>500</medium>
+                    <long>750</long>
+                </range>
+            </combat>
+
+            <strength>2</strength><load>4</load><reach>2</reach>
+            <capacity>60</capacity><rof>20</rof><recoil>-1</recoil>
+
+            <properties>
+                <missile/><firearm/><automatic/><plasma/><light/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Orion Plasma Pistol">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>11</techLevel>
+        <legality>3</legality>
+
+        <short>Plasma pistol.</short>
+
+        <description>
+            <para>
+                One of the better plasma pistols, the <e>Orion</e> was
+                however pretty much a failure in the marketplace. It's
+                short range, inaccuracy and poor stopping power severely
+                limited its use as a military weapon. However, it found
+                a niche in 'live' wargames since it was unlikely to kill,
+                but hurt like hell.
+            </para>
+        </description>
+
+        <weight>800</weight>
+        <material>metal</material>
+        <cost>1400</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Energy</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+
+            <combat>
+                <attack>+4</attack>
+                <damage type="mixed">24</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>150</short>
+                    <medium>300</medium>
+                    <long>450</long>
+                </range>
+            </combat>
+
+            <strength>2</strength><load>0.5</load><reach>0</reach>
+            <capacity>15</capacity><rof>5</rof><recoil>0</recoil>
+
+            <properties>
+                <missile/><firearm/><semiauto/><plasma/><light/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+</equipment>
+
+
