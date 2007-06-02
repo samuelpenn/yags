@@ -32,16 +32,16 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2007-03-25 19:33:58 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2007-06-02 17:13:43 $
 
     Categories
 
-    Adventuring     The sort of things only adventurers have.
-    Rogue           Thieves/assassins tools and the like.
-    Food            Food and drink.genre
-    Animals         An animal which isn't livestock - horses and dogs.
-    Livestock       Animals bred for food, such as pigs and cows.
+    Medical     Drugs and stuff.
+    Armour      Armour
+    Weapons     Weapons
+    Media       Recording devices.
+    Spy         Stealth/spy gadgets.
 
     Importance
     0               Only include in complete lists.
@@ -172,12 +172,143 @@
         <cost>750</cost>
     </item>
 
+    <item name="Grav belt">
+        <category>Clothing</category>
+        <importance>3</importance>
+        <availability>2</availability>
+        <techLevel>12</techLevel>
+
+        <short>A harness that provides contra-grav.</short>
+        <description>
+            <para>
+                A harness, power supply and contra-grav generator that
+                provides enough lift to carry about 150kg at about
+                5m/s. It has a maximum height of about 30m. Halve
+                speed and altitude for weights up to 250kg.
+            </para>
+
+            <para>
+                Though bulky, it could be worn under a heavy coat
+                or similar clothing.
+            </para>
+        </description>
+
+        <weight>5000</weight>
+        <cost>2500</cost>
+    </item>
+
+    <item name="Ghost suit">
+        <category>Clothing</category>
+        <importance>2</importance>
+        <availability>1</availability>
+        <techLevel>12</techLevel>
+        <legality>1</legality>
+
+        <short>Invisibility suit.</short>
+        <description>
+            <para>
+                A suit of clothing designed to render the wearer
+                invisible. It is reasonably tight fitting, and
+                quite thick, but provides <e>excellent</e>
+                camouflage to anyone wearing it.
+            </para>
+        </description>
+
+        <weight>1500</weight>
+        <cost>10000</cost>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>2</load>
+            <modifier name="Effective visual range" score="x20"/>
+        </tool>
+    </item>
+
+    <item name="Chameleon suit">
+        <category>Spy</category>
+        <importance>2</importance>
+        <availability>1</availability>
+        <techLevel>12</techLevel>
+        <legality>2</legality>
+
+        <short>Instant camouflage suit.</short>
+        <description>
+            <para>
+                A suit of clothing that automatically adjusts its
+                colouring to match that of the background. This provides
+                a level of camouflage that can only be bested by either
+                full ghosting or dedicated camouflage nets.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <cost>2500</cost>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>1</load>
+            <modifier name="Effective visual range" score="x5"/>
+        </tool>
+    </item>
+
+    <item name="Holographic Recorder">
+        <category>Media</category>
+        <importance>2</importance>
+        <availability>1</availability>
+        <techLevel>12</techLevel>
+        <legality>5</legality>
+
+        <short>3D Recorder.</short>
+        <description>
+            <para>
+                A recording device capable of recording a scene in 3D as
+                a film. It is placed at the centre of the area to be recorded,
+                and everything within 10m and in line of sight is recorded. A
+                typical recording device can hold up to 6 hours of video.
+            </para>
+
+            <para>
+                The device is capable of seeing being objects to some extent.
+                A person will not block line of sight, though a wall will.
+            </para>
+        </description>
+
+        <weight>250</weight>
+        <cost>500</cost>
+    </item>
+
+    <item name="PDA">
+        <category>Media</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>12</techLevel>
+        <legality>5</legality>
+
+        <short>Personal organiser, phone and recorder.</short>
+        <description>
+            <para>
+                A small device capable of communicating using full audio
+                and 3D video over any suitable wireless infrastructure.
+                It is capable of recording events within about 1m of it,
+                has standard 2D photographic capability and provides
+                access to the world's computer networks.
+            </para>
+
+            <para>
+                The more expensive models will be slighter larger and
+                run a simplified Turing Personality which is capable of
+                acting as a personal assistant.
+            </para>
+        </description>
+
+        <weight>100</weight>
+        <cost>150</cost>
+    </item>
 
     <item name="Stims">
         <category>Medical</category>
         <importance>2</importance>
         <availability>3</availability>
         <techLevel>12</techLevel>
+        <legality>4</legality>
 
         <cost>150</cost>
 
@@ -210,6 +341,7 @@
         <importance>2</importance>
         <availability>3</availability>
         <techLevel>12</techLevel>
+        <legality>6</legality>
 
         <cost>75</cost>
 
@@ -235,6 +367,7 @@
         <importance>2</importance>
         <availability>2</availability>
         <techLevel>12</techLevel>
+        <legality>2</legality>
 
         <cost>500</cost>
 
@@ -258,6 +391,64 @@
                 <bonus>1</bonus>
             </adder>
         </drug>
+    </item>
+
+    <item name="Changeling Net">
+        <category>Spy</category>
+        <importance>2</importance>
+        <availability>1</availability>
+        <legality>1</legality>
+
+        <cost>25000</cost>
+        <weight>2500</weight>
+
+        <short>Holographic disguise system.</short>
+
+        <description>
+            <para>
+                By projecting a holographic display over the body of the
+                wearer, this device provides a truly amazing disguise
+                capability. It cannot fake touch, DNA or smell, but will
+                fool most people. It is only capable of producing a good
+                disguise of a person who is at least the size of the
+                wearer - it cannot mask a person if they are tool large,
+                but can make them look larger (about Size +1).
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>2</load>
+            <skill name="Disguise" bonus="+50"/>
+        </tool>
+    </item>
+
+    <item name="Eye in the sky">
+        <category>Media</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <legality>2</legality>
+
+        <cost>5000</cost>
+        <weight>2000</weight>
+
+        <short>Contra-grav flying camera.</short>
+
+        <description>
+            <para>
+                A remote controlled camera drone which is able to record
+                audio and visual in locations too difficult for a person
+                to easily get to. It comes equipped with a remote for
+                controlling it and recording what it can see. It uses
+                contra-grav for movement, has a ceiling of 100m and a
+                top flight speed of 50km/h. Its normal flight time is
+                4 hours.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>2</load>
+            <skill name="RPV Operation" bonus="+15"/>
+        </tool>
     </item>
 </equipment>
 

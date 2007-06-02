@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2007-03-25 19:33:58 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2007-06-02 17:13:43 $
 
     Categories
 
@@ -73,6 +73,7 @@
         <importance>3</importance>
         <availability>3</availability>
         <techLevel>12</techLevel>
+        <legality>3</legality>
         <short>A light combat vest.</short>
 
         <description>
@@ -108,6 +109,7 @@
         <importance>3</importance>
         <availability>3</availability>
         <techLevel>10</techLevel>
+        <legality>3</legality>
 
         <short>Light bulletproof cloth undergarment.</short>
 
@@ -144,8 +146,9 @@
     <item name="Combat helmet">
         <category>Armour</category>
         <importance>3</importance>
-        <availability>3</availability>
+        <availability>2</availability>
         <techLevel>12</techLevel>
+        <legality>2</legality>
 
         <short>A hard combat helmet.</short>
 
@@ -183,8 +186,9 @@
     <item name="Light combat armour">
         <category>Armour</category>
         <importance>3</importance>
-        <availability>3</availability>
+        <availability>2</availability>
         <techLevel>12</techLevel>
+        <legality>2</legality>
 
         <short>A full suit of combat armour</short>
 
@@ -218,13 +222,12 @@
         </armour>
     </item>
 
-
-
     <item name="Heavy combat armour">
         <category>Armour</category>
         <importance>3</importance>
-        <availability>3</availability>
+        <availability>2</availability>
         <techLevel>12</techLevel>
+        <legality>1</legality>
 
         <short>A full suit of heavy combat armour</short>
         <description>
@@ -274,13 +277,26 @@
                 <vitals score="5"/>
             </properties>
         </armour>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <modifier name="Chameleon range" score="x5"/>
+        </tool>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Awareness" attribute="+2"/>
+        </tool>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Athletics" attribute="+2"/>
+        </tool>
     </item>
 
     <item name="Battledress">
         <category>Armour</category>
         <importance>3</importance>
-        <availability>3</availability>
+        <availability>1</availability>
         <techLevel>12</techLevel>
+        <legality>0</legality>
 
         <short>Heavy powered armour</short>
         <description>
@@ -322,8 +338,71 @@
                 <vitals score="10"/>
             </properties>
         </armour>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <modifier name="Chameleon range" score="x5"/>
+        </tool>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Awareness" attribute="+2"/>
+        </tool>
     </item>
 
+    <item name="Infiltration armour">
+        <category>Armour</category>
+        <importance>2</importance>
+        <availability>1</availability>
+        <techLevel>12</techLevel>
+        <legality>0</legality>
+
+        <short>A full suit of ghost combat armour</short>
+        <description>
+            <para>
+                This is similar to the heavy combat armour normally given
+                to Imperium infantry, but has the added benefit of full
+                ghosting.
+            </para>
+        </description>
+
+        <weight>4500</weight>
+        <material>plastic</material>
+        <cost>35000</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+13</protection>
+            <load>2</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <legs/>
+                <head/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <heavy/>
+                <vitals score="5"/>
+            </properties>
+        </armour>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <modifier name="Ghost range" score="x20"/>
+        </tool>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <modifier name="Stealth" score="+10"/>
+        </tool>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Awareness" attribute="+2"/>
+        </tool>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Athletics" attribute="+2"/>
+        </tool>
+    </item>
 
 </equipment>
 

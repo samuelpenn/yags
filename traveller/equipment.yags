@@ -19,8 +19,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.8 $</version>
-            <date>$Date: 2007-03-26 22:00:36 $</date>
+            <version>$Revision: 1.9 $</version>
+            <date>$Date: 2007-06-02 17:13:43 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -47,6 +47,82 @@
             </para>
 
             <sect2>
+                <title>Technology Levels</title>
+
+                <para>
+                    Costs are listed for the TL of introduction for any
+                    item. At one TL beyond that, halve the cost. At two
+                    TLs, the cost is one third. Beyond that, cost may
+                    actually go up due to the item having been long since
+                    replaced by something else. If there aren't better
+                    alternatives, then the cost is no better than a third.
+                </para>
+
+                <sect3>
+                    <title>TL 10</title>
+
+                    <para>
+                        The early Third Imperium was considered TL 10.
+                        Contra-grav is rare, but stardrives are common,
+                        though mostly limited to J1 or J2.
+                    </para>
+
+                    <para>
+                        Gauss weapons are the norm.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>TL 11</title>
+
+                    <para>
+                        This covers the Third Imperium from about 500 to
+                        about 1000. There are many TL 11 worlds within the
+                        Imperium. They are slightly backwards compared to
+                        the highest levels of Imperium technology, but it
+                        is mostly a level of degree.
+                    </para>
+
+                    <para>
+                        Contra-grav is common, but wheeled and railed travel
+                        is still the norm. Computer networks span the world,
+                        and good medical technology is commonly available.
+                        Full regrowth is not possible, and some things still
+                        require cybernetic replacements.
+                    </para>
+
+                    <para>
+                        Most common weapons are gauss weapons, with plasma
+                        and laser weapons filling speciality roles.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>TL 12</title>
+
+                    <para>
+                        This is the technological level of the Imperium's
+                        military, and the highest level found commonly
+                        amongst its worlds. The Imperium is considered to
+                        have reached TL12 around the year 1000.
+                    </para>
+
+                    <para>
+                        Contra-grav is ubiquitous, turing personalities
+                        are found in many places, common stardrives can
+                        manage between J-3 and J-6.
+                    </para>
+
+                    <para>
+                        Guass weapons are beginning to give way to plasma
+                        and laser weapons, as the latter become more
+                        reliable, smaller and cheaper. Fusion weapons
+                        begin to become man-portable.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
                 <title>General Equipment</title>
 
                 <para>
@@ -54,8 +130,12 @@
                     aren't weapons, armour or vehicles.
                 </para>
 
-                <import-equipment style="full"
-                    href="../equipment/traveller/tech12/generic.yags"/>
+                <import-equipment style="full">
+                    <list>../equipment/traveller/tech9/generic.yags</list>
+                    <list>../equipment/traveller/tech10/generic.yags</list>
+                    <list>../equipment/traveller/tech11/generic.yags</list>
+                    <list>../equipment/traveller/tech12/generic.yags</list>
+                </import-equipment>
             </sect2>
 
             <sect2>
@@ -64,29 +144,42 @@
                 <sect3>
                     <title>Armour</title>
 
-                    <import-equipment style="full"
-                        href="../equipment/traveller/tech12/armour.yags"/>
+                    <import-equipment style="full">
+                        <list>../equipment/traveller/tech12/armour.yags</list>
+                    </import-equipment>
                 </sect3>
 
                 <sect3>
                     <title>Small arms</title>
 
-                    <import-equipment style="full"
-                        href="../equipment/traveller/tech12/smallarms.yags"/>
+                    <import-equipment style="full">
+                        <list>../equipment/traveller/tech9/smallarms.yags</list>
+                        <list>../equipment/traveller/tech10/smallarms.yags</list>
+                        <list>../equipment/traveller/tech11/smallarms.yags</list>
+                        <list>../equipment/traveller/tech12/smallarms.yags</list>
+                    </import-equipment>
                 </sect3>
 
                 <sect3>
                     <title>Heavy Weapons</title>
 
-                    <import-equipment style="full"
-                        href="../equipment/traveller/tech12/heavy-weapons.yags"/>
+                    <import-equipment style="full">
+                        <list>../equipment/traveller/tech9/heavy-weapons.yags</list>
+                        <list>../equipment/traveller/tech10/heavy-weapons.yags</list>
+                        <list>../equipment/traveller/tech11/heavy-weapons.yags</list>
+                        <list>../equipment/traveller/tech12/heavy-weapons.yags</list>
+                    </import-equipment>
                 </sect3>
 
                 <sect3>
                     <title>Melee Weapons</title>
 
-                    <import-equipment style="full"
-                        href="../equipment/traveller/tech12/melee.yags"/>
+                    <import-equipment style="full">
+                        <list>../equipment/traveller/tech9/melee.yags</list>
+                        <list>../equipment/traveller/tech10/melee.yags</list>
+                        <list>../equipment/traveller/tech11/melee.yags</list>
+                        <list>../equipment/traveller/tech12/melee.yags</list>
+                    </import-equipment>
                 </sect3>
             </sect2>
 
@@ -96,19 +189,109 @@
                 <sect3>
                     <title>Civilian</title>
 
-                    <import-equipment style="full"
-                        href="../equipment/traveller/tech12/vehicles/transport.yags"/>
+                    <import-equipment style="full">
+                        <list>../equipment/traveller/tech12/vehicles/transport.yags</list>
+                    </import-equipment>
                 </sect3>
 
                 <sect3>
                     <title>Military</title>
 
-                    <import-equipment style="full"
-                        href="../equipment/traveller/tech12/vehicles/tanks.yags"/>
+                    <import-equipment style="full">
+                        <list>../equipment/traveller/tech12/vehicles/tanks.yags</list>
+                    </import-equipment>
                 </sect3>
             </sect2>
         </sect1>
 
+        <sect1>
+            <title>Weapon and Armour Notes</title>
+
+            <sect2>
+                <title>Weapons</title>
+
+                <sect3>
+                    <title>Notes</title>
+
+                    <itemlist order="sort">
+                        <item name="Au">
+                            Fully automatic weapon, capable of firing multiple
+                            shots or burst fire.
+                        </item>
+
+                        <item name="Co-X">
+                            Damage effect is a cone, of X degrees. A single attack
+                            is made, and all within the cone get a defence.
+                        </item>
+
+                        <item name="Ex-X">
+                            Explosive damage. Does full damage to the target and
+                            those within X metres. Does mixed damage at -5 out to
+                            double X, and stun damage at -10 out to triple X.
+                        </item>
+
+                        <item name="Fi">
+                            Firearm. Missile weapon firing a high velocity round.
+                            Halves all armour which isn't rated as bullet proof.
+                            Quarters most defence rolls (except full defence).
+                        </item>
+
+                        <item name="Hv">
+                            Heavy weapon. Halves non-heavy bulletproof armour,
+                            ignores all weaker types of armour.
+                        </item>
+
+                        <item name="Li">
+                            Light weapon. Double the value of heavy or
+                            bulletproof armour (overrides the effects of
+                            being a firearm).
+                        </item>
+
+                        <item name="Lo-X">
+                            Weapon must be reloaded. X is number of rounds to reload.
+                        </item>
+
+                        <item name="Ls">
+                            Laser weapon, unaffected by wind, though may suffer
+                            in fog and thick atmospheres. Does not loose accuracy
+                            or suffer fumble increase at medium and long range.
+                            Counts as a firearm for defence rolls.
+                        </item>
+
+                        <item name="Pl">
+                            Plasma or fusion weapon. If it does damage against
+                            living targets then it does damage twice - once at
+                            full effectiveness, and a second time at one lower
+                            (normally mixed).
+                        </item>
+
+                        <item name="SA">
+                            Semi-automatic weapon, can fire multiple shots in a
+                            single round but is not capable of burst fire.
+                        </item>
+
+                        <item name="So">
+                            Sonic weapon, ignores all armour but very short
+                            ranged. It's base damage is halved at medium range
+                            and quartered at long range (instead of the normal
+                            damage modifiers).
+                        </item>
+
+                        <item name="TA">
+                            Automatic weapon that can fire automatic bursts of
+                            3 rounds as a single attack. Counts as a single
+                            attack, but any wounds caused are doubled.
+                        </item>
+
+                        <item name="Vc">
+                            Vehicle weapon. Against non-vehicle targets, completely
+                            ignores all soak unless heavy armour is worn, in which
+                            case the soak roll is merely halved.
+                        </item>
+                    </itemlist>
+                </sect3>
+            </sect2>
+        </sect1>
 
         <sect1 format="wide">
             <title>Weapons and Armour Tables</title>
@@ -123,74 +306,6 @@
                     sees in the battlefield.
                 </para>
 
-                <sect3>
-                    <title>Notes</title>
-
-                    <itemlist order="sort">
-                        <item name="Fi">
-                            Firearm. Missile weapon firing a high velocity round.
-                            Halves all armour which isn't rated as bullet proof.
-                            Quarters most defence rolls (except full defence).
-                        </item>
-
-                        <item name="Au">
-                            Fully automatic weapon, capable of firing multiple
-                            shots or burst fire.
-                        </item>
-
-                        <item name="SA">
-                            Semi-automatic weapon, can fire multiple shots in a
-                            single round but is not capable of burst fire.
-                        </item>
-
-                        <item name="Li">
-                            Light weapon. Double the value of heavy or
-                            bulletproof armour (overrides the effects of
-                            being a firearm).
-                        </item>
-
-                        <item name="Hv">
-                            Heavy weapon. Halves non-heavy bulletproof armour,
-                            ignores all weaker types of armour.
-                        </item>
-
-                        <item name="TA">
-                            Automatic weapon that can fire automatic bursts of
-                            3 rounds as a single attack. Counts as a single
-                            attack, but any wounds caused are doubled.
-                        </item>
-
-                        <item name="Ls">
-                            Laser weapon, unaffected by wind, though may suffer
-                            in fog and thick atmospheres. Does not loose accuracy
-                            or suffer fumble increase at medium and long range.
-                            Counts as a firearm for defence rolls.
-                        </item>
-
-                        <item name="Pl">
-                            Plasma weapon. Often does explosive damage. Does not
-                            count as a firearm for purposes of defence and armour
-                            (so only halves defence rolls).
-                        </item>
-
-                        <item name="Ex-X">
-                            Explosive damage. Does full damage to the target and
-                            those within X metres. Does mixed damage at -5 out to
-                            double X, and stun damage at -10 out to triple X.
-                        </item>
-
-                        <item name="Lo-X">
-                            Weapon must be reloaded. X is number of rounds to reload.
-                        </item>
-
-                        <item name="Vc">
-                            Vehicle weapon. Against non-vehicle targets, completely
-                            ignores all soak unless heavy armour is worn, in which
-                            case the soak roll is merely halved.
-                        </item>
-                    </itemlist>
-                </sect3>
-
 
                 <sect3>
                     <title>Small arms</title>
@@ -202,10 +317,14 @@
 
                     <y:import-weaponlist href="../equipment/traveller/tech12/smallarms.yags"
                                          importance="2" style="list">
-                        <y:category>Energy</y:category>
                         <y:category>Pistols</y:category>
                         <y:category>Rifles</y:category>
                         <y:category>Shotguns</y:category>
+
+                        <y:list>../equipment/traveller/tech9/smallarms.yags</y:list>
+                        <y:list>../equipment/traveller/tech10/smallarms.yags</y:list>
+                        <y:list>../equipment/traveller/tech11/smallarms.yags</y:list>
+                        <y:list>../equipment/traveller/tech12/smallarms.yags</y:list>
                     </y:import-weaponlist>
                 </sect3>
 
@@ -223,6 +342,11 @@
                                          importance="2" style="list">
                         <y:category>Energy</y:category>
                         <y:category>Heavy</y:category>
+
+                        <y:list>../equipment/traveller/tech9/heavy-weapons.yags</y:list>
+                        <y:list>../equipment/traveller/tech10/heavy-weapons.yags</y:list>
+                        <y:list>../equipment/traveller/tech11/heavy-weapons.yags</y:list>
+                        <y:list>../equipment/traveller/tech12/heavy-weapons.yags</y:list>
                     </y:import-weaponlist>
                 </sect3>
 
@@ -239,29 +363,12 @@
                     <y:import-weaponlist href="../equipment/traveller/tech12/melee.yags"
                                          importance="2" style="list">
                         <y:category>Melee</y:category>
+
+                        <y:list>../equipment/traveller/tech9/melee.yags</y:list>
+                        <y:list>../equipment/traveller/tech10/melee.yags</y:list>
+                        <y:list>../equipment/traveller/tech11/melee.yags</y:list>
+                        <y:list>../equipment/traveller/tech12/melee.yags</y:list>
                     </y:import-weaponlist>
-                </sect3>
-            </sect2>
-        </sect1>
-
-        <sect1>
-            <title>Tech Level 10 Equipment</title>
-
-            <sect2>
-                <title>Vehicles</title>
-
-                <sect3>
-                    <title>Planet Side</title>
-
-                    <import-equipment style="full"
-                        href="../equipment/traveller/tech10/vehicles/tanks.yags"/>
-                </sect3>
-
-                <sect3>
-                    <title>Starships</title>
-
-                    <import-equipment style="full"
-                        href="../equipment/traveller/tech10/vehicles/starships.yags"/>
                 </sect3>
             </sect2>
         </sect1>
