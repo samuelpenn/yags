@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+
+<!--
+
+    General equipment lists.
+
+    Copyright 2007 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted provided that the following
+    conditions are met:
+
+    1) Redistributions of any source code (e.g. XML) must retain the
+    above copyright notice, this list of conditions and the following
+    disclaimer.
+
+    2) Redistributions in compiled form (transformed to other DTDs,
+    converted to PDF, PostScript, RTF and other formats) must
+    reproduce the above copyright notice, this list of conditions
+    and the following disclaimer in the documentation and/or other
+    materials provided with the distribution.
+
+    THIS CONTENT IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+    OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DIRECT,
+    INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+    STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+    ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
+    OF THE POSSIBILITY OF SUCH DAMAGE.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-06-02 18:57:06 $
+
+    Categories
+
+    Adventuring     The sort of things only adventurers have.
+    Rogue           Thieves/assassins tools and the like.
+    Food            Food and drink.genre
+    Animals         An animal which isn't livestock - horses and dogs.
+    Livestock       Animals bred for food, such as pigs and cows.
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+
+    Prices are in credits.
+
+    Tech Level
+     4 1450-1700
+     5 1700-1900
+     6 1900-1950
+     7 1950-1980
+     8 1980-2020
+     9 2020+ (Interplanetary)
+    10 Interstellar (early jump)
+    11 Interstellar (Jump)
+    12 Interstellar (Imperium)
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="Model 900">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>9</techLevel>
+        <legality>3</legality>
+        <weight>1200</weight>
+        <cost>350</cost>
+
+        <short>Old style heavy revolver.</short>
+        <description>
+            <para>
+                A style of revolver that came out of Terra, it is still
+                sometimes favoured by a few people who consider it to
+                have more style than modern automatic pistols. It is
+                heavy, slow to load and difficult to handle, but is
+                probably the most powerful commonly available weapon
+                of its class.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+4</attack><damage>29</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>75</short><medium>150</medium><long>300</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>1</load><reach>0</reach>
+            <capacity>6</capacity><rof>6</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Exage 7mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>9</techLevel>
+        <legality>3</legality>
+        <weight>750</weight>
+        <cost>300</cost>
+
+        <short>A heavy 7mm automatic pistol.</short>
+        <description>
+            <para>
+                A well known brand of automatic pistol that is available
+                pretty much everywhere, due its low cost and ease of
+                manufacture. There are many knock-off variants, though
+                most differences are superficial.
+            </para>
+
+            <para>
+                Higher tech versions may have built in laser scopes and
+                round selectors to allow multiple ammunition types. A
+                high capacity magazine (20 rounds) is also available.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+5</attack><damage>27</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>75</short><medium>150</medium><long>300</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>0.5</load><reach>0</reach>
+            <capacity>10</capacity><rof>5</rof><recoil>-3</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+
+    <item name="Shotgun [solid slug]">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>8</techLevel>
+        <weight>4000</weight>
+        <cost>570</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Shotguns</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+6</attack><damage>40</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>100</short><medium>200</medium><long>400</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>4</load><reach>1</reach>
+            <capacity>10</capacity><rof>5</rof><recoil>-4</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <heavy/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Shotgun [shot]">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>8</techLevel>
+        <weight>4000</weight>
+        <cost>570</cost>
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Shotguns</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+15</attack><damage>35</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>25</short><medium>50</medium><long>150</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>4</load><reach>1</reach>
+            <capacity>10</capacity><rof>5</rof><recoil>-4</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <light/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+</equipment>
+
+
