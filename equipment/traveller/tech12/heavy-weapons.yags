@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.6 $
-    Date:    $Date: 2007-06-02 17:13:43 $
+    Version: $Revision: 1.7 $
+    Date:    $Date: 2007-06-03 18:45:59 $
 
     All units are in cgs.
 
@@ -209,100 +209,64 @@
         </weapon>
     </item>
 
-    <item name="Chaingun 20mm">
+    <item name="Heavy Laser Gun">
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
         <techLevel>12</techLevel>
+        <legality>1</legality>
 
-        <short>A vehicle mounted weapon.</short>
+        <short>A very heavy laser gun.</short>
 
         <description>
             <para>
-                Designed to be vehicle mounted, this fires heavy slugs
-                designed to be used against soft vehicles or buildings,
-                or sometimes against infantry.
+                This is a heavy laser gun designed to be either mounted
+                on a tripod or attached to a vehicle. Either way, it
+                requires huge amounts of energy to fire, especially in
+                sustained mode. It is designed for use against heavy
+                infantry or light vehicle targets.
+            </para>
+
+            <para>
+                The internal battery pack does not last long, so it is
+                usually either hooked up to another energy source, or
+                external battery packs are used. External packs weight
+                25kg and have enough energy for 1000 shots.
             </para>
         </description>
 
-        <weight>70000</weight>
+        <weight>40000</weight>
         <material>metal</material>
-        <cost>30000</cost>
+        <cost>100000</cost>
 
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <category>Firearms</category>
+            <category>Energy</category>
             <category>Heavy</category>
             <class>heavy</class>
 
             <combat>
-                <attack>+10</attack>
-                <damage>20</damage>
+                <attack>+20</attack>
+                <damage>45</damage>
                 <range>
-                    <increment>30</increment>
-                    <short>1000</short>
-                    <medium>2000</medium>
-                    <long>6000</long>
+                    <increment>60</increment>
+                    <short>3000</short>
+                    <medium>6000</medium>
+                    <long>12000</long>
                 </range>
             </combat>
 
-            <strength>8</strength><load>70</load><reach>4</reach>
+            <strength>10</strength><load>40</load><reach>4</reach>
 
-            <capacity>1000</capacity><rof>100</rof><recoil>-20</recoil>
+            <capacity>200</capacity><rof>100</rof><recoil>0</recoil>
 
             <properties>
-                <missile/><firearm/><automatic/><vehicle/>
-                <reload score="5"/>
+                <missile/><firearm/><laser/><automatic score="20"/><heavy/>
+                <reload score="2"/>
             </properties>
         </weapon>
     </item>
 
-    <item name="VRF Gauss 4mm">
-        <category>Weapon</category>
-        <importance>3</importance>
-        <availability>3</availability>
-        <techLevel>12</techLevel>
-
-        <short>Very rapid fire gauss machine gun.</short>
-
-        <description>
-            <para>
-                This vehicle mounted gauss weapon is designed for use
-                against infantry rather than as an anti-armour weapon.
-                Per-round, it lacks the stopping power of the chaingun,
-                but is more than capable of suppressing and/or killing
-                any infantry that come into range.
-            </para>
-        </description>
-
-        <weight>20000</weight>
-        <material>metal</material>
-        <cost>20000</cost>
-
-        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <category>Firearms</category>
-            <category>Heavy</category>
-            <class>heavy</class>
-
-            <combat>
-                <attack>+10</attack>
-                <damage>35</damage>
-                <range>
-                    <increment>25</increment>
-                    <short>1000</short>
-                    <medium>2000</medium>
-                    <long>5000</long>
-                </range>
-            </combat>
-
-            <strength>5</strength><load>20</load><reach>4</reach>
-            <capacity>1000</capacity><rof>200</rof><recoil>-15</recoil>
-
-            <properties>
-                <missile/><firearm/><automatic/><heavy/>
-                <reload score="5"/>
-            </properties>
-        </weapon>
-    </item>
 
     <item name="MANPAT-60">
         <category>Weapon</category>

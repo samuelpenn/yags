@@ -19,8 +19,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.10 $</version>
-            <date>$Date: 2007-06-02 18:39:50 $</date>
+            <version>$Revision: 1.11 $</version>
+            <date>$Date: 2007-06-03 18:45:59 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -33,7 +33,7 @@
             </text>
         </license>
 
-        <style name="combat"/>
+        <style name="equipment"/>
     </header>
 
     <body>
@@ -57,6 +57,17 @@
                     replaced by something else. If there aren't better
                     alternatives, then the cost is no better than a third.
                 </para>
+
+                <sect3>
+                    <title>TL 9</title>
+
+                    <para>
+                        Early space faring civilisation, will have the
+                        capability to colonise other worlds within their
+                        own solar system. Computers are common with
+                        world spanning information networks.
+                    </para>
+                </sect3>
 
                 <sect3>
                     <title>TL 10</title>
@@ -123,6 +134,26 @@
             </sect2>
 
             <sect2>
+                <title>Legality</title>
+
+                <para>
+                    The legality of an item determines who is allowed to
+                    use it. Some worlds are more restrictive than others,
+                    and items which are allowed to be freely carried and
+                    used in one place, may be forbiddon in another.
+                </para>
+
+                <para>
+                    Generally, an item is freely available to civilians
+                    if its legality rating is equals or exceeds the law
+                    level of the world. If it is one less, then it may
+                    be available with a license, otherwise use and ownership
+                    is restricted to government or specialist personel
+                    only.
+                </para>
+            </sect2>
+
+            <sect2>
                 <title>General Equipment</title>
 
                 <para>
@@ -131,6 +162,8 @@
                 </para>
 
                 <import-equipment style="full">
+                    <list>../equipment/traveller/tech10/generic.yags</list>
+                    <list>../equipment/traveller/tech11/generic.yags</list>
                     <list>../equipment/traveller/tech12/generic.yags</list>
                 </import-equipment>
             </sect2>
@@ -161,6 +194,7 @@
                     <title>Heavy Weapons</title>
 
                     <import-equipment style="full">
+                        <list>../equipment/traveller/tech11/heavy-weapons.yags</list>
                         <list>../equipment/traveller/tech12/heavy-weapons.yags</list>
                     </import-equipment>
                 </sect3>
@@ -190,7 +224,16 @@
                     <title>Military</title>
 
                     <import-equipment style="full">
+                        <list>../equipment/traveller/tech10/vehicles/tanks.yags</list>
                         <list>../equipment/traveller/tech12/vehicles/tanks.yags</list>
+                    </import-equipment>
+                </sect3>
+
+                <sect3>
+                    <title>Starships</title>
+
+                    <import-equipment style="full">
+                        <list>../equipment/traveller/tech10/vehicles/starships.yags</list>
                     </import-equipment>
                 </sect3>
             </sect2>
@@ -208,7 +251,9 @@
                     <itemlist order="sort">
                         <item name="Au">
                             Fully automatic weapon, capable of firing multiple
-                            shots or burst fire.
+                            shots or burst fire. Unless specified, an automatic
+                            burst consist of 10 rounds. If a number is specified,
+                            then the burst has this many rounds.
                         </item>
 
                         <item name="Co-X">
@@ -335,6 +380,7 @@
                         <y:category>Energy</y:category>
                         <y:category>Heavy</y:category>
 
+                        <y:list>../equipment/traveller/tech11/heavy-weapons.yags</y:list>
                         <y:list>../equipment/traveller/tech12/heavy-weapons.yags</y:list>
                     </y:import-weaponlist>
                 </sect3>

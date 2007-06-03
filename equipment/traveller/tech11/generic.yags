@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+
+<!--
+
+    Generic equipment lists for Tech Level 10 Traveller.
+
+    Copyright 2007 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted provided that the above
+    copyright notice is retained.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-06-03 18:45:59 $
+
+    All units are in cgs.
+
+    Prices are in credits.
+
+    Tech Level
+     4 1450-1700
+     5 1700-1900
+     6 1900-1950
+     7 1950-1980
+     8 1980-2020
+     9 2020+ (Interplanetary)
+    10 Interstellar (early jump)
+    11 Interstellar (Jump)
+    12 Interstellar (Imperium)
+ -->
+
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+    <item name="Eye in the sky">
+        <category>Media</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <techLevel>11</techLevel>
+        <legality>2</legality>
+
+        <cost>6000</cost>
+        <weight>2000</weight>
+
+        <short>Contra-grav flying camera.</short>
+
+        <description>
+            <para>
+                A remote controlled camera drone which is able to record
+                audio and visual in locations too difficult for a person
+                to easily get to. It comes equipped with a remote for
+                controlling it and recording what it can see. It uses
+                contra-grav for movement, has a ceiling of 100m and a
+                top flight speed of 50km/h. Its normal flight time is
+                4 hours.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>2</load>
+            <skill name="RPV Operation" bonus="+15"/>
+        </tool>
+    </item>
+
+    <item name="Spray cloth">
+        <category>Clothing</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <techLevel>11</techLevel>
+        <legality>4</legality>
+
+        <cost>400</cost>
+        <weight>200</weight>
+
+        <short>Spray on clothing for any occassion.</short>
+        <description>
+            <para>
+                Available normally in a can, onced sprayed on naked skin it
+                toughens into a flexible, skin-tight gel that can keep you
+                warm and covered. Available in anything from swimwear to
+                cold weather clothing forms, it can be used either for
+                emergencies or as a fashion statement. May be transparent
+                or coloured. Some varieties provide a small amount of
+                armour. Method of removal depends on brand, but can be
+                anything from plain water to special chemicals or just
+                ripping it off.
+            </para>
+
+            <para>
+                Also available in 'pill' form, just add water to make the
+                gel. Normally hardens within a minute of contact with skin.
+                Ten times cost for electronic version which can display
+                moving video. Ten times <e>that</e> for chameleon coating.
+            </para>
+        </description>
+
+        <task xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Computer hacking" score="50">
+                To control what is displayed on video models.
+            </skill>
+        </task>
+    </item>
+
+    <item name="Fashion skin">
+        <category>Clothing</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <techLevel>11</techLevel>
+        <legality>4</legality>
+
+        <cost>1000</cost>
+        <weight>200</weight>
+
+        <short>Spray on fake textured skin.</short>
+        <description>
+            <para>
+                For when the latest fashion requires a certain look, changeling
+                skin provides a quick and easy way to change your appearance.
+                Sprayed onto your skin, it forms into a gell that grafts onto
+                your skin providing a colouring and texture of your desires.
+                Once set (takes about 15 minutes), it lasts from a few hours
+                to a couple of days depending on how active you are.
+            </para>
+
+            <para>
+                It can increase your build, give you breasts, make you look
+                older or younger, lighter or darker. In most locations it is
+                illegal to copy another person without their permission.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <uses>1</uses>
+            <skill name="Disguise" bonus="+25"/>
+        </tool>
+
+        <task xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Medicine" score="20">
+                Detect the fake skin on an examination.
+            </skill>
+        </task>
+    </item>
+
+    <item name="Clothing belt">
+        <category>Clothing</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <techLevel>11</techLevel>
+        <legality>5</legality>
+
+        <cost>800</cost>
+        <weight>200</weight>
+
+        <short>Holographic clothing belt.</short>
+        <description>
+            <para>
+                This belt consists of holographic projectors capable of
+                displaying the illusion of clothing around a person. The
+                holograms are unable to provide any actual warmth or
+                texture, but can cover up nudity, or add to existing
+                simple clothing. When used as a fashion item, it is
+                common to wear underwear beneath the hologram, and have
+                programmable clothing ontop of that. Clothing style can
+                be changed either automatically or manually.
+            </para>
+
+            <para>
+                The holographic clothing will move with you, and can be
+                programmed to simulate wind or gravitational effects as
+                desired.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Charm" bonus="+10"/>
+        </tool>
+
+        <task xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Computer hacking" score="50">
+                Override the appearance.
+            </skill>
+        </task>
+    </item>
+</equipment>

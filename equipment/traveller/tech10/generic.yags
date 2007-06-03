@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<!--
+
+    Generic equipment lists for Tech Level 10 Traveller.
+
+    Copyright 2007 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted provided that the above
+    copyright notice is retained.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-06-03 18:45:59 $
+
+    All units are in cgs.
+
+    Prices are in credits.
+
+    Tech Level
+     4 1450-1700
+     5 1700-1900
+     6 1900-1950
+     7 1950-1980
+     8 1980-2020
+     9 2020+ (Interplanetary)
+    10 Interstellar (early jump)
+    11 Interstellar (Jump)
+    12 Interstellar (Imperium)
+ -->
+
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+    <item name="Lock picks">
+        <category>Spy</category>
+        <importance>3</importance>
+        <availability>1</availability>
+        <techLevel>10</techLevel>
+        <legality>1</legality>
+
+        <short>High tech lock picks.</short>
+        <description>
+            <para>
+                Using the latest in micro-engineering, this set of lock
+                picks can break most standard mechanical locks in a short
+                period of time. Just insert the tool, and it automatically
+                adjusts itself to fit the lock, and open it. It is the
+                existence of tools such as these which have made plain
+                mechanical locks obsolete.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>0</load>
+            <skill name="Burglary" bonus="+40"/>
+        </tool>
+
+        <weight>150</weight>
+        <material>plastic</material>
+        <cost>750</cost>
+    </item>
+</equipment>

@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.3 $</version>
-            <date>$Date: 2007-03-30 21:03:14 $</date>
+            <version>$Revision: 1.4 $</version>
+            <date>$Date: 2007-06-03 18:45:59 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -334,20 +334,25 @@
                 <sect3>
                     <title>Modern</title>
 
-                    <import-equipment href="../equipment/modern/vehicles/civilian.yags"
-                                      style="full"/>
+                    <import-equipment style="full">
+                        <link>../equipment/modern/vehicles/civilian.yags</link>
+                    </import-equipment>
                 </sect3>
 
                 <sect3>
                     <title>WWII Tanks</title>
 
-                    <import-equipment href="../equipment/wwii/tanks.yags" style="full"/>
+                    <import-equipment style="full">
+                        <link>../equipment/wwii/tanks.yags</link>
+                    </import-equipment>
                 </sect3>
 
                 <sect3>
                     <title>WWII Ships</title>
 
-                    <import-equipment href="../equipment/wwii/ships.yags" style="full"/>
+                    <import-equipment style="full">
+                        <link>../equipment/wwii/ships.yags</link>
+                    </import-equipment>
                 </sect3>
             </sect2>
 
@@ -359,13 +364,13 @@
                     completely ignore the <e>Soak</e> of standard targets
                     unless they are in Heavy armour. This means that the
                     total soak roll is always zero for these targets.
+                    Standard targets with heavy armour have their total
+                    soak roll halved.
                 </para>
 
                 <para>
-                    Standard targets with heavy armour have their total
-                    soak roll halved. If the vehicle weapon is also heavy,
-                    then heavy armour is treated as normal armour, and the
-                    soak total is zero.
+                    Heavy vehicle weapons always ignore the soak of character
+                    scale targets, regardless of the armour they are wearing.
                 </para>
 
                 <para>

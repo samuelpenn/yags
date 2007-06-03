@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+
+<!--
+
+    General equipment lists.
+
+    Copyright 2005 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted provided that the following
+    conditions are met:
+
+    1) Redistributions of any source code (e.g. XML) must retain the
+    above copyright notice, this list of conditions and the following
+    disclaimer.
+
+    2) Redistributions in compiled form (transformed to other DTDs,
+    converted to PDF, PostScript, RTF and other formats) must
+    reproduce the above copyright notice, this list of conditions
+    and the following disclaimer in the documentation and/or other
+    materials provided with the distribution.
+
+    THIS CONTENT IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+    OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DIRECT,
+    INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+    STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+    ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
+    OF THE POSSIBILITY OF SUCH DAMAGE.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-06-03 18:45:59 $
+
+    All units are in cgs.
+
+    Prices are in credits.
+
+    Tech Level
+     4 1450-1700
+     5 1700-1900
+     6 1900-1950
+     7 1950-1980
+     8 1980-2020
+     9 2020+ (Interplanetary)
+    10 Interstellar (early jump)
+    11 Interstellar (Jump)
+    12 Interstellar (Imperium)
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="Chaingun 20mm">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>11</techLevel>
+        <legality>1</legality>
+
+        <short>A vehicle mounted weapon.</short>
+
+        <description>
+            <para>
+                Designed to be vehicle mounted, this fires heavy slugs
+                designed to be used against soft vehicles or buildings,
+                or sometimes against infantry.
+            </para>
+
+            <para>
+                The weapon statistics includes a single box of ammo.
+                Extra ammo boxes weigh 12kg each and contain 1000 rounds.
+            </para>
+        </description>
+
+        <weight>70000</weight>
+        <material>metal</material>
+        <cost>30000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+
+            <combat>
+                <attack>+10</attack>
+                <damage>30</damage>
+                <range>
+                    <increment>30</increment>
+                    <short>2000</short>
+                    <medium>5000</medium>
+                    <long>7000</long>
+                </range>
+            </combat>
+
+            <strength>10</strength><load>70</load><reach>4</reach>
+
+            <capacity>1000</capacity><rof>20</rof><recoil>-20</recoil>
+
+            <properties>
+                <missile/><firearm/><automatic/><vehicle/>
+                <reload score="5"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="VRF Gauss 4mm">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>11</techLevel>
+        <legality>1</legality>
+
+        <short>Very rapid fire gauss machine gun.</short>
+
+        <description>
+            <para>
+                This vehicle mounted gauss weapon is designed for use
+                against infantry rather than as an anti-armour weapon.
+                Per-round, it lacks the stopping power of the chaingun,
+                but is more than capable of suppressing and/or killing
+                any infantry that come into range.
+            </para>
+        </description>
+
+        <weight>20000</weight>
+        <material>metal</material>
+        <cost>20000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+
+            <combat>
+                <attack>+10</attack>
+                <damage>35</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>1000</short>
+                    <medium>2000</medium>
+                    <long>5000</long>
+                </range>
+            </combat>
+
+            <strength>5</strength><load>20</load><reach>4</reach>
+            <capacity>1000</capacity><rof>200</rof><recoil>-15</recoil>
+
+            <properties>
+                <missile/><firearm/><automatic score="40"/><heavy/>
+                <reload score="5"/>
+            </properties>
+        </weapon>
+    </item>
+</equipment>
+
+

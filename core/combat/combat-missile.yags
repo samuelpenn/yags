@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.14 $</version>
-            <date>$Date: 2007-05-27 10:45:52 $</date>
+            <version>$Revision: 1.15 $</version>
+            <date>$Date: 2007-06-03 18:45:59 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -584,6 +584,37 @@
                         </para>
                     </note>
                 </sect3>
+
+                <sect3>
+                    <title>Mounted weapons</title>
+
+                    <para>
+                        Some firearms are designed to be mounted on a bipod,
+                        tripod or similar device. When mounted in this way,
+                        the stability of the weapon is improved, reducing
+                        recoil and increasing effective range.
+                    </para>
+
+                    <para>
+                        If a weapon is mounted, double the short range of
+                        the weapon and halve (round down) its recoil penalty.
+                        If the weapon is mounted on a fixed emplacement
+                        (including a heavy vehicle) rather than on a free
+                        standing mount, then the recoil is reduced to a
+                        fifth (round down).
+                    </para>
+
+                    <para>
+                        A mounted weapon also halves (thirds for fixed) any
+                        strength requirement. It normally takes a round to
+                        deploy a mount and setup the weapon ready for firing.
+                    </para>
+
+                    <para>
+                        Bracing a weapon against a wall can also help. This
+                        takes a round to do, and halves the recoil penalty.
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
@@ -729,7 +760,15 @@
                         If you are behind cover, then the difficulty to hit
                         you is increased. The increase depends on whether
                         the cover is hard or soft, and how much of you it
-                        actually covers.
+                        actually covers. Cover also provides extra
+                        protection against automatic fire - every +5 bonus
+                        that cover provides (including from being crouched
+                        or prone) reduces the 'automatic hit' chance by 1.
+                    </para>
+
+                    <para>
+                        Types of cover do not stack - take whichever is the
+                        best.
                     </para>
 
                     <targetlist bold="true">
@@ -859,14 +898,30 @@
                 </para>
 
                 <para>
-                    Automatic fire is divided into <e>bursts</e> each of
-                    up to 10 bullets. A burst will always consist of 10
-                    bullets unless there are fewer bullets left in the
-                    gun. Every burst is considered to be one attack.
+                    Automatic fire is divided into <e>bursts</e> which
+                    normally consist of 10 bullets. Some heavy weapons will
+                    have larger bursts, but you may never choose to fire
+                    less than a full burst unless there are fewer bullets
+                    left in the gun. Every burst is considered to be one
+                    attack.
                 </para>
 
                 <para>
-                    Firing weapons in burst mode doubles the effective
+                    The effective size of the burst defines how big a bonus
+                    is obtained from using automatic fire, however it is
+                    reduced at anything other than close range. Up to 10%
+                    of the short range of the weapon, the effective burst
+                    size is equal to the number of bullets fired. Over 10%,
+                    and each multiple of this, halve the effective number
+                    of bullets (round down). A gun with a short range of
+                    400m, would have an effective burst size of 10 out to
+                    40m, 5 out to 80m, 2 out to 120m and 1 to 160m. Any
+                    greater range than this and all bullets are assumed to
+                    miss.
+                </para>
+
+                <para>
+                    Firing weapons in burst mode also doubles the effective
                     distance, though you may fire a burst as a
                     <e>careful shot</e> to offset this if you wish.
                 </para>
@@ -889,11 +944,8 @@
                     </para>
 
                     <para>
-                        The above assumes that the target is at short range.
-                        At medium range, halve the effective number of bullets
-                        (round down), and at long range quarter them. This
-                        may mean an automatic miss at medium or long range
-                        if the number of bullets drops below one.
+                        Remember that the effective number of bullets is
+                        reduced beyond 10% of short range.
                     </para>
                 </sect3>
 
@@ -914,14 +966,14 @@
                         hit, then roll for damage as normal as if you had hit
                         with a single bullet. After resolving that hit, roll
                         against for the next target. Up to 3 targets may be
-                        hit with a single burst.
+                        hit with a single 10 round burst.
                     </para>
 
                     <para>
                         If you miss a target then simply move on to the next
                         target, and keep on checking until you reach the
                         maximum range of the weapon, run out of targets or
-                        hit three targets.
+                        hit the maximum number of targets.
                     </para>
 
                     <para>
@@ -969,10 +1021,31 @@
                             </row>
 
                             <row>
-                                <entry>8-10</entry>
+                                <entry>8-17</entry>
                                 <entry>9</entry>
                                 <entry>3</entry>
-                                <entry>19,20</entry>
+                                <entry>19+</entry>
+                            </row>
+
+                            <row>
+                                <entry>18-27</entry>
+                                <entry>6</entry>
+                                <entry>4</entry>
+                                <entry>18+</entry>
+                            </row>
+
+                            <row>
+                                <entry>28-37</entry>
+                                <entry>3</entry>
+                                <entry>4</entry>
+                                <entry>17+</entry>
+                            </row>
+
+                            <row>
+                                <entry>38+</entry>
+                                <entry>1</entry>
+                                <entry>5</entry>
+                                <entry>16+</entry>
                             </row>
                         </tbody>
                     </table>
@@ -983,7 +1056,7 @@
                         everyone in the area is at risk of being hit
                         regardless of how well they dodge or how bad the
                         shooter is. On an automatic hit, the target does
-                        <e>not</e> count towards the normal maximum of 3
+                        <e>not</e> count towards the normal maximum of
                         targets.
                     </para>
                 </sect3>
@@ -1010,6 +1083,12 @@
                         If the final round is not spent taking a careful
                         shot, then you loose all benefits of an aimed shot.
                     </para>
+
+                    <para>
+                        The bonus for an <e>aimed shot</e> only affects a
+                        single shot. All subsequent shots are treated as
+                        normal.
+                    </para>
                 </sect3>
 
                 <sect3>
@@ -1019,8 +1098,9 @@
                         If you have an automatic or semi-automatic weapon
                         then you can fire it multiple times in a single
                         round at the same target. This is not burst fire,
-                        but separate squeezes of the trigger. Each extra
-                        shot increases the fumble chance for all shots by 1.
+                        but separate squeezes of the trigger. Your base
+                        fumble chance is equal to the total number of shots
+                        you are making.
                     </para>
 
                     <para>
@@ -1131,13 +1211,14 @@
                     <para>
                         Some modern automatic firearms have an option to
                         only fire 3 shots in a single burst. If selected,
-                        this is treated as an attack. It does not use the
-                        normal automatic fire rules, but on a successful
-                        hit any wounds are doubled.
+                        this is treated as a single attack which does not
+                        use the automatic fire rules, instead on a successful
+                        hit any wounds are doubled. When making an aimed
+                        shot, a three round burst counts as a single shot.
                     </para>
 
                     <para>
-                        You may make as many 3 round burts as you could
+                        You may make as many 3 round bursts as you could
                         normally make automatic bursts.
                     </para>
                 </sect3>

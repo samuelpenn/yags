@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.3 $
-    Date:    $Date: 2007-06-02 22:09:50 $
+    Version: $Revision: 1.4 $
+    Date:    $Date: 2007-06-03 18:45:59 $
 
     Categories
 
@@ -146,34 +146,6 @@
         <cost>15000</cost>
     </item>
 
-    <item name="Lock picks">
-        <category>Spy</category>
-        <importance>3</importance>
-        <availability>1</availability>
-        <techLevel>12</techLevel>
-        <legality>1</legality>
-
-        <short>High tech lock picks.</short>
-        <description>
-            <para>
-                Using the latest in micro-engineering, this set of lock
-                picks can break most standard mechanical locks in a short
-                period of time. Just insert the tool, and it automatically
-                adjusts itself to fit the lock, and open it. It is the
-                existence of tools such as these which have made plain
-                mechanical locks obsolete.
-            </para>
-        </description>
-
-        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <load>0</load>
-            <skill name="Burglary" bonus="+40"/>
-        </tool>
-
-        <weight>150</weight>
-        <material>plastic</material>
-        <cost>750</cost>
-    </item>
 
     <item name="Medical scanner">
         <category>Medical</category>
@@ -452,36 +424,6 @@
         </tool>
     </item>
 
-    <item name="Eye in the sky">
-        <category>Media</category>
-        <importance>2</importance>
-        <availability>2</availability>
-        <techLevel>12</techLevel>
-        <legality>2</legality>
-
-        <cost>5000</cost>
-        <weight>2000</weight>
-
-        <short>Contra-grav flying camera.</short>
-
-        <description>
-            <para>
-                A remote controlled camera drone which is able to record
-                audio and visual in locations too difficult for a person
-                to easily get to. It comes equipped with a remote for
-                controlling it and recording what it can see. It uses
-                contra-grav for movement, has a ceiling of 100m and a
-                top flight speed of 50km/h. Its normal flight time is
-                4 hours.
-            </para>
-        </description>
-
-        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <load>2</load>
-            <skill name="RPV Operation" bonus="+15"/>
-        </tool>
-    </item>
-
     <item name="Mood cloth">
         <category>Clothing</category>
         <importance>2</importance>
@@ -521,79 +463,37 @@
         </task>
     </item>
 
-    <item name="Spray cloth">
+    <item name="Changeling skin">
         <category>Clothing</category>
         <importance>2</importance>
         <availability>2</availability>
         <techLevel>12</techLevel>
-        <legality>4</legality>
+        <legality>1</legality>
 
-        <cost>200</cost>
+        <cost>5000</cost>
         <weight>200</weight>
 
-        <short>Spray on clothing for any occassion.</short>
+        <short>Long lasting fake textured skin.</short>
         <description>
             <para>
-                Available normally in a can, onced sprayed on naked skin it
-                toughens into a flexible, skin-tight gel that can keep you
-                warm and covered. Available in anything from swimwear to
-                cold weather clothing forms, it can be used either for
-                emergencies or as a fashion statement. May be transparent
-                or coloured. Some varieties provide a small amount of
-                armour. Method of removal depends on brand, but can be
-                anything from plain water to special chemicals or just
-                ripping it off.
-            </para>
-
-            <para>
-                Also available in 'pill' form, just add water to make the
-                gel. Normally hardens within a minute of contact with skin.
-                Ten times cost for electronic version which can display
-                moving video. Ten times <e>that</e> for chameleon coating.
-            </para>
-        </description>
-
-        <task xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <skill name="Computer hacking" score="50">
-                To control what is displayed on video models.
-            </skill>
-        </task>
-    </item>
-
-    <item name="Fashion skin">
-        <category>Clothing</category>
-        <importance>2</importance>
-        <availability>2</availability>
-        <techLevel>12</techLevel>
-        <legality>4</legality>
-
-        <cost>500</cost>
-        <weight>200</weight>
-
-        <short>Spray on fake textured skin.</short>
-        <description>
-            <para>
-                For when the latest fashion requires a certain look, changeling
-                skin provides a quick and easy way to change your appearance.
-                Sprayed onto your skin, it forms into a gell that grafts onto
-                your skin providing a colouring and texture of your desires.
-                Once set (takes about 15 minutes), it lasts from a few hours
-                to a couple of days depending on how active you are.
-            </para>
-
-            <para>
-                It can increase your build, give you breasts, make you look
-                older or younger, lighter or darker. In most locations it is
-                illegal to copy another person without their permission.
+                Similar in use to the <e>Fashion skin</e>, this is far more
+                advanced, and is designed for military or government use.
+                As well as being longer lasting (it will generally last
+                4 to 8 weeks), it also mimics a given DNA. It is best used
+                on hairless skin, and the gel is capable of growing fake
+                hair (of a defined colour, length and characteristics) in
+                designated locations. A normal head of hair can be grown in
+                a day, long hair in three to five days.
             </para>
         </description>
 
         <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <skill name="Disguise" bonus="+25"/>
+            <uses>1</uses>
+            <skill name="Disguise" bonus="+35"/>
         </tool>
 
         <task xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <skill name="Medicine" score="20">
+            <skill name="Medicine" score="40">
                 Detect the fake skin on an examination.
             </skill>
         </task>
