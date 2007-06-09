@@ -23,8 +23,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2007-03-31 17:11:08 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2007-06-09 22:57:00 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -81,10 +81,10 @@
                         </para>
 
                         <sect5>
-                            <title>Toxicity</title>
+                            <title>Strength</title>
 
                             <para>
-                                The toxicity of a drug determines how much of it
+                                The strength of a drug determines how much of it
                                 is required to have the listed effect. This is
                                 given on a scale from 1 (not very potent) to 6
                                 (incredibly potent).
@@ -98,7 +98,7 @@
                             </para>
 
                             <targetlist targetFirst="true" bold="true">
-                                <targetLabel>Toxicity</targetLabel>
+                                <targetLabel>Strength</targetLabel>
                                 <valueLabel>Effective dose</valueLabel>
 
                                 <item target="1" value="Almost nontoxic.">
@@ -196,9 +196,9 @@
                             <short>Classic poison.</short>
 
                             <drug xmlns="http://yagsbook.sourceforge.net/xml/yags">
-                                <toxicity>5</toxicity>
+                                <strength>5</strength>
 
-                                <application title="Fast Poison">
+                                <generic title="Fast Poison">
                                     <potency>30</potency>
                                     <time modifier="-1" units="minutes">30</time>
                                     <effects>
@@ -208,10 +208,38 @@
                                         <effect>Coma</effect>
                                         <effect>Death</effect>
                                     </effects>
-                                </application>
+                                </generic>
                             </drug>
                         </item>
                     </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Addictive</title>
+                </sect3>
+
+                <sect3>
+                    <title>Offsetter</title>
+
+                    <para>
+                        Reduces the effect of some penalty.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Helper</title>
+
+                    <para>
+                        Gives a bonus to resist something.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Adder</title>
+
+                    <para>
+                        Adds to an attribute.
+                    </para>
                 </sect3>
             </sect2>
 

@@ -7,7 +7,7 @@
          xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
 
     <header>
-        <title>Vehicle Combat</title>
+        <title>Vehicles</title>
         <tagline>Yags</tagline>
 
         <summary>
@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2007-06-03 19:02:10 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2007-06-09 22:57:00 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -279,6 +279,31 @@
                         Critical.
                     </para>
                 </sect3>
+
+                <sect3>
+                    <title>Hitting Vehicles</title>
+
+                    <para>
+                        Most vehicles tend to be much larger than normal
+                        human targets, and so are easier to hit. Vehicles
+                        suffer the normal penalty to their 'to be hit'
+                        number, of -3 per point of size about 5. A size 20
+                        vehicle for instance will have a 'to be hit'
+                        number of -30. This makes vehicles very easy to
+                        hit at long range.
+                    </para>
+
+                    <para>
+                        Vehicle weapons are also affected by this, and
+                        suffer a penalty to their attack bonus based on
+                        their size - larger weapons are harder to aim,
+                        and generally no good for shooting at people.
+                        A vehicle which is 'size 10' for example will
+                        have a penalty of -15 to its attack bonus, which
+                        may give it a negative attack bonus. This will
+                        be factored into the weapon's statistics.
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
@@ -320,6 +345,81 @@
                         per round per round.
                     </item>
                 </itemlist>
+            </sect2>
+
+            <sect2>
+                <title>Using Vehicles</title>
+
+                <para>
+                    Generally, driving or piloting a vehicle will use
+                    <y:dexterity>Drive</y:dexterity> or a
+                    <y:dexterity>Pilot</y:dexterity> skill check,
+                    depending on the type of vehicle. In either case,
+                    your <t>Dexterity</t> is capped to the
+                    <t>Agility</t> of the vehicle, meaning big and slow
+                    vehicles generally don't require fast reactions,
+                    just skill, and even that doesn't make much difference.
+                </para>
+
+                <para>
+                    Very large vehicles, such as battleships for example,
+                    won't have a 'pilot' as such, and tend to be
+                    controlled by a number of people down in engineering,
+                    or a group of computer operators. In this case,
+                    controlling the vehicle uses an <e>operation</e>
+                    skill, such as <e>Ship operation</e> or
+                    <e>Spaceship operation</e>.
+                </para>
+
+                <para>
+                    When making a manouevre, a pilot or drive check is
+                    often required, and the difficulty depends on the
+                    speed that the manouevre is performed at.
+                </para>
+
+                <targetlist>
+                    <targetLabel>Target</targetLabel>
+                    <valueLabel>Speed of manouevre</valueLabel>
+
+                    <item target="-10" value="Careful.">
+                        A slow and safe speed.
+                    </item>
+
+                    <item target="+0" value="Moderate.">
+                        A safe speed.
+                    </item>
+
+                    <item target="+10" value="Quickly.">
+                        A bit faster than is advised.
+                    </item>
+
+                    <item target="+20" value="Fast.">
+                        Somewhat fast.
+                    </item>
+
+                    <item target="+30" value="Very fast.">
+                        Dangerously fast.
+                    </item>
+                </targetlist>
+
+                <para>
+                    You're generally better off slowing down before making
+                    a tricky manouevre, however you can try to force a
+                    persuer to crash or lose you by taking a bend at high
+                    speed.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Spaceships</title>
+
+                <para>
+                    Spacecraft movement is given as an acceleration and
+                    a delta-vee. The acceleration is in metres per second
+                    per second, and the delta-vee is the maximum velocity
+                    the ship can attain in km/s if it were to accelerate
+                    for as long as possible.
+                </para>
             </sect2>
 
             <sect2>

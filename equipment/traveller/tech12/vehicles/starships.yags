@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<!--
+    TechLevel 12 Common Starships.
+-->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml"
+           xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <item name="Eckamon Class Scout">
+        <category>Vehicle</category>
+        <genre>Traveller</genre>
+        <techLevel>12</techLevel>
+        <legality>1</legality>
+        <availability>1</availability>
+        <importance>3</importance>
+
+        <short>100t Scout</short>
+
+        <cost units="Cr">8210000</cost>
+        <mass>117000000</mass>
+
+        <construction>
+            <year>500</year>
+            <manufacturer>Solomani</manufacturer>
+        </construction>
+
+        <performance realm="Space">
+            <acceleration>50</acceleration>
+            <deltavee>8650</deltavee>
+        </performance>
+
+        <description>
+            <para>
+                Based on the old Sueillian scout vessel, the Eckamon is
+                the first true upgrade to that aging design. Equipped
+                with a Jump-3 drive, improved sensors and manouevre drives
+                it is a versatile scount/courier vessel designed to be
+                used by small teams on extended missions. The scout has
+                standard streamlining for landing on worlds.
+            </para>
+
+            <para>
+                An optional turret weapon may be fitted to the top of
+                the hull.
+            </para>
+        </description>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="20" soak="30" move="250" acceleration="250">
+                <attribute name="strength" score="35"/>
+                <attribute name="health" score="3"/>
+                <attribute name="agility" score="5"/>
+            </attributes>
+
+            <combat>
+                <armour location="Hull" score="20"/>
+
+                <weapon name="700 MJ Fusion Cannon">
+                    <attack score="5"/>
+                    <damage score="75"/>
+                    <increment>250</increment>
+                    <rof>1</rof><capacity>40</capacity><recoil>0</recoil>
+                    <range>
+                        <short>2500</short>
+                        <medium>5000</medium>
+                        <long>10000</long>
+                    </range>
+                    <properties>
+                        <missile/><vehicle/><heavy/><firearm/>
+                        <plasma/><explosive score="3"/>
+                    </properties>
+                </weapon>
+            </combat>
+        </vehicle>
+
+        <task xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Security systems" score="50">
+                Get in through the door.
+            </skill>
+            <skill name="Computer hacking" score="80">
+                Accessing ship systems without authorisation.
+            </skill>
+        </task>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Spaceship gunnery" level="20"/>
+        </tool>
+    </item>
+
+    <item name="Eckamon Class Armoured Scout">
+        <category>Vehicle</category>
+        <genre>Traveller</genre>
+        <techLevel>12</techLevel>
+        <legality>1</legality>
+        <availability>1</availability>
+        <importance>3</importance>
+
+        <short>100t Scout</short>
+
+        <cost units="Cr">8210000</cost>
+        <mass>117000000</mass>
+
+        <construction>
+            <year>500</year>
+            <manufacturer>Solomani</manufacturer>
+        </construction>
+
+        <performance realm="Space">
+            <acceleration>40</acceleration>
+            <deltavee>8650</deltavee>
+        </performance>
+
+        <description>
+            <para>
+                This is the armoured varient of the Eckamon Scout. It is
+                better equipped for more dangerous situations, though
+                lacks some of the acceleration of the basic model.
+            </para>
+        </description>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="20" soak="30" move="200" acceleration="200">
+                <attribute name="strength" score="35"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="4"/>
+            </attributes>
+
+            <combat>
+                <armour location="Hull" score="30"/>
+
+                <weapon name="700 MJ Fusion Cannon">
+                    <attack score="5"/>
+                    <damage score="75"/>
+                    <increment>250</increment>
+                    <rof>1</rof><capacity>40</capacity><recoil>0</recoil>
+                    <range>
+                        <short>2500</short>
+                        <medium>5000</medium>
+                        <long>10000</long>
+                    </range>
+                    <properties>
+                        <missile/><vehicle/><heavy/><firearm/>
+                        <plasma/><explosive score="3"/>
+                    </properties>
+                </weapon>
+            </combat>
+        </vehicle>
+
+        <task xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Security systems" score="50">
+                Get in through the door.
+            </skill>
+            <skill name="Computer hacking" score="80">
+                Accessing ship systems without authorisation.
+            </skill>
+        </task>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Spaceship gunnery" level="20"/>
+        </tool>
+    </item>
+</equipment>
+
+
