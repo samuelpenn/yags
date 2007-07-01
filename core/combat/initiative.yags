@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <header>
+        <title>Combat (Initiative)</title>
+        <tagline>Yags</tagline>
+
+        <summary>
+            Detailed rules on initiative, surprise and tactics and how they
+            are used in combat.
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2007-07-01 20:47:39 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2007</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+        </license>
+
+        <style name="combat"/>
+    </header>
+
+    <body>
+        <sect1 id="melee">
+            <title>Initiative</title>
+
+            <para>
+                <e>Initiative</e> is an important part of the combat system
+                and sometimes requires a very precise understanding of the
+                order of events and how declarations work.
+            </para>
+
+            <sect2>
+                <title>Action Types</title>
+
+                <para>
+                    The following special actions can be declared during
+                    combat.
+                </para>
+
+                <sect3>
+                    <title>Overwatch</title>
+
+                    <para>
+                        If you believe that something is going to happen
+                        that hasn't happened yet, you can declare an
+                        <e>overwatch</e> in preparation. Basically, you
+                        state that you are covering an area ready to shoot
+                        at or strike the first target that presents itself.
+                        If no target presents itself, then your action is
+                        wasted.
+                    </para>
+
+                    <para>
+                        If you are declaring a melee strike, then the
+                        target area must be in reach of you at the start of
+                        the round. If you are declaring to shoot, then you
+                        can cover a 45 degree area.
+                    </para>
+
+                    <para>
+                        Your action, if it fires, is always <e>fast</e>. If
+                        it is a shooting action, then it is a snapshot.
+                    </para>
+
+                    <example title="Overwatch">
+                        <para>
+                            Corporal Bob has been tasked with covering the
+                            back door of a building whilst his friends go in
+                            the front. He has a low initiative, so each round
+                            he declares that he's going to shoot anyone coming
+                            out the door.
+                        </para>
+
+                        <para>
+                            Rebel mastermind Eve wants to escape the building
+                            that is being raided by government forces, so
+                            runs out the backdoor. She has a better initiative
+                            than Bob, but doesn't know what is outside the door
+                            until she opens it. She declares to open the door
+                            and shoot anyone she sees. Her shooting action will
+                            count as <e>slow</e>, since she's got to come out
+                            the door first.
+                        </para>
+
+                        <para>
+                            As Eve opens the door, Bob will get his shot since
+                            his <e>fast</e> action goes first. If Eve is still
+                            alive, then she can try shooting back.
+                        </para>
+                    </example>
+
+                    <para>
+                        Sometimes you may not be sure whether the potential
+                        target will be friend or foe, and in which case you
+                        will want to identify the target before attacking
+                        them. To do this, make a
+                        <y:perception>Tactics</y:perception> check at a
+                        difficulty determined by how easy identification is
+                        going to be - 10 if foes are obviously different to
+                        friends (human or orc for example), 20 for reasonable
+                        differences (police uniform or not) or 30 if the
+                        differences are slight (same uniform, different
+                        person).
+                    </para>
+
+                    <para>
+                        When you declare the overwatch, you must state if
+                        you are wanting to identify first, and what your
+                        default action is (shoot, or not shoot) if you fail
+                        to identify. You may also have +15 to the roll if
+                        you attack is <e>normal</e> instead of <e>fast</e>,
+                        or +25 if you accept a <e>slow</e> attack.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Gun to head</title>
+
+                    <para>
+                        Holding a gun to someone's head (or a knife to their
+                        throat) is similar to <e>Overwatch</e>, except that
+                        the target of your attack is well defined. You may
+                        declare what events will trigger your attack. In
+                        order to get the advantages of this though, you must
+                        have been in position the previous round, and your
+                        target's circumstances mustn't have changed.
+                    </para>
+
+                    <para>
+                        Your attack, if it is triggered, is <e>fast</e> and
+                        also your initiative is doubled for purposes of when
+                        you act.
+                    </para>
+
+                    <para>
+                        For a melee threat, you must be grappling the target
+                        to make use of these bonuses. If you have a missile
+                        weapon then you must be within the short range of
+                        the weapon, so a sniper across the street can take
+                        advantage as well as someone actually holding a gun
+                        to the target's head. If you are more than 3m away
+                        however, then you can only react to the target not
+                        to what someone else does.
+                    </para>
+
+                    <sect4>
+                        <title>Instant Death</title>
+
+                        <para>
+                            Killing someone instantly is actually very
+                            difficult. As far as <tm>Yags</tm> is concerned,
+                            if a person dies immediately from an attack then
+                            they die instantly and are unable to take further
+                            actions (such as pressing a button or pulling a
+                            trigger).
+                        </para>
+
+                        <para>
+                            An <e>unconscious</e> result is not instant, and
+                            if they had a declared action to perform something
+                            very simple (pull trigger, push button) then they
+                            may do so. However, for attacks they will only
+                            succeed if they have their target grappled.
+                        </para>
+                    </sect4>
+                </sect3>
+            </sect2>
+        </sect1>
+    </body>
+</article>
+
+

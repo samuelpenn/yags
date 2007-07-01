@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.16 $</version>
-            <date>$Date: 2007-06-03 18:49:04 $</date>
+            <version>$Revision: 1.17 $</version>
+            <date>$Date: 2007-07-01 20:47:39 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -100,6 +100,31 @@
                     <para>
                         You also suffer a -5 penalty to the attack, plus a
                         further -5 per reach of the weapon.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Rate of Fire</title>
+
+                    <para>
+                        If a weapon has a <e>Rate of Fire</e> greater than
+                        one, then it is possible to make multiple attacks
+                        in a single round, as long as all the attacks are
+                        against a single target. For every full 4 points of
+                        skill you have, one extra attack can be made. You
+                        cannot make any defence or move actions in a round
+                        when firing multiple shots like this. The
+                        <e>Recoil</e> of the weapon will take into account
+                        all penalties (recoil, reloading etc) for subsequent
+                        shots.
+                    </para>
+
+                    <para>
+                        If the weapon is listed as being <e>Automatic</e>
+                        or <e>Semi-automatic</e>, then use the rules for
+                        these types of weapons instead of the above rules.
+                        Generally, the above only applies to bolt-action
+                        rifles.
                     </para>
                 </sect3>
 
@@ -617,6 +642,30 @@
                         increases short range for automatic fire by 50%.
                     </para>
                 </sect3>
+
+                <sect3>
+                    <title>Character Strength</title>
+
+                    <para>
+                        Missile weapons have a <t>Strength</t> requirement
+                        just like melee weapons do. If you do not have
+                        sufficient strength to use a weapon, all shots are
+                        considered to be snapshots, all attacks are slow
+                        and the recoil penalty is doubled.
+                    </para>
+
+                    <para>
+                        If you can't carry the weapon, then you can't use
+                        it at all.
+                    </para>
+
+                    <para>
+                        Unless the weapon can't physically be used with less
+                        than two hands (e.g., a bow), then using two hands
+                        gives a +2 strength bonus. Most rifles require two
+                        hands to use effectively.
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
@@ -763,7 +812,7 @@
                         you is increased. The increase depends on whether
                         the cover is hard or soft, and how much of you it
                         actually covers. Cover also provides extra
-                        protection against automatic fire - every +5 bonus
+                        protection against automatic fire - every +10 bonus
                         that cover provides (including from being crouched
                         or prone) reduces the 'automatic hit' chance by 1.
                     </para>
@@ -899,6 +948,18 @@
                     automatic fire.
                 </para>
 
+                <note title="Stormtrooper Markmanship">
+                    <para>
+                        Automatic fire is inherently inaccurate at anything
+                        other than very short range, and Yags tries to
+                        simulate this. It can also be very effective at
+                        suppressing people though, so a random element is
+                        thrown in to make even highly skilled characters
+                        think twice at charging bad guys with automatic
+                        weapons.
+                    </para>
+                </note>
+
                 <para>
                     Automatic fire is divided into <e>bursts</e> which
                     normally consist of 10 bullets. Some heavy weapons will
@@ -934,7 +995,7 @@
                     <para>
                         When firing at a single target you gain an attack
                         bonus equal to the number of bullets in the burst
-                        (normally +10).
+                        up to a maximum of +10.
                     </para>
 
                     <para>
@@ -942,8 +1003,28 @@
                         and roll damage as if you hit with a single bullet.
                         On a <e>good</e> success, you gain +1 to the damage
                         roll per two bullets. On an <e>excellent</e> success
-                        you get a +1 per bullet.
+                        you get a +1 per bullet. In either case, the damage
+                        bonus can never exceed +10.
                     </para>
+
+                    <note title="High Rates of Fire">
+                        <para>
+                            Weapons with very high rates of fire, such as
+                            machine guns may have burst sizes of 20, 30
+                            or more. Because the attack and damage bonuses
+                            are capped at +10, these weapons lose some
+                            possible effectiveness at close range. But then,
+                            they aren't really designed to be used against
+                            single targets at close range, so this isn't
+                            necessarily unrealistic.
+                        </para>
+
+                        <para>
+                            Very rapid fire automatic weapons come into
+                            their own at longer ranges and against
+                            dispersed targets.
+                        </para>
+                    </note>
 
                     <para>
                         Remember that the effective number of bullets is
@@ -968,7 +1049,7 @@
                         hit, then roll for damage as normal as if you had hit
                         with a single bullet. After resolving that hit, roll
                         against for the next target. Up to 3 targets may be
-                        hit with a single 10 round burst.
+                        hit with a typical 10 round burst.
                     </para>
 
                     <para>
@@ -980,9 +1061,9 @@
 
                     <para>
                         If the burst has less than 10 bullets, then the chance
-                        of hitting is lower and you can hit fewer targets. At
-                        medium range halve (round down) the number of bullets,
-                        and at long range quarter them.
+                        of hitting is lower and you can hit fewer targets.
+                        The effective number of bullets is reduced beyond
+                        10% of short range, as described above.
                     </para>
 
                     <table>
@@ -1053,12 +1134,12 @@
                     </table>
 
                     <para>
-                        A roll of 19 or 20 can be an automatic hit. Because
-                        of the random unpredictability of automatic fire,
-                        everyone in the area is at risk of being hit
-                        regardless of how well they dodge or how bad the
-                        shooter is. On an automatic hit, the target does
-                        <e>not</e> count towards the normal maximum of
+                        For bursts of 5 or more bullets, there is a chance
+                        of an automatic hit against a target, regardless
+                        of their defence roll. This is due to the
+                        unpredictable nature of automatic fire, which can
+                        make it dangerous. On an automatic hit, the target
+                        does <e>not</e> count towards the normal maximum of
                         targets.
                     </para>
                 </sect3>

@@ -14,8 +14,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.15 $</version>
-            <date>$Date: 2007-06-03 18:45:59 $</date>
+            <version>$Revision: 1.16 $</version>
+            <date>$Date: 2007-07-01 20:47:39 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -97,9 +97,11 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You are experienced with firing a gun accurately, and can
-                halve the effective range to the target for purposes of
-                accuracy. This stacks with other manoeuvres and techniques
-                which affect the range.
+                double the range increment of your weapon when firing.
+                This is separate from, and stacks with, the modifiers
+                to the effective range for aiming or careful shots.
+                Effectively, a careful shot is now effective out to four
+                times the range, and an aimed shot out to six times.
             </para>
         </description>
     </advantage>
@@ -267,7 +269,7 @@
         </description>
     </advantage>
 
-    <advantage name="Sniper" type="technique">
+    <advantage name="Marksman" type="technique">
         <cost points="6"/>
         <skill name="Rifle"/>
         <prerequisite>Sharp shooter</prerequisite>
@@ -276,7 +278,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                With the <e>Sniper</e> technique you are specialised in
+                With the <e>Marksman</e> technique you are specialised in
                 firing accurately at long range, often with specialist
                 sniper rifles. If you take an <e>aimed shot</e>, then
                 you quarter the distance to the target (rather than
@@ -285,10 +287,10 @@
         </description>
     </advantage>
 
-    <advantage name="Accurate shot" type="technique">
+    <advantage name="Sniper" type="technique">
         <cost points="8"/>
         <skill name="Rifle"/>
-        <prerequisite>Sniper</prerequisite>
+        <prerequisite>Marksman</prerequisite>
 
         <short>Firing very accurately at long range.</short>
 
