@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+
+<!--
+    Small arms weapons from the real world, approximately 1945 - 1980.
+
+    Copyright 2007 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted as long as the above copyright
+    notice is retained.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-07-01 20:48:31 $
+
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+
+    Prices are in US dollars.
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="M16 A1">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>7</techLevel>
+        <legality>3</legality>
+        <weight>4000</weight>
+        <cost>350</cost>
+
+        <short>Fully automatic assualt rifle.</short>
+        <description>
+            <para>
+                The Colt M16 has been the standard weapon of the US
+                military since the 1960s. Using a 5.56 x 45mm NATO
+                round. It is more accurate than some of its
+                contempories, however tends to be more fragile. The
+                light round makes carrying large amounts of ammo
+                easy, though doesn't have the stopping power of
+                7.62 caliber.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+9</attack><damage>29</damage>
+                <range>
+                    <increment>30</increment>
+                    <short>550</short><medium>800</medium><long>2400</long>
+                </range>
+            </combat>
+            <strength>5</strength><load>4</load><reach>2</reach>
+            <capacity>30</capacity><rof>30</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><automatic/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="AK-47">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>7</techLevel>
+        <legality>3</legality>
+        <weight>4300</weight>
+        <cost>350</cost>
+
+        <short>Soviet assualt rifle.</short>
+        <description>
+            <para>
+                The AK-47 is one of the most widely used assualt rifles.
+                It is gas-operated, uses a 7.62 x 39mm round and has a
+                reputation of being incredibly robust. It isn't very
+                accurate at long ranges, but is designed to be good at
+                the short ranges that most fire fights occur at.
+            </para>
+
+            <para>
+                It is possible to attach a 75 round drum magazine instead
+                of the 30 round box magazine. Increase load by 1.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+7</attack><damage>31</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>300</short><medium>800</medium><long>2400</long>
+                </range>
+            </combat>
+            <strength>5</strength><load>4</load><reach>2</reach>
+            <capacity>30</capacity><rof>50</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><automatic/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="RPK">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>7</techLevel>
+        <legality>2</legality>
+        <weight>5000</weight>
+        <cost>350</cost>
+
+        <short>Soviet SAW.</short>
+        <description>
+            <para>
+                Designed for the Soviet infantry as a Squad Automatic
+                Weapon, the RPK is a light machine gun that uses the
+                same ammunition as the AK-47, and can use the same
+                magazines as that weapon as well. It is normally fitted
+                with a bipod.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+8</attack><damage>32</damage>
+                <range>
+                    <increment>30</increment>
+                    <short>400</short><medium>1000</medium><long>3000</long>
+                </range>
+            </combat>
+            <strength>6</strength><load>5</load><reach>2</reach>
+            <capacity>100</capacity><rof>50</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><automatic/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+</equipment>
+
+

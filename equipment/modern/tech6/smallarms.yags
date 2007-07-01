@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+
+<!--
+
+    General equipment lists.
+
+    Copyright 2007 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-07-01 20:48:31 $
+
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+
+    Prices are in credits.
+
+    Tech Level
+     4 1450-1700
+     5 1700-1900
+     6 1900-1950
+     7 1950-1980
+     8 1980-2020
+     9 2020+ (Interplanetary)
+    10 Interstellar (early jump)
+    11 Interstellar (Jump)
+    12 Interstellar (Imperium)
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="M1903 Springfield">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>6</techLevel>
+        <legality>3</legality>
+        <weight>4500</weight>
+        <cost>350</cost>
+
+        <short>Bolt action rifle.</short>
+        <description>
+            <para>
+                First adopted by the American army in 1903, this is a
+                magazine fed bolt-action rifle which was widely used
+                during WW1 and WW2. Even after it fell out of use amongst
+                regular infantry, it continued to be used as a sniper
+                weapon until the 1960s due to its effectiveness up to
+                almost 1km.
+            </para>
+
+            <para>
+                It uses the .30-06 Springfield cartridge, or 7.62 x 63mm
+                metric.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+8</attack><damage>30</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>550</short><medium>900</medium><long>2700</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>4</load><reach>2</reach>
+            <capacity>5</capacity><rof>2</rof><recoil>-10</recoil>
+            <properties>
+                <missile/><firearm/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Garand M1">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>6</techLevel>
+        <legality>3</legality>
+        <weight>4500</weight>
+        <cost>350</cost>
+
+        <short>Semi automatic infantry rifle.</short>
+        <description>
+            <para>
+                The first semi-automatic rifle to see large scale
+                distribution, it was the standard rifle of the US army
+                from 1936 to 1957.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+7</attack><damage>30</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>450</short><medium>700</medium><long>2100</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>4</load><reach>2</reach>
+            <capacity>8</capacity><rof>5</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Karabiner 98k">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>6</techLevel>
+        <legality>3</legality>
+        <weight>4100</weight>
+        <cost>350</cost>
+
+        <short>Bolt-action rifle.</short>
+        <description>
+            <para>
+                The German made Karabiner 98k was a bolt action rifle
+                which went into general use in the German army in 1935.
+                It used a 7.92 x 57mm round, with a muzzle velocity of
+                760m/s.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+7</attack><damage>30</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>800</short><medium>1600</medium><long>3500</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>4</load><reach>2</reach>
+            <capacity>5</capacity><rof>2</rof><recoil>-10</recoil>
+            <properties>
+                <missile/><firearm/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+</equipment>
+
+
