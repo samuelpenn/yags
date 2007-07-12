@@ -21,8 +21,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.4 $</version>
-            <date>$Date: 2007-05-20 15:47:53 $</date>
+            <version>$Revision: 1.5 $</version>
+            <date>$Date: 2007-07-12 18:39:20 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -54,8 +54,15 @@
 
                 <para>
                     Seeing people is generally straightforward. How hard is
-                    it to spot a person who is 100m away thought? Or 1km?
+                    it to spot a person who is 100m away though? Or 1km?
                     How about 1km and hiding behind a bush?
+                </para>
+
+                <para>
+                    It is assumed that a person has a basic spotting range
+                    equal to their <t>Perception</t> x 100m. A typical
+                    person can make out another person out to 300m. Beyond
+                    this range, double the difficulty to spot a person.
                 </para>
 
                 <targetlist>
@@ -66,10 +73,10 @@
                         Base difficulty to see a person who is standing in
                         the open, making no attempt to hide themselves.
                     </item>
-                    <item target="-3/pt" value="Size above 5.">
+                    <item target="-5/pt" value="Size above 5.">
                         Each point of size of the target above 5, reduce the
-                        difficulty by 3. If they are smaller, then increase
-                        the difficulty by 3 per point.
+                        difficulty by 5. If they are smaller, then increase
+                        the difficulty by 5 per point.
                     </item>
                     <item target="+5" value="Distance 50m - 100m.">
                         If the target is over 50m away, then increase the
@@ -86,9 +93,6 @@
                     <item target="+20" value="90% cover.">
                         If the target is almost entirely hidden.
                     </item>
-                    <item target="-10" value="Moving.">
-                        If the target is moving, it is easier to see.
-                    </item>
                 </targetlist>
 
                 <para>
@@ -96,7 +100,9 @@
                     <y:perception>Awareness</y:perception> check at the
                     specified difficulty. If you are actively looking
                     (i.e., not doing anything else other than simple
-                    movement) then the difficulty is halved.
+                    movement) then the difficulty is halved. It is assumed
+                    that generally people aren't able to <e>actively look</e>
+                    for long periods of time.
                 </para>
 
                 <para>
@@ -125,6 +131,13 @@
                     </item>
                     <item value="50km+" target="+100"/>
                 </targetlist>
+
+                <para>
+                    Outside, assuming there is plenty of time to spot, then
+                    a person can be assumed to make a spot check of 26,
+                    enabling them to see a stationary person across a field
+                    out to 300m.
+                </para>
 
                 <sect3>
                     <title>Hiding</title>
@@ -362,6 +375,64 @@
                         They can be highly sensitive, but quite restricted in
                         what they can detect. At TL9 and above, they can
                         perform DNA sequencing of people present in a room.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Long Range Sensors</title>
+
+                <para>
+                    Sensor systems such as radar are designed to work
+                    across tens or hundreds of kilometres. It is assumed
+                    that the size of the sensor system is of great
+                    importance at this scale. As for ranged weapons, these
+                    types of sensors have a <e>distance increment</e>,
+                    which is based on the size of the sensor system. For
+                    most systems, it is proportional to the square root
+                    of the sensor volume/mass.
+                </para>
+
+                <para>
+                    As for smaller sensor systems, the <e>skill</e> of the
+                    system represents software capability, and the
+                    <e>attribute</e> represents the quality of the
+                    hardware. A typical civilian system will have a
+                    <t>Perception</t> of 3, military or scientific systems
+                    will be closer to 5.
+                </para>
+
+                <sect3>
+                    <title>Visibility</title>
+
+                    <para>
+                        The environment greatly effects the range of
+                        a sensor system. The modifiers below assume
+                        radar.
+                    </para>
+
+                    <targetlist targetFirst="true">
+                        <targetLabel>Modifier</targetLabel>
+                        <valueLabel>Environment</valueLabel>
+                        <item value="Very noisy." target="x 1/100">
+                            Mountainous terrain.
+                        </item>
+                        <item value="Noisy." target="x 1/10">
+                            Hilly, forested or urban terrain.
+                        </item>
+                        <item value="Standard." target="x 1"/>
+                        <item value="Clean." target="x 10">
+                            Near orbit.
+                        </item>
+                        <item value="Empty." target="x 100">
+                            Deep space.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        For thermal sensors, square the range modifiers
+                        for <e>Clean</e> and <e>Empty</e>. Detecting hot
+                        objects in deep space is quite easy.
                     </para>
                 </sect3>
             </sect2>
