@@ -20,7 +20,7 @@
         <short>20t Customs Gig</short>
 
         <cost units="Cr">8210000</cost>
-        <mass>117000000</mass>
+        <weight>117000000</weight>
 
         <construction>
             <year>500</year>
@@ -44,7 +44,10 @@
                 <attribute name="strength" score="22"/>
                 <attribute name="health" score="4"/>
                 <attribute name="agility" score="4"/>
+                <attribute name="perception" score="2"/>
             </attributes>
+
+            <stealth signature="-2"/>
 
             <combat>
                 <armour location="Hull" score="20"/>
@@ -66,6 +69,76 @@
                 </weapon>
             </combat>
         </vehicle>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Sensors" level="5"/>
+        </tool>
+    </item>
+
+    <item name="Stellar Class Subsidized Liner">
+        <category>Vehicle</category>
+        <genre>Traveller</genre>
+        <techLevel>10</techLevel>
+        <legality>3</legality>
+        <availability>1</availability>
+        <importance>2</importance>
+
+        <short>600t passenger liner</short>
+
+        <cost units="Cr">327000000</cost>
+        <weight>3100000000</weight>
+
+        <construction>
+            <year>350</year>
+            <manufacturer>Vilani</manufacturer>
+        </construction>
+
+        <performance realm="Space">
+            <acceleration>12</acceleration>
+            <deltavee>4500</deltavee>
+            <jump>3</jump>
+        </performance>
+
+        <description>
+            <para>
+                An often seen type of liner which dates to the early years
+                of the Third Imperium. There are a number of varients,
+                including luxury yachts and mercenary cruisers.
+            </para>
+
+            <para>
+                It has 30 staterooms, a sickbay, passenger's lounge,
+                reception area, crew's lounge and a single life boat.
+                It requires a crew of 16 (7 bridge crew, 3 engineering,
+                1 medical, 1 command and 4 stewards).
+            </para>
+        </description>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="24" soak="36" acceleration="1">
+                <attribute name="strength" score="22"/>
+                <attribute name="health" score="3"/>
+                <attribute name="agility" score="2"/>
+                <attribute name="perception" score="4"/>
+            </attributes>
+
+            <combat>
+                <armour location="Hull" score="10"/>
+            </combat>
+        </vehicle>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Sensors" level="5"/>
+        </tool>
+
+        <task xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Computer hacking" score="60">
+                Accessing ship systems.
+            </skill>
+            <skill name="Security systems" score="40">
+                Breaking and entering.
+            </skill>
+        </task>
     </item>
 
 </equipment>
