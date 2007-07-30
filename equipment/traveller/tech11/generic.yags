@@ -10,8 +10,8 @@
     without modification, are permitted provided that the above
     copyright notice is retained.
 
-    Version: $Revision: 1.2 $
-    Date:    $Date: 2007-07-29 20:33:38 $
+    Version: $Revision: 1.3 $
+    Date:    $Date: 2007-07-30 20:50:17 $
 
     All units are in cgs.
 
@@ -225,4 +225,95 @@
         </description>
     </item>
 
+    <item name="Scout swarm">
+        <category>Surveillance</category>
+        <importance>1</importance>
+        <availability>1</availability>
+        <techLevel>11</techLevel>
+        <legality>2</legality>
+        <cost>1500</cost>
+        <weight>500</weight>
+
+        <short>Searches out sensors, mines and other electronics.</short>
+
+        <description>
+            <para>
+                A swarm of microbots which when released cover an area up to
+                100m^2. They are able to locate most forms of electronic
+                devices, including sensors, mines, power cables and
+                transmitters. They take about a minute to cover the area,
+                and due to their small size (a few millimetres long) rarely
+                trigger what they are looking for.
+            </para>
+
+            <para>
+                They can rely results back using either short burst comms,
+                lights or returning to base. They have enough power for
+                about 30 minutes use.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <uses>30</uses>
+            <skill name="Burglary" level="40"/>
+        </tool>
+    </item>
+
+    <item name="Surveillance swarm">
+        <category>Surveillance</category>
+        <importance>1</importance>
+        <availability>1</availability>
+        <techLevel>11</techLevel>
+        <legality>2</legality>
+        <cost>2500</cost>
+        <weight>750</weight>
+
+        <short>Microbot alarm system.</short>
+
+        <description>
+            <para>
+                Designed to cover an area up to 1000m^2, a swarm of
+                surveillance microbots is able to act as an effective
+                alarm system without requiring much time setting up.
+                When deployed, they automatically spread out to cover
+                their programmed area. If they detect movement, sound
+                or light (programmable) they can respond with either
+                a short communication burst, or in 'siren' mode by
+                the swarm lighting up around the disturbance and
+                producing a wailing siren.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <uses>12 hours</uses>
+            <skill name="Awareness" level="30"/>
+        </tool>
+    </item>
+
+    <item name="Bomblet swarm">
+        <category>Surveillance</category>
+        <importance>1</importance>
+        <availability>1</availability>
+        <techLevel>11</techLevel>
+        <legality>1</legality>
+        <cost>700</cost>
+        <weight>1000</weight>
+
+        <short>Microbot minefield.</short>
+
+        <description>
+            <para>
+                When released, these microbots automatically spread out to
+                cover the programmed area. When triggered, they explode
+                simultaneously causing damage to all within the area.
+                They cause up to +75 (Vehicle) damage, -1 for each 4m^2
+                of area that is covered.
+            </para>
+
+            <para>
+                They are triggered remotely, on a timer or via input from
+                some other sensor.
+            </para>
+        </description>
+    </item>
 </equipment>

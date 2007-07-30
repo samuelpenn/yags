@@ -32,8 +32,8 @@
     ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
     OF THE POSSIBILITY OF SUCH DAMAGE.
 
-    Version: $Revision: 1.9 $
-    Date:    $Date: 2007-07-04 19:43:31 $
+    Version: $Revision: 1.10 $
+    Date:    $Date: 2007-07-30 20:50:17 $
 
     All units are in cgs.
 
@@ -323,6 +323,140 @@
             </properties>
         </weapon>
     </item>
+
+
+    <item name="Plasma Charge">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>1</availability>
+        <techLevel>12</techLevel>
+        <legality>1</legality>
+
+        <short>Explosive charge.</short>
+
+        <description>
+            <para>
+                A plasma based explosive charge, designed for getting
+                through walls and doors, or simply disabling vehicles.
+                It can be used as an anti-infantry weapon, though tends
+                to be overkill. It is equivalent to about 20lb of TNT.
+                It is a Size 10 explosion.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>metal</material>
+        <cost>500</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Demolitions</category>
+            <class>bomb</class>
+
+            <combat>
+                <attack>+0</attack>
+                <damage>90</damage>
+            </combat>
+
+            <strength>2</strength><load>1</load><reach>0</reach>
+
+            <properties>
+                <vehicle/><heavy/><explosive score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Fusion Charge">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>1</availability>
+        <techLevel>12</techLevel>
+        <legality>1</legality>
+
+        <short>Explosive charge.</short>
+
+        <description>
+            <para>
+                A fusion based explosive charge, designed for getting
+                through walls and doors, or simply disabling vehicles.
+                It can be used as an anti-infantry weapon, though tends
+                to be overkill. It is equivalent to about 120lb of TNT.
+                It is not considered a nuclear device as such, but uses
+                similar technology to a fusion rifle (though the only
+                real difference between this and a 'micronuke' is yield).
+                It is a Size 10 explosion.
+            </para>
+        </description>
+
+        <weight>1500</weight>
+        <material>metal</material>
+        <cost>2500</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Demolitions</category>
+            <class>bomb</class>
+
+            <combat>
+                <attack>+0</attack>
+                <damage>120</damage>
+            </combat>
+
+            <strength>2</strength><load>1</load><reach>0</reach>
+
+            <properties>
+                <vehicle/><heavy/><explosive score="4"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Micronuke">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>1</availability>
+        <techLevel>12</techLevel>
+        <legality>0</legality>
+
+        <short>Dial-a-yield micronuke.</short>
+
+        <description>
+            <para>
+                This is a small explosive device which uses a micro
+                fusion bomb to cause a very large amount of damage,
+                up to 250t of TNT in force. The actual yield can be
+                specified when it is primed, from 1t up to the
+                maximum possible.
+            </para>
+
+            <para>
+                It is considered a Size 20 explosion, making it
+                suitable for use against large space craft. The
+                damage can be lowered to +160.
+            </para>
+        </description>
+
+        <weight>5000</weight>
+        <material>metal</material>
+        <cost>5000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Demolitions</category>
+            <class>bomb</class>
+
+            <combat>
+                <attack>+0</attack>
+                <damage>240</damage>
+            </combat>
+
+            <strength>2</strength><load>5</load><reach>0</reach>
+
+            <properties>
+                <vehicle/><heavy/><explosive score="32"/>
+            </properties>
+        </weapon>
+    </item>
+
 </equipment>
 
 
