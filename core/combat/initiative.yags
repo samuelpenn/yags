@@ -21,8 +21,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.1 $</version>
-            <date>$Date: 2007-07-01 20:47:39 $</date>
+            <version>$Revision: 1.2 $</version>
+            <date>$Date: 2007-08-22 21:45:50 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -39,13 +39,42 @@
     </header>
 
     <body>
-        <sect1 id="melee">
+        <sect1 id="initiative">
             <title>Initiative</title>
 
             <para>
                 <e>Initiative</e> is an important part of the combat system
                 and sometimes requires a very precise understanding of the
                 order of events and how declarations work.
+            </para>
+
+            <para>
+                It should be noted that <e>initiative</e> is not meant to
+                represent the order in which things happens within the game
+                world, but is instead a representation of who has a tactical
+                advantage within the combat. The rules represent this as
+                who goes first, since this is easiest rules implementation,
+                but really most actions will be simultaneous. This is
+                especially true when it comes to movement and other complex
+                actions.
+            </para>
+
+            <para>
+                This can be best demonstrated with an example of someone
+                moving out of cover. At the beginning of the round they
+                are fully in cover and cannot be shot, by the end of the
+                round they intend to be out of cover (for whatever
+                reason). An attacker who has a higher initiative can
+                declare to shoot them after they've declared to move
+                out of cover, but before they actually take their action,
+                even though it would appear to be that they would still
+                be in cover at this point.
+            </para>
+
+            <para>
+                For this reason, all movement actions begin at the start
+                of the round (before all other actions), and end at the
+                end of the round (after all other actions).
             </para>
 
             <sect2>
@@ -73,12 +102,18 @@
                         If you are declaring a melee strike, then the
                         target area must be in reach of you at the start of
                         the round. If you are declaring to shoot, then you
-                        can cover a 45 degree area.
+                        can cover a 45 degree area. When the trigger occurs,
+                        a <y:perception>Tactics</y:perception> must be
+                        made at a difficulty of 10, or the overwatch
+                        fails and your action is wasted.
                     </para>
 
                     <para>
                         Your action, if it fires, is always <e>fast</e>. If
-                        it is a shooting action, then it is a snapshot.
+                        it is a shooting action, then it is a snapshot. In
+                        either case, your attack roll is halved. In most
+                        cases though, the target will be unaware of your
+                        attack and therefore unable to defend.
                     </para>
 
                     <example title="Overwatch">
@@ -112,14 +147,11 @@
                         Sometimes you may not be sure whether the potential
                         target will be friend or foe, and in which case you
                         will want to identify the target before attacking
-                        them. To do this, make a
-                        <y:perception>Tactics</y:perception> check at a
-                        difficulty determined by how easy identification is
-                        going to be - 10 if foes are obviously different to
-                        friends (human or orc for example), 20 for reasonable
-                        differences (police uniform or not) or 30 if the
-                        differences are slight (same uniform, different
-                        person).
+                        them. In this case, the <e>Tactics</e> difficulty is
+                        raised to 20 for an easy identification (orc or
+                        human, uniformed police or scruffy thug), 30 for
+                        reasonable differences (friend or stranger) or
+                        40 if the differences are slight.
                     </para>
 
                     <para>
@@ -128,7 +160,10 @@
                         default action is (shoot, or not shoot) if you fail
                         to identify. You may also have +15 to the roll if
                         you attack is <e>normal</e> instead of <e>fast</e>,
-                        or +25 if you accept a <e>slow</e> attack.
+                        or +25 if you accept a <e>slow</e> attack. A roll
+                        of less than 10 (not possible if you're choosing
+                        not to go <e>fast</e>) will always result in no
+                        action being taken.
                     </para>
                 </sect3>
 
@@ -154,8 +189,8 @@
                     <para>
                         For a melee threat, you must be grappling the target
                         to make use of these bonuses. If you have a missile
-                        weapon then you must be within the short range of
-                        the weapon, so a sniper across the street can take
+                        weapon then you must be within 10% of the short range
+                        of the weapon, so a sniper across the street can take
                         advantage as well as someone actually holding a gun
                         to the target's head. If you are more than 3m away
                         however, then you can only react to the target not
@@ -182,6 +217,110 @@
                             succeed if they have their target grappled.
                         </para>
                     </sect4>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Surprise</title>
+
+                <para>
+                    Because all actions are declared at the start of a round,
+                    <e>surprise</e> can sometimes be tricky to handle within
+                    <tm>Yags</tm>, especially if those causing surprise have
+                    to declare first. Related to <e>surprise</e> are
+                    <e>hidden actions</e>. These are actions which, though
+                    declared, aren't declared to all parties in a combat.
+                </para>
+
+                <sect3>
+                    <title>Hidden Actions</title>
+
+                    <para>
+                        An action is considered to be hidden if the other
+                        side are both unaware of it, and have no way of
+                        reacting to it before it happens. Remember that
+                        <e>initiative</e> is not really a measure of who
+                        acts first, but who has the tactical advantage and
+                        can make an effective action first.
+                    </para>
+
+                    <example title="Hidden Actions">
+                        <para>
+                            Bob and Eve are in neighbouring rooms, and are
+                            both unaware of each other. Eve is going to open
+                            the door connecting the room and step into Bob's
+                            room.
+                        </para>
+
+                        <para>
+                            Though Bob is unaware of Eve, or what she is
+                            doing, until she actually opens the door, Eve's
+                            action will be declared publically and Bob (if
+                            he has the advantage of initiative) will get to
+                            declare a reaction to it. In effect, Bob becomes
+                            aware of Eve as she begins to open the door, and
+                            can change his action to account for it. So he
+                            could declare to shoot her as she steps through,
+                            or to hide or try to leave the room by another
+                            route. In this case, Eve's action would not be
+                            hidden.
+                        </para>
+
+                        <para>
+                            If instead Eve was going to set off a bomb, then
+                            there's nothing Bob can do. Until the bomb goes,
+                            Bob is unaware of both Eve and the bomb, so
+                            cannot possible react to either. In this case,
+                            Eve's action would be hidden.
+                        </para>
+                    </example>
+
+                    <para>
+                        A <e>Hidden</e> person does not need to declare
+                        their actions openly.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Unknown Targets</title>
+
+                    <para>
+                        An unknown target is one that has declared openly,
+                        but hasn't been seen. If an unknown target has lost
+                        the initiative, then you know what they're doing,
+                        but are limited in what you can do. Obviously, since
+                        you probably don't know that they exist until they
+                        declare, if you're declaring first then there's
+                        nothing you can do anyway.
+                    </para>
+
+                    <itemlist order="1">
+                        <item>
+                            You cannot declare a direct attack against an
+                            unknown target.
+                        </item>
+
+                        <item>
+                            You cannot declare a defence against an
+                            unknown target.
+                        </item>
+
+                        <item>
+                            You may declare overwatch against the area
+                            they are coming from.
+                        </item>
+
+                        <item>
+                            You may take a full dodge.
+                        </item>
+                    </itemlist>
+
+                    <para>
+                        If a character counts as unknown at the start of
+                        the round, then you are considered to be unaware
+                        of them for purposes of certain actions (such as
+                        the <e>Ambush</e> technique).
+                    </para>
                 </sect3>
             </sect2>
         </sect1>
