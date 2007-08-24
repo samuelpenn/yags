@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.32 $</version>
-            <date>$Date: 2007-05-27 10:45:52 $</date>
+            <version>$Revision: 1.33 $</version>
+            <date>$Date: 2007-08-24 23:01:12 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -1020,10 +1020,6 @@
                     <y:skills>skills/academic-skills.yags</y:skills>
                     <y:skills>skills/technical-skills.yags</y:skills>
                     <y:skills>skills/business-skills.yags</y:skills>
-
-                    <y:techniques>techniques/techniques.yags</y:techniques>
-                    <y:techniques>techniques/lowtech-techniques.yags</y:techniques>
-                    <y:techniques>techniques/combat-techniques.yags</y:techniques>
                 </y:list-skills>
             </sect2>
 
@@ -1038,9 +1034,13 @@
                     <y:skills>skills/technical-skills.yags</y:skills>
                     <y:skills>skills/business-skills.yags</y:skills>
 
-                    <y:techniques>techniques/techniques.yags</y:techniques>
-                    <y:techniques>techniques/lowtech-techniques.yags</y:techniques>
-                    <y:techniques>techniques/combat-techniques.yags</y:techniques>
+                    <y:techniques>techniques/academic.yags</y:techniques>
+                    <y:techniques>techniques/combat.yags</y:techniques>
+                    <y:techniques>techniques/firearms.yags</y:techniques>
+                    <y:techniques>techniques/physical.yags</y:techniques>
+                    <y:techniques>techniques/social.yags</y:techniques>
+                    <y:techniques>techniques/technical.yags</y:techniques>
+                    <y:techniques>techniques/vehicle.yags</y:techniques>
                 </y:import-skills>
             </sect2>
 
@@ -1079,9 +1079,78 @@
                     The standard techniques are available below.
                 </para>
 
-                <y:import-advantages type="technique" tree="true">
-                    <y:adv>techniques/techniques.yags</y:adv>
-                </y:import-advantages>
+                <sect3>
+                    <title>Academic Techniques</title>
+
+                    <para>
+                        The Academic techniques cover the sciences and
+                        other areas of knowledge. Generally, each is a
+                        specialisation within a subject - so the
+                        <e>Physics</e> skill will have techniques for
+                        <e>Nuclear Physics</e>, <e>Relativity</e> etc.
+                    </para>
+
+                    <para>
+                        A specialisation technique halves the difficulty
+                        of tasks within the specialisation. If a technique
+                        for a specialisation doesn't exist, then make it
+                        up. Most academic specialisations are level 4.
+                        Those which are for cutting edge specialisations
+                        might be 6 or 8.
+                    </para>
+
+                    <y:import-advantages type="technique" tree="true">
+                        <y:adv>techniques/academic.yags</y:adv>
+                    </y:import-advantages>
+                </sect3>
+
+                <sect3>
+                    <title>Combat Techniques</title>
+
+                    <y:import-advantages type="technique" tree="true">
+                        <y:adv>techniques/combat.yags</y:adv>
+                    </y:import-advantages>
+                </sect3>
+
+                <sect3>
+                    <title>Firearms Techniques</title>
+
+                    <y:import-advantages type="technique" tree="true">
+                        <y:adv>techniques/firearms.yags</y:adv>
+                    </y:import-advantages>
+                </sect3>
+
+                <sect3>
+                    <title>Physical Techniques</title>
+
+                    <y:import-advantages type="technique" tree="true">
+                        <y:adv>techniques/physical.yags</y:adv>
+                    </y:import-advantages>
+                </sect3>
+
+                <sect3>
+                    <title>Social Techniques</title>
+
+                    <y:import-advantages type="technique" tree="true">
+                        <y:adv>techniques/social.yags</y:adv>
+                    </y:import-advantages>
+                </sect3>
+
+                <sect3>
+                    <title>Technical Techniques</title>
+
+                    <y:import-advantages type="technique" tree="true">
+                        <y:adv>techniques/technical.yags</y:adv>
+                    </y:import-advantages>
+                </sect3>
+
+                <sect3>
+                    <title>Vehicle Techniques</title>
+
+                    <y:import-advantages type="technique" tree="true">
+                        <y:adv>techniques/vehicle.yags</y:adv>
+                    </y:import-advantages>
+                </sect3>
             </sect2>
         </sect1>
     </body>
