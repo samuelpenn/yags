@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+
+<!--
+    Combat techniques.
+    Now split up and moved into the techniques directory.
+ -->
+
+<advantages xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+    <header>
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2007-08-24 23:00:38 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2005</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+            <url>http://www.glendale.org.uk/gpl.txt</url>
+        </license>
+    </header>
+
+    <advantage name="Nuclear physics" type="technique">
+        <cost points="4"/>
+        <skill name="Physics"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Specialist knowledge of the field of nuclear physics.
+                You have experience in setting up and interpreting
+                experiments in this field, and can perform such
+                tasks as working out energy from nuclear reactions,
+                how best to shield from and handle radioactive
+                material, and how to design nuclear power stations
+                and weapons.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Quantum mechanics" type="technique">
+        <cost points="4"/>
+        <skill name="Physics"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Knowledge of current theories on Quantum mechanics.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Relativity" type="technique">
+        <cost points="4"/>
+        <skill name="Physics"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Knowledge of both special and general relativity.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="String theory" type="technique">
+        <cost points="6"/>
+        <skill name="Physics"/>
+
+        <prerequisite>Quantum mechanics</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Knowledge of the various versions of string theory.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Biochemistry" type="technique">
+        <cost points="4"/>
+        <skill name="Chemistry"/>
+        <short>The chemistry of living organisms.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                A study of the organic chemistry of compounds and
+                processes within living organisms, attempting to
+                understand biology using chemistry.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Genetics" type="technique">
+        <cost points="4"/>
+        <skill name="Biology"/>
+        <prerequisite>Biochemistry</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Knowledge of genetic theory.
+            </para>
+        </description>
+    </advantage>
+
+</advantages>
+
+
