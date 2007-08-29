@@ -11,8 +11,8 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.3 $
-    Date:    $Date: 2007-08-24 23:01:12 $
+    Version: $Revision: 1.4 $
+    Date:    $Date: 2007-08-29 19:56:01 $
     Author: Samuel Penn
     -->
 
@@ -810,35 +810,6 @@
     </skill>
 
 
-    <skill name="History" type="knowledge">
-        <group>Academic</group>
-
-        <short>Knowledge about historical events.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of the past, especially the last few hundred
-                years. Based on intelligence. By default, assumes the
-                history of your own culture.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Law" type="knowledge">
-        <group>Academic</group>
-        <group>Business</group>
-
-        <short>Knowledge about the law of the land.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge and understanding of the law, and how to apply
-                it in a given situation. Based on intelligence.
-            </para>
-        </description>
-    </skill>
-
-
     <skill name="Religion" type="knowledge">
         <group>Academic</group>
 
@@ -1092,6 +1063,198 @@
             </para>
         </description>
     </skill>
+
+    <skill name="Strategy" type="skill">
+        <group>Military</group>
+
+        <short>Military strategy and logistics.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Unlike <e>Tactics</e>, which is concerned with small scale
+                skirmishes, military strategy provides knowledge and
+                experience of running a war, including making most
+                effective use of troops, logistics and knowledge of
+                large scale tactics.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Demolitions" type="skill">
+        <group>Military</group>
+        <group>Criminal</group>
+
+        <short>Blowing things up efficiently.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Blowing things up is easy, but doing it with the minimum
+                of explosives, at minimal risk to yourself, and in a way
+                that causes maximum damage is somewhat harder. This skill
+                provides everything you need to know about destroying
+                things with explosives. You also know about the different
+                types of explosives, how best to store, move and deploy
+                them, and how to disarm other people's bombs.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Combat engineering" type="skill">
+        <group>Military</group>
+
+        <short>Building things quickly.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Most infantry has experience with digging trenches,
+                building bridges and putting up sandbags. A combat
+                engineer has a lot of experience doing this. This
+                skill covers getting the job done in the minimum
+                time, often so that's its good enough to do what it
+                needs to do. It covers a wide range of tasks, from
+                bridge building to tunnelling, and is more practical
+                than theoretical.
+            </para>
+
+            <para>
+                Unlike 'real' engineering skills, this one assumes
+                that the needed materials aren't readily to hand and
+                that the people doing most of the heavy lifting are
+                are mostly unskilled infantry, so the result will
+                often be simple and ugly. But it'll work.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Parachuting" type="skill">
+        <group>Military</group>
+        <group>Sport</group>
+
+        <short>Safely using parachutes.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have experience with free-falling and parachuting.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Torture" type="skill">
+        <group>Criminal</group>
+        <group>Military</group>
+
+        <short>Making people talk.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is the art of applying pain to someone in order to get
+                them to cooperate.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Forgery" type="skill">
+        <group>Criminal</group>
+
+        <short>Forging credentials.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of forging identity cards and the like. You know
+                how to obtain the materials necessary for creating forgeries,
+                can detect a forged document or card, and can create them
+                yourself as long as you have the necessary information.
+                Some forms of forgery will require modifying database
+                records, which will require <e>Computer operation</e> and
+                similar skills which <e>Forgery</e> does not provide,
+                however it will let you know what databases need to be
+                changed.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Burglary" type="skill">
+        <group>Criminal</group>
+
+        <short>Breaking and entering.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have experience in the various tasks involved in breaking
+                into buildings. Opening basic locks, forcing doors
+                and windows, and knowledge about how buildings are generally
+                designed come under this skill.
+            </para>
+        </description>
+
+        <examples>
+            <example target="10">Very simple and basic lock.</example>
+            <example target="20">Typical key based lock.</example>
+            <example target="30">Good key based lock, typical combination safe.</example>
+            <example target="40">Excellent key based lock, good combination safe.</example>
+            <example target="50">Excellent combination safe.</example>
+            <example target="10">Most low tech unsecured doors and windows.</example>
+            <example target="20">Good quality mid-tech doors and windows.</example>
+        </examples>
+    </skill>
+
+    <skill name="Criminology" type="knowledge">
+        <group>Criminal</group>
+
+        <short>The study of crime.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have studied criminals and the crimes they commit,
+                in an attempt to better catch them. This is normally
+                the domain of law enforcement.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Forensics" type="skill">
+        <group>Criminal</group>
+
+        <short>Finding clues at a crime scene.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have experience in searching crime scenes for
+                clues as to what happened, and who did it.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Skiing" type="skill">
+        <group>Sport</group>
+        <default>Athletics</default>
+
+        <short>Using skies.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of skiing. Includes practical experience, as well
+                as knowledge of identifying poor conditions.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Fencing">
+        <group>Sport</group>
+
+        <short>Fighting with light fencing weapons.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The sport of using light fencing weapons. It can be used
+                in duelling and combat, though is primarily concerned with
+                the use of fencing weapons as a sport. Because it is
+                <e>not</e> part of the Combat group, it cannot be used
+                with any of the standard combat techniques.
+            </para>
+        </description>
+    </skill>
+
 
 </skill-list>
 

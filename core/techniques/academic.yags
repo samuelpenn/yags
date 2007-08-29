@@ -14,8 +14,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.1 $</version>
-            <date>$Date: 2007-08-24 23:00:38 $</date>
+            <version>$Revision: 1.2 $</version>
+            <date>$Date: 2007-08-29 19:56:01 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -32,6 +32,7 @@
 
     <advantage name="Nuclear physics" type="technique">
         <cost points="4"/>
+        <tech level="6"/>
         <skill name="Physics"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -49,17 +50,21 @@
 
     <advantage name="Quantum mechanics" type="technique">
         <cost points="4"/>
+        <tech level="6"/>
         <skill name="Physics"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Knowledge of current theories on Quantum mechanics.
+                You have a detailed knowledge of quantum physics,
+                including the behaviour of particles at the quantum
+                scales and the very basics of quantum gravity.
             </para>
         </description>
     </advantage>
 
     <advantage name="Relativity" type="technique">
         <cost points="4"/>
+        <tech level="6"/>
         <skill name="Physics"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -71,6 +76,7 @@
 
     <advantage name="String theory" type="technique">
         <cost points="6"/>
+        <tech level="8"/>
         <skill name="Physics"/>
 
         <prerequisite>Quantum mechanics</prerequisite>
@@ -84,6 +90,7 @@
 
     <advantage name="Biochemistry" type="technique">
         <cost points="4"/>
+        <tech level="6"/>
         <skill name="Chemistry"/>
         <short>The chemistry of living organisms.</short>
 
@@ -98,12 +105,106 @@
 
     <advantage name="Genetics" type="technique">
         <cost points="4"/>
+        <tech level="7"/>
         <skill name="Biology"/>
         <prerequisite>Biochemistry</prerequisite>
+        <short>Advanced knowledge of genetics.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Knowledge of genetic theory.
+                You have a detailed knowledge of genetics. You
+                understand the theory of DNA and genetic inheritance,
+                as well as having experience in identifying and
+                extracting DNA, and making modifications to the
+                genetic information of living creatures.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Bioengineering" type="technique">
+        <cost points="6"/>
+        <tech level="9"/>
+        <skill name="Biology"/>
+        <prerequisite>Genetics</prerequisite>
+        <short>Advanced knowledge of cloning and tissue engineering.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Building on your knowledge of genetics, you have
+                considerable experience with the design and growth
+                of artificial biological organisms, including clones,
+                specifically bred tissues and bio-enhancements.
+                Much of what is possible is considered unethical in
+                the Third Imperium.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Biowarfare" type="technique">
+        <cost points="4"/>
+        <skill name="Biology"/>
+        <prerequisite>Biochemistry</prerequisite>
+        <short>Knowledge of biological warfare.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are experienced in the field of biological warfare,
+                and have a good understanding of how biological agents
+                can be 'weaponised', how they disperse through the
+                environment, and how to combat them.
+            </para>
+
+            <para>
+                Can be combined with <e>Bioengineering</e> to make
+                viruses which target those with a specific genetic
+                identifier (races, families or even individuals).
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Cybernetics" type="technique">
+        <cost points="4"/>
+        <skill name="Medicine"/>
+        <short>Knowledge of cybernetics.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are experienced in the medical field of cybernetics.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Diagnosis" type="technique">
+        <cost points="2"/>
+        <skill name="Medicine"/>
+        <short>Diagnosing an illness.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are especially experienced at diagnosing the cause
+                of a patient's illness or injury based on knowledge of
+                the symptoms.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Poisons" type="technique">
+        <cost points="4"/>
+        <skill name="Medicine"/>
+        <short>Knowledge of poisons.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have specific knowledge of poisons, including both on
+                how to cure them, and how to administer them.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Disease" type="technique">
+        <cost points="4"/>
+        <skill name="Medicine"/>
+        <short>Knowledge of diseases.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have specific knowledge of diseases and how they
+                effect people. You are skilled at curing them (at least
+                those there are cures for).
             </para>
         </description>
     </advantage>
