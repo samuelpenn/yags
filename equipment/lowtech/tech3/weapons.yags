@@ -1,0 +1,1340 @@
+<?xml version="1.0"?>
+
+<!--
+
+    General equipment lists.
+
+    Copyright 2005-2007, Samuel Penn, sam@glendale.org.uk
+
+    Redistribution and use with or without modification are permitted provided
+    that the following conditions are met:
+
+    1) Redistributions of any source code (e.g. XML) must retain the
+        above copyright notice and this list of conditions.
+
+    2) Redistributions in binary/printed forms must include copyright
+        attribution.
+
+    The purpose of these equipment lists are to provide a generic and complete
+    list of equipment for RPG purposes, in a format that can be used in other
+    games by anyone, with minimum fuss and license worries. If you make changes
+    and/or additions, then it'd be great if they are passed back or made
+    freely available, but you don't have to.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-08-30 18:15:54 $
+
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="Hand axe">
+        <category>Weapon</category>
+        <importance>3</importance>
+
+        <short>A small weapon designed to be used in one hand.</short>
+
+        <description>
+            <para>
+                A small axe, not designed specifically for combat but
+                can be used in close quarters fighting. It has a small
+                head, with a haft about 30cm long.
+            </para>
+        </description>
+
+        <weight>250</weight>
+        <material>metal</material>
+
+        <cost>40</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Axes</category>
+            <class>single</class>
+
+            <combat>
+                <attack>+2</attack>
+                <defence>+1</defence>
+                <damage>+5</damage>
+            </combat>
+
+            <strength>1</strength>
+            <load>0.5</load>
+            <reach>1</reach>
+
+            <properties>
+                <heavy/>
+                <throwable/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Battle axe">
+        <category>Weapon</category>
+        <importance>3</importance>
+
+        <short>A one or two handed axe.</short>
+
+        <description>
+            <para>
+                An axe designed for single handed user. It has a single
+                bladed head, with a haft about 60cm long.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>metal</material>
+
+        <cost>60</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Axes</category>
+            <class>single</class>
+            <combat>
+                <attack>+4</attack>
+                <defence>+3</defence>
+                <damage>+10</damage>
+            </combat>
+
+            <strength>3</strength>
+            <load>2</load>
+            <reach></reach>
+
+            <properties>
+                <heavy/>
+                <impaling/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Broad axe">
+        <category>Weapon</category>
+        <importance>2</importance>
+
+        <short>A large two handed axe.</short>
+
+        <description>
+            <para>
+                A large two handed axe with a long haft, around 150cm
+                in length. It is topped with a single broad blade. It
+                is poor in defence, but very good against armour.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>metal</material>
+
+        <cost>80</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Axes</category>
+            <class>great</class>
+            <combat>
+                <attack>+7</attack>
+                <defence>+4</defence>
+                <damage>+15</damage>
+            </combat>
+
+            <strength>6</strength>
+            <load>3</load>
+            <reach>3</reach>
+
+            <properties>
+                <twohanded/>
+                <heavy/>
+                <impaling/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Club">
+        <category>Weapon</category>
+        <importance>3</importance>
+
+        <short>A wooden club, a very simple weapon.</short>
+
+        <description>
+            <para>
+                Often, a club is not much more than a shaft of wood,
+                maybe with some metal on one end to weight it. It is
+                considered to be a simple weapon.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>wood</material>
+
+        <cost>4</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Clubs</category>
+            <class>brawl</class>
+            <class>single</class>
+
+            <combat>
+                <attack>+2</attack>
+                <defence>+3</defence>
+                <damage type="split">+5</damage>
+            </combat>
+
+            <strength>2</strength>
+            <load>1</load>
+            <reach>1</reach>
+
+            <properties>
+                <light/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Dagger">
+        <category>Weapon</category>
+        <importance>3</importance>
+
+        <short>A short bladed weapon.</short>
+
+        <description>
+            <para>
+                Daggers are halfway between a knife and a sword - unlike
+                a knife they are properly designed as a weapon rather
+                than a tool or eating implement.
+            </para>
+        </description>
+
+        <weight>250</weight>
+        <material>metal</material>
+
+        <cost>20</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Knives</category>
+            <class>brawl</class>
+            <class>single</class>
+
+            <combat>
+                <attack>+2</attack>
+                <defence>+3</defence>
+                <damage>+4</damage>
+            </combat>
+
+            <strength>1</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+
+            <properties>
+                <impaling/>
+                <light/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Scramasax">
+        <category>Weapon</category>
+        <importance>3</importance>
+
+        <short>A cheap sword.</short>
+
+        <description>
+            <para>
+                A cheap single edged sword, forged from a single piece
+                of iron.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>metal</material>
+
+        <cost>20</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Swords</category>
+            <class>single</class>
+
+            <combat>
+                <attack>+4</attack>
+                <defence>+3</defence>
+                <damage>+7</damage>
+            </combat>
+
+            <strength>2</strength>
+            <load>1</load>
+            <reach>1</reach>
+
+            <properties>
+                <weak/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Long sword">
+        <category>Weapon</category>
+        <importance>2</importance>
+
+        <short>A double edged two handed sword.</short>
+
+        <description>
+            <para>
+                The blade of a long sword can be 100cm long or more,
+                with another 20cm for the hilt. They are designed for
+                one handed use, but the hilt is long enough for a
+                two handed grip.
+            </para>
+        </description>
+
+        <weight>1200</weight>
+        <material>metal</material>
+
+        <cost>1200</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Swords</category>
+            <class>great</class>
+
+            <combat>
+                <attack>+6</attack>
+                <defence>+4</defence>
+                <damage>+14</damage>
+            </combat>
+
+            <strength>4</strength>
+            <load>2</load>
+            <reach>3</reach>
+
+            <properties>
+                <twohanded/>
+                <thrusting/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Broad sword">
+        <category>Weapon</category>
+        <importance>3</importance>
+
+        <short>A typical double edged sword.</short>
+
+        <description>
+            <para>
+                The common sword, with a one handed grip and a blade
+                length of about 85 to 90cm. The blade edges tend to be
+                parallel, designed for slashing and cutting.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>metal</material>
+
+        <cost>960</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Swords</category>
+            <class>single</class>
+
+            <combat>
+                <attack>+5</attack>
+                <defence>+5</defence>
+                <damage>+12</damage>
+            </combat>
+
+            <strength>3</strength>
+            <load>1</load>
+            <reach>2</reach>
+
+            <properties>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Great sword">
+        <category>Weapon</category>
+        <importance>2</importance>
+
+        <short>A large two handed sword.</short>
+
+        <description>
+            <para>
+                These are similar to long swords, but are heavy enough
+                to pretty much require a double grip. Blade length is in
+                the order of 110cm to 130cm in length, with a long
+                hilt for a two handed grip.
+            </para>
+        </description>
+
+        <weight>2000</weight>
+        <material>metal</material>
+
+        <cost>4000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Swords</category>
+            <class>great</class>
+
+            <combat>
+                <attack>+8</attack>
+                <defence>+6</defence>
+                <damage>+16</damage>
+            </combat>
+
+            <strength>6</strength>
+            <load>3</load>
+            <reach>3</reach>
+            <weight>3000</weight>
+
+            <properties>
+                <twohanded/>
+                <heavy/>
+                <strong/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Knife">
+        <category>Weapon</category>
+        <importance>3</importance>
+
+        <short>A short bladed weapon.</short>
+
+        <weight>100</weight>
+        <material>metal</material>
+
+        <cost>12</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Knives</category>
+            <class>brawl</class>
+            <class>single</class>
+
+            <combat>
+                <attack>+1</attack>
+                <defence>+2</defence>
+                <damage type="mixed">+2</damage>
+            </combat>
+
+            <strength>1</strength>
+            <load>0.25</load>
+            <reach>0</reach>
+            <weight>250</weight>
+
+            <properties>
+                <light/>
+                <throwable/>
+                <weak/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Long spear">
+        <category>Weapon</category>
+        <importance>2</importance>
+
+        <short>A long two handed spear.</short>
+
+        <weight>2000</weight>
+        <material>wood</material>
+
+        <cost>8</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Spear</category>
+            <class>longshaft</class>
+
+            <combat>
+                <attack>+4</attack>
+                <defence>+4</defence>
+                <damage>+11</damage>
+            </combat>
+
+            <strength>5</strength>
+            <load>2</load>
+            <reach>4</reach>
+            <weight>2000</weight>
+
+            <properties>
+                <twohanded/>
+                <thrusting/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Mace">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>2</availability>
+
+        <short>A short weapon with a metal head.</short>
+
+        <weight>2000</weight>
+        <material>metal</material>
+
+        <cost>40</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Clubs</category>
+            <class>single</class>
+
+            <combat>
+                <attack>+3</attack>
+                <defence>+3</defence>
+                <damage>+11</damage>
+            </combat>
+
+            <strength>3</strength>
+            <load>2</load>
+            <reach>1</reach>
+
+            <properties>
+                <crushing/>
+                <heavy/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Quarterstaff">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>1</availability>
+
+        <short>A 2m long heavy wooden staff.</short>
+
+        <weight>1000</weight>
+        <material>wood</material>
+
+        <cost>8</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Spears</category>
+            <class>longshaft</class>
+            <class>great</class>
+
+            <combat>
+                <attack>+5</attack>
+                <defence>+9</defence>
+                <damage type="mixed">+8</damage>
+            </combat>
+
+            <strength>4</strength>
+            <load>1</load>
+            <reach>3</reach>
+
+            <properties>
+                <twohanded/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Bill">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>2</availability>
+
+        <short>A long shafted axe.</short>
+
+        <weight>1000</weight>
+        <material>wood</material>
+
+        <cost>20</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Spears</category>
+            <class>longshaft</class>
+            <class>great</class>
+
+            <combat>
+                <attack>+5</attack>
+                <defence>+8</defence>
+                <damage>+13</damage>
+            </combat>
+
+            <strength>5</strength>
+            <load>1</load>
+            <reach>3</reach>
+
+            <properties>
+                <twohanded/>
+                <heavy/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Round shield">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>2</availability>
+
+        <short>A standard shield.</short>
+
+        <weight>1500</weight>
+        <material>wood</material>
+        <cost>20</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Shields</category>
+            <class>shield</class>
+
+            <combat>
+                <attack>+2</attack>
+                <defence>+5</defence>
+                <damage>+0</damage>
+                <bash>+5</bash>
+            </combat>
+
+            <strength>2</strength>
+            <load>1.5</load>
+            <reach>1</reach>
+            <weight>1500</weight>
+
+            <properties>
+                <blocking/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Small shield">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>2</availability>
+
+        <short>A small shield.</short>
+
+        <weight>1000</weight>
+        <material>wood</material>
+        <cost>12</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Shields</category>
+            <class>shield</class>
+
+            <combat>
+                <attack>+2</attack>
+                <defence>+3</defence>
+                <damage>+0</damage>
+                <bash>+3</bash>
+            </combat>
+
+            <strength>2</strength>
+            <load>1</load>
+            <reach>1</reach>
+
+            <properties>
+                <blocking/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Buckler">
+        <category>Shields</category>
+        <importance>1</importance>
+        <availability>2</availability>
+
+        <short>A very small and light shield.</short>
+
+        <weight>500</weight>
+        <material>leather</material>
+        <cost>8</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Shields</category>
+            <class>shield</class>
+
+            <combat>
+                <attack>+0</attack>
+                <defence>+3</defence>
+                <damage>+0</damage>
+                <bash>+2</bash>
+            </combat>
+
+            <strength>1</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+
+            <properties>
+                <blocking/>
+                <light/>
+                <weak/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Short sword">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A short double edged sword.</short>
+
+        <weight>1000</weight>
+        <material>metal</material>
+        <cost>60</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Swords</category>
+            <class>single</class>
+
+            <description>
+                <para>
+                    A short blade, about 60cm long.
+                </para>
+            </description>
+
+            <combat>
+                <attack>+4</attack>
+                <defence>+3</defence>
+                <damage>+9</damage>
+            </combat>
+
+            <strength>2</strength>
+            <load>1</load>
+            <reach>1</reach>
+
+            <properties>
+                <impaling/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Hunting spear">
+        <category>Weapon</category>
+        <importance>1</importance>
+        <availability>2</availability>
+
+        <short>A light spear used for hunting.</short>
+
+        <weight>500</weight>
+        <material>wood</material>
+        <cost>8</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Spears</category>
+            <class>single</class>
+            <class>longshaft</class>
+
+            <combat>
+                <attack>+3</attack>
+                <defence>+2</defence>
+                <damage>+7</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>10</short>
+                    <medium>30</medium>
+                    <long>50</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>1</load>
+            <reach>3</reach>
+            <weight>1000</weight>
+
+            <properties>
+                <missile/>
+                <thrusting/>
+                <twohanded/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="War spear">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A heavy spear with a broad blade.</short>
+
+        <description>
+            <para>
+                A heavy spear with a broad blade on the end. Used for
+                melee fighting, and not really designed to be thrown
+                at all, though it can be.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>wood</material>
+        <cost>16</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Spears</category>
+            <class>single</class>
+            <class>longshaft</class>
+
+            <combat>
+                <attack>+5</attack>
+                <defence>+3</defence>
+                <damage>+11</damage>
+                <range>
+                    <increment>5</increment>
+                    <short>10</short>
+                    <medium>20</medium>
+                    <long>30</long>
+                </range>
+            </combat>
+
+            <strength>3</strength>
+            <load>1.5</load>
+            <reach>3</reach>
+
+            <properties>
+                <missile/>
+                <thrusting/>
+                <heavy/>
+                <twohanded/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Warhammer">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>4</availability>
+
+        <short>A heavy headed hammer on a long shaft.</short>
+
+        <weight>1000</weight>
+        <material>wood</material>
+        <cost>40</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Clubs</category>
+            <class>single</class>
+
+            <combat>
+                <attack>+3</attack>
+                <defence>+2</defence>
+                <damage>+12</damage>
+            </combat>
+
+            <strength>3</strength>
+            <load>1</load>
+            <reach>2</reach>
+            <weight>1000</weight>
+
+            <properties>
+                <crushing/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="War flail">
+        <category>Weapon</category>
+        <importance>1</importance>
+        <availability>4</availability>
+
+        <short>Metal balls on a chain.</short>
+
+        <weight>2000</weight>
+        <material>metal</material>
+        <cost>80</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Flails</category>
+            <class>flail</class>
+
+            <combat>
+                <attack>+6</attack>
+                <defence>+6</defence>
+                <damage>+10</damage>
+            </combat>
+
+            <strength>3</strength>
+            <load>2</load>
+            <reach>3</reach>
+
+            <properties>
+                <crushing/>
+                <chain/>
+                <heavy/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Throwing axe">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>3</availability>
+
+        <short>A small axe designed for throwing.</short>
+
+        <weight>250</weight>
+        <material>metal</material>
+        <cost>20</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Axes</category>
+            <class>thrown</class>
+
+            <combat>
+                <attack>+2</attack>
+                <damage>+4</damage>
+                <range strength="true">
+                    <increment>10</increment>
+                    <short>3</short>
+                    <medium>6</medium>
+                    <long>9</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+
+            <properties>
+                <missile/>
+                <heavy/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Short bow">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A short bow.</short>
+
+        <description>
+            <para>
+                The short bow is a simple bow, about a metre in
+                length. The pentrating power is based on the strength
+                of the user, and also the maximum pull of the bow.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>wood</material>
+        <cost>20</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Bows</category>
+            <class>bow</class>
+
+            <combat>
+                <attack>+3</attack>
+                <damage>+5</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>30</short>
+                    <medium>60</medium>
+                    <long>120</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+
+            <properties>
+                <missile/>
+                <impaling/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Long bow">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A long bow.</short>
+
+        <description>
+            <para>
+                Unlike the short bow, the long bow is often composite in
+                nature, being formed of two types of wood for maximum
+                tension. Long bows are crafted according to the strength
+                of the archer. A weaker archer will have great
+                difficulty in drawing a high strength bow.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>wood</material>
+        <cost>80</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Bows</category>
+            <class>bow</class>
+
+            <combat>
+                <attack>+2</attack>
+                <damage>+12</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>60</short>
+                    <medium>120</medium>
+                    <long>240</long>
+                </range>
+            </combat>
+
+            <strength>3</strength>
+            <load>1</load>
+            <reach>0</reach>
+
+            <properties>
+                <missile/>
+                <impaling/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Throwing knife">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>4</availability>
+
+        <short>A knife designed for throwing.</short>
+
+        <weight>250</weight>
+        <material>metal</material>
+        <cost>60</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Knives</category>
+            <class>thrown</class>
+
+            <combat mode="Thrown" importance="2">
+                <attack>+3</attack>
+                <damage>+2</damage>
+                <range strength="true">
+                    <increment>10</increment>
+                    <short>2</short>
+                    <medium>5</medium>
+                    <long>10</long>
+                </range>
+            </combat>
+
+            <strength>1</strength>
+            <load>0.25</load>
+            <reach>0</reach>
+
+            <properties>
+                <missile/>
+                <weak/>
+                <light/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Sling">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>2</availability>
+
+        <short>A cheap weapon which hurls stones.</short>
+
+        <weight>100</weight>
+        <material>cloth</material>
+        <cost>4</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Bows</category>
+            <class>thrown</class>
+
+            <combat>
+                <attack>+8</attack>
+                <damage>+7</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>20</short>
+                    <medium>40</medium>
+                    <long>60</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>0</load>
+            <reach>0</reach>
+            <weight>100</weight>
+
+            <properties>
+                <missile/>
+                <light/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Javelin">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>3</availability>
+
+        <short>A light spear.</short>
+
+        <weight>250</weight>
+        <material>wood</material>
+        <cost>12</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Spears</category>
+            <class>thrown</class>
+
+            <combat>
+                <attack>+5</attack>
+                <damage>+5</damage>
+
+                <range strength="true">
+                    <increment>15</increment>
+                    <short>3</short>
+                    <medium>6</medium>
+                    <long>9</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>0.25</load>
+            <reach>2</reach>
+
+            <properties>
+                <missile/>
+                <impaling/>
+                <light/>
+                <weak/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Light crossbow">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>4</availability>
+
+        <short>A light crossbow.</short>
+
+        <weight>500</weight>
+        <material>wood</material>
+        <cost>80</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Bows</category>
+            <class>crossbow</class>
+
+            <combat>
+                <attack>+7</attack>
+                <damage>15</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>15</short>
+                    <medium>30</medium>
+                    <long>60</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>1</load>
+            <reach>0</reach>
+
+            <properties>
+                <missile/>
+                <impaling/>
+                <reload>10</reload>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Medium crossbow">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>4</availability>
+
+        <short>A medium crossbow.</short>
+
+        <weight>1000</weight>
+        <material>wood</material>
+        <cost>40</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Bows</category>
+            <class>crossbow</class>
+
+            <combat>
+                <attack>+9</attack>
+                <damage>22</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>40</short>
+                    <medium>80</medium>
+                    <long>160</long>
+                </range>
+            </combat>
+
+            <strength>3</strength>
+            <load>1.5</load>
+            <reach>0</reach>
+
+            <properties>
+                <missile/>
+                <impaling/>
+                <reload>15</reload>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Heavy crossbow">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>4</availability>
+
+        <short>A heavy crossbow.</short>
+
+        <weight>2000</weight>
+        <material>wood</material>
+        <cost>120</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Bows</category>
+            <class>crossbow</class>
+
+            <combat>
+                <attack>+10</attack>
+                <damage>30</damage>
+                <range>
+                    <increment>15</increment>
+
+                    <short>60</short>
+                    <medium>120</medium>
+                    <long>240</long>
+                </range>
+            </combat>
+
+            <strength>3</strength>
+            <load>2</load>
+            <reach>0</reach>
+
+            <properties>
+                <missile/>
+                <impaling/>
+                <reload>20</reload>
+            </properties>
+        </weapon>
+    </item>
+
+
+
+    <item name="Katana">
+        <category>Weapon</category>
+        <importance>0</importance>
+
+        <short>A single edged two handed sword.</short>
+
+        <description>
+            <para>
+                A katana is a particular type of sword of Japanese origin.
+                It has a long, singled edged blade, with a two handed grip.
+                Like the European bastard sword, it can be used one or
+                two handed. The katana is designed for cutting, never for
+                stabbing - the rarity of metal in Japan meant there was
+                never a need to penetrate mail or metal plate armour.
+            </para>
+
+            <para>
+                Due to their rarity, most katanas are of high quality.
+            </para>
+        </description>
+
+        <weight>1100</weight>
+        <material>metal</material>
+
+        <cost>5000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Swords</category>
+            <class>great</class>
+
+            <combat>
+                <attack>+6</attack>
+                <defence>+5</defence>
+                <damage>+14</damage>
+            </combat>
+
+            <strength>3</strength>
+            <load>2</load>
+            <reach>2</reach>
+
+            <properties>
+                <twohanded/>
+                <heavy/>
+                <light/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Wakizashi">
+        <category>Weapon</category>
+        <importance>0</importance>
+
+        <short>A single edged short sword.</short>
+
+        <description>
+            <para>
+                A short Japanese single edged sword. Unlike the katana, it
+                could be used for thrusting with the point, but was still
+                designed to be used against lightly armoured opponents.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>metal</material>
+
+        <cost>1000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Swords</category>
+            <class>single</class>
+
+            <combat>
+                <attack>+3</attack>
+                <defence>+3</defence>
+                <damage>+10</damage>
+            </combat>
+
+            <strength>2</strength>
+            <load>2</load>
+            <reach>1</reach>
+
+            <properties>
+                <light/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="No-dachi">
+        <category>Weapon</category>
+        <importance>0</importance>
+
+        <short>A single edged great sword.</short>
+
+        <description>
+            <para>
+                A large Japanese great sword. It's blade has a single edge
+                and like the katana it is designed for cutting rather than
+                thrusting.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>metal</material>
+
+        <cost>2000</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Swords</category>
+            <class>single</class>
+
+            <combat>
+                <attack>+9</attack>
+                <defence>+7</defence>
+                <damage>+17</damage>
+            </combat>
+
+            <strength>5</strength>
+            <load>2</load>
+            <reach>3</reach>
+
+            <properties>
+                <twohanded/>
+                <heavy/>
+                <light/>
+            </properties>
+        </weapon>
+    </item>
+
+</equipment>
+
+
