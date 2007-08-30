@@ -11,8 +11,8 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.4 $
-    Date:    $Date: 2007-08-29 19:56:01 $
+    Version: $Revision: 1.5 $
+    Date:    $Date: 2007-08-30 22:27:35 $
     Author: Samuel Penn
     -->
 
@@ -373,7 +373,7 @@
         SOCIAL SKILLS
     -->
 
-    <skill name="Etiquette" type="standard">
+    <skill name="Etiquette" type="knowledge">
         <group>Social</group>
         <default>Charm</default>
         <short>How to behave in polite company.</short>
@@ -404,10 +404,9 @@
         </description>
     </skill>
 
-    <skill name="Intimidation" type="standard">
+    <skill name="Intimidation" type="skill">
         <group>Social</group>
         <group>Criminal</group>
-
         <default>Guile</default>
 
         <short>Scare someone into doing what you want.</short>
@@ -416,12 +415,43 @@
             <para>
                 Being able to scare people, either with threats of simple
                 physical violence, or by more subtle means. Can either be
-                based on <t>strength</t> or <t>empathy</t>.
+                based on <t>Strength</t> or <t>Empathy</t>. When making an
+                intimidation check, make an opposed roll against the
+                target's <t>Will</t> (modified by any traits). Each level
+                of success will shift the target's level of cooperation
+                up by a category.
+            </para>
+
+            <para>
+                Modifiers to the target difficulty are given below. The
+                level of apparent threat that you represent needs to
+                be relative to any other threats that the target needs to
+                consider. For example, you may have a hot poker, but the
+                mob may apply a hot poker to him, and his entire family,
+                if he betrays them.
             </para>
         </description>
+
+        <examples>
+            <example target="+30">
+                The target doesn't consider you any sort of threat.
+            </example>
+
+            <example target="+10">
+                The target considers you a minor threat.
+            </example>
+
+            <example target="-10">
+                The target considers you a reasonable threat.
+            </example>
+
+            <example target="-30">
+                The target considers you a serious threat.
+            </example>
+        </examples>
     </skill>
 
-    <skill name="Politics" type="standard">
+    <skill name="Politics" type="skill">
         <group>Social</group>
         <default>Guile</default>
         <short>Intrigue and the knowledge of politics.</short>
@@ -443,9 +473,13 @@
                 with this skill.
             </para>
         </description>
+
+        <examples>
+            <example target="10"></example>
+        </examples>
     </skill>
 
-    <skill name="Streetwise" type="standard">
+    <skill name="Streetwise" type="skill">
         <group>Criminal</group>
         <default>Guile</default>
         <short>Dealing with the criminal underworld.</short>
@@ -461,7 +495,7 @@
         </description>
     </skill>
 
-    <skill name="Gambling" type="standard">
+    <skill name="Gambling" type="skill">
         <group>Social</group>
         <group>Criminal</group>
         <default>Guile</default>
@@ -484,7 +518,7 @@
         </description>
     </skill>
 
-    <skill name="Game" type="standard">
+    <skill name="Game" type="skill">
         <group>Social</group>
         <short>Skill at a board game.</short>
 
@@ -520,7 +554,7 @@
         </examples>
     </skill>
 
-    <skill name="Sport" type="standard">
+    <skill name="Sport" type="skill">
         <group>Social</group>
         <short>Skill at a particular sport.</short>
 
@@ -541,7 +575,7 @@
         </examples>
     </skill>
 
-    <skill name="Lip reading" type="standard">
+    <skill name="Lip reading" type="skill">
         <group>Social</group>
         <short>Understanding speech by reading lips.</short>
 
@@ -554,7 +588,7 @@
         </description>
     </skill>
 
-    <skill name="Perform" type="standard">
+    <skill name="Perform" type="skill">
         <group>Social</group>
         <group>Artistic</group>
         <default>Charm</default>
@@ -627,7 +661,7 @@
         </examples>
     </skill>
 
-    <skill name="Musician" type="standard">
+    <skill name="Musician" type="skill">
         <group>Artistic</group>
         <short>Playing musical instruments.</short>
 
@@ -644,7 +678,7 @@
         </examples>
     </skill>
 
-    <skill name="Dance" type="standard">
+    <skill name="Dance" type="skill">
         <group>Artistic</group>
         <default>Athletics</default>
         <short>Dancing with skill and grace.</short>
@@ -702,7 +736,7 @@
         </examples>
     </skill>
 
-    <skill name="Artist" type="standard">
+    <skill name="Artist" type="skill">
         <group>Artistic</group>
 
         <short>Painting and drawing.</short>
@@ -716,7 +750,7 @@
         </description>
     </skill>
 
-    <skill name="Calligraphy" type="standard">
+    <skill name="Calligraphy" type="skill">
         <group>Artistic</group>
         <short>Writing beautifully.</short>
 
@@ -760,7 +794,7 @@
     </skill>
 
 
-    <skill name="First aid" type="knowledge">
+    <skill name="First aid" type="skill">
         <group>Academic</group>
 
         <short>Healing injuries and other ailments.</short>
@@ -876,7 +910,7 @@
         </description>
     </skill>
 
-    <skill name="Teach" type="standard">
+    <skill name="Teach" type="skill">
         <group>Social</group>
         <group>Academic</group>
 
@@ -891,7 +925,7 @@
         </description>
     </skill>
 
-    <skill name="Trade" type="standard">
+    <skill name="Trade" type="skill">
         <group>Social</group>
         <group>Business</group>
         <default>Guile</default>
@@ -908,7 +942,7 @@
     </skill>
 
 
-    <skill name="Cooking" type="standard">
+    <skill name="Cooking" type="skill">
         <group>Craft</group>
         <group>Rural</group>
 
@@ -923,7 +957,7 @@
     </skill>
 
 
-    <skill name="Handicraft" type="standard">
+    <skill name="Handicraft" type="skill">
         <group>Craft</group>
         <group>Rural</group>
 
@@ -938,7 +972,7 @@
         </description>
     </skill>
 
-    <skill name="Ride" type="standard">
+    <skill name="Ride" type="skill">
         <group>Rural</group>
 
         <short>Riding horses.</short>
@@ -955,7 +989,7 @@
         </description>
     </skill>
 
-    <skill name="Survival" type="standard">
+    <skill name="Survival" type="skill">
         <group>Rural</group>
 
         <short>Living in the wilderness.</short>
@@ -1049,7 +1083,7 @@
         </examples>
     </skill>
 
-    <skill name="Scrounging" type="standard">
+    <skill name="Scrounging" type="skill">
         <group>Craft</group>
 
         <short>Finding and fixing scrap.</short>
@@ -1212,7 +1246,7 @@
         </description>
     </skill>
 
-    <skill name="Forensics" type="skill">
+    <skill name="Forensics" type="knowledge">
         <group>Criminal</group>
 
         <short>Finding clues at a crime scene.</short>
