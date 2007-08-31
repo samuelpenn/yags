@@ -11,8 +11,8 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.5 $
-    Date:    $Date: 2007-08-30 22:27:35 $
+    Version: $Revision: 1.6 $
+    Date:    $Date: 2007-08-31 21:34:22 $
     Author: Samuel Penn
     -->
 
@@ -26,7 +26,7 @@
         <group parent="Combat">Melee</group>
         <group parent="Combat">Missile</group>
         <group parent="Combat">Armed melee</group>
-        <group>Criminal</group>
+        <group>Investigation</group>
         <group>Social</group>
         <group>Artistic</group>
         <group>Craft</group>
@@ -36,6 +36,9 @@
         <group>Technical</group>
         <group>Military</group>
         <group>Academic</group>
+        <group>Outdoor</group>
+        <group>Occult</group>
+        <group>Criminal</group>
     </groups>
 
     <techniques>options/techniques.yags</techniques>
@@ -404,52 +407,6 @@
         </description>
     </skill>
 
-    <skill name="Intimidation" type="skill">
-        <group>Social</group>
-        <group>Criminal</group>
-        <default>Guile</default>
-
-        <short>Scare someone into doing what you want.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Being able to scare people, either with threats of simple
-                physical violence, or by more subtle means. Can either be
-                based on <t>Strength</t> or <t>Empathy</t>. When making an
-                intimidation check, make an opposed roll against the
-                target's <t>Will</t> (modified by any traits). Each level
-                of success will shift the target's level of cooperation
-                up by a category.
-            </para>
-
-            <para>
-                Modifiers to the target difficulty are given below. The
-                level of apparent threat that you represent needs to
-                be relative to any other threats that the target needs to
-                consider. For example, you may have a hot poker, but the
-                mob may apply a hot poker to him, and his entire family,
-                if he betrays them.
-            </para>
-        </description>
-
-        <examples>
-            <example target="+30">
-                The target doesn't consider you any sort of threat.
-            </example>
-
-            <example target="+10">
-                The target considers you a minor threat.
-            </example>
-
-            <example target="-10">
-                The target considers you a reasonable threat.
-            </example>
-
-            <example target="-30">
-                The target considers you a serious threat.
-            </example>
-        </examples>
-    </skill>
 
     <skill name="Politics" type="skill">
         <group>Social</group>
@@ -479,21 +436,6 @@
         </examples>
     </skill>
 
-    <skill name="Streetwise" type="skill">
-        <group>Criminal</group>
-        <default>Guile</default>
-        <short>Dealing with the criminal underworld.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                <e>Streetwise</e> is similar to <e>Politics</e>, though is
-                more suited to life amongst the criminal classes. With it,
-                comes knowledge of how to survive on the street, how to
-                gain the trust of those who live on the wrong side of the
-                law, as well as how to find them in the first place.
-            </para>
-        </description>
-    </skill>
 
     <skill name="Gambling" type="skill">
         <group>Social</group>
@@ -556,6 +498,8 @@
 
     <skill name="Sport" type="skill">
         <group>Social</group>
+        <group>Sport</group>
+
         <short>Skill at a particular sport.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -944,7 +888,6 @@
 
     <skill name="Cooking" type="skill">
         <group>Craft</group>
-        <group>Rural</group>
 
         <short>Preparing meals.</short>
 
@@ -959,7 +902,6 @@
 
     <skill name="Handicraft" type="skill">
         <group>Craft</group>
-        <group>Rural</group>
 
         <short>Skill at various village crafts.</short>
 
@@ -989,99 +931,6 @@
         </description>
     </skill>
 
-    <skill name="Survival" type="skill">
-        <group>Rural</group>
-
-        <short>Living in the wilderness.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                With this skill, you are capable of surviving on many
-                different types of terrain by foraging and hunting. There
-                is a single skill, which covers all terrain types, though
-                a number of techniques are needed to survive in harsh
-                environments without penalty. <e>Survival</e> also covers
-                tracking, finding shelter and travelling safely and
-                quickly.
-            </para>
-
-            <para>
-                On coastal lands (where it is possible to fish), plains,
-                woodlands and low mountain regions, the basic skill will
-                suffice. In desert, arctic or jungle environments, then
-                a technique is required. High mountains may count as
-                arctic, swamps may count as coastal or jungle, depending
-                on the exact environment.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Foraging">
-            <para>
-                When foraging for food, it takes four hours
-                for each roll. Each five over the difficulty allows enough
-                food to be found for another two people. If more food is
-                found than is needed, then the forager has the option of
-                stopping early as soon as enough food has been found. Assume
-                that food is found at a consistent rate through the time
-                period.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Hunting">
-            <para>
-                Similar to foraging, it takes four hours
-                for each attempt to hunt game. Success indicates that
-                suitable game has been found, and relevant combat skills
-                are required to actually kill the animal. In this case,
-                game is large game animals, such as deer.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Navigation">
-            <para>
-                Anyone with any survival skill can
-                navigate by use of the sun and stars. This is unaffected
-                by the terrain type and difficulty of surviving in that
-                terrain. When attempting to navigate, use the character's
-                highest survival skill.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Tracking">
-            <para>
-                Survival can be used to track others by
-                their footprints and other signs. It is possible to
-                estimate the type of animal, their number and how long it
-                has been since the tracks were made. Of course, it can be
-                used to track people as well.
-            </para>
-        </description>
-
-        <examples>
-            <example target="10">
-                Base difficulty for woodland, plains or coastal regions.
-            </example>
-
-            <example target="20">
-                Base difficulty for mountain, swamp or jungle.
-            </example>
-
-            <example target="30">
-                Base difficulty for desert or arctic regions.
-            </example>
-
-            <example target="+0">Find a suitable shelter</example>
-            <example target="+0">Forage for food for one person</example>
-            <example target="-10">Good conditions</example>
-            <example target="+10">Poor conditions</example>
-            <example target="+20">Very poor conditions (e.g. winter)</example>
-
-            <example target="15">
-                Accurately determine direction, time of day or night
-                according to the position of sun, moon or stars.
-            </example>
-        </examples>
-    </skill>
 
     <skill name="Scrounging" type="skill">
         <group>Craft</group>
@@ -1160,118 +1009,6 @@
         </description>
     </skill>
 
-    <skill name="Parachuting" type="skill">
-        <group>Military</group>
-        <group>Sport</group>
-
-        <short>Safely using parachutes.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have experience with free-falling and parachuting.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Torture" type="skill">
-        <group>Criminal</group>
-        <group>Military</group>
-
-        <short>Making people talk.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                This is the art of applying pain to someone in order to get
-                them to cooperate.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Forgery" type="skill">
-        <group>Criminal</group>
-
-        <short>Forging credentials.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of forging identity cards and the like. You know
-                how to obtain the materials necessary for creating forgeries,
-                can detect a forged document or card, and can create them
-                yourself as long as you have the necessary information.
-                Some forms of forgery will require modifying database
-                records, which will require <e>Computer operation</e> and
-                similar skills which <e>Forgery</e> does not provide,
-                however it will let you know what databases need to be
-                changed.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Burglary" type="skill">
-        <group>Criminal</group>
-
-        <short>Breaking and entering.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have experience in the various tasks involved in breaking
-                into buildings. Opening basic locks, forcing doors
-                and windows, and knowledge about how buildings are generally
-                designed come under this skill.
-            </para>
-        </description>
-
-        <examples>
-            <example target="10">Very simple and basic lock.</example>
-            <example target="20">Typical key based lock.</example>
-            <example target="30">Good key based lock, typical combination safe.</example>
-            <example target="40">Excellent key based lock, good combination safe.</example>
-            <example target="50">Excellent combination safe.</example>
-            <example target="10">Most low tech unsecured doors and windows.</example>
-            <example target="20">Good quality mid-tech doors and windows.</example>
-        </examples>
-    </skill>
-
-    <skill name="Criminology" type="knowledge">
-        <group>Criminal</group>
-
-        <short>The study of crime.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have studied criminals and the crimes they commit,
-                in an attempt to better catch them. This is normally
-                the domain of law enforcement.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Forensics" type="knowledge">
-        <group>Criminal</group>
-
-        <short>Finding clues at a crime scene.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have experience in searching crime scenes for
-                clues as to what happened, and who did it.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Skiing" type="skill">
-        <group>Sport</group>
-        <default>Athletics</default>
-
-        <short>Using skies.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of skiing. Includes practical experience, as well
-                as knowledge of identifying poor conditions.
-            </para>
-        </description>
-    </skill>
 
     <skill name="Fencing">
         <group>Sport</group>

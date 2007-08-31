@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+
+<!--
+    Outdoor and wilderness skills.
+
+    Copyright (c) 2007, Samuel Penn.
+    This document can be redistributed and/or modified under the terms
+    of the GNU Public License as published by the Free Software Foundation
+    version 2.
+
+    Version: $Revision: 1.1 $
+    Author: Samuel Penn
+    -->
+
+<skill-list xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:yb="http://yagsbook.sourceforge.net/xml"
+            techniques="options/techniques.yags">
+
+    <skill name="Farming" type="skill">
+        <group>Outdoor</group>
+        <group>Rural</group>
+
+        <short>Growing and harvesting of crops.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The planting, caring for and harvesting of crops, the
+                care and feeding of animals such as cows, sheep and
+                chickens. The majority of people in rural areas will of
+                course be farmers and will have this skill to some level.
+            </para>
+        </description>
+    </skill>
+
+
+    <skill name="Mining" type="skill">
+        <group>Outdoor</group>
+
+        <short>Working in and locating mines.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Covers being able to locate new mines, and to construct
+                and work them safely.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Ostling" type="skill">
+        <group>Outdoor</group>
+        <group>Animal</group>
+
+        <short>Training of horses.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The care and training of horses.
+            </para>
+        </description>
+    </skill>
+
+
+    <skill name="Falconry" type="skill">
+        <group>Outdoor</group>
+        <group>Animal</group>
+
+        <short>Training, caring and hunting with birds.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of training, caring for and hunting with falcons
+                and similar birds of prey.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Hunting" type="skill">
+        <group>Outdoor</group>
+        <group>Animal</group>
+
+        <short>Training, caring and hunting with dogs.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of training, caring for and hunting with hounds.
+                If trained dogs are available, can be used instead of
+                survival to track or hunt game.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Parachuting" type="skill">
+        <group>Military</group>
+        <group>Sport</group>
+        <default>Athletics</default>
+        <short>Safely using parachutes.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have experience with free-falling and parachuting.
+                It is <e>very easy</e> to land safely under ideal
+                conditions.
+            </para>
+        </description>
+    </skill>
+
+
+    <skill name="Skiing" type="skill">
+        <group>Sport</group>
+        <group>Outdoor</group>
+        <default>Athletics</default>
+
+        <short>Using skies.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of skiing. Includes practical experience, as well
+                as knowledge of identifying poor conditions. The examples
+                given below show the difficulty to ski down a run of
+                particular difficulty. Success means you did it without
+                falling over or getting stuck.
+            </para>
+        </description>
+
+        <examples>
+            <example target="10">Green run (easy slopes).</example>
+            <example target="15">Blue run (intermediate slopes).</example>
+            <example target="20">Red run (difficult slopes).</example>
+            <example target="25">Black run (most difficult slopes).</example>
+        </examples>
+    </skill>
+
+    <skill name="Survival" type="skill">
+        <group>Outdoor</group>
+        <group>Military</group>
+
+        <short>Living in the wilderness.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                With this skill, you are capable of surviving on many
+                different types of terrain by foraging and hunting. There
+                is a single skill, which covers all terrain types, though
+                a number of techniques are needed to survive in harsh
+                environments without penalty. <e>Survival</e> also covers
+                tracking, finding shelter and travelling safely and
+                quickly.
+            </para>
+
+            <para>
+                On coastal lands (where it is possible to fish), plains,
+                woodlands and low mountain regions, the basic skill will
+                suffice. In desert, arctic or jungle environments, then
+                a technique is required. High mountains may count as
+                arctic, swamps may count as coastal or jungle, depending
+                on the exact environment.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Foraging">
+            <para>
+                When foraging for food, it takes four hours
+                for each roll. Each five over the difficulty allows enough
+                food to be found for another two people. If more food is
+                found than is needed, then the forager has the option of
+                stopping early as soon as enough food has been found. Assume
+                that food is found at a consistent rate through the time
+                period.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Hunting">
+            <para>
+                Similar to foraging, it takes four hours
+                for each attempt to hunt game. Success indicates that
+                suitable game has been found, and relevant combat skills
+                are required to actually kill the animal. In this case,
+                game is large game animals, such as deer.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Navigation">
+            <para>
+                Anyone with any survival skill can
+                navigate by use of the sun and stars. This is unaffected
+                by the terrain type and difficulty of surviving in that
+                terrain. When attempting to navigate, use the character's
+                highest survival skill.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml" task="Tracking">
+            <para>
+                Survival can be used to track others by
+                their footprints and other signs. It is possible to
+                estimate the type of animal, their number and how long it
+                has been since the tracks were made. Of course, it can be
+                used to track people as well.
+            </para>
+        </description>
+
+        <examples>
+            <example target="10">
+                Base difficulty for woodland, plains or coastal regions.
+            </example>
+
+            <example target="20">
+                Base difficulty for mountain, swamp or jungle.
+            </example>
+
+            <example target="30">
+                Base difficulty for desert or arctic regions.
+            </example>
+
+            <example target="+0">Find a suitable shelter</example>
+            <example target="+0">Forage for food for one person</example>
+            <example target="-10">Good conditions</example>
+            <example target="+10">Poor conditions</example>
+            <example target="+20">Very poor conditions (e.g. winter)</example>
+
+            <example target="15">
+                Accurately determine direction, time of day or night
+                according to the position of sun, moon or stars.
+            </example>
+        </examples>
+    </skill>
+
+</skill-list>
+
+
+

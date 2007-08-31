@@ -9,7 +9,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.6 $
+    Version: $Revision: 1.7 $
     Author: Samuel Penn
     -->
 
@@ -42,58 +42,6 @@
     <!--
         LORE skills.
     -->
-
-    <skill name="Alchemy" type="knowledge">
-        <group>Lore</group>
-
-        <short>Knowledge of chemicals and magic.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Alchemy is the lore of non-living substances and how they
-                interact. It may be used to identify substances, gives
-                some knowledge of poisons, and provides a means to
-                manufacture some simple effects - coloured smoke, invisible
-                ink, bangs and the like.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Astrology" type="knowledge">
-        <group>Lore</group>
-
-        <short>Knowledge of the heavens.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of the heavens, and how they affect the day to
-                day life of mortals. When combined with <t>empathy</t>, it
-                may be used to tell someone's fortune. The better the
-                success, the more the reading will be believed. Whether it
-                turns out to be true or not is unrelated to the success
-                roll unless the character has some other means of divining
-                the future.
-            </para>
-        </description>
-
-        <examples>
-            <example target="10">
-                Make a prediction which isn't obviously wrong or unwanted.
-            </example>
-
-            <example target="20">
-                Give a vague prediction which is almost certain to be
-                believed, since it is what the target wishes to believe,
-                and it is vague enough to fit in with whatever will
-                happen, without appearing to be vague.
-            </example>
-
-            <example target="30">
-                Make some observation which the target believes you
-                couldn't possibly know without mystical powers.
-            </example>
-        </examples>
-    </skill>
 
     <skill name="Beast lore" type="knowledge">
         <group>Lore</group>
@@ -177,83 +125,6 @@
                 systems of government and ways of doing business, and
                 is mainly of use for being able to debate with other
                 philosophers.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Heraldry" type="knowledge">
-        <group>Lore</group>
-        <group>Legal</group>
-
-        <short>Knowledge about heraldic arms.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of heraldic arms, flags and other symbols. A
-                person skilled in heraldry can recognise nobles, understand
-                and describe the code of heraldic arms, and make guesses
-                as to who someone is allied with based on their coat of
-                arms. Based on intelligence.
-            </para>
-
-            <para>
-                <e>Area lore</e> may be substituted, though all rolls are
-                halved and it can only be used for recognition.
-            </para>
-        </description>
-
-        <examples>
-            <example target="10">
-                Recognise a major personality based on their arms,
-                such as a principle member of the royal family, or a
-                major duke or earl. Recognise that someone belongs to
-                a major noble house.
-            </example>
-
-            <example target="20">
-                Recognise a very important person, such as a duke or
-                earl, or a secondary member of the royal family.
-            </example>
-
-            <example target="30">
-                Recognise an important land owner, such as a powerful
-                baron.
-            </example>
-
-            <example target="40">
-                Recognise a baron or other low ranking land owner.
-            </example>
-
-            <example target="50">
-                Recognise someone really obscure.
-            </example>
-        </examples>
-    </skill>
-
-    <skill name="Herb lore" type="knowledge">
-        <group>Lore</group>
-        <group>Household</group>
-
-        <short>Knowledge of herbs and poisons.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of herbs and their properties. Can be used
-                to recognise, collect and prepare herbs and plants for
-                use in remedies, poisons and potions. Based on intelligence.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Legend lore" type="knowledge">
-        <group>Lore</group>
-
-        <short>Knowledge of stories and legends.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of legends and stories of heroes, places and
-                artifacts.
             </para>
         </description>
     </skill>
@@ -371,7 +242,6 @@
     </skill>
 
     <skill name="Carpentry" type="standard">
-        <group>Rural</group>
         <group>Craft</group>
 
         <short>Crafting wooden items.</short>
@@ -385,7 +255,6 @@
 
     <skill name="Clothier" type="standard">
         <group>Craft</group>
-        <group>Household</group>
 
         <short>Making and repairing clothes.</short>
 
@@ -399,8 +268,7 @@
     </skill>
 
     <skill name="Copicing" type="standard">
-        <group>Wilderness</group>
-        <group>Rural</group>
+        <group>Outdoor</group>
 
         <default>Farming</default>
 
@@ -432,6 +300,7 @@
     </skill>
 
     <skill name="Farming" type="standard">
+        <group>Outdoor</group>
         <group>Rural</group>
 
         <short>Growing and harvesting of crops.</short>
@@ -460,6 +329,7 @@
     </skill>
 
     <skill name="Jewelcraft" type="standard">
+        <group>Artistic</group>
         <group>Craft</group>
 
         <short>Polishing and cutting gemstones.</short>
@@ -526,6 +396,7 @@
     </skill>
 
     <skill name="Pottery" type="standard">
+        <group>Artistic</group>
         <group>Craft</group>
 
         <short>Making clay pots.</short>
@@ -538,6 +409,7 @@
     </skill>
 
     <skill name="Shipwright" type="standard">
+        <group>Vehicle</group>
         <group>Craft</group>
 
         <short>Designing and building ships.</short>
@@ -619,7 +491,7 @@
     </skill>
 
     <skill name="Hunting" type="standard">
-        <group>Wilderness</group>
+        <group>Outdoor</group>
         <group>Animal</group>
 
         <short>Training, caring and hunting with dogs.</short>

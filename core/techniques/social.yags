@@ -4,7 +4,8 @@
     Core techniques.
  -->
 
-<advantages xmlns="http://yagsbook.sourceforge.net/xml/yags">
+<advantages xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
         <author>
             <fullname>Samuel Penn</fullname>
@@ -12,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2007-08-29 19:56:01 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2007-08-31 21:34:22 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -70,6 +71,38 @@
         </description>
     </advantage>
 
+    <advantage name="Cold reading" type="technique">
+        <cost points="4"/>
+        <skill name="Guile"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                A <e>cold reading</e> is when you give a person the
+                impression of knowing far more about them than you
+                actually do. Generally, you start with vague statements
+                which are refined based on the reactions of the target.
+                When using this technique, make an
+                <y:empathy>Guile></y:empathy> check against either a
+                base difficulty of 10 if the target is cooperative
+                (or has no reason to be suspicious), or against their
+                <y:will>Guile</y:will> if they aren't.
+            </para>
+
+            <para>
+                On a <e>moderate</e> success, you don't make a fool of
+                yourself, but aren't that impressive. On a <e>good</e>
+                success, you can give the impression of knowing more
+                than you should, and an <e>excellent</e> success is
+                very impressive.
+            </para>
+
+            <para>
+                The difficulty is doubled if you don't have this
+                technique. This technique is useful for conning people,
+                but can be a useful interrogation technique as well.
+            </para>
+        </description>
+    </advantage>
 
     <advantage name="Courtly dancing" type="technique">
         <cost points="2"/>
