@@ -18,8 +18,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.42 $</version>
-            <date>$Date: 2006-08-12 15:15:16 $</date>
+            <version>$Revision: 1.43 $</version>
+            <date>$Date: 2007-09-09 09:58:44 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -167,14 +167,20 @@
                 of different cultures to choose from.
             </para>
 
+            <note title="Work in Progress">
+                <para>
+                    This is undergoing major re-write to bring in
+                    line with the no points based system. The old
+                    package based system is being ripped out, so
+                    some of it may not make sense.
+                </para>
+            </note>
+
             <para>
                 Your choice of profession can range from a vagabound or
                 outlaw to a noble lord or lady, plus bards, religious
-                cultists or other members of society. To help you decide,
-                there are a number of packages available, which provide
-                a default set of skills and a simple background to get
-                you going. Once a package has been chosen, you are then
-                free to customise it as you like.
+                cultists or other members of society. How you define your
+                character is completely up to you.
             </para>
 
             <sect2>
@@ -342,35 +348,141 @@
                 <title>Steps to Character Generation</title>
 
                 <sect3>
-                    <title>Choosing a Package</title>
+                    <title>Choosing Priorities</title>
 
                     <para>
                         The first step in character generation is to choose
-                        a <e>package</e>. Packages not only provide a rough
-                        background for your character, they also include a
-                        list of skills and abilities which are useful for a
-                        character of that type. A package describes the social
-                        status of the character, and what they have been doing
-                        up until the start of the game. After the game has
-                        started, the package has no further influence on the
-                        advancement of the character.
+                        how to prioritise your character's features. You have
+                        five things to decide upon - <e>Race</e>, <e>Status</e>
+                        <e>Attributes</e>, <e>Experience</e> and <e>Advantages</e>.
+                        Each must be given a priority from A to E, with A being
+                        the highest (best) priority, and E being the lowest
+                        (worst) priority.
                     </para>
 
-                    <para>
-                        Each package is designed to give a useful set of skills
-                        for a type of character, so they are rarely equal on
-                        the number of skills given or the quality of background
-                        benefits that they provide. However, they should be
-                        roughly equal in the degree of usefulness of the
-                        character. Each package will also provide a bonus to
-                        one attribute.
-                    </para>
+                    <table>
+                        <title>Priority</title>
+                        <colspec colwidth="20mm"/>
+                        <colspec colwidth="13mm"/>
+                        <colspec colwidth="13mm"/>
+                        <colspec colwidth="13mm"/>
+                        <colspec colwidth="13mm"/>
+                        <colspec colwidth="13mm"/>
+
+                        <thead>
+                            <row>
+                                <entry>Category</entry>
+                                <entry>A</entry>
+                                <entry>B</entry>
+                                <entry>C</entry>
+                                <entry>D</entry>
+                                <entry>E</entry>
+                            </row>
+                        </thead>
+
+                        <tbody>
+                            <row>
+                                <entry>Race</entry>
+                                <entry>Fey</entry>
+                                <entry>Half</entry>
+                                <entry>Human</entry>
+                                <entry>Human</entry>
+                                <entry>Human</entry>
+                            </row>
+
+                            <row>
+                                <entry>Status</entry>
+                                <entry>High</entry>
+                                <entry>Noble</entry>
+                                <entry>Free</entry>
+                                <entry>Free</entry>
+                                <entry>Serf</entry>
+                            </row>
+
+                            <row>
+                                <entry>Attributes</entry>
+                                <entry>+6/6</entry>
+                                <entry>+3/5</entry>
+                                <entry>+1/4</entry>
+                                <entry>0/4</entry>
+                                <entry>0/3</entry>
+                            </row>
+
+                            <row>
+                                <entry>Experience</entry>
+                                <entry>60/6</entry>
+                                <entry>50/5</entry>
+                                <entry>40/4</entry>
+                                <entry>30/4</entry>
+                                <entry>20/4</entry>
+                            </row>
+
+                            <row>
+                                <entry>Advantages</entry>
+                                <entry>7</entry>
+                                <entry>5</entry>
+                                <entry>3</entry>
+                                <entry>1</entry>
+                                <entry>0</entry>
+                            </row>
+                        </tbody>
+                    </table>
 
                     <para>
-                        If a package includes a disadvantage then that
-                        disadvantage cannot be bought off at character
-                        generation.
+                        Most of the time <e>Race</e> can be
+                        set to be lowest (E) and <e>Status</e> to be second
+                        lowest (D), with the other three being arrange as
+                        desired.
                     </para>
+
+                    <sect4>
+                        <title>Race</title>
+
+                        <para>
+                            Most people in the campaign world are humans,
+                            born of mortal parents with very little that
+                            is strange about them. This doesn't prevent
+                            them going off and performing heroic deeds or
+                            anything. If you want to be human, then
+                            simple put <e>Race</e> as priority E.
+                        </para>
+
+                        <para>
+                            If you wish to be non-human - a Fey, born of
+                            the realms of magic - then you must take
+                            <e>Race</e> as priority A. This can provide
+                            certain benefits, but does mean that you can't
+                            choose the best options in other areas.
+                        </para>
+
+                        <para>
+                            If you take <e>Race</e> as B, then you are
+                            half-fey - one of your parents was mortal.
+                            You have some of the abilities (and looks) of
+                            the Fey, but you are not a pure blood.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Status</title>
+
+                        <para>
+                            <e>Social Status</e> is a measure of where you
+                            are in society. Indirectly, it is also a
+                            measure of wealth. In <e>Habisfern</e>, only
+                            the nobility are truly wealthy. Anyone who
+                            comes into wealth who is not a noble, will
+                            either have their wealth taken away, or be made
+                            into a noble.
+                        </para>
+
+                        <para>
+                            It is assumed that most PCs will begin the game
+                            as a free man, with a priority of D. If you wish
+                            to be a low ranking noble, then you need to take
+                            this as priority B.
+                        </para>
+                    </sect4>
                 </sect3>
 
                 <sect3>
@@ -578,36 +690,6 @@
 
                     <import-characters href="packages/lownobles.yags"/>
                 </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Bryteland</title>
-
-                <para>
-                    Located to the north-west, Bryteland is a nation of
-                    warriors. Packages unique to characters who come
-                    from this land follows below.
-                </para>
-
-                <import-characters
-                    source="/usr/share/xml/habisfern"
-                    topic="bryteland"
-                    display="package"/>
-            </sect2>
-
-            <sect2>
-                <title>Weidany</title>
-
-                <para>
-                    For Weidanic characters - those who grew up within the
-                    Kingdom of Weidany, there are many choices, from nobles
-                    to priests to wizards and warriors.
-                </para>
-
-                <import-characters
-                    source="/usr/share/xml/habisfern"
-                    topic="weidany"
-                    display="package"/>
             </sect2>
         </sect1>
 
@@ -883,24 +965,6 @@
                 </sect3>
 
                 <sect3>
-                    <title>Techniques</title>
-
-                    <para>
-                        Techniques are purchased with skill points, and may be
-                        bought when all the prerequisites are met. The character
-                        must have at least one of the relevant skills at the
-                        required level.
-                    </para>
-
-                    <y:import-advantages tree="true" type="technique">
-                        <y:adv>../core/techniques/techniques.yags</y:adv>
-                        <y:adv>../core/techniques/lowtech-techniques.yags</y:adv>
-                        <y:adv>../core/techniques/combat-techniques.yags</y:adv>
-                        <y:adv>options/habisfern-techniques.yags</y:adv>
-                    </y:import-advantages>
-                </sect3>
-
-                <sect3>
                     <title>Cults</title>
 
                     <para>
@@ -939,28 +1003,33 @@
                     idea about which skills to buy.
                 </para>
 
-                <y:list-skills>
-                    <y:skills>../core/skills/skills.yags</y:skills>
-                    <y:skills>../core/skills/lowtech-skills.yags</y:skills>
-                    <y:skills>options/habisfern-skills.yags</y:skills>
-
-                    <y:techniques>../core/techniques/techniques.yags</y:techniques>
-                    <y:techniques>../core/techniques/lowtech-techniques.yags</y:techniques>
-                    <y:techniques>options/habisfern-techniques.yags</y:techniques>
+                <y:list-skills maxTech="3">
+                    <y:skills>options/skills.yags</y:skills>
+                    <y:skills>../core/skills/standard-skills.yags</y:skills>
+                    <y:skills>../core/skills/combat-skills.yags</y:skills>
+                    <y:skills>../core/skills/business-skills.yags</y:skills>
+                    <y:skills>../core/skills/investigation-skills.yags</y:skills>
+                    <y:skills>../core/skills/occult-skills.yags</y:skills>
+                    <y:skills>../core/skills/outdoor-skills.yags</y:skills>
                 </y:list-skills>
             </sect2>
 
             <sect2>
                 <title>Skill Descriptions</title>
 
-                <y:import-skills href="options/skills.yags">
-                    <y:skills>../core/skills/skills.yags</y:skills>
-                    <y:skills>../core/skills/lowtech-skills.yags</y:skills>
-                    <y:skills>options/habisfern-skills.yags</y:skills>
+                <y:import-skills maxTech="3">
+                    <y:skills>options/skills.yags</y:skills>
+                    <y:skills>../core/skills/standard-skills.yags</y:skills>
+                    <y:skills>../core/skills/combat-skills.yags</y:skills>
+                    <y:skills>../core/skills/academic-skills.yags</y:skills>
+                    <y:skills>../core/skills/business-skills.yags</y:skills>
+                    <y:skills>../core/skills/investigation-skills.yags</y:skills>
+                    <y:skills>../core/skills/occult-skills.yags</y:skills>
+                    <y:skills>../core/skills/outdoor-skills.yags</y:skills>
 
-                    <y:techniques>../core/techniques/techniques.yags</y:techniques>
-                    <y:techniques>../core/techniques/lowtech-techniques.yags</y:techniques>
-                    <y:techniques>options/habisfern-techniques.yags</y:techniques>
+                    <y:techniques>../core/techniques/combat.yags</y:techniques>
+                    <y:techniques>../core/techniques/physical.yags</y:techniques>
+                    <y:techniques>../core/techniques/social.yags</y:techniques>
                 </y:import-skills>
             </sect2>
         </sect1>
