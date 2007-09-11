@@ -3,8 +3,8 @@
 <!--
     These list generic disadvantages,
 
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2007-04-01 20:34:26 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2007-09-11 21:10:21 $
     Author:  Samuel Penn (sam@glendale.org.uk)
 
 -->
@@ -71,7 +71,69 @@
         </description>
     </advantage>
 
+    <advantage name="Loud" type="disadvantage">
+        <cost points="-1"/>
 
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have a very loud voice, and have difficulty speaking
+                quietly. If you have a need to keep your voice down, you
+                need to make a <t>Will</t> check at a difficulty of at
+                least 20 in order to do so. If you, the player, speaks
+                loudly in a situation, then your character does as well.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Addiction" type="disadvantage">
+        <cost points="varies"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The addict craves some drug which they need to stave off
+                withdrawal symptoms. The cost of the addiction is measured
+                by three factors - whether the substance is socially
+                accepted (tobacco and alcohol normally are), whether it is
+                expensive and/or difficult to get hold of (heroin), and
+                whether it has any side effects which affect the character
+                in game (alcohol and heroin would, though tobacco wouldn't,
+                since the latter's side effects are too long term to have
+                any effect in most games).
+            </para>
+
+            <para>
+                Side effects include anything which can be detrimental to
+                you during the general course of play. Drinking yourself
+                into a stupor most evenings may have less effect on the
+                game than being mildly drunk all the time.
+            </para>
+
+            <targetlist>
+                <valueLabel>Addiction</valueLabel>
+                <targetLabel>Cost</targetLabel>
+
+                <item target="-1">
+                    Your addiction is socially acceptable, reasonably
+                    cheap and has few short term side effects. Smoking
+                    is an example (you may get negative reactions in
+                    some places, but it's not illegal).
+                </item>
+
+                <item target="-3">
+                    Your addiction is either not socially acceptable,
+                    has bad side effects or is hard or expensive to
+                    get hold of. Alcoholism is an example.
+                </item>
+
+                <item target="-5">
+                    Your addiction suffers from two problems, or one
+                    very, very badly. Heroin is not sociably acceptable
+                    and is expensive, but most side effects are long
+                    term.
+                </item>
+            </targetlist>
+        </description>
+    </advantage>
 
     <advantage name="Sexually tantalising" type="disadvantage">
         <cost points="-1"/>
@@ -295,12 +357,13 @@
                 You have absolutely no sense of fashion. Anyone who cares
                 about such things will react to you at one level worse
                 than they would otherwise. Bad reactions will tend to
-                be disdain, rather than hatred.
+                be disdain, rather than hatred. You may not purchase
+                any skills or techniques directly related to fashion.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Odious personal habit" type="disadvantage">
+    <advantage name="Bad habit" type="disadvantage">
         <cost points="-1"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -327,5 +390,214 @@
             </para>
         </description>
     </advantage>
+
+
+    <advantage name="Light drinker" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+        <forbiddon>Heavy drinker</forbiddon>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are easily intoxicated, and suffer a -1 penalty to
+                <t>Health</t> when resisting the effects of alchohol
+                and similar drugs.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Bad hangovers" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You suffer from very bad hangovers the morning
+                after a night of drinking. All penalties and effects of a
+                hangover are doubled.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Non-combatant" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Either because you are a pacifist, or just because you
+                are a coward, you have a distinct dislike of combat.
+                Whenever you are in a real combat situation, you suffer
+                a -1 to <t>Agility</t>, <t>Dexterity</t> and
+                <t>Perception</t>, and your initiative roll is halved.
+                You do not suffer this penalty in sporting events, so
+                you can fence or perform target practise without penalty.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Cannot lie" type="disadvantage">
+        <cost points="-3"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are a very bad liar. You do not necessarily have
+                any moral objections to lying, but any attempts to do
+                so result in your skill check being halved.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Absent minded" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have a poor memory, and probably a reputation for
+                being forgetful. The problem mostly manifests when
+                trying to remember everyday mundane things, such as
+                locking the front door, packing food or putting your
+                clothes on in the morning.
+                At inconvenient moments, the GM will secretly make an
+                <t>Intelligence</t> check for you to see if you
+                remembered doing something important.
+            </para>
+
+            <para>
+                If the <e>player</e> ever forgets something, then
+                excuses of "but my character would have remembered" can
+                be safely ignored by the GM.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Big mouth" type="disadvantage">
+        <cost points="-1"/>
+        <genre>Common</genre>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have a habit of spurting out the wrong thing
+                at the worst possible time. If the player makes any snide
+                comments, asides or other such utterences whilst a social
+                situation is being roleplayed, then their character said
+                it out loud.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Unfit" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have one less fatigue level than you would
+                normally have from your <t>Health</t>.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Wimp" type="disadvantage">
+        <cost points="-3"/>
+
+        <forbiddon>High pain threshold</forbiddon>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are affected by pain more so than others. Penalties
+                due to wounds and stuns are increased by one level
+                (so you are at -5 for minor wounds, -10 for light wounds
+                etc). Fatal wounds/stuns are unchanged.
+                Penalties from fatigue are unaffected.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Crippled" type="disadvantage">
+        <cost points="-5"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are crippled in one of your attributes. Choose one
+                unmodified attribute and reduce it's value to 1. It may
+                never be improved. You may only take this disadvantage
+                for a single attribute. You should explain why this
+                attribute is so low as part of your background.
+            </para>
+        </description>
+    </advantage>
+
+
+
+    <advantage name="Bad back" type="disadvantage">
+        <cost points="-3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have a bad back, which at moments of physical
+                exertion may fail you. If you ever roll a '1' when
+                making an <e>athletics</e> check, or when wrestling
+                or performing similar feats, then you put your back
+                out. Your <t>Agility</t> and <t>Dexterity</t> is
+                immediately reduced to one for the rest of the day.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Smelly" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have a very bad case of body odour. You suffer a -1
+                penalty to <t>Empathy</t> in social situations when
+                people get close to you.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Fragile" type="disadvantage">
+        <cost points="-3"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are susceptible to being wounded, and more likely
+                to die from a serious injury. You suffer a -5 penalty
+                to any rolls to remain alive or conscious after
+                suffering a physical injury.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Ham fisted" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are clumsy, suffering a penalty when trying to use
+                fine motor skills. You suffer a -1 to <t>Dexterity</t>
+                which performing such tasks as sleight of hand or
+                lock picking.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Slow" type="disadvantage">
+        <cost points="-1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You suffer a -1 penalty to agility for purposes of
+                initiative. Your basic move score is also reduced
+                by 2 points.
+            </para>
+        </description>
+    </advantage>
+
+
 </advantages>
 
