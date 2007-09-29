@@ -14,8 +14,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2007-08-29 19:56:01 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2007-09-29 19:37:25 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -39,7 +39,205 @@
             <para>
                 You have been trained in driving fast in dangerous
                 situations, such as along winding roads and whilst
-                avoiding obstacles.
+                avoiding obstacles. Reduce the difficulty increase
+                for each level of speed by 5 points.
+            </para>
+
+            <para>
+                Can only be used if you are <e>familiar</e> with the
+                type of vehicle.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Ice driving" type="technique">
+        <cost points="4"/>
+        <skill name="Drive"/>
+
+        <short>Driving on ice.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have extensive experience with driving on ice.
+                Halve all extra difficulties for driving on ice
+                (only +5 normally, plus each speed step adds an
+                extra +5 when on ice).
+            </para>
+
+            <para>
+                Can only be used if you are <e>familiar</e> with the
+                type of vehicle.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Off-road driving" type="technique">
+        <cost points="4"/>
+        <skill name="Drive"/>
+
+        <short>Driving in off-road conditions.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are experienced with driving in off-road conditions.
+                You can reduce the penalty for driving in <e>difficult</e>
+                or <e>unsuitable</e> terrain by one level.
+            </para>
+
+            <para>
+                Can only be used if you are <e>familiar</e> with the
+                type of vehicle.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Drive HGV" type="technique">
+        <cost points="2"/>
+        <skill name="Drive"/>
+
+        <short>You are familiar with driving trucks.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are familiar with driving large lorries, and
+                do not suffer a penalty when doing so.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Drive tracked vehicle" type="technique">
+        <cost points="2"/>
+        <skill name="Drive"/>
+
+        <short>You are familiar with driving tanks.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are familiar with driving tanks, half trucks and other
+                vehicles which use tracks. You do not suffer the familiarity
+                penalty when driving such vehicles.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Drive motorbike" type="technique">
+        <cost points="2"/>
+        <skill name="Drive"/>
+
+        <short>You are familiar with riding motorbikes.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are familiar with riding motorbikes and similar
+                small unbalanced powered personal vehicles.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Drive buggy" type="technique">
+        <cost points="2"/>
+        <skill name="Drive"/>
+
+        <short>You can drive powered go-carts and sand buggies.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have experience with driving small powered
+                vehicles such as go-carts, dune buggies or trikes.
+                Anything which is little more than an engine with
+                a seat and basic controls is covered by this.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Pilot large aircraft" type="technique">
+        <cost points="2"/>
+        <skill name="Pilot"/>
+
+        <short>Familiarity with flying large aircraft.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have experience with flying large aircraft such as
+                cargo planes or jumbo jets.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Pilot medium aircraft" type="technique">
+        <cost points="2"/>
+        <skill name="Pilot"/>
+
+        <short>Familiarity with flying passenger jets.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have experience with flying small passenger jets,
+                such as a Learjet.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="VTOL piloting" type="technique">
+        <cost points="2"/>
+        <skill name="Pilot"/>
+
+        <short>Familiarity with flying VTOLs.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are familiar with VTOL aircraft. You need to be
+                familiar with VTOL aircraft in order to avoid penalties
+                when trying to make use of their VTOL capability.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Supersonic piloting" type="technique">
+        <cost points="2"/>
+        <skill name="Pilot"/>
+
+        <short>Familiarity with supersonic aircraft.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have experience with flying aircraft at
+                supersonic speeds.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Aerospace piloting" type="technique">
+        <cost points="2"/>
+        <skill name="Pilot"/>
+
+        <short>Familiarity with aero-space craft.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have experience with flying aircraft at very high
+                altitudes where the atmosphere is incredibly thin.
+                You require this familiarity to properly control
+                aircraft in such conditions.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Hotshot pilot" type="technique">
+        <cost points="4"/>
+        <skill name="Pilot"/>
+
+        <short>Skilled piloting.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Add +1 to the effective <t>Agility</t> of your aircraft
+                when you are flying it. Only applies if you are familiar
+                with the aircraft you are flying.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Top gun" type="technique">
+        <cost points="6"/>
+        <skill name="Pilot"/>
+        <prerequisite>Hostshot pilot</prerequisite>
+
+        <short>Combat piloting.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are skilled at dogfighting in aircraft. When trying
+                to manouevre for a clear shot, you can fire at half
+                skill with a single success, and full skill with two
+                or more successes.
             </para>
         </description>
     </advantage>

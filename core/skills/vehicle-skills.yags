@@ -10,8 +10,8 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2007-04-01 20:34:26 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2007-09-29 19:37:25 $
     Author: Samuel Penn
     -->
 
@@ -53,25 +53,88 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The skill of driving a car or similar sized
-                vehicle. Larger vehicles (lorry, tank) use this skill,
-                though may require techniques for competence.
+                The skill of driving a car or similar land vehicle. This
+                skill assumes familiarity with 4 wheeled powered vehicles,
+                such as a family car, jeep, SUV or van. Other types of
+                vehicles (e.g. HGVs, tanks, motorbikes or go-carts) you
+                are assumed to be unfamiliar with, and must take a technique
+                to be familiarised with them. Until you are familiar, you
+                <e>default</e> to this skill (i.e., halve your roll).
             </para>
-        </description>
-    </skill>
 
-    <skill name="Motorbike" type="skill">
-        <group>Vehicle</group>
-        <default>Drive</default>
-        <tech level="6"/>
-        <short>Riding a motorbike.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The skill of driving a motorcycle, or similar two wheeled
-                vehicles.
+                As with most vehicle skills, it uses <t>Dexterity</t>
+                but your attribute is capped to the <t>Agility</t> of
+                the vehicle you are currently driving. A typical early
+                21st century family car would have an <t>Agility</t>
+                of 3, a sports car an <t>Agility</t> of 6.
+            </para>
+
+            <para>
+                If you fail a <e>Drive</e> check, then immediately check
+                again. If you succeed the second time, then you regain
+                control but are forced to a stop. If you fail the second
+                time, then you lose control and probably crash.
+            </para>
+
+            <para>
+                For high speed driving, most difficulties assume that
+                you are travelling at a moderate speed. Each +10 you
+                add to the difficulty puts your speed one step above
+                this. You must declare the speed you are attempting
+                before making the check.
             </para>
         </description>
+
+        <examples>
+            <example target="10">
+                Maintaining control in a tricky situation, such as a
+                sharp bend, an emergency stop or avoiding a car that
+                has pulled out in front of you.
+            </example>
+
+            <example target="20">
+                Maintaining control in a difficult situation, such as
+                a very sharp and narrow bend, or avoiding a car or
+                pedastrian that has just done something really stupid.
+            </example>
+
+            <example target="20">
+                Perform a basic stunt, such as a handbrake turn, or
+                maintaining control after being rammed (or ramming
+                someone else).
+            </example>
+
+            <example target="30">
+                Perform a difficult stunt, such as sliding to a
+                precision stop from high speed.
+            </example>
+
+            <example target="+5">
+                Wet conditions, or poor visibility.
+            </example>
+
+            <example target="+10">
+                Icy or slippery conditions. If driving fast in icy
+                conditions, also add a further +10 for each speed step.
+            </example>
+
+            <example target="x1.5">
+                Difficult terrain. Any terrain which is difficult for this
+                type of vehicle adds 50% to the final difficulty. A rough
+                dirt track would be difficult for a typical car, but
+                normal for off-road vehicles.
+            </example>
+
+            <example target="x2">
+                Unsuitable terrain. Any terrain which the vehicle is
+                completely unsuited for. A trip cross country across
+                hills would count as unsuitable for a typical car,
+                but possibly only difficult for an off-road rally car
+                or a tank. Unsuitable terrain doubles the final
+                difficulty.
+            </example>
+        </examples>
     </skill>
 
     <skill name="Pilot" type="skill">
@@ -83,7 +146,68 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The skill of piloting a powered aircraft. By default it
-                assumes a small low performance aircraft.
+                assumes a small low performance aircraft, such as a
+                Cessna or Spitfire. Larger aircraft require familiarity
+                similar to the <e>Drive</e> skill.
+            </para>
+
+            <para>
+                Piloting skill may be used to fire direct fire weapons
+                which are mounted to fire directly ahead. Your <t>Dexterity</t>
+                is not capped to the <t>Agility</t> of the aircraft when
+                firing. Turreted weapons use <e>Heavy weapons</e> or
+                (very rarely) <e>Gunnery</e> skill.
+            </para>
+
+            <para>
+                Air combat requires a mixture of manouevre and shooting.
+                Make opposed <y:dexterity>Pilot</y:dexterity> checks to
+                gain the advantage each turn. If you have two levels of
+                success in your favour, then you can shoot at half skill.
+                If you have three or more levels, then you can shoot at
+                full skill. The target always gets to dodge with their
+                full <y:dexterity>Pilot</y:dexterity> (though capped by the
+                aircraft's <t>Agility</t>).
+            </para>
+        </description>
+
+        <examples>
+            <example target="10">
+                Land in ideal conditions.
+            </example>
+
+            <example target="20">
+                Land on an aircraft carrier. Includes difficulties for
+                moving deck and shortness.
+            </example>
+
+            <example target="+10">
+                Land quickly without taking time to line up properly.
+            </example>
+
+            <example target="+5">
+                Land on a short runway or narrow runway.
+            </example>
+
+            <example target="+10">
+                Flying close to the ground, within 50m.
+            </example>
+
+            <example target="+20">
+                Fly really close to the ground, within 10m.
+            </example>
+        </examples>
+   </skill>
+
+    <skill name="Helicopter" type="skill">
+        <group>Vehicle</group>
+        <tech level="6"/>
+
+        <short>Piloting a helicopter.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The skill of piloting a helicopter.
             </para>
         </description>
     </skill>
