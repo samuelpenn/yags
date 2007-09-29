@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.27 $</version>
-            <date>$Date: 2007-09-20 22:58:46 $</date>
+            <version>$Revision: 1.28 $</version>
+            <date>$Date: 2007-09-29 20:35:13 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -307,6 +307,11 @@
                         attribute or skill may be raised to. The meaning of
                         these values is described in the sections below.
                     </para>
+
+                    <para>
+                        The above pretty much assumes that <tm>Traveller</tm>
+                        characters begin the game highly experienced.
+                    </para>
                 </sect3>
 
                 <sect3>
@@ -486,7 +491,7 @@
             </para>
 
             <sect2>
-                <title>Basic skills</title>
+                <title>Buying skills</title>
 
                 <para>
                     All characters who are part of the <e>Imperium</e> start
@@ -505,10 +510,33 @@
                     sector (e.g., <e>Area lore (Spinward Marches)</e>) if
                     you wish.
                 </para>
+
+                <para>
+                    There are also eight <e>Talents</e> which all characters
+                    start with at a score of 2. These represent skills which
+                    everyone picks up during childhood, and include
+                    <e>Awareness</e>, <e>Athletics</e>, <e>Brawl</e>,
+                    <e>Charm</e>, <e>Guile</e>, <e>Sleight</e>, <e>Stealth</e>
+                    and <e>Throw</e>.
+                </para>
+
+                <para>
+                    All other skills start at 0, and must be purchased.
+                    Increasing a skill by one level costs a number of points
+                    equal to the new level of the skill. So to raise a skill
+                    from 3 to 4 costs 4 points. To raise a skill from 0 to 4
+                    costs 10 points (1 + 2 + 3 + 4).
+                </para>
             </sect2>
 
             <sect2>
                 <title>Skill list</title>
+
+                <para>
+                    The following skills are commonly available, and are
+                    organised according to category. Some skills may be
+                    listed more than once.
+                </para>
 
                 <y:list-skills>
                     <y:skills>skills/traveller-skills.yags</y:skills>
@@ -520,21 +548,6 @@
                     <y:skills>../core/skills/vehicle-skills.yags</y:skills>
                     <y:skills>../core/skills/investigation-skills.yags</y:skills>
                     <y:skills>../core/skills/outdoor-skills.yags</y:skills>
-                    <!--
-                    <y:skills>skills/traveller.yags</y:skills>
-                    <y:skills>skills/academic.yags</y:skills>
-                    <y:skills>skills/technical.yags</y:skills>
-                    <y:skills>skills/business.yags</y:skills>
-                    <y:skills>skills/combat.yags</y:skills>
-                    <y:skills>skills/criminal.yags</y:skills>
-                    <y:skills>skills/sport.yags</y:skills>
-                    <y:skills>skills/military.yags</y:skills>
-                    <y:skills>skills/vehicle.yags</y:skills>
-                    <y:skills>skills/social.yags</y:skills>
-                    <y:skills>skills/wilderness.yags</y:skills>
-                    -->
-                    <!-- <y:skills>../core/skills/combat-skills.yags</y:skills> -->
-                    <!-- <y:skills>../core/skills/bushido-skills.yags</y:skills> -->
                 </y:list-skills>
             </sect2>
 
@@ -551,19 +564,7 @@
                     <y:skills>../core/skills/vehicle-skills.yags</y:skills>
                     <y:skills>../core/skills/investigation-skills.yags</y:skills>
                     <y:skills>../core/skills/outdoor-skills.yags</y:skills>
-                    <!--
-                    <y:skills>skills/traveller.yags</y:skills>
-                    <y:skills>skills/academic.yags</y:skills>
-                    <y:skills>skills/technical.yags</y:skills>
-                    <y:skills>skills/business.yags</y:skills>
-                    <y:skills>skills/combat.yags</y:skills>
-                    <y:skills>skills/criminal.yags</y:skills>
-                    <y:skills>skills/sport.yags</y:skills>
-                    <y:skills>skills/military.yags</y:skills>
-                    <y:skills>skills/vehicle.yags</y:skills>
-                    <y:skills>skills/social.yags</y:skills>
-                    <y:skills>skills/wilderness.yags</y:skills>
-                    -->
+
                     <y:techniques>../core/techniques/academic.yags</y:techniques>
                     <y:techniques>../core/techniques/combat.yags</y:techniques>
                     <y:techniques>../core/techniques/firearms.yags</y:techniques>
@@ -572,13 +573,9 @@
                     <y:techniques>../core/techniques/technical.yags</y:techniques>
                     <y:techniques>../core/techniques/vehicle.yags</y:techniques>
 
-                    <!--
-                    <y:techniques>../core/techniques/combat-techniques.yags</y:techniques>
-                    <y:techniques>../core/techniques/computing.yags</y:techniques>
-                    <y:techniques>../core/techniques/electronics.yags</y:techniques>
-                    <y:techniques>skills/martial-techniques.yags</y:techniques>
-                    -->
-                    <y:techniques>skills/techniques.yags</y:techniques>
+                    <y:techniques>skills/academic-techniques.yags</y:techniques>
+                    <y:techniques>skills/technical-techniques.yags</y:techniques>
+                    <y:techniques>skills/vehicle-techniques.yags</y:techniques>
                 </y:import-skills>
             </sect2>
 
@@ -606,6 +603,7 @@
                     Techniques are purchased from the same experience point
                     pool that skills are purchased from.
                 </para>
+
                 <sect3>
                     <title>Academic Techniques</title>
 
@@ -676,8 +674,25 @@
                 <sect3>
                     <title>Vehicle Techniques</title>
 
+                    <para>
+                        There are a small number of basic vehicle skills,
+                        and familiarity is required for specific vehicle
+                        types. For example, <e>Pilot</e> will enamble you
+                        to fly any type of aircraft, though your skill roll
+                        is halved if you aren't familiar with a particular
+                        type.
+                    </para>
+
+                    <para>
+                        Familiarity is gained by purchasing a technique, so
+                        many of the vehicle techniques are for familiarity.
+                        If you aren't familiar with a type of vehicle, then
+                        you cannot use any techniques with that vehicle.
+                    </para>
+
                     <y:import-advantages type="technique" tree="true">
                         <y:adv>../core/techniques/vehicle.yags</y:adv>
+                        <y:adv>skills/vehicle-techniques.yags</y:adv>
                     </y:import-advantages>
                 </sect3>
             </sect2>
