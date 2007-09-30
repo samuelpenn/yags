@@ -14,8 +14,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.1 $</version>
-            <date>$Date: 2007-09-29 20:35:13 $</date>
+            <version>$Revision: 1.2 $</version>
+            <date>$Date: 2007-09-30 12:14:28 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -55,40 +55,80 @@
         </description>
     </advantage>
 
-    <advantage name="Small civilian" type="technique">
+    <advantage name="Spaceship familiarity" type="technique">
         <cost points="2"/>
         <skill name="Spaceship systems"/>
-        <short>Skilled at handling a spaceship.</short>
+
+        <short>Familiarity with spacecraft systems.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Familiar with civilian spacecraft up to 1000t in size.
+                You have familiarity with handling various types of
+                spacecraft. There is one version of this technique for
+                each type of spacecraft. By default, everyone
+                automatically has familiarity with ships up to 1,000t
+                in displacement designed for private use.
+            </para>
+
+            <itemlist order="strict" style="italic">
+                <item name="Medium ships">
+                    Any type of ship from 1,000t to 10,000t in size.
+                </item>
+                <item name="Large ships">
+                    Any type of ship more than 10,000t in size.
+                </item>
+                <item name="Cargo Transport">
+                    Familiarity with systems commonly found on transport
+                    vessels, such as loading/unloading systems, cargo
+                    protection and distribution.
+                </item>
+                <item name="Passenger ships">
+                    Familiarity with liners and other ships designed for
+                    moving large numbers of people in comfort.
+                </item>
+                <item name="Military ships">
+                    Military and other fighting ships. This includes
+                    any ship with military systems and weapons (the
+                    presence of advanced sensors, ECM systems, more
+                    advanced damage control etc make such vessels
+                    different from civilian ones).
+                </item>
+                <item name="Science vessels">
+                    Science and survey vessels.
+                </item>
+                <item name="Tugs">
+                    Familiarity with tugs and tenders.
+                </item>
+            </itemlist>
+
+            <para>
+                You may require familiarity with several types of ship
+                to be able to operate one - for example a 20,000t military
+                ship would require <e>Large ships</e> and <e>Military ships</e>.
+                Lack of familiarity will not necessarily mean that you
+                suffer a penalty for everything you do, but large vessels
+                can be overwhelming to operate unless you know how best to
+                delegate responsibility, and make best use of the ships
+                automated systems, and ships of a particular role will
+                require familiarity to make use of ship systems which are
+                unique to that role.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Medium civilian" type="technique">
-        <cost points="2"/>
-        <skill name="Spaceship systems"/>
-        <short>Skilled at handling a spaceship.</short>
+    <advantage name="Precision shots" type="technique">
+        <cost points="4"/>
+        <skill name="Spaceship gunnery"/>
+        <short>Efficient targetting of large ships.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Familiar with civilian spacecraft from 1,000t to 10,000t
-                in size.
+                You know how to precisely target large vessels in order
+                to cause maximum damage. When firing, your weapon counts
+                as +5 size levels larger than it actually is per 4 full
+                points of skill that you have.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Large civilian" type="technique">
-        <cost points="2"/>
-        <skill name="Spaceship systems"/>
-        <short>Skilled at handling a spaceship.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Familiar with civilian spacecraft over 10,000t in size.
-            </para>
-        </description>
-    </advantage>
 </advantages>
 
 
