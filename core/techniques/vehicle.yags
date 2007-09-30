@@ -14,8 +14,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.3 $</version>
-            <date>$Date: 2007-09-29 19:37:25 $</date>
+            <version>$Revision: 1.4 $</version>
+            <date>$Date: 2007-09-30 12:14:44 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -89,126 +89,89 @@
         </description>
     </advantage>
 
-    <advantage name="Drive HGV" type="technique">
+    <advantage name="Driving familiarity" type="technique">
         <cost points="2"/>
         <skill name="Drive"/>
 
-        <short>You are familiar with driving trucks.</short>
+        <short>Familiarity with a type of vehicle.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You are familiar with driving large lorries, and
-                do not suffer a penalty when doing so.
+                This technique needs to be taken to be familiar with
+                anything other than the standard type of vehicle
+                (small passenger car). There is a different technique
+                for each type of vehicle.
             </para>
+
+            <itemlist order="strict" style="italic">
+                <item name="HGV">
+                    You are familiar with driving large lorries, and
+                    do not suffer a penalty when doing so.
+                </item>
+
+                <item name="Tracked">
+                    You are familiar with driving tanks, half trucks and other
+                    vehicles which use tracks. You do not suffer the familiarity
+                    penalty when driving such vehicles.
+                </item>
+
+                <item name="Motorbike">
+                    You are familiar with riding motorbikes and similar
+                    small unbalanced powered personal vehicles.
+                </item>
+
+                <item name="Buggy">
+                    You have experience with driving small powered
+                    vehicles such as go-carts, dune buggies or trikes.
+                    Anything which is little more than an engine with
+                    a seat and basic controls is covered by this.
+                </item>
+            </itemlist>
         </description>
     </advantage>
 
-    <advantage name="Drive tracked vehicle" type="technique">
-        <cost points="2"/>
-        <skill name="Drive"/>
 
-        <short>You are familiar with driving tanks.</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You are familiar with driving tanks, half trucks and other
-                vehicles which use tracks. You do not suffer the familiarity
-                penalty when driving such vehicles.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Drive motorbike" type="technique">
-        <cost points="2"/>
-        <skill name="Drive"/>
-
-        <short>You are familiar with riding motorbikes.</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You are familiar with riding motorbikes and similar
-                small unbalanced powered personal vehicles.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Drive buggy" type="technique">
-        <cost points="2"/>
-        <skill name="Drive"/>
-
-        <short>You can drive powered go-carts and sand buggies.</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have experience with driving small powered
-                vehicles such as go-carts, dune buggies or trikes.
-                Anything which is little more than an engine with
-                a seat and basic controls is covered by this.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Pilot large aircraft" type="technique">
+    <advantage name="Aircraft familiarity" type="technique">
         <cost points="2"/>
         <skill name="Pilot"/>
 
-        <short>Familiarity with flying large aircraft.</short>
+        <short>Familiarity with aircraft.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You have experience with flying large aircraft such as
-                cargo planes or jumbo jets.
+                This technique needs to be taken to be familiar with
+                anything other than the standard type of aircraft
+                (small low-performance aircraft). This is a different
+                technique for each type of aircraft.
             </para>
-        </description>
-    </advantage>
 
-    <advantage name="Pilot medium aircraft" type="technique">
-        <cost points="2"/>
-        <skill name="Pilot"/>
+            <itemlist order="strict" style="italic">
+                <item name="Large aircraft">
+                    You have experience with flying large aircraft such as
+                    cargo planes or jumbo jets.
+                </item>
 
-        <short>Familiarity with flying passenger jets.</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have experience with flying small passenger jets,
-                such as a Learjet.
-            </para>
-        </description>
-    </advantage>
+                <item name="Passenger jet">
+                    You have experience with flying small passenger jets,
+                    such as a Learjet.
+                </item>
 
-    <advantage name="VTOL piloting" type="technique">
-        <cost points="2"/>
-        <skill name="Pilot"/>
+                <item name="VTOL">
+                    You are familiar with VTOL aircraft. You need to be
+                    familiar with VTOL aircraft in order to avoid penalties
+                    when trying to make use of their VTOL capability.
+                </item>
 
-        <short>Familiarity with flying VTOLs.</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You are familiar with VTOL aircraft. You need to be
-                familiar with VTOL aircraft in order to avoid penalties
-                when trying to make use of their VTOL capability.
-            </para>
-        </description>
-    </advantage>
+                <item name="Supersonic">
+                    You have experience with flying aircraft at
+                    supersonic speeds.
+                </item>
 
-    <advantage name="Supersonic piloting" type="technique">
-        <cost points="2"/>
-        <skill name="Pilot"/>
-
-        <short>Familiarity with supersonic aircraft.</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have experience with flying aircraft at
-                supersonic speeds.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Aerospace piloting" type="technique">
-        <cost points="2"/>
-        <skill name="Pilot"/>
-
-        <short>Familiarity with aero-space craft.</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have experience with flying aircraft at very high
-                altitudes where the atmosphere is incredibly thin.
-                You require this familiarity to properly control
-                aircraft in such conditions.
-            </para>
+                <item name="Aerospace">
+                    You have experience with flying aircraft at very high
+                    altitudes where the atmosphere is incredibly thin.
+                    You require this familiarity to properly control
+                    aircraft in such conditions.
+                </item>
+            </itemlist>
         </description>
     </advantage>
 
