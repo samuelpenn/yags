@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2007-08-29 19:56:01 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2007-10-06 17:03:19 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -211,13 +211,13 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You may reduce the penalty to actions caused by wounds
-                and stuns by an amount equal to your <e>Brawl</e> skill.
-                It is the total of the combined penalty which is reduced.
+                and stuns (not fatigue) by one level each, so being
+                fatally wounded will give a -25 penalty.
             </para>
 
             <para>
-                At a <e>Brawl</e> of 8+, reduce the penalty by twice
-                your skill, and at 12+ reduce by triple your skill.
+                At a <e>Brawl</e> of 8+, the penalty is reduced by two
+                levels for each of wounds and stuns.
             </para>
         </description>
     </advantage>
@@ -235,6 +235,11 @@
                 You gain a bonus to your basic soak against <e>mixed</e>
                 and <e>stun</e> damage equal to your <t>Strength</t>. This
                 applies all the time, even when not using this skill.
+            </para>
+
+            <para>
+                If you have a <e>Brawl</e> of 8+, then the bonus applies
+                against wound damage as well.
             </para>
         </description>
     </advantage>
@@ -269,9 +274,20 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Automatic technique which raises the target number to hit
-                you by your best melee skill whenever you defend against
-                an attack (i.e., it raises your minimum defence roll).
+                Automatic technique which raises the base target number
+                to hit you by your best melee skill whenever you defend
+                against an attack (i.e., it raises your minimum defence
+                roll, but not the defence roll itself). If you don't
+                declare a defence against that attack, then your base
+                defence is unmodified.
+            </para>
+
+            <para>
+                Since your base 'to be hit' number is unaffected by the
+                number of defences you make, or by attacks from missile
+                weapons which halve your dodge, this technique is mostly
+                of use when you are outnumbered or dodging arrows and
+                bullets.
             </para>
         </description>
     </advantage>
@@ -309,7 +325,7 @@
             <para>
                 Automatic technique which allows you to focus your attacks
                 in order to cause maximum harm to your foe. You may add
-                your skill to any damage done.
+                your skill to any damage done for all melee attacks.
             </para>
         </description>
     </advantage>
@@ -360,7 +376,7 @@
             <para>
                 An <e>ambush</e> is a slow attack, and the ambusher is
                 considered to be using the <e>focused stance</e>. May be
-                combined with other techniques.
+                combined with other techniques and/or manoeuvres.
             </para>
         </description>
     </advantage>
@@ -376,8 +392,7 @@
             <para>
                 As for <e>Ambush</e>, but may be performed at any time the
                 defender is not aware of the attacker (even if the defender
-                is in combat). Still only applies to attacks made with
-                either the <e>Brawl</e> skill.
+                is in combat).
             </para>
         </description>
     </advantage>
@@ -391,11 +406,10 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                As for <e>Ambush</e>, but applies whenever the defender
-                is not defending against the character's attack. The
-                character may use either an <e>aggressive</e> or a
-                <e>normal</e> stance. Still only applies to attacks made
-                with the <e>Brawl</e> skill.
+                As for <e>Ambush</e>, but applies whenever your target is
+                not defending against your attack, even if they are aware
+                of you. May be used with either an <e>aggressive</e> or a
+                <e>normal</e> stance.
             </para>
         </description>
     </advantage>
@@ -411,7 +425,16 @@
             <para>
                 When you have surprise against someone, you gain a bonus
                 equal to your <e>Tactics</e> to all melee attack, defence
-                and damage rolls.
+                and damage rolls. For ranged attacks, you have a bonus to
+                your attack roll.
+            </para>
+
+            <para>
+                Secondly, you may exert yourself to gain the initiative.
+                When you come to declare your actions for the round, you
+                can gain a level of fatigue and double your initiative
+                score for that round, changing both when you have to
+                declare and when you act.
             </para>
         </description>
     </advantage>
