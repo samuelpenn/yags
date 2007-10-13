@@ -9,8 +9,8 @@
     Redistribution and use in source, binary and printed forms with or
     without modification, are permitted.
 
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2007-07-01 20:48:31 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2007-10-13 12:55:40 $
 
 
     Importance
@@ -77,6 +77,117 @@
             <properties>
                 <missile/><firearm/>
                 <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="S&amp;W .38sp">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>6</techLevel>
+        <legality>3</legality>
+        <weight>900</weight>
+        <cost>20</cost>
+
+        <short>Light revolver.</short>
+        <description>
+            <para>
+                The Smith &amp; Wesson 'Military &amp; Police' revolver,
+                is a typical six-shooter using the .38 Special round.
+                It first went into production in 1899, and has consisted
+                of several different models.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+4</attack><damage>21</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>150</short><medium>300</medium><long>1500</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>1</load><reach>0</reach>
+            <capacity>6</capacity><rof>6</rof><recoil>-3</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="3"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="S&amp;W .357 Magnum">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>6</techLevel>
+        <legality>3</legality>
+        <weight>1500</weight>
+        <cost>20</cost>
+
+        <short>Revolver.</short>
+        <description>
+            <para>
+                The .357 Magnum was a more powerful revolver than the
+                .38 Special.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+4</attack><damage>25</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>200</short><medium>400</medium><long>2000</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>1</load><reach>0</reach>
+            <capacity>6</capacity><rof>6</rof><recoil>-4</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="3"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Walter PP">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>6</techLevel>
+        <legality>3</legality>
+        <weight>680</weight>
+        <cost>20</cost>
+
+        <short>Semi-automatic pistol.</short>
+        <description>
+            <para>
+                Introduced in 1929, it was closely followed by the PPK
+                varient in 1931. The PPK is slightly lighter and more
+                concealable, but has its magazine capacity reduced by 1.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+4</attack><damage>21</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>150</short><medium>300</medium><long>1500</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>1</load><reach>0</reach>
+            <capacity>8</capacity><rof>5</rof><recoil>-3</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="1"/>
             </properties>
         </weapon>
     </item>
@@ -155,6 +266,53 @@
             </properties>
         </weapon>
     </item>
+
+    <item name="Thompson SMG">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>6</techLevel>
+        <legality>2</legality>
+        <weight>4900</weight>
+        <cost>120</cost>
+
+        <short>.45 ACP submachine gun.</short>
+        <description>
+            <para>
+                The American light automatic weapon that entered service
+                in 1921 and found fame when it was commonly used by
+                American gangsters during the 20s. It was also used by
+                allied troops during World War II. It remained in
+                service until the early 70s.
+            </para>
+
+            <para>
+                It can take a 20 or 30 round detachable box magazine, or
+                a 50 or 100 round drum magazine. A drum adds +1 or +2
+                <e>Load</e> to the weapon, and is unreliable, jamming on
+                a roll of 1-2.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+5</attack><damage>23</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>200</short><medium>500</medium><long>2000</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>5</load><reach>1</reach>
+            <capacity>20</capacity><rof>20</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><automatic/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
 
 </equipment>
 

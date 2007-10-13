@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+
+<!--
+
+    General equipment lists.
+
+    Copyright 2007 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-10-13 12:55:40 $
+
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+
+    Prices are in credits.
+
+    Tech Level
+     4 1450-1700
+     5 1700-1900
+     6 1900-1950
+     7 1950-1980
+     8 1980-2020
+     9 2020+ (Interplanetary)
+    10 Interstellar (early jump)
+    11 Interstellar (Jump)
+    12 Interstellar (Imperium)
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+
+    <item name="Browning automatic rifle">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>6</techLevel>
+        <legality>2</legality>
+        <weight>8000</weight>
+        <cost>120</cost>
+
+        <short>Light machine gun.</short>
+        <description>
+            <para>
+                This was a common light machine gun used by the allies from
+                about 1917 until the 60s. Severly limited by its small
+                magazine capacity. It was mostly designed for trench clearing.
+            </para>
+
+            <para>
+                It is fitted with a bipod, but can also be easily mounted to
+                a vehicle or tripod.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+            <class>rifle</class>
+            <combat>
+                <attack>+6</attack><damage>35</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>750</short><medium>1500</medium><long>4500</long>
+                </range>
+            </combat>
+            <strength>5</strength><load>5</load><reach>3</reach>
+            <capacity>20</capacity><rof>20</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><automatic/><heavy/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Vickers machine gun">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>6</techLevel>
+        <legality>2</legality>
+        <weight>50000</weight>
+        <cost>120</cost>
+
+        <short>Medium machine gun.</short>
+        <description>
+            <para>
+                The Vickers machine gun was in service between 1912 and 1968,
+                and was famed for its reliability. It is designed to be fired
+                from a tripod and is belt fed and water cooled.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+            <combat>
+                <attack>+9</attack><damage>35</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>750</short><medium>1500</medium><long>4100</long>
+                </range>
+            </combat>
+            <strength>8</strength><load>5</load><reach>4</reach>
+            <capacity>250</capacity><rof>50</rof><recoil>-15</recoil>
+            <properties>
+                <missile/><firearm/><automatic/><heavy/>
+                <reload score="3"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Lewis machine gun">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>6</techLevel>
+        <legality>2</legality>
+        <weight>13000</weight>
+        <cost>100</cost>
+
+        <short>Light machine gun.</short>
+        <description>
+            <para>
+                Lewis light machine gun. Uses a bipod. Can use a 50 round
+                or 100 round drum.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+            <combat>
+                <attack>+9</attack><damage>32</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>700</short><medium>1400</medium><long>3500</long>
+                </range>
+            </combat>
+            <strength>5</strength><load>13</load><reach>4</reach>
+            <capacity>50</capacity><rof>50</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><automatic/><heavy/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+
+
+</equipment>
+
+

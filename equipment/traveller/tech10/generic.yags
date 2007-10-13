@@ -10,8 +10,8 @@
     without modification, are permitted provided that the above
     copyright notice is retained.
 
-    Version: $Revision: 1.1 $
-    Date:    $Date: 2007-06-03 18:45:59 $
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2007-10-13 12:55:40 $
 
     All units are in cgs.
 
@@ -56,6 +56,45 @@
 
         <weight>150</weight>
         <material>plastic</material>
-        <cost>750</cost>
+        <cost units="credits">750</cost>
     </item>
+
+    <item name="Eye in the sky">
+        <category>Media</category>
+        <importance>2</importance>
+        <availability>2</availability>
+        <techLevel>10</techLevel>
+        <legality>2</legality>
+
+        <cost units="credits">6000</cost>
+        <weight>2000</weight>
+
+        <short>Contra-grav flying camera.</short>
+
+        <description>
+            <para>
+                This is a contra-grav media recorder of the type often
+                used by reporters. It can record audio and video (with
+                IR and low light options coming as standard on most
+                models) in high definition in a 360 degree arc. It can
+                be remote controlled, has an operating ceiling of
+                about 100m and a top flight speed of 50km/h. It can
+                operate for up to 12 hours without recharging, though
+                can extend this by a few hours through solar cells.
+            </para>
+
+            <para>
+                At TL11, it has a ceiling of 200m, a speed of 100km/h
+                and a duration of 24 hours. At TL12, these are increased
+                to 1km, 200km/h and 48 hours. Alternatively, halve cost
+                and weight each TL about 10.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>2</load>
+            <skill name="RPV Operation" bonus="+15"/>
+        </tool>
+    </item>
+
 </equipment>

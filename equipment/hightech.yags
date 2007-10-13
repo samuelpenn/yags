@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+                href="/home/sam/src/forge/yagsbook/xml/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+    <header>
+        <title>High Tech</title>
+        <tagline>Yags Traveller</tagline>
+
+        <summary>
+            Guns and other things that go bang, through the ages.
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.1 $</version>
+            <date>$Date: 2007-10-13 12:55:40 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2007</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+        </license>
+
+        <style name="equipment"/>
+    </header>
+
+    <body>
+        <sect1>
+            <title>The Great Wars</title>
+
+            <para>
+                Here we consider weapons commonly available during TL6,
+                which includes both WWI and WWII. WWI saw the development
+                of machine guns and trench warfare which invented far
+                more effective ways of killing people.
+            </para>
+
+            <sect2>
+                <title>Guns</title>
+
+                <para>
+                    Man portable or man-packed weapons, including machine
+                    guns, mortars and early anti-tank weapons.
+                </para>
+
+                <import-equipment style="full">
+                    <list>modern/tech6/smallarms.yags</list>
+                    <list>modern/tech6/heavy-weapons.yags</list>
+                </import-equipment>
+            </sect2>
+        </sect1>
+
+        <sect1 format="wide">
+            <title>TL6 Equipment Charts</title>
+
+            <sect2>
+                <title>Guns and Things</title>
+
+                <sect3>
+                    <title>Small arms</title>
+
+                    <para>
+                        These are small weapons designed to be easily man
+                        portable. They range from pistols up to rifles.
+                    </para>
+
+                    <y:import-weaponlist importance="2" style="list">
+                        <y:category>Pistols</y:category>
+                        <y:category>Rifles</y:category>
+
+                        <y:list>modern/tech6/smallarms.yags</y:list>
+                        <y:list>modern/tech6/heavy-weapons.yags</y:list>
+                    </y:import-weaponlist>
+                </sect3>
+
+                <sect3>
+                    <title>Heavy Weapons</title>
+
+                    <para>
+                        These weapons are either normally vehicle mounted,
+                        or considered to be squad support weapons. They are
+                        generally not issued to all soldiers, but to dedicated
+                        teams who have been trained in their use.
+                    </para>
+
+                    <y:import-weaponlist importance="2" style="list">
+                        <y:category>Heavy</y:category>
+
+                        <y:list>modern/tech6/smallarms.yags</y:list>
+                        <y:list>modern/tech6/heavy-weapons.yags</y:list>
+                    </y:import-weaponlist>
+                </sect3>
+            </sect2>
+        </sect1>
+    </body>
+
+</article>
+
+
