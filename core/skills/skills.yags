@@ -3,6 +3,8 @@
     href="http://yagsbook.sourceforge.net/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
     type="text/xsl"?>
 <!--
+    Not used!
+
     Full list of skills available.
     Crosslinked with talent techniques.
 
@@ -11,7 +13,7 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.11 $
+    Version: $Revision: 1.12 $
     Author: Samuel Penn
     -->
 
@@ -281,9 +283,13 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml" task="Disguise">
             <para>
                 The character can disguise either themselves or another
-                person by using <e>guile</e>. Make an
-                <skeq><attr>intelligence</attr><sk>guile</sk></skeq>
-                check.
+                person by using <e>guile</e>. Make an <y:empathy>Guile</y:empathy>
+                check, normally against a difficulty of 10, as long as
+                no-one is taking notice of you. If somebody is specifically
+                looking at you (guards will, if you approach them), then they
+                get the original difficulty as a bonus to their
+                <y:empathy>Guile</y:empathy> or
+                <y:perception>Awareness</y:perception> (whichever is higher).
             </para>
         </description>
 
@@ -303,6 +309,24 @@
                 Make someone mad. Opposed with <t>will</t>.
             </para>
         </description>
+
+        <examples>
+            <example target="10">
+                Disguising yourself to fit in with a random crowd of people.
+                A random crowd on a high street for example.
+            </example>
+
+            <example target="20">
+                Disguising yourself to fit in with a specific group of
+                people. A soldier on a military base.
+            </example>
+
+            <example target="30+">
+                Disguising yourself to fit in amongst a small group of
+                people, where they all know each other. A security guard
+                for a single building.
+            </example>
+        </examples>
     </skill>
 
     <!-- Sleight -->

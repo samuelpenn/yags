@@ -4,7 +4,8 @@
     Physical techniques only.
  -->
 
-<advantages xmlns="http://yagsbook.sourceforge.net/xml/yags">
+<advantages xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
         <author>
             <fullname>Samuel Penn</fullname>
@@ -12,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2007-08-29 19:56:01 $</date>
+            <version>$Revision: 1.3 $</version>
+            <date>$Date: 2007-11-04 14:58:08 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -130,8 +131,10 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You are adept at juggling, and may halve the difficulty
-                to juggle items when using <e>Sleight</e>.
+                You are adept at juggling. The difficulty to juggle simple
+                objects such as balls is 5 * number of balls. Add +5 to the
+                difficulty for clubs, +10 for more complex objects.
+                If you don't have the technique then halve your roll.
             </para>
         </description>
     </advantage>
@@ -143,10 +146,51 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You are adept at lifting items from a person without them
-                noticing. Halve the difficulty of <e>Sleight</e> checks
-                when picking someone's pocket.
+                noticing. Use your <y:dexterity>Sleight</y:dexterity> when
+                making the attempt, generally against a static difficulty.
+                If you don't have this technique, the base difficulty is
+                the target's <y:perception>Awareness</y:perception>.
             </para>
         </description>
+
+        <examples>
+            <example target="10">
+                If the environment is busy and crowded, and the target is
+                being jostled by others. The tube during rush hour.
+            </example>
+
+            <example target="15">
+                Busy and crowded, but not much physical contact. Oxford
+                Street during a busy period.
+            </example>
+
+            <example target="20">
+                Not that crowded.
+            </example>
+
+            <example target="+0">
+                Taking something from the top of an open bag.
+            </example>
+
+            <example target="+5">
+                Lifting something sticking out from an outside pocket, or
+                down in a bag (but still visible).
+            </example>
+
+            <example target="+10">
+                Lifting something from within an outside pocket, such as a
+                wallet, or something that requires cutting free such as a
+                pouch.
+            </example>
+
+            <example target="+15">
+                Lifting an object from an inside pocket.
+            </example>
+
+            <example target="+5">
+                Something tricky to steal.
+            </example>
+        </examples>
     </advantage>
 
 
@@ -156,7 +200,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character can move twice as quickly as normal before
+                You can move twice as quickly as normal before
                 receiving a penalty for trying to be stealthy.
             </para>
         </description>
@@ -170,7 +214,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Character is an expert navigator, and halves all
+                You are an expert navigator, and halve all
                 penalties due to bad circumstances when trying to
                 determine position, or plotting a course.
             </para>
@@ -185,10 +229,10 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is an experienced hiker, and can move across
+                You are an experienced hiker, and can move across
                 country at a faster pace. When walking long distances
-                (using the overland movement rules), the character can add
-                their <e>survival</e> skill to their base movement.
+                (using the overland movement rules), you can add
+                your <e>survival</e> skill to their base movement.
             </para>
         </description>
     </advantage>
