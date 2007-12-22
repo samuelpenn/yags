@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.63 $</version>
-            <date>$Date: 2007-09-29 19:37:25 $</date>
+            <version>$Revision: 1.64 $</version>
+            <date>$Date: 2007-12-22 21:24:55 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -1330,6 +1330,160 @@
                     over encumbered. Agility and dexterity can never
                     be reduced below zero.
                 </para>
+            </sect2>
+
+            <sect2>
+                <title>Movement and Manouevre</title>
+
+                <para>
+                    The preceeding rules on movement pretty much assume
+                    that there is a clear path ahead of the character.
+                    The four types of movement are:
+                </para>
+
+                <targetlist>
+                    <targetLabel>Action</targetLabel>
+                    <valueLabel>Distance/round</valueLabel>
+                    <item target="Careful" value="1/2 MOVE"/>
+                    <item target="Standard" value="MOVE"/>
+                    <item target="Running" value="MOVE x 2"/>
+                    <item target="Sprinting" value="MOVE x 2 + Athletics"/>
+                </targetlist>
+
+                <para>
+                    Trying to move in difficult circumstances affects
+                    the fastest speed possible.
+                </para>
+
+                <sect3>
+                    <title>Obstructions</title>
+
+                    <para>
+                        If the path is obstructed, then an
+                        <y:agility>Athletics</y:agility> check is required
+                        against a difficulty that depends on the level of
+                        obstruction. A <e>moderate</e> success allows
+                        standard movement, a <e>good</e> success or better
+                        allows running. Failure means no movement is achieved
+                        that round.
+                    </para>
+
+                    <targetlist>
+                        <targetLabel>Target</targetLabel>
+                        <valueLabel>Obstruction</valueLabel>
+
+                        <item target="10" value="Light obstruction.">
+                            A typical street, or through a wood.
+                        </item>
+
+                        <item target="20" value="Moderate obstruction.">
+                            A busy street, a warehouse full of crates, across
+                            rubble or through dense woods.
+                        </item>
+
+                        <item target="30" value="Heavy obstruction.">
+                            A busy market, or through thick foliage.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        A fumbled check results in a trip and fall which
+                        results in no movement this round and doubled
+                        difficulty the following round. Alternatively, you
+                        can opt to receive one level of fatigue instead of
+                        tripping.
+                    </para>
+
+                    <para>
+                        If the obstructions consist of crowds, then you may
+                        try to barge through. A <y:strength>Brawl</y:strength>
+                        check is made at the same difficulty each round, and
+                        success drops the <e>Athletics</e> check difficulty
+                        by one level. Failure results in you being held up
+                        for a round. In either case, it will result in a lot
+                        of angry people behind you.
+                    </para>
+
+                    <sect4>
+                        <title>Unsafe ground</title>
+
+                        <para>
+                            The above assumes that the path, though obstructed,
+                            is relatively safe and that the worst that is likely
+                            to occur from a trip is a bruised nose or upset
+                            pedestrians. In some cases, you may need to run
+                            across ground which is actually dangerous, where the
+                            footing is precarious, narrow or simply trapped.
+                        </para>
+
+                        <para>
+                            The difficulty for moving past obstructions is
+                            modified according to the level of danger.
+                        </para>
+
+                        <targetlist>
+                            <targetLabel>Target</targetLabel>
+                            <valueLabel>Severity</valueLabel>
+
+                            <item target="+10" value="Unsafe.">
+                                Unstable footing, pits or narrow walkways.
+                            </item>
+
+                            <item target="+20" value="Dangerous.">
+                                Running across loose planks, avoiding traps,
+                                moving machinary or frequent gaps. Rooftops.
+                            </item>
+
+                            <item target="+30" value="Deadly.">
+                                As dangerous, but worse due to conditions,
+                                such as ice or high winds.
+                            </item>
+                        </targetlist>
+
+                        <para>
+                            For example, roof tops are generally clear of
+                            obstructions (<e>light obstructions</e>), but
+                            tend to involve narrow ledges, sloping surfaces
+                            and jumping between buildings (<e>dangerous</e>)
+                            leading to a target difficulty of 10 + 20 = 30.
+                        </para>
+
+                        <para>
+                            If the movement check is failed, then no movement
+                            is achieved as before, plus a second check must be
+                            immediately made at the same difficulty. On a
+                            failure, then you fall or are hit by some moving
+                            machinery, and take damage as appropriate.
+                        </para>
+
+                        <para>
+                            You may opt to move safely, in which case your
+                            movement is halved, but the difficulty of the
+                            second check is also halved.
+                        </para>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Chases</title>
+
+                    <para>
+                        The simple way to run a chase is for all participants
+                        to total up the distance moved each round. If the
+                        hunters catch up with the prey, then they can try to
+                        tackle them to the ground. Tackling a person is
+                        covered in the combat article.
+                    </para>
+
+                    <para>
+                        A common feature of chases is the prey pulling over
+                        obstacles to try and slow up their pursuers. To do
+                        this, make a <y:dexterity>Athletics</y:dexterity>
+                        against a target of 20, 30 or 40. Success adds half
+                        the difficulty to the pursuer's check, failure
+                        results in you being halted for a round.
+                    </para>
+                </sect3>
             </sect2>
         </sect1>
 
