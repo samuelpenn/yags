@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.65 $</version>
-            <date>$Date: 2008-01-01 17:00:28 $</date>
+            <version>$Revision: 1.66 $</version>
+            <date>$Date: 2008-01-06 16:30:20 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -1679,6 +1679,46 @@
 
             <sect2>
                 <title>Awareness</title>
+
+                <para>
+                    The <e>Awareness</e> skill is used to spot objects,
+                    here noises and generally be aware of your environment.
+                </para>
+
+                <para>
+                    To spot something, make a <y:perception>Awareness</y:perception>
+                    check according to the table below.
+                </para>
+
+                <targetlist>
+                    <targetLabel>Modifier</targetLabel>
+                    <valueLabel>Situation</valueLabel>
+
+                    <item target="+0" value="Spot a standing person.">
+                        Base difficulty to see a person who is standing in
+                        the open, making no attempt to hide themselves.
+                    </item>
+                    <item target="+5" value="Distance 50m - 100m.">
+                        If the target is over 50m away, then increase the
+                        difficulty by +5.
+                    </item>
+                    <item target="+10" value="Distance over 100m.">
+                        If the target is 100m away or more, then increase the
+                        difficulty by +10. Each doubling (200m, 400m) adds
+                        a further +10.
+                    </item>
+                    <item target="-5/pt" value="Size above 5.">
+                        Each point of size of the target above 5, reduce the
+                        difficulty by 5. If they are smaller, then increase
+                        the difficulty by 5 per point.
+                    </item>
+                    <item target="+10" value="Half cover.">
+                        If the target is hidden in half cover.
+                    </item>
+                    <item target="+20" value="90% cover.">
+                        If the target is almost entirely hidden.
+                    </item>
+                </targetlist>
             </sect2>
         </sect1>
 

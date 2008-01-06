@@ -22,8 +22,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.7 $</version>
-            <date>$Date: 2007-12-22 21:24:55 $</date>
+            <version>$Revision: 1.8 $</version>
+            <date>$Date: 2008-01-06 16:30:20 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -49,6 +49,27 @@
                 <e>mixed</e>. Related to damage is <e>fatigue</e> and
                 <e>exhaustion</e>.
             </para>
+
+            <sect2>
+                <title>Wounds</title>
+
+                <para>
+                    Wounds represent serious injuries that penetrate the
+                    skin and potentially affect internal organs. They
+                    can lead to bleeding, infection and death. Wounds
+                    heal over a period of many weeks.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Stuns</title>
+
+                <para>
+                    Stuns represent cuts and bruises which will generally
+                    heal naturally within a few days. They will rarely
+                    lead to death
+                </para>
+            </sect2>
 
             <sect2>
                 <title>Fatigue</title>
@@ -79,6 +100,13 @@
                     with a single line, and exhaustion with a cross.
                     Exhaustion is always <e>first</e> on the line,
                     and last to be lost.
+                </para>
+
+                <para>
+                    If you are <e>exhausted</e> through a combination of
+                    fatigue and exhaustion, and gain more fatigue or
+                    exhaustion, then one level of fatigue is changed to
+                    be exhaustion.
                 </para>
             </sect2>
 
@@ -400,6 +428,14 @@
                         checks are required). Success causes the wound
                         to stabalise naturally.
                     </para>
+
+                    <para>
+                        If you fumble this check, then the wound becomes
+                        infected. It will continue to worsen by one
+                        level each day until you die. Basic first aid
+                        is not able to aid you at this point (though
+                        herb lore, medicine and other such skills may).
+                    </para>
                 </sect3>
 
                 <sect3>
@@ -408,7 +444,10 @@
                     <para>
                         Stuns do not require tending before they will
                         begin to heal, and no <t>health</t> checks are
-                        required to see if they worsen.
+                        required to see if they worsen. An immediate
+                        <e>First aid</e> check after getting stunned
+                        is still a good idea however, since it can
+                        enable you to recover from stuns immediately.
                     </para>
                 </sect3>
             </sect2>
@@ -428,8 +467,22 @@
                 <para>
                     For example, you have moderate (-10) wounds and
                     light (-5) stuns, so the first aid difficulty will
-                    be 10 + (10 + 5)/2 = 18.
+                    be 10 + (10 + 5)/2 = 18. If you are <e>beaten</e>
+                    and <e>fatally wounded</e>, then check difficulty
+                    would be 50.
                 </para>
+
+                <note title="It doesn't hurt">
+                    <para>
+                        If you happen to have abilities such as
+                        <e>Ignore Pain</e> which reduce the penalty from
+                        stuns and wounds, then this only applies to the
+                        penalties you suffer when performing actions,
+                        it does not in any way affect any of the
+                        difficulties for healing, first aid, medicine
+                        and so on.
+                    </para>
+                </note>
 
                 <para>
                     On success, the wounds are stabalised. On a <e>good</e>
@@ -470,9 +523,10 @@
 
                     <para>
                         Wounds heal naturally after a week. Each week, the
-                        character gets a health roll at difficulty 20,
-                        modified by their total stun and wound penalties.
-                        On a success, a single level of wound is healed.
+                        character gets a health roll at difficulty 10,
+                        modified by their total stun and wound penalties
+                        halved. On a success, a single level of wound is
+                        healed.
                     </para>
 
                     <para>
@@ -490,6 +544,35 @@
                         a bonus equal to the healer's <e>first aid</e>
                         score to their healing check.
                     </para>
+
+                    <note title="You're going to die">
+                        <para>
+                            If you've been wounded <e>fatally</e> and
+                            stunned to <e>beaten</e>, then the recovery
+                            difficulty is 50 for stuns and 60 for wounds.
+                            You are unlikely to recover from this.
+                        </para>
+
+                        <para>
+                            <e>First aid</e> though only applies the
+                            basic minimum of medical knowledge, however
+                            since knowledge of it is common, and it
+                            requires only minimal time and material to
+                            apply, it is the skill covered here.
+                        </para>
+
+                        <para>
+                            In a modern setting, the <e>Medicine</e> skill
+                            when combined with high tech care will enable
+                            you to recover from the worst possible
+                            conditions. In low tech settings, the
+                            <e>chirurgury</e> skill is useful, and certains
+                            herbs (or even magic) may be available to
+                            provide further bonuses in order to allow
+                            healing. However, these options are not
+                            described here.
+                        </para>
+                    </note>
 
                     <para>
                         A patient looking after themselves in this way
