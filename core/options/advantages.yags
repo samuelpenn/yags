@@ -3,14 +3,34 @@
 <!--
     These list generic advantages and disadvantages,
 
-    Version: $Revision: 1.27 $
-    Date:    $Date: 2007-09-11 21:10:21 $
+    Version: $Revision: 1.28 $
+    Date:    $Date: 2008-01-10 19:10:11 $
     Author:  Samuel Penn (sam@glendale.org.uk)
 
 -->
 
 <advantages xmlns="http://yagsbook.sourceforge.net/xml/yags">
 
+    <advantage name="Lucky" type="advantage">
+        <cost points="+1"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are lucky, and receive a +1 to luck checks. Once per
+                session, you may re-roll a single die roll that you make,
+                and take the best of the two rolls. You may choose to
+                permamently spend you <e>luck</e>, in order to get out
+                of a deadly situation, or cause an act of serendipity
+                in your favour.
+            </para>
+
+            <para>
+                You may take luck multiple times, to get a bigger bonuses
+                or more re-rolls each session. Only one point of luck may
+                be spent on a single roll however.
+            </para>
+        </description>
+    </advantage>
 
     <advantage name="Keen hearing" type="advantage">
         <cost points="+1"/>
@@ -102,10 +122,16 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You are exceptionally beautiful, and gain a +1 bonus to
-                your <t>Empathy</t> when trying to charm or persuade
-                somebody who may be sexually attracted to you. Being
-                beautiful also makes you easier to recognise.
+                You are extremely good looking, and can use it to your
+                advantage in your dealings with anyone who finds you
+                sexually attractive, or in a situation where being smart
+                and presentable would be an advantage. Gain a +1 bonus to
+                whatever attribute you are using (normally <t>Empathy</t>).
+            </para>
+
+            <para>
+                Being <e>good looking</e> has the side effect of making you
+                easy to recognise.
             </para>
         </description>
         <forbiddon>Ugly</forbiddon>
@@ -124,6 +150,8 @@
                 to <t>Empathy</t> in such situations.
             </para>
         </description>
+        <forbiddon>Ugly</forbiddon>
+        <forbiddon>Good looking</forbiddon>
     </advantage>
 
     <advantage name="Graceful" type="advantage">
@@ -288,8 +316,8 @@
                 You may tap into reserves of strength at any time, allowing
                 to to perform feats not normally possible. At any time,
                 you may have +1 or +2 to your <t>Strength</t> for a single
-                roll, though you gain one point of fatigue per point of
-                bonus for doing so.
+                roll or a round of actions, though you gain one point of
+                fatigue per point of bonus for doing so.
             </para>
         </description>
     </advantage>
