@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.4 $</version>
-            <date>$Date: 2008-01-13 21:26:16 $</date>
+            <version>$Revision: 1.5 $</version>
+            <date>$Date: 2008-01-13 22:24:28 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -128,13 +128,53 @@
     <advantage name="Juggling" type="technique">
         <cost points="2"/>
         <skill name="Sleight"/>
+        <short>Experience with juggling.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You are adept at juggling. The difficulty to juggle simple
-                objects such as balls is 5 * number of balls. Add +5 to the
-                difficulty for clubs, +10 for more complex objects.
-                If you don't have the technique then halve your roll.
+                You are adept at juggling, and can juggle a number of
+                balls, clubs or other objects with relative ease. If you
+                don't have this technique, you can still juggle, but it is
+                much harder. Without this technique it is a
+                <y:dexterity>Sleight</y:dexterity> check at a difficulty
+                of 10 x number of balls. Add +5 for clubs, and +10 for
+                more complex objects. Halve the difficulty for knowing
+                this technique.
+            </para>
+
+            <para>
+                A standard success means you can perform some juggling
+                for a short period of time, a <e>good</e> success means
+                you can go on indefinately.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Legerdemain" type="technique">
+        <cost points="4"/>
+        <skill name="Sleight"/>
+        <short>Sleight of hand tricks.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are skilled at performing magical tricks that involve
+                palming objects. Normally this is a
+                <y:dexterity>Sleight</y:dexterity> check at a difficulty
+                of 20 for a simple trick (palming a coin), 30 for more
+                complex tricks and 40 for really complex ones. An
+                observer can try and figure out how you did it by
+                making a <y:perception>Awareness</y:perception>
+                check against your roll. If you fail, then you mess
+                up the trick and it doesn't work, if you both succeed
+                then you pull off the trick but the observer sees how
+                you did it.
+            </para>
+
+            <para>
+                Knowing this technique halves the base difficulty, and
+                allows you to obscure the trick, making it harder to
+                spot. Each extra level of success adds +10 to the
+                observer's difficulty to spot it.
             </para>
         </description>
     </advantage>
@@ -142,6 +182,7 @@
     <advantage name="Pick pocket" type="technique">
         <cost points="4"/>
         <skill name="Sleight"/>
+        <short>Stealing items from a person.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
