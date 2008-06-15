@@ -5,7 +5,7 @@
          xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
         <title>Characters</title>
-        <tagline>Yags 0.7 Core</tagline>
+        <tagline>Yags 0.7.1 Core</tagline>
 
         <summary>
             Generic character design rules for Yags, which allows characters
@@ -20,12 +20,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.40 $</version>
-            <date>$Date: 2008-06-14 22:46:42 $</date>
+            <version>$Revision: 1.41 $</version>
+            <date>$Date: 2008-06-15 15:06:42 $</date>
         </cvsinfo>
 
         <license type="Yags">
-            <year>2007</year>
+            <year>2008</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -661,7 +661,7 @@
                     Typical average for an adult. About 90% of the
                     population.
                 </item>
-                <item target="2" value="Poor (-2 points).">
+                <item target="2" value="Poor (-1 point).">
                     Significantly below average, the bottom 5%.
                 </item>
                 <item target="1" value="Terrible.">
@@ -1410,7 +1410,71 @@
                     <para>
                         It is always possible to gain skill through dedicated
                         training in that skill. This requires finding a tutor,
-                        often paying them for their time.
+                        often paying them for their time. A training session
+                        takes a week for techniques, or if your current skill
+                        is less than four. For higher skills, it takes a month.
+                    </para>
+
+                    <para>
+                        As for other methods of learning, roll a d20 to see if
+                        you gain any experience in the trained skill. For
+                        techniques or skills less than 4, the target is 10+.
+                        For skills up to 7, the target is 15+ and if your
+                        current skill is 8 or higher, the target is 20+.
+                    </para>
+
+                    <para>
+                        If you are being taught by a trainer who actually has
+                        the <e>Teach</e> skill, then for every full 4 points
+                        of skill them have in <e>Teach</e>, reduce the target
+                        number by 5.
+                    </para>
+
+                    <targetlist targetFirst="true">
+                        <targetLabel>Target</targetLabel>
+                        <valueLabel>Condition</valueLabel>
+
+                        <item target="10+">
+                            Base target number if training in a technique, or
+                            in a skill which is currently less than 4.
+                        </item>
+                        <item target="15+">
+                            Base target number if skill is currently in the
+                            4-7 range.
+                        </item>
+                        <item target="20+">
+                            Base target number if skill is currently 8+.
+                        </item>
+                        <item target="-5">
+                            If trainer has a Teach skill of 4+.
+                        </item>
+                        <item target="-5">
+                            If trainer has a Teach skill of 8+ (stacks with
+                            previous).
+                        </item>
+                        <item target="-5">
+                            If training facilities are of high quality,
+                            with lots of resources. Military training
+                            grounds would often qualify.
+                        </item>
+                        <item target="+10">
+                            If trainer's skill is lower than than the student's.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        When teaching a technique, the trainer must already
+                        know the technique. When teaching a skill, the trainer
+                        must have a skill of at least 4, and at least half the
+                        student's current skill otherwise training is not
+                        possible.
+                    </para>
+
+                    <para>
+                        At the end of the training period, roll a simple d20
+                        and on success 1 XP is gained towards the skill or
+                        technique. If the roll is 10 or more over the target
+                        difficulty, gain 2 XP instead.
                     </para>
                 </sect3>
             </sect2>
