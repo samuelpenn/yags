@@ -13,8 +13,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2008-01-13 22:24:28 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2008-07-20 22:22:19 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -302,8 +302,98 @@
         </description>
     </advantage>
 
+    <advantage name="Sport" type="technique">
+        <cost points="2"/>
+        <skill name="Athletics"/>
+        <short>Familiarity with a sport.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are familiar with the rules of a given sport, and
+                have experience with playing it. This technique should
+                be taken once per sport you have experience with. Not
+                having the technique means that you don't have knowledge
+                of the rules (unless it's a very common game), and halve
+                your skill check when playing it.
+            </para>
 
+            <para>
+                Example sports would be football, cricket, squash, skiing,
+                darts, snooker, bowling, badminton, rugby, golf etc.
+            </para>
+        </description>
+    </advantage>
 
+    <advantage name="Professional sportsman" type="technique">
+        <cost points="4"/>
+        <skill name="Athletics"/>
+        <prerequisite>Sport</prerequisite>
+        <short>Good familiarity with a sport.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                An improved familiarity technique, providing expert
+                skill in a given sport. As a prerequisite, you must
+                have the <e>Sport</e> technique for the same sport.
+                Having this technique may provide certain advantages
+                whilst playing the game.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Champion sportsman" type="technique">
+        <cost points="8"/>
+        <skill name="Athletics"/>
+        <prerequisite>Professional sportsman</prerequisite>
+        <short>Excellent familiarity with a sport.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                An improved familiarity technique, providing expert
+                skill in a given sport. As a prerequisite, you must
+                have the <e>Sport</e> technique for the same sport.
+                Having this technique may provide certain advantages
+                whilst playing the game.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Parachuting" type="technique">
+        <cost points="2"/>
+        <skill name="Athletics"/>
+        <short>Safely using parachutes.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have experience with free-falling and parachuting.
+                It is a <e>very easy</e> <y:agility>Athletics</y:agility>
+                check to land safely under ideal conditions. Half your
+                skill roll and +1 fumble chance if you don't have this
+                technique.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Skiing" type="technique">
+        <cost points="2"/>
+        <skill name="Athletics"/>
+        <short>Experienced skier.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Includes practical experience of skiing, as well as
+                knowledge of identifying poor conditions. Skiing
+                requires an <y:agility>Athletics</y:agility> check,
+                which is halved if you don't have this technique,
+                plus you have a +1 to your fumble chance.
+            </para>
+
+            <para>
+                A green run (easy slopes) is difficlty 10, a blue
+                run (intermediate) is 15, red are 20 and black runs
+                are 25. A particular run will require several checks
+                depending on its length (3-5 is normal). Failure
+                results in a fall, or gaining a Fatigue to remain
+                upright. Add +10 to the difficulty to perform the
+                run fast, or +20 to do it very fast.
+            </para>
+        </description>
+    </advantage>
 </advantages>
 
 

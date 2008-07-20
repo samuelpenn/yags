@@ -8,8 +8,8 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.7 $
-    Date:    $Date: 2008-06-14 22:46:42 $
+    Version: $Revision: 1.8 $
+    Date:    $Date: 2008-07-20 22:22:19 $
     Author: Samuel Penn
 -->
 
@@ -23,6 +23,7 @@
 
     <skill name="Archaeology" type="knowledge">
         <group>Academic</group>
+        <techRange min="5" max="20"/>
 
         <short>How to dig up ruins.</short>
 
@@ -44,6 +45,7 @@
     <skill name="Paleontology" type="knowledge">
         <group>Academic</group>
         <group>Science</group>
+        <techRange min="5" max="20"/>
 
         <short>The science of ancient life.</short>
 
@@ -61,7 +63,7 @@
     <skill name="Science" type="knowledge">
         <group>Academic</group>
         <group>Science</group>
-        <tech level="5"/>
+        <techRange min="4" max="20"/>
 
         <short>Basic science, logic and reasoning.</short>
 
@@ -87,6 +89,7 @@
     <skill name="Mathematics" type="knowledge">
         <group>Academic</group>
         <group>Science</group>
+        <techRange min="3" max="20"/>
 
         <short>Geometry, aglebra etc.</short>
 
@@ -105,6 +108,7 @@
 
     <skill name="Physics" type="knowledge">
         <group>Academic</group>
+        <techRange min="5" max="20"/>
 
         <short>The science of physics.</short>
 
@@ -125,6 +129,7 @@
 
     <skill name="Chemistry" type="knowledge">
         <group>Academic</group>
+        <techRange min="5" max="20"/>
 
         <short>The science of chemistry.</short>
 
@@ -142,6 +147,7 @@
     <skill name="Biology" type="knowledge">
         <group>Academic</group>
         <group>Science</group>
+        <techRange min="5" max="20"/>
 
         <short>The science of biology.</short>
 
@@ -159,6 +165,7 @@
 
     <skill name="Medicine" type="knowledge">
         <group>Academic</group>
+        <techRange min="4" max="20"/>
         <prerequisite>First aid</prerequisite>
         <prerequisite>Biology</prerequisite>
 
@@ -190,6 +197,7 @@
     <skill name="Surgery" type="skill">
         <group>Academic</group>
         <default>Medicine</default>
+        <techRange min="5" max="20"/>
         <prerequisite score="4">Medicine</prerequisite>
 
         <short>Performing complex surgery.</short>
@@ -233,6 +241,7 @@
     <skill name="Astronomy" type="knowledge">
         <group>Academic</group>
         <short>The study of the stars and planets.</short>
+        <techRange min="5" max="20"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -246,6 +255,7 @@
 
     <skill name="Botany" type="knowledge">
         <group>Academic</group>
+        <techRange min="4" max="20"/>
 
         <default>Biology</default>
 
@@ -258,6 +268,7 @@
 
     <skill name="Zoology" type="knowledge">
         <group>Academic</group>
+        <techRange min="4" max="20"/>
 
         <default>Biology</default>
 
@@ -270,6 +281,7 @@
 
     <skill name="Anthropology" type="knowledge">
         <group>Academic</group>
+        <techRange min="5" max="20"/>
 
         <short>The study of Homonids.</short>
 
@@ -285,6 +297,7 @@
     <skill name="Ecology" type="knowledge">
         <group>Academic</group>
         <group>Science</group>
+        <techRange min="5" max="20"/>
 
         <prerequisite score="2">Biology</prerequisite>
         <prerequisite score="2">Zoology</prerequisite>

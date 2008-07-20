@@ -11,8 +11,8 @@
     of the GNU Public License as published by the Free Software Foundation
     version 2.
 
-    Version: $Revision: 1.9 $
-    Date:    $Date: 2007-11-04 14:58:08 $
+    Version: $Revision: 1.10 $
+    Date:    $Date: 2008-07-20 22:22:19 $
     Author: Samuel Penn
     -->
 
@@ -172,17 +172,28 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                A high <e>charm</e> allows you to appear friendly and
-                sociable. It is nearly always based on <t>empathy</t>,
-                and allows you to make a good impression and gain people's
-                interest and trust.
+                <e>Charm</e> is all about appearing friendly and sociable,
+                and can be used to make people like you and act favourably
+                towards you. It is nearly always based on <t>Empathy</t>,
+                since you need to be able to react to how the other person
+                is perceiving you.
             </para>
 
             <para>
-                <e>Charm</e> can be used to improve a second social skill
-                test (such as <e>guile</e>, <e>trade</e> or
-                <e>perform</e>). Make a <empathy>charm</empathy> check
-                against the <will/> of the target to gain a +3 bonus for
+                At its simplest, a simple <y:empathy>Charm</y:empathy>
+                check determines what another thinks of you. As long as
+                you get a <e>Very easy</e> success, then you'll get a
+                <e>Neutral</e> reaction, assuming they have no other
+                reason to dislike you. A <e>Moderate</e> success will
+                give a <e>Good</e> reaction, and a <e>Difficult</e>
+                success will give an <e>Excellent</e> reaction.
+            </para>
+
+            <para>
+                <e>Charm</e> can also be used to improve a second social
+                skill test (such as <e>Guile</e>, <e>Trade</e> or
+                <e>Perform</e>). Make a <y:empathy>Charm</y:empathy> check
+                against the <y:will/> of the target to gain a +3 bonus for
                 each level of success.
             </para>
         </description>
@@ -192,8 +203,9 @@
                 Used at parties and similar social gatherings. Can be used
                 to find out information, flirt or try and talk to someone
                 who might be otherwise difficult to talk to (such as a duke
-                surround by hangers-on and aids who won't let anyone else
-                near him). Generally not resisted.
+                surrounded by hangers-on and aids who won't let anyone else
+                near him, or just an attractive and popular girl similarly
+                protected). Generally not resisted.
             </para>
         </description>
 
@@ -229,17 +241,20 @@
         </examples>
 
         <examples task="Carousing">
-            <example target="10">Survive a party.</example>
+            <example target="10">
+                Survive a party without acting like an idiot or a boor..
+            </example>
             <example target="20">
                 Make a good impression. Get to talk to someone important.
             </example>
             <example target="30">
-                Make a very good impression. People will remember the
-                character favourably. Get to talk to someone important
-                who doesn't want to talk to you.
+                Make a very good impression. People will remember you
+                favourably. Get to talk to someone really important,
+                or someone important who is avoiding you.
             </example>
             <example target="40">
-                Most popular person at the party.
+                Most popular person at the party. Get to talk to someone
+                really important who is actively avoiding you.
             </example>
         </examples>
 
@@ -429,10 +444,28 @@
                 with this skill.
             </para>
         </description>
+    </skill>
 
-        <examples>
-            <example target="10"></example>
-        </examples>
+    <skill name="Military affairs" type="knowledge">
+        <group>Military</group>
+        <short>Knowledge of military matters.</short>
+        <default>Administration</default>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                With this skill you have knowledge of how a military
+                operates, how to recognise the various ranks, and the
+                correct etiquette to use when dealing with those ranks.
+                When dealing with military bureacracy, it may be used
+                instead of <e>Administration</e>.
+            </para>
+
+            <para>
+                Generally, most enlisted personnel will have 1 or 2
+                levels in this, any more is unnecessary unless you are
+                wanting to game the system, or try and second guess
+                how military operations are planned.
+            </para>
+        </description>
     </skill>
 
 
@@ -486,29 +519,6 @@
                 player is considered the winner. If the player with the
                 advantage looses a turn, then they loose a level of
                 advantage.
-            </para>
-        </description>
-
-        <examples>
-            <example target="10">Knowing the rules to a game</example>
-            <example target="20">Playing a game reasonably well</example>
-        </examples>
-    </skill>
-
-    <skill name="Sport" type="skill">
-        <group>Social</group>
-        <group>Sport</group>
-
-        <short>Skill at a particular sport.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of, and skill at, playing a particular sport such
-                as Cricket, Football or Squash. There is one version of
-                this skill for each different sport. If you wish, you may
-                take a generic <e>Sport</e> skill, which all others default
-                to (i.e., you always halve your roll when trying something
-                in a particular sport).
             </para>
         </description>
 
