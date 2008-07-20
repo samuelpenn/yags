@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.5 $</version>
-            <date>$Date: 2007-06-02 17:13:43 $</date>
+            <version>$Revision: 1.6 $</version>
+            <date>$Date: 2008-07-20 22:22:03 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -191,7 +191,7 @@
 
                 <para>
                     Breaking into a computer system can be very easy, or very
-                    hard. Generally, getting access to a computer is very easy
+                    hard. Generally, getting access to information is very easy
                     if you have physical access to the machine. At the very
                     least, you can take it apart, pull out the hard drive
                     (or holographic memory crystal) and make a copy to peruse
@@ -200,10 +200,12 @@
                 </para>
 
                 <para>
-                    To get access to a machine without pulling it apart, use
-                    the following table. The <e>Computer hacking</e> skill is
-                    used. If you know the <e>Computer Intrusion</e> technique,
-                    then you can halve these difficulties.
+                    In order to gain access to a network without having physical
+                    access, then you need to make a <e>Computer operation</e>
+                    using the <e>Computer Intrusion</e> technique. The
+                    target difficulties are given on the following table. If
+                    you don't have the right technique, then double the
+                    difficulties. By default, an attempt takes a day.
                 </para>
 
                 <targetlist bold="true">
@@ -218,15 +220,15 @@
 
                     <item target="40" value="Small business.">
                         Small businesses may not have much more knowledge
-                        than a home user, but run fewer apps and have
-                        probably paid to keep their anti-virus uptodate.
+                        than a home user, but run fewer apps and tend to
+                        make more use of dedicated firewalls and DMZs.
                     </item>
 
                     <item target="60" value="Corporate system.">
                         Typically a large business will have a dedicated
                         staff of IT people (or outsource such a role) who
                         know what they are doing. Systems will be locked
-                        down, with firewalls and restricted access.
+                        down, with good firewalls and restricted access.
                     </item>
 
                     <item target="80" value="Secure system.">
@@ -248,29 +250,23 @@
                         before any attempts are made.
                     </item>
 
-                    <item target="+10" value="Uptodate security">
-                        Latest patches are installed.
+                    <item target="+50%" value="Uptodate security">
+                        Network owners have been keeping the system uptodate
+                        with the latest patches, and proactively securing
+                        the system.
                     </item>
 
-                    <item target="-10" value="Out of date">
+                    <item target="-50%" value="Out of date">
                         The system is badly out of date, and hasn't had any
                         patches installed.
                     </item>
 
-                    <item target="-10" value="Compromised">
+                    <item target="-25%" value="Compromised">
                         If the system is already compromised (by trojans,
                         viruses and the like), then it is generally easier
                         to access.
                     </item>
                 </targetlist>
-
-                <para>
-                    As standard, a failure to gain access will be logged,
-                    though whether anybody looks at the logs will depend
-                    on the site being attacked. A successful intrusion
-                    will also be logged, though a good success can ensure
-                    that the logs are removed.
-                </para>
 
                 <para>
                     On your first attempt to hack a system, you may if you
@@ -280,6 +276,9 @@
                     time, with about half that time requiring effort on
                     the part of the intruder (the rest is running scripts,
                     or waiting for replies on hacker's mailing lists).
+                    Further attempts may be made each day. Once you have
+                    succeeded in accessing a system, you gain a +10 bonus
+                    to all subsequent checks.
                 </para>
 
                 <note title="Exploits and scripts">
@@ -316,6 +315,333 @@
                     different skill in order to do anything with such a
                     museum piece.
                 </para>
+
+                <sect3>
+                    <title>Large Networks</title>
+
+                    <para>
+                        For many small networks, such as a typical company,
+                        once you're past the main firewall you have access
+                        to most of the rest of the system. For larger
+                        networks however, the network topology may require
+                        effort to get from the outer DMZ into more secure
+                        and/or interesting parts of the network.
+                    </para>
+
+                    <para>
+                        For a large network then, assume it consists of
+                        multiple parts which have to be accessed separately.
+                        Assume that the first access gets you into the
+                        DMZ of the network, and from there you need to
+                        make another check to access the rest of the
+                        network.
+                    </para>
+
+                    <para>
+                        A small company with a well designed system may have
+                        3 sections - DMZ, standard network and financials.
+                        The latter may be a level harder to break into.
+                    </para>
+
+                    <para>
+                        A large organisation will probably have 3-5 different
+                        parts to the network, with multi-national or central
+                        government organisations having as many as a dozen.
+                        It is up to the GM to decide what each part of the
+                        network covers.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Being detected</title>
+
+                    <para>
+                        If pro-active monitoring of the system is being done,
+                        then there is a chance of any intrusion being noted.
+                        The sysadmin of the defending network gets a check
+                        only if they have the <e>System administration</e>
+                        technique. If they don't, then they're going to be
+                        oblivious to what is going on unless you start
+                        breaking things.
+                    </para>
+
+                    <para>
+                        If the intruder is regularly accessing the system
+                        then the sysadmin gets to make a
+                        <y:intelligence>Computer operation</y:intelligence>
+                        check against a difficulty of 20 each week. If they
+                        have the <e>Computer security</e> technique, then
+                        this check is made each time the intruder accesses
+                        the system, or at least each day. For every level of
+                        success that the intruder got when breaking into the
+                        system, add +10 to the detection difficulty.
+                    </para>
+
+                    <para>
+                        It is unlikely that the system is being monitored
+                        constantly - unusual logins may be noted in logs
+                        several hours after you've grabbed what you wanted
+                        and disconnected. This can provide you with time to
+                        try and cover your tracks. Futuristic systems
+                        monitored by AIs may have an instant response
+                        however.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>It's Too Hard</title>
+
+                    <para>
+                        Often, a system will be too secure to gain access to,
+                        so it will be necessary to find less direct ways of
+                        getting into the system. Each option can only give you
+                        a single bonus (so digging through lots of rubbish
+                        on multiple nights only gives you the best bonus),
+                        but different options can stack together.
+                    </para>
+
+                    <note title="Feeling Lucky?">
+                        <para>
+                            Luck plays an important factor in a lot of these
+                            cases, mostly because a lot of it really will
+                            come down to luck. It doesn't matter how good you
+                            are at looking through rubbish, if the company
+                            hasn't actually thrown out anything useful.
+                        </para>
+
+                        <para>
+                            Skill can help still of course, since it both
+                            helps to identify useful things, and is also
+                            needed to put it to use. However, many of these
+                            risky tasks can be carried out by people who
+                            don't know much about computers.
+                        </para>
+                    </note>
+
+                    <sect4>
+                        <title>Just Steal It</title>
+
+                        <para>
+                            In any modern setting, many employees of an
+                            organisation will work from home, or at least have
+                            a way of accessing the main network whilst away
+                            from the office. If this is the case, then obtaining
+                            access to their laptop, home computer or PDA can
+                            provide a large advantage. Obviously, this requires
+                            some basic theft, or at least house breaking.
+                        </para>
+
+                        <para>
+                            Gaining access to an external point of entry will
+                            drop the difficulty by one or two levels (e.g.,
+                            from <e>Secure</e> to <e>Corporate</e> or
+                            <e>Small Business</e>). Non-technical employees
+                            often make the best targets, especially if they've
+                            simply installed VPN software on their home computer.
+                            It may be possible to break into their home PC
+                            remotely, then install key loggers or trojans to
+                            help provide you access.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Dumpster Diving</title>
+
+                        <para>
+                            People through away all sorts of useful stuff,
+                            and digging through their waste may show up notes
+                            containing passwords or internal network diagrams
+                            that provide you with something useful.
+                        </para>
+
+                        <para>
+                            Each night of searching, make a <e>Luck</e> check.
+                            On a 20+, you'll find something possibly useful.
+                            The GM makes a second <e>Luck</e> check for you to
+                            determine how useful it is, but you won't know
+                            what bonus (if any) it provides until you try to
+                            make use of it by another intrusion attempt.
+                        </para>
+
+                        <targetlist>
+                            <targetLabel>Luck Roll</targetLabel>
+                            <valueLabel>What you find...</valueLabel>
+
+                            <item target="&lt; 10">
+                                Information is out of date, or wrong, and
+                                provides no bonus.
+                            </item>
+
+                            <item target="10+">
+                                Some information about their network topology
+                                which gives a +5 bonus.
+                            </item>
+
+                            <item target="15+">
+                                List of public facing applications or firewall
+                                configuration, +10 bonus.
+                            </item>
+
+                            <item target="20+">
+                                Some useful passwords or information about
+                                possible security holes, +15 bonus.
+                            </item>
+
+                            <item target="25+">
+                                Looks like someone has chucked out their secure
+                                id token, +25 bonus.
+                            </item>
+                        </targetlist>
+
+                        <para>
+                            You gain a +2 bonus to both <e>Luck</e> checks
+                            if you have the <e>Dumpster diving</e> technique.
+                            The usefulness of the information fades over
+                            time, so reduce the bonus by +5 each week.
+                            Multiple bonuses don't stack. Note that anyone
+                            can search through rubbish, but if you don't have
+                            the <e>System administration</e> technique, you
+                            have a -2 penalty to the first Luck check.
+                        </para>
+
+                        <para>
+                            If the organisation makes an effort to destroy
+                            information before throwing it out, you have a
+                            -10 to the second check. If they have good
+                            processes in place, then it becomes almost
+                            impossible to find anything, and you suffer -20.
+                            Remember, a secure building may also have guards
+                            in place to stop this sort of thing as well.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Down the Pub</title>
+
+                        <para>
+                            People like to go down the pub at lunch time (or
+                            after work) and often talk about their job. If
+                            you can locate the network administrators and
+                            listen in on their conversations, then you might
+                            hear something useful.
+                        </para>
+
+                        <para>
+                            Each day, make a <e>Luck</e> check as for
+                            <e>Dumpster Diving</e>. If you don't have
+                            at least <e>System administration</e>, then
+                            there is a -5 penalty to the second check,
+                            and -2 if you don't have <e>Computer intrusion</e>.
+                            It really helps to understand what they're
+                            talking about to make use of the information.
+                        </para>
+
+                        <para>
+                            If you're feeling really sociable, then you can
+                            try to join them. Make an
+                            <y:empathy>Charm</y:empathy> check at 20+ to be
+                            able to join them without them clamming up.
+                            Assuming that they're a group of young males,
+                            then being a young good looking female geek
+                            who appears interested in technical stuff can
+                            really help.
+                        </para>
+
+                        <para>
+                            Once you've joined them, then you gain an
+                            automatic +1 to the first <e>Luck</e> check,
+                            plus a further +2 for each extra level of
+                            success. Double these if you have either the
+                            <e>Carousing</e> or <e>Flirt</e> techniques
+                            (the latter only if suitable), or triple if
+                            you have both.
+                        </para>
+
+                        <para>
+                            You have the option to try and prod them into
+                            giving you information by making both a
+                            <y:empathy>Guile</y:empathy> check, and an
+                            <y:intelligence>Computer operation</y:intelligence>
+                            check at one of
+                            the following difficulties (your choice). If you
+                            fail,it means that they get
+                            suspicious about you. If you have
+                            <e>Carousing</e> then you can avoid suspicion
+                            by a second guile check (same difficulty), but you
+                            won't be able to try again.
+                        </para>
+
+                        <targetlist>
+                            <targetLabel>Target</targetLabel>
+                            <valueLabel>Bluntness</valueLabel>
+
+                            <item target="20">
+                                Subtle questions to prompt them, can give a
+                                +1 Luck bonus.
+                            </item>
+
+                            <item target="30">
+                                Less subtle questioning, but gives a +2 bonus.
+                            </item>
+
+                            <item target="40">
+                                Quite directed questioning which would be
+                                obvious if they thought they were with
+                                customers or competitors. +3 bonus.
+                            </item>
+
+                            <item target="50">
+                                Blunt and direct questions which you can only
+                                get away with because you're so nice, +4 bonus.
+                            </item>
+                        </targetlist>
+
+                        <para>
+                            The <e>Luck</e> bonus in this case applies to
+                            both Luck checks (and stacks with the bonus from
+                            the first roll for the first Luck check). If you
+                            have <e>Carousing</e>, you can double this second
+                            bonus.
+                        </para>
+
+                        <para>
+                            If they are paranoid for some reason, there is a
+                            +50% increase to all Empathy related checks, or
+                            +100% if they are actively alert. Note that some
+                            organisations have their own pubs inside the
+                            building specifically to stop this sort of thing
+                            from happening.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Social Engineering</title>
+
+                        <para>
+                            Often, the easiest way to get information out of a
+                            secure network, is to simply ask for it. People have
+                            a tendancy to be helpful, and can be persuaded to
+                            give away information they shouldn't when they see
+                            someone having trouble.
+                        </para>
+
+                        <para>
+                            The normal technique is to either phone up an
+                            organisation, or visit the front desk, and ask
+                            some leading questions. For example, you could
+                            contact the IT help desk with a technical query
+                            (pretend to be an employee, and claim that your
+                            VPN isn't working), or turn up at the offices for
+                            a fake meeting.
+                        </para>
+
+                        <para>
+                            Make a <y:will>Guile</y:will> check on the previous
+                            Bluntness table. If you have <e>Cold reading</e>,
+                            you can double any Luck bonus you receive.
+                        </para>
+                    </sect4>
+                </sect3>
             </sect2>
 
             <sect2>

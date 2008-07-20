@@ -7,11 +7,12 @@
          xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
 
     <header>
-        <title>Vehicles</title>
+        <title>Spacecraft</title>
         <tagline>Yags</tagline>
 
         <summary>
-            Rules for vehicle combat.
+            Designing, building and using spacecraft in Yags. These are
+            an extension to the vehicle rules.
         </summary>
 
         <author>
@@ -20,12 +21,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.10 $</version>
-            <date>$Date: 2007-07-29 20:34:50 $</date>
+            <version>$Revision: 1.11 $</version>
+            <date>$Date: 2008-07-20 22:22:03 $</date>
         </cvsinfo>
 
         <license type="Yags">
-            <year>2007</year>
+            <year>2008</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -39,557 +40,60 @@
 
     <body>
         <sect1>
-            <title>Vehicles and Constructs</title>
+            <title>Spacecraft</title>
 
             <para>
-                For the most part, adventures in Yags will revolve around
-                people and sometimes animals. Objects such as vehicles and
-                buildings exist, but only as part of the backdrop, or as
-                mechanisms to get from one event to another.
+                Spacecraft are just a subset of vehicles, but they tend to
+                fit into a special category of their own, especially in
+                science fiction settings. Whilst cars and tanks tend to be
+                used in the same sort of scales as characters, spacecraft
+                may be kilometres in size, and have weapon ranges in the
+                thousands or millions of kilometres. The distances and
+                time scales involved call for special consideration.
             </para>
+
+            <note title="Wargaming Combat">
+                <para>
+                    Spaceship combat in <e>Yags</e> is designed so that it
+                    is possible to <e>wargame</e> it - represent spaceships
+                    on the table with models. This makes visualising what
+                    is going on much easier, since it's difficult to describe
+                    where everyone is in relation to each other without any
+                    fixed reference points.
+                </para>
+
+                <para>
+                    A suggested scale is 1" = 1000km. Space ships are assumed to
+                    be point targets unless they are really big.
+                </para>
+            </note>
 
             <para>
-                Occassionally however, such things become a focal point
-                of the game, and it becomes useful to know a bit more about
-                how vehicles and buildings fit into the world as described
-                by <e>Yags</e> - especially if the are used in combat
-                situations.
-            </para>
-
-            <para>
-                These rules cover the description and use of vehicles
-                within the game. Also covered are buildings and other
-                non-living things. The generic term used is <e>Construct</e>.
-                Also covered are the use of large vehicle mounted and
-                infantry support weapons. Most characters will never need
-                to worry about these, even in modern campaigns, but the
-                occassional scenario will call for their use.
+                How quickly a spacecraft moves is measured by its
+                <e>acceleration</e>, which is given in 'g'. Every
+                'g' of acceleration allows the ship to accelerate
+                up to (roughly) 1000km/turn/turn.
             </para>
 
             <sect2>
-                <title>Scaling Vehicles</title>
+                <title>Weapons</title>
 
                 <para>
-                    <e>Yags</e> uses a generic <t>Size</t> attribute for
-                    all creatures within the game, and this is extended
-                    to cover vehicles as well. Since <t>Size</t> is
-                    logarithmic, it will rarely get above 20 for ground
-                    vehicles, it will generally be below 100 (even objects
-                    such as the <e>Death Star</e> or
-                    <e>Skylark of Valeron</e>). This does lead to a degree
-                    of imprecision at the higher levels, but at that point
-                    a large level of abstraction is probably a good thing.
-                </para>
-
-                <note title="Vehicle Scale">
-                    <para>
-                        <e>Vehicles</e> are treated somewhat differently
-                        to characters and creatures, and are considered to
-                        be at a different <e>Scale</e> for purposes of
-                        damage. If this wasn't done, then vehicle weapons
-                        and armour would be in the 100+ level, and the
-                        d20 wouldn't provide much in the way of randomness.
-                    </para>
-
-                    <para>
-                        It also doesn't make sense for a vehicle to suffer
-                        from <e>Stuns</e> or <e>Fatigue</e>, so damage
-                        tracks are taken slightly differently as well.
-                    </para>
-                </note>
-
-                <para>
-                    A <t>Size</t> of 10 is considered to be a vehicle of
-                    10m^3, and each +5 <t>Size</t> increases this by a
-                    multiple of 10. <t>Size</t> 10 is more than enough for
-                    a family car, <t>Size</t> 15 is adequate for a
-                    large tank and a WWII battleship would be in the
-                    high twenties. Some example sizes are shown in the
-                    list below, to give an idea of how sizes increase.
-                </para>
-
-                <targetlist targetFirst="false" bold="false">
-                    <targetLabel>Size</targetLabel>
-                    <valueLabel>Vehicle</valueLabel>
-
-                    <item target="5" value="Motorbike."/>
-                    <item target="10" value="Family car."/>
-                    <item target="11" value="T-34 Tank."/>
-                    <item target="14" value="X-Wing (Star Wars)."/>
-                    <item target="16" value="Train carriage."/>
-                    <item target="17" value="F-16."/>
-                    <item target="22" value="200t Free Trader (Traveller)."/>
-                    <item target="26" value="Boeing 747."/>
-                    <item target="28" value="Bismark."/>
-                    <item target="32" value="USS Enterprise CVN-65."/>
-                    <item target="44" value="Star Destroyer (Star Wars)."/>
-                    <item target="80" value="Death Star (Star Wars)."/>
-                    <item target="94" value="Skylark of Valeron (EE 'Doc' Smith)."/>
-                    <item target="110" value="Earth."/>
-                </targetlist>
-
-                <para>
-                    Weapons and armour have a special <e>Vehicle</e>
-                    property - Vc - which mark them as being of Vehicle
-                    Scale. Standard weapons do considerably less damage
-                    to vehicles, and vehicle weapons pretty much ignore
-                    the armour and soak of people.
-                </para>
-
-                <sect3>
-                    <title>Soak</title>
-
-                    <para>
-                        A construct will normally have a base soak equal to
-                        its size. If it is stronger or weaker than usual
-                        then this can vary. The following guide can be used
-                        to determine the base soak of a vehicle or building.
-                        These are guidelines only, and any values inbetween
-                        (or outside) those given can be used.
-                    </para>
-
-                    <targetlist targetFirst="true" bold="true">
-                        <targetLabel>Soak</targetLabel>
-                        <valueLabel>Type of construct</valueLabel>
-
-                        <item target="x0.5" value="Weak.">
-                            A very weak object, normally poorly constructed
-                            or delibrately designed to be light.
-                        </item>
-
-                        <item target="x1" value="Average.">
-                            Any typical building or vehicle will have a
-                            base soak equal to its size.
-                        </item>
-
-                        <item target="x1.5" value="Reinforced.">
-                            If the object has been reinforced, such as a
-                            rally car, SUV or heavily constructed building.
-                            About the strongest most flying vehicles will be.
-                        </item>
-
-                        <item target="x2" value="Strong.">
-                            Object has been designed from the start to be
-                            tough and durable. A tank, battleship or bunker
-                            will tend to be this strong.
-                        </item>
-
-                        <item target="x3" value="Very strong.">
-                            A heavily built vehicle, such as the strongest
-                            tanks, or a heavily toughened bunker. The entire
-                            design of the construct is geared towards making
-                            it strong, rather than pretty or fast.
-                        </item>
-
-                        <item target="x4" value="Super strong.">
-                            A heavily built vehicle made from ultra-tech
-                            materials (TL10+), or one which is designed to
-                            do little more than resist damage at the expense
-                            of being very space inefficient.
-                        </item>
-
-                        <item target="x5" value="Ultra strong.">
-                            Ultra-tech object which does little more than
-                            resist damage which is also very space inefficient,
-                            but also highly resistant to damage.
-                        </item>
-                    </targetlist>
-
-                    <para>
-                        This is the base soak of the construct, and is not
-                        affected by heavy weapons or other effects.
-                    </para>
-
-                    <para>
-                        As for characters, vehicles and buildings may be
-                        armoured. Many heavily armoured vehicles will have
-                        two armour ratings - one for the heavy front armour,
-                        and the second for the lighter sides and rear.
-                        Most armour on vehicles is considered to be
-                        <e>Light vehicle</e>. <e>Heavy vehicle</e> weapons
-                        (normally armour piercing weapons, such as HEAT)
-                        halve such armour.
-                    </para>
-
-                    <targetlist targetFirst="true" bold="true">
-                        <targetLabel>Armour</targetLabel>
-                        <valueLabel>Examples of armour</valueLabel>
-
-                        <item target="5-30" value="Armoured vehicle.">
-                            Armoured vehicles (such as APCs, armoured limo)
-                            will tend to have armour in the 5-20 range.
-                        </item>
-
-                        <item target="20-30" value="Light tank.">
-                            Heavily armoured vehicles, such as tanks, will
-                            tend to have up to 30 points of front armour.
-                        </item>
-
-                        <item target="30-50" value="Heavy tank.">
-                            The toughest of tanks will have armours in this
-                            sort of range.
-                        </item>
-
-                        <item target="40-60" value="Battleships.">
-                            Heavy battleships.
-                        </item>
-
-                        <item target="-10" value="Tech -6.">
-                            At tech levels prior to 7, materials are limited
-                            so reduce armour values by 10.
-                        </item>
-
-                        <item target="-5" value="Tech 7.">
-                            For tech level 7 era vehicles, reduce armour
-                            levels by 5.
-                        </item>
-
-                        <item target="+5" value="Tech 9-10.">
-                            At tech levels 9-10, increase armour by +5.
-                        </item>
-
-                        <item target="+10" value="Tech 11+">
-                            At tech levels above 10, increase armour by +10.
-                        </item>
-                    </targetlist>
-                </sect3>
-
-                <sect3>
-                    <title>Damage</title>
-
-                    <para>
-                        Vehicles have a single damage track, with a number
-                        of states: <e>Okay</e>, <e>Superficial</e>,
-                        <e>Medium</e>, <e>Critical</e> and <e>Destroyed</e>.
-                        The latter is equivalent to <e>Fatal</e> wounds for
-                        characters, and results in the vehicle being
-                        rendered completely inoperable.
-                    </para>
-
-                    <para>
-                        All damage is applied to this track, and is of two
-                        types - <e>Major</e> and <e>Minor</e>. All vehicle
-                        scale weapons cause <e>Major</e> damage to vehicles.
-                        Such damage is equivalent to <e>wounds</e> against
-                        characters, and is additive.
-                    </para>
-
-                    <para>
-                        Character scale weapons may cause <e>Minor</e>
-                        damage to vehicles. This is treated like stuns, in
-                        that it is non-cumulative. If the damage caused is
-                        less than half the current damage, then the attack
-                        is ignored. If it is more than half, but not more
-                        than the current damage, then one level of damage
-                        is caused. If the damage is greater than the current
-                        damage, then the total damage is equal to the
-                        damage caused.
-                    </para>
-
-                    <para>
-                        Major damage may cause critical hits against the
-                        vehicle. Minor damage is normally superficial.
-                    </para>
-
-                    <para>
-                        The damage levels for a vehicle are split equally
-                        between <e>Superficial</e>, <e>Medium</e> and
-                        <e>Critical</e>, with extra levels going to the
-                        lower bands first. A size 10 car would have 4
-                        levels of Superficial, 3 of Medium and 3 of
-                        Critical.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Hitting Vehicles</title>
-
-                    <para>
-                        Most vehicles tend to be much larger than normal
-                        human targets, and so are easier to hit. Vehicles
-                        suffer the normal penalty to their 'to be hit'
-                        number, of -3 per point of size about 5. A size 20
-                        vehicle for instance will have a 'to be hit'
-                        number of -30. This makes vehicles very easy to
-                        hit at long range.
-                    </para>
-
-                    <para>
-                        Vehicle weapons are also affected by this, and
-                        suffer a penalty to their attack bonus based on
-                        their size - larger weapons are harder to aim,
-                        and generally no good for shooting at people.
-                        A vehicle which is 'size 10' for example will
-                        have a penalty of -15 to its attack bonus, which
-                        may give it a negative attack bonus. This will
-                        be factored into the weapon's statistics.
-                    </para>
-                </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Vehicle Attributes</title>
-
-                <para>
-                    All vehicles have the following attributes.
-                </para>
-
-                <itemlist order="sort">
-                    <item name="Size">
-                        The general size of the vehicle, normally based on
-                        the volume. Volume is used instead of Mass (which
-                        animal Size is based on) because this is normally
-                        easier to obtain for real world vehicles.
-                    </item>
-
-                    <item name="Soak">
-                        How good the vehicle is at resisting damage. This
-                        normally defaults to the Size of the vehicle.
-                    </item>
-
-                    <item name="Move">
-                        How fast the vehicle can move, in metres/round.
-                        This is normally the top speed of the vehicle
-                        in metres per round. This is about 2.2 times
-                        (or twice) the miles per hour speed.
-                    </item>
-
-                    <item name="Critical">
-                        The threshold at which the vehicle suffers
-                        criticals. It is equal to the number of damage
-                        levels the vehicle has in its Superficial
-                        level.
-                    </item>
-
-                    <item name="Acceleration">
-                        How quickly the vehicle accelerates, in metres
-                        per round per round.
-                    </item>
-                </itemlist>
-            </sect2>
-
-            <sect2>
-                <title>Using Vehicles</title>
-
-                <para>
-                    Generally, driving or piloting a vehicle will use
-                    <y:dexterity>Drive</y:dexterity> or a
-                    <y:dexterity>Pilot</y:dexterity> skill check,
-                    depending on the type of vehicle. In either case,
-                    your <t>Dexterity</t> is capped to the
-                    <t>Agility</t> of the vehicle, meaning big and slow
-                    vehicles generally don't require fast reactions,
-                    just skill, and even that doesn't make much difference.
+                    Space is big, really big, and the ranges of many
+                    space-born weapons are huge compared to the sort
+                    of scales present in ground combat.
                 </para>
 
                 <para>
-                    Very large vehicles, such as battleships for example,
-                    won't have a 'pilot' as such, and tend to be
-                    controlled by a number of people down in engineering,
-                    or a group of computer operators. In this case,
-                    controlling the vehicle uses an <e>operation</e>
-                    skill, such as <e>Ship operation</e> or
-                    <e>Spaceship operation</e>.
+                    The <e>short range</e> of a space weapon is the distance
+                    at which it does the stated damage. Each increment of
+                    the short range reduces the damage by -25.
                 </para>
 
                 <para>
-                    When making a manouevre, a pilot or drive check is
-                    often required, and the difficulty depends on the
-                    speed that the manouevre is performed at.
-                </para>
-
-                <targetlist>
-                    <targetLabel>Target</targetLabel>
-                    <valueLabel>Speed of manouevre</valueLabel>
-
-                    <item target="-10" value="Careful.">
-                        A slow and safe speed.
-                    </item>
-
-                    <item target="+0" value="Moderate.">
-                        A safe speed.
-                    </item>
-
-                    <item target="+10" value="Quickly.">
-                        A bit faster than is advised.
-                    </item>
-
-                    <item target="+20" value="Fast.">
-                        Somewhat fast.
-                    </item>
-
-                    <item target="+30" value="Very fast.">
-                        Dangerously fast.
-                    </item>
-                </targetlist>
-
-                <para>
-                    You're generally better off slowing down before making
-                    a tricky manouevre, however you can try to force a
-                    persuer to crash or lose you by taking a bend at high
-                    speed.
-                </para>
-            </sect2>
-
-            <sect2>
-                <title>Spaceships</title>
-
-                <para>
-                    Spacecraft movement is given as an acceleration and
-                    a delta-vee. The acceleration is in metres per second
-                    per second, and the delta-vee is the maximum velocity
-                    the ship can attain in km/s if it were to accelerate
-                    for as long as possible.
-                </para>
-            </sect2>
-
-            <sect2>
-                <title>Example Vehicles</title>
-
-                <para>
-                    Listed below are some sample vehicles, showing a range
-                    of sizes and capabilities from the modern day and
-                    recent history.
-                </para>
-
-                <sect3>
-                    <title>Modern</title>
-
-                    <import-equipment style="full">
-                        <list>../equipment/modern/vehicles/civilian.yags</list>
-                    </import-equipment>
-                </sect3>
-
-                <sect3>
-                    <title>WWII Tanks</title>
-
-                    <import-equipment style="full">
-                        <list>../equipment/wwii/tanks.yags</list>
-                    </import-equipment>
-                </sect3>
-
-                <sect3>
-                    <title>WWII Ships</title>
-
-                    <import-equipment style="full">
-                        <list>../equipment/wwii/ships.yags</list>
-                    </import-equipment>
-                </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Vehicle Weapons and Armour</title>
-
-                <para>
-                    Weapons which have a property of <e>Vehicle (Vc)</e>
-                    completely ignore the <e>Soak</e> of standard targets
-                    unless they are in Heavy armour. This means that the
-                    total soak roll is always zero for these targets.
-                    Standard targets with heavy armour have their total
-                    soak roll halved.
-                </para>
-
-                <para>
-                    Heavy vehicle weapons always ignore the soak of character
-                    scale targets, regardless of the armour they are wearing.
-                </para>
-
-                <para>
-                    Any target which has Vehicle armour halves the damage
-                    from standard weapons, and all damage done is Minor.
-                </para>
-
-                <sect3>
-                    <title>Big Guns</title>
-
-                    <para>
-                        From the point of view of large vehicles, pretty
-                        much any weapon that is considered man-portable is
-                        <e>tiny</e>. This includes heavy machine guns and
-                        similar weapons which may be vehicle mounted but
-                        which are used and pointed by people. <e>Tiny</e>
-                        weapons are considered to be <t>Size</t> 5, and
-                        do less damage against anything of <t>Size</t> 15
-                        or more. Effectively, <e>Major</e> damage becomes
-                        <e>Minor</e> damage, and <e>Minor</e> damage is
-                        ignored.
-                    </para>
-
-                    <para>
-                        A <e>Tiny</e> weapon cannot effectively harm any
-                        vehicle (or creature) of <t>Size</t> 20 or greater.
-                        However, they may be able to harm individual
-                        turrets or other surface points.
-                    </para>
-
-                    <para>
-                        Dedicated anti-armour weapons, such as the main gun
-                        of a tank, are considered to be <e>Small</e>. For
-                        <t>Size</t> purposes they have a <t>Size</t> of 10.
-                    </para>
-
-                    <para>
-                        Naval guns and artillery weapons are considered to
-                        be <e>Medium</e> weapons, and have a <t>Size</t> of
-                        20.
-                    </para>
-
-                    <note title="Really Big Guns">
-                        <para>
-                            The descriptive terms for most vehicle weapons
-                            are kept deliberately small for a reason -
-                            there are situations where even bigger weapons
-                            are possible. Normally, these occur in
-                            <e>science fiction</e> settings, though larger
-                            artillery peices or naval weapons may available
-                            in the modern world.
-                        </para>
-
-                        <para>
-                            In terms of <e>Traveller</e>, small point
-                            defence systems are <e>Tiny</e>, and standard
-                            turret weapons are <e>Small</e>. Bay weapons
-                            (both 50t and 100t) are <e>Medium</e>. Spinal
-                            mount weapons are <e>Large</e>, and are
-                            considered to be <t>Size</t> 30 or bigger.
-                            The largest ship in <e>Traveller</e>, the
-                            <e>Tigress</e>, is only <t>Size</t> 39. Most
-                            of the large ships in <e>Star Wars</e> will
-                            also have <e>Large</e> weapons.
-                        </para>
-                    </note>
-
-                    <para>
-                        The size of the gun affects the size of target
-                        it is designed to hit. The base difficulty to
-                        hit a target is 15, modified by +5 per point of
-                        <t>Size</t> the target is smaller than the
-                        weapon. A <e>medium</e> naval gun base a base
-                        difficulty of 90 (15 + 75) to hit a person.
-                        Of course, a near miss is probably going to be
-                        good enough.
-                    </para>
-                </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Starship Combat</title>
-
-                <para>
-                    If a battle is being fought between large vehicles,
-                    such as battleships or spaceships, it is suggested
-                    that a <e>turn</e> of 5 minutes is used instead of
-                    the usual 5 second rounds. Most weapons which are of
-                    use at this scale will tend to have very slow rates
-                    of fire, comparable to 1 per 5 minute <e>turn</e>.
-                </para>
-
-                <para>
-                    How well a spacecraft moves is measured by its
-                    <e>acceleration</e>, which is given in 'g'. Every
-                    'g' of acceleration allows the ship to accelerate
-                    up to (roughly) 1000km/turn/turn. For this reason,
-                    all ranges are measured in multiples of 1000km.
+                    Since such weapons are designed to be used at massive
+                    distances, the distance increment is normally in
+                    multiples of 1km.
                 </para>
             </sect2>
         </sect1>
