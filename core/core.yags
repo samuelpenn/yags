@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.67 $</version>
-            <date>$Date: 2008-09-28 21:30:52 $</date>
+            <version>$Revision: 1.68 $</version>
+            <date>$Date: 2008-10-07 21:30:55 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -256,7 +256,8 @@
 
                     <item name="Ability">
                         A creature's ability to achieve success in a task
-                        is equal to an attribute multiplied by a skill.
+                        is equal to an attribute multiplied by a skill, or
+                        an attribute multiplied by 4 for a raw attribute check.
                     </item>
 
                     <item name="Score">
@@ -268,6 +269,10 @@
 
                     <item name="Task">
                         An activity that requires an ability check.
+                    </item>
+
+                    <item name="Die">
+                        A single twenty sided die, a d20.
                     </item>
                 </itemlist>
             </sect2>
@@ -403,749 +408,746 @@
         </sect1>
 
         <sect1>
-            <title>Attributes</title>
+            <title>Characteristics</title>
 
             <para>
-                Attributes are the basic characteristics of all creatures
-                in <e>Yags</e>. There are eight primary attributes -
-                strength, health, agility, dexterity, perception,
-                intelligence, empathy and will - and two secondary
-                attributes - size and move.
+                As with many game systems, <s>Yags</s> measures the ability
+                of a character in the game using numerical stats, normally
+                either <e>attributes</e> or <e>skills</e>. These numbers
+                don't relate directly to anything in the real world - they
+                are simply convienient.
             </para>
 
             <para>
-                Attributes measure broad natural talent for a character or
-                creature. Attributes are not fixed, and can develop with
-                time (especially during childhood and adolescence). A
-                character who uses dexterity based skills a lot will
-                probably develop their dexterity as well as the skills
-                they are using.
-            </para>
-
-            <para>
-                Primary attributes have an average value of three for an
-                adult human, and will generally range between two and
-                four. The minimum value is always one. Values above five
-                are exceptional, though not unheard of.
-            </para>
-
-            <para>
-                An attribute of zero indicates that a creature has
-                no ability in that area, and cannot even attempt
-                tasks which would require it. No creature will
-                ever have an attribute below zero, and humans
-                never have attributes below one.
+                To simplify things, these numbers can be used to measure
+                people, animals, vehicles, buildings and almost anything
+                else which a character needs to be able to test their
+                mettle against.
             </para>
 
             <sect2>
-                <title>Attribute Levels</title>
+                <title>Attributes</title>
 
                 <para>
-                    For humans, attributes tend to range between two
-                    and five. Higher values are possible, but rare.
-                    The following chart describes the different levels
-                    from the point of view of an adult human.
-                    Non-human creatures may work on different scales,
-                    especially for strength which tends to be much
-                    higher for large animals.
+                    Attributes are the basic characteristics of all creatures
+                    in <e>Yags</e>, and are a broad measure of natural talent
+                    and potential. There are eight primary attributes -
+                    strength, health, agility, dexterity, perception,
+                    intelligence, empathy and will - and two secondary
+                    attributes - size and move.
+                </para>
+
+                <sect3>
+                    <title>Attribute Levels</title>
+
+                    <para>
+                        For humans, attributes tend to range between two
+                        and five. Higher values are possible, but rare.
+                        The following chart describes the different levels
+                        from the point of view of an adult human.
+                        Non-human creatures may work on different scales,
+                        especially for strength which tends to be much
+                        higher for large animals.
+                    </para>
+
+                    <targetlist targetFirst="true" bold="true">
+                        <targetLabel>Score</targetLabel>
+                        <valueLabel>Attribute</valueLabel>
+
+                        <item target="0" value="None.">
+                            You have no rateable ability in this attribute,
+                            and may not attempt skills which use it.
+                        </item>
+
+                        <item target="1" value="Crippled.">
+                            You are crippled, being either very dumb, seriously
+                            ill or socially inept.
+                        </item>
+
+                        <item target="2" value="Poor.">
+                            You are noticeably below average, being in the bottom
+                            5% of the population. This is normally the minimum
+                            level of attribute it is possible to have.
+                        </item>
+
+                        <item target="3" value="Average.">
+                            You are average, among the middle 90% of the
+                            population.
+                        </item>
+
+                        <item target="4" value="High.">
+                            You are noticeably above average in ability.
+                        </item>
+
+                        <item target="5" value="Very high.">
+                            You are highly adept at tasks related to this
+                            attribute. This is about the highest that people
+                            will have naturally, without training.
+                        </item>
+
+                        <item target="6" value="Exceptional.">
+                            You are truly exceptional, and have trained hard
+                            to develop your attribute this high. Most people
+                            will find it very hard to compete against you.
+                        </item>
+
+                        <item target="7" value="Incredible.">
+                            You are one of a small number of people in your
+                            country.
+                        </item>
+
+                        <item target="8" value="Legendary.">
+                            The normal maximum for humans. There may be a
+                            handful of people with an attribute this high
+                            in the modern day.
+                        </item>
+
+                        <item target="9+" value="Superhuman.">
+                            Beyond what is naturally possible.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        Non-humans will of course have different averages and
+                        ranges. Wild beasts will tend to have a Perception of
+                        5+, and large animals may well have strengths of 10+.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Primary Attributes</title>
+
+                    <itemlist order="strict">
+                        <item name="Strength">
+                            Strength measures a character's ability to hurt,
+                            break and lift things. Some effects are based
+                            on the square of the character's strength (e.g.
+                            how much can be carried).
+                        </item>
+
+                        <item name="Health">
+                            Health is a measure of endurance and fitness.
+                            Checks to remain alive after being injured,
+                            resisting poison and avoiding fatigue are all
+                            based on health.
+                        </item>
+
+                        <item name="Agility">
+                            Quickness and acrobatic ability are measured by
+                            agility. It is also used for brawling, but not
+                            melee or missile weapons. Athletes, cat
+                            burglars and martial artists require a good
+                            agility.
+                        </item>
+
+                        <item name="Dexterity">
+                            The dexterity of a character defines their
+                            hand-eye coordination, sleight-of-hand,
+                            and skill with melee weapons, pistols, thrown
+                            weapons and driving. Thieves, warriors and race
+                            car drivers need a good dexterity.
+                        </item>
+
+                        <item name="Perception">
+                            Perception is a measure of general alertness
+                            and sensory ability. High perception characters
+                            have good senses (vision, hearing) and
+                            observational ability. Use of rifles and bows
+                            comes under Perception.
+                        </item>
+
+                        <item name="Intelligence">
+                            Intelligence is a measure of wit, cunning,
+                            memory and intuition. Intelligence is used to
+                            know and remember things, to study and for logic.
+                            Sages, researchers and scientists will use
+                            intelligence a lot.
+                        </item>
+
+                        <item name="Empathy">
+                            Empathy is the ability of the character to
+                            understand other people. A high empathy does
+                            not necessarily make a character charismatic,
+                            but a charismatic character will need a high
+                            empathy in order to be able to react to and
+                            manipulate another's emotions.
+                        </item>
+
+                        <item name="Will">
+                            Strength of will is used to overcome base
+                            instincts, such as fear and lust. High will
+                            characters are more resistant to magic, are
+                            less gullible and tend to be good liars, making
+                            it useful for con artists and supernatural
+                            investigators.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+                <sect3>
+                    <title>Secondary Attributes</title>
+
+                    <para>
+                        Secondary attributes aren't part of the standard
+                        set of eight attributes, and do not tend to fall
+                        within the normal 2-5 range.
+                    </para>
+
+                    <itemlist order="strict">
+                        <item name="Size">
+                            Size defaults to five for adult humans, with
+                            most adults ranging from four to six. Size
+                            governs how much damage a creature can soak
+                            up. A blue whale is about size 25. It cannot
+                            be raised with experience.
+                        </item>
+
+                        <item name="Soak">
+                            Soak is a measure of how well the character can
+                            resist damage. For most characters it will be
+                            12 and cannot be changed with experience.
+                        </item>
+
+                        <item name="Move">
+                            A character's move determines how quickly they
+                            can run, both in combat and over long distance.
+                            It is equal to size + strength + agility + 1.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+                <sect3>
+                    <title>Attributes in the Game World</title>
+
+                    <para>
+                        The vast majority of humans will have an
+                        average attribute, with a score of 3. A
+                        simple randomisation is that an NPC has an
+                        attribute of 3, unless a 1 or a 20 is rolled
+                        on a d20. On a 1, the attribute is a 2,
+                        whilst on a 20, it is a 4. This means the
+                        <e>average</e> score accounts for
+                        about 90% of the population.
+                    </para>
+
+                    <para>
+                        People such as Newton or Feynman would probably
+                        have an intelligence score of eight. The best
+                        Olympic athletes in the modern world would
+                        probably have similar scores for physical
+                        attributes. For humans, scores above five are
+                        gained through lots of training and experience -
+                        they are not gained due to a chance of birth.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Skills</title>
+
+                <para>
+                    A skill is something which can be learnt and improved
+                    through experience and training. Except for a few basic
+                    skills, they always default to zero unless specifically
+                    learnt. If a skill is zero, then it either can't be used
+                    (in the case of many knowledge or science skills), can
+                    default to another skill, or is rolled as a straight d20
+                    halved (round down).
+                </para>
+
+                <sect3>
+                    <title>Skill Levels</title>
+
+                    <para>
+                        Once a skill is learnt, it's level ranges from one
+                        upwards. There is no theoretical limit to how high
+                        a skill can be, though a practical limit is in the
+                        range of 10-15. Skills higher than 15 are considered
+                        to be <e>mythical</e> - in the realm of supernatural
+                        beings.
+                    </para>
+
+                    <sect4>
+                        <title>Apprentice (1-3)</title>
+
+                        <para>
+                            The first few levels of skill are suitable for a
+                            student of a topic, or someone who has only
+                            casual experience with the skill. A level of 2
+                            or 3 is good enough for easy tasks.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Professional (4-7)</title>
+
+                        <para>
+                            Most professionals will have a skill of 4 or 5
+                            in a skill. Many will never go beyond this, since
+                            their skills will never be stretched, however a
+                            few seasoned veterens will have obtained a level
+                            of 6 or 7. Levels beyond this require a real
+                            dedicated attempt to further your ability, rather
+                            than just simple experience.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Master (8-11)</title>
+
+                        <para>
+                            A master level of skill reflects a true understanding
+                            of the skill, and many years of dedicated study and
+                            training. Elite soldiers, leading research scientists
+                            and reknowned experts in a field would have a Master
+                            level of skill.
+                        </para>
+
+                        <para>
+                            Skill levels above 9 should be limited to named
+                            characters. A generic squad of elite soldiers for
+                            example should be limited to skills of 9 or less.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Legendary (12-15)</title>
+
+                        <para>
+                            This level is about the highest that will be found
+                            in most worlds, and such a score will only be had by
+                            the leaders in a field. Generally, such people will
+                            have a good reputation, and will have many decades
+                            of training and experience under their belt.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Mythical (16+)</title>
+
+                        <para>
+                            Generally this will be the province of super heroes
+                            and other supernatural creatures.
+                        </para>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Types of Skills</title>
+
+                    <sect4>
+                        <title>Talents</title>
+
+                        <para>
+                            The skills available to characters will vary from
+                            genre to genre, but Yags has eight core skills,
+                            called <e>talents</e>, which all people know to
+                            a limited extent. Normally, all starting characters
+                            will have a score of 2 in each talent.
+                        </para>
+
+                        <para>
+                            The eight talents are athletics; awareness; brawl;
+                            charm; guile; sleight; stealth and throw. The
+                            skills article describes them in full detail. They
+                            represent basic skills which everyone picks up in
+                            childhood, and many other skills will default to
+                            a talent if they are not known.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Knowledges</title>
+
+                        <para>
+                            <e>Knowledges</e> are skills which represent
+                            theoretical knowledge which must be learnt.
+                            You can only make a check with a Knowledge skill
+                            if you already have a score in it. You can not
+                            normally learn or practise knowledges unless
+                            you have a source to study from.
+                        </para>
+
+                        <para>
+                            The following guide gives an indication of what
+                            different skill levels represent.
+                        </para>
+
+                        <itemlist order="strict">
+                            <item name="1">
+                                You've seen a TV program on the subject.
+                            </item>
+
+                            <item name="2-3">
+                                You have a layman's interest in the subject,
+                                or studied it at school. You will know the
+                                common stuff, but have gaps and lack depth
+                                and full understanding.
+                            </item>
+
+                            <item name="4-5">
+                                You have a graduate's level of knowledge,
+                                and have a well rounded view of the subject.
+                            </item>
+
+                            <item name="6+">
+                                You are a specialist in the subject, and
+                                probably study it as part of your job.
+                            </item>
+                        </itemlist>
+                    </sect4>
+
+                    <sect4>
+                        <title>Languages</title>
+
+                        <para>
+                            Language skills are treated on a scale from
+                            one to four, and are not normally 'rolled'
+                            like other skills. Instead, the level of skill
+                            gives a guide to how much of a conversation a
+                            character can understand.
+                        </para>
+
+                        <itemlist order="strict">
+                            <item name="1">
+                                The character can recognise the language
+                                and knows a few words, but cannot put
+                                sentences together.
+                            </item>
+
+                            <item name="2">
+                                The character can understand and form basic
+                                sentences. The character can probably get by
+                                in the market or in an inn.
+                            </item>
+
+                            <item name="3">
+                                The character has a good grasp of the
+                                language and can hold a decent
+                                conversation. They will obviously still be
+                                a foreigner however, and many unusual words
+                                will be beyond their understanding.
+                            </item>
+
+                            <item name="4">
+                                The character is fluent in the language.
+                                If they are a foreigner, then they may
+                                still have an accent, but they will not
+                                have any problems communicating.
+                            </item>
+
+                            <item name="5+">
+                                If the character is a non-native speaker,
+                                then they can speak without an accent. This
+                                level and beyond gives detailed knowledge of
+                                different dialects and really obscure words,
+                                but is not of use in everyday conversation.
+                            </item>
+                        </itemlist>
+
+                        <para>
+                            Knowledge of a language may automatically include
+                            the ability to read and write it as well. In some
+                            settings however (e.g. a medieval society) this
+                            will not be the case.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Standard skills</title>
+
+                        <para>
+                            Standard skills are a mixture of knowledge,
+                            experience, physical aptitude and common sense.
+                            If you have no score in a standard skill, then
+                            it can still be used, however the roll (just a
+                            straight d20) is halved, and a natural roll of
+                            1 or 2 is considered a fumble.
+                        </para>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Skill Difficulties</title>
+
+                    <para>
+                        When making an ability check, there are some common
+                        difficulty levels, which are described in the
+                        following table. The descriptions assume an average
+                        level of attribute - those with an above average
+                        attribute will be able to get by with less skill.
+                    </para>
+
+                    <para>
+                        Most tasks will be against a fixed target number. If
+                        you are competing against another character, then
+                        they get a skill check with a modifier. The modifier
+                        is given in parenthesis below, and adds to the
+                        other person's check.
+                    </para>
+
+                    <targetlist targetFirst="false" bold="true">
+                        <title>Task Difficulties</title>
+
+                        <valueLabel>Type of Task</valueLabel>
+                        <targetLabel>Target</targetLabel>
+
+                        <item target="10 (-10)" value="Very easy.">
+                            Such a task can be achieved by a
+                            person with little or no skill with
+                            a good chance of success. A
+                            professional will always succeed.
+                        </item>
+                        <item target="15 (-5)" value="Easy.">
+                            Anyone with a small amount of skill
+                            will be able to achieve this with a
+                            good chance of success, though it will
+                            be difficult for someone without any
+                            training at all.
+                        </item>
+                        <item target="20 (+0)" value="Moderate.">
+                            Such tasks can be achieved without difficulty
+                            by a professional in ideal conditions. Those
+                            without proper training can find it difficult
+                            however.
+                        </item>
+                        <item target="25 (+5)" value="Challenging.">
+                            People with less than professional
+                            level of skill will find it hard to
+                            succeed, and it is out of league of
+                            someone with only basic familiarity.
+                        </item>
+                        <item target="30 (+10)" value="Difficult.">
+                            Such tasks require a highly skilled
+                            person. Anyone with less than
+                            professional competence will always
+                            fail, and even professionals will be
+                            hard pressed.
+                        </item>
+                        <item target="40 (+20)" value="Very difficult.">
+                            A master of the skill can achieve such tasks
+                            with confidence, others will fail. About the
+                            highest level of difficulty under normal
+                            circumstances.
+                        </item>
+                        <item target="50 (+30)" value="Extreme.">
+                            A very difficult task under poor conditions.
+                        </item>
+                        <item target="60 (+40)" value="Heroic.">
+                            Truly heroic.
+                        </item>
+                        <item target="75 (+55)" value="Sheer folly.">
+                            Someone with superhuman level of skill will be
+                            hard pressed to achieve this difficulty.
+                        </item>
+                        <item target="100 (+80)" value="Absurd.">
+                            Well beyond what most people could achieve.
+                            Above average attributes are required to have
+                            even a chance of success.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        Tasks above <e>Very difficult</e> will be very rare,
+                        and often because of less than perfect
+                        conditions, rather than the nature of the
+                        task itself.
+                    </para>
+
+                    <para>
+                        Absurd tasks should be reserved for when a
+                        player tries something totally heroic, which
+                        is at the very edge of possibility.
+                    </para>
+
+                    <sect4>
+                        <title>Degree of Success</title>
+
+                        <para>
+                            If the skill check meets the target number,
+                            then a normal success is assumed. If the roll
+                            was significantly above the target number,
+                            then the success was particularly good. The
+                            exact result depends on the GM's interpretation
+                            but the following can be used as a guide.
+                        </para>
+
+                        <para>
+                            A <s>good</s> success is 10 points or more
+                            above the target. The task is performed with
+                            style, completeness or speed.
+                        </para>
+
+                        <para>
+                            An <s>excellent</s> success is 20 points or
+                            more above the target. It was probably
+                            performed with two of style, completeness or
+                            speed.
+                        </para>
+
+                        <para>
+                            A <s>superb</s> success is 30 points or more
+                            above the required target, and was achieved
+                            with style, completeness <e>and</e> speed.
+                            Anything better than this probably won't be
+                            noticed by an untrained witness.
+                        </para>
+
+                        <para>
+                            A <s>fantastic</s> success is 40 points or more
+                            beyond the target.
+                        </para>
+
+                        <para>
+                            Anything which is 50 points or more above the
+                            target number is <s>amazing</s>, and represent
+                            as close to perfection as is possible to
+                            achieve.
+                        </para>
+                    </sect4>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Size</title>
+
+                <para>
+                    How large a creature is can be measured in a number of
+                    ways - height, length and mass being the common criteria.
+                    In <e>Yags</e>, the <t>Size</t> attribute is a measure
+                    of the creature's capacity to absorb damage, and how easy
+                    it is to hit. In general, the <t>Size</t> of a creature
+                    will increase logarithmically with its mass - every +5
+                    increase in <t>Size</t> represents a ten fold increase
+                    in mass.
+                </para>
+
+                <note title="Exponential scales">
+                    <para>
+                        By using an exponential scale, the numbers are kept
+                        relatively small for both <t>Size</t> and <t>Strength</t>
+                        for even the largest of creatures. If Size wasn't
+                        exponential, a blue whale would need a <t>Size</t> of
+                        around 1000.
+                    </para>
+                </note>
+
+                <para>
+                    The scale is based around an average of a 70kg human male.
+                    A <t>Size</t> 10 creature would be 700kg, a <t>Size</t> 15
+                    creature 7 tonnes, and a <t>Size</t> 20 creature 70 tonnes.
+                    Some examples are as follows.
                 </para>
 
                 <targetlist targetFirst="true" bold="true">
-                    <targetLabel>Score</targetLabel>
-                    <valueLabel>Attribute</valueLabel>
+                    <targetLabel>Size</targetLabel>
+                    <valueLabel>Mass and examples</valueLabel>
 
-                    <item target="0" value="None.">
-                        You have no rateable ability in this attribute.
+                    <item target="0" value="7kg.">
+                        A large house cat.
                     </item>
 
-                    <item target="1" value="Crippled.">
-                        You are crippled, being either very dumb, seriously
-                        ill or socially inept.
+                    <item target="1" value="11kg.">
+                        1 year old child, a small dog (e.g., a beagle).
                     </item>
 
-                    <item target="2" value="Poor.">
-                        You are noticeably below average, being in the bottom
-                        5% of the population. This is normally the minimum
-                        level of attribute it is possible to have.
+                    <item target="2" value="18kg.">
+                        5 year old child.
                     </item>
 
-                    <item target="3" value="Average.">
-                        You are average, among the middle 90% of the
-                        population.
+                    <item target="3" value="28kg.">
+                        10 year old child, a medium dog (e.g., a boxer).
                     </item>
 
-                    <item target="4" value="High.">
-                        You are noticeably above average in ability.
+                    <item target="4" value="44kg.">
+                        Small adult, a wolf.
                     </item>
 
-                    <item target="5" value="Very high.">
-                        You are highly adept at tasks related to this
-                        attribute. This is about the highest that people
-                        will have naturally, without training.
+                    <item target="5" value="70kg.">
+                        Typical adult. This size constitutes most of the
+                        adult human population. Anyone outside of this
+                        average is very noticeably large or small.
                     </item>
 
-                    <item target="6" value="Exceptional.">
-                        You are truly exceptional, and have trained hard
-                        to develop your attribute this high. Most people
-                        will find it very hard to compete against you.
+                    <item target="6" value="111kg.">
+                        Large adult.
                     </item>
 
-                    <item target="7" value="Incredible.">
-                        You are one of a small number of people in your
-                        country.
+                    <item target="7" value="176kg.">
+                        Donkey, black bear.
                     </item>
 
-                    <item target="8" value="Legendary.">
-                        The normal maximum for humans. There may be a
-                        handful of people with an attribute this high
-                        in the modern day.
+                    <item target="8" value="279kg.">
+                        Lion.
                     </item>
 
-                    <item target="9+" value="Superhuman.">
-                        Beyond what is naturally possible.
-                    </item>
-                </targetlist>
-
-                <para>
-                    Non-humans will of course have different averages and
-                    ranges. Wild beasts will tend to have a Perception of
-                    5+, and large animals may well have strengths of 10+.
-                </para>
-            </sect2>
-
-            <sect2>
-                <title>Primary Attributes</title>
-
-                <itemlist order="strict">
-                    <item name="Strength">
-                        Strength measures a character's ability to hurt,
-                        break and lift things. Some effects are based
-                        on the square of the character's strength (e.g.
-                        how much can be carried).
+                    <item target="9" value="442kg.">
+                        Riding horse, grizzly bear.
                     </item>
 
-                    <item name="Health">
-                        Health is a measure of endurance and fitness.
-                        Checks to remain alive after being injured,
-                        resisting poison and avoiding fatigue are all
-                        based on health.
+                    <item target="10" value="700kg.">
+                        War horse, prehistoric cave bear. Also, a family car.
                     </item>
 
-                    <item name="Agility">
-                        Quickness and acrobatic ability are measured by
-                        agility. It is also used for brawling, but not
-                        melee or missile weapons. Athletes, cat
-                        burglars and martial artists require a good
-                        agility.
+                    <item target="11" value="1.1t.">
+                        Rhino.
                     </item>
 
-                    <item name="Dexterity">
-                        The dexterity of a character defines their
-                        hand-eye coordination, sleight-of-hand,
-                        and skill with melee weapons, pistols, thrown
-                        weapons and driving. Thieves, warriors and race
-                        car drivers need a good dexterity.
+                    <item target="12" value="1.8t.">
+                        Great white shark.
                     </item>
 
-                    <item name="Perception">
-                        Perception is a measure of general alertness
-                        and sensory ability. High perception characters
-                        have good senses (vision, hearing) and
-                        observational ability. Use of rifles and bows
-                        comes under Perception.
+                    <item target="13" value="2.8t.">
                     </item>
 
-                    <item name="Intelligence">
-                        Intelligence is a measure of wit, cunning,
-                        memory and intuition. Intelligence is used to
-                        know and remember things, to study and for logic.
-                        Sages, researchers and scientists will use
-                        intelligence a lot.
+                    <item target="14" value="4.4t.">
+                        Triceratops. Also, a large tank.
                     </item>
 
-                    <item name="Empathy">
-                        Empathy is the ability of the character to
-                        understand other people. A high empathy does
-                        not necessarily make a character charismatic,
-                        but a charismatic character will need a high
-                        empathy in order to be able to react to and
-                        manipulate another's emotions.
+                    <item target="15" value="7t.">
+                        Elephant.
                     </item>
 
-                    <item name="Will">
-                        Strength of will is used to overcome base
-                        instincts, such as fear and lust. High will
-                        characters are more resistant to magic, are
-                        less gullible and tend to be good liars, making
-                        it useful for con artists and supernatural
-                        investigators.
-                    </item>
-                </itemlist>
-            </sect2>
-
-            <sect2>
-                <title>Secondary Attributes</title>
-
-                <para>
-                    Secondary attributes aren't part of the standard
-                    set of eight attributes, and do not tend to fall
-                    within the normal 2-5 range.
-                </para>
-
-                <itemlist order="strict">
-                    <item name="Size">
-                        Size defaults to five for adult humans, with
-                        most adults ranging from four to six. Size
-                        governs how much damage a creature can soak
-                        up. A blue whale is about size 25. It cannot
-                        be raised with experience.
+                    <item target="16" value="11t.">
                     </item>
 
-                    <item name="Soak">
-                        Soak is a measure of how well the character can
-                        resist damage. For most characters it will be
-                        12 and cannot be changed with experience.
+                    <item target="17" value="17t.">
                     </item>
 
-                    <item name="Move">
-                        A character's move determines how quickly they
-                        can run, both in combat and over long distance.
-                        It is equal to size + strength + agility + 1.
+                    <item target="18" value="28t.">
+                        Apatosaurus. The largest land animals known.
                     </item>
-                </itemlist>
-            </sect2>
 
-            <sect2>
-                <title>Attributes in the Game World</title>
-
-                <para>
-                    The vast majority of humans will have an
-                    average attribute, with a score of 3. A
-                    simple randomisation is that an NPC has an
-                    attribute of 3, unless a 1 or a 20 is rolled
-                    on a d20. On a 1, the attribute is a 2,
-                    whilst on a 20, it is a 4. This means the
-                    <e>average</e> score accounts for
-                    about 90% of the population.
-                </para>
-
-                <para>
-                    People such as Newton or Feynman would probably
-                    have an intelligence score of eight. The best
-                    Olympic athletes in the modern world would
-                    probably have similar scores for physical
-                    attributes. For humans, scores above five are
-                    gained through lots of training and experience -
-                    they are not gained due to a chance of birth.
-                </para>
-            </sect2>
-        </sect1>
-
-        <sect1>
-            <title>Skills</title>
-
-            <para>
-                A skill is something which can be learnt and improved
-                through experience and training. Except for a few basic
-                skills, they always default to zero unless specifically
-                learnt. If a skill is zero, then it either can't be used
-                (in the case of many knowledge or science skills), can
-                default to another skill, or is rolled as a straight d20
-                halved (round down).
-            </para>
-
-            <sect2>
-                <title>Skill Levels</title>
-
-                <para>
-                    Once a skill is learnt, it's level ranges from one
-                    upwards. There is no theoretical limit to how high
-                    a skill can be, though a practical limit is in the
-                    range of 10-15. Skills higher than 15 are considered
-                    to be <e>mythical</e> - in the realm of supernatural
-                    beings.
-                </para>
-
-                <sect3>
-                    <title>Apprentice (1-3)</title>
-
-                    <para>
-                        The first few levels of skill are suitable for a
-                        student of a topic, or someone who has only
-                        casual experience with the skill. A level of 2
-                        or 3 is good enough for easy tasks.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Professional (4-7)</title>
-
-                    <para>
-                        Most professionals will have a skill of 4 or 5
-                        in a skill. Many will never go beyond this, since
-                        their skills will never be stretched, however a
-                        few seasoned veterens will have obtained a level
-                        of 6 or 7. Levels beyond this require a real
-                        dedicated attempt to further your ability, rather
-                        than just simple experience.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Master (8-11)</title>
-
-                    <para>
-                        A master level of skill reflects a true understanding
-                        of the skill, and many years of dedicated study and
-                        training. Elite soldiers, leading research scientists
-                        and reknowned experts in a field would have a Master
-                        level of skill.
-                    </para>
-
-                    <para>
-                        Skill levels above 9 should be limited to named
-                        characters. A generic squad of elite soldiers for
-                        example should be limited to skills of 9 or less.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Legendary (12-15)</title>
-
-                    <para>
-                        This level is about the highest that will be found
-                        in most worlds, and such a score will only be had by
-                        the leaders in a field. Generally, such people will
-                        have a good reputation, and will have many decades
-                        of training and experience under their belt.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Mythical (16+)</title>
-
-                    <para>
-                        Generally this will be the province of super heroes
-                        and other supernatural creatures.
-                    </para>
-                </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Types of Skills</title>
-
-                <sect3>
-                    <title>Talents</title>
-
-                    <para>
-                        The skills available to characters will vary from
-                        genre to genre, but Yags has eight core skills,
-                        called <e>talents</e>, which all people know to
-                        a limited extent. Normally, all starting characters
-                        will have a score of 2 in each talent.
-                    </para>
-
-                    <para>
-                        The eight talents are athletics; awareness; brawl;
-                        charm; guile; sleight; stealth and throw. The
-                        skills article describes them in full detail. They
-                        represent basic skills which everyone picks up in
-                        childhood, and many other skills will default to
-                        a talent if they are not known.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Knowledges</title>
-
-                    <para>
-                        <e>Knowledges</e> are skills which represent
-                        theoretical knowledge which must be learnt.
-                        You can only make a check with a Knowledge skill
-                        if you already have a score in it. You can not
-                        normally learn or practise knowledges unless
-                        you have a source to study from.
-                    </para>
-
-                    <para>
-                        The following guide gives an indication of what
-                        different skill levels represent.
-                    </para>
-
-                    <itemlist order="strict">
-                        <item name="1">
-                            You've seen a TV program on the subject.
-                        </item>
-
-                        <item name="2-3">
-                            You have a layman's interest in the subject,
-                            or studied it at school. You will know the
-                            common stuff, but have gaps and lack depth
-                            and full understanding.
-                        </item>
-
-                        <item name="4-5">
-                            You have a graduate's level of knowledge,
-                            and have a well rounded view of the subject.
-                        </item>
-
-                        <item name="6+">
-                            You are a specialist in the subject, and
-                            probably study it as part of your job.
-                        </item>
-                    </itemlist>
-                </sect3>
-
-                <sect3>
-                    <title>Languages</title>
-
-                    <para>
-                        Language skills are treated on a scale from
-                        one to four, and are not normally 'rolled'
-                        like other skills. Instead, the level of skill
-                        gives a guide to how much of a conversation a
-                        character can understand.
-                    </para>
-
-                    <itemlist order="strict">
-                        <item name="1">
-                            The character can recognise the language
-                            and knows a few words, but cannot put
-                            sentences together.
-                        </item>
-
-                        <item name="2">
-                            The character can understand and form basic
-                            sentences. The character can probably get by
-                            in the market or in an inn.
-                        </item>
-
-                        <item name="3">
-                            The character has a good grasp of the
-                            language and can hold a decent
-                            conversation. They will obviously still be
-                            a foreigner however, and many unusual words
-                            will be beyond their understanding.
-                        </item>
-
-                        <item name="4">
-                            The character is fluent in the language.
-                            If they are a foreigner, then they may
-                            still have an accent, but they will not
-                            have any problems communicating.
-                        </item>
-
-                        <item name="5+">
-                            If the character is a non-native speaker,
-                            then they can speak without an accent. This
-                            level and beyond gives detailed knowledge of
-                            different dialects and really obscure words,
-                            but is not of use in everyday conversation.
-                        </item>
-                    </itemlist>
-
-                    <para>
-                        Knowledge of a language may automatically include
-                        the ability to read and write it as well. In some
-                        settings however (e.g. a medieval society) this
-                        will not be the case.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Standard skills</title>
-
-                    <para>
-                        Standard skills are a mixture of knowledge,
-                        experience, physical aptitude and common sense.
-                        If you have no score in a standard skill, then
-                        it can still be used, however the roll (just a
-                        straight d20) is halved, and a natural roll of
-                        1 or 2 is considered a fumble.
-                    </para>
-                </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Skill Difficulties</title>
-
-                <para>
-                    When making an ability check, there are some common
-                    difficulty levels, which are described in the
-                    following table. The descriptions assume an average
-                    level of attribute - those with an above average
-                    attribute will be able to get by with less skill.
-                </para>
-
-                <para>
-                    Most tasks will be against a fixed target number. If
-                    you are competing against another character, then
-                    they get a skill check with a modifier. The modifier
-                    is given in parenthesis below, and adds to the
-                    other person's check.
-                </para>
-
-                <targetlist targetFirst="false" bold="true">
-                    <title>Task Difficulties</title>
-
-                    <valueLabel>Type of Task</valueLabel>
-                    <targetLabel>Target</targetLabel>
-
-                    <item target="10 (-10)" value="Very easy.">
-                        Such a task can be achieved by a
-                        person with little or no skill with
-                        a good chance of success. A
-                        professional will always succeed.
+                    <item target="19" value="44t.">
                     </item>
-                    <item target="15 (-5)" value="Easy.">
-                        Anyone with a small amount of skill
-                        will be able to achieve this with a
-                        good chance of success, though it will
-                        be difficult for someone without any
-                        training at all.
+
+                    <item target="20" value="70t.">
                     </item>
-                    <item target="20 (+0)" value="Moderate.">
-                        Such tasks can be achieved without difficulty
-                        by a professional in ideal conditions. Those
-                        without proper training can find it difficult
-                        however.
+
+                    <item target="21" value="110t.">
+                        Blue whale.
                     </item>
-                    <item target="25 (+5)" value="Challenging.">
-                        People with less than professional
-                        level of skill will find it hard to
-                        succeed, and it is out of league of
-                        someone with only basic familiarity.
-                    </item>
-                    <item target="30 (+10)" value="Difficult.">
-                        Such tasks require a highly skilled
-                        person. Anyone with less than
-                        professional competence will always
-                        fail, and even professionals will be
-                        hard pressed.
-                    </item>
-                    <item target="40 (+20)" value="Very difficult.">
-                        A master of the skill can achieve such tasks
-                        with confidence, others will fail. About the
-                        highest level of difficulty under normal
-                        circumstances.
-                    </item>
-                    <item target="50 (+30)" value="Extreme.">
-                        A very difficult task under poor conditions.
-                    </item>
-                    <item target="60 (+40)" value="Heroic.">
-                        Truly heroic.
-                    </item>
-                    <item target="75 (+55)" value="Sheer folly.">
-                        Someone with superhuman level of skill will be
-                        hard pressed to achieve this difficulty.
-                    </item>
-                    <item target="100 (+80)" value="Absurd.">
-                        Well beyond what most people could achieve.
-                        Above average attributes are required to have
-                        even a chance of success.
+
+                    <item target="30" value="7,000t">
+                        A large battleship.
                     </item>
                 </targetlist>
 
                 <para>
-                    Tasks above <e>Very difficult</e> will be very rare,
-                    and often because of less than perfect
-                    conditions, rather than the nature of the
-                    task itself.
+                    <e>Vehicles</e> and other constructs are actually treated a
+                    little differently from creatures, in that their <t>Size</t>
+                    is actually based on the volume of the vehicle, rather than
+                    its mass. Obtaining real-world figures for the mass of animals
+                    is quite simple, but volumes are rarely given. Finding the
+                    volume of a vehicle or building is relatively straightforward,
+                    but finding a sensible value for its mass can be hard
+                    (especially when a vehicle's mass can change drastically
+                    depending on whether it is empty or loaded). However, creatures
+                    and vehicles should approximate to the same <t>Size</t> for any
+                    given size. A <t>Size</t> 5 vehicle is assumed to be one cubic
+                    metre, again increasing by a factor of 10 for each +5.
                 </para>
-
-                <para>
-                    Absurd tasks should be reserved for when a
-                    player tries something totally heroic, which
-                    is at the very edge of possibility.
-                </para>
-
-                <sect3>
-                    <title>Degree of Success</title>
-
-                    <para>
-                        If the skill check meets the target number,
-                        then a normal success is assumed. If the roll
-                        was significantly above the target number,
-                        then the success was particularly good. The
-                        exact result depends on the GM's interpretation
-                        but the following can be used as a guide.
-                    </para>
-
-                    <para>
-                        A <s>good</s> success is 10 points or more
-                        above the target. The task is performed with
-                        style, completeness or speed.
-                    </para>
-
-                    <para>
-                        An <s>excellent</s> success is 20 points or
-                        more above the target. It was probably
-                        performed with two of style, completeness or
-                        speed.
-                    </para>
-
-                    <para>
-                        A <s>superb</s> success is 30 points or more
-                        above the required target, and was achieved
-                        with style, completeness <e>and</e> speed.
-                        Anything better than this probably won't be
-                        noticed by an untrained witness.
-                    </para>
-
-                    <para>
-                        A <s>fantastic</s> success is 40 points or more
-                        beyond the target.
-                    </para>
-
-                    <para>
-                        Anything which is 50 points or more above the
-                        target number is <s>amazing</s>, and represent
-                        as close to perfection as is possible to
-                        achieve.
-                    </para>
-                </sect3>
             </sect2>
-        </sect1>
-
-        <sect1>
-            <title>Size</title>
-
-            <para>
-                How large a creature is can be measured in a number of
-                ways - height, length and mass being the common criteria.
-                In <e>Yags</e>, the <t>Size</t> attribute is a measure
-                of the creature's capacity to absorb damage, and how easy
-                it is to hit. In general, the <t>Size</t> of a creature
-                will increase logarithmically with its mass - every +5
-                increase in <t>Size</t> represents a ten fold increase
-                in mass.
-            </para>
-
-            <note title="Exponential scales">
-                <para>
-                    By using an exponential scale, the numbers are kept
-                    relatively small for both <t>Size</t> and <t>Strength</t>
-                    for even the largest of creatures. If Size wasn't
-                    exponential, a blue whale would need a <t>Size</t> of
-                    around 1000.
-                </para>
-            </note>
-
-            <para>
-                The scale is based around an average of a 70kg human male.
-                A <t>Size</t> 10 creature would be 700kg, a <t>Size</t> 15
-                creature 7 tonnes, and a <t>Size</t> 20 creature 70 tonnes.
-                Some examples are as follows.
-            </para>
-
-            <targetlist targetFirst="true" bold="true">
-                <targetLabel>Size</targetLabel>
-                <valueLabel>Mass and examples</valueLabel>
-
-                <item target="0" value="7kg.">
-                    A large house cat.
-                </item>
-
-                <item target="1" value="11kg.">
-                    1 year old child, a small dog (e.g., a beagle).
-                </item>
-
-                <item target="2" value="18kg.">
-                    5 year old child.
-                </item>
-
-                <item target="3" value="28kg.">
-                    10 year old child, a medium dog (e.g., a boxer).
-                </item>
-
-                <item target="4" value="44kg.">
-                    Small adult, a wolf.
-                </item>
-
-                <item target="5" value="70kg.">
-                    Typical adult. This size constitutes most of the
-                    adult human population. Anyone outside of this
-                    average is very noticeably large or small.
-                </item>
-
-                <item target="6" value="111kg.">
-                    Large adult.
-                </item>
-
-                <item target="7" value="176kg.">
-                    Donkey, black bear.
-                </item>
-
-                <item target="8" value="279kg.">
-                    Lion.
-                </item>
-
-                <item target="9" value="442kg.">
-                    Riding horse, grizzly bear.
-                </item>
-
-                <item target="10" value="700kg.">
-                    War horse, prehistoric cave bear. Also, a family car.
-                </item>
-
-                <item target="11" value="1.1t.">
-                    Rhino.
-                </item>
-
-                <item target="12" value="1.8t.">
-                    Great white shark.
-                </item>
-
-                <item target="13" value="2.8t.">
-                </item>
-
-                <item target="14" value="4.4t.">
-                    Triceratops. Also, a large tank.
-                </item>
-
-                <item target="15" value="7t.">
-                    Elephant.
-                </item>
-
-                <item target="16" value="11t.">
-                </item>
-
-                <item target="17" value="17t.">
-                </item>
-
-                <item target="18" value="28t.">
-                    Apatosaurus. The largest land animals known.
-                </item>
-
-                <item target="19" value="44t.">
-                </item>
-
-                <item target="20" value="70t.">
-                </item>
-
-                <item target="21" value="110t.">
-                    Blue whale.
-                </item>
-
-                <item target="30" value="7,000t">
-                    A large battleship.
-                </item>
-            </targetlist>
-
-            <para>
-                <e>Vehicles</e> and other constructs are actually treated a
-                little differently from creatures, in that their <t>Size</t>
-                is actually based on the volume of the vehicle, rather than
-                its mass. Obtaining real-world figures for the mass of animals
-                is quite simple, but volumes are rarely given. Finding the
-                volume of a vehicle or building is relatively straightforward,
-                but finding a sensible value for its mass can be hard
-                (especially when a vehicle's mass can change drastically
-                depending on whether it is empty or loaded). However, creatures
-                and vehicles should approximate to the same <t>Size</t> for any
-                given size. A <t>Size</t> 5 vehicle is assumed to be one cubic
-                metre, again increasing by a factor of 10 for each +5.
-            </para>
         </sect1>
 
         <sect1>
@@ -1321,13 +1323,24 @@
                 fast talking, spotting things and the like.
             </para>
 
+            <para>
+                When looking at skill difficulties, it should be remembered
+                that for these skills, the majority of people will have an
+                ability of 6 (3 x 2) - an average roll of 17. A skill check
+                of <e>moderate</e> difficulty will be failed 65% of the
+                time.
+            </para>
+
             <sect2>
                 <title>Athletics</title>
 
                 <para>
                     <e>Athletics</e> represents a mixture of gymnastics,
                     acrobatics, running, climbing, swimming and other
-                    general physical activities.
+                    general physical activities. Combat related activities
+                    (such as dodging) are actually covered by the
+                    <e>Brawl</e> skill, though in some circumstances
+                    <e>Athletics</e> can give a bonus.
                 </para>
 
                 <sect3>
@@ -1360,7 +1373,9 @@
 
                     <para>
                         The above chart pretty much assumes a clear path
-                        and running in a straight line.
+                        and movement in a straight line. The modifier
+                        for the type of action adds to the target difficulties
+                        listed below.
                     </para>
 
                     <sect4>
@@ -1469,7 +1484,7 @@
                             obstructions (<e>light obstructions</e>), but
                             tend to involve narrow ledges, sloping surfaces
                             and jumping between buildings (<e>dangerous</e>)
-                            leading to a target difficulty of 10 + 20 = 30.
+                            leading to a target difficulty of 0 + 20 = 20.
                         </para>
 
                         <para>
@@ -1687,6 +1702,50 @@
                         If the target is almost entirely hidden.
                     </item>
                 </targetlist>
+            </sect2>
+
+            <sect2>
+                <title>Brawl</title>
+
+                <para>
+                    This is the default skill for all forms of melee combat,
+                    but is mostly concerned with combat involving either no
+                    weapons, or small or improvised weapons such as knives,
+                    bottles, chairs and clubs.
+                </para>
+
+                <para>
+                    <e>Brawl</e> includes punching, kicking, dodging, wrestling,
+                    biting, grapples and throws. By default, there are no
+                    'martial art' skills in <s>Yags</s> - instead particular
+                    fighting styles are modelled as techniques (based on brawl)
+                    which grant special abilities or bonuses.
+                </para>
+
+                <para>
+                    Brawling is covered in detail in the combat article, so is
+                    not described in depth here.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Charm</title>
+            </sect2>
+
+            <sect2>
+                <title>Guile</title>
+            </sect2>
+
+            <sect2>
+                <title>Sleight</title>
+            </sect2>
+
+            <sect2>
+                <title>Stealth</title>
+            </sect2>
+
+            <sect2>
+                <title>Throw</title>
             </sect2>
         </sect1>
 
