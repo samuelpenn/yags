@@ -20,12 +20,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.70 $</version>
-            <date>$Date: 2009-01-11 22:54:22 $</date>
+            <version>$Revision: 1.71 $</version>
+            <date>$Date: 2009-01-16 23:40:31 $</date>
         </cvsinfo>
 
         <license type="Yags">
-            <year>2008</year>
+            <year>2009</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -1174,158 +1174,169 @@
                 </para>
 
             </sect2>
-        </sect1>
-
-        <sect1>
-            <title>Movement and Encumbrance</title>
-
-            <para>
-                Have far and fast you (or any creature in <s>Yags</s>) can
-                move depends on your attributes, skill and how much you
-                are carrying. There are two types of movement - combat
-                movement which covers short distances over a period of
-                a few seconds, and overland movement which covers walking,
-                hiking or running for minutes or hours at a time.
-            </para>
 
             <sect2>
-                <title>Combat Move</title>
+                <title>Movement</title>
 
                 <para>
-                    A character can move a distance in metres equal to half
-                    their <e>Move</e> score (round down) each round of
-                    combat without any penalty. For an average person, this
-                    is 6m/round. This is normally considered a free action.
+                    Have far and fast you (or any creature in <s>Yags</s>) can
+                    move depends on your attributes, skill and how much you
+                    are carrying. There are two types of movement - combat
+                    movement which covers short distances over a period of
+                    a few seconds, and overland movement which covers walking,
+                    hiking or running for minutes or hours at a time.
+                </para>
+
+                <para>
+                    Your <t>Move</t> score is equal to your
+                    <t>Size</t> + <t>Strength</t> + <t>Agility</t> + 1, which
+                    is 12 for a typical adult human.
                 </para>
 
                 <sect3>
-                    <title>Running</title>
+                    <title>Combat Move</title>
 
                     <para>
-                        A character can <e>run</e> at their full move each
-                        round. For an average human, this is 12m/round.
-                        This is effectively a light jog, and can be kept up
-                        over long distance. Moving this far in combat
-                        counts as an action, and restricts what else the
-                        character can do - see the combat article for full
-                        details.
+                        A character can move a distance in metres equal to half
+                        their <e>Move</e> score (round down) each round of
+                        combat without any penalty. For an average person, this
+                        is 6m/round. This is normally considered a free action.
+                    </para>
+
+                    <sect4>
+                        <title>Running</title>
+
+                        <para>
+                            A character can <e>run</e> at their full move each
+                            round. For an average human, this is 12m/round.
+                            This is effectively a light jog, and can be kept up
+                            over long distance. Moving this far in combat
+                            counts as an action, and restricts what else the
+                            character can do - see the combat article for full
+                            details.
+                        </para>
+
+                        <para>
+                            If running for a long time, the character will gain
+                            one point of fatigue every <y:health>athletics</y:health>
+                            minutes. A character with a <t>health</t> of 3 and an
+                            athletics of 2, will gain one point of fatigue
+                            every 6 minutes.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Sprinting</title>
+
+                        <para>
+                            A character can <e>sprint</e> at a speed equal to
+                            twice their Move score plus their athletics score
+                            each round. For a typical adult with a move of 12
+                            and an athletics score of 2, this would be
+                            26m/round. Basically, a person could run the 100m
+                            in just under 20s.
+                        </para>
+
+                        <para>
+                            A modern Olympic athlete, with an <t>agility</t>
+                            of 8 and a <t>strength</t> of 4 has a <t>move</t>
+                            of 18. Assuming an athletics of 15, they can
+                            sprint at 51m/round, which is pretty close to
+                            the current world record.
+                        </para>
+
+                        <para>
+                            A sprinting character gains a point of fatigue
+                            every round. All fatigue, wound and stun penalties
+                            reduce total movement when sprinting.
+                        </para>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Overland Movement</title>
+
+                    <quote signature="Lewis Carroll">
+                        If you don't know where you are going, any road will
+                        get you there.
+                    </quote>
+
+                    <para>
+                        Overland movement is where round to round movement
+                        isn't important, but distance travelled over the course
+                        of an entire day is. A day is divided into six
+                        <e>watches</e> of 4 hours each.
                     </para>
 
                     <para>
-                        If running for a long time, the character will gain
-                        one point of fatigue every <y:health>athletics</y:health>
-                        minutes. A character with a <t>health</t> of 3 and an
-                        athletics of 2, will gain one point of fatigue
-                        every 6 minutes.
+                        In good conditions over average terrain, a character
+                        can be expected to travel a distance in kilometres
+                        equal to their move score each watch. This equates
+                        to about 3km/h. A character will gain one fatigue each
+                        watch when moving at this speed.
+                    </para>
+
+                    <para>
+                        Modifiers to this (weather, type of terrain etc) are
+                        possible, but aren't described here. See the wilderness
+                        article for full details.
                     </para>
                 </sect3>
 
                 <sect3>
-                    <title>Sprinting</title>
+                    <title>Encumbrance</title>
 
                     <para>
-                        A character can <e>sprint</e> at a speed equal to
-                        twice their Move score plus their athletics score
-                        each round. For a typical adult with a move of 12
-                        and an athletics score of 2, this would be
-                        26m/round. Basically, a person could run the 100m
-                        in just under 20s.
+                        The amount a character can lift or carry is based on
+                        the square of their strength. A character can carry a
+                        number of kilogrammes up to this value without penalty.
                     </para>
 
-                    <para>
-                        A modern Olympic athlete, with an <t>agility</t>
-                        of 8 and a <t>strength</t> of 4 has a <t>move</t>
-                        of 18. Assuming an athletics of 15, they can
-                        sprint at 51m/round, which is pretty close to
-                        the current world record.
-                    </para>
+                    <targetlist targetFirst="false" bold="true">
+                        <valueLabel>Encumbrance</valueLabel>
+                        <targetLabel>Level</targetLabel>
+
+                        <item target="0" value="Unencumbered (x1).">
+                            A character can carry up to the square of their
+                            strength without being encumbered.
+                        </item>
+
+                        <item target="1" value="Light (x2).">
+                            A character who carries more than the square of their
+                            strength (but no more than twice this) is lightly
+                            encumbered, and has a -1 penalty to agility.
+                        </item>
+
+                        <item target="2" value="Moderately (x3).">
+                            Character has a -1 penalty to both agility and
+                            dexterity.
+                        </item>
+
+                        <item target="3" value="Heavily (x6).">
+                            Character has a -2 penalty to agility and a -1
+                            penalty to dexterity.
+                        </item>
+
+                        <item target="4" value="Greatly (x10).">
+                            A greatly burdened character has a -2 penalty to
+                            both agility and dexterity. You cannot run or
+                            sprint.
+                        </item>
+
+                        <item target="5" value="Over encumbered.">
+                            Character cannot move, all agility checks are
+                            automatically zero and -2 to dexterity.
+                        </item>
+                    </targetlist>
 
                     <para>
-                        A sprinting character gains a point of fatigue
-                        every round. All fatigue, wound and stun penalties
-                        reduce total movement when sprinting.
+                        Each level of encumbrance gives a character a -5
+                        penalty to all rolls to resist fatigue. A character
+                        always has a minimum move of 1, until they become
+                        over encumbered. Agility and dexterity can never
+                        be reduced below zero.
                     </para>
                 </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Overland Movement</title>
-
-                <para>
-                    Overland movement is where round to round movement
-                    isn't important, but distance travelled over the course
-                    of an entire day is. A day is divided into six
-                    <e>watches</e> of 4 hours each.
-                </para>
-
-                <para>
-                    In good conditions over average terrain, a character
-                    can be expected to travel a distance in kilometres
-                    equal to their move score each watch. This equates
-                    to about 3km/h. A character will gain one fatigue each
-                    watch when moving at this speed.
-                </para>
-
-                <para>
-                    Modifiers to this (weather, type of terrain etc) are
-                    possible, but aren't described here. See the wilderness
-                    article for full details.
-                </para>
-            </sect2>
-
-            <sect2>
-                <title>Encumbrance</title>
-
-                <para>
-                    The amount a character can lift or carry is based on
-                    the square of their strength. A character can carry a
-                    number of kilogrammes up to this value without penalty.
-                </para>
-
-                <targetlist targetFirst="false" bold="true">
-                    <valueLabel>Encumbrance</valueLabel>
-                    <targetLabel>Level</targetLabel>
-
-                    <item target="0" value="Unencumbered (x1).">
-                        A character can carry up to the square of their
-                        strength without being encumbered.
-                    </item>
-
-                    <item target="1" value="Light (x2).">
-                        A character who carries more than the square of their
-                        strength (but no more than twice this) is lightly
-                        encumbered, and has a -1 penalty to agility.
-                    </item>
-
-                    <item target="2" value="Moderately (x3).">
-                        Character has a -1 penalty to both agility and
-                        dexterity.
-                    </item>
-
-                    <item target="3" value="Heavily (x6).">
-                        Character has a -2 penalty to agility and a -1
-                        penalty to dexterity.
-                    </item>
-
-                    <item target="4" value="Greatly (x10).">
-                        A greatly burdened character has a -2 penalty to
-                        both agility and dexterity. You cannot run or
-                        sprint.
-                    </item>
-
-                    <item target="5" value="Over encumbered.">
-                        Character cannot move, all agility checks are
-                        automatically zero and -2 to dexterity.
-                    </item>
-                </targetlist>
-
-                <para>
-                    Each level of encumbrance gives a character a -5
-                    penalty to all rolls to resist fatigue. A character
-                    always has a minimum move of 1, until they become
-                    over encumbered. Agility and dexterity can never
-                    be reduced below zero.
-                </para>
             </sect2>
         </sect1>
 
@@ -1359,6 +1370,11 @@
 
             <sect2>
                 <title>Athletics</title>
+
+                <quote signature="Faith, Mirror's Edge">
+                    We call ourselves runners. We exist on the edge
+                    between the gloss and the reality. The mirror's edge.
+                </quote>
 
                 <para>
                     <e>Athletics</e> represents a mixture of gymnastics,
@@ -1689,6 +1705,12 @@
             <sect2>
                 <title>Awareness</title>
 
+                <quote signature="Claude Simon">
+                    To begin with, our perception of the world is deformed,
+                    incomplete. Then our memory is selective. Finally,
+                    writing transforms.
+                </quote>
+
                 <para>
                     The <e>Awareness</e> skill is used to spot objects,
                     here noises and generally be aware of your environment.
@@ -1756,10 +1778,141 @@
 
             <sect2>
                 <title>Charm</title>
+
+                <quote signature="Albert Camus">
+                    Charm is a way of getting the answer yes without asking
+                    a clear question.
+                </quote>
+
+                <para>
+                    <e>Charm</e> is your ability to make friends and influence
+                    people, and includes such things as small talk, flirting,
+                    telling jokes or simply being nice. <e>Charm</e> is
+                    generally based on <t>Empathy</t>. It does not have to be
+                    sincere, but is generally about getting another person to
+                    like you.
+                </para>
+
+                <para>
+                    If you wish to impress someone, make a
+                    <y:empathy>charm</y:empathy> check, and your result will
+                    determine what they think of you. <e>Charm</e>'s big
+                    advantage is that it isn't resisted
+                </para>
+
+                <targetlist targetFirst="true" bold="true">
+                    <targetLabel>Target</targetLabel>
+                    <valueLabel>Reaction</valueLabel>
+
+                    <item target="0" value="Dislike (-1).">
+                        You manage to annoy or upset the person such that
+                        they dislike you. They are unlikely to help you, and
+                        may hinder you depending on their personality.
+                    </item>
+
+                    <item target="10" value="Neutral.">
+                        You haven't upset them, but you haven't impressed
+                        them either. Whether they help or hinder you will
+                        depend on their personality.
+                    </item>
+
+                    <item target="20" value="Like (+1).">
+                        You made a good impression, and the person has had
+                        their opinion of you improved. They will probably
+                        be willing to help you, or spend time in your company,
+                        as long as it doesn't cost them too much.
+                    </item>
+
+                    <item target="30" value="Impressed (+2).">
+                        You have really impressed them, and they will make
+                        an effort to aid you, or to keep you happy.
+                    </item>
+
+                    <item target="40" value="Loved (+3).">
+                        They are taken with you, and will go out of their
+                        way to try and help you, even if it involves effort
+                        on their part.
+                    </item>
+                </targetlist>
+
+                <para>
+                    The above results affect first impressions, which may
+                    change according to what happens next. If you have any
+                    modifiers for good (or bad) appearance, status or
+                    reputation then they may modify your <t>Empathy</t> for
+                    this role.
+                </para>
+
+                <para>
+                    The better the impression you make, the more likely the
+                    other person is to like you, however even a <e>Love</e>
+                    result won't cause them to give you all their wealth
+                    (at least, not immediately).
+                </para>
             </sect2>
 
             <sect2>
                 <title>Guile</title>
+
+                <quote signature="A A Milne">
+                    If one is to be called a liar, one may as well make an
+                    effort to deserve the name.
+                </quote>
+
+                <para>
+                    The purpose of <e>Guile</e> is to deceive others, whether
+                    it is by direct lying or misdirection. <e>Guile</e> is
+                    also used to determine if others are lying. It uses a
+                    wide variety of attributes, depending on what you are
+                    attempting to do.
+                </para>
+
+                <sect3>
+                    <title>Simple lies</title>
+
+                    <para>
+                        Simple lying requires a <y:will>guile</y:will> check
+                        against the opponent's <y:empathy>guile</y:empathy>.
+                        It basically entails keeping calm, not saying more
+                        than you should and not showing your true emotions.
+                    </para>
+
+                    <para>
+                        This assumes that you are trying to keep things
+                        simple, and restricting the information you are
+                        providing.
+                    </para>
+
+                    <para>
+                        Obviously, if you wish to tell if someone is lying,
+                        then you make the <t>Empathy</t> check, and they
+                        make the <t>Will</t> check. If you exceed their roll,
+                        then you know if they are lying or telling the truth.
+                        If you fail, then you will randomly think they are
+                        being truthful or liars. If the target's roll was
+                        positive, you think they are truthful, otherwise you
+                        think they are lying. Neither party knows whether they
+                        succeeded or not.
+                    </para>
+
+                    <para>
+                        On a <e>good</e> success, you are certain whether the
+                        other person is lying or not. However, if the liar gets
+                        a <e>good</e> success, then you are certain they are
+                        telling the truth so this doesn't necessarily help.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Interrogation</title>
+
+                    <para>
+                        Interrogation is more about trying to catch the other
+                        person out with logic and evidence, and countering it
+                        requires quick thinking. In this case, both sides
+                        make a contest of <y:intelligence>guile</y:intelligence>.
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
@@ -1788,37 +1941,39 @@
             <sect2>
                 <title>Tech Levels</title>
 
-                <targetlist targetFirst="true">
-                    <valueLabel>Historical period</valueLabel>
-                    <targetLabel>TL</targetLabel>
-
-                    <item target="0" value="Stone age"/>
-                    <item target="1" value="Bronze age"/>
-                    <item target="2" value="Iron age"/>
-                    <item target="3" value="Medieval"/>
-                    <item target="4" value="Renaissance"/>
-                    <item target="5" value="Steam"/>
-                    <item target="6" value="Mechanical"/>
-                    <item target="7" value="Nuclear"/>
-                    <item target="8" value="Information"/>
-                    <item target="9+" value="The Future"/>
-                </targetlist>
-
                 <para>
-                    Levels beyond 9 are not detailed in the core rules,
-                    and will depend on the campaign in question.
+                    The level of technology of a culture is roughly determined
+                    by its <e>Tech Level</e>, which ranges from TL 0 (the stone
+                    age) through to TL 8 (modern day) and beyond. This is a
+                    crude method of determining a culture's technological
+                    capability, but is meant to be quick and simple.
                 </para>
 
                 <sect3>
                     <title>0: Stone Age</title>
+
+                    <para>
+                        Pre-technological civilisation with the barest
+                        minimum of sticks and stones, as well as knowledge
+                        of fire. Culture, language and possibly religion
+                        will arise at some point during TL 0.
+                    </para>
                 </sect3>
 
                 <sect3>
                     <title>1: Bronze Age</title>
+
+                    <para>
+                        The ability to work metals.
+                    </para>
                 </sect3>
 
                 <sect3>
                     <title>2: Iron Age</title>
+
+                    <para>
+                        The ability to work iron.
+                    </para>
                 </sect3>
 
                 <sect3>
