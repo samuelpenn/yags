@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.71 $</version>
-            <date>$Date: 2009-01-16 23:40:31 $</date>
+            <version>$Revision: 1.72 $</version>
+            <date>$Date: 2009-01-18 21:30:49 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -1377,172 +1377,100 @@
                 </quote>
 
                 <para>
-                    <e>Athletics</e> represents a mixture of gymnastics,
-                    acrobatics, running, climbing, swimming and other
-                    general physical activities. Combat related activities
-                    (such as dodging) are actually covered by the
-                    <e>Brawl</e> skill, though in some circumstances
-                    <e>Athletics</e> can give a bonus.
+                    Racing down an ally, leaping from roof top to roof top,
+                    climbing rapidly up walls or swinging across chasms on
+                    ropes - these are all tasks for which the <e>Athletics</e>
+                    skill is vital. It covers a wide range of athletic,
+                    acrobatic and gymnastic feats, including running,
+                    swimming, jumping and climbing.
                 </para>
 
                 <sect3>
                     <title>Running</title>
 
                     <para>
-                        In order to walk or run, you do not normally need
-                        to make a skill check. How far you can move in a
-                        round is based on your <s>Move</s> (as described
-                        previously), and is unaffected by skill unless you
-                        are <e>Sprinting</e>, in which case you add your
-                        base <e>Athletics</e> skill to how far you can
-                        move each round. In this case, <e>Athletics</e> is
-                        not multiplied by any attribute.
-                    </para>
-
-                    <para>
-                        The four modes of movement (in order of speed) are
-                        as follows (distance moved is in metres):
+                        Generally, if you want to run then you don't need to
+                        make a skill check. However, sometimes life has a
+                        habit of throwing obstacles in your path which can end
+                        up testing your skill to the limit. How fast you can
+                        run is based on your <t>Move</t> score, and is
+                        recapped below.
                     </para>
 
                     <targetlist targetFirst="true">
                         <targetLabel>Action</targetLabel>
                         <valueLabel>Distance/round</valueLabel>
-                        <item target="Careful" value="1/2 MOVE"/>
+                        <item target="Careful (x1/2)" value="1/2 MOVE"/>
                         <item target="Standard" value="MOVE"/>
-                        <item target="Running" value="MOVE x 2"/>
-                        <item target="Sprinting" value="MOVE x 2 + Athletics"/>
+                        <item target="Running (x2)" value="MOVE x 2"/>
+                        <item target="Sprinting (x3)" value="MOVE x 2 + Athletics"/>
                     </targetlist>
 
                     <para>
-                        The above chart pretty much assumes a clear path
-                        and movement in a straight line. The modifier
-                        for the type of action adds to the target difficulties
-                        listed below.
+                        Racing across clear terrain with nothing in your way
+                        is considered trivial, and you don't need to make a
+                        skill check to succeed. On the other hand, trying to
+                        dodge through crowds of people on a broken and icy
+                        footpath can require a lot of skill and luck. If the
+                        path is not clear and easy, then an
+                        <y:agility>athletics</y:agility> check is needed
+                        each round. The difficulty is modified by how fast
+                        you are moving - halved if moving carefully, doubled
+                        if running and tripled if sprinting.
                     </para>
 
-                    <sect4>
-                        <title>Obstructions</title>
+                    <targetlist bold="true">
+                        <targetLabel>Target</targetLabel>
+                        <valueLabel>Obstruction</valueLabel>
 
-                        <para>
-                            If the path is obstructed, then an
-                            <y:agility>Athletics</y:agility> check is required
-                            against a difficulty that depends on the level of
-                            obstruction. A <e>moderate</e> success allows
-                            standard movement, a <e>good</e> success or better
-                            allows running. Failure means half movement only.
-                        </para>
+                        <item target="0" value="Clear path.">
+                            No obstructions, a completely clear path.
+                        </item>
 
-                        <targetlist bold="true">
-                            <targetLabel>Target</targetLabel>
-                            <valueLabel>Obstruction</valueLabel>
+                        <item target="5" value="Light obstruction.">
+                            A typical lightly crowded street, or through
+                            a wood. Running is easy, unless you fumble
+                            and trip up.
+                        </item>
 
-                            <item target="0" value="Light obstruction.">
-                                A typical lightly crowded street, or through
-                                a wood. Running is easy, unless you fumble
-                                and trip up.
-                            </item>
+                        <item target="10" value="Moderate obstruction.">
+                            A busy street, a warehouse full of crates, across
+                            rubble or through dense woods.
+                        </item>
 
-                            <item target="10" value="Moderate obstruction.">
-                                A busy street, a warehouse full of crates, across
-                                rubble or through dense woods.
-                            </item>
+                        <item target="20" value="Heavy obstruction.">
+                            A busy market, or through thick foliage.
+                        </item>
 
-                            <item target="20" value="Heavy obstruction.">
-                                A busy market, or through thick foliage.
-                            </item>
-                        </targetlist>
+                        <item target="+5/+10" value="Unstable.">
+                            Unstable footing, such as rubble, crumbling rock
+                            or swaying rigging.
+                        </item>
 
-                        <para>
-                            A fumbled check results in a trip and fall which
-                            results in no movement this round and doubled
-                            difficulty the following round. Alternatively, you
-                            can opt to receive one level of fatigue instead of
-                            tripping.
-                        </para>
+                        <item target="+5/+10" value="Narrow.">
+                            Narrow or uneven footing, such as a narrow ledge
+                            or ground with many holes or cracks.
+                        </item>
 
-                        <para>
-                            If the obstructions consist of crowds, then you may
-                            try to barge through. A <y:strength>Brawl</y:strength>
-                            check is made at the same difficulty each round, and
-                            success drops the <e>Athletics</e> check difficulty
-                            by one level. Failure results in you being held up
-                            for a round. In either case, it will result in a lot
-                            of angry people behind you.
-                        </para>
-                    </sect4>
+                        <item target="+5/+10" value="Slippery.">
+                            Additionally to the other modifiers, if the
+                            surface is icy, oil covered or otherwise
+                            lacking in grip.
+                        </item>
 
-                    <sect4>
-                        <title>Unsafe ground</title>
+                        <item target="+5" value="Windy.">
+                            If any of the other modifiers apply, and it is
+                            windy, add a further +5.
+                        </item>
+                    </targetlist>
 
-                        <para>
-                            The above assumes that the path, though obstructed,
-                            is relatively safe and that the worst that is likely
-                            to occur from a trip is a bruised nose or upset
-                            pedestrians. In some cases, you may need to run
-                            across ground which is actually dangerous, where the
-                            footing is precarious, narrow or simply trapped.
-                        </para>
-
-                        <para>
-                            The difficulty for moving past obstructions is
-                            modified according to the level of danger.
-                        </para>
-
-                        <targetlist bold="true">
-                            <targetLabel>Target</targetLabel>
-                            <valueLabel>Severity</valueLabel>
-
-                            <item target="+10" value="Unsafe.">
-                                Unstable footing, pits or narrow walkways.
-                                Rubble, tangled roots or swamp.
-                            </item>
-
-                            <item target="+20" value="Dangerous.">
-                                Running across loose planks, avoiding traps,
-                                moving machinary or frequent gaps. Rooftops
-                                or amongst factory robots.
-                            </item>
-
-                            <item target="+30" value="Deadly.">
-                                Seriously dangerous conditions, such as
-                                in rigging, along cranes or in similar
-                                situations where stable footing is the
-                                exception rather than the norm.
-                            </item>
-
-                            <item target="+5" value="Slippery.">
-                                Additionally to the other modifiers, if the
-                                surface is icy, oil covered or otherwise
-                                lacking in grip, add a further +10.
-                            </item>
-
-                            <item target="+5" value="Windy.">
-                                If it is windy, add a further +5.
-                            </item>
-                        </targetlist>
-
-                        <para>
-                            For example, roof tops are generally clear of
-                            obstructions (<e>light obstructions</e>), but
-                            tend to involve narrow ledges, sloping surfaces
-                            and jumping between buildings (<e>dangerous</e>)
-                            leading to a target difficulty of 0 + 20 = 20.
-                        </para>
-
-                        <para>
-                            If the movement check is failed, then half movement
-                            is achieved as before, plus a second check must be
-                            immediately made at the same difficulty. On a
-                            failure, then you fall or are hit by some moving
-                            machinery, and take damage as appropriate.
-                        </para>
-
-                        <para>
-                            You may opt to move safely, in which case your
-                            movement is limited to half, but on failure the
-                            difficulty of the second check is halved.
-                        </para>
-                    </sect4>
+                    <para>
+                        Racing across rooftops might count as
+                        <e>light obstruction</e> (5) to avoid chimneys and
+                        aerials, with +5 for unstable (roof tiles will likely
+                        break) and +5 for uneven footing, for a total of 15.
+                        This goes up to 30 if you run, 45 if you sprint.
+                    </para>
 
                     <sect4>
                         <title>Chases</title>
@@ -1629,7 +1557,7 @@
 
                         <para>
                             Normally, you can speed climb a distance equal
-                            to quarter your <s>Move</s> each round. Make a
+                            to quarter your <t>Move</t> each round. Make a
                             <y:strength>Athletics</y:strength> check each
                             round, failure means no distance is climbed, and
                             make an <y:agility>Athletics</y:agility> check at
@@ -1647,7 +1575,7 @@
 
                         <para>
                             For longer climbs, a roll every 15 minutes can be
-                            made, at <s>Move</s> x 50. Again, speed is traded
+                            made, at <t>Move</t> x 50. Again, speed is traded
                             for reliability. Over these distances, a failure
                             can be ignored by gaining a level of
                             <e>Exhaustion</e>.
