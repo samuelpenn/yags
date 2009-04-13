@@ -20,8 +20,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.74 $</version>
-            <date>$Date: 2009-03-30 21:11:03 $</date>
+            <version>$Revision: 1.75 $</version>
+            <date>$Date: 2009-04-13 18:56:55 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -41,6 +41,7 @@
         <sect1>
             <title>What is Yags?</title>
 
+
             <para>
                 <e>Yags is Another Game System</e>, one that is meant to
                 provide a free, generic and modular set of rules for table
@@ -51,6 +52,8 @@
                 looking for rules to borrow for your own games.
             </para>
 
+            <image src="images/sm_die.jpg" width="15mm" height="15mm" align="center"/>
+
             <para>
                 <s>Yags</s> is split into a number of articles, of which
                 this - <e>Core</e> - is the first. Each article provides
@@ -58,12 +61,8 @@
                 - <e>Character</e> and <e>Combat</e> are recommended
                 reading before running a game. Other articles are optional,
                 and generally provide more detailed rules for a given
-                setting, environment or situation.
-            </para>
-
-            <para>
-                The articles are split into five main subject areas,
-                which are differentiated by colour:
+                setting, environment or situation. The main subject areas
+                are:
             </para>
 
             <itemlist order="strict">
@@ -135,14 +134,6 @@
                     a gifted novice won't beat a more average professional -
                     raw talent doesn't always make up for lack of experience,
                     but it sure does help you once you get that experience.
-                </para>
-
-                <para>
-                    However, the low randomness does mean that highly skilled
-                    individuals can be very, very good, and it is possible to
-                    build truly heroic individuals (such as a vengeful bride
-                    or blind swordmaster) who can survive against silly odds
-                    as long as they are careful.
                 </para>
             </sect2>
 
@@ -258,6 +249,7 @@
                         A creature's ability to achieve success in a task
                         is equal to an attribute multiplied by a skill, or
                         an attribute multiplied by 4 for a raw attribute check.
+                        An average ability is considered to be 12.
                     </item>
 
                     <item name="Score">
@@ -268,11 +260,20 @@
                     </item>
 
                     <item name="Task">
-                        An activity that requires an ability check.
+                        An activity that requires an ability check. To make
+                        a check, roll 1d20 and add your ability to the
+                        number rolled.
                     </item>
 
                     <item name="Die">
                         A single twenty sided die, a d20.
+                    </item>
+
+                    <item name="Difficulty">
+                        A number which represents how difficult a task is.
+                        You must roll your ability + d20 and equal or
+                        exceed the difficulty of the task to succeed. A
+                        moderate (average) task has a difficulty of 20.
                     </item>
                 </itemlist>
             </sect2>
@@ -281,12 +282,13 @@
                 <title>Task Resolution</title>
 
                 <para>
-                    When you (as a character) perform an action in <s>Yags</s>
-                    you will not normally have to make a die roll. Attempting
-                    a difficult task, or a simple task under stressful or
-                    rushed conditions may require that you make an ability
-                    check. An ability check is used to determine both whether
-                    you succeed and also how well you succeed.
+                    When you (as a character) perform a simple action in
+                    <s>Yags</s>, such as walking or opening a door, you
+                    will not normally be expected to make a die roll. If
+                    the action is difficult or dangerous however, an
+                    <e>ability check</e> may be required. The check is
+                    used to determine both whether you succeed and also
+                    how well you succeed.
                 </para>
 
                 <para>
@@ -312,25 +314,20 @@
                     the target difficulty then you succeed.
                 </para>
 
+                <para flag="red">
+                    If the d20 rolls a natural '1', then you automatically
+                    fail. This is the 'fumble chance', and is normally 1.
+                    In some situations, the fumble chance might be higher.
+                </para>
+
                 <para>
                     If it is important how well you succeed, then every 10
                     points by which you beat the target is considered an
                     extra level of success. Simply beating the target is
                     considered a <e>moderate</e> success, beating it by
                     10 or more is a <e>good</e> success (2 levels), by 20
-                    or more is <e>excellent</e> and 30+ is <e>fantastic</e>.
+                    or more is <e>excellent</e> and 30+ is <e>superb</e>.
                 </para>
-
-                <note title="Multiplication?">
-                    <para>
-                        Multiplication of stats is rare in roleplaying games,
-                        but it has its advantages. Multiplication ensures
-                        that both the attribute and the skill are important.
-                        A single high attribute will not allow you to be
-                        automatically better than everyone else at related
-                        skills.
-                    </para>
-                </note>
 
                 <para>
                     Sometimes, a skill contest is called for between two or
@@ -346,61 +343,55 @@
                     score wins.
                 </para>
 
-                <sect3>
-                    <title>A roll of 1</title>
-
-                    <para>
-                        Under a stressful situation, then a roll of '1' on
-                        the die represents automatic failure or a fumble.
-                        In some situations, the chance of a fumble may be
-                        higher than this (e.g., a roll of 1-3 might be a
-                        fumble).
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>A roll of 20</title>
-
-                    <para>
-                        Normally, a roll of 20 on the die is nothing
-                        special. If a character rolls a 20 when making a
-                        contested skill check against another character,
-                        and their skill level (i.e., not their skill x
-                        attribute) is higher than the second
-                        character's, then they automatically win.
-                    </para>
-                </sect3>
+                <para flag="red">
+                    In a skill contest, if one of you rolls a natural '20'
+                    then you automatically win as long as your skill score
+                    is higher than your opponents.
+                </para>
 
                 <sect3>
                     <title>Skilled Professionals</title>
 
                     <para>
-                        When a character achieves a skill of four, then a
-                        couple of options become open to them. First, in
-                        any non-opposed situation which is predictable,
-                        and where their ability is equal or higher than the
-                        target difficulty, then they can take an automatic
-                        success assuming a roll of '0'.
+                        If you have a score of 4 or higher in a skill, then
+                        you are considered to be a professional and have
+                        a couple of options available to you.
                     </para>
 
-                    <para>
-                        A narrow ledge above a pool of larva would count
-                        as long as there was no wind and the ledge was
-                        stable. If there was a high wind, then it becomes
-                        unpredictable and a roll is required (though the
-                        character still only fumbles on a '1').
+                    <para flag="green">
+                        In any non-opposed situation which is predictable,
+                        you may assume a roll of '0'. This negates the
+                        chance of a fumble.
                     </para>
 
-                    <para>
-                        Alternatively, if the situation is non-stressful
-                        (a narrow ledge above a pool of larva is always
-                        considered stressful), and there is time to think
-                        about the task beforehand, then the die roll can be
-                        considered to be an automatic '10'. Picking a lock
-                        or making a sword are examples of non-stressful
-                        situations. Picking a lock whilst people are
-                        fighting around you would be stressful however.
+                    <para flag="green">
+                        If such a situation is non-stressful, in that there
+                        is not an immediate risk of harm and you can take
+                        your time, then you can assume a roll of '10'. This
+                        removes the risk of fumbling, but takes twice as
+                        long as normal.
                     </para>
+
+                    <para flag="red">
+                        If the fumble chance is greater than 1, then the
+                        task is automatically considered non-predictable
+                        so these options can't be taken.
+                    </para>
+
+                    <example title="Predictable Stress">
+                        <para>
+                            A narrow but stable ledge above a pool of
+                            lava could be predictable, but it would be
+                            stressful. High winds could make such a
+                            situation non-predictable.
+                        </para>
+
+                        <para>
+                            Picking locks, making a sword or performing
+                            research in a library would all be predictable
+                            and non-stressful.
+                        </para>
+                    </example>
                 </sect3>
             </sect2>
         </sect1>
@@ -695,6 +686,13 @@
                         or transended beings.
                     </para>
 
+                    <para>
+                        High levels of skill allow you to purchase
+                        <e>Techniques</e>, which are specialisations which
+                        enable you to perform tasks which are difficult or
+                        impossible to do with just the basic skill.
+                    </para>
+
                     <sect4>
                         <title>Casual (1)</title>
 
@@ -789,8 +787,9 @@
 
                         <para>
                             The eight talents are athletics; awareness; brawl;
-                            charm; guile; sleight; stealth and throw. The
-                            skills article describes them in full detail. They
+                            charm; guile; sleight; stealth and throw. Since
+                            they are core to <s>Yags</s>, they are described
+                            in the next section, <e>Core Skills</e>. They
                             represent basic skills which everyone picks up in
                             childhood, and many other skills will default to
                             a talent if they are not known.
@@ -811,7 +810,11 @@
 
                         <para>
                             The following guide gives an indication of what
-                            different skill levels represent.
+                            different skill levels represent. Comparisons
+                            with the real world are difficult to do, and
+                            high levels of knowledge are often best
+                            represented by <e>specialisations</e> by using
+                            <e>Techniques</e>.
                         </para>
 
                         <itemlist order="strict">
@@ -834,9 +837,15 @@
                                 it regularly.
                             </item>
 
-                            <item name="6+">
-                                You are a specialist in the subject, and
-                                most probably study it as part of your job.
+                            <item name="6-7">
+                                You have a level of knowledge equivalent to
+                                that of a Master's Degree.
+                            </item>
+
+                            <item name="8+">
+                                If you have had a formal education, you
+                                probably have a Doctorate given your level
+                                of knowledge.
                             </item>
                         </itemlist>
                     </sect4>
@@ -1049,6 +1058,124 @@
                         </para>
                     </sect4>
                 </sect3>
+
+                <sect3>
+                    <title>Skill Defaults</title>
+
+                    <para>
+                        Some skills have a <e>default</e> - this will often
+                        be a <e>Talent</e>, but may be a more generic skill
+                        or one which covers a similar or related subject.
+                        You may choose to use a default skill instead of
+                        the real skill at any time.
+                    </para>
+
+                    <para flag="green">
+                        Your total result (after the die roll) is halved.
+                    </para>
+
+                    <para flag="green">
+                        Your fumble chance is doubled, or raised to one
+                        whichever is worse.
+                    </para>
+
+                    <para flag="green">
+                        You are unable to make use of any techniques
+                        that you know.
+                    </para>
+
+                    <para>
+                        Sometimes, using a default may also limit how you
+                        can use a skill. Using <e>Sleight</e> to diffuse
+                        a bomb instead of a <e>Demolitions</e> skill is
+                        possible, but you couldn't use it to know the type
+                        of bomb since that requires specialist knowledge
+                        only granted by actually having the skill.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Skill Pre-requisites</title>
+
+                    <para>
+                        If a skill has a pre-requisite, then before the
+                        skill can be purchased to level one, all
+                        pre-requisites must be met. Pre-requisites are
+                        always another skill at the specified level.
+                    </para>
+
+                    <para flag="green">
+                        Before you buy a skill at level one, you must
+                        purchase all pre-requisite skills to the
+                        specified level.
+                    </para>
+
+                    <para flag="green">
+                        A skill can never be more than double the level
+                        of any of its pre-requisite skills.
+                    </para>
+
+                    <para flag="green">
+                        You cannot put points into a skill if the next
+                        level of skill is not allowed by your current
+                        pre-requisites.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Limited Skills</title>
+
+                    <para>
+                        If a skill is limited by another skill, then it
+                        cannot be more than half the level of the skill
+                        it is limited by. Limited skills are rare, and
+                        generally only present in settings where
+                        certain knowledges are either very difficult,
+                        or in their infancy.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Techniques</title>
+
+                    <para>
+                        A <e>Technique</e> is a specialisation of a skill,
+                        and may provide bonuses or allow some particular
+                        special action to be attempted. A skill may have
+                        several techniques associated with it, and some
+                        techniques can be used with more than one skill.
+                        In the latter case, the technique only needs to
+                        be purchased once - it can then be used with any
+                        skill which uses it, as long as the skill is of
+                        sufficient level.
+                    </para>
+
+                    <para>
+                        A technique has a cost associated with it, which is
+                        the number of experience points which need to be
+                        spent to buy it. A level 6 technique costs 6 points
+                        to buy. The cost of the technique is also the
+                        minimum skill level that must be achieved before
+                        the technique can be purchased. If you do not have
+                        the required skill at a sufficient level, then the
+                        technique can't be bought.
+                    </para>
+
+                    <para>
+                        Finally, a technique may have a prerequisite. These
+                        are the techniques which must be known before this
+                        technique can be learnt.
+                    </para>
+
+                    <para>
+                        Some techniques will be based on a skill group
+                        rather than a skill. In this case the technique
+                        can be purchased when <e>any</e> skill in that
+                        group reaches the technique's level, but it can
+                        only be used with those skills of sufficient
+                        level.
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
@@ -1070,6 +1197,8 @@
                     increase in <t>Size</t> represents a ten fold increase
                     in mass.
                 </para>
+
+                <image src="images/sizes.jpg" align="center" width="6cm"/>
 
                 <para>
                     Adult humans range in <t>Size</t> from 4 (a small, slim
@@ -1214,6 +1343,8 @@
                     given size. A <t>Size</t> 5 vehicle is assumed to be one cubic
                     metre, again increasing by a factor of 10 for each +5.
                 </para>
+
+                <image src="images/hover-tank.jpg" align="center" width="6cm"/>
 
                 <para>
                     To get an idea of how large vehicles and objects scale,
@@ -2020,6 +2151,22 @@
                 </quote>
 
                 <para>
+                    Moving silently past guards, hiding in the shadows or
+                    otherwise trying to avoid being seen all comes under
+                    <e>Stealth</e>.
+                </para>
+
+                <para>
+                    To find a place to hide, you use <t>Perception</t>. To
+                    move quietly, you use <t>Agility</t>. If in doubt and
+                    both are required, make a single check with <t>Agility</t>.
+                </para>
+
+                <para>
+                    A <e>Stealth</e> check opposes the
+                    <y:perception>Awareness</y:perception> of the person you
+                    are trying to avoid, and the observer's roll is modified
+                    according to distance and situation.
                 </para>
             </sect2>
 
@@ -2083,36 +2230,116 @@
 
                         <para>
                             The ability to work iron, and covers much of the
-                            Roman period up until early medieval.
+                            Roman period up until early medieval. In some
+                            respects the Roman Empire probably touched on
+                            TL 3 at various points, but never quite got
+                            there and lost it all upon its collapse.
                         </para>
                     </sect4>
 
                     <sect4>
                         <title>3: Medieval (1000-1450)</title>
+
+                        <para>
+                            Steel, heavy cavalry and early experimentation
+                            with gunpowder mark TL 3. In Europe, TL 3 was
+                            the age of castles and knights, monastries and
+                            books, as well as the rise of the feudal system
+                            and early glimmerings of science.
+                        </para>
                     </sect4>
 
                     <sect4>
                         <title>4: Renaissance (1450-1750)</title>
+
+                        <para>
+                            The Age of Reason and the Enlightenment mark
+                            the dawn of science, though it doesn't really
+                            reach full bloom until TL 5. Gunpowder, sailing
+                            ships, astronomy and mathematics all make their
+                            mark on the world.
+                        </para>
                     </sect4>
 
                     <sect4>
                         <title>5: Steam (1750-1900)</title>
+
+                        <para>
+                            In this period the secrets of the universe begin
+                            to unravel, with the Industrial Revolution
+                            transforming society and science transforming the
+                            way we try to understand the world. What are to
+                            become the basic foundations of
+                            chemistry (the periodic table), biology (evolution)
+                            and physics (electricity, magnetism and atomic
+                            theory) are worked out during TL 5.
+                        </para>
                     </sect4>
 
                     <sect4>
                         <title>6: Mechanical (1900-1945)</title>
+
+                        <para>
+                            This is the start of the <e>Modern</e> age, with
+                            mass production beginning to take over from manual
+                            labour, the mechanisation of warfare and ultimately
+                            a full understanding of the power of the atom.
+                        </para>
+
+                        <para>
+                            The generic character generation rules for <s>Yags</s>
+                            work from TL 6 onwards. Before this, many of the
+                            academic and scientific skills require re-working.
+                        </para>
                     </sect4>
 
                     <sect4>
                         <title>7: Nuclear (1945-1980)</title>
+
+                        <para>
+                            Many TL 7 inventions actually came about at the end
+                            of TL 6, with the jet engine, nuclear bomb and
+                            computers. In TL 7 these things become mainstream.
+                            Electronics and medicine really start to revolutionise
+                            society, and the beginnings of space exploration. It
+                            wasn't until TL 7 (1972 to be precise) that anyone
+                            knew what the Earth looked like.
+                        </para>
                     </sect4>
 
                     <sect4>
                         <title>8: Information (1980-2020)</title>
+
+                        <para>
+                            At the time of writing, this is the present day.
+                        </para>
                     </sect4>
 
                     <sect4>
                         <title>9+: The Future (2020+)</title>
+
+                        <para>
+                            TL 9 and beyond represent science fiction, so
+                            exactly what technology is available will depend
+                            greatly on the background being modelled.
+                        </para>
+
+                        <para>
+                            By default, TL 9 is assumed to be relatively hard
+                            SF. Miniturisation of computers, greater capability
+                            of phones, human cloning and genetic screening and
+                            more compact power sources are probably the main
+                            areas of improvement.
+                        </para>
+
+                        <para>
+                            Nano-technology will be used in material construction
+                            and medicine but not much beyond that, and there may
+                            be more space based development. TL 9 will go on to
+                            at least 2050, maybe 2100 depending on the pace of
+                            development. Technology beyond that is impossible to
+                            predict.
+                        </para>
                     </sect4>
                 </sect3>
             </sect2>
