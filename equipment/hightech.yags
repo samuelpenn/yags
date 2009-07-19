@@ -6,8 +6,8 @@
 <article xmlns="http://yagsbook.sourceforge.net/xml"
          xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
-        <title>High Tech</title>
-        <tagline>Yags Traveller</tagline>
+        <title>Yags High Tech</title>
+        <tagline>Yags 0.7</tagline>
 
         <summary>
             Guns and other things that go bang, through the ages.
@@ -19,12 +19,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.1 $</version>
-            <date>$Date: 2007-10-13 12:55:40 $</date>
+            <version>$Revision: 1.2 $</version>
+            <date>$Date: 2009-07-19 17:19:18 $</date>
         </cvsinfo>
 
         <license type="Yags">
-            <year>2007</year>
+            <year>2008</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -38,17 +38,37 @@
 
     <body>
         <sect1>
-            <title>The Great Wars</title>
+            <title>Modern Equipment</title>
+
+            <para>
+                This article lists some of the more common equipment
+                available during the <e>Modern</e> period for <tm>Yags</tm>.
+                This covers pretty much the 20th and early 21st centuries
+                (TL6 - TL8).
+            </para>
+
+            <para>
+                The list is currently limited to items which require in-game
+                statistics, such as weapons and vehicles. Even here, it is
+                by no means an exhaustive list, but can be used as a basis
+                to derive other items as required.
+            </para>
+        </sect1>
+
+        <sect1>
+            <title>The Great Wars (TL6)</title>
 
             <para>
                 Here we consider weapons commonly available during TL6,
                 which includes both WWI and WWII. WWI saw the development
                 of machine guns and trench warfare which invented far
-                more effective ways of killing people.
+                more effective ways of killing people, and WWII developed
+                things about as far as you could go without the use of
+                advanced computers and electronics.
             </para>
 
             <sect2>
-                <title>Guns</title>
+                <title>The Great War</title>
 
                 <para>
                     Man portable or man-packed weapons, including machine
@@ -58,15 +78,40 @@
                 <import-equipment style="full">
                     <list>modern/tech6/smallarms.yags</list>
                     <list>modern/tech6/heavy-weapons.yags</list>
+                    <list>modern/tech6/ww1-vehicles.yags</list>
+                </import-equipment>
+            </sect2>
+
+            <sect2>
+                <title>The Interwar Years</title>
+            </sect2>
+
+            <sect2>
+                <title>World War 2</title>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Atomic Age (TL7)</title>
+
+            <sect2>
+                <title>Guns</title>
+
+                <para>
+                    Guns and things.
+                </para>
+
+                <import-equipment style="full">
+                    <list>modern/tech7/smallarms.yags</list>
                 </import-equipment>
             </sect2>
         </sect1>
 
         <sect1 format="wide">
-            <title>TL6 Equipment Charts</title>
+            <title>Equipment Charts</title>
 
             <sect2>
-                <title>Guns and Things</title>
+                <title>TL6 - The Great Wars</title>
 
                 <sect3>
                     <title>Small arms</title>
@@ -102,6 +147,44 @@
                         <y:list>modern/tech6/heavy-weapons.yags</y:list>
                     </y:import-weaponlist>
                 </sect3>
+            </sect2>
+
+            <sect2>
+                <title>TL7 - The Atomic Age</title>
+
+                <sect3>
+                    <title>Small arms</title>
+
+                    <para>
+                        These are small weapons designed to be easily man
+                        portable. They range from pistols up to rifles.
+                    </para>
+
+                    <y:import-weaponlist importance="2" style="list">
+                        <y:category>Pistols</y:category>
+                        <y:category>Rifles</y:category>
+
+                        <y:list>modern/tech7/smallarms.yags</y:list>
+                    </y:import-weaponlist>
+                </sect3>
+
+                <sect3>
+                    <title>Heavy Weapons</title>
+
+                    <para>
+                        These weapons are either normally vehicle mounted,
+                        or considered to be squad support weapons. They are
+                        generally not issued to all soldiers, but to dedicated
+                        teams who have been trained in their use.
+                    </para>
+
+                    <y:import-weaponlist importance="2" style="list">
+                        <y:category>Heavy</y:category>
+
+                        <y:list>modern/tech7/smallarms.yags</y:list>
+                    </y:import-weaponlist>
+                </sect3>
+
             </sect2>
         </sect1>
     </body>
