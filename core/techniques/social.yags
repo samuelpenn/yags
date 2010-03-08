@@ -58,9 +58,35 @@
         </description>
     </advantage>
 
+    <advantage name="Etiquette" type="technique">
+        <cost points="2"/>
+        <skill name="Social"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Etiquette is a knowledge of good manners and social
+                behaviour whilst in polite company. A character with
+                Etiquette automatically knows how to address someone
+                of rank, how to flirt with a noble Lady without
+                offending her, how to behave at a joust or banquet
+                and which fork to use with the dessert.
+            </para>
+
+            <para>
+                Without this technique, <t>intelligence</t> checks
+                are required to avoid making a faux pas when in
+                polite company, normally of moderate difficulty
+                or higher.
+            </para>
+        </description>
+    </advantage>
+
+
     <advantage name="Fashion" type="technique">
         <cost points="2"/>
-        <skill name="Etiquette"/>
+        <skill name="Social"/>
+
+        <prerequisite>Etiquette</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -81,7 +107,7 @@
 
     <advantage name="High fashion" type="technique">
         <cost points="4"/>
-        <skill name="Etiquette"/>
+        <skill name="Social"/>
         <prerequisite>Fashion</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -98,7 +124,7 @@
 
     <advantage name="Scandalous fashion" type="technique">
         <cost points="4"/>
-        <skill name="Etiquette"/>
+        <skill name="Social"/>
         <prerequisite>Fashion</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -237,26 +263,9 @@
         </description>
     </advantage>
 
-    <advantage name="Hidden insult" type="technique">
-        <cost points="6"/>
-        <skill name="Etiquette"/>
-
-        <prerequisite>Flirt</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Insult someone in a way that is polite and difficult to
-                respond to. If done cleverly, the target of the insult
-                may not even be sure that they have been insulted, which
-                makes it doubly difficult for them to respond.
-            </para>
-        </description>
-    </advantage>
-
-
     <advantage name="Flirt" type="technique">
         <cost points="4"/>
-        <skill name="Etiquette"/>
+        <skill name="Charm"/>
 
         <prerequisite>Carousing</prerequisite>
 
@@ -272,6 +281,33 @@
             </para>
         </description>
     </advantage>
+
+    <advantage name="Hidden insult" type="technique">
+        <cost points="4"/>
+        <skill name="Social"/>
+
+        <prerequisite>Etiquette</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Insult someone in a way that is polite and difficult to
+                respond to. If done cleverly, the target of the insult
+                may not even be sure that they have been insulted, which
+                makes it doubly difficult for them to respond.
+            </para>
+
+            <para>
+                Both insulter and target make an <t>Intelligence</t> based
+                <e>Guile</e> check. If the insulter wins, the target is at
+                a disadvantage for the rest of the scene (-1 to <t>Empathy</t>
+                and <t>Intelligence</t> when dealing with the insulter).
+                If the check fails, then nothing happens unless the target
+                also has this technique, in which case a witty reply means
+                that the insulter is at a disadvantage.
+            </para>
+        </description>
+    </advantage>
+
 
     <advantage name="Passionate speaker" type="technique">
         <cost points="4"/>
