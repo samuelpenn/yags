@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<equipment xmlns="http://yagsbook.sourceforge.net/xml"
+           xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <item name="HMS Dreadnaught">
+        <category>Vehicle</category>
+        <genre>WWI</genre>
+        <techLevel>6</techLevel>
+        <legality>0</legality>
+        <availability>1</availability>
+        <importance>2</importance>
+
+        <short>British Battleship</short>
+
+        <description>
+            <para>
+                HMS Dreadnaught was a new design of Battleship that came
+                into service in 1906. Previously, battleships had a mix
+                of primary and secondary guns, but the secondary weapons
+                were generally useless. HMS Dreadnaught was equipped only
+                with primary weapons, making her faster and lighter than
+                any other ship in her class. Her performance was also
+                helped by the use of steam turbines.
+            </para>
+        </description>
+
+        <performance realm="Water">
+            <speed>39</speed>
+            <acceleration>1</acceleration>
+            <range>12000</range>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="28" soak="56" move="80" acceleration="15">
+                <attribute name="strength" score="50"/>
+                <attribute name="health" score="5"/>
+                <attribute name="agility" score="1"/>
+            </attributes>
+
+            <combat>
+                <armour location="Front" score="30"/>
+                <armour location="Top" score="15"/>
+
+                <weapon name="12in Naval Gun (x10)">
+                    <attack score="40"/>
+                    <damage score="90"/>
+                    <increment>100</increment>
+                    <rof>1</rof><capacity>77</capacity>
+                    <recoil>0</recoil>
+                    <range>
+                        <short>3000</short>
+                        <medium>10000</medium>
+                        <long>40000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <vehicle/>
+                        <explosive score="5"/>
+                    </properties>
+                </weapon>
+            </combat>
+        </vehicle>
+    </item>
+
+
+    <item name="Mark I Tank">
+        <category>Vehicle</category>
+        <genre>WWI</genre>
+        <techLevel>6</techLevel>
+        <legality>1</legality>
+        <availability>1</availability>
+        <importance>3</importance>
+
+        <short>First combat tank of the Great War.</short>
+        <cost>2600</cost>
+        <weight>28000000</weight>
+
+        <construction>
+            <manufacturer>UK</manufacturer>
+            <year>1915</year>
+        </construction>
+
+        <description>
+            <para>
+                The Mark I was the first tank that was built for combat.
+                150 were built. They were noisy, unpleasant and unreliable,
+                but proved that the concept both worked, and was useful.
+                The armour was thick enough to stop most small arms fire,
+                though armour piercing rounds could still get through.
+            </para>
+        </description>
+
+        <performance realm="ground">
+            <speed>6</speed>
+            <acceleration>1</acceleration>
+            <range>50</range>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+
+            <attributes size="14" soak="21" move="10" acceleration="10">
+                <attribute name="strength" score="20"/>
+                <attribute name="health" score="2"/>
+                <attribute name="agility" score="1"/>
+            </attributes>
+
+            <combat>
+                <armour score="10"/>
+
+                <weapon name="QF 6 Pounder">
+                    <attack score="5"/>
+                    <damage score="35"/>
+                    <increment>20</increment>
+                    <rof>1</rof><capacity>20</capacity>
+                    <recoil>-20</recoil>
+                    <range>
+                        <short>500</short>
+                        <medium>1000</medium>
+                        <long>7500</long>
+                    </range>
+                    <properties>
+                        <firearm/><vehicle/><explosive score="2"/>
+                    </properties>
+                </weapon>
+
+                <weapon name="Light Machine Gun">
+                    <attack score="15"/>
+                    <damage score="35"/>
+                    <increment>25</increment>
+                    <rof>10</rof><capacity>7000</capacity>
+                    <recoil>-5</recoil>
+                    <range>
+                        <short>750</short>
+                        <medium>2000</medium>
+                        <long>4000</long>
+                    </range>
+                    <properties>
+                        <firearm/><heavy/><automatic/>
+                    </properties>
+                </weapon>
+            </combat>
+        </vehicle>
+    </item>
+
+
+</equipment>
+
+

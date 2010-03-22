@@ -24,7 +24,7 @@
         </cvsinfo>
 
         <license type="Yags">
-            <year>2008</year>
+            <year>2010</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -53,6 +53,124 @@
                 by no means an exhaustive list, but can be used as a basis
                 to derive other items as required.
             </para>
+
+            <para>
+                Weapon statistics are summarised at the end in tabular
+                form, which is easier to read when choosing what
+                equipment a character will be using.
+            </para>
+
+            <sect2>
+                <title>Weapon Statistics</title>
+
+                <para>
+                    The number of statistics for each weapon can be
+                    quite daunting, but they are all there for a reason.
+                    The least obvious are the codes listed in the
+                    weapon notes. They all have specific meanings which
+                    are consistent across genres and settings. The main
+                    purpose is to give a different feel for different
+                    weapons, and to make them useful in different
+                    circumstances.
+                </para>
+
+                <sect3>
+                    <title>Codes</title>
+
+                    <itemlist order="sort">
+                        <item name="Au">
+                            Fully automatic weapon, capable of firing multiple
+                            shots or burst fire. Unless specified, an automatic
+                            burst consist of 10 rounds. If a number is specified,
+                            then the burst has this many rounds.
+                        </item>
+
+                        <item name="Co-X">
+                            Damage effect is a cone, of X degrees. A single attack
+                            is made, and all within the cone get a defence.
+                        </item>
+
+                        <item name="Ex-X">
+                            Explosive damage. Does full damage to the target and
+                            those within X metres. Does mixed damage at -5 out to
+                            double X, and stun damage at -10 out to triple X.
+                        </item>
+
+                        <item name="Fi">
+                            Firearm. Missile weapon firing a high velocity round.
+                            Halves all armour which isn't rated as bullet proof.
+                            Quarters most defence rolls (except full defence).
+                        </item>
+
+                        <item name="Hv">
+                            Heavy weapon. Halves non-heavy bulletproof armour,
+                            ignores all weaker types of armour.
+                        </item>
+
+                        <item name="Li">
+                            Light weapon. Double the value of heavy or
+                            bulletproof armour (overrides the effects of
+                            being a firearm).
+                        </item>
+
+                        <item name="Lo-X">
+                            Weapon must be reloaded. X is number of rounds to reload.
+                        </item>
+
+                        <item name="Ls">
+                            Laser weapon, unaffected by wind, though may suffer
+                            in fog and thick atmospheres. Does not loose accuracy
+                            or suffer fumble increase at medium and long range.
+                            Counts as a firearm for defence rolls.
+                        </item>
+
+                        <item name="SA">
+                            Semi-automatic weapon, can fire multiple shots in a
+                            single round but is not capable of burst fire.
+                        </item>
+
+                        <item name="So">
+                            Sonic weapon, ignores all armour but very short
+                            ranged. It's base damage is halved at medium range
+                            and quartered at long range (instead of the normal
+                            damage modifiers).
+                        </item>
+
+                        <item name="TA">
+                            Automatic weapon that can fire automatic bursts of
+                            3 rounds as a single attack. Counts as a single
+                            attack, but any wounds caused are doubled.
+                        </item>
+
+                        <item name="Vc">
+                            Vehicle weapon. Against non-vehicle targets, completely
+                            ignores all soak unless heavy armour is worn, in which
+                            case the soak roll is merely halved.
+                        </item>
+                    </itemlist>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Vehicles</title>
+
+                <para>
+                    Vehicle statistics, notably damage and soak, are scaled
+                    differently to character scale items. Very roughly,
+                    you can double/halve damages ratings moving from one
+                    scale to the other, though it's not quite that simple.
+                </para>
+
+                <para>
+                    Vehicles have a number of damage levels proportional
+                    to the square of their size (size squared, divided by
+                    twenty to be precise).
+                </para>
+
+                <para>
+                    See the vehicle rules for detailed information.
+                </para>
+            </sect2>
         </sect1>
 
         <sect1>
@@ -81,13 +199,25 @@
                     <list>modern/tech6/ww1-vehicles.yags</list>
                 </import-equipment>
             </sect2>
-
+<!--
             <sect2>
                 <title>The Interwar Years</title>
             </sect2>
-
+-->
             <sect2>
                 <title>World War 2</title>
+
+                <para>
+                    This is the end of TL 6, and saw the development
+                    of many technologies that would become the basis
+                    for TL 7. The late war years are pretty much on
+                    the cusp of TL 6/TL 7, but are considered to be
+                    late TL 6 rather than early TL 7.
+                </para>
+
+                <import-equipment style="full">
+                    <list>modern/tech6/ww2-vehicles.yags</list>
+                </import-equipment>
             </sect2>
         </sect1>
 
@@ -161,7 +291,6 @@
                     </para>
 
                     <y:import-weaponlist importance="2" style="list">
-                        <y:category>Pistols</y:category>
                         <y:category>Rifles</y:category>
 
                         <y:list>modern/tech7/smallarms.yags</y:list>
