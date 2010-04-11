@@ -30,135 +30,111 @@
         </license>
     </header>
 
-    <advantage name="Nuclear physics" type="technique">
+    <advantage name="Physics" type="technique">
+        <cost points="2"/>
+        <tech level="5"/>
+        <skill name="Science"/>
+        <short>The study of particles and forces</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Physics is a branch of <e>Science</e>, concerned with
+                forces and motion, energy and matter at the smallest
+                and largest scales. Further specialist branches of
+                physics are higher level techniques.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Physicist (speciality)" type="technique">
         <cost points="4"/>
         <tech level="6"/>
-        <skill name="Physics"/>
+        <skill name="Science"/>
+        <prerequisite>Physics</prerequisite>
+        <short>A general physics specialisation</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Specialist knowledge of the field of nuclear physics.
-                You have experience in setting up and interpreting
-                experiments in this field, and can perform such
-                tasks as working out energy from nuclear reactions,
-                how best to shield from and handle radioactive
-                material, and how to design nuclear power stations
-                and weapons.
+                You have studied as a physicist, and are well versed in
+                a particular specialisation of that field. Possible
+                specialisations could be, but are not limited to,
+                <e>Nuclear physics</e>, <e>Relativity</e>,
+                <e>Quantam mechanics</e>, <e>Particle physics</e>,
+                <e>String theory</e> etc.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Quantum physics" type="technique">
+    <advantage name="Chemistry" type="technique">
+        <cost points="2"/>
+        <tech level="5"/>
+        <skill name="Science"/>
+        <short>The study of molecules and compounds</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Chemistry is a branch of <e>Science</e>, concerned with
+                chemicals and elements, and how they interact with each
+                other. Knowledge of mixing, identifying and researching
+                chemical substances is gained through use of this
+                technique.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Chemist (speciality)" type="technique">
         <cost points="4"/>
         <tech level="6"/>
-        <skill name="Physics"/>
+        <skill name="Science"/>
+        <prerequisite>Chemistry</prerequisite>
+        <short>A general chemistry specialisation</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You have a detailed knowledge of quantum physics,
-                including the behaviour of particles at the quantum
-                scales.
+                You have studied as a chemist, and are well versed in
+                a particular specialisation of that field. Possible
+                specialisations could be, but are not limited to,
+                <e>Organics</e>, <e>Inorganics</e>, <e>Polymers</e>,
+                <e>Warfare</e>, <e>Industrial</e>, <e>Modelling</e>
+                etc.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Relativity" type="technique">
+    <advantage name="Biology" type="technique">
+        <cost points="2"/>
+        <tech level="5"/>
+        <skill name="Science"/>
+        <short>The study of living things</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Biology is a particular branch of <e>Science</e>, and
+                covers the study of living things, including genetics
+                and evolution. It is closely related to <e>Chemistry</e>.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Biologist (speciality)" type="technique">
         <cost points="4"/>
         <tech level="6"/>
-        <skill name="Physics"/>
+        <skill name="Science"/>
+        <prerequisite>Biology</prerequisite>
+        <short>A general biology specialisation</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Knowledge of both special and general relativity.
+                You have studied as a biologist, and are well versed in
+                a particular specialisation of that field. Possible
+                specialisations could be, but are not limited to,
+                <e>Biochemistry</e>, <e>Genetics</e>, <e>Evolution</e>,
+                <e>Bioengineering</e>, <e>Warfare</e>, <e>Modelling</e>
+                etc.
             </para>
         </description>
     </advantage>
 
-    <advantage name="String theory" type="technique">
-        <cost points="6"/>
-        <tech level="8"/>
-        <skill name="Physics"/>
-
-        <prerequisite>Quantum physics</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of the various versions of String theory.
-                This isn't much practical use, though is useful if you
-                have a job as a theoretical physicist.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Biochemistry" type="technique">
-        <cost points="4"/>
-        <tech level="6"/>
-        <skill name="Chemistry"/>
-        <short>The chemistry of living organisms.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                A study of the organic chemistry of compounds and
-                processes within living organisms, attempting to
-                understand biology using chemistry.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Genetics" type="technique">
-        <cost points="4"/>
-        <tech level="7"/>
-        <skill name="Biology"/>
-        <prerequisite>Biochemistry</prerequisite>
-        <short>Advanced knowledge of genetics.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have a detailed knowledge of genetics. You
-                understand the theory of DNA and genetic inheritance,
-                as well as having experience in identifying and
-                extracting DNA, and making modifications to the
-                genetic information of living creatures.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Bioengineering" type="technique">
-        <cost points="6"/>
-        <tech level="9"/>
-        <skill name="Biology"/>
-        <prerequisite>Genetics</prerequisite>
-        <short>Advanced knowledge of cloning and tissue engineering.</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Building on your knowledge of genetics, you have
-                considerable experience with the design and growth
-                of artificial biological organisms, including clones,
-                specifically bred tissues and bio-enhancements.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Biowarfare" type="technique">
-        <cost points="4"/>
-        <skill name="Biology"/>
-        <prerequisite>Biochemistry</prerequisite>
-        <short>Knowledge of biological warfare.</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You are experienced in the field of biological warfare,
-                and have a good understanding of how biological agents
-                can be 'weaponised', how they disperse through the
-                environment, and how to combat them.
-            </para>
-
-            <para>
-                Can be combined with <e>Bioengineering</e> to make
-                viruses which target those with a specific genetic
-                identifier (races, families or even individuals).
-            </para>
-        </description>
-    </advantage>
 
     <advantage name="Cybernetics" type="technique">
         <cost points="4"/>
@@ -211,48 +187,23 @@
         </description>
     </advantage>
 
-    <advantage name="Statistics" type="technique">
+    <advantage name="Mathematician (specialist)" type="technique">
         <cost points="2"/>
         <skill name="Mathematics"/>
         <tech level="5"/>
-        <short>Statistical analysis</short>
+        <short>Specialist in mathematics</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You are skilled in the field of statistical analysis,
-                a branch of mathematics focused on deriving information
-                from raw data, and calculating the reliability of that
-                information.
+                You are a skilled mathematician and have specialised in
+                one or more areas of study. Possible specialisations
+                include <e>Statistics</e>, <e>Information theory</e>,
+                <e>Cryptography</e>, <e>Geometry</e>. You may take
+                this multiple times with different specialisations.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Information theory" type="technique">
-        <cost points="2"/>
-        <skill name="Mathematics"/>
-        <tech level="6"/>
-        <short>Quantification of information</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Information theory is a branch of applied mathematics
-                involving the measurement of information, often used
-                in calculating limits on the communication and
-                compression of information.
-            </para>
-        </description>
-    </advantage>
 
-    <advantage name="Cryptography" type="technique">
-        <cost points="4"/>
-        <skill name="Mathematics"/>
-        <short>Encryption and decryption of cyphers</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The branch of mathematics involved with the encryption and
-                decryption of information. You can attempt to design an
-                encryption algorithm, or try to break one.
-            </para>
-        </description>
-    </advantage>
 
     <advantage name="Paranormal investigation" type="technique">
         <cost points="4"/>

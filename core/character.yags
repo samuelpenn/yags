@@ -5,7 +5,7 @@
          xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
         <title>Characters</title>
-        <tagline>Yags 0.7.3</tagline>
+        <tagline>Yags 0.7.4</tagline>
 
         <summary>
             Generic character design rules for Yags, which allows characters
@@ -1287,6 +1287,7 @@
                     <y:techniques>techniques/academic.yags</y:techniques>
                     <y:techniques>techniques/combat.yags</y:techniques>
                     <y:techniques>techniques/firearms.yags</y:techniques>
+                    <y:techniques>techniques/melee.yags</y:techniques>
                     <y:techniques>techniques/outdoor.yags</y:techniques>
                     <y:techniques>techniques/physical.yags</y:techniques>
                     <y:techniques>techniques/social.yags</y:techniques>
@@ -1358,6 +1359,12 @@
                 <sect3>
                     <title>Combat Techniques</title>
 
+                    <para>
+                        These techniques are for general use in combat.
+                        Techniques specific to firearms or melee weapons
+                        are listed separately later.
+                    </para>
+
                     <y:import-advantages type="technique" tree="true">
                         <y:adv>techniques/combat.yags</y:adv>
                     </y:import-advantages>
@@ -1368,6 +1375,23 @@
 
                     <y:import-advantages type="technique" tree="true">
                         <y:adv>techniques/firearms.yags</y:adv>
+                    </y:import-advantages>
+                </sect3>
+
+                <sect3>
+                    <title>Melee Techniques</title>
+
+                    <para>
+                        The <e>Melee</e> skill covers a wide range of
+                        fighting styles and weapons, but assumes a
+                        relatively general knowledge of fighting. These
+                        techniques allow you to specialise in a particlar
+                        style of fighting suited for a culture or type of
+                        weapon.
+                    </para>
+
+                    <y:import-advantages type="technique" tree="true">
+                        <y:adv>techniques/melee.yags</y:adv>
                     </y:import-advantages>
                 </sect3>
 

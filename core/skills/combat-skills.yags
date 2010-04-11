@@ -25,16 +25,19 @@
         <group>Combat</group>
         <group>Melee</group>
         <group>Armed melee</group>
+        <default>Brawl</default>
 
         <short>Using a melee weapon in combat.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                This is the skill of fighting with melee weapon. It can be
+                This is the skill of fighting with melee a weapon. It can be
                 used with pretty much any standard weapon type, including
                 blades, spears, shields and clubs. Particularly exotic
                 weapons may require <e>Techniques</e> to be able to use
-                them effectively.
+                them effectively. <e>Melee</e> is normally used with
+                <t>Dexterity</t>. Small or improvised weapons such as
+                knives and daggers use the <e>Brawl</e> skill.
             </para>
         </description>
     </skill>
@@ -52,42 +55,6 @@
                 choose a suitable site for battle, to determine weaknesses
                 in the enemy's strategy and defences, and to plan the
                 logistics of travel and supply.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Melee weapon" type="standard">
-        <group>Combat</group>
-        <group>Armed melee</group>
-        <default>Brawl</default>
-        <short>Using a sword, club or spear.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of using a simple melee weapon, such as blades,
-                spears and clubs. This skill covers all such weapons, as
-                their use with a shield or a second parrying weapon.
-                Exotic weapons, such as chain weapons, aren't covered
-                since they are used in a completely different way. Small
-                weapons such as knives however are used with the <e>Brawl</e>
-                skill.
-            </para>
-
-            <para>
-                Melee weapon is used with <t>Dexterity</t>.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Chain weapon" type="standard">
-        <group>Combat</group>
-        <group>Armed melee</group>
-        <default>Melee weapon</default>
-        <short>Using chains, nunchuk or similar weapons.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Using flexible chain melee weapons.
             </para>
         </description>
     </skill>
@@ -119,12 +86,15 @@
         <group>Missile</group>
         <techRange min="4" max="20"/>
         <short>Using crossbows.</short>
+        <default>Throw</default>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Covers the use of all varieties of hand held crossbows.
                 Skill in this provides accuracy, and also enables
                 quicker reloading of the heavier versions of the crossbow.
+                Due to their ease of use, this skill defaults to the
+                <e>Throw</e> skill if it isn't known.
             </para>
 
             <para>

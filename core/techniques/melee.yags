@@ -1,11 +1,13 @@
 <?xml version="1.0"?>
 
 <!--
-    Combat techniques.
-    Now split up and moved into the techniques directory.
+    Melee techniques.
+
+    Techniques for (mostly low-tech) melee weapons.
  -->
 
-<advantages xmlns="http://yagsbook.sourceforge.net/xml/yags">
+<advantages xmlns="http://yagsbook.sourceforge.net/xml/yags"
+            xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
         <author>
             <fullname>Samuel Penn</fullname>
@@ -18,7 +20,7 @@
         </cvsinfo>
 
         <license type="Yags">
-            <year>2005</year>
+            <year>2010</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -39,12 +41,8 @@
             <para>
                 You can choose to attack with speed and finesse rather
                 than power. You get a +5 bonus to your attack, roll, but a
-                -5 penalty to your damage.
-            </para>
-
-            <para>
-                You can use this technique whilst wielding a single one
-                handed sword.
+                -5 penalty to your damage. You can only use this technique
+                whilst wielding one handed blades.
             </para>
         </description>
     </advantage>
@@ -66,7 +64,7 @@
     </advantage>
 
 
-    <advantage name="Single weapon" type="technique">
+    <advantage name="Single weapon fighting" type="technique">
         <cost points="2"/>
         <skill name="Melee"/>
 
@@ -86,13 +84,13 @@
         <cost points="4"/>
         <skill name="Melee"/>
 
-        <prerequisite>Single weapon</prerequisite>
+        <prerequisite>Single weapon fighting</prerequisite>
 
         <short>Increases base soak.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When defending against an attack with your <t>Melee</t>
+                When defending against an attack with your <e>Melee</e>
                 skill and using a single weapon, you have learnt to
                 retreat from blows without losing ground, lessening the
                 impact of the strike. You gain a bonus to your soak
@@ -102,176 +100,245 @@
         </description>
     </advantage>
 
-
-    <advantage name="Kenjutsu" type="technique">
+    <advantage name="Shield fighting" type="technique">
         <cost points="2"/>
         <skill name="Melee"/>
-
-        <short>Strike quickly and accurately.</short>
+        <short>The art of fighting with a shield.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You may use either <t>agility</t> or <t>dexterity</t>
-                for defence rolls. You are trained to take advantage
-                of other's mistakes, and get a +1 to <t>dexterity</t>
-                when attacking in a free strike. These are automatic.
-            </para>
-
-            <para>
-                Finally, at your option, you may substitute
-                <t>dexterity</t> for <t>agility</t> in your initiative
-                for acting (not declaring) if striking using the
-                <e>Kenjutsu</e> skill.
-            </para>
-
-            <para>
-                May be used when using a cutting sword, single or double
-                handed.
+                When using a one handed weapon and a shield, the full
+                attack, defence and damage bonus of the shield is
+                added when fighting.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Iajutsu draw" type="technique">
+    <advantage name="Shield wall" type="technique">
         <cost points="4"/>
         <skill name="Melee"/>
-        <prerequisite>Kenjutsu</prerequisite>
-
-        <short>Draw and strike as a single action.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                If prepared for combat, you may draw your sword and strike
-                using an <e>Iajutsu Draw</e> manouevre. Your attack is
-                <e>fast</e>, and your initiative to act is equal to your
-                <y:agility>Melee</y:agility>. If you succeed in hitting,
-                then add your <e>Melee</e> skill to the damage done.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Iajutsu strike" type="technique">
-        <cost points="6"/>
-        <skill name="Melee"/>
-        <prerequisite>Iajutsu draw</prerequisite>
-
-        <short>Bonus to attack and damage.</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                When in combat, any strike you make against someone who
-                has not yet attacked you in that combat gains a bonus to
-                attack and damage equal to your <e>Melee</e> skill when
-                you are fighting using any Bushido weapon.
-            </para>
-        </description>
-    </advantage>
-
-
-    <!--
-    <advantage name="Shield wall" type="technique">
-        <cost points="2"/>
-        <skill name="Weapon and shield"/>
         <short>Form a solid defensive wall of shields.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You are trained in fighting as part of a shield wall.
-                When fighting in such a formation with others who know
-                this technique, you grant a bonus to the defence rolls
-                of those either side of you equal to your skill. A
-                person may only gain such a bonus from one person.
-            </para>
-
-            <para>
-                <e>Defensive</e> or <e>normal</e> stance, declared.
+                When fighting alongside one or more others who know
+                this technique, as long as you are all fighting
+                using a weapon and shield combination then you grant
+                a defense bonus to both your neighbours equal to
+                your <e>Melee</e> skill. A bonus only gains the
+                highest bonus if they gain one from multiple people
+                in the shield wall. You do not gain or grant this
+                bonus if fighting aggressively.
             </para>
         </description>
     </advantage>
 
     <advantage name="Shielded attack" type="technique">
         <cost points="4"/>
-        <skill name="Weapon and shield"/>
-        <prerequisite>Shield wall</prerequisite>
+        <skill name="Melee"/>
+        <prerequisite>Shield fighting</prerequisite>
 
-        <short>Attack penalty due to multiple defences is halved.</short>
+        <short>Gain a free defence.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You are able to make more effective use of your shield
-                when attacking, halving the attack penalty caused by
-                multiple defences. Automatic.
+                When fighting with a shield you gain a free defence,
+                allowing you to make two defences without penalty.
+                The free defence is always made with your <e>melee</e>
+                skill.
             </para>
         </description>
     </advantage>
 
     <advantage name="Reliable defence" type="technique">
         <cost points="6"/>
-        <skill name="Weapon and shield"/>
+        <skill name="Melee"/>
         <prerequisite>Shielded attack</prerequisite>
 
-        <short>Free defence and reduce wound penalties.</short>
+        <short>Re-roll defence and reduced wound penalties.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Your defence rolls only suffer half the normal penalty
-                from wounds, stuns and fatigue. Further, you may re-roll
-                one defence roll each round.
+                When defending with a shield you may re-roll a single
+                defence each round. Further any penalties you suffer
+                from wounds, stuns and fatigues are halved when making
+                any defence checks with a shield.
             </para>
         </description>
     </advantage>
 
-
-
-
-    <advantage name="Spearman" type="technique">
+    <advantage name="Spear fighting" type="technique">
         <cost points="2"/>
-        <skill name="Longshaft weapon"/>
+        <skill name="Melee"/>
+
+        <short>Gain a +5 bonus against short weapons</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You are trained to take advantage of the extra reach that
-                your weapon gives you. If you have a greater reach than
-                your opponent, then you gain a +5 to attack. Automatic.
+                a longshaft weapon gives you. If you have a greater reach
+                than your opponent, then you gain a +5 to attack and don't
+                suffer any penalty to attack if fighting defensively.
             </para>
         </description>
     </advantage>
 
     <advantage name="Spear wall" type="technique">
         <cost points="4"/>
-        <skill name="Longshaft weapon"/>
-        <prerequisite>Spearman</prerequisite>
+        <skill name="Melee"/>
+        <prerequisite>Spear fighting</prerequisite>
 
         <short>Gain a bonus against mounted opponents.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 If you are on foot and fighting against a mounted foe,
-                then you gain a +5 bonus to attack and damage rolls if
-                you declare this technique. You may combine this with
-                <e>Shield wall</e> if using a shield.
+                then you gain a +5 bonus to attack and damage rolls
+                against your opponent. Your opponent does not gain
+                any attack bonuses for being mounted. You must be
+                using a longshaft weapon to use this.
             </para>
         </description>
     </advantage>
 
     <advantage name="Defensive reach" type="technique">
-        <cost points="6"/>
-        <skill name="Longshaft weapon"/>
-        <prerequisite>Spear wall</prerequisite>
+        <cost points="4"/>
+        <skill name="Melee"/>
+        <prerequisite>Spear fighting</prerequisite>
         <short>Ignore attack penalty if defensive.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                If you have the advantage of reach then penalties
-                caused by making multiple defences are halved for
-                either attack or defence rolls that round. Automatic.
+                If you have the advantage of reach against all those
+                attacking you this round, then penalties caused by
+                making multiple defences can be ignored for your
+                attacks. You still suffer them for defence. You must
+                be using a longshaft weapon.
             </para>
         </description>
     </advantage>
 
 
+    <advantage name="Chain fighting" type="technique">
+        <cost points="4"/>
+        <skill name="Melee"/>
+        <short>Better use of chain weapons.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You may reduce the fumble chance of chain weapons
+                by your <e>Melee</e> score, to a minimum of one.
+                When using the aggressive or defensive stances
+                the bonus is +10 instead of +5.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Great weapon fighting" type="technique">
+        <cost points="2"/>
+        <skill name="Melee"/>
+
+        <short>Greater effectiveness.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When fighting with a <e>Great weapon</e>, your gain a
+                +50% bonus to your size for purposes of damaging large
+                opponents. Further, the level of success required for
+                the melee manoeuvres <e>Improved damage</e>,
+                <e>Knockdown</e> and <e>Massive damage</e> is reduced
+                by one.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Great blow" type="technique">
+        <cost points="4"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Great weapon fighting</prerequisite>
+
+        <short>Get bonus to damage when aggressive.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Whenever you use an aggressive stance with a great
+                weapon, you gain a bonus to damage equal to your
+                <e>Melee</e> skill.
+            </para>
+        </description>
+    </advantage>
 
 
+    <advantage name="Finishing blow" type="technique">
+        <cost points="6"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Great weapon fighting</prerequisite>
+
+        <short>Increased chance of killing opponent.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If you critically or fatally wound your foe when you
+                strike with a great weapon, then must make a health
+                check as if they were fatally wounded. Further, all
+                such checks suffer a penalty equal to your <e>Melee</e>
+                skill.
+            </para>
+        </description>
+    </advantage>
 
 
+    <advantage name="Two weapon fighting" type="technique">
+        <cost points="2"/>
+        <skill name="Melee"/>
+
+        <short>Re-roll an attack or defence .</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When fighting with two weapons (including shields) you may
+                add half (round up) the attack, defence and damage of
+                the secondary weapon.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Combined attack" type="technique">
+        <cost points="4"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Two weapon fighting</prerequisite>
+
+        <short>Re-roll damage rolls.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When fighting with two single weapons, you may once per round
+                re-roll an attack, defence or damage roll. You must keep the
+                second roll even if it is worse.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Two blades" type="technique">
+        <cost points="6"/>
+        <skill name="Two weapons"/>
+
+        <prerequisite>Combined attack</prerequisite>
+
+        <short>Get to damage twice.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                By declaring this technique with the aggressive stance,
+                and losing one defence, you make a single attack which if
+                it hits allows you to roll damage twice. The target suffers
+                both damage rolls.
+            </para>
+        </description>
+    </advantage>
 
     <advantage name="Greater range" type="technique">
         <cost points="2"/>
@@ -334,6 +401,8 @@
         <cost points="2"/>
         <skill name="Bow"/>
 
+        <short>Load and fire a bow quickly</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You are have sufficient practise with loading and firing
@@ -351,6 +420,8 @@
 
         <prerequisite>Fast shot</prerequisite>
 
+        <short>Extra damage with a long bow</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Due to extensive training with firing a bow, you gain a
@@ -366,6 +437,8 @@
 
         <prerequisite>Improved pull</prerequisite>
 
+        <short>Reduced range penalties</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You are exceptionally skilled at firing a long or
@@ -378,6 +451,8 @@
     <advantage name="Spear catching" type="technique">
         <cost points="2"/>
         <skill name="Throw"/>
+
+        <short>Catch a spear thrown at you</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -395,6 +470,8 @@
         <skill name="Throw"/>
         <prerequisite>Spear catching</prerequisite>
 
+        <short>And throw it back again</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 As for spear catching, plus the character can throw the
@@ -407,6 +484,9 @@
     <advantage name="Mounted combat" type="technique">
         <cost points="2"/>
         <skill name="Ride"/>
+
+        <short>Bonuses when fighting from horseback</short>
+
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 A character with <e>mounted combat</e> does not have to make
@@ -421,8 +501,9 @@
     <advantage name="Mounted archery" type="technique">
         <cost points="4"/>
         <skill name="Ride"/>
-
         <prerequisite>Mounted combat</prerequisite>
+
+        <short>Archery from horseback</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -434,110 +515,6 @@
         </description>
     </advantage>
 
-
-    <advantage name="Cleave" type="technique">
-        <cost points="2"/>
-        <skill name="Great weapon"/>
-
-        <short>Halve armour of opponent.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Automatic technique which allows you to always use the
-                half armour column against armour when using a great
-                weapon.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Great blow" type="technique">
-        <cost points="4"/>
-        <skill name="Great weapon"/>
-
-        <prerequisite>Cleave</prerequisite>
-
-        <short>Get bonus to damage when aggressive.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Whenever you use an aggressive stance, you gain a bonus to
-                damage equal to your <e>great weapon</e> skill.
-                Further, the level of success required
-                for the <e>Improved damage</e> and <e>Mighty damage</e>
-                manouevres is automatically reduced by one.
-            </para>
-        </description>
-    </advantage>
-
-
-    <advantage name="Finishing blow" type="technique">
-        <cost points="6"/>
-        <skill name="Great weapon"/>
-
-        <prerequisite>Great blow</prerequisite>
-
-        <short>Increase chance of killing opponent.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                When you declare a <e>Killing blow</e>, any damage that
-                takes your opponent to <e>critically</e> or <e>fatally</e>
-                wounded forces them to make a health check or die as
-                if they were fatally wounded. They get a penalty to this
-                check equal to your skill.
-            </para>
-        </description>
-    </advantage>
-
-
-    <advantage name="Secondary defence" type="technique">
-        <cost points="2"/>
-        <skill name="Two weapons"/>
-
-        <short>Re-roll a single defence roll.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Once per round you may re-roll any defence roll. You must
-                keep the second roll even if it is worse. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Combined attack" type="technique">
-        <cost points="4"/>
-        <skill name="Two weapons"/>
-
-        <prerequisite>Secondary defence</prerequisite>
-
-        <short>Re-roll damage rolls.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You may re-roll your damage roll once a round. You must
-                keep the second roll. Automatic.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Two blades" type="technique">
-        <cost points="6"/>
-        <skill name="Two weapons"/>
-
-        <prerequisite>Combined attack</prerequisite>
-
-        <short>Get to damage twice.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                By declaring this technique with the aggressive stance,
-                and loosing one defence, you make a single attack which if
-                it hits allows you to roll damage twice. The target suffers
-                both damage rolls.
-            </para>
-        </description>
-    </advantage>
-    -->
 </advantages>
 
 

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
 <!--
-    Core techniques.
-    -->
+    Core combat techniques.
+  -->
 
 <advantages xmlns="http://yagsbook.sourceforge.net/xml/yags"
             xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
@@ -18,7 +18,7 @@
         </cvsinfo>
 
         <license type="Yags">
-            <year>2006</year>
+            <year>2010</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -35,7 +35,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The character is trained to fight in conditions where
+                You are trained to fight in conditions where
                 vision is restricted. Gain a +1 bonus to Perception
                 for every four points of <e>Awareness</e> when it is
                 used to cap skills in darkness. Automatic.
@@ -47,7 +47,7 @@
         <cost points="2"/>
         <skill name="Brawl"/>
 
-        <short>Bonus when grappling.</short>
+        <short>Ignore grappling penalty.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -58,87 +58,6 @@
             </para>
         </description>
     </advantage>
-
-    <advantage name="Disabling hold" type="technique">
-        <cost points="4"/>
-        <skill name="Brawl"/>
-        <prerequisite>Close combat</prerequisite>
-
-        <short>Cause pain when grappling.</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                When performing a grapple manouevre, you can apply pain
-                to the target through knowledge of pressure points,
-                preventing them from acting or crying out. Any time you
-                inflict a -2 penalty to the target for the initial
-                grapple check, then they are disabled and cannot act
-                (even to try to escape or cry out) all the time you
-                have them held.
-            </para>
-        </description>
-    </advantage>
-
-
-    <advantage name="Disabling attack" type="technique">
-        <cost points="6"/>
-        <skill name="Brawl"/>
-        <prerequisite>Disabling hold</prerequisite>
-
-        <short>Target looses their attacks.</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                An attack which aims to temporarily disable a foe by
-                striking at pressure points on the body. It is an open
-                hand attack that does not use a weapon.
-            </para>
-
-            <para>
-                Must be declared with the aggressive stance, and requires
-                a <e>good</e> attack. On a successfull attack which
-                causes damage, the target must make a <y:health/> check
-                against 10 + 5 x stuns or loose the rest of their attacks
-                and defences that round. On an <e>excellent</e> attack,
-                the target also gains fatigue levels equal to the number
-                of stuns taken and is unable to cry out.
-            </para>
-        </description>
-    </advantage>
-
-
-
-    <advantage name="Dirty fighting" type="technique">
-        <cost points="4"/>
-        <skill name="Brawl"/>
-
-        <short>Turn attack into stun attack.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                When making an attack with a martial weapon, after the
-                damage roll you may opt to re-roll the damage and do
-                <e>stun</e> damage at the same bonus. Represents hitting
-                the target with the hilt of the sword, or head butting
-                them, after the primary attack fails to get through
-                their armour.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Brute force" type="technique">
-        <cost points="4"/>
-        <skill name="Brawl"/>
-
-        <short>Can use strength when making an attack.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                When making an attack roll, you may use <t>strength</t>
-                instead of agility. However, doing so uses up one defence
-                slot and you may not use the <e>defensive stance</e>.
-            </para>
-        </description>
-    </advantage>
-
 
     <advantage name="Unarmed combat" type="technique">
         <cost points="4"/>
@@ -153,8 +72,6 @@
                 unarmed attacks. You may ignore the <e>free strike</e>
                 caused by not using a martial weapon, though still
                 suffer strikes due to reach or other circumstances.
-                This technique is automatic as long as you are using
-                <e>Brawl</e> or a skill associated with it.
             </para>
         </description>
     </advantage>
@@ -175,13 +92,45 @@
                 never give you a bonus, but may reduce the penalties
                 you suffer for attacking someone with a longer reach.
             </para>
+        </description>
+    </advantage>
 
+    <advantage name="Disabling hold" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+        <prerequisite>Close combat</prerequisite>
+
+        <short>Cause pain when grappling.</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                This technique is automatic, and applies whichever melee
-                skill you are using.
+                When performing a grapple manouevre, you can apply pain
+                to the target through knowledge of pressure points which
+                helps to disable them quickly. Any time you succeed at a
+                <e>grab</e>, or succeed at improving the <e>grab</e>, the
+                foe suffers an extra -1 penalty to <t>Agility</t> and
+                <t>Dexterity</t> for every full 4 points of <e>Brawl</e>
+                skill that you have.
             </para>
         </description>
     </advantage>
+
+    <advantage name="Brute force" type="technique">
+        <cost points="4"/>
+        <skill name="Brawl"/>
+
+        <short>Can use strength when making an attack.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When making an attack roll, you may use <t>strength</t>
+                instead of agility. However, doing so uses up one defence
+                slot and you may not use the <e>defensive stance</e>.
+            </para>
+        </description>
+    </advantage>
+
+
+
 
 
     <advantage name="Hard to kill" type="technique">
@@ -250,7 +199,7 @@
     </advantage>
 
     <advantage name="Tough" type="technique">
-        <cost points="6"/>
+        <cost points="4"/>
         <skill name="Brawl"/>
 
         <prerequisite>Ignore pain</prerequisite>
@@ -295,6 +244,7 @@
     <advantage name="Reflex dodge" type="technique">
         <cost points="4"/>
         <skill name="Melee"/>
+        <skill name="Brawl"/>
 
         <prerequisite>Combat reflexes</prerequisite>
 
@@ -309,23 +259,16 @@
                 declare a defence against that attack, then your base
                 defence is unmodified.
             </para>
-
-            <para>
-                Since your base 'to be hit' number is unaffected by the
-                number of defences you make, or by attacks from missile
-                weapons which halve your dodge, this technique is mostly
-                of use when you are outnumbered or dodging arrows and
-                bullets.
-            </para>
         </description>
     </advantage>
 
 
     <advantage name="Opportunity attack" type="technique">
-        <cost points="6"/>
+        <cost points="4"/>
+        <skill name="Brawl"/>
         <skill name="Melee"/>
 
-        <prerequisite>Reflex dodge</prerequisite>
+        <prerequisite>Combat reflexes</prerequisite>
 
         <short>Do not have to declare manouevres.</short>
 
@@ -333,17 +276,21 @@
             <para>
                 Your training enables you to take advantage of
                 opportunities as they present themselves, rather than
-                having to plan ahead. Whenever you make a <e>good</e>
-                attack or better, you may choose to use a
-                <e>manouevre</e> as long as other requirements (such
-                as stance) are met. Automatic.
+                having to plan ahead. You no longer have to declare
+                combat manouevres which require a <e>good</e> success
+                (though you still need to make a <e>good</e> success,
+                and need to meet other requirements such as stance).
+                If you have a <e>brawl</e> of 8 or higher, you no
+                longer need to pre-declare manouevres needing an
+                <e>excellent</e> success.
             </para>
         </description>
     </advantage>
 
     <advantage name="Improved damage" type="technique">
-        <cost points="8"/>
+        <cost points="6"/>
         <skill name="Melee"/>
+        <skill name="Brawl"/>
 
         <prerequisite>Opportunity attack</prerequisite>
 
@@ -353,25 +300,29 @@
             <para>
                 Automatic technique which allows you to focus your attacks
                 in order to cause maximum harm to your foe. You may add
-                your skill to any damage done for all melee attacks.
+                half your <e>Brawl</e> or <e>Melee</e> skill (whichever is
+                being used to attack) to any damage done for all
+                brawl and melee attacks.
             </para>
         </description>
     </advantage>
 
     <advantage name="Multiple attacks" type="technique">
-        <cost points="10"/>
+        <cost points="8"/>
         <skill name="Melee"/>
+        <skill name="Brawl"/>
+
         <prerequisite>Improved damage</prerequisite>
 
-        <short>Two attacks a round.</short>
+        <short>Extra attacks each round.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Aggressive stance. You may attack multiple times each round
                 with a penalty of -15 per extra attack to all attacks. The
-                maximum number of attacks you can make is one per five
+                maximum number of attacks you can make is one per four
                 levels of skill (so 2 attacks, or 1 extra attack, at level
-                10). When declaring use of this technique, the first attack
+                8). When declaring use of this technique, the first attack
                 is fast, the second slow and the third is normal.
             </para>
         </description>
@@ -452,9 +403,9 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 When you have surprise against someone, you gain a bonus
-                equal to your <e>Tactics</e> to all melee attack, defence
-                and damage rolls. For ranged attacks, you have a bonus to
-                your attack roll.
+                equal to your <e>Tactics</e> to all brawl and melee attack,
+                defence and damage rolls. For ranged attacks, you have a
+                bonus to your attack roll.
             </para>
 
             <para>
