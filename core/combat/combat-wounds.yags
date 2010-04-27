@@ -27,7 +27,7 @@
         </cvsinfo>
 
         <license type="Yags">
-            <year>2004</year>
+            <year>2010</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -47,7 +47,7 @@
                 Damage can take many forms, but it all comes down to one
                 of the three types - either <e>wounds</e>, <e>stuns</e> or
                 <e>mixed</e>. Related to damage is <e>fatigue</e> and
-                <e>exhaustion</e>.
+                <e>exhaustion</e>, as well as <e>shock</e>.
             </para>
 
             <sect2>
@@ -59,6 +59,13 @@
                     can lead to bleeding, infection and death. Wounds
                     heal over a period of many weeks.
                 </para>
+
+                <para>
+                    Wounds are caused by lethal weapons such as swords,
+                    spears, maces, arrows and bullets. Anything which can
+                    penetrate the skin and/or break bones and cause
+                    damage to internal organs causes <e>wounds</e>.
+                </para>
             </sect2>
 
             <sect2>
@@ -67,7 +74,35 @@
                 <para>
                     Stuns represent cuts and bruises which will generally
                     heal naturally within a few days. They will rarely
-                    lead to death
+                    lead to death and are generally caused by non-lethal
+                    attacks such as punches, whips or rubber clubs.
+                </para>
+
+                <para>
+                    The big difference between <e>wounds</e> and <e>stuns</e>
+                    is that <e>stuns</e> aren't cumulative. If you receive
+                    more stuns than you currently have, then your <e>stun</e>
+                    total is set to the amount you've received. Unless you
+                    receive less than half what you currently have, you
+                    always gain at least one stun however.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Mixed Damage</title>
+
+                <para>
+                    <e>Mixed</e> damage is half way between <e>stuns</e> and
+                    <e>wounds</e>. Weapons which can damage internal organs,
+                    but which don't tend to penetrate far can cause <e>mixed</e>
+                    damage. This includes knives, wooden clubs and other
+                    light weapons.
+                </para>
+
+                <para>
+                    <e>Mixed</e> damage causes half stuns (rounded up) and
+                    half wounds (rounded down), though stuns are considered
+                    cumulative.
                 </para>
             </sect2>
 
@@ -122,12 +157,10 @@
 
                 <para>
                     If you suffer <e>shock</e>, then your current initiative
-                    total is reduced, down to a minimum of zero. This comes
-                    into play immediately, and will cause you to act later
-                    in the round than you were previously. Under no
-                    circumstances can it allow you to act again if you've
-                    already acted that round however. The change affects
-                    both declaring actions, and the actions themselves.
+                    total is reduced, down to a minimum of zero. Changes to
+                    your initiative don't come into play until next round.
+                    The change affects both declaring actions, and the
+                    actions themselves.
                 </para>
 
                 <para>
@@ -144,6 +177,12 @@
                     unless you take a level of <e>fatigue</e>. Alternatively,
                     you can spend two rounds re-rolling your initiative,
                     since the second roll won't be halved.
+                </para>
+
+                <para>
+                    You won't normally receive <e>shock</e> from attacks,
+                    but fire and chemical attacks can cause it, as may a
+                    few martial arts forms.
                 </para>
             </sect2>
 
@@ -203,7 +242,7 @@
                     scale target (e.g., a fleshy person), then the character
                     receives <s>no</s> soak roll, unless they are fully
                     protected with heavy armour. In the latter case, then
-                    their soak roll is merely halved.
+                    their entire soak roll is merely halved.
                 </para>
 
                 <para>
@@ -262,6 +301,12 @@
                         mixed damage (but the damage rating is itself
                         unchanged) and out to triple the radius
                         <e>stuns</e> are caused.
+                    </para>
+
+                    <para>
+                        Each multiple beyond that, reduce the number of
+                        stuns caused by a factor of 5. The damage roll
+                        isn't modified, just the number of stuns.
                     </para>
 
                     <para>
@@ -326,7 +371,7 @@
                                 </row>
                                 <row>
                                     <entry>10 lb</entry>
-                                    <entry>65</entry>
+                                    <entry>80</entry>
                                     <entry>Ex-4</entry>
                                     <entry>10</entry>
                                 </row>

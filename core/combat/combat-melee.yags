@@ -25,7 +25,7 @@
         </cvsinfo>
 
         <license type="Yags">
-            <year>2004</year>
+            <year>2010</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -829,8 +829,8 @@
                     </para>
 
                     <para>
-                        A prone character can use their action to
-                        get to stand up.
+                        A prone character can use their action in order to
+                        stand up.
                     </para>
                 </sect3>
 
@@ -983,6 +983,12 @@
                         that round. At the end of the round, roll initiative
                         again and keep whatever is rolled.
                     </para>
+
+                    <para>
+                        If your initiative was zero for any reason (e.g., due
+                        to shock) then your new initiative roll is halved
+                        just like all your other rolls.
+                    </para>
                 </sect3>
 
                 <sect3>
@@ -1118,10 +1124,10 @@
                     </para>
 
                     <para>
-                        Once a target is grappled, they are at -1 to their
-                        attribute for any actions. Each extra level of
-                        success of the strength check by the attacker
-                        increases this penalty by one. If this penalty
+                        At this point, both you and the target are considered
+                        to be <e>grappled</e>. Each extra level of success
+                        on the strength check causes -1 to the target's
+                        attributes for any actions. If this penalty
                         equals or exceeds the target's <t>Strength</t> or
                         <t>Agility</t>, then they can no longer act.
                     </para>
@@ -1169,6 +1175,11 @@
                         damage, but your foe receives -5 per level of
                         success to any further attacks or defences that
                         they make that round against anyone.
+                    </para>
+
+                    <para>
+                        Obviously you need to hit your foe before they
+                        act in order for this to have maximum effect.
                     </para>
                 </sect3>
 
@@ -1241,42 +1252,12 @@
                 </para>
 
                 <sect3>
-                    <title>Grab</title>
-
-                    <para>
-                        If you have free hands, then you may attempt to
-                        <e>grab</e> your foe rather than hit them. This
-                        will normally invoke a <e>free strike</e> against
-                        you (the <e>Close combat</e> technique mitigates
-                        this).
-                    </para>
-
-                    <para>
-                        The target of the <e>Grab</e> may defend using
-                        either a <t>Strength</t> or <t>Agility</t> based
-                        <e>brawl</e> defence, with a +5 bonus for each
-                        point of <t>Size</t> they are larger.
-                    </para>
-
-                    <para>
-                        If you succeed in the attack, then you have
-                        <e>grabbed</e> them, and both of you will suffer
-                        the effects of being <e>grabbed</e> (though you may
-                        break this at any time). For each extra level of
-                        success you achieved, your foe suffers a -1
-                        penalty to <t>Agility</t> and <t>Dexterity</t>. If
-                        either is reduced to zero, they are completely
-                        held and can no longer move.
-                    </para>
-                </sect3>
-
-                <sect3>
                     <title>Improve Grapple (good)</title>
 
                     <para>
                         If you are currently grappling someone, you may
                         attempt to improve your grapple. Make a standard
-                        <y:agility>brawl</y:agility> attack against them,
+                        <y:strength>brawl</y:strength> attack against them,
                         and on a success their penalty to <t>Agility</t>
                         and <t>Dexterity</t> is increased by 1.
                     </para>
