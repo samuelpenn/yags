@@ -291,7 +291,10 @@
                         targets at the edge than near ground zero. When
                         weapons cause explosive effects, they are listed as
                         <s>Ex-X</s>, where <s>X</s> is the base radius of
-                        the explosion in metres.
+                        the explosion in metres. Explosive devices, such as
+                        grenades, are generally lethal due to a mixture of
+                        concussion and fragmentation effects. For simplicity,
+                        there are combined into a single damage roll.
                     </para>
 
                     <para>
@@ -305,14 +308,24 @@
 
                     <para>
                         Each multiple beyond that, reduce the number of
-                        stuns caused by a factor of 5. The damage roll
-                        isn't modified, just the number of stuns.
+                        stuns caused by a factor of 5 (round down). The
+                        damage roll isn't modified, just the number of
+                        stuns.
                     </para>
 
                     <para>
-                        An explosion which does less than <e>wounds</e> will
-                        have a similar drop in damage types, but may do no
-                        damage at x2 or x3 ranges.
+                        A simple 10g explosive charge of TNT does +20 damage
+                        and is considered a <e>Size 5</e> attack. Each
+                        doubling of the explosive amount does a further +10
+                        damage. The base radius is equal to one twentieth of
+                        the damage (e.g. Ex-1 at 10g, Ex-2 at 40g, Ex-3 at 160g).
+                    </para>
+
+                    <para>
+                        An explosive designed for fragmentation effects will
+                        have a larger radius. For a typical modern
+                        fragmentation grenade, multiply the blast radius by
+                        ten.
                     </para>
 
                     <sect4>
@@ -338,82 +351,12 @@
                         </para>
 
                         <para>
-                            One pound (about 0.5kg) of TNT does +50 damage
-                            and has an explosive radius of 2 metres. It is
-                            considered to be a <t>Size</t> 10 weapon. Every
-                            doubling of the TNT amount causes +10 damage,
-                            each ten fold increase doubles the radius, and
-                            each thousand fold increase raises the
-                            <t>Size</t> by +10.
-                        </para>
-
-                        <table>
-                            <title>Damage from TNT</title>
-                            <colspec colwidth="18mm"/>
-                            <colspec colwidth="18mm"/>
-                            <colspec colwidth="18mm"/>
-                            <colspec colwidth="18mm"/>
-
-                            <thead>
-                                <row>
-                                    <entry>TNT</entry>
-                                    <entry>Damage</entry>
-                                    <entry>Radius</entry>
-                                    <entry>Size</entry>
-                                </row>
-                            </thead>
-                            <tbody>
-                                <row>
-                                    <entry>1 lb</entry>
-                                    <entry>50</entry>
-                                    <entry>Ex-2</entry>
-                                    <entry>10</entry>
-                                </row>
-                                <row>
-                                    <entry>10 lb</entry>
-                                    <entry>80</entry>
-                                    <entry>Ex-4</entry>
-                                    <entry>10</entry>
-                                </row>
-                                <row>
-                                    <entry>100 lb</entry>
-                                    <entry>115</entry>
-                                    <entry>Ex-8</entry>
-                                    <entry>10</entry>
-                                </row>
-                                <row>
-                                    <entry>1000 lb</entry>
-                                    <entry>150</entry>
-                                    <entry>Ex-16</entry>
-                                    <entry>20</entry>
-                                </row>
-                                <row>
-                                    <entry>1 T</entry>
-                                    <entry>160</entry>
-                                    <entry>Ex-16</entry>
-                                    <entry>20</entry>
-                                </row>
-                                <row>
-                                    <entry>1 KT</entry>
-                                    <entry>260</entry>
-                                    <entry>Ex-128</entry>
-                                    <entry>30</entry>
-                                </row>
-                                <row>
-                                    <entry>1 MT</entry>
-                                    <entry>360</entry>
-                                    <entry>Ex-1024</entry>
-                                    <entry>40</entry>
-                                </row>
-                            </tbody>
-                        </table>
-
-                        <para>
-                            The most accurate results for working out the
-                            effects of TNT come from playing with logarithms,
-                            but simply assuming that damage etc only changes
-                            after a doubling is a simple solution which
-                            works reasonably well.
+                            500g of TNT does +50 vehicle damage, has an
+                            explosive radius of 5m and is considered to be
+                            a Size 10 weapon. Every doubling of the TNT
+                            equivalent amount causes +10 damage; each ten
+                            fold increase doubles the radius, and each
+                            thousand fold incrase raises the Size by 10.
                         </para>
 
                         <example title="Large explosions">
@@ -447,28 +390,14 @@
                     </sect4>
 
                     <sect4>
-                        <title>How big is my bomb?</title>
+                        <title>Taking Cover</title>
 
                         <para>
-                            So, you've just dropped a 4000lb bomb on someone,
-                            and want to know how much damage it does. The
-                            simple answer is a lot. In most cases, the result
-                            is an instant (messy) death.
-                        </para>
-
-                        <para>
-                            If they're in a tank, or it's not a direct hit,
-                            then it gets a bit more tricky. As a rough guide,
-                            assume the following conversion for basic
-                            explosives.
-                        </para>
-
-                        <para>
-                            A single pound of TNT (since pounds is what TNT
-                            is normally measured in) does +50 damage Ex-2.
-                            Each doubling of the amount of explosive does an
-                            extra +10 damage. Each ten fold increase in amount
-                            of explosive doubles the radius.
+                            Taking cover from an explosive is generally the
+                            best course of action. A successful dodge roll
+                            allows you to move a distance equal to your
+                            combat move away from the explosion, hopefully
+                            to a less deadly range band.
                         </para>
                     </sect4>
                 </sect3>
