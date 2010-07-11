@@ -169,26 +169,235 @@
                     </para>
                 </sect3>
             </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Vehicles</title>
+
+            <quote signature="Jeremy Clarkson, Top Gear">
+                Tonight: an awful new car from Rover; a brilliant new car from
+                Aston Martin; and the Apache helicopter gunship: can it get
+                missile lock on a Lotus Exige?
+            </quote>
+
+            <para>
+                Within <tm>Yags</tm>, vehicles are scaled differently to
+                characters. A revolver that does +30 damage may appear
+                similar in effectiveness to a heavy machine gun which does
+                +30 damage, but the latter is rated as <e>vehicle scale</e>
+                and is treated differently.
+            </para>
+
+            <para>
+                The reason for this is so that large vehicles, artillery
+                and starships can stick to using relatively small numbers
+                when fighting each other without being underpowered.
+            </para>
+
+            <para>
+                For the most part, vehicles use the same rules as characters.
+                What follows add to the core rules, or replace them where
+                necessary.
+            </para>
 
             <sect2>
-                <title>Vehicles</title>
+                <title>Vehicle Size</title>
 
                 <para>
-                    Vehicle statistics, notably damage and soak, are scaled
-                    differently to character scale items. Very roughly,
-                    you can double/halve damages ratings moving from one
-                    scale to the other, though it's not quite that simple.
+                    Whether something counts as a vehicle is based on its
+                    construction rather than its size. Generally, something
+                    that has been built out of non-living material is
+                    classed as a vehicle. It is not based on size - a
+                    motorbike is vehicle scale whilst an elephant is still
+                    character scale.
                 </para>
 
                 <para>
-                    Vehicles have a number of damage levels proportional
-                    to the square of their size (size squared, divided by
-                    twenty to be precise).
+                    All vehicles have a <t>Size</t> statistic, just like
+                    characters do. This is on the same scale, so a <t>Size</t> 5
+                    motorbike is about the same size as an adult human.
+                    A vehicle's <t>Size</t> is roughly proportional to its
+                    volume. A <t>Size</t> 5 vehicle is about 1 cubic metre.
+                    Every ten fold increase in volume adds +5 to the <t>Size</t>.
+                    Some examples of vehicle sizes are below.
                 </para>
 
+                <targetlist>
+                    <valueLabel>Type of vehicle</valueLabel>
+                    <targetLabel>Size</targetLabel>
+
+                    <item target="5" value="Motorbike"/>
+                    <item target="10" value="Family car"/>
+                    <item target="15" value="Heavy tank"/>
+                    <item target="20" value="Frigate"/>
+                    <item target="30" value="Battleship"/>
+                    <item target="45" value="Aircraft carrier"/>
+                </targetlist>
+
                 <para>
-                    See the vehicle rules for detailed information.
+                    Because of the logarithmic scale, even very large SF
+                    starships can be represented in double digit sizes.
+                    Since attacks can't damage targets more than 15 size
+                    points larger, damage and armour values can also
+                    remain relatively low.
                 </para>
+
+                <sect3>
+                    <title>Vehicle Damage</title>
+
+                    <para>
+                        Just like characters have <e>wounds</e> and <e>stuns</e>,
+                        so vehicles keep track of damage in a similar way. All
+                        vehicles have a single <e>damage</e> track. This is based
+                        on size, but not equal to it:
+                    </para>
+
+                    <para>
+                        Damage levels = <t>Size</t>^2 / 20 (round to nearest).
+                    </para>
+
+                    <para>
+                        There are 3 damage levels - superficial, moderate and
+                        critical. A vehicle that has taken superficial damage
+                        is at no penalty to manouevering, a moderately damaged
+                        vehicle is at -10 and a critically damaged vehicle is
+                        at -25. In addition, a vehicle always has one additional
+                        damage level in <e>superficial</e>, and one in a fourth
+                        level called <e>disabled</e>, which gives a -40 penalty.
+                    </para>
+
+                    <example title="Damage Levels">
+                        <para>
+                            As an example, take a modern BMW M3, with a
+                            <t>Size</t> of 9. It will have 4 body levels
+                            (9 * 9 = 81, divided by 20 = 4), plus the two
+                            free levels for a total of 6.
+                        </para>
+
+                        <para>
+                            The first five get split between superficial (2),
+                            moderate (2) and critical (1), and the sixth
+                            goes into disabled (1).
+                        </para>
+
+                        <para>
+                            The first two points of damage the car takes will
+                            leave it as <e>superficially damaged</e>. On taking
+                            its third level it becomes <e>moderately damaged</e>.
+                            This is similar to how character scale damage works.
+                        </para>
+                    </example>
+
+                    <para>
+                        There are two types of vehicle damage - <e>major</e>
+                        and <e>minor</e>. The former is the default type and
+                        is similar to <e>wounds</e> at character scale.
+                        <e>Minor</e> damage is like <e>stuns</e> and is non
+                        cumulative, but is applied to the same damage track
+                        as <e>major</e> damage. Generally, damage from
+                        character scale weapons is <e>minor</e> damage.
+                    </para>
+
+                    <sect4>
+                        <title>Shooting at Vehicles</title>
+
+                        <para>
+                            If a vehicle is attacked with a character scale
+                            weapon, then the damage roll is halved and the
+                            damage caused is <e>Minor</e>. Any vehicle which
+                            is 10 or more <t>Size</t> points larger than the
+                            weapon (normally vehicles of <t>Size</t> 15+)
+                            take no damage from character scale attacks.
+                            Also, only <e>wounds</e> are converted to
+                            vehicle damage - stuns are ignored.
+                        </para>
+
+                        <para>
+                            Man portable firearms are generally considered to
+                            be <t>Size</t> 5, though specialist anti-vehicle
+                            weapons may be larger. The most effective of these
+                            are generally classed as vehicle scale anyway.
+                        </para>
+
+                        <para>
+                            If a character weapon happens to be 5+ size
+                            points larger than the vehicle under attack, then
+                            the damage caused is <e>major</e> damage. If the
+                            weapon is 10+ size points larger, then then damage
+                            roll is not halved. Outside of fantasy, such
+                            events will tend to be limited to elephants trampling
+                            a motorcycle.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Shooting at Characters</title>
+
+                        <para>
+                            If a vehicle scale weapon is used against characters
+                            then the character receives no soak roll unless they
+                            are fully protected with heavy armour. In the latter
+                            case then their soak roll is merely halved.
+                        </para>
+
+                        <para>
+                            Note that a character scale weapon mounted on a
+                            vehicle (e.g. a turret mounted light machine gun)
+                            is still considered character scale.
+                        </para>
+
+                        <para>
+                            If the weapon is 10+ <t>Size</t> points larger than
+                            the target, then even heavy armour is completely
+                            ignored. Characters also suffer the multiplication
+                            of damage from oversized vehicle attacks (see below),
+                            but normally it's irrelevant by this point.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Size Matters</title>
+
+                        <quote signature="Red 2, Star Wars">
+                            Look at the size of that thing!
+                        </quote>
+
+                        <image src="images/tankandbike.jpg" width="54mm" height="42mm"/>
+
+                        <para>
+                            Differences in size between vehicles can be far
+                            greater than that between animals (at least, in the
+                            real world). In the modern world, the largest vehicles
+                            are aircraft carriers of size 40+. SF starships (not
+                            covered under <e>High Tech</e>) can be even larger.
+                        </para>
+
+                        <para>
+                            Each vehicle mounted weapon has its own <t>Size</t>
+                            which is independant of the vehicle it is mounted on.
+                            Most anti-vehicle weapons (such as the main gun on
+                            a tank) are <t>Size</t> 10. Secondary weapons (such
+                            as a heavy machine gun) will be <t>Size</t> 5.
+                            Heavier artillery or naval guns may be <t>Size</t>
+                            15, 20 or larger.
+                        </para>
+
+                        <para>
+                            For vehicle on vehicle action, if the target vehicle is
+                            10+ <t>Size</t> larger than the attacking weapon then
+                            any damage caused is <e>Minor</e>. If the target is
+                            15+ <t>Size</t> larger, then no damage is caused.
+                        </para>
+
+                        <para>
+                            If the attack is 10+ larger, then any damage levels
+                            caused are doubled and any armour is halved. Each
+                            further +10 <t>Size</t> increase adds a further
+                            multiple to the damage caused.
+                        </para>
+                    </sect4>
+
+                </sect3>
             </sect2>
         </sect1>
 
@@ -289,6 +498,15 @@
                     <list>modern/tech7/gear.yags</list>
                 </import-equipment>
             </sect2>
+
+            <sect2>
+                <title>Vehicles</title>
+
+                <import-equipment style="full">
+                    <list>modern/vehicles/civilian.yags</list>
+                </import-equipment>
+            </sect2>
+
         </sect1>
 
         <sect1 format="wide">

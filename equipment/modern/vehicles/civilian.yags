@@ -95,30 +95,120 @@
         </vehicle>
     </item>
 
-    <item name="Land Rover">
+    <item name="Executive sports car">
         <category>Vehicle</category>
         <genre>Modern</genre>
         <legality>4</legality>
-        <cost>25000</cost>
-        <weight>3000000</weight>
+        <cost>50000</cost>
+        <weight>1500000</weight>
         <techLevel>8</techLevel>
         <availability>3</availability>
         <importance>3</importance>
 
-        <short>Sports Utility Vehicle</short>
+        <short>BMW E46 M3</short>
+
+        <description>
+            <para>
+                A typical early 21st century luxury car, of which the
+                BMW M3 is just one example.
+            </para>
+        </description>
 
         <performance realm="Ground">
-            <speed>220</speed>
-            <acceleration>15</acceleration>
-            <range>500</range>
+            <speed>303</speed>
+            <acceleration>20</acceleration>
+            <range>800</range>
         </performance>
 
         <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <attributes size="10" soak="10" move="300" acceleration="25">
+            <attributes size="9" soak="9" move="300" acceleration="25">
+                <attribute name="strength" score="18"/>
+                <attribute name="health" score="3"/>
+                <attribute name="agility" score="5"/>
+            </attributes>
+        </vehicle>
+    </item>
+
+    <item name="Snatch Land Rover">
+        <category>Vehicle</category>
+        <genre>Modern</genre>
+        <legality>4</legality>
+        <cost>75000</cost>
+        <weight>4000000</weight>
+        <techLevel>8</techLevel>
+        <availability>3</availability>
+        <importance>3</importance>
+
+        <short>Protected patrol vehicle.</short>
+
+        <description>
+            <para>
+                Designed as a general patrol vehicle in low threat areas, the
+                Snatch Land Rover is used by the British military. It is
+                lightly armoured and not really designed to protect against
+                a serious attack. However, it is cheaper and more agile than
+                heavier vehicles which serve similar roles.
+            </para>
+        </description>
+
+        <performance realm="Ground">
+            <speed>97</speed>
+            <acceleration>15</acceleration>
+            <range>510</range>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="11" soak="16" move="134" acceleration="25">
                 <attribute name="strength" score="25"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="4"/>
+            </attributes>
+
+            <combat>
+                <armour location="Front" score="8"/>
+                <armour location="Top/Rear" score="4"/>
+            </combat>
+        </vehicle>
+    </item>
+
+
+    <item name="Cougar">
+        <category>Vehicle</category>
+        <genre>Modern</genre>
+        <legality>2</legality>
+        <cost>475000</cost>
+        <weight>14500000</weight>
+        <techLevel>8</techLevel>
+        <availability>2</availability>
+        <importance>3</importance>
+
+        <short>Armoured fighting vehicle.</short>
+
+        <description>
+            <para>
+                A US armoured fighting vehicle designed for deployment in
+                high risk areas, and to be resistant to anti-vehicle mines
+                and IEDs. Comes with air conditioning as standard.
+            </para>
+        </description>
+
+        <performance realm="Ground">
+            <speed>105</speed>
+            <acceleration>15</acceleration>
+            <range>966</range>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="13" soak="26" move="134" acceleration="25">
+                <attribute name="strength" score="39"/>
                 <attribute name="health" score="4"/>
                 <attribute name="agility" score="3"/>
             </attributes>
+
+            <combat>
+                <armour location="All" score="12"/>
+                <armour location="Bottom" score="20"/>
+            </combat>
         </vehicle>
     </item>
 </equipment>
