@@ -1,18 +1,16 @@
 <?xml version="1.0"?>
 <?xml-stylesheet
-    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+                href="/home/sam/src/forge/yagsbook/xml/xslt/html/yagsbook.xsl"
     type="text/xsl"?>
 
 <article xmlns="http://yagsbook.sourceforge.net/xml"
          xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
-
     <header>
-        <title>Spacecraft</title>
-        <tagline>Yags</tagline>
+        <title>Yags Vehicles</title>
+        <tagline>Yags 0.7</tagline>
 
         <summary>
-            Designing, building and using spacecraft in Yags. These are
-            an extension to the vehicle rules.
+            Vehicles and other mechanical constructs.
         </summary>
 
         <author>
@@ -21,12 +19,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.11 $</version>
-            <date>$Date: 2008-07-20 22:22:03 $</date>
+            <version>$Revision: 1.2 $</version>
+            <date>$Date: 2009-07-19 17:19:18 $</date>
         </cvsinfo>
 
         <license type="Yags">
-            <year>2008</year>
+            <year>2010</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -40,64 +38,429 @@
 
     <body>
         <sect1>
-            <title>Spacecraft</title>
+            <title>Vehicles</title>
+
+            <quote signature="Jeremy Clarkson, Top Gear">
+                Tonight: an awful new car from Rover; a brilliant new car from
+                Aston Martin; and the Apache helicopter gunship: can it get
+                missile lock on a Lotus Exige?
+            </quote>
 
             <para>
-                Spacecraft are just a subset of vehicles, but they tend to
-                fit into a special category of their own, especially in
-                science fiction settings. Whilst cars and tanks tend to be
-                used in the same sort of scales as characters, spacecraft
-                may be kilometres in size, and have weapon ranges in the
-                thousands or millions of kilometres. The distances and
-                time scales involved call for special consideration.
+                Within <tm>Yags</tm>, vehicles are scaled differently to
+                characters. A revolver that does +30 damage may appear
+                similar in effectiveness to a heavy machine gun which does
+                +30 damage, but the latter is rated as <e>vehicle scale</e>
+                and is treated differently.
             </para>
 
-            <note title="Wargaming Combat">
-                <para>
-                    Spaceship combat in <e>Yags</e> is designed so that it
-                    is possible to <e>wargame</e> it - represent spaceships
-                    on the table with models. This makes visualising what
-                    is going on much easier, since it's difficult to describe
-                    where everyone is in relation to each other without any
-                    fixed reference points.
-                </para>
-
-                <para>
-                    A suggested scale is 1" = 1000km. Space ships are assumed to
-                    be point targets unless they are really big.
-                </para>
-            </note>
+            <para>
+                The reason for this is so that large vehicles, artillery
+                and starships can stick to using relatively small numbers
+                when fighting each other without being underpowered.
+            </para>
 
             <para>
-                How quickly a spacecraft moves is measured by its
-                <e>acceleration</e>, which is given in 'g'. Every
-                'g' of acceleration allows the ship to accelerate
-                up to (roughly) 1000km/turn/turn.
+                For the most part, vehicles use the same rules as characters.
+                What follows add to the core rules, or replace them where
+                necessary.
             </para>
 
             <sect2>
-                <title>Weapons</title>
+                <title>Vehicle Size</title>
 
                 <para>
-                    Space is big, really big, and the ranges of many
-                    space-born weapons are huge compared to the sort
-                    of scales present in ground combat.
+                    Whether something counts as a vehicle is based on its
+                    construction rather than its size. Generally, something
+                    that has been built out of non-living material is
+                    classed as a vehicle. It is not based on size - a
+                    motorbike is vehicle scale whilst an elephant is still
+                    character scale.
                 </para>
 
                 <para>
-                    The <e>short range</e> of a space weapon is the distance
-                    at which it does the stated damage. Each increment of
-                    the short range reduces the damage by -25.
+                    All vehicles have a <t>Size</t> statistic, just like
+                    characters do. This is on the same scale, so a <t>Size</t> 5
+                    motorbike is about the same size as an adult human.
+                    A vehicle's <t>Size</t> is roughly proportional to its
+                    volume. A <t>Size</t> 5 vehicle is about 1 cubic metre.
+                    Every ten fold increase in volume adds +5 to the <t>Size</t>.
+                    Some examples of vehicle sizes are below.
+                </para>
+
+                <targetlist>
+                    <valueLabel>Type of vehicle</valueLabel>
+                    <targetLabel>Size</targetLabel>
+
+                    <item target="5" value="Motorbike"/>
+                    <item target="10" value="Family car"/>
+                    <item target="15" value="Heavy tank"/>
+                    <item target="20" value="Frigate"/>
+                    <item target="30" value="Battleship"/>
+                    <item target="45" value="Aircraft carrier"/>
+                </targetlist>
+
+                <para>
+                    Because of the logarithmic scale, even very large SF
+                    starships can be represented in double digit sizes.
+                    Since attacks can't damage targets more than 15 size
+                    points larger, damage and armour values can also
+                    remain relatively low.
+                </para>
+
+                <sect3>
+                    <title>Vehicle Damage</title>
+
+                    <para>
+                        Just like characters have <e>wounds</e> and <e>stuns</e>,
+                        so vehicles keep track of damage in a similar way. All
+                        vehicles have a single <e>damage</e> track. This is based
+                        on size, but not equal to it:
+                    </para>
+
+                    <para>
+                        Damage levels = <t>Size</t>^2 / 20 (round to nearest).
+                    </para>
+
+                    <para>
+                        There are 3 damage levels - superficial, moderate and
+                        critical. A vehicle that has taken superficial damage
+                        is at no penalty to manouevering, a moderately damaged
+                        vehicle is at -10 and a critically damaged vehicle is
+                        at -25. In addition, a vehicle always has one additional
+                        damage level in <e>superficial</e>, and one in a fourth
+                        level called <e>disabled</e>, which gives a -40 penalty.
+                    </para>
+
+                    <example title="Damage Levels">
+                        <para>
+                            As an example, take a modern BMW M3, with a
+                            <t>Size</t> of 9. It will have 4 body levels
+                            (9 * 9 = 81, divided by 20 = 4), plus the two
+                            free levels for a total of 6.
+                        </para>
+
+                        <para>
+                            The first five get split between superficial (2),
+                            moderate (2) and critical (1), and the sixth
+                            goes into disabled (1).
+                        </para>
+
+                        <para>
+                            The first two points of damage the car takes will
+                            leave it as <e>superficially damaged</e>. On taking
+                            its third level it becomes <e>moderately damaged</e>.
+                            This is similar to how character scale damage works.
+                        </para>
+                    </example>
+
+                    <para>
+                        There are two types of vehicle damage - <e>major</e>
+                        and <e>minor</e>. The former is the default type and
+                        is similar to <e>wounds</e> at character scale.
+                        <e>Minor</e> damage is like <e>stuns</e> and is non
+                        cumulative, but is applied to the same damage track
+                        as <e>major</e> damage. Generally, damage from
+                        character scale weapons is <e>minor</e> damage.
+                    </para>
+
+                    <sect4>
+                        <title>Shooting at Vehicles</title>
+
+                        <para>
+                            If a vehicle is attacked with a character scale
+                            weapon, then the damage roll is halved and the
+                            damage caused is <e>Minor</e>. Any vehicle which
+                            is 10 or more <t>Size</t> points larger than the
+                            weapon (normally vehicles of <t>Size</t> 15+)
+                            take no damage from character scale attacks.
+                            Also, only <e>wounds</e> are converted to
+                            vehicle damage - stuns are ignored.
+                        </para>
+
+                        <para>
+                            Man portable firearms are generally considered to
+                            be <t>Size</t> 5, though specialist anti-vehicle
+                            weapons may be larger. The most effective of these
+                            are generally classed as vehicle scale anyway.
+                        </para>
+
+                        <para>
+                            If a character weapon happens to be 5+ size
+                            points larger than the vehicle under attack, then
+                            the damage caused is <e>major</e> damage. If the
+                            weapon is 10+ size points larger, then then damage
+                            roll is not halved. Outside of fantasy, such
+                            events will tend to be limited to elephants trampling
+                            a motorcycle.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Shooting at Characters</title>
+
+                        <para>
+                            If a vehicle scale weapon is used against characters
+                            then the character receives no soak roll unless they
+                            are fully protected with heavy armour. In the latter
+                            case then their soak roll is merely halved.
+                        </para>
+
+                        <para>
+                            Note that a character scale weapon mounted on a
+                            vehicle (e.g. a turret mounted light machine gun)
+                            is still considered character scale.
+                        </para>
+
+                        <para>
+                            If the weapon is 10+ <t>Size</t> points larger than
+                            the target, then even heavy armour is completely
+                            ignored. Characters also suffer the multiplication
+                            of damage from oversized vehicle attacks (see below),
+                            but normally it's irrelevant by this point.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Size Matters</title>
+
+                        <quote signature="Red 2, Star Wars">
+                            Look at the size of that thing!
+                        </quote>
+
+                        <image src="images/tankandbike.jpg" width="54mm" height="42mm"/>
+
+                        <para>
+                            Differences in size between vehicles can be far
+                            greater than that between animals (at least, in the
+                            real world). In the modern world, the largest vehicles
+                            are aircraft carriers of size 40+. SF starships (not
+                            covered under <e>High Tech</e>) can be even larger.
+                        </para>
+
+                        <para>
+                            Each vehicle mounted weapon has its own <t>Size</t>
+                            which is independant of the vehicle it is mounted on.
+                            Most anti-vehicle weapons (such as the main gun on
+                            a tank) are <t>Size</t> 10. Secondary weapons (such
+                            as a heavy machine gun) will be <t>Size</t> 5.
+                            Heavier artillery or naval guns may be <t>Size</t>
+                            15, 20 or larger.
+                        </para>
+
+                        <para>
+                            For vehicle on vehicle action, if the target vehicle is
+                            10+ <t>Size</t> larger than the attacking weapon then
+                            any damage caused is <e>Minor</e>. If the target is
+                            15+ <t>Size</t> larger, then no damage is caused.
+                        </para>
+
+                        <para>
+                            If the attack is 10+ larger, then any damage levels
+                            caused are doubled and any armour is halved. Each
+                            further +10 <t>Size</t> increase adds a further
+                            multiple to the damage caused.
+                        </para>
+                    </sect4>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>General Statistics</title>
+
+                <para>
+                    Size isn't the only statistic vehicles have in <tm>Yags</tm>.
+                    As for characters, <t>Strength</t>, <t>Health</t>,
+                    <t>Agility</t> and <t>Perception</t> also exist for vehicles.
                 </para>
 
                 <para>
-                    Since such weapons are designed to be used at massive
-                    distances, the distance increment is normally in
-                    multiples of 1km.
+                    <t>Strength</t> is pretty straightforward, and is a measure
+                    of the vehicle's pulling power. It can be compared directly
+                    against the strength of a person.
                 </para>
+
+                <para>
+                    <t>Health</t> is a measure of the general reliability and
+                    toughness of the vehicle. A <t>Health</t> of 3 is pretty
+                    standard. A fragile F1 car or broken old banger may have
+                    a <t>Health</t> of 2, more rugged off-road cars or military
+                    vehicles will have higher <t>Health</t>.
+                </para>
+
+                <para>
+                    <t>Agility</t> represents how agile the vehicle is.
+                    Generally though. it isn't used directly since vehicles
+                    rarely drive themselves. Instead, it caps the
+                    <t>Dexterity</t> of the driver (rider/pilot). It doesn't
+                    affect the speed of the vehicle, but may affect how well
+                    it handles at high speeds.
+                </para>
+
+                <para>
+                    <t>Perception</t> is only used if the vehicle has its own
+                    sensor systems. For most vehicles in the High Tech era
+                    sensors are limited to the Mk I eyeball, so this is zero.
+                </para>
+
+                <sect3>
+                    <title>Soak</title>
+
+                    <para>
+                        A construct will normally have a base soak equal to
+                        its size. If it is stronger or weaker than usual
+                        then this can vary. The following guide can be used
+                        to determine the base soak of a vehicle or building.
+                        These are guidelines only, and any values inbetween
+                        (or outside) those given can be used.
+                    </para>
+
+                    <targetlist targetFirst="true" bold="true">
+                        <targetLabel>Soak</targetLabel>
+                        <valueLabel>Type of construct</valueLabel>
+
+                        <item target="x0.5" value="Weak.">
+                            A very weak object, normally poorly constructed
+                            or delibrately designed to be light.
+                        </item>
+
+                        <item target="x1" value="Average.">
+                            Any typical building or vehicle will have a
+                            base soak equal to its size.
+                        </item>
+
+                        <item target="x1.5" value="Reinforced.">
+                            If the object has been reinforced, such as a
+                            rally car, SUV or heavily constructed building.
+                            About the strongest most flying vehicles will be.
+                        </item>
+
+                        <item target="x2" value="Strong.">
+                            Object has been designed from the start to be
+                            tough and durable. A tank, battleship or bunker
+                            will tend to be this strong.
+                        </item>
+
+                        <item target="x3" value="Very strong.">
+                            A heavily built vehicle, such as the strongest
+                            tanks, or a heavily toughened bunker. The entire
+                            design of the construct is geared towards making
+                            it strong, rather than pretty or fast.
+                        </item>
+
+                        <item target="x4" value="Super strong.">
+                            A heavily built vehicle made from ultra-tech
+                            materials (TL10+), or one which is designed to
+                            do little more than resist damage at the expense
+                            of being very space inefficient.
+                        </item>
+
+                        <item target="x5" value="Ultra strong.">
+                            Ultra-tech object which does little more than
+                            resist damage which is also very space inefficient,
+                            but also highly resistant to damage.
+                        </item>
+                    </targetlist>
+
+                    <para>
+                        This is the base soak of the construct, and is not
+                        affected by heavy weapons or other effects.
+                    </para>
+
+                    <para>
+                        As for characters, vehicles and buildings may be
+                        armoured. Many heavily armoured vehicles will have
+                        two armour ratings - one for the heavy front armour,
+                        and the second for the lighter sides and rear.
+                        Most armour on vehicles is considered to be
+                        <e>Light vehicle</e>. <e>Heavy vehicle</e> weapons
+                        (normally armour piercing weapons, such as HEAT)
+                        halve such armour.
+                    </para>
+
+                    <targetlist targetFirst="true" bold="true">
+                        <targetLabel>Armour</targetLabel>
+                        <valueLabel>Examples of armour</valueLabel>
+
+                        <item target="5-30" value="Armoured vehicle.">
+                            Armoured vehicles (such as APCs, armoured limo)
+                            will tend to have armour in the 5-20 range.
+                        </item>
+
+                        <item target="20-30" value="Light tank.">
+                            Heavily armoured vehicles, such as tanks, will
+                            tend to have up to 30 points of front armour.
+                        </item>
+
+                        <item target="30-50" value="Heavy tank.">
+                            The toughest of tanks will have armours in this
+                            sort of range.
+                        </item>
+
+                        <item target="40-60" value="Battleships.">
+                            Heavy battleships.
+                        </item>
+
+                        <item target="-10" value="Tech -6.">
+                            At tech levels prior to 7, materials are limited
+                            so reduce armour values by 10.
+                        </item>
+
+                        <item target="-5" value="Tech 7.">
+                            For tech level 7 era vehicles, reduce armour
+                            levels by 5.
+                        </item>
+
+                        <item target="+5" value="Tech 9-10.">
+                            At tech levels 9-10, increase armour by +5.
+                        </item>
+
+                        <item target="+10" value="Tech 11+">
+                            At tech levels above 10, increase armour by +10.
+                        </item>
+                    </targetlist>
+                </sect3>
+
+                <sect3>
+                    <title>Speed and other things</title>
+
+                    <para>
+                        Vehicles will generally have a <e>speed</e>, which is
+                        the top speed in km/h. They also have an <e>acceleration</e>,
+                        which is in km/h/s. What this means is that a motorbike
+                        with an acceleration of 20 km/h/s will, from a standing
+                        start, be doing 20 km/h after 1 second. After 5 seconds
+                        (a round) it will be doing 100km/h. In reality acceleration
+                        slows as a vehicle approaches its top speed, but this is
+                        ignored for simplicity.
+                    </para>
+
+                    <para>
+                        If you really want to, halve acceleration if the car is
+                        travelling at greater at half it's top speed.
+                    </para>
+
+                    <para>
+                        Each vehicle also has a <e>range</e>, which is how many
+                        kilometres it can travel on a single load of fuel. Again,
+                        this is just an average for simplicity.
+                    </para>
+
+                    <para>
+                        For purposes of combat, a vehicle has a <e>Move</e>
+                        rating. As for characters, this is how far the vehicle
+                        can move in a round, in metres. This is equal to
+                        half the vehicle's top speed, ignoring unit conversions.
+                        For example, a vehicle with a top speed of 180km/h will
+                        have a <e>Move</e> of 90. This gives a speed the
+                        vehicle can move at in combat without penalty.
+                    </para>
+                </sect3>
             </sect2>
         </sect1>
+
     </body>
+
 </article>
 
 
