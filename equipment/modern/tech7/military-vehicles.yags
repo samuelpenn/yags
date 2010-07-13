@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<equipment xmlns="http://yagsbook.sourceforge.net/xml"
+          xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+
+    <item name="AH-64 Apache">
+        <category>Vehicle</category>
+        <genre>Modern</genre>
+        <legality>1</legality>
+        <cost>15400000</cost>
+        <weight>5000000</weight>
+        <techLevel>7</techLevel>
+        <availability>2</availability>
+        <importance>3</importance>
+
+        <short>Attack helicopter.</short>
+
+        <description>
+            <para>
+                The Boeing AH-64 Apache attack helicopter was made for the
+                US Army in the 1970s, and first introduced in 1984. It
+                carries an M230 Chain gun and a mixture of Hellfire and
+                Hydra missile pods mounted on hardpoints.
+            </para>
+
+            <para>
+                It can carry up to 16 Hellfire missiles or 76 Hydra rockets,
+                or some combination thereof (e.g., 8 Hellfire + 38 Hydras).
+            </para>
+        </description>
+
+        <performance realm="Air">
+            <speed>277</speed>
+            <acceleration>30</acceleration>
+            <range>476</range>
+            <endurance>150</endurance>
+            <altitude>6400</altitude>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="14" soak="21" move="140" acceleration="25">
+                <attribute name="strength" score="14"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="4"/>
+            </attributes>
+
+            <combat>
+                <armour location="All" score="8"/>
+
+                <weapon name="M230 Chain Gun">
+                    <attack score="10"/>
+                    <damage score="25"/>
+                    <size>10</size>
+                    <increment>50</increment>
+                    <rof>50</rof><capacity>1200</capacity>
+                    <recoil>0</recoil>
+                    <range>
+                        <short>800</short>
+                        <medium>1500</medium>
+                        <long>4500</long>
+                    </range>
+                    <properties>
+                        <firearm/><vehicle/>
+                        <explosive score="5"/>
+                        <automatic score="25"/>
+                    </properties>
+                </weapon>
+
+                <weapon name="AGM-114 Hellfire">
+                    <attack score="0"/>
+                    <damage score="90"/>
+                    <size>10</size>
+                    <increment>0</increment>
+                    <rof>1</rof><capacity>4</capacity>
+                    <recoil>0</recoil>
+                    <range>
+                        <speed>425</speed>
+                        <short>500</short>
+                        <medium>6000</medium>
+                        <long>8000</long>
+                    </range>
+                    <properties>
+                        <firearm/><vehicle/><heavy/>
+                        <explosive score="2"/>
+                        <guided type="homing" skill="4"/>
+                    </properties>
+                </weapon>
+
+                <weapon name="Hydra 70">
+                    <attack score="10"/>
+                    <damage score="80"/>
+                    <size>10</size>
+                    <increment>0</increment>
+                    <rof>1</rof><capacity>76</capacity>
+                    <recoil>0</recoil>
+                    <range>
+                        <short>1000</short>
+                        <medium>3000</medium>
+                        <long>4000</long>
+                    </range>
+                    <properties>
+                        <firearm/><vehicle/>
+                        <explosive score="10"/>
+                    </properties>
+                </weapon>
+
+            </combat>
+        </vehicle>
+    </item>
+</equipment>
+
+
