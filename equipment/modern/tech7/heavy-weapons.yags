@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+
+<!--
+    Small arms weapons from the real world, approximately 1945 - 1980.
+
+    Copyright 2007 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted as long as the above copyright
+    notice is retained.
+
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2007-10-13 12:55:40 $
+
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+
+    Prices are in US dollars.
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="M151 TOW Launcher">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>7</techLevel>
+        <legality>2</legality>
+        <weight>80000</weight>
+        <cost>350</cost>
+
+        <short>Wire guided anti-tank missile.</short>
+        <description>
+            <para>
+                Designed to fire the BGM-71 TOW wire guided missile,
+                the M151 is a vehicle mounted launcher which is also
+                (barely) man portable. The TOW (Tube-launched,
+                Optically Tracked, Wire command) is a guided missile that
+                must be manually guided by an operator at the
+                launch platform. It was first produced in 1970 by the
+                US Army. The BGM-71 is the missile itself, and it may
+                be fired from a variety of launch platforms.
+            </para>
+
+            <para>
+                It has a top speed of 278m/s, and a maximum range of
+                3750m.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+            <combat>
+                <attack>+5</attack><damage>55</damage>
+                <range>
+                    <increment>200</increment>
+                    <short>300</short><medium>600</medium><long>3750</long>
+                </range>
+            </combat>
+            <strength>10</strength><load>20</load><reach>4</reach>
+            <capacity>1</capacity><rof>1</rof><recoil>-20</recoil>
+            <properties>
+                <missile/><vehicle/><heavy/>
+                <guided type="manual" score="3"/>
+                <explosive score="2"/>
+                <reload score="4"/>
+            </properties>
+        </weapon>
+    </item>
+
+</equipment>
+
+
