@@ -11,7 +11,7 @@
         <tagline>Yags</tagline>
 
         <summary>
-            Rules guided missiles and other munitions.
+            Guided missiles and other smart munitions.
         </summary>
 
         <author>
@@ -25,7 +25,7 @@
         </cvsinfo>
 
         <license type="Yags">
-            <year>2007</year>
+            <year>2010</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -44,9 +44,64 @@
             <para>
                 Guided missiles start to become common in TL7, and increase
                 in effectiveness, range and cheapness as technology
-                progresses. They are rated according to how 'smart' they
-                are.
+                progresses. They range in capability from wire guided missiles
+                (manually flown by an operator) to heat seeking or laser
+                guided varients.
             </para>
+
+            <para>
+                By TL8, laser guided munitions had become entrenched in the
+                public's view of guided missiles after video feeds showing
+                them hitting targets in Iraq became common in the evening news.
+                Cruise missiles, capable of flying hundreds of kilometres
+                and accurately hitting targets without human intervention have
+                been around for a while, but are generally only of use against
+                high value targets due to their cost.
+            </para>
+
+            <sect2>
+                <title>Locking On</title>
+
+                <para>
+                    Many systems first require that the operator locks onto
+                    their target. How complicated this is will depend on the
+                    system in question, but they all generally work with the
+                    same set of mechanics.
+                </para>
+
+                <para>
+                    Each round, the operator makes a <e>Heavy Weapons</e>
+                    check to try to acquire the target. This is effectively
+                    a 'to hit' roll, with no modifiers. The target may try
+                    to dodge, in which case they can dodge as normal. Since
+                    the lock-on requires a steady fix on the target, dodge
+                    rolls aren't halved or otherwise penalised.
+                </para>
+
+                <para>
+                    The operator is required to obtain a number of successes
+                    before a full lock is achieved. These successes may be
+                    achieved in a single round, or across multiple rounds but
+                    any round in which no successes are achieved wipes out
+                    any previous successes (the lock is completely lost).
+                    As soon as the required number is achieved, the weapon
+                    may be fired as part of the same action.
+                </para>
+
+                <para>
+                    It is possible to fire the weapon with a partial lock but
+                    at a large penalty. If one success short, then all attack
+                    rolls for the weapon are halved; if two short, then all
+                    attack rolls are fifthed.
+                </para>
+
+                <para>
+                    Depending on the type of weapon, between three and five
+                    successes may be required. More advanced weapons require
+                    fewer successes and may even grant a bonus to obtain a
+                    lock.
+                </para>
+            </sect2>
 
             <sect2>
                 <title>Guidance Systems</title>
@@ -61,13 +116,21 @@
                 </para>
 
                 <para>
-                    In a missiles weapon description, it will be described
-                    as Gu(X/n), where X is the type of guidance system, and
-                    n is the 'skill' of the system.
+                    Any weapon capable of guidance after being fired it
+                    considered to be <e>guided</e>, and will have an attribute
+                    of Gu(X/n) in its description. 'X' is the type of guidance
+                    system, and 'n' is the skill of that system.
+                </para>
+
+                <para>
+                    The main complication with missiles is that they may
+                    take several rounds to reach their target, though
+                    modern missiles may cover several kilometres each
+                    round.
                 </para>
 
                 <sect3>
-                    <title>Manual</title>
+                    <title>Manual Guidance (M)</title>
 
                     <para>
                         Very basic missiles are manually guided, being
@@ -76,6 +139,11 @@
                         guidance system of its own. Such a missile always
                         uses the <e>Heavy weapons</e> skill of the
                         controller.
+                    </para>
+
+                    <para>
+                        These weapons are rated as Gu(M/n), where 'n' is
+                        the system's agility.
                     </para>
                 </sect3>
 
