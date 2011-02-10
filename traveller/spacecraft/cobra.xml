@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:alf="http://www.alfresco.org" xmlns:chiba="http://chiba.sourceforge.net/xforms"
+              xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Cobra</ss:name>
+        <ss:inService>401</ss:inService>
+        <ss:manufacturer>Outworld Workshops</ss:manufacturer>
+        <ss:type>Freighter</ss:type>
+        <ss:brief>
+            General purpose free trader dating back to the first half of
+            the Third Imperium. It was well known for its excellent combat
+            potential, making it ideal for smugglers, pirates and traders
+            working on the edge of civilisation.
+        </ss:brief>
+
+        <ss:physical>
+            The wing shaped design became synonomous with rogue traders
+            in early Third Imperium holovids.
+        </ss:physical>
+
+        <ss:background>
+            Based on a rejected military design.
+        </ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Wing</ss:configuration>
+        <ss:displacement>120</ss:displacement>
+        <ss:techLevel>9</ss:techLevel>
+        <ss:health>4</ss:health>
+        <ss:agility>4</ss:agility>
+        <ss:armour>30</ss:armour>
+        <ss:cargo>20</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="20"/>
+        <ss:fuel mass="5"/>
+        <ss:jump rating="1"/>
+        <ss:repulsor mass="3" techLevel="9"/>
+    </ss:systems>
+
+    <ss:mounts>
+        <ss:mount name="Top turret" type="LightTurret">
+            <ss:weapon type="PulseLaser" techLevel="9"/>
+        </ss:mount>
+
+        <ss:mount name="Bottom turret" type="LightTurret">
+            <ss:weapon type="BeamLaser"/>
+        </ss:mount>
+    </ss:mounts>
+
+    <ss:crew>
+        <ss:bridge number="1"/>
+        <ss:quarters number="2">
+            <ss:property name="cramped"/>
+        </ss:quarters>
+    </ss:crew>
+</ss:spaceship>

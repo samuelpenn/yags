@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:alf="http://www.alfresco.org" xmlns:chiba="http://chiba.sourceforge.net/xforms"
+              xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Boa</ss:name>
+        <ss:inService>345</ss:inService>
+        <ss:manufacturer>Outworld Workshops</ss:manufacturer>
+        <ss:type>Freighter</ss:type>
+        <ss:brief>
+            Large bulk freighter.
+        </ss:brief>
+
+        <ss:physical>
+            A big, lumbering heavy design for hauling trade goods between
+            worlds. The cone shaped design inspired a number of similar
+            ships, including the later Pythons and Anacondas.
+        </ss:physical>
+
+        <ss:background>
+            Designed as a pure cargo hauler, it is mostly cargo space and
+            drives.
+        </ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Cone</ss:configuration>
+        <ss:displacement>1200</ss:displacement>
+        <ss:techLevel>9</ss:techLevel>
+        <ss:health>3</ss:health>
+        <ss:agility>2</ss:agility>
+        <ss:armour>20</ss:armour>
+        <ss:cargo>500</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="100"/>
+        <ss:fuel mass="100"/>
+        <ss:jump rating="1">
+            <ss:property name="extraFuel" value="1"/>
+            <ss:property name="lateTech"/>
+        </ss:jump>
+        <ss:sensors rating="4"/>
+    </ss:systems>
+
+    <ss:mounts>
+        <ss:mount name="Top turret" type="LightTurret">
+            <ss:weapon type="PulseLaser" techLevel="9"/>
+        </ss:mount>
+        <ss:mount name="Port turret" type="LightTurret">
+            <ss:weapon type="PulseLaser" techLevel="9"/>
+        </ss:mount>
+        <ss:mount name="Starboard turret" type="LightTurret">
+            <ss:weapon type="PulseLaser" techLevel="9"/>
+        </ss:mount>
+    </ss:mounts>
+</ss:spaceship>

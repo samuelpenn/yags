@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!--
+    This form describes a character in typical Yags format.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+           targetNamespace="http://glendale.org.uk/alfresco/spaceship"
+           elementFormDefault="qualified">
+
+    <xs:element name="spaceship">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="description" type="ss:descriptionType"/>
+                <xs:element name="attributes" type="ss:attributesType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="descriptionType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:normalizedString"/>
+            <xs:element name="inService" type="xs:integer"/>
+            <xs:element name="manufacturer" type="xs:normalizedString"/>
+
+            <xs:element name="type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Fighter"/>
+                        <xs:enumeration value="Gunboat"/>
+                        <xs:enumeration value="Freighter"/>
+                        <xs:enumeration value="Liner"/>
+                        <xs:enumeration value="Cruiser"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <xs:element name="physical" type="xs:string"/>
+            <xs:element name="background" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="attributesType">
+        <xs:sequence>
+            <xs:element name="configuration">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Block"/>
+                        <xs:enumeration value="Flat"/>
+                        <xs:enumeration value="Sphere"/>
+                        <xs:enumeration value="Wedge"/>
+                        <xs:enumeration value="Cone"/>
+                        <xs:enumeration value="Cylinder"/>
+                        <xs:enumeration value="Dispered"/>
+                        <xs:enumeration value="Agile"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+
+            <xs:element name="displacement" type="xs:integer" default="100"/>
+            <xs:element name="techLevel" type="xs:integer" default="10"/>
+            <xs:element name="health" type="xs:integer" default="3"/>
+            <xs:element name="agility" type="xs:integer" default="3"/>
+
+            <xs:element name="armour" type="xs:integer" default="0"/>
+            <xs:element name="cargo" type="xs:integer" default="0"/>
+
+            <xs:element name="items" type="ss:itemType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="itemType">
+        <xs:sequence>
+            <xs:element name="type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Drive"/>
+                        <xs:enumeration value="Fuel"/>
+                        <xs:enumeration value="JumpDrive"/>
+                        <xs:enumeration value="JumpFuel"/>
+                        <xs:enumeration value="Sensors"/>
+                        <xs:enumeration value="Computers"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="techLevel" type="xs:integer" default="0"/>
+            <xs:element name="value" type="xs:integer" default="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

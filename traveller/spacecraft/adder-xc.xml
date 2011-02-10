@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:alf="http://www.alfresco.org" xmlns:chiba="http://chiba.sourceforge.net/xforms"
+              xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Adder XC</ss:name>
+        <ss:inService>-279</ss:inService>
+        <ss:manufacturer>Zhemian Workshops</ss:manufacturer>
+        <ss:type>Freighter</ss:type>
+        <ss:brief>
+            Rugged free trader with extended cargo hold, designed for
+            operation in low tech environments.
+        </ss:brief>
+
+        <ss:physical>
+            Based on the original Adder design, for the Adder XC
+            Outworld Workshops removed the bottom turret, and replaced
+            it with an extended cargo hold. It is better suited for hops
+            between star ports, rather than landing on uncivilised planets.
+        </ss:physical>
+
+        <ss:background>
+            The Adder was one of the first good all round free traders.
+            The XC model tries to specialise heavily by stripping out
+            everything it can to add in more cargo space, leaving an
+            ugly bulge beneath the main body. It has reduced range
+            and acceleration, half the firepower and almost no
+            repulsors for assisted planet landings. Less suited for
+            smugglers, but possibly better for honest traders - as long
+            as they don't need to run from dishonest pirates.
+        </ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Flat</ss:configuration>
+        <ss:displacement>110</ss:displacement>
+        <ss:techLevel>9</ss:techLevel>
+        <ss:health>4</ss:health>
+        <ss:agility>2</ss:agility>
+        <ss:armour>20</ss:armour>
+        <ss:cargo>28</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="12"/>
+        <ss:fuel mass="3"/>
+        <ss:jump rating="1"/>
+        <ss:repulsor mass="1" techLevel="9"/>
+    </ss:systems>
+
+    <ss:mounts>
+        <ss:mount name="Top turret" type="LightTurret">
+            <ss:weapon type="PulseLaser" techLevel="9"/>
+        </ss:mount>
+    </ss:mounts>
+
+    <ss:crew>
+        <ss:bridge number="2"/>
+        <ss:quarters number="4">
+            <ss:property name="cramped"/>
+        </ss:quarters>
+    </ss:crew>
+</ss:spaceship>

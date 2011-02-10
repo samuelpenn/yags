@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:alf="http://www.alfresco.org" xmlns:chiba="http://chiba.sourceforge.net/xforms"
+              xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Asp</ss:name>
+        <ss:inService>387</ss:inService>
+        <ss:manufacturer>Outworld Workshops</ss:manufacturer>
+        <ss:type>Courier</ss:type>
+        <ss:brief>
+            Fast courier ship designed for military duty. Though it doesn't
+            have great combat potential, it was highly popular amongst
+            smugglers.
+        </ss:brief>
+
+        <ss:physical>
+            A flat design which gives a low radar and target profile. By
+            far the largest single component of the design are the
+            Asp's thrusters, which are capable of out-acceleration most
+            of the fighters of the period. Some unofficial modifications
+            fit less efficient drives (for reduced delta vee) which are
+            capable of over 6g of acceleration.
+        </ss:physical>
+
+        <ss:background>
+            Designed for military use from the outset, the Asp was one
+            of the first production ships to come with a Jump-2 drive
+            as standard.
+        </ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Flat</ss:configuration>
+        <ss:displacement>150</ss:displacement>
+        <ss:techLevel>10</ss:techLevel>
+        <ss:health>4</ss:health>
+        <ss:agility>3</ss:agility>
+        <ss:armour>20</ss:armour>
+        <ss:cargo>10</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="50">
+            <ss:property name="advanced"/>
+            <ss:property name="earlyTech"/>
+            <ss:property name="highEfficiency" value="2"/>
+        </ss:drive>
+        <ss:fuel mass="15"/>
+        <ss:jump rating="2"/>
+        <ss:repulsor mass="3"/>
+    </ss:systems>
+
+    <ss:mounts>
+        <ss:mount name="Front mount" type="HardPoint">
+            <ss:weapon type="PlasmaCannon" techLevel="10"/>
+        </ss:mount>
+        <ss:mount name="Top turret" type="LightTurret">
+            <ss:weapon type="ParticleBeam" techLevel="10"/>
+        </ss:mount>
+    </ss:mounts>
+
+    <ss:crew>
+        <ss:bridge size="2"/>
+        <ss:quarters number="8">
+            <ss:property name="cramped"/> <!-- cold, cramped, officer, firstclass, luxury -->
+        </ss:quarters>
+    </ss:crew>
+</ss:spaceship>

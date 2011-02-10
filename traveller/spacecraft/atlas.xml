@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:alf="http://www.alfresco.org" xmlns:chiba="http://chiba.sourceforge.net/xforms"
+              xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Atlas</ss:name>
+        <ss:inService>-103</ss:inService>
+        <ss:manufacturer>Kamurinmur Dockyards</ss:manufacturer>
+        <ss:type>Small Freighter</ss:type>
+        <ss:brief>
+            An ugly, simple but extremely practical design of small freighter
+            which became popular before the rise of the Third Imperium.
+        </ss:brief>
+
+        <ss:physical>
+            A boxy design with exterior engine mounts at the rear. Defended
+            by a single top mounted twin turret. It is pretty much useless
+            in an atmosphere, and is not rated for planetary landings.
+        </ss:physical>
+
+        <ss:background>
+            Built at Kamurinmur Dockyards, it was a design that quickly
+            became popular due to its cheapness, practicality and ease of
+            manufacture. It has good in-system capability, which reflects
+            a time when trade between systems was less important than
+            trade within a system. Less sophisticated jump software also
+            meant longer journeys in-system after a jump.
+        </ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Block</ss:configuration>
+        <ss:displacement>240</ss:displacement>
+        <ss:techLevel>9</ss:techLevel>
+        <ss:health>3</ss:health>
+        <ss:agility>2</ss:agility>
+        <ss:armour>10</ss:armour>
+        <ss:cargo>100</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="15"/>
+        <ss:fuel mass="20"/>
+        <ss:jump rating="1"/>
+    </ss:systems>
+
+    <ss:mounts>
+        <ss:mount name="Top turret" type="DoubleLightTurret">
+            <ss:weapon type="PulseLaser" techLevel="9"/>
+        </ss:mount>
+    </ss:mounts>
+
+    <ss:crew>
+        <ss:bridge number="3"/>
+        <ss:quarters number="4">
+            <ss:property name="cramped"/>
+        </ss:quarters>
+    </ss:crew>
+</ss:spaceship>

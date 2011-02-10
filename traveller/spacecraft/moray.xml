@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:alf="http://www.alfresco.org" xmlns:chiba="http://chiba.sourceforge.net/xforms"
+              xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Moray Starboat</ss:name>
+        <ss:inService>387</ss:inService>
+        <ss:manufacturer>Outworld Workshops</ss:manufacturer>
+        <ss:type>Freighter</ss:type>
+        <ss:brief>
+            Atmospheric lander with aquatic capability.
+        </ss:brief>
+
+        <ss:physical>
+            A very basic design which was simple and cheap to manufacture,
+            making it ubiquitous for its time. Limited wings provide lift
+            during take off and re-entry.
+        </ss:physical>
+
+        <ss:background>
+            Manufactured by Outworld Workshops, a rogue breakaway company
+            from Spalder and Prime Inc. which operates without license
+            from an unknown location, the Adder-class craft has dual
+            atmospheric-spatial capability and is often used by smugglers.
+            Pregg&amp;#39;s &amp;quot; wingfolding &amp;quot; system permits
+            landing on planetary surfaces.
+        </ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Flat</ss:configuration>
+        <ss:displacement>250</ss:displacement>
+        <ss:techLevel>10</ss:techLevel>
+        <ss:health>4</ss:health>
+        <ss:agility>4</ss:agility>
+        <ss:armour>20</ss:armour>
+        <ss:cargo>70</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="40">
+            <ss:property name="advanced"/>
+        </ss:drive>
+        <ss:fuel mass="10"/>
+        <ss:jump rating="1"/>
+        <ss:repulsor mass="10" techLevel="9"/>
+    </ss:systems>
+
+    <ss:mounts>
+        <ss:mount name="Front mount" type="HardPoint"/>
+        <ss:mount name="Top turret" type="LightTurret"/>
+    </ss:mounts>
+
+    <ss:crew>
+        <ss:bridge size="2"/>
+        <ss:quarters number="8">
+            <ss:property name="cramped"/> <!-- cold, cramped, officer, firstclass, luxury -->
+        </ss:quarters>
+    </ss:crew>
+</ss:spaceship>

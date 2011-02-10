@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:alf="http://www.alfresco.org" xmlns:chiba="http://chiba.sourceforge.net/xforms"
+              xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Krait</ss:name>
+        <ss:inService>-276</ss:inService>
+        <ss:manufacturer>Zhemian Workshops</ss:manufacturer>
+        <ss:type>Fighter</ss:type>
+        <ss:brief>
+            Small single pilot fighter.
+        </ss:brief>
+
+        <ss:physical>
+            An early fighter design, sleek and agile, easily recognised by
+            the two laser mountings on either wing tip.
+        </ss:physical>
+
+        <ss:background>
+            A small, reliable one-man fighter that was common until it was
+            replaced by the Mamba in the core worlds. It still sees service
+            in the outer territories, but spare parts can be hard to find.
+        </ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Wedge</ss:configuration>
+        <ss:displacement>10</ss:displacement>
+        <ss:techLevel>9</ss:techLevel>
+        <ss:health>3</ss:health>
+        <ss:agility>4</ss:agility>
+        <ss:armour>12</ss:armour>
+        <ss:cargo>0</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="1">
+            <ss:property name="lateTech"/>
+            <ss:property name="highPerformance" value="16"/>
+        </ss:drive>
+        <ss:fuel mass="1"/>
+    </ss:systems>
+
+    <ss:mounts>
+        <ss:mount name="Front" type="HardPoint">
+            <ss:weapon type="PulseLaser"/>
+        </ss:mount>
+        <ss:mount name="Front" type="HardPoint">
+            <ss:weapon type="PulseLaser"/>
+        </ss:mount>
+    </ss:mounts>
+
+    <ss:crew>
+        <ss:cockpit number="1"/>
+    </ss:crew>
+</ss:spaceship>
