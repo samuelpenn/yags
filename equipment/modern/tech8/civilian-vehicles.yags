@@ -11,7 +11,7 @@
         <category>Vehicle</category>
         <genre>Modern</genre>
         <legality>5</legality>
-        <cost>5000</cost>
+        <cost units="usd">5000</cost>
         <weight>250000</weight>
         <techLevel>8</techLevel>
         <availability>3</availability>
@@ -45,7 +45,7 @@
         <category>Vehicle</category>
         <genre>Modern</genre>
         <legality>5</legality>
-        <cost>15000</cost>
+        <cost units="usd">15000</cost>
         <weight>750000</weight>
         <techLevel>8</techLevel>
         <availability>3</availability>
@@ -72,13 +72,22 @@
         <category>Vehicle</category>
         <genre>Modern</genre>
         <legality>5</legality>
-        <cost>35000</cost>
+        <cost units="usd">35000</cost>
         <weight>1250000</weight>
         <techLevel>8</techLevel>
         <availability>3</availability>
         <importance>3</importance>
 
         <short>Sports Utility Vehicle</short>
+
+        <description>
+            <para>
+                This is a typical SUV, designed for some limited off road
+                ability. At the very least it will have four wheel drive,
+                and be suitable for getting around on the farm as well
+                as driving on road.
+            </para>
+        </description>
 
         <performance realm="Ground">
             <speed>220</speed>
@@ -95,11 +104,50 @@
         </vehicle>
     </item>
 
+    <item name="Armoured SUV">
+        <category>Vehicle</category>
+        <genre>Modern</genre>
+        <legality>3</legality>
+        <cost units="usd">350000</cost>
+        <weight>1550000</weight>
+        <techLevel>8</techLevel>
+        <availability>2</availability>
+        <importance>2</importance>
+
+        <short>Armoured version of a SUV</short>
+        <description>
+            <para>
+                An armoured version of an SUV, designed to be used by
+                politicians, crime boss or paranoid civilian. It provides
+                protection against most forms of small arms fire, though
+                is vulnerable to even light anti-vehicle weapons.
+            </para>
+        </description>
+
+        <performance realm="Ground">
+            <speed>190</speed>
+            <acceleration>15</acceleration>
+            <range>350</range>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="11" soak="11" move="95" acceleration="20">
+                <attribute name="strength" score="18"/>
+                <attribute name="health" score="5"/>
+                <attribute name="agility" score="3"/>
+            </attributes>
+
+            <combat>
+                <armour location="All" score="6"/>
+            </combat>
+        </vehicle>
+    </item>
+
     <item name="Executive sports car">
         <category>Vehicle</category>
         <genre>Modern</genre>
         <legality>5</legality>
-        <cost>50000</cost>
+        <cost units="usd">50000</cost>
         <weight>1500000</weight>
         <techLevel>8</techLevel>
         <availability>2</availability>
@@ -133,7 +181,7 @@
         <category>Vehicle</category>
         <genre>Modern</genre>
         <legality>5</legality>
-        <cost>60000</cost>
+        <cost units="usd">60000</cost>
         <weight>914000</weight>
         <techLevel>8</techLevel>
         <availability>2</availability>

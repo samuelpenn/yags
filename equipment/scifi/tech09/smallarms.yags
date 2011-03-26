@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+
+<!--
+
+    Small arms for TL9.
+
+    Copyright 2011 Samuel Penn, sam@glendale.org.uk
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted provided that the following
+    conditions are met:
+
+    1) Redistributions of any source code (e.g. XML) must retain the
+    above copyright notice, this list of conditions and the following
+    disclaimer.
+
+    2) Redistributions in compiled form (transformed to other DTDs,
+    converted to PDF, PostScript, RTF and other formats) must
+    reproduce the above copyright notice, this list of conditions
+    and the following disclaimer in the documentation and/or other
+    materials provided with the distribution.
+
+    THIS CONTENT IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+    OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+    DISCLAIMED. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DIRECT,
+    INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+    SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+    HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+    STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+    ARISING IN ANY WAY OUT OF THE USE OF THIS CONTENT, EVEN IF ADVISED
+    OF THE POSSIBILITY OF SUCH DAMAGE.
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+
+    Prices are in US $.
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="A19 Assualt Rifle">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>9</techLevel>
+        <legality>3</legality>
+        <weight>3400</weight>
+        <cost units="usd">350</cost>
+
+        <short>Caseless 7mm assault rifle.</short>
+        <description>
+            <para>
+                Assault rifle designed to use caseless ammunition. It uses
+                a larger round to provide better effectiveness against
+                body armour, plus has the option of an under slung grenade
+                launcher with 3x40mm grenades. An automatic range finder can
+                adjust the sights to improve targeting of standard fire,
+                plus auto-detonation of the grenades.
+            </para>
+
+            <para>
+                It has single shot, full auto and 3-round burst modes, the
+                latter of which is sometimes the only option in some models.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+10</attack><damage>30</damage>
+                <range>
+                    <increment>30</increment>
+                    <short>400</short><medium>1000</medium><long>2500</long>
+                </range>
+            </combat>
+            <strength>4</strength><load>4</load><reach>2</reach>
+            <capacity>36</capacity><rof>50</rof><recoil>-4</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/><tripleauto/><automatic/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="N19X Assault Rifle">
+        <category>Weapon</category>
+        <importance>2</importance><availability>3</availability>
+        <techLevel>9</techLevel>
+        <legality>3</legality>
+        <weight>2900</weight>
+        <cost units="usd">280</cost>
+
+        <short>Caseless 5mm assault rifle.</short>
+        <description>
+            <para>
+                Light assault rifle firing a smaller round that is still
+                effective against unarmoured targets. It is very light
+                and reliable, and commonly found as the principle weapon
+                of first world armies, as well as in the hands of third
+                world militia.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+9</attack><damage>26</damage>
+                <range>
+                    <increment>25</increment>
+                    <short>300</short><medium>700</medium><long>2200</long>
+                </range>
+            </combat>
+            <strength>4</strength><load>3</load><reach>2</reach>
+            <capacity>40</capacity><rof>40</rof><recoil>-3</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/><tripleauto/><automatic/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="B2022 Battle Rifle">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>9</techLevel>
+        <legality>3</legality>
+        <weight>4500</weight>
+        <cost units="usd">650</cost>
+
+        <short>Caseless 7mm battle rifle.</short>
+        <description>
+            <para>
+                A rifle designed for longer range engagements than what
+                the more compact assault rifles are used for. It is
+                limited to semi-automatic and 3-round burst fire, since
+                fully automatic fire at greater ranges isn't viewed as
+                being useful.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+11</attack><damage>33</damage>
+                <range>
+                    <increment>40</increment>
+                    <short>800</short><medium>1600</medium><long>4000</long>
+                </range>
+            </combat>
+            <strength>5</strength><load>4</load><reach>3</reach>
+            <capacity>30</capacity><rof>10</rof><recoil>-4</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="ISW 400">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>9</techLevel>
+        <legality>3</legality>
+        <weight>5500</weight>
+        <cost units="usd">650</cost>
+
+        <short>Heavy infantry support rifle.</short>
+        <description>
+            <para>
+                The ISW 400 is an early to mid TL 9 design which fills the
+                role of a Squad Assault Weapon. It can provide a high rate
+                of automatic fire over a long range, with active cooling
+                systems which enable a sustained rate of fire over a long
+                period. It is designed to be used with either a bipod or
+                tripod, since it is too heavy for most people to use by
+                itself.
+            </para>
+
+            <para>
+                The high rate of fire requires a large supply of ammunition,
+                which is not included in the weapon weight.
+            </para>.
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+            <combat>
+                <attack>+9</attack><damage>33</damage>
+                <range>
+                    <increment>40</increment>
+                    <short>700</short><medium>2100</medium><long>6000</long>
+                </range>
+            </combat>
+            <strength>7</strength><load>4</load><reach>4</reach>
+            <capacity>300</capacity><rof>50</rof><recoil>-7</recoil>
+            <properties>
+                <missile/><firearm/><automatic/>
+                <reload score="3"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Exage 7mm">
+        <category>Weapon</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>9</techLevel>
+        <legality>3</legality>
+        <weight>750</weight>
+        <cost units="usd">300</cost>
+
+        <short>A heavy 7mm automatic pistol.</short>
+        <description>
+            <para>
+                A well known brand of automatic pistol that is available
+                pretty much everywhere, due its low cost and ease of
+                manufacture. There are many knock-off variants, though
+                most differences are superficial.
+            </para>
+
+            <para>
+                Higher tech versions may have built in laser scopes and
+                round selectors to allow multiple ammunition types. A
+                high capacity magazine (20 rounds) is also available.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+5</attack><damage>24</damage>
+                <range>
+                    <increment>15</increment>
+                    <short>75</short><medium>150</medium><long>300</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>0.5</load><reach>0</reach>
+            <capacity>10</capacity><rof>5</rof><recoil>-3</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Close Assualt Shotgun">
+        <category>Weapon</category>
+        <importance>3</importance><availability>2</availability>
+        <techLevel>9</techLevel>
+        <weight>4000</weight>
+        <cost units="usd">570</cost>
+
+        <short>An automatic shotgun designed for close assualt.</short>
+
+        <description>
+            <para>
+                Short barrelled shotgun with a 10 round magazine and
+                designed to fire shot filled rounds. It can also used
+                fletchette rounds which halve medium and long ranges,
+                and changes the weapon type to Co-17 due to the extra
+                spread. This is designed to minimise collateral damage.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Shotguns</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+15</attack><damage>37</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>15</short><medium>50</medium><long>80</long>
+                </range>
+            </combat>
+            <strength>4</strength><load>4</load><reach>2</reach>
+            <capacity>10</capacity><rof>5</rof><recoil>-3</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/>
+                <light/>
+                <reload score="2"/>
+                <cone score="18"/>
+            </properties>
+        </weapon>
+    </item>
+
+    <item name="Barrett X-2">
+        <category>Weapon</category>
+        <importance>2</importance><availability>1</availability>
+        <techLevel>9</techLevel>
+        <legality>1</legality>
+        <weight>16000</weight>
+        <cost units="usd">15000</cost>
+
+        <short>15mm gauss sniper rifle.</short>
+        <description>
+            <para>
+                This is a heavy rifle which fires a solid metal slug using an
+                electromagnetic impulse. Such gauss weapons start to become
+                available towards the end of TL9, and are found in specialist
+                roles such as snipers rifles, where the smooth acceleration
+                of the round, and lack of explosive gases, provides greater
+                accuracy.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+11</attack><damage>29</damage>
+                <range>
+                    <increment>60</increment>
+                    <short>2000</short><medium>3500</medium><long>5200</long>
+                </range>
+            </combat>
+            <strength>5</strength><load>16</load><reach>4</reach>
+            <capacity>10</capacity><rof>3</rof><recoil>-10</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/><vehicle/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
+
+</equipment>
+
+

@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+
+<!--
+    Gear for a SciFi campaign, TL 9 (2020 - 2100).
+
+    Copyright 2011 Samuel Penn, sam@glendale.org.uk
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted as long as the above copyright
+    notice is retained.
+
+    All units are in cgs.
+
+    Prices are in US dollars.
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="PD-3 Light Body Armour">
+        <category>Armour</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>9</techLevel>
+        <legality>4</legality>
+        <weight>4000</weight>
+        <cost>375</cost>
+
+        <short>Lightweight ballistic vest.</short>
+        <description>
+            <para>
+                A lightweight ballistic vest constructed of a variety of
+                materials to provide a combination of flexibility and
+                ability to absorb damage. It's main advantage over
+                earlier designs is the greatly reduced weight for only
+                a minor reduction in protective ability.
+            </para>
+        </description>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+7</protection>
+            <load>4</load>
+            <weight>4000</weight>
+            <covers>
+                <torso/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <light/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="PD-6 Heavy Body Armour">
+        <category>Armour</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>9</techLevel>
+        <legality>4</legality>
+        <weight>7000</weight>
+        <cost>600</cost>
+
+        <short>Heavy ballistic vest.</short>
+        <description>
+            <para>
+                An early TL9 design of ballistic armour that is heavy
+                and bulky but which provides reasonable protection
+                against small arms fire.
+            </para>
+        </description>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+10</protection>
+            <load>7</load>
+            <weight>7000</weight>
+            <covers>
+                <torso/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <light/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="PDX-12 Combat Armour">
+        <category>Armour</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>9</techLevel>
+        <legality>4</legality>
+        <weight>8000</weight>
+        <cost>2400</cost>
+
+        <short>Heavy ballistic vest.</short>
+        <description>
+            <para>
+                A late TL9 design of full body armour for protection
+                against ballistic weapons, using the latest in
+                composite materials. It is capable of providing some
+                protection against high powered rifles and light
+                machine guns, unlike previous designs.
+            </para>
+        </description>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+13</protection>
+            <load>8</load>
+            <weight>8000</weight>
+            <covers>
+                <torso/>
+                <legs/>
+                <arms/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <heavy/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Smart Phone">
+        <category>Communication</category>
+        <importance>2</importance><availability>3</availability>
+        <techLevel>9</techLevel>
+        <legality>5</legality>
+        <weight>400</weight>
+        <cost>450</cost>
+
+        <short>Smart phone.</short>
+        <description>
+            <para>
+                A typical smart phone of the type available in early TL9.
+                It has voice and data capability, plus about 1TB+ of
+                data storage. It almost certainly has a touch screen and
+                may have a small keyboard. Battery life will be in the
+                order of a week, depending on capabilities, and can be
+                recharged by cable or short-range wireless power (since
+                most vehicles and homes provide this, users rarely have
+                to actively recharge their devices).
+            </para>
+
+            <para>
+                It will be able to play and record HD audio, pictures and
+                video, as well as providing the ability to connect into
+                computer systems for remote administration, use of SatNav,
+                automatic payment systems and the monitoring of other
+                devices (including medical) via a personal area network.
+                They will generally be automatically hooked into social
+                networking systems, tracking a user's movements and
+                activities.
+            </para>
+        </description>
+    </item>
+
+    <item name="Medi-gel">
+        <category>Medical</category>
+        <importance>2</importance><availability>3</availability>
+        <techLevel>9</techLevel>
+        <legality>6</legality>
+        <weight>250</weight>
+        <cost>75</cost>
+
+        <short>A medical gel to seal wounds.</short>
+        <description>
+            <para>
+                A spray can of gel which binds to skin and flesh,
+                automatically sealing and cleaning open wounds, as well
+                as providing local anaesthetic to dull the pain. A spray
+                can contains 3 doses, and takes a round to apply.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <load>0.25</load>
+            <uses>3</uses>
+            <skill name="First aid" bonus="+20"/>
+        </tool>
+    </item>
+</equipment>
+
+
