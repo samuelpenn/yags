@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+
+<!--
+    Cybernetic equipment for a SciFi campaign, TL 9 (2020 - 2100).
+
+    Copyright 2011 Samuel Penn, sam@glendale.org.uk
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted as long as the above copyright
+    notice is retained.
+
+    All units are in cgs.
+
+    Prices are in US dollars.
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="Dermal Armour">
+        <category>Armour</category>
+        <importance>2</importance><availability>1</availability>
+        <techLevel>9</techLevel>
+        <legality>3</legality>
+        <weight>2000</weight>
+        <cost>150000</cost>
+
+        <short>Armour implants.</short>
+        <description>
+            <para>
+                This advanced armour is implanted beneath the skin, providing
+                the ultimate in covert protection. It is uncomfortable, and
+                gives the wearer a certain bulk, making a thin person look
+                quite 'wrong'. It has the disadvantage of not being removable
+                without surgery. Implanting (or removing) it requires 6 months
+                of surgery and bed rest.
+            </para>
+
+            <para>
+                After all that, the protection it provides is limited. However
+                standard armour can be worn over the top and any protection
+                afforded stacks with the dermal armour.
+            </para>
+        </description>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+3</protection>
+            <load>2</load>
+            <weight>2000</weight>
+            <covers>
+                <torso/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <light/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Eyes">
+        <category>Armour</category>
+        <importance>2</importance><availability>1</availability>
+        <techLevel>9</techLevel>
+        <legality>4</legality>
+        <weight>0</weight>
+        <cost>60000</cost>
+
+        <short>Cybernetic eyes.</short>
+        <description>
+            <para>
+                Implanted eyes, originally designed as a prosthetic for the
+                blind have evolved into something also useful for the fully
+                sighted. Such eyes completely replace a healthy pair, and
+                look normal to cursory examination. They provide increased
+                visual performance, plus the ability to switch to infra red
+                or low light vision.
+            </para>
+        </description>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Vision tests" attribute="+1"/>
+        </tool>
+
+        <task xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Awareness" score="20">
+                Notice that eyes are unnatural if actively paying attention
+                to them. Double difficulty if just in conversation.
+            </skill>
+        </task>
+    </item>
+</equipment>
+
+

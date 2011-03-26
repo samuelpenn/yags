@@ -51,7 +51,7 @@
             <category>Rifles</category>
             <class>rifle</class>
             <combat>
-                <attack>+9</attack><damage>29</damage>
+                <attack>+9</attack><damage>26</damage>
                 <range>
                     <increment>30</increment>
                     <short>550</short><medium>800</medium><long>2400</long>
@@ -95,7 +95,7 @@
             <category>Rifles</category>
             <class>rifle</class>
             <combat>
-                <attack>+7</attack><damage>31</damage>
+                <attack>+7</attack><damage>28</damage>
                 <range>
                     <increment>25</increment>
                     <short>300</short><medium>800</medium><long>2400</long>
@@ -135,7 +135,7 @@
             <category>Rifles</category>
             <class>rifle</class>
             <combat>
-                <attack>+10</attack><damage>35</damage>
+                <attack>+10</attack><damage>32</damage>
                 <range>
                     <increment>40</increment>
                     <short>750</short><medium>1500</medium><long>3500</long>
@@ -161,12 +161,8 @@
         <short>Automatic shotgun.</short>
         <description>
             <para>
-                A common semi-automatic shotgun.
-                Standard statistics assume it is firing shot. If using
-                a solid slug, reduce damage and accuracy by 10, damage
-                type changes from <e>Light</e> to <e>Heavy</e> and
-                double all ranges and increment. It also loses its
-                <e>Cone</e> attribute.
+                A common semi-automatic shotgun used by the military and
+                SWAT teams.
             </para>
         </description>
 
@@ -175,18 +171,18 @@
             <category>Shotguns</category>
             <class>rifle</class>
             <combat>
-                <attack>+15</attack><damage>50</damage>
+                <attack>+15</attack><damage>35</damage>
                 <range>
-                    <increment>5</increment>
-                    <short>10</short><medium>50</medium><long>200</long>
+                    <increment>10</increment>
+                    <short>10</short><medium>40</medium><long>80</long>
                 </range>
             </combat>
-            <strength>3</strength><load>5</load><reach>2</reach>
+            <strength>4</strength><load>5</load><reach>3</reach>
             <capacity>7</capacity><rof>5</rof><recoil>-5</recoil>
             <properties>
                 <missile/><firearm/><semiauto/><light/>
                 <reload score="6"/>
-                <cone score="1"/>
+                <cone score="18"/>
             </properties>
         </weapon>
     </item>
@@ -211,7 +207,7 @@
             <category>Pistols</category>
             <class>pistol</class>
             <combat>
-                <attack>+5</attack><damage>25</damage>
+                <attack>+5</attack><damage>22</damage>
                 <range>
                     <increment>15</increment>
                     <short>75</short><medium>150</medium><long>750</long>
@@ -248,7 +244,7 @@
             <category>Pistols</category>
             <class>pistol</class>
             <combat>
-                <attack>+5</attack><damage>23</damage>
+                <attack>+5</attack><damage>20</damage>
                 <range>
                     <increment>10</increment>
                     <short>50</short><medium>100</medium><long>400</long>
@@ -287,7 +283,7 @@
             <category>Heavy</category>
             <class>heavy</class>
             <combat>
-                <attack>+8</attack><damage>32</damage>
+                <attack>+8</attack><damage>29</damage>
                 <range>
                     <increment>30</increment>
                     <short>400</short><medium>1000</medium><long>3000</long>
@@ -337,104 +333,6 @@
             <capacity>30</capacity><rof>30</rof><recoil>-10</recoil>
             <properties>
                 <missile/><firearm/><automatic/><explosive score="20"/>
-                <reload score="3"/>
-            </properties>
-        </weapon>
-    </item>
-
-   <item name="M61 Vulcan">
-        <category>Weapon</category>
-        <importance>2</importance><availability>2</availability>
-        <techLevel>7</techLevel>
-        <legality>3</legality>
-        <weight>112000</weight>
-        <cost>35000</cost>
-
-        <short>20mm Gatling cannon.</short>
-        <description>
-            <para>
-                First produced in 1959 by General Electric, the M61 Vulcan is
-                a six barreled, air-cooled, electrically fired Gatling style
-                cannon, capable of firing 20mm rounds at 6000rpm, with a
-                muzzle velocity of just over 1km/s. The original specification
-                was for an aircraft mounted cannon capable of hitting other
-                high speed targets.
-            </para>
-
-            <para>
-                It uses a linkless feed system, and has the option of either
-                ejecting or retaining spent cases. The latter is useful on
-                aircraft where ejected cases have potential to damage the
-                engine.
-            </para>
-
-            <para>
-                There is a self-powered version, the GAU-4 (or M130) which is
-                gas operated. This is 4.5kg heavier, but otherwise similar in
-                capability.
-            </para>
-        </description>
-
-        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <category>Firearms</category>
-            <category>Heavy</category>
-            <class>heavy</class>
-            <combat>
-                <attack>+13</attack><damage>25</damage>
-                <range>
-                    <increment>50</increment>
-                    <short>1000</short><medium>3000</medium><long>8000</long>
-                </range>
-            </combat>
-            <strength>8</strength><load>112</load><reach>5</reach>
-            <capacity>var.</capacity><rof>500</rof><recoil>-25</recoil>
-            <properties>
-                <missile/><firearm/><automatic score="100"/><vehicle/>
-                <reload score="3"/>
-            </properties>
-        </weapon>
-    </item>
-
-   <item name="GAU-8 Avenger">
-        <category>Weapon</category>
-        <importance>2</importance><availability>2</availability>
-        <techLevel>7</techLevel>
-        <legality>3</legality>
-        <weight>280000</weight>
-        <cost>35000</cost>
-
-        <short>30mm Gatling cannon.</short>
-        <description>
-            <para>
-                A 7 barreled rotary cannon capable of firing 30mm rounds at
-                4,200 rpm with a velocity of 1km/s. It is the principle
-                weapon of the A-10 Warthog, a close combat aircraft designed
-                for tank hunting, amongst other things.
-            </para>
-
-            <para>
-                Typically, the magazine is loaded with a mixture of armour
-                piercing and high explosive rounds for maximum effectiveness
-                against armoured targets.
-            </para>
-        </description>
-
-        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <category>Firearms</category>
-            <category>Heavy</category>
-            <class>heavy</class>
-            <combat>
-                <attack>+11</attack><damage>35</damage>
-                <range>
-                    <increment>50</increment>
-                    <short>1000</short><medium>3000</medium><long>8000</long>
-                </range>
-            </combat>
-            <strength>8</strength><load>112</load><reach>5</reach>
-            <capacity>1150</capacity><rof>350</rof><recoil>-25</recoil>
-            <properties>
-                <missile/><firearm/><automatic score="50"/>
-                <vehicle/><heavy/><explosive score="2"/>
                 <reload score="3"/>
             </properties>
         </weapon>

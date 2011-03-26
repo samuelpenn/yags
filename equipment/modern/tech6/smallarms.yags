@@ -62,7 +62,7 @@
             <category>Rifles</category>
             <class>rifle</class>
             <combat>
-                <attack>+8</attack><damage>30</damage>
+                <attack>+8</attack><damage>27</damage>
                 <range>
                     <increment>25</increment>
                     <short>550</short><medium>900</medium><long>2700</long>
@@ -102,7 +102,7 @@
             <category>Pistols</category>
             <class>pistol</class>
             <combat>
-                <attack>+4</attack><damage>21</damage>
+                <attack>+4</attack><damage>18</damage>
                 <range>
                     <increment>15</increment>
                     <short>60</short><medium>120</medium><long>600</long>
@@ -138,7 +138,7 @@
             <category>Pistols</category>
             <class>pistol</class>
             <combat>
-                <attack>+4</attack><damage>25</damage>
+                <attack>+4</attack><damage>22</damage>
                 <range>
                     <increment>15</increment>
                     <short>80</short><medium>160</medium><long>800</long>
@@ -175,7 +175,7 @@
             <category>Pistols</category>
             <class>pistol</class>
             <combat>
-                <attack>+4</attack><damage>21</damage>
+                <attack>+4</attack><damage>18</damage>
                 <range>
                     <increment>10</increment>
                     <short>50</short><medium>100</medium><long>400</long>
@@ -212,7 +212,7 @@
             <category>Rifles</category>
             <class>rifle</class>
             <combat>
-                <attack>+7</attack><damage>30</damage>
+                <attack>+7</attack><damage>27</damage>
                 <range>
                     <increment>20</increment>
                     <short>450</short><medium>700</medium><long>2100</long>
@@ -250,7 +250,7 @@
             <category>Rifles</category>
             <class>rifle</class>
             <combat>
-                <attack>+7</attack><damage>30</damage>
+                <attack>+7</attack><damage>27</damage>
                 <range>
                     <increment>25</increment>
                     <short>800</short><medium>1600</medium><long>3500</long>
@@ -296,7 +296,7 @@
             <category>Rifles</category>
             <class>rifle</class>
             <combat>
-                <attack>+5</attack><damage>23</damage>
+                <attack>+5</attack><damage>20</damage>
                 <range>
                     <increment>15</increment>
                     <short>200</short><medium>500</medium><long>2000</long>
@@ -316,7 +316,7 @@
         <importance>2</importance><availability>2</availability>
         <techLevel>6</techLevel>
         <legality>2</legality>
-        <weight>4000</weight>
+        <weight>3600</weight>
         <cost>550</cost>
 
         <short>Late 19th century 12G shotgun.</short>
@@ -329,6 +329,13 @@
                 the same regardless of looks.
             </para>
 
+            <para>
+                If using a solid slug rather than shot, it loses its
+                <e>Cone</e> effect, does +5 damage and triples all
+                ranges. The increment is doubled, but halve the
+                attack bonus. Also lose the <e>light</e> effect and
+                becomes <e>heavy</e>.
+            </para>
         </description>
 
         <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
@@ -336,18 +343,18 @@
             <category>Shotguns</category>
             <class>rifle</class>
             <combat>
-                <attack>+10</attack><damage>45</damage>
+                <attack>+15</attack><damage>33</damage>
                 <range>
-                    <increment>5</increment>
-                    <short>10</short><medium>25</medium><long>100</long>
+                    <increment>10</increment>
+                    <short>10</short><medium>25</medium><long>50</long>
                 </range>
             </combat>
-            <strength>3</strength><load>4</load><reach>2</reach>
+            <strength>3</strength><load>4</load><reach>3</reach>
             <capacity>5</capacity><rof>5</rof><recoil>-5</recoil>
             <properties>
                 <missile/><firearm/><semiauto/><light/>
                 <reload score="4"/>
-                <cone score="1"/>
+                <cone score="18"/>
             </properties>
         </weapon>
     </item>
