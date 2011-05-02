@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+
+<!--
+    Small arms weapons from the real world, approximately 1945 - 1980.
+
+    Copyright 2007 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted as long as the above copyright
+    notice is retained.
+
+    Version: $Revision: 1.2 $
+    Date:    $Date: 2007-10-13 12:55:40 $
+
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+
+    Prices are in US dollars.
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="X54 Hunter Pack">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>7</techLevel>
+        <legality>2</legality>
+        <weight>25000</weight>
+        <cost>35000</cost>
+
+        <short>Portable smart missile launcher.</short>
+        <description>
+            <para>
+                A portable backpack carrying 6 micro-missiles normally
+                equipped with HEX warheads. They link in with the soldier's
+                rifle or HUD to pinpoint the rough location of the enemy,
+                launch themselves on a high angle ballistic trajectory,
+                then use automated smart guidance to pinpoint the exact
+                locations and perform final flight corrections before
+                impacting with the targets.
+            </para>
+
+            <para>
+                They are designed to take out targets dug in behind walls
+                or inside buildings. A <e>Heavy Weapons</e> skill check
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+            <combat>
+                <attack>25</attack><damage>35</damage>
+                <range>
+                    <increment>500</increment>
+                    <short>2000</short><medium>4000</medium><long>5000</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>25</load><reach>0</reach>
+            <capacity>6</capacity><rof>1</rof><recoil>-20</recoil>
+            <properties>
+                <missile/><vehicle/><heavy/>
+                <guided type="clever" score="3"/>
+                <explosive score="2"/>
+                <reload score="4"/>
+            </properties>
+        </weapon>
+    </item>
+
+
+   <item name="M61 Vulcan">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>7</techLevel>
+        <legality>3</legality>
+        <weight>112000</weight>
+        <cost>35000</cost>
+
+        <short>20mm Gatling cannon.</short>
+        <description>
+            <para>
+                First produced in 1959 by General Electric, the M61 Vulcan is
+                a six barreled, air-cooled, electrically fired Gatling style
+                cannon, capable of firing 20mm rounds at 6000rpm, with a
+                muzzle velocity of just over 1km/s. The original specification
+                was for an aircraft mounted cannon capable of hitting other
+                high speed targets.
+            </para>
+
+            <para>
+                It uses a linkless feed system, and has the option of either
+                ejecting or retaining spent cases. The latter is useful on
+                aircraft where ejected cases have potential to damage the
+                engine.
+            </para>
+
+            <para>
+                There is a self-powered version, the GAU-4 (or M130) which is
+                gas operated. This is 4.5kg heavier, but otherwise similar in
+                capability.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+            <combat>
+                <attack>+13</attack><damage>22</damage>
+                <range>
+                    <increment>50</increment>
+                    <short>1000</short><medium>3000</medium><long>8000</long>
+                </range>
+            </combat>
+            <strength>8</strength><load>112</load><reach>5</reach>
+            <capacity>var.</capacity><rof>500</rof><recoil>-25</recoil>
+            <properties>
+                <missile/><firearm/><automatic score="100"/><vehicle/>
+                <reload score="3"/>
+            </properties>
+        </weapon>
+    </item>
+
+   <item name="GAU-8 Avenger">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>7</techLevel>
+        <legality>3</legality>
+        <weight>280000</weight>
+        <cost>35000</cost>
+
+        <short>30mm Gatling cannon.</short>
+        <description>
+            <para>
+                A 7 barreled rotary cannon capable of firing 30mm rounds at
+                4,200 rpm with a velocity of 1km/s. It is the principle
+                weapon of the A-10 Warthog, a close combat aircraft designed
+                for tank hunting, amongst other things.
+            </para>
+
+            <para>
+                Typically, the magazine is loaded with a mixture of armour
+                piercing and high explosive rounds for maximum effectiveness
+                against armoured targets.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+            <combat>
+                <attack>+11</attack><damage>32</damage>
+                <range>
+                    <increment>50</increment>
+                    <short>1000</short><medium>3000</medium><long>8000</long>
+                </range>
+            </combat>
+            <strength>8</strength><load>112</load><reach>5</reach>
+            <capacity>1150</capacity><rof>350</rof><recoil>-25</recoil>
+            <properties>
+                <missile/><firearm/><automatic score="50"/>
+                <vehicle/><heavy/><explosive score="2"/>
+                <reload score="3"/>
+            </properties>
+        </weapon>
+    </item>
+
+
+</equipment>
+
+
