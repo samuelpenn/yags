@@ -60,20 +60,72 @@
                 <attack>+5</attack><damage>55</damage>
                 <range>
                     <increment>200</increment>
-                    <short>300</short><medium>600</medium><long>3750</long>
+                    <short>300</short><medium>3000</medium><long>4500</long>
                 </range>
             </combat>
             <strength>10</strength><load>20</load><reach>4</reach>
             <capacity>1</capacity><rof>1</rof><recoil>-20</recoil>
             <properties>
                 <missile/><vehicle/><heavy/>
-                <guided type="manual" score="3"/>
+                <guided type="manual" score="3" move="1500"/>
                 <explosive score="2"/>
                 <reload score="4"/>
             </properties>
         </weapon>
     </item>
 
+    <item name="AGM-65 Maverick">
+        <category>Weapon</category>
+        <importance>1</importance><availability>1</availability>
+        <techLevel>7</techLevel>
+        <legality>1</legality>
+        <weight>250000</weight>
+        <cost>160000</cost>
+
+        <short>Air-to-ground tactical missile.</short>
+        <description>
+            <para>
+                A fire and forget missile designed for close air
+                support against ground (or sea) targets. The physical
+                characteristics given here exclude the launcher and
+                fire control systems.
+            </para>
+
+            <para>
+                It uses IR homing to track a target that has been
+                identified by an operator. After launch, it uses its
+                own sensors and navigation systems to stay on course
+                and track the target.
+            </para>
+
+            <para>
+                It has a top speed of 1,200km/h and a range of 28km,
+                using a solid fuel rocket for propulsion. It is roughly
+                2.5m in length.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+            <combat>
+                <attack>+5</attack><damage>55</damage>
+                <range>
+                    <increment>200</increment>
+                    <short>350</short><medium>25000</medium><long>30000</long>
+                </range>
+            </combat>
+            <strength>10</strength><load>20</load><reach>4</reach>
+            <capacity>1</capacity><rof>1</rof><recoil>-20</recoil>
+            <properties>
+                <missile/><vehicle/><heavy/>
+                <guided type="homing" score="4" skill="4" move="1500"/>
+                <explosive score="2"/>
+                <reload score="4"/>
+            </properties>
+        </weapon>
+    </item>
 
    <item name="M61 Vulcan">
         <category>Weapon</category>

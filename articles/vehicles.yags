@@ -7,7 +7,7 @@
          xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
         <title>Yags Vehicles</title>
-        <tagline>Yags 0.7</tagline>
+        <tagline>Yags 0.7.4</tagline>
 
         <summary>
             Vehicles and other mechanical constructs.
@@ -18,13 +18,8 @@
             <email>sam@glendale.org.uk</email>
         </author>
 
-        <cvsinfo>
-            <version>$Revision: 1.2 $</version>
-            <date>$Date: 2009-07-19 17:19:18 $</date>
-        </cvsinfo>
-
         <license type="Yags">
-            <year>2010</year>
+            <year>2011</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -457,14 +452,17 @@
                     </para>
 
                     <para>
-                        If you really want to, halve acceleration if the car is
-                        travelling at greater at half it's top speed.
+                        If you really want to, halve acceleration if the vehicle
+                        is travelling at greater than half its top speed.
                     </para>
 
                     <para>
                         Each vehicle also has a <e>range</e>, which is how many
                         kilometres it can travel on a single load of fuel. Again,
-                        this is just an average for simplicity.
+                        this is just an average for simplicity. If you want,
+                        increase fuel consumption by 50% above 100km/h, double it
+                        above 150km/h, and add further multiples for each extra
+                        50km/h.
                     </para>
 
                     <para>
@@ -559,9 +557,119 @@
                         Vehicle scale weapons also gain a +1 bonus to their
                         effective size for every full 10 bullets in the burst.
                         If they do explosive damage (e.g., HE rounds), then
-                        also add the explosive radius to the size.
+                        also add +2 size for the first 1m of explosive radius,
+                        and a further +2 for each doubling.
                     </para>
                 </sect3>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>Vehicle Actions</title>
+
+            <para>
+                For the most part, vehicles are secondary to the plot - they
+                allow characters to get from A to B with a minimum of time
+                and fuss. Occasionally however, the journey is the interesting
+                bit, and modelling a high speed car chase can be tricky to
+                handle.
+            </para>
+
+            <sect2>
+                <title>From A to B</title>
+
+                <para>
+                    Firstly, when driving a normal route, without any attempt
+                    at high speed or evasion, there is a simple
+                    <t>Perception</t> based <e>Drive</e> check made every hour
+                    at a target of 10. This is not capped by the vehicle's
+                    statistics, and mostly comes down to the driver being aware
+                    of what is going on around them. After a number of checks
+                    equal to their <t>Will</t>, they gain a level of exhaustion,
+                    and a further level every 2 checks after that.
+                </para>
+
+                <para>
+                    If a check is failed, then the driver can opt to either gain
+                    an immediate level of exhaustion, or to make a <t>Dexterity</t>
+                    based check at the same difficulty. If this succeeds, then an
+                    accident is narrowly avoided. Otherwise, there is a collision.
+                </para>
+
+                <para>
+                    If the driver wishes to travel faster than normal, then they
+                    can reduce journey time by 20%, but the target difficulties
+                    are increased by +5. Each further 5% reduction increases the
+                    difficulty by an extra +5 (e.g., difficulty 45 to halve the
+                    journey time).
+                </para>
+
+                <para>
+                    This assumes medium amounts of traffic.
+                </para>
+
+                <targetlist targetFirst="false" bold="true">
+                    <targetLabel>Modifier</targetLabel>
+                    <valueLabel>Level of traffic</valueLabel>
+
+                    <item target="-10" value="Light traffic.">
+                        Equivalent to late at night, where there's always
+                        room to overtake and plenty of distance between
+                        vehicles.
+                    </item>
+
+                    <item target="+0" value="Medium traffic.">
+                        Late evening or during quiet periods during the
+                        day. There is space between traffic, but a lot of
+                        breaking and lane changing will be necessary.
+                    </item>
+
+                    <item target="+10" value="Heavy traffic.">
+                        Everyone is moving, but you need to be aggressive
+                        to overtake, since there is rarely a clear line
+                        between vehicles. Rush hour on motorways during
+                        a good day. Travel time is +25% normal.
+                    </item>
+
+                    <item target="+25" value="It's a car park.">
+                        Traffic is pretty much stationary, and there's no
+                        where to go. Travel time is +100% normal.
+                    </item>
+                </targetlist>
+            </sect2>
+
+            <sect2>
+                <title>The Easy Option</title>
+
+                <para>
+                    The easiest option is to abstract everything into a
+                    simple die roll. There are three things which need to
+                    be taken into consideration:
+                </para>
+
+                <itemlist>
+                    <item>
+                        The capability of the vehicle, including its speed
+                        and manoeuvrability.
+                    </item>
+
+                    <item>
+                        The capability of the driver or pilot, which basically
+                        comes down to their skill.
+                    </item>
+
+                    <item>
+                        The environment that the chase is occurring through.
+                    </item>
+                </itemlist>
+
+                <para>
+                    Skill checks are made with the driver's <e>Drive</e> skill,
+                    based on their <t>Dexterity</t> capped to the vehicle's
+                    <t>Agility</t>. Driving under stressful conditions but on
+                    a clear road will be <e>Very Easy</e> - a target difficulty
+                    of 10.
+                </para>
             </sect2>
         </sect1>
 
