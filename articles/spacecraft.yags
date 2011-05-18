@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <header>
+        <title>Spacecraft</title>
+        <tagline>Yags 0.7.1</tagline>
+
+        <summary>
+            Space craft and space combat.
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.2 $</version>
+            <date>$Date: 2009-07-19 17:19:18 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2008</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+        </license>
+
+        <style name="combat"/>
+    </header>
+
+    <body>
+        <sect1>
+            <title>Spacecraft</title>
+
+            <para>
+                Though spacecraft are just another type of vehicle, they
+                are provided their own section here for a number of reasons.
+                Firstly, all the interesting spacecraft tend to be
+                imaginary works of fiction, and the physics by which most
+                of them operate are incompatible with each other. Firstly
+                then, we need to lay down the laws by which spacecraft in
+                <tm>Yags</tm> work.
+            </para>
+
+            <para>
+                Secondly, the <tm>Yags</tm> rules for vehicles assume that
+                designs are based on real life, or near real-life, designs.
+                There is no real design system as such - just a set of
+                guidelines to try and keep things vaguely consistent.
+                Spacecraft will often be designed entirely from scratch
+                without any basis in reality, so it helps to tie things
+                down a bit.
+            </para>
+
+            <para>
+                Thirdly, whilst most people have a good idea about how a
+                car behaves, few people can get their head around space
+                travel. Even if you don't drive, you've almost definitely
+                been in a car that's travelled through a town centre, so
+                you know how fast it goes and how long a journey takes.
+                Most people don't have that common sense knowledge for
+                a journey from Earth to Mars, or a trip around the
+                moons of Saturn. A set of rules helps fill in for that
+                lack of common sense.
+            </para>
+
+            <note title="A Sense of Scale">
+                <para>
+                    One of the many things that SF settings fail to agree
+                    on is just how big space is. Most television shows or
+                    films like to portray close up action similar to
+                    WWII dogfighting, with space fighters coming within
+                    metres of each other, and individual ships clearly
+                    visible to the naked eye. This is obviously for dramatic
+                    effect, but is often ridiculed by SF fans.
+                </para>
+
+                <para>
+                    Novels have more freedom here, and some have battles
+                    over millions of kilometres, with individual vessels
+                    only visible as bright spots of light. Battles may
+                    last hours, days or years.
+                </para>
+
+                <para>
+                    <tm>Yags</tm> goes for something in between. Combat tends
+                    to in on the order of tens of kilometres, with engagement
+                    times lasting minutes at most.
+                </para>
+            </note>
+
+            <para>
+                As with all rules in games, they can be ignored. However,
+                the rules here do allow ships to be designed with a
+                reasonable degree of accuracy. However, this does also
+                mean that a little bit of maths may be involved.
+            </para>
+
+            <sect2>
+                <title>The Ground Rules</title>
+
+                <quote signature="Douglas Adams">
+                    Space is big. Really big. You just won't believe how
+                    vastly mind-boggingly big it is. I mean, you may think
+                    it's a long way down the road to the chemist, but that's
+                    just peanuts to space.
+                </quote>
+
+                <para>
+                    The physics of <tm>Yags SciFi</tm> is somewhat harder
+                    than most Hollywood fiction. It can take days to weeks
+                    to travel across the solar system, and weapon ranges
+                    are in the order of tens of kilometres. Anti-gravity
+                    exists, though only at higher tech levels and it can
+                    be quite limited. Ships move by throwing hot stuff
+                    out the back very fast according to the principles of
+                    Newtonian motion.
+                </para>
+
+                <sect3>
+                    <title>Sizes</title>
+
+                    <para>
+                        The size of ships is measured in displacement tonnes
+                        of liquid hydrogen. 1 dt is about 15 cubic metres
+                        (about 14.75 to be more precise, but 15 is assumed).
+                        Ships below 10dt are rare - generally light fighters
+                        and similar vessels. A typical ship that might be
+                        owned by a group of PC's will be on the order of
+                        100dt - 500dt in size.
+                    </para>
+
+                    <para>
+                        Even the smallest fighters tend to be around
+                        Size 15 in <tm>Yags</tm> terms - larger than any
+                        modern day tank. The largest vessels will be
+                        hundreds of thousands of displacement tonnes,
+                        with a million tonnes being extremely rare.
+                    </para>
+
+                    <para>
+                        Note that an Imperial class Star Destroyer from
+                        <s>Star Wars</em> would be over 4 million tonnes,
+                        so ships are relatively small compared to those in
+                        many Hollywood films.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Time and Movement</title>
+
+                    <para>
+                        Time is measured in turns of 10 seconds.
+                    </para>
+
+                    <para>
+                        Distances are measured in kilometres.
+                    </para>
+
+                    <para>
+                        How quickly a spacecraft moves is measured by its
+                        <e>acceleration</e>, which is given in 'g'. Every
+                        'g' of acceleration allows the ship to accelerate
+                        up to (roughly) 1km/turn/turn.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Design the Hull</title>
+
+                <para>
+                    The first decision point is the size of the ship. This
+                    is measured in displacement tonnes, and for most jump
+                    capable craft will be in the order of 100dt - 1000dt.
+                    Ships bigger than this tend to be military vessels,
+                    large freighters or cruise ships. The tonnage controls
+                    how much room there is for weapons, drives, crew etc,
+                    and also how much damage the ship can take.
+                </para>
+
+                <para>
+                    The second decision is the rough shape of the vessel.
+                    This affects the internal volume (space for things),
+                    surface area (weight of armour and space for turrets)
+                    and modifiers to strength and agility.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Weapons</title>
+
+                <para>
+                    Space is big, really big, and the ranges of many
+                    space-born weapons are huge compared to the sort
+                    of scales present in ground combat.
+                </para>
+
+                <para>
+                    The <e>short range</e> of a space weapon is the distance
+                    at which it does the stated damage. Each increment of
+                    the short range reduces the damage by -25.
+                </para>
+
+                <para>
+                    Since such weapons are designed to be used at massive
+                    distances, the distance increment is normally in
+                    multiples of 1km.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Star Drives</title>
+
+                <para>
+                    There are three types of drive systems assumed.
+                </para>
+
+                <sect3>
+                    <title>Fusion Drive</title>
+
+                    <para>
+                        The least <e>magical</e> of the drive systems is a
+                        form of fusion drive, which is assumed to be high
+                        efficiency and high thrust, enabling craft to
+                        accelerate at multiple g's, without requiring much
+                        reaction mass.
+                    </para>
+
+                    <para>
+                        They aren't totally reactionless, but for game
+                        purposes they are nearly so. A ship needs to have
+                        fuel, but this is as much being burnt for energy
+                        as it is being used as propellent.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Repulsor Drives</title>
+
+                    <para>
+                        Repulsors are like tractor beams, but they push.
+                        What they push against are nearby masses, such as
+                        the ground. They are very short range, so can't be
+                        used to traverse a solar system, but at high tech
+                        levels they can be used to reach orbit.
+                    </para>
+
+                    <para>
+                        They may be found on spacecraft which need to land
+                        on planets, and tend to be used during the final
+                        landing or take off, so as not to scorch the landing
+                        area with the fusion torch drives.
+                    </para>
+                </sect3>
+            </sect2>
+        </sect1>
+    </body>
+</article>
+
+
