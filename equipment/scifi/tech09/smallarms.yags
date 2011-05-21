@@ -338,6 +338,62 @@
         </weapon>
     </item>
 
+    <item name="ILS-2000 Laser Rifle">
+        <category>Weapon</category>
+        <importance>2</importance><availability>1</availability>
+        <techLevel>9</techLevel>
+        <legality>1</legality>
+        <weight>18000</weight>
+        <cost units="usd">35000</cost>
+
+        <short>Heavy laser rifle.</short>
+        <description>
+            <para>
+                The ILS-2000 becomes production ready in late TL 9. It is
+                designed as a sniper's rifle, though has advantages and
+                disadvantages compared to similar solid slug designs. It
+                isn't as powerful as the alternatives, but its accuracy
+                over range is much greater (though effective range isn't
+                as great as standard sniper rifles).
+            </para>
+
+            <para>
+                It is heavy, unwieldy, has a low rate of fire and limited
+                capacity. However, it is unaffected by wind and gravity
+                (though moist air can seriously limit range) and can pass
+                through windows unaffected, making it an excellent
+                assassination tool.
+            </para>
+
+            <para>
+                It is possible to disable safety features to produce an
+                overpowered shot. RoF drops to 1, but each extra charge
+                used in the shot does +2 damage, with a +1 increase in
+                fumble chance. On a fumble, the weapon burns out and is
+                rendered inoperable (sometimes explosively) rather than
+                firing.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+13</attack><damage>40</damage>
+                <range>
+                    <increment>100</increment>
+                    <short>1000</short><medium>2000</medium><long>3000</long>
+                </range>
+            </combat>
+            <strength>5</strength><load>18</load><reach>4</reach>
+            <capacity>8</capacity><rof>2</rof><recoil>0</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/><laser/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
 </equipment>
 
 

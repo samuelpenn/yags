@@ -73,75 +73,22 @@
         </weapon>
     </item>
 
-
-   <item name="M61 Vulcan">
+   <item name="GAU-25 Vindicator">
         <category>Weapon</category>
         <importance>2</importance><availability>2</availability>
-        <techLevel>7</techLevel>
+        <techLevel>9</techLevel>
         <legality>3</legality>
-        <weight>112000</weight>
-        <cost>35000</cost>
-
-        <short>20mm Gatling cannon.</short>
-        <description>
-            <para>
-                First produced in 1959 by General Electric, the M61 Vulcan is
-                a six barreled, air-cooled, electrically fired Gatling style
-                cannon, capable of firing 20mm rounds at 6000rpm, with a
-                muzzle velocity of just over 1km/s. The original specification
-                was for an aircraft mounted cannon capable of hitting other
-                high speed targets.
-            </para>
-
-            <para>
-                It uses a linkless feed system, and has the option of either
-                ejecting or retaining spent cases. The latter is useful on
-                aircraft where ejected cases have potential to damage the
-                engine.
-            </para>
-
-            <para>
-                There is a self-powered version, the GAU-4 (or M130) which is
-                gas operated. This is 4.5kg heavier, but otherwise similar in
-                capability.
-            </para>
-        </description>
-
-        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <category>Firearms</category>
-            <category>Heavy</category>
-            <class>heavy</class>
-            <combat>
-                <attack>+13</attack><damage>22</damage>
-                <range>
-                    <increment>50</increment>
-                    <short>1000</short><medium>3000</medium><long>8000</long>
-                </range>
-            </combat>
-            <strength>8</strength><load>112</load><reach>5</reach>
-            <capacity>var.</capacity><rof>500</rof><recoil>-25</recoil>
-            <properties>
-                <missile/><firearm/><automatic score="100"/><vehicle/>
-                <reload score="3"/>
-            </properties>
-        </weapon>
-    </item>
-
-   <item name="GAU-8 Avenger">
-        <category>Weapon</category>
-        <importance>2</importance><availability>2</availability>
-        <techLevel>7</techLevel>
-        <legality>3</legality>
-        <weight>280000</weight>
-        <cost>35000</cost>
+        <weight>220000</weight>
+        <cost>45000</cost>
 
         <short>30mm Gatling cannon.</short>
         <description>
             <para>
-                A 7 barreled rotary cannon capable of firing 30mm rounds at
-                4,200 rpm with a velocity of 1km/s. It is the principle
-                weapon of the A-10 Warthog, a close combat aircraft designed
-                for tank hunting, amongst other things.
+                Similar to its predecessors, the GAU-25 is a gauss based
+                rotary cannon that fires 25mm rounds at over 6000rpm, with a
+                muzzle velocity of well over 1km/s. It is normally vehicle
+                mounted, though is sometimes used on fixed emplacements as
+                anti-air defence.
             </para>
 
             <para>
@@ -156,14 +103,14 @@
             <category>Heavy</category>
             <class>heavy</class>
             <combat>
-                <attack>+11</attack><damage>32</damage>
+                <attack>+12</attack><damage>37</damage>
                 <range>
                     <increment>50</increment>
-                    <short>1000</short><medium>3000</medium><long>8000</long>
+                    <short>1200</short><medium>3600</medium><long>9000</long>
                 </range>
             </combat>
-            <strength>8</strength><load>112</load><reach>5</reach>
-            <capacity>1150</capacity><rof>350</rof><recoil>-25</recoil>
+            <strength>8</strength><load>220</load><reach>5</reach>
+            <capacity>2000</capacity><rof>500</rof><recoil>-20</recoil>
             <properties>
                 <missile/><firearm/><automatic score="50"/>
                 <vehicle/><heavy/><explosive score="2"/>
@@ -172,6 +119,44 @@
         </weapon>
     </item>
 
+   <item name="XV-A2 Laser Point Defence">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>9</techLevel>
+        <legality>3</legality>
+        <weight>300000</weight>
+        <cost>150000</cost>
+
+        <short>Laser cannon.</short>
+        <description>
+            <para>
+                The XV-A2 enters operational service with the military in early
+                TL 9, and is one of the first practical uses for a laser based
+                weapon system. Designed principally as point defence, it's high
+                accuracy makes it ideal for use against missiles and aircraft.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Heavy</category>
+            <class>heavy</class>
+            <combat>
+                <attack>+17</attack><damage>32</damage>
+                <range>
+                    <increment>100</increment>
+                    <short>2000</short><medium>4000</medium><long>6000</long>
+                </range>
+            </combat>
+            <strength>8</strength><load>300</load><reach>5</reach>
+            <capacity>120</capacity><rof>10</rof><recoil>0</recoil>
+            <properties>
+                <missile/><firearm/><automatic score="10"/>
+                <vehicle/><heavy/><laser/>
+                <reload score="3"/>
+            </properties>
+        </weapon>
+    </item>
 
 </equipment>
 
