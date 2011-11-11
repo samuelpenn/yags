@@ -180,7 +180,8 @@
                     <item name="Load">
                         A character can carry a load equal to the square of
                         their strength without penalty. Weapons, armour
-                        and equipment carried add to load.
+                        and equipment carried add to load. The load rating of
+                        an item is equal to its weight in kg x 4.
                     </item>
 
                     <item name="Stance">
@@ -251,22 +252,68 @@
                 <title>Combat skills</title>
 
                 <para>
-                    There are a number of different skills used in combat,
-                    each skill covering a particular style of fighting. It
-                    is not necessary to learn a different skill for every
-                    weapon - a skill with <e>single weapon</e> will allow
-                    you to use any one handed melee weapon for example.
+                    There are a huge variety of different weapons that can
+                    be used in combat, from knives to two handed swords, from
+                    pistols to sniper rifles and light machine guns. However,
+                    there are only a small number of very broad skills that
+                    need to be learnt. The most common skills for personal
+                    weapons are:
                 </para>
+
+                <itemlist order="sort">
+                    <item name="Brawl">
+                        All forms of unarmed combat, including punching,
+                        kicking, biting and wrestling. It also covers use
+                        of small (non-martial) weapons. All specialist
+                        martial arts (such as karate or marines close
+                        combat) are specialisations of brawl.
+                    </item>
+
+                    <item name="Melee">
+                        Using a melee weapon of any type, from knives to
+                        maces or long swords. Use of shields also comes
+                        under melee.
+                    </item>
+
+                    <item name="Throw">
+                        Throwing weapons of any type, including knives,
+                        spears, stones or bottles. Using a sling or atlatl
+                        also comes under throw.
+                    </item>
+
+                    <item name="Pistol">
+                        Using a one handed firearm of any type, including
+                        SMGs.
+                    </item>
+
+                    <item name="Rifle">
+                        Using two handed firearms, such as shotguns, assault
+                        rifles and sniper rifles.
+                    </item>
+
+                    <item name="Bow">
+                        All types of bows except for crossbows. Includes
+                        short and long bows, as well as historical and modern
+                        variants of both.
+                    </item>
+
+                    <item name="Crossbow">
+                        Use of crossbows. Crossbows can also be used with
+                        the Throw skill, but mastery (and fast loading)
+                        requires this skill.
+                    </item>
+                </itemlist>
 
                 <para>
-                    The detailed combat system provides differences between
-                    how these skills are used. For now though, the only
-                    difference is in which weapons they can be used with.
-                    See the descriptions of these skills in the Skills
-                    section for more details.
+                    <e>Techniques</e> provide the ability to specialise in
+                    particular types of weapons or styles of combat, and a
+                    true master will do this. You can use a sword and shield
+                    with the <e>Melee</e> skill, but knowing the
+                    <e>Weapon and shield</e> technique makes it easier to
+                    defend against multiple opponents, or to use the shield
+                    offensively at the same time for example.
                 </para>
             </sect2>
-
 
             <sect2>
                 <title>Weapons</title>
@@ -291,8 +338,44 @@
                 <para>
                     Every creature has a basic soak score, which reduces
                     the damage done to them in an attack. Armour gives a
-                    protective bonus which adds to this soak, thereby
-                    reducing the damage done in an attack.
+                    protective bonus which adds to this soak.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>Encumbrance</title>
+
+                <para>
+                    You can only carry so much equipment before you start
+                    suffering penalties. You can carry a <e>load</e>
+                    equal to the square of your <s>Strength</s> without
+                    penalty. Load is measured in kilogrammes, however an
+                    armour's load rating may be lower than this when
+                    worn if the weight is well distributed (this will be
+                    factored into the armours load value).
+                </para>
+
+                <targetlist>
+                    <valueLabel>Load</valueLabel>
+                    <targetLabel>Effects</targetLabel>
+
+                    <item value="Str" target="Unencumbered.">
+                    </item>
+                    <item value="Str^2" target="Light (-0).">
+                    </item>
+                    <item value="2 x Str^2" target="Medium (-1).">
+                    </item>
+                    <item value="4 x Str^2" target="Heavy (-2)."/>
+                    <item value="10 x Str^2" target="Extreme (-3)."/>
+                </targetlist>
+
+                <para>
+                    Penalties normally apply to <t>Agility</t>, though
+                    specific circumstances may have their own effects.
+                    For some actions, the penalty may be multiplied, in
+                    which case <e>Light</e> counts as 0.5 (round down).
+                    For example, you suffer double penalty whilst
+                    swimming, so would be at -1 if lightly encumbered.
                 </para>
             </sect2>
         </sect1>

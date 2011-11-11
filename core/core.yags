@@ -41,7 +41,6 @@
         <sect1>
             <title>What is Yags?</title>
 
-
             <para>
                 <e>Yags is Another Game System</e>, one that is meant to
                 provide a free, generic and modular set of rules for table
@@ -199,10 +198,10 @@
                     </para>
 
                     <para>
-                        Yags uses the GPL, which means <e>all</e> of the
+                        Yags uses the GPL, which means all of the
                         content is free, and cannot be mixed with non-free
                         content. This is different from licenses like the
-                        <e>Open Gaming License</e> which allows closed
+                        Open Gaming License which allows closed
                         content to be mixed with open content, making it
                         impossible to redistribute a complete set of
                         modified rules.
@@ -1201,7 +1200,7 @@
                     in mass.
                 </para>
 
-                <image src="images/sizes.jpg" align="center" width="6cm"/>
+                <image src="images/sizes.jpg" align="center" width="60mm" height="60mm"/>
 
                 <para>
                     Adult humans range in <t>Size</t> from 4 (a small, slim
@@ -1347,8 +1346,6 @@
                     metre, again increasing by a factor of 10 for each +5.
                 </para>
 
-                <image src="images/hover-tank.jpg" align="center" width="6cm"/>
-
                 <para>
                     To get an idea of how large vehicles and objects scale,
                     the following examples may help.
@@ -1378,6 +1375,30 @@
                     less effective against vehicles, but again this is described
                     elsewhere.
                 </para>
+
+                <sect3>
+                    <title>Tiny Creatures</title>
+
+                    <para>
+                        Though <s>Yags</s> bottoms out at <t>Size</t> zero, there
+                        are plenty of creatures smaller than this (actually, the
+                        majority of creatures are significantly smaller).
+                    </para>
+
+                    <para>
+                        A <e>Tiny</e> creature is one tenth the mass of a
+                        Size 0 creature. Each extra level of <e>Tiny</e>
+                        reduces the mass a further tenfold. <e>Tiny</e>
+                        creatures are automatically killed if successfully
+                        hit by a creature of larger <t>Size</t>.
+                    </para>
+
+                    <para>
+                        Every level of <e>Tiny</e> adds +5 to the difficulty to
+                        hit the target in melee. For missile combat, take the
+                        worst of +5 or doubling the range penalty per level.
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
@@ -1497,38 +1518,37 @@
                         number of kilogrammes up to this value without penalty.
                     </para>
 
-                    <targetlist targetFirst="false" bold="true">
-                        <valueLabel>Encumbrance</valueLabel>
-                        <targetLabel>Level</targetLabel>
+                    <targetlist targetFirst="true" bold="true">
+                        <valueLabel>Effects</valueLabel>
+                        <targetLabel>Load</targetLabel>
 
-                        <item target="0" value="Unencumbered (x1).">
-                            A character can carry up to the square of their
-                            strength without being encumbered.
+                        <item target="Str" value="Unencumbered.">
+                            A character carrying up to their Strength is considered
+                            to be completely unencumbered, and never suffers penalties.
                         </item>
 
-                        <item target="1" value="Light (x2).">
-                            A character who carries more than the square of their
-                            strength (but no more than twice this) is lightly
-                            encumbered, and has a -1 penalty to agility.
+                        <item target="S^2" value="Lightly (-0).">
+                            A character carrying more than their Strength, is lightly
+                            encumbered. They are only at penalties in certain weight
+                            critical situations (such as swimming).
                         </item>
 
-                        <item target="2" value="Moderately (x3).">
-                            Character has a -1 penalty to both agility and
-                            dexterity.
+                        <item target="2 x S^2" value="Moderately (-1).">
+                            A character carrying up to twice the square of their
+                            Strength is at -1 to Agility.
                         </item>
 
-                        <item target="3" value="Heavily (x6).">
-                            Character has a -2 penalty to agility and a -1
-                            penalty to dexterity.
-                        </item>
-
-                        <item target="4" value="Greatly (x10).">
-                            A greatly burdened character has a -2 penalty to
-                            both agility and dexterity. You cannot run or
+                        <item target="4 x S^2" value="Heavily (-2).">
+                            The character has a -2 penalty to Agility, and cannot
                             sprint.
                         </item>
 
-                        <item target="5" value="Over encumbered.">
+                        <item target="8 x S^2" value="Greatly (-3).">
+                            A greatly encumbered character suffers a -3 penalty to
+                            Agility and cannot run or sprint.
+                        </item>
+
+                        <item target="+" value="Over encumbered.">
                             Character cannot move, all agility checks are
                             automatically zero and -2 to dexterity.
                         </item>

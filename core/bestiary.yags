@@ -143,10 +143,12 @@
                     The smallest possible size is zero - a small cat or
                     something similar with a mass around 7-8kg. Anything
                     smaller than this is still considered size zero, but
-                    will be marked as <e>Tiny</e> (starting at 2-3kg).
+                    will be marked as <e>Tiny</e> (starting at 300g-3kg).
                     Each level of <e>Tiny</e> gives a mass reduction of
-                    about 3 compared to the next 'larger' level. A field
-                    mouse would be about Tiny-5, around 25g.
+                    about 10 compared to the next 'larger' level. A grey
+                    squirrel would be <e>Tiny</e>, at around 500g. A small
+                    rat (200g) would be <e>Tiny-2</e>, and a field mouse
+                    (25g) <e>Tiny-3</e>.
                 </para>
 
                 <para>
@@ -171,6 +173,14 @@
                     A size 0 creature (that isn't <e>Tiny</e>) is shifted down
                     one damage type against size 1 targets, and two levels
                     against size 2 targets.
+                </para>
+
+                <para>
+                    Tiny creatures shift damage type for each level they are
+                    smaller. However, it will be rare that combat between
+                    creatures of these sizes will need to be worried out.
+                    They are ineffectual against human sized targets, unless
+                    fighting as a <e>swarm</e>.
                 </para>
             </sect2>
 
@@ -287,91 +297,11 @@
                     and are dangerous enough to keep attackers at bay.
                 </para>
 
-                <table>
-                    <thead>
-                        <row>
-                            <entry>Size</entry>
-                            <entry>Initiative</entry>
-                            <entry>Attack</entry>
-                            <entry>Defence</entry>
-                            <entry>Damage</entry>
-                        </row>
-                    </thead>
-
-                    <tbody>
-                        <row>
-                            <entry>Diminutive</entry>
-                            <entry>-15</entry>
-                            <entry>-9</entry>
-                            <entry>-5</entry>
-                            <entry>-10</entry>
-                        </row>
-                        <row>
-                            <entry>Tiny</entry>
-                            <entry>-10</entry>
-                            <entry>-6</entry>
-                            <entry>-2</entry>
-                            <entry>-5</entry>
-                        </row>
-                        <row>
-                            <entry>Small</entry>
-                            <entry>-5</entry>
-                            <entry>-3</entry>
-                            <entry>+0</entry>
-                            <entry>+0</entry>
-                        </row>
-                        <row>
-                            <entry>Medium</entry>
-                            <entry>+0</entry>
-                            <entry>+0</entry>
-                            <entry>+0</entry>
-                            <entry>+0</entry>
-                        </row>
-                        <row>
-                            <entry>Large</entry>
-                            <entry>+2</entry>
-                            <entry>+3</entry>
-                            <entry>+2</entry>
-                            <entry>+0</entry>
-                        </row>
-                        <row>
-                            <entry>Huge</entry>
-                            <entry>+5</entry>
-                            <entry>+6</entry>
-                            <entry>+4</entry>
-                            <entry>+0</entry>
-                        </row>
-                        <row>
-                            <entry>Enormous</entry>
-                            <entry>+10</entry>
-                            <entry>+9</entry>
-                            <entry>+6</entry>
-                            <entry>+0</entry>
-                        </row>
-                        <row>
-                            <entry>Gigantic</entry>
-                            <entry>+15</entry>
-                            <entry>+12</entry>
-                            <entry>+8</entry>
-                            <entry>+0</entry>
-                        </row>
-                        <row>
-                            <entry>Colossal</entry>
-                            <entry>+20</entry>
-                            <entry>+15</entry>
-                            <entry>+10</entry>
-                            <entry>+0</entry>
-                        </row>
-                        <row>
-                            <entry>Titanic</entry>
-                            <entry>+25</entry>
-                            <entry>+18</entry>
-                            <entry>+12</entry>
-                            <entry>+0</entry>
-                        </row>
-                    </tbody>
-                </table>
-
+                <para>
+                    Every two points of size larger a creature is, gives
+                    them a +1 bonus to attack and defense against a smaller
+                    target when in melee.
+                </para>
 
                 <sect3>
                     <title>Damage</title>
@@ -425,34 +355,12 @@
                 <title>Base Soak</title>
 
                 <para>
-                    By default, all medium sized creatures have a
-                    basic soak of 12. Larger or smaller creatures
-                    can change this however. A huge creature may not
-                    be totally immune to damage from normal sized
-                    weapons, but they may be too small to do anything
-                    other than superficial cuts, which aren't worth
-                    even a single wound level.
-                </para>
-
-                <targetlist bold="true">
-                    <targetLabel>Soak</targetLabel>
-                    <valueLabel>Creature Size</valueLabel>
-
-                    <item target="3" value="Diminutive"/>
-                    <item target="6" value="Tiny"/>
-                    <item target="9" value="Small"/>
-                    <item target="12" value="Medium"/>
-                    <item target="15" value="Large"/>
-                    <item target="20" value="Huge"/>
-                    <item target="25" value="Gigantic"/>
-                    <item target="30" value="Colossal"/>
-                    <item target="35" value="Titanic"/>
-                </targetlist>
-
-                <para>
-                    Large creatures will tend to have strengths of
-                    a suitable value in order to injure creatures
-                    of a similar size.
+                    A creature's base soak isn't just based on their
+                    size, but a guideline for a typical creature is
+                    <t>Size</t> + 7. Note that this doesn't mean that
+                    a particular animal that is larger or smaller than
+                    the norm has a different Soak - a human with the
+                    <e>Large</e> advantage doesn't get a Soak bonus.
                 </para>
             </sect2>
 
