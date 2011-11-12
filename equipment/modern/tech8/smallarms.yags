@@ -24,6 +24,52 @@
     Prices are in US dollars.
  -->
 <equipment xmlns="http://yagsbook.sourceforge.net/xml">
+    <item name="Beretta 93R">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>8</techLevel>
+        <legality>2</legality>
+        <weight>1200</weight>
+        <cost>1300</cost>
+
+        <short>Selective fire machine pistol.</short>
+        <description>
+            <para>
+                This is a selective fire machine pistol designed for police
+                and military use. It is limited to firing 3 round bursts for
+                good recoil control. The R stands for <e>Raffica</e>, which
+                is Italian for "burst fire". It was in production from 1979
+                to 1993. It has a second folding grip, just in front of the
+                trigger guard, for better handling.
+            </para>
+
+            <para>
+                Each burst counts as a triple burst shot (one damage roll,
+                any wounds are doubled), but up to 3 such bursts can be
+                fired in a single round as if it was semi automatic.
+                Alternatively, it can fire single shots.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Pistols</category>
+            <class>pistol</class>
+            <combat>
+                <attack>+4</attack><damage>20</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>50</short><medium>100</medium><long>400</long>
+                </range>
+            </combat>
+            <strength>2</strength><load>1</load><reach>0</reach>
+            <capacity>20</capacity><rof>9</rof><recoil>-4</recoil>
+            <properties>
+                <missile/><firearm/><tripleauto/>
+                <reload score="1"/>
+            </properties>
+        </weapon>
+    </item>
 
     <item name="H&amp;K G11">
         <category>Weapon</category>
@@ -131,7 +177,7 @@
             <strength>4</strength><load>7</load><reach>4</reach>
             <capacity>10</capacity><rof>1</rof><recoil>-15</recoil>
             <properties>
-                <missile/><firearm/>
+                <missile/><firearm/><heavy/>
                 <reload score="2"/>
             </properties>
         </weapon>
@@ -228,13 +274,15 @@
             <para>
                 This is based on the SPAS 12, and is also made by the Italian
                 company Franchi S.p.A.. Like it's predecessor, import of this
-                weapon into the US is banned.
+                weapon into the US is banned. Unlike the SPAS 12, it uses
+                a magazine for faster loading.
             </para>
 
             <para>
-                It has the option of firing <e>bean bag</e> rounds, which have
-                similar characteristics to shot rounds, but damage is -10 and
-                they only cause <e>stun</e> damage at short range.
+                It has the option of firing as a pump-action shotgun, which
+                allows it to use low velocity rounds (such as tear gas
+                cannisters and bean bag rounds). Rate of fire drops to 2
+                when used this way.
             </para>
         </description>
 
@@ -243,7 +291,7 @@
             <category>Shotguns</category>
             <class>rifle</class>
             <combat>
-                <attack>+15</attack><damage>37</damage>
+                <attack>+12</attack><damage>29</damage>
                 <range>
                     <increment>10</increment>
                     <short>10</short><medium>40</medium><long>80</long>
@@ -253,11 +301,48 @@
             <capacity>8</capacity><rof>5</rof><recoil>-5</recoil>
             <properties>
                 <missile/><firearm/><semiauto/><light/><shotgun/>
-                <reload score="6"/>
+                <reload score="3"/>
             </properties>
         </weapon>
     </item>
 
+    <item name="HK416">
+        <category>Weapon</category>
+        <importance>1</importance><availability>0</availability>
+        <techLevel>8</techLevel>
+        <legality>2</legality>
+        <weight>3000</weight>
+        <cost units="usd">10000</cost>
+
+        <short>Assault rifle.</short>
+        <description>
+            <para>
+                German made assault rifle designed for use by American
+                special forces. It is based on the M4 carbine, but it
+                is more reliable. It has been in service since 2005.
+                It uses 5.56x45mm NATO rounds.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+9</attack><damage>28</damage>
+                <range>
+                    <increment>30</increment>
+                    <short>400</short><medium>800</medium><long>1600</long>
+                </range>
+            </combat>
+            <strength>3</strength><load>3</load><reach>2</reach>
+            <capacity>30</capacity><rof>50</rof><recoil>-4</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/><automatic/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
 
 </equipment>
 

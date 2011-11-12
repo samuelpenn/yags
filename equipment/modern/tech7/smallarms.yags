@@ -168,9 +168,10 @@
             </para>
 
             <para>
-                It has the option of firing <e>bean bag</e> rounds, which have
-                similar characteristics to shot rounds, but damage is -10 and
-                they only cause <e>stun</e> damage at short range.
+                It has the option of firing as a pump-action shotgun, which
+                allows it to use low velocity rounds (such as tear gas
+                cannisters and bean bag rounds). Rate of fire drops to 2
+                when used this way.
             </para>
         </description>
 
@@ -179,7 +180,7 @@
             <category>Shotguns</category>
             <class>rifle</class>
             <combat>
-                <attack>+15</attack><damage>35</damage>
+                <attack>+12</attack><damage>27</damage>
                 <range>
                     <increment>10</increment>
                     <short>10</short><medium>40</medium><long>80</long>
@@ -345,6 +346,48 @@
         </weapon>
     </item>
 
+    <item name="Dragunov SVD">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>7</techLevel>
+        <legality>2</legality>
+        <weight>4300</weight>
+        <cost units="usd">3500</cost>
+
+        <short>Semi automatic sniper rifle.</short>
+        <description>
+            <para>
+                This is a Russian gas operated rifle with a 10 round magazine.
+                The SVD was very common in Russian forces, it being used by
+                a designated marksman per platoon, rather than being reserved
+                for specialist sniper units. It is lighter than many other
+                sniper rifles, making it easier to use.
+            </para>
+
+            <para>
+                It uses a 7.62x54mm round.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Rifles</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+9</attack><damage>39</damage>
+                <range>
+                    <increment>40</increment>
+                    <short>700</short><medium>1400</medium><long>2800</long>
+                </range>
+            </combat>
+            <strength>4</strength><load>4</load><reach>4</reach>
+            <capacity>10</capacity><rof>5</rof><recoil>-10</recoil>
+            <properties>
+                <missile/><firearm/><semiautomatic/><heavy/>
+                <reload score="2"/>
+            </properties>
+        </weapon>
+    </item>
 
 </equipment>
 
