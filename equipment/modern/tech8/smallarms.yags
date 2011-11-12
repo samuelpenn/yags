@@ -70,12 +70,13 @@
         <weight>4000</weight>
         <cost units="usd">1300</cost>
 
-        <short>Prototype assualt rifle.</short>
+        <short>Bullpup assualt rifle.</short>
         <description>
             <para>
-                The Heckler &amp; Kock G11 is a prototype assualt rifle
-                designed to use caseles ammunition. It is of West German
-                design.
+                This is a 5.56mm gas operated assault rifle using a bullpup
+                configuration. This makes it shorter than a typical assualt
+                rifle, though it has a similar barrel length. However, the
+                compact form makes it difficult to use left handed
             </para>
         </description>
 
@@ -84,7 +85,7 @@
             <category>Rifles</category>
             <class>rifle</class>
             <combat>
-                <attack>+10</attack><damage>30</damage>
+                <attack>+9</attack><damage>30</damage>
                 <range>
                     <increment>30</increment>
                     <short>500</short><medium>1000</medium><long>2000</long>
@@ -214,6 +215,48 @@
         </weapon>
     </item>
 
+    <item name="SPAS 15">
+        <category>Weapon</category>
+        <importance>2</importance><availability>2</availability>
+        <techLevel>8</techLevel>
+        <legality>1</legality>
+        <weight>4000</weight>
+        <cost>1300</cost>
+
+        <short>Automatic shotgun.</short>
+        <description>
+            <para>
+                This is based on the SPAS 12, and is also made by the Italian
+                company Franchi S.p.A.. Like it's predecessor, import of this
+                weapon into the US is banned.
+            </para>
+
+            <para>
+                It has the option of firing <e>bean bag</e> rounds, which have
+                similar characteristics to shot rounds, but damage is -10 and
+                they only cause <e>stun</e> damage at short range.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Firearms</category>
+            <category>Shotguns</category>
+            <class>rifle</class>
+            <combat>
+                <attack>+15</attack><damage>37</damage>
+                <range>
+                    <increment>10</increment>
+                    <short>10</short><medium>40</medium><long>80</long>
+                </range>
+            </combat>
+            <strength>4</strength><load>4</load><reach>3</reach>
+            <capacity>8</capacity><rof>5</rof><recoil>-5</recoil>
+            <properties>
+                <missile/><firearm/><semiauto/><light/><shotgun/>
+                <reload score="6"/>
+            </properties>
+        </weapon>
+    </item>
 
 
 </equipment>
