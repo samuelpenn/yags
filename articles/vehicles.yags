@@ -187,8 +187,8 @@
                             If a vehicle is attacked with a character scale
                             weapon, then the damage roll is halved and the
                             damage caused is <e>Minor</e>. Any vehicle which
-                            is 10 or more <t>Size</t> points larger than the
-                            weapon (normally vehicles of <t>Size</t> 15+)
+                            is more than 10 <t>Size</t> points larger than the
+                            weapon (normally vehicles of <t>Size</t> 16+)
                             take no damage from character scale attacks.
                             Also, only <e>wounds</e> are converted to
                             vehicle damage - stuns are ignored.
@@ -205,7 +205,7 @@
                             If a character weapon happens to be 5+ size
                             points larger than the vehicle under attack, then
                             the damage caused is <e>major</e> damage. If the
-                            weapon is 10+ size points larger, then then damage
+                            weapon is 10+ size points larger, then the damage
                             roll is not halved. Outside of fantasy, such
                             events will tend to be limited to elephants trampling
                             a motorcycle.
@@ -219,7 +219,7 @@
                             If a vehicle scale weapon is used against characters
                             then the character receives no soak roll unless they
                             are fully protected with heavy armour. In the latter
-                            case then their soak roll is merely halved.
+                            case then their soak roll is 'merely' halved.
                         </para>
 
                         <para>
@@ -244,14 +244,13 @@
                             Look at the size of that thing!
                         </quote>
 
-                        <image src="images/tankandbike.jpg" width="54mm" height="42mm"/>
-
                         <para>
                             Differences in size between vehicles can be far
                             greater than that between animals (at least, in the
                             real world). In the modern world, the largest vehicles
                             are aircraft carriers of size 40+. SF starships (not
-                            covered under <e>High Tech</e>) can be even larger.
+                            covered under <e>High Tech</e>) can be even larger
+                            (the <e>Death Star</e> would be about Size 80).
                         </para>
 
                         <para>
@@ -266,16 +265,17 @@
 
                         <para>
                             For vehicle on vehicle action, if the target vehicle is
-                            10+ <t>Size</t> larger than the attacking weapon then
+                            11+ <t>Size</t> larger than the attacking weapon then
                             any damage caused is <e>Minor</e>. If the target is
-                            15+ <t>Size</t> larger, then no damage is caused.
+                            16+ <t>Size</t> larger, then no damage is caused.
                         </para>
 
                         <para>
                             If the attack is 10+ larger, then any damage levels
-                            caused are doubled and any armour is halved. Each
+                            caused are doubled and any soak is halved. Each
                             further +10 <t>Size</t> increase adds a further
-                            multiple to the damage caused.
+                            multiple to the damage caused and completely ignores
+                            soak.
                         </para>
                     </sect4>
                 </sect3>
@@ -389,7 +389,7 @@
                         two armour ratings - one for the heavy front armour,
                         and the second for the lighter sides and rear.
                         Most armour on vehicles is considered to be
-                        <e>Light vehicle</e>. <e>Heavy vehicle</e> weapons
+                        <e>Light vehicle</e>. <e>Heavy vehicle weapons</e>
                         (normally armour piercing weapons, such as HEAT)
                         halve such armour.
                     </para>
@@ -400,7 +400,7 @@
 
                         <item target="5-30" value="Armoured vehicle.">
                             Armoured vehicles (such as APCs, armoured limo)
-                            will tend to have armour in the 5-20 range.
+                            will tend to have armour in the 5-30 range.
                         </item>
 
                         <item target="20-30" value="Light tank.">
@@ -431,8 +431,12 @@
                             At tech levels 9-10, increase armour by +5.
                         </item>
 
-                        <item target="+10" value="Tech 11+">
-                            At tech levels above 10, increase armour by +10.
+                        <item target="+10" value="Tech 11-13">
+                            At tech levels 11-13, increase armour by +10.
+                        </item>
+
+                        <item target="+15" value="Tech 14+">
+                            At tech levels above 13, increase armour by +15.
                         </item>
                     </targetlist>
                 </sect3>
@@ -494,6 +498,17 @@
                     chance.
                 </para>
 
+                <para>
+                    There is a <e>Heavy weapons</e> skill for using man portable
+                    heavy weapons, such as rocket launchers, mortars and light
+                    machine guns.
+                </para>
+
+                <para>
+                    For bigger weapons, characters use the <e>Gunnery</e> skill,
+                    which covers everything from tank guns to heavy artillery.
+                </para>
+
                 <sect3>
                     <title>Extreme Automatic Fire</title>
 
@@ -549,7 +564,8 @@
                             This gives a maximum effective range for the weapon
                             of 3.5km, shorter than the 8km long range. However,
                             the <e>following fire</e> technique can increase
-                            this.
+                            this effective range. Otherwise, the chance of actually
+                            hitting anything 8km away is pretty much zero.
                         </para>
                     </example>
 
@@ -558,7 +574,7 @@
                         effective size for every full 10 bullets in the burst.
                         If they do explosive damage (e.g., HE rounds), then
                         also add +2 size for the first 1m of explosive radius,
-                        and a further +2 for each doubling.
+                        and a further +2 for each doubling of radius.
                     </para>
                 </sect3>
             </sect2>
@@ -571,12 +587,17 @@
                 For the most part, vehicles are secondary to the plot - they
                 allow characters to get from A to B with a minimum of time
                 and fuss. Occasionally however, the journey is the interesting
-                bit, and modelling a high speed car chase can be tricky to
+                bit, but modelling a high speed car chase can be tricky to
                 handle.
             </para>
 
             <sect2>
                 <title>From A to B</title>
+
+                <quote signature="Anon">
+                    A good driver can get out of situations an excellent
+                    driver would never get into.
+                </quote>
 
                 <para>
                     Firstly, when driving a normal route, without any attempt
@@ -590,10 +611,13 @@
                 </para>
 
                 <para>
-                    If a check is failed, then the driver can opt to either gain
-                    an immediate level of exhaustion, or to make a <t>Dexterity</t>
-                    based check at the same difficulty. If this succeeds, then an
-                    accident is narrowly avoided. Otherwise, there is a collision.
+                    If a check is failed, then the driver must make an immediate
+                    <t>Dexterity</t> based driving check at the same difficulty.
+                    If this succeeds, then an accident is narrowly avoided.
+                    Otherwise, there is a collision.
+                    If they have a skill of at least 2, then they may opt to gain
+                    a level of exhaustion to halve the difficulty of the second
+                    check.
                 </para>
 
                 <para>
@@ -601,7 +625,14 @@
                     can reduce journey time by 20%, but the target difficulties
                     are increased by +5. Each further 5% reduction increases the
                     difficulty by an extra +5 (e.g., difficulty 45 to halve the
-                    journey time).
+                    journey time). If the speed is pushing the limits of the car,
+                    add a further +5.
+                </para>
+
+                <para>
+                    There is also the option to drive carefully. Increase journey
+                    time by 50% to reduce difficulty by 5. Double journey time to
+                    reduce difficulty by 10.
                 </para>
 
                 <para>
@@ -636,40 +667,181 @@
                         where to go. Travel time is +100% normal.
                     </item>
                 </targetlist>
+
+                <para>
+                    It also assumes good weather.
+                </para>
+
+                <targetlist targetFirst="false" bold="true">
+                    <targetLabel>Modifier</targetLabel>
+                    <valueLabel>Driving conditions</valueLabel>
+
+                    <item target="+0" value="Good conditions.">
+                        Dry roads during the day.
+                    </item>
+
+                    <item target="+5" value="Wet roads, light rain.">
+                        The roads are wet and/or there is light rain
+                        or fog reducing visibility.
+                    </item>
+
+                    <item target="+10" value="Heavy rain.">
+                        Very heavy rain can reduce visibility and cover
+                        the road with a lot of water, reducing breaking
+                        ability.
+                    </item>
+
+                    <item target="+15" value="Ice and snow.">
+                        Very icy conditions can make driving hazardous.
+                        If there is just a little ice, treat as light
+                        or heavy rain as applicable.
+                    </item>
+
+                    <item target="+5" value="Dark.">
+                        If it is dark, and the roads aren't well lit,
+                        then there is less chance of seeing an obstruction.
+                    </item>
+
+                    <item target="+10" value="Thick Fog.">
+                        If it's dark, then you can at least see the lights
+                        of other cars. In thick fog, even this isn't
+                        possible and driving can be really dangerous.
+                    </item>
+                </targetlist>
+
+                <para>
+                    In most situations, a collision will be unlikely to
+                    occur unless the driver is suffering penalties from
+                    exhaustion.
+                </para>
+
+                <para>
+                    In terms of skill, a new driver will have a <e>Drive</e>
+                    of about 2. After a few months of regular driving, this
+                    will increase to about 3, and will reach 4 after a year
+                    or two of experience.
+                </para>
             </sect2>
 
             <sect2>
-                <title>The Easy Option</title>
+                <title>Action Scenes</title>
 
                 <para>
-                    The easiest option is to abstract everything into a
-                    simple die roll. There are three things which need to
-                    be taken into consideration:
+                    The previous rules won't be needed very often - unless
+                    it's important to the plot in some way that there's a
+                    chance of failure, assume that anyone with skill can
+                    safely drive from A to B. However, in some circumstances
+                    driving can be more exciting, and skill checks become
+                    more useful.
                 </para>
-
-                <itemlist>
-                    <item>
-                        The capability of the vehicle, including its speed
-                        and manoeuvrability.
-                    </item>
-
-                    <item>
-                        The capability of the driver or pilot, which basically
-                        comes down to their skill.
-                    </item>
-
-                    <item>
-                        The environment that the chase is occurring through.
-                    </item>
-                </itemlist>
 
                 <para>
-                    Skill checks are made with the driver's <e>Drive</e> skill,
-                    based on their <t>Dexterity</t> capped to the vehicle's
-                    <t>Agility</t>. Driving under stressful conditions but on
-                    a clear road will be <e>Very Easy</e> - a target difficulty
-                    of 10.
+                    If playing out a car chase or similar action sequence,
+                    then a skill check is required whenever there is an
+                    'action point'. Whenever the road changes, or there
+                    is an obstacle to avoid, a skill check is required.
+                    For a simple drive along a straight road, in stressful
+                    circumstances (trying to drive as quickly as possible),
+                    use the following table.
                 </para>
+
+                <targetlist targetFirst="false" bold="true">
+                    <targetLabel>Target</targetLabel>
+                    <valueLabel>Result</valueLabel>
+
+                    <item target="0" value="Failure.">
+                        Complete failure. Make a second check, on another
+                        failure you crash, on success the car simply
+                        loses half its speed.
+                    </item>
+
+                    <item target="10" value="Minimal success.">
+                        You don't manage to get into the right gear,
+                        and only achieve 50% of possible acceleration.
+                    </item>
+
+                    <item target="20" value="Good driving.">
+                        Achieve 75% of car's maximum acceleration.
+                    </item>
+
+                    <item target="30" value="Excellent driver.">
+                        Perfect gear changes and keeping to a
+                        straight line, achieve 100% of car's
+                        acceleration.
+                    </item>
+                </targetlist>
+
+                <para>
+                    Add modifiers to the difficulty from the previous
+                    section for poor road conditions. The skill check
+                    is made using <t>Dexterity</t> and <e>Drive</e>,
+                    with <t>Dexterity</t> capped by the vehicle's
+                    <t>Agility</t>.
+                </para>
+
+                <para>
+                    When the vehicles reach a point of interest (such
+                    as a sharp corner, narrow gap or obstacle), another
+                    check is required. Firstly though, the GM needs to
+                    determine the safe speed for this action, then
+                    all drivers get to choose the speed they're
+                    attempting around it.
+                </para>
+
+                <targetlist targetFirst="false" bold="true">
+                    <targetLabel>Target</targetLabel>
+                    <valueLabel>Result</valueLabel>
+
+                    <item target="0" value="Tortoise (-25%).">
+                        You are driving well below the safe speed for
+                        this event. You're going to lose the race, but
+                        at least you won't crash.
+                    </item>
+
+                    <item target="10" value="Safety first (+0%).">
+                        You're driving at a suitable speed for the
+                        required action (within safe speed limits),
+                        with sane breaking before hand.
+                    </item>
+
+                    <item target="20" value="Taking risks (+25%).">
+                        Hard breaking at the last moment, and a bit
+                        on the fast side.
+                    </item>
+
+                    <item target="40" value="Dangerous driving (+50%).">
+                        Late breaking, power sliding and making it
+                        look good. If you don't crash.
+                    </item>
+
+                    <item target="80" value="Deadly driving (+75%).">
+                        Even later breaking, taking the 'racing line'
+                        perfectly and taking your car to the limit.
+                    </item>
+
+                    <item target="120" value="Elite (+100%).">
+                        The sort of manouevere that wins races, or
+                        ends your driving career permanently.
+                    </item>
+                </targetlist>
+
+                <para>
+                    On success, you come out of the event at the
+                    modified safe speed.
+                </para>
+
+                <example title="Hard Driving">
+                    <para>
+                        Alice and Bob are both taking part in a street
+                        race, and are neck and neck when they start
+                        heading down a stretch of open round with a
+                        T-junction at the end.
+                    </para>
+
+                    <para>
+
+                    </para>
+                </example>
             </sect2>
         </sect1>
 
