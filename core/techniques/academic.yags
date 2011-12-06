@@ -30,8 +30,22 @@
         </license>
     </header>
 
-    <advantage name="Physics" type="technique">
-        <cost points="2"/>
+    <advantage name="Scientist (*)" type="technique">
+        <cost points="4"/>
+        <tech level="5"/>
+        <skill name="Science"/>
+        <short>Specialisation in Science.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Specialisation in Science.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Scientist (Physics)" type="technique">
+        <cost points="4"/>
         <tech level="5"/>
         <skill name="Science"/>
         <short>The study of particles and forces</short>
@@ -40,33 +54,14 @@
             <para>
                 Physics is a branch of <e>Science</e>, concerned with
                 forces and motion, energy and matter at the smallest
-                and largest scales. Further specialist branches of
-                physics are higher level techniques.
+                and largest scales. This is one example of a
+                <e>Science</e> specialisation.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Physicist (speciality)" type="technique">
+    <advantage name="Scientist (Chemistry)" type="technique">
         <cost points="4"/>
-        <tech level="6"/>
-        <skill name="Science"/>
-        <prerequisite>Physics</prerequisite>
-        <short>A general physics specialisation</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have studied as a physicist, and are well versed in
-                a particular specialisation of that field. Possible
-                specialisations could be, but are not limited to,
-                <e>Nuclear physics</e>, <e>Relativity</e>,
-                <e>Quantam mechanics</e>, <e>Particle physics</e>,
-                <e>String theory</e> etc.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Chemistry" type="technique">
-        <cost points="2"/>
         <tech level="5"/>
         <skill name="Science"/>
         <short>The study of molecules and compounds</short>
@@ -77,32 +72,14 @@
                 chemicals and elements, and how they interact with each
                 other. Knowledge of mixing, identifying and researching
                 chemical substances is gained through use of this
-                technique.
+                technique. This is one example of a
+                <e>Science</e> specialisation.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Chemist (speciality)" type="technique">
+    <advantage name="Scientist (Biology)" type="technique">
         <cost points="4"/>
-        <tech level="6"/>
-        <skill name="Science"/>
-        <prerequisite>Chemistry</prerequisite>
-        <short>A general chemistry specialisation</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have studied as a chemist, and are well versed in
-                a particular specialisation of that field. Possible
-                specialisations could be, but are not limited to,
-                <e>Organics</e>, <e>Inorganics</e>, <e>Polymers</e>,
-                <e>Warfare</e>, <e>Industrial</e>, <e>Modelling</e>
-                etc.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Biology" type="technique">
-        <cost points="2"/>
         <tech level="5"/>
         <skill name="Science"/>
         <short>The study of living things</short>
@@ -111,44 +88,26 @@
             <para>
                 Biology is a particular branch of <e>Science</e>, and
                 covers the study of living things, including genetics
-                and evolution. It is closely related to <e>Chemistry</e>.
+                and evolution. This is one example of a
+                <e>Science</e> specialisation.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Biologist (speciality)" type="technique">
-        <cost points="4"/>
-        <tech level="6"/>
-        <skill name="Science"/>
-        <prerequisite>Biology</prerequisite>
-        <short>A general biology specialisation</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have studied as a biologist, and are well versed in
-                a particular specialisation of that field. Possible
-                specialisations could be, but are not limited to,
-                <e>Biochemistry</e>, <e>Genetics</e>, <e>Evolution</e>,
-                <e>Bioengineering</e>, <e>Warfare</e>, <e>Modelling</e>
-                etc.
-            </para>
-        </description>
-    </advantage>
-
-
-    <advantage name="Cybernetics" type="technique">
+    <advantage name="Medic (Cybernetics)" type="technique">
         <cost points="4"/>
         <skill name="Medicine"/>
         <short>Knowledge of cybernetics.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You are experienced in the medical field of cybernetics.
+                This is an example of a specialisation in
+                the <e>Medicine</e> skill.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Diagnosis" type="technique">
-        <cost points="2"/>
+    <advantage name="Medic (Diagnosis)" type="technique">
+        <cost points="4"/>
         <skill name="Medicine"/>
         <short>Diagnosing an illness.</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -160,7 +119,7 @@
         </description>
     </advantage>
 
-    <advantage name="Poisons" type="technique">
+    <advantage name="Medic (Poisons)" type="technique">
         <cost points="4"/>
         <skill name="Medicine"/>
         <short>Knowledge of poisons.</short>
@@ -172,7 +131,7 @@
         </description>
     </advantage>
 
-    <advantage name="Disease" type="technique">
+    <advantage name="Medic (Disease)" type="technique">
         <cost points="4"/>
         <skill name="Medicine"/>
         <tech level="5"/>
@@ -187,22 +146,20 @@
         </description>
     </advantage>
 
-    <advantage name="Mathematician (specialist)" type="technique">
-        <cost points="2"/>
+    <advantage name="Mathematician (Cryptography)" type="technique">
+        <cost points="4"/>
         <skill name="Mathematics"/>
         <tech level="5"/>
         <short>Specialist in mathematics</short>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You are a skilled mathematician and have specialised in
-                one or more areas of study. Possible specialisations
-                include <e>Statistics</e>, <e>Information theory</e>,
-                <e>Cryptography</e>, <e>Geometry</e>. You may take
-                this multiple times with different specialisations.
+                This is an example of a specialisation in
+                <e>Mathematics</e>. With it, you have studied the
+                use of cyphers - both creating them and cracking
+                them.
             </para>
         </description>
     </advantage>
-
 
 
     <advantage name="Paranormal investigation" type="technique">
@@ -222,27 +179,7 @@
             <para>
                 In the real world, this has no practical use unless you are
                 trying to con the impressionable out of their money. In a
-                fantasy or horror game however, it may be very useful.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Historian" type="technique">
-        <cost points="2"/>
-        <skill name="History"/>
-        <short>Specialisation in history</short>
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                This is a specialisation in a particular branch of history.
-                If you have a suitable specialisation then details that fall
-                within it count as common knowledge.
-            </para>
-
-            <para>
-                Common specialisations included <e>Military history</e>,
-                <e>English Civil War</e>, <e>The Renaissance</e>,
-                <e>Europe</e>, <e>Dark Ages</e> etc. You can take this
-                technique multiple times with different specialisations.
+                fantasy or horror game however, it may provide other benefits.
             </para>
         </description>
     </advantage>

@@ -20,10 +20,10 @@
 
 
 
-    <skill name="Computer operation" type="skill">
+    <skill name="Computer Operation" type="skill">
         <group>Technical</group>
         <default>Intelligence</default>
-        <default>Electronic operation</default>
+        <default>Electronics</default>
         <techRange min="6" max="20"/>
 
         <short>The skill of using a computer.</short>
@@ -51,102 +51,48 @@
         </examples>
     </skill>
 
-
-    <skill name="Communication systems">
+    <skill name="Electronics Operation" type="skill">
         <group>Technical</group>
-        <group>Military</group>
-        <techRange min="6" max="20"/>
-
-        <short>Using radios and similar communications gear.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                This skill provides advanced knowledge of how to use
-                communication devices such as radios. It does not just
-                cover how to switch a device on and talk into it, since
-                that is covered by basic <t>Intelligence</t>, but provides
-                in depth knowledge of how to fix it when things go wrong,
-                how to get around jamming, how to jam someone else's
-                communications, and how to improve signal strength.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Sensor systems">
-        <group>Technical</group>
-        <group>Military</group>
-        <techRange min="6" max="20"/>
-
-        <short>Using radar, sonar and other sensor systems.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Provides knowledge and experience with using advanced
-                sensor systems, interpreting raw sensor data, knowing
-                how to evade and block sensors, and how to make best
-                use of an existing sensor network.
-            </para>
-
-            <para>
-                This provides far more knowledge than a person working in
-                traffic control would have, and it is a skill normally
-                only found in the military, in labs or amongst hackers.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Security systems">
-        <group>Technical</group>
-        <group>Rogue</group>
-        <techRange min="6" max="20"/>
-
-        <short>Using and evading security.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Provides knowledge of using and by-passing electronic
-                security systems such as short range sensors, pressure
-                pads, electronic locks, iris and fingerprint scanners
-                etc. It can be used to forge ID to try and bypass such
-                systems.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Surveillance systems">
-        <group>Technical</group>
-        <group>Rogue</group>
         <group>Military</group>
         <group>Criminal</group>
-        <techRange min="7" max="20"/>
 
-        <default>Security systems</default>
+        <default>Intelligence</default>
+        <default>Computer Operation</default>
+        <techRange min="6" max="20"/>
 
-        <short>Spying on people with electronic devices.</short>
+        <short>Using and operating electronic equipment.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You know how to spy on people, often using the latest in
-                surveillance gadgets such as bugs, sound detectors,
-                hidden video cameras and the like. You have been trained
-                in how best to place such devices so that they gain
-                maximum coverage with minimum chance of detection.
+                This is the skill of <e>operating</e> electronic
+                equipment. It does not provide knowledge of building
+                or repairing such. Generally, basic operation of
+                such equipment is <e>Very Easy</e>, though primitive
+                or particularly complex systems may be harder.
             </para>
 
             <para>
-                This skill also provides knowledge of counter surveillance,
-                and can be used to find bugs or jam their signals. This
-                skill is very much focused on the use of electronics to
-                observe remotely - use of the mark I eyeball is covered
-                by basic Streetwise or Awareness.
+                A high skill grants the ability to abuse such systems,
+                such as bypassing a door's electronic lock or finding
+                a way around radio jamming.
+            </para>
+
+            <para>
+                Specialisations include Communication Systems,
+                Sensors, Medical Systems, Security Systems,
+                Surveillance Systems and Weapon Systems. Each can
+                be purchased as a 4 point speciality. Other specialisations
+                by job role are also possible, such as Military or
+                Criminal.
             </para>
         </description>
     </skill>
 
 
-    <skill name="Electronics">
+
+
+    <skill name="Electrician">
         <group>Technical</group>
-        <prerequisite>Electronics operation</prerequisite>
         <techRange min="6" max="20"/>
 
         <short>Building electronic devices.</short>
@@ -166,7 +112,7 @@
         </description>
     </skill>
 
-    <skill name="Machinest">
+    <skill name="Machinist">
         <group>Technical</group>
         <default>Mechanics</default>
         <techRange min="5" max="20"/>
@@ -180,7 +126,7 @@
                 can get away with buying standard parts from a local shop.
                 In a society where there isn't a ready availability of tools
                 and parts, most (if not all) engineers will have some
-                level of skill in <e>Machinest</e>.
+                level of skill in <e>Machinist</e>.
             </para>
         </description>
     </skill>
