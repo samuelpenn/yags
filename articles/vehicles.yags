@@ -7,7 +7,7 @@
          xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
         <title>Yags Vehicles</title>
-        <tagline>Yags 0.7.4</tagline>
+        <tagline>Yags 0.7.6</tagline>
 
         <summary>
             Vehicles and other mechanical constructs.
@@ -97,16 +97,16 @@
                     <valueLabel>Type of vehicle</valueLabel>
                     <targetLabel>Size</targetLabel>
 
-                    <item target="5" value="Motorbike"/>
-                    <item target="10" value="Family car"/>
-                    <item target="15" value="Heavy tank"/>
+                    <item target="4-5" value="Motorbike"/>
+                    <item target="8-10" value="Family car"/>
+                    <item target="10-15" value="Tank"/>
                     <item target="20" value="Frigate"/>
                     <item target="30" value="Battleship"/>
                     <item target="45" value="Aircraft carrier"/>
                 </targetlist>
 
                 <para>
-                    Because of the logarithmic scale, even very large SF
+                    Because of the logarithmic scale, even very large Science Fiction
                     starships can be represented in double digit sizes.
                     Since attacks can't damage targets more than 15 size
                     points larger, damage and armour values can also
@@ -117,7 +117,7 @@
                     <title>Vehicle Damage</title>
 
                     <para>
-                        Damage, and the absorbtion thereof, is considered to be
+                        Damage, and the absorption thereof, is considered to be
                         on a different scale to characters. Unless noted, weapons
                         and armour are <e>character scale</e>. Anything to do with
                         a vehicle tends to be <e>vehicle scale</e>, and will be
@@ -141,9 +141,10 @@
                     <para>
                         There are 3 damage levels - superficial, moderate and
                         critical. A vehicle that has taken superficial damage
-                        is at no penalty to manouevering, a moderately damaged
+                        is at no penalty to manoeuvring, a moderately damaged
                         vehicle is at -10 and a critically damaged vehicle is
-                        at -25. In addition, a vehicle always has one additional
+                        at -25 and halves its top speed and acceleration.
+                        In addition, a vehicle always has one additional
                         damage level in <e>superficial</e>, and one in a fourth
                         level called <e>disabled</e>, which gives a -40 penalty.
                     </para>
@@ -171,14 +172,54 @@
                     </example>
 
                     <para>
-                        There are two types of vehicle damage - <e>major</e>
-                        and <e>minor</e>. The former is the default type and
+                        There are two types of vehicle damage - <e>Major</e>
+                        and <e>Minor</e>. The former is the default type and
                         is similar to <e>wounds</e> at character scale.
                         <e>Minor</e> damage is like <e>stuns</e> and is non
                         cumulative, but is applied to the same damage track
-                        as <e>major</e> damage. Generally, damage from
-                        character scale weapons is <e>minor</e> damage.
+                        as <e>Major</e> damage. Generally, damage from
+                        character scale weapons is <e>Minor</e> damage.
                     </para>
+
+                    <para>
+                        When a vehicle receives <e>Major</e> damage, the
+                        damage is added directly to the damage track. If
+                        a vehicle has 4 damage, and takes 3 points of
+                        <e>Major</e> damage, it now has 7 damage.
+                    </para>
+
+                    <para>
+                        <e>Minor</e> damage represents dents and scratches
+                        which are unlikely to take a vehicle out of
+                        commission. Every two points of <e>Minor</e> damage
+                        adds one to the damage track if the vehicle is no
+                        more than superficially damaged.
+                    </para>
+
+                    <para>
+                        Three points of <e>Minor</e> damage are required to
+                        damage a vehicle that already has moderate damage,
+                        and five points if it is already critically damaged.
+                    </para>
+
+                    <example title="Minor Damage">
+                        <para>
+                            A size 28 battleship has 41 (39 + 2) damage levels,
+                            with 14 in superficial, 13 in moderate, 13 in
+                            critical and a final one in disabled.
+                        </para>
+
+                        <para>
+                            It is being fired on by a tank gun that is doing
+                            minor damage. The first two shots do 13 levels
+                            each, causing 6 damage twice, taking it to 12 levels
+                            (still superficial). The third shot also does
+                            13 levels. The first four points do two points of
+                            damage on the superficial track, and the remaining
+                            nine points do three damage (1 per 3) on the
+                            moderate damage track.
+                        </para>
+                    </example>
 
                     <sect4>
                         <title>Shooting at Vehicles</title>
@@ -255,7 +296,7 @@
 
                         <para>
                             Each vehicle mounted weapon has its own <t>Size</t>
-                            which is independant of the vehicle it is mounted on.
+                            which is independent of the vehicle it is mounted on.
                             Most anti-vehicle weapons (such as the main gun on
                             a tank) are <t>Size</t> 10. Secondary weapons (such
                             as a heavy machine gun) will be <t>Size</t> 5.
@@ -327,7 +368,7 @@
                         its size. If it is stronger or weaker than usual
                         then this can vary. The following guide can be used
                         to determine the base soak of a vehicle or building.
-                        These are guidelines only, and any values inbetween
+                        These are guidelines only, and any values in between
                         (or outside) those given can be used.
                     </para>
 
@@ -337,7 +378,7 @@
 
                         <item target="x0.5" value="Weak.">
                             A very weak object, normally poorly constructed
-                            or delibrately designed to be light.
+                            or deliberately designed to be light.
                         </item>
 
                         <item target="x1" value="Average.">
@@ -484,7 +525,7 @@
             <sect2>
                 <title>Vehicle Weapons</title>
 
-                <quote signature="Skills from Tales of the Floating Vagabond">
+                <quote signature="Tales of the Floating Vagabond">
                     <line>Shoot gun.</line>
                     <line>Shoot big gun.</line>
                     <line>Shoot OH MY GOD, DON'T POINT THAT GUN AT MY PLANET!</line>
@@ -591,6 +632,25 @@
                 handle.
             </para>
 
+            <note title="Too Many Rules">
+                <para>
+                    There are a lot of rules here, and if you really want to
+                    keep it simple, then only ever require a drive check when
+                    something really exciting happens. You can use a simple
+                    target number, or have an opposed check between two
+                    people. That's where most games leave it, and in many
+                    cases that is good enough.
+                </para>
+
+                <para>
+                    If you have a game where action sequences involving
+                    vehicles are common, or you have sunk all your points
+                    into being a really good driver, then you may want to
+                    be able to show off your skills, and this is where
+                    these rules are designed to be useful.
+                </para>
+            </note>
+
             <sect2>
                 <title>From A to B</title>
 
@@ -615,7 +675,7 @@
                     <t>Dexterity</t> based driving check at the same difficulty.
                     If this succeeds, then an accident is narrowly avoided.
                     Otherwise, there is a collision.
-                    If they have a skill of at least 2, then they may opt to gain
+                    If they have a skill of at least 4, then they may opt to gain
                     a level of exhaustion to halve the difficulty of the second
                     check.
                 </para>

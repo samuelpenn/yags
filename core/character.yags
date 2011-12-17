@@ -247,8 +247,14 @@
                     This division serves two purposes. Firstly, it helps
                     to focus character design into easier to understand
                     chunks. Secondly, it helps to limit possible abuses of
-                    the design process by preventing the player from
+                    the design process by preventing players from
                     making extreme choices.
+                </para>
+
+                <para>
+                    It is possible that some <tm>Yags</tm> settings will use
+                    a different set of point pools, or use a different means
+                    of assigning points altogether.
                 </para>
             </note>
 
@@ -279,7 +285,7 @@
                         Hollywood action heroes will tend to have high
                         attributes. A character with high attributes and
                         low skills represents the gifted amateur who learns
-                        to quickly supercede their mentors.
+                        to quickly supersede their mentors.
                     </para>
 
                     <para>
@@ -351,6 +357,15 @@
                         points. Again, it is the number of disadvantages
                         that is limited, not the total value of them.
                     </para>
+
+                    <para>
+                        Lastly, advantages are your character's <e>Schick</e>,
+                        and as such can't be purchased after character
+                        generation. They are also more durable than equivalents
+                        gained through play. If you buy <e>Rich</e>, it is
+                        much harder to lose your wealth than if you had obtained
+                        it in-game.
+                    </para>
                 </sect3>
             </sect2>
 
@@ -358,8 +373,8 @@
                 <title>The Priorities</title>
 
                 <para>
-                    Before you can begin character generation, the GM will
-                    have set the starting level of the campaign, and dictates
+                    Before you can begin character generation the GM will
+                    have set the starting level of the campaign and dictated
                     the type of characters you will be playing. <e>Mundane</e>
                     campaigns are about mostly normal people, so are suitable
                     for horror games and low fantasy. <e>Exceptional</e>
@@ -1232,6 +1247,33 @@
                             skill. For example, you could purchase Physics-4 as
                             a <e>Science</e> specialisation.
                         </para>
+
+                        <para>
+                            Specialisations tasks easier within that skill. Generally,
+                            the base difficulty of a knowledge task is based on how
+                            specific the type of knowledge is. For example, if you
+                            known <e>Science</e>, and want to know how to design a
+                            nuclear bomb, then that's quite a deep specialisation, and
+                            require a base difficulty of 40 for a simple design.
+                        </para>
+
+                        <para>
+                            If you had a specialisation in <e>Nuclear Weapons</e>, then
+                            designing becomes a standard task, so would only be
+                            difficulty 10. If your specialisation was <e>Nuclear Physics</e>,
+                            then bomb design is relatively specialised, so might be 20.
+                            Likewise, designing a nuclear power station might also be 20.
+                        </para>
+
+                        <para>
+                            There is no limit to how broad or narrow a specialisation may
+                            be. The broader it is, the more topics it covers, but each
+                            topic will be a deeper specialisation. It is recommended
+                            (though not required) that you take levels of specialisations,
+                            starting with broad topics and narrowing down. Being specialised
+                            in <e>Nuclear Weapons</e> without having at least a <e>Physics</e>
+                            specialisation would require some explaining.
+                        </para>
                     </sect4>
                 </sect3>
             </sect2>
@@ -1410,15 +1452,6 @@
                         <e>Nuclear Physics</e>, <e>Relativity</e> etc.
                     </para>
 
-                    <para>
-                        A specialisation technique halves the difficulty
-                        of tasks within the specialisation. If a technique
-                        for a specialisation doesn't exist, then make it
-                        up. Most academic specialisations are level 4.
-                        Those which are for cutting edge specialisations
-                        might be 6 or 8.
-                    </para>
-
                     <y:import-advantages type="technique" tree="true">
                         <y:adv>techniques/academic.yags</y:adv>
                     </y:import-advantages>
@@ -1514,7 +1547,7 @@
                 and it suits some type of fiction better than others. Much
                 fantasy fiction revolves around a young, inexperienced hero
                 with much untapped potential gaining that experience, and
-                becoming a skilled champion in an unfeasably short period of
+                becoming a skilled champion in an infeasibly short period of
                 time. Modern or science fiction tends to focus on already
                 experienced characters who need to use their existing skills
                 to survive. There are many examples which go against this
@@ -1541,6 +1574,14 @@
                     from totally untrained to professional level (4) in
                     10 game sessions - which may be only a few days or
                     few weeks of game time.
+                </para>
+
+                <para>
+                    Instead of placing experience onto a skill, the player
+                    may place it into a technique. There is no limit to how
+                    many experience points can be placed into a single
+                    technique at once, which can make it easier to buy
+                    techniques than to put up the skill.
                 </para>
 
                 <para>
@@ -1586,7 +1627,16 @@
                         (in the case of language) or exploring (for area
                         lore). If you aren't doing this at all, then no
                         XP will be gained. If you are doing it in a limited
-                        way, then you need a 15+.
+                        way, then you need a 15+. If the have the <e>Tourist</e>
+                        advantage, then you gain a bonus to this roll.
+                    </para>
+
+                    <para>
+                        It is reasonable to combine this advancement option
+                        with heroic experience. Doing so allows characters to
+                        focus on the skills that matter to their character
+                        concept, without sacrificing knowledge skills they
+                        would realistically be picking up.
                     </para>
                 </sect3>
 
@@ -1618,7 +1668,7 @@
 
                     <para>
                         It is possible for this experience to be put into
-                        familiarity techniques.
+                        familiarity or specialisation techniques.
                     </para>
                 </sect3>
 
@@ -1643,9 +1693,8 @@
 
                     <para>
                         If you are being taught by a trainer who actually has
-                        the <e>Teach</e> skill, then for every full 4 points
-                        of skill them have in <e>Teach</e>, reduce the target
-                        number by 5.
+                        the <e>Teach</e> skill, then reduce the difficulty by
+                        the level of their skill.
                     </para>
 
                     <targetlist targetFirst="true">
@@ -1663,20 +1712,17 @@
                         <item target="20+">
                             Base target number if skill is currently 8+.
                         </item>
-                        <item target="-5">
-                            If trainer has a Teach skill of 4+.
-                        </item>
-                        <item target="-5">
-                            If trainer has a Teach skill of 8+ (stacks with
-                            previous).
+                        <item target="-X">
+                            -1 for each point of 'Teach' skill that the teacher has.
                         </item>
                         <item target="-5">
                             If training facilities are of high quality,
                             with lots of resources. Military training
                             grounds would often qualify.
                         </item>
-                        <item target="+10">
-                            If trainer's skill is lower than than the student's.
+                        <item target="+3">
+                            For each point that the trainer's skill is lower
+                            than the student's.
                         </item>
                     </targetlist>
 
