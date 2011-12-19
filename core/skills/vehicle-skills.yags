@@ -96,7 +96,7 @@
             <example target="20">
                 Maintaining control in a difficult situation, such as
                 a very sharp and narrow bend, or avoiding a car or
-                pedastrian that has just done something really stupid.
+                pedestrian that has just done something really stupid.
             </example>
 
             <example target="20">
@@ -140,7 +140,8 @@
     <skill name="Pilot" type="skill">
         <group>Vehicle</group>
         <tech level="6"/>
-
+        <default>Gliding</default>
+        <default>Helicopter</default>
         <short>Piloting a powered aircraft.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -160,7 +161,7 @@
             </para>
 
             <para>
-                Air combat requires a mixture of manouevre and shooting.
+                Air combat requires a mixture of manoeuvre and shooting.
                 Make opposed <y:dexterity>Pilot</y:dexterity> checks to
                 gain the advantage each turn. If you have two levels of
                 success in your favour, then you can shoot at half skill.
@@ -202,7 +203,8 @@
     <skill name="Helicopter" type="skill">
         <group>Vehicle</group>
         <tech level="6"/>
-
+        <default>Pilot</default>
+        <default>Gliding</default>
         <short>Piloting a helicopter.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -215,6 +217,8 @@
     <skill name="Gliding" type="skill">
         <group>Vehicle</group>
 
+        <default>Pilot</default>
+        <default>Helicopter</default>
         <short>Piloting an unpowered aircraft.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">

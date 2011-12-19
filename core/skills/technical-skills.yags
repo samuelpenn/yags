@@ -3,7 +3,7 @@
 <!--
     Modern skills, mostly sciences and engineering skills.
 
-    Copyright (c) 2005, Samuel Penn.
+    Copyright (c) 2011, Samuel Penn.
     This document can be redistributed and/or modified under the terms
     of the GNU Public License as published by the Free Software Foundation
     version 2.
@@ -17,8 +17,6 @@
             xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
             xmlns:yb="http://yagsbook.sourceforge.net/xml"
             techniques="options/techniques.yags">
-
-
 
     <skill name="Computer Operation" type="skill">
         <group>Technical</group>
@@ -88,88 +86,49 @@
         </description>
     </skill>
 
-
-
-
-    <skill name="Electrician">
-        <group>Technical</group>
-        <techRange min="6" max="20"/>
-
-        <short>Building electronic devices.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have skill in building electronic devices, as well as
-                a good understanding of how they work and the theories on
-                which they are constructed.
-            </para>
-
-            <para>
-                There is a technique for each type of electronic device
-                that can be built. Knowing the correct technique halves
-                the difficulty for a task.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Machinist">
-        <group>Technical</group>
-        <default>Mechanics</default>
-        <techRange min="5" max="20"/>
-
-        <short>Building tools</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of building high tech tools. Though absolutely
-                vital to a high tech society, most mechanics and engineers
-                can get away with buying standard parts from a local shop.
-                In a society where there isn't a ready availability of tools
-                and parts, most (if not all) engineers will have some
-                level of skill in <e>Machinist</e>.
-            </para>
-        </description>
-    </skill>
-
     <skill name="Engineering">
         <group>Technical</group>
 
-        <short>The science of building things.</short>
+        <short>The application of science and maths.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 The knowledge and skill of designing, building and repairing
-                machines, buildings and other structures. Engineering tends
-                towards the theoretical side of things, and does not
-                necessarily cover the everyday maintenance of such items.
+                machines, buildings and other structures. The skill covers
+                a wide range of engineering disciplines, from civil engineering
+                (buildings and bridges), to engines (mechanical) and electronics
+                (electrical). It is recommended that you take one or more
+                specialisations.
+            </para>
+
+            <para>
+                Specialisations are level 4 techniques, and can include
+                <e>Electrical engineering</e>, <e>Civic engineering</e>,
+                <e>Mechanical engineering</e>. More specialist techniques
+                might be Machinist, Computers, Communications, etc.
+                If you already have a specialisation in <e>Electronics
+                operation</e>, then this can be used with <e>Engineering</e>.
             </para>
         </description>
     </skill>
 
-    <skill name="Mechanics">
+    <skill name="Security systems" type="skill">
         <group>Technical</group>
-        <default>Engineering</default>
-        <techRange min="4" max="20"/>
+        <group>Military</group>
+        <group>Criminal</group>
 
-        <short>Fixing machines.</short>
+        <short>Design and set-up of security systems.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The skill of fixing mechanical devices when they break.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Electrician">
-        <group>Technical</group>
-        <default>Electronics</default>
-        <techRange min="6" max="20"/>
-
-        <short>Fixing electrical things.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of fixing electrical systems when they break.
+                You have been trained in deploying (and countering)
+                security systems such as burglar alarms, electronic
+                door locks, motion sensors, cameras and the like.
+                With this skill, you now what sort of systems are
+                available for use, and how to best deploy them to
+                maximise their effectiveness. You can also make
+                guesses as to how an existing security system is
+                set up, and how best to disable or avoid it.
             </para>
         </description>
     </skill>
@@ -200,12 +159,18 @@
             <para>
                 You have been trained in the use of both communications and
                 sensor systems. Anyone can talk into a microphone or watch
-                a radar display, but you have indepth knowledge of how such
+                a radar display, but you have in-depth knowledge of how such
                 things actually work, and how best to interpret data from
                 them. You have been trained in the use of electronic warfare,
                 how to get the best range out of communications gear, how
                 to interpret poor quality signals, and how to make best
                 use of signals intelligence.
+            </para>
+
+            <para>
+                This has some overlap with <e>Electronics operation</e>, but
+                is more a profession rather than a single skill and covers a
+                lot of the theory in both intelligence and counter-intelligence.
             </para>
         </description>
     </skill>

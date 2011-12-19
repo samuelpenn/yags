@@ -303,7 +303,7 @@
                 When using a <e>heavy weapon</e> to lay down automatic
                 fire, damage bonus gained for hitting with multiple
                 bullets can go above +10. The limit is raised by +5
-                for every 4 points of skill (e.g. 15 at 4, 20 at 8 etc).
+                for every 4 points of skill (e.g. +15 at 4, +20 at 8 etc).
             </para>
         </description>
     </advantage>
@@ -324,24 +324,31 @@
     </advantage>
 
     <advantage name="Following fire" type="technique">
-        <cost points="2"/>
+        <cost points="4"/>
         <skill name="Heavy weapons"/>
 
         <short>Skilled use of autocannons</short>
 
-        <description xmlns="http://yagsbook.sourceforge.ne/xml">
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 When using a fully automatic <e>vehicle scale</e> weapon
                 you can keep multiple bursts on target over the course
                 of the round, increasing the chance of hitting at extreme
-                ranges. When firing, you may choose to add bursts together,
-                giving a larger number of bullets per burst. The effective
-                number of bullets in the burst can never be higher than
-                the original number (so an Au-20 gun will never have
-                bonuses for having more than 20 bullets in the burst),
-                but it does have an effect after the burst size has been
-                halved, allowing you to get a few more range bands out
-                of the weapon.
+                ranges.
+            </para>
+
+            <para>
+                Each success you make on hitting with a burst, gives you
+                +1 effective bullet for the next burst at the same target.
+                This bonus applies after reducing the number of bullets
+                for range, but can never increase the number of bullets to
+                more than is actually in the burst.
+            </para>
+
+            <para>
+                As long as a burst gains at least one success, then add
+                the bonus from this burst, plus one for each success, to
+                the next burst.
             </para>
         </description>
     </advantage>
