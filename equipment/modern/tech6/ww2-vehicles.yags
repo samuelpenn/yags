@@ -69,7 +69,7 @@
         <legality>1</legality>
         <short>Medium tank.</short>
 
-        <cost>31000</cost>
+        <cost units="usd">31000</cost>
         <weight>33200000</weight>
 
         <construction>
@@ -95,14 +95,14 @@
         </performance>
 
         <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <attributes size="9" soak="18" move="22" acceleration="10">
+            <attributes size="13" soak="26" move="22" acceleration="10">
                 <attribute name="strength" score="45"/>
                 <attribute name="health" score="4"/>
                 <attribute name="agility" score="2"/>
             </attributes>
 
             <combat>
-                <armour location="Front" score="25"/>
+                <armour location="Front" score="20"/>
                 <armour location="Side" score="15"/>
 
                 <weapon name="75mm medium tank gun">
@@ -151,7 +151,7 @@
         <techLevel>6</techLevel>
         <legality>1</legality>
         <short>German medium tank.</short>
-        <cost>26000</cost>
+        <cost units="usd">26000</cost>
         <weight>27500000</weight>
 
         <construction>
@@ -229,7 +229,7 @@
         <category>Vehicle</category>
         <genre>WWII</genre>
         <legality>1</legality>
-        <cost>56000</cost>
+        <cost units="usd">56000</cost>
         <techLevel>6</techLevel>
         <weight>62600000</weight>
 
@@ -308,7 +308,7 @@
         <category>Vehicle</category>
         <genre>WWII</genre>
         <legality>1</legality>
-        <cost>65000</cost>
+        <cost units="usd">65000</cost>
         <techLevel>6</techLevel>
         <weight>28600000</weight>
 
@@ -316,7 +316,18 @@
 
         <description>
             <para>
-                Russian heavy tank.
+                The T-34 was a Soviet medium tank which was a mainstay of the
+                Russian army throughout most of World War II. Though there were
+                other tanks which were better, the T-34 could be produced in
+                very large numbers cheaply and efficiently. It underwent a
+                number of revisions throughout the war - this one is the
+                original T-34 first deployed in 1940.
+            </para>
+
+            <para>
+                One problem was that it wasn't a particularly reliable tank,
+                and as many were lost due to mechanical fault as to enemy
+                action.
             </para>
         </description>
 
@@ -383,6 +394,85 @@
         </vehicle>
     </item>
 
+    <item name="Cromwell tank">
+        <category>Vehicle</category>
+        <genre>WWII</genre>
+        <legality>1</legality>
+        <techLevel>6</techLevel>
+        <weight>27600000</weight>
+
+        <short>WWII British tank.</short>
+
+        <description>
+            <para>
+                The Tank Cruiser Mk VIII Cromwell was once of the most successful
+                British tanks of World War II. It combined an effective gun and armour
+                together with high speed and reliability.
+            </para>
+        </description>
+
+        <construction>
+            <year>1944</year>
+            <manufacturer>United Kingdom</manufacturer>
+        </construction>
+
+        <performance realm="ground">
+            <speed>64</speed>
+            <acceleration>6</acceleration>
+            <range>270</range>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+
+            <attributes size="12" soak="24" move="80" acceleration="15">
+                <attribute name="strength" score="40"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="3"/>
+            </attributes>
+
+            <combat>
+                <armour location="Front" score="25"/>
+                <armour location="Side" score="18"/>
+
+                <weapon name="Ordnance QF 75mm">
+                    <attack score="20"/>
+                    <damage score="45"/>
+                    <size>10</size>
+                    <increment>30</increment>
+                    <rof>1</rof><capacity>77</capacity>
+                    <recoil>0</recoil>
+                    <range>
+                        <short>1000</short>
+                        <medium>4000</medium>
+                        <long>10000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <vehicle/>
+                        <explosive score="2"/>
+                    </properties>
+                </weapon>
+
+                <weapon name="7.92mm Besa Machine Gun (x2)">
+                    <attack score="6"/>
+                    <damage score="30"/>
+                    <increment>25</increment>
+                    <rof>60</rof><capacity>2000</capacity>
+                    <recoil>-5</recoil>
+                    <range>
+                        <short>750</short>
+                        <medium>2000</medium>
+                        <long>4000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <heavy/>
+                        <automatic score="20"/>
+                    </properties>
+                </weapon>
+            </combat>
+        </vehicle>
+    </item>
 
 </equipment>
 
