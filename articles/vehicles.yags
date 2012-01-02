@@ -6,7 +6,7 @@
 <article xmlns="http://yagsbook.sourceforge.net/xml"
          xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
-        <title>Yags Vehicles</title>
+        <title>Yags High Tech</title>
         <tagline>Yags 0.7.6</tagline>
 
         <summary>
@@ -19,7 +19,7 @@
         </author>
 
         <license type="Yags">
-            <year>2011</year>
+            <year>2012</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -135,7 +135,7 @@
                     </para>
 
                     <para>
-                        Damage levels = <t>Size</t>^2 / 20 (round to nearest).
+                        Damage levels = <t>Size</t>^2 / 20 (round to nearest) + 2.
                     </para>
 
                     <para>
@@ -144,9 +144,12 @@
                         is at no penalty to manoeuvring, a moderately damaged
                         vehicle is at -10 and a critically damaged vehicle is
                         at -25 and halves its top speed and acceleration.
-                        In addition, a vehicle always has one additional
-                        damage level in <e>superficial</e>, and one in a fourth
-                        level called <e>disabled</e>, which gives a -40 penalty.
+                        In addition, a vehicle always has one damage level in
+                        <e>disabled</e>, which gives a -40 penalty. A vehicle
+                        stops working once it becomes disabled, though it's
+                        possible to get it working again with a difficulty 20
+                        <e>Mechanics</e> check (takes 1 round per point of
+                        <e>Size</e> of the vehicle).
                     </para>
 
                     <example title="Damage Levels">
@@ -267,7 +270,9 @@
                         <para>
                             Note that a character scale weapon mounted on a
                             vehicle (e.g. a turret mounted light machine gun)
-                            is still considered character scale.
+                            is still considered character scale. It is the size
+                            and characteristics of the weapon, not the vehicle,
+                            which are important.
                         </para>
 
                         <para>
@@ -286,8 +291,10 @@
                             When combat happens between vehicles, a lot of the
                             time passengers will end up being the target. This
                             can be either due to deliberate aiming, or through
-                            bad luck. A hit on a passenger reflects either a hit
-                            directly from a round, or being hit by shrapnel.
+                            simple bad luck. For the purposes of these rules,
+                            a 'hit' may be an actual direct hit, or may be due
+                            to shrapnel or ricochet. In either case, the actual
+                            cause of the 'hit' is abstracted for simplicity.
                         </para>
 
                         <para>
@@ -319,6 +326,25 @@
                             drop the damage type by one level. The damage is
                             10 x damage levels + 1d20.
                         </para>
+
+                        <example title="Hitting Passengers">
+                            <para>
+                                A gangster fires into a car, with a 10 round
+                                burst of gunfire from his Thompson SMG, causing
+                                1 minor wound. Since minor wounds are halved,
+                                this only causes superficial damage. However,
+                                any passengers have a chance of being hit on
+                                a d20 roll of 15+ (normally 20+, but +5 for
+                                the 10 round burst).
+                            </para>
+
+                            <para>
+                                If a passenger is hit, then will take
+                                10 (1 x 10) + 1d20 damage. This is unlikely
+                                to cause serious harm, but if any damage is
+                                done to a character it will be <e>wounds</e>.
+                            </para>
+                        </example>
                     </sect4>
 
                     <sect4>
@@ -667,6 +693,12 @@
         <sect1>
             <title>Vehicle Actions</title>
 
+            <warning title="Work In Progress">
+                <para>
+                    This section is still very much a work in progress.
+                </para>
+            </warning>
+
             <para>
                 For the most part, vehicles are secondary to the plot - they
                 allow characters to get from A to B with a minimum of time
@@ -923,7 +955,7 @@
                     </item>
 
                     <item target="120" value="Elite (+100%).">
-                        The sort of manouevere that wins races, or
+                        The sort of manoeuvre that wins races, or
                         ends your driving career permanently.
                     </item>
                 </targetlist>
@@ -942,7 +974,25 @@
                     </para>
 
                     <para>
+                        The GM decides that a safe speed for this
+                        corner is 20kph. Alice tries to take the junction
+                        at 30kph, and Bob goes for 25kph.
+                    </para>
 
+                    <para>
+                        For Bob, it's a simple difficulty 20 check, which
+                        he makes without too much difficulty and comes out
+                        of the junction at 25kph.
+                    </para>
+
+                    <para>
+                        For Alice, it's difficulty 40, and she rolls only
+                        33. She needs to immediately make a second check
+                        to avoid a crash, and she decides to take a point
+                        of Fatigue to halve the difficulty. She makes the
+                        second check, but is shaken from the experience,
+                        and comes out of the junction at 20kph (half her
+                        attempted speed because of the first failure).
                     </para>
                 </example>
             </sect2>
