@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+                href="/home/sam/src/forge/yagsbook/xml/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+    <header>
+        <title>Yags Medieval</title>
+        <tagline>Yags 0.7.6</tagline>
+
+        <summary>
+            A guide to the middle ages.
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 1.2 $</version>
+            <date>$Date: 2009-07-19 17:19:18 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2012</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+        </license>
+
+        <style name="combat"/>
+    </header>
+
+    <body>
+        <sect1>
+            <title>The Middle Ages</title>
+
+            <para>
+                The period from the collapse of the Roman Empire to the
+                start of the Renaissance is probably the most popular as
+                far as fantasy campaign settings go. They are often based
+                on something similar to Medieval Europe, taking ideas from
+                a thousand years of history.
+            </para>
+
+            <para>
+                <tm>Yags Medieval</tm> aims to cover this period of history,
+                detailing the weapons and equipment available during this
+                time, and taking a look at the possible genres and settings
+                that can make use of these eras.
+            </para>
+
+            <para>
+                Unlike <s>High Tech</s>, which covers very definite technology
+                levels (TL 6 through to TL 8), <tm>Medieval</tm> is somewhat
+                more complicated. Technologically, it covers from TL 2 to TL 3.
+                Though TL 2 is the <e>Iron Age</e>, this
+                ended before the rise of the Roman Empire. Since <tm>Medieval</tm>
+                covers the period <e>after</e> the Rome fell, what gives?
+            </para>
+
+            <para>
+                The collapse of Rome saw a loss of technology and
+                infrastructure. Writing (at least, on any large scale) pretty much
+                disappeared in Western Europe during this time. The ability to
+                build large stone structures was lost. The lack of trade
+                reduced the types of raw materials available, again limiting
+                what was possible. Civilisation fell back to how it was before
+                the rise of Greece and Rome.
+            </para>
+
+            <para>
+                As far as equipment availability goes, this period is considered
+                similar to time of the Iron Age, around the time of the Etruscan
+                and early Roman cultures. Rome itself is assumed to have
+                achieved TL 3 at some point (at least in some respects), and
+                the Medieval period sees Europe climbing back to this level of
+                technology, and beyond.
+            </para>
+
+            <sect2>
+                <title>TL 2 - The Dark Ages</title>
+
+                <para>
+                    The fall of the Western Roman Empire in 476 marked the
+                    beginning of the <e>Dark Ages</e> for Europe. With the
+                    collapse of trade and the retreat of the Roman armies,
+                    towns and cities become both vulnerable and also
+                    redundant. With no trade, it was difficult to support
+                    large population centres. Taxes stopped being paid,
+                    and the roads and legions could no longer be maintained.
+                </para>
+
+                <para>
+                    From the perspective of gaming, the darkness that
+                    descended on Europe can be viewed as a boon. With the
+                    lack of trade routes, foreign countries regain their
+                    mysteriousness and travel becomes dangerous and
+                    exciting.
+                </para>
+
+                <para>
+                    This period ends around the start of the 11th century.
+                </para>
+            </sect2>
+
+            <sect2>
+                <title>TL 3 - Feudalism</title>
+
+                <para>
+                    This period saw a cultural as well as technological
+                    shift. Rather than tribes, Europe is beginning to
+                    organise itself into countries. Feudalism is the big
+                    change that allows cultures to stabilise and trade
+                    to start to flourish once again.
+                </para>
+            </sect2>
+        </sect1>
+
+        <sect1>
+            <title>The Dark Ages (TL 2)</title>
+        </sect1>
+
+
+        <sect1>
+            <title>Feudalism (TL 3)</title>
+
+            <para>
+                Here we consider weapons commonly available during TL3, which
+                is the technology level of most 'medieval' style fantasy
+                campaigns.
+            </para>
+
+            <sect2>
+                <title>Common Equipment</title>
+
+                <para>
+                    A list of commonly available equipment.
+                </para>
+
+                <import-equipment style="full">
+                    <list>lowtech/tech3/weapons.yags</list>
+                    <list>lowtech/tech3/armour.yags</list>
+                    <list>lowtech/tech3/generic.yags</list>
+                </import-equipment>
+            </sect2>
+        </sect1>
+
+        <sect1 format="wide">
+            <title>Equipment Charts</title>
+
+            <sect2>
+                <title>TL3 - Medieval</title>
+
+                <sect3>
+                    <title>Weapons</title>
+
+                    <y:import-weaponlist importance="2" style="list">
+                        <y:category>Axes</y:category>
+                        <y:category>Bows</y:category>
+                        <y:category>Clubs</y:category>
+                        <y:category>Flails</y:category>
+                        <y:category>Knives</y:category>
+                        <y:category>Shields</y:category>
+                        <y:category>Spears</y:category>
+                        <y:category>Swords</y:category>
+
+                        <y:list>lowtech/tech3/weapons.yags</y:list>
+                    </y:import-weaponlist>
+                </sect3>
+
+                <sect3>
+                    <title>Armour</title>
+
+                    <y:import-armourlist importance="2" href="lowtech/tech3/armour.yags"/>
+                </sect3>
+            </sect2>
+
+        </sect1>
+    </body>
+
+</article>
+
+
