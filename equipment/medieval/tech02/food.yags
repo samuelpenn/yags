@@ -1,0 +1,1772 @@
+<?xml version="1.0"?>
+
+<!--
+
+    General equipment lists.
+
+    Copyright 2005-2012, Samuel Penn, sam@glendale.org.uk
+
+    Redistribution and use with or without modification are permitted provided
+    that the following conditions are met:
+
+    1) Redistributions of any source code (e.g. XML) must retain the
+        above copyright notice and this list of conditions.
+
+    2) Redistributions in binary/printed forms must include copyright
+        attribution.
+
+    The purpose of these equipment lists are to provide a generic and complete
+    list of equipment for RPG purposes, in a format that can be used in other
+    games by anyone, with minimum fuss and license worries. If you make changes
+    and/or additions, then it'd be great if they are passed back or made
+    freely available, but you don't have to.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-08-30 18:15:54 $
+
+    Categories
+
+    Adventuring     The sort of things only adventurers have.
+    Rogue           Thieves/assassins tools and the like.
+    Food            Food and drink.genre
+    Animals         An animal which isn't livestock - horses and dogs.
+    Livestock       Animals bred for food, such as pigs and cows.
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+
+    Prices should be in farthings, but prices can't really be trusted yet.
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+    <item name="Egg (chicken)">
+        <category>Food</category>
+        <importance>2</importance>
+        <availability>1</availability>
+        <techLevel>0</techLevel>
+        <legality>6</legality>
+        <weight>50</weight>
+        <cost units="saxon">1</cost>
+
+        <short>A fresh chicken egg.</short>
+
+        <description>
+            <para>
+                A single raw egg, ready to be cooked for a meal.
+            </para>
+        </description>
+    </item>
+
+    <item name="Vegetables">
+        <category>Food</category>
+        <importance>2</importance>
+        <tech level="0"/>
+        <availability>1</availability>
+
+        <short>One meal of fresh vegetables.</short>
+
+        <description>
+            <para>
+                A mixture of fresh vegetables, enough for one meal.
+            </para>
+        </description>
+
+        <weight>50</weight>
+        <material>plant</material>
+
+        <cost units="saxon">1</cost>
+    </item>
+
+    <item name="Flask of wine" quality="1">
+        <category>Food</category>
+        <importance>1</importance>
+
+        <availability>1</availability>
+        <tech level="1"/>
+
+        <short>A flask of poor quality wine.</short>
+
+        <description>
+            <para>
+                A flask of cheap wine which is not particularly
+                tasty.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">5</cost>
+    </item>
+
+    <item name="Flask of wine" quality="2">
+        <category>Food</category>
+        <importance>2</importance>
+
+        <availability>2</availability>
+        <tech level="1"/>
+
+        <short>A flask of average quality wine.</short>
+
+        <description>
+            <para>
+                A flask of wine which is okay, but nothing special.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">15</cost>
+    </item>
+
+    <item name="Flask of wine" quality="3">
+        <category>Food</category>
+        <importance>2</importance>
+        <tech level="1"/>
+        <availability>2</availability>
+
+        <short>A flask of good quality wine.</short>
+
+        <description>
+            <para>
+                A flask of good wine.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">30</cost>
+    </item>
+
+    <item name="Flask of wine" quality="4">
+        <category>Food</category>
+        <importance>3</importance>
+
+        <availability>3</availability>
+        <tech level="1"/>
+        <short>A flask of fine quality wine.</short>
+
+        <description>
+            <para>
+                A flask of excellent wine, of vintage stock. It tastes
+                exellent, but is quite expensive.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">100</cost>
+    </item>
+
+    <item name="Flask of wine" quality="5">
+        <category>Food</category>
+        <importance>1</importance>
+
+        <availability>4</availability>
+        <tech level="1"/>
+        <short>A flask of exellent quality wine.</short>
+
+        <description>
+            <para>
+                A flask of superb wine.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">500</cost>
+    </item>
+
+    <item name="Loaf of bread">
+        <category>Food</category>
+        <importance>3</importance>
+
+        <availability>1</availability>
+
+        <short>A fresh loaf of bread.</short>
+
+        <description>
+            <para>
+                A pretty standard loaf of bread.
+            </para>
+        </description>
+
+        <weight>400</weight>
+        <material>food</material>
+
+        <cost units="saxon">2</cost>
+    </item>
+
+    <item name="Fresh meat">
+        <category>Food</category>
+        <importance>3</importance>
+
+        <availability>1</availability>
+
+        <short>One portion of fresh meat.</short>
+
+        <description>
+            <para>
+                A portion of fresh meat for a single meal. Normally
+                accompanied with bread and/or vegetables.
+            </para>
+        </description>
+
+        <weight>100</weight>
+        <material>animal</material>
+
+        <cost units="saxon">20</cost>
+    </item>
+
+    <item name="Pint of ale">
+        <category>Food</category>
+        <importance>3</importance>
+
+        <availability>1</availability>
+
+        <short>A pint of strong ale.</short>
+
+        <description>
+            <para>
+                A pint of good strong ale.
+            </para>
+        </description>
+
+        <weight>800</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">2</cost>
+    </item>
+
+    <item name="Pint of bear">
+        <category>Food</category>
+        <importance>3</importance>
+
+        <availability>1</availability>
+
+        <short>A pint of bear.</short>
+
+        <description>
+            <para>
+                A pint of good beer.
+            </para>
+        </description>
+
+        <weight>800</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">2</cost>
+    </item>
+
+    <item name="Pint of mead">
+        <category>Food</category>
+        <importance>3</importance>
+
+        <availability>2</availability>
+
+        <short>A pint of mead.</short>
+
+        <description>
+            <para>
+                A pint of good mead.
+            </para>
+        </description>
+
+        <weight>800</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">4</cost>
+    </item>
+
+    <item name="Bell, small hand">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>2</availability>
+
+        <short>A small bronze hand bell.</short>
+
+        <description>
+            <para>
+                A small bronze hand bell, of the sort often used by
+                watchmen and guards to sound for aid.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>metal</material>
+
+        <cost units="saxon">50</cost>
+    </item>
+
+    <item name="Chain, light">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>3</availability>
+
+        <short>A metre length of light chain.</short>
+
+        <description>
+            <para>
+                A one metre length of chain, useful for light loads
+                or securing animals. Normally made of iron. Longer
+                lengths of chain can be bought, this is just the cost
+                per metre.
+            </para>
+        </description>
+
+        <dimensions>
+            <length>100</length>
+            <width>1</width>
+            <height>1</height>
+        </dimensions>
+
+        <weight>2000</weight>
+        <material>metal</material>
+
+        <cost units="saxon">300</cost>
+    </item>
+
+    <item name="Chain, heavy">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>4</availability>
+
+        <short>A metre length of heavy chain.</short>
+
+        <description>
+            <para>
+                A one metre length of chain, designed for heavy loads
+                such as securing large creatures, ships or heavy loads.
+                This is the price and weight per metre.
+            </para>
+        </description>
+
+        <dimensions>
+            <length>100</length>
+            <width>3</width>
+            <height>3</height>
+        </dimensions>
+
+        <weight>5000</weight>
+        <material>metal</material>
+
+        <cost units="saxon">2000</cost>
+    </item>
+
+    <item name="Glass bottle">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>4</availability>
+
+        <short>A small glass bottle with a cork stopper.</short>
+
+        <description>
+            <para>
+                A fragile glass bottle, designed to hold a liquid or
+                powder. It can be sealed shut with a cork.
+            </para>
+        </description>
+
+        <dimensions>
+            <length>20</length>
+            <width>5</width>
+            <height>5</height>
+        </dimensions>
+
+        <weight>100</weight>
+        <material>glass</material>
+
+        <cost units="saxon">5000</cost>
+    </item>
+
+    <item name="Padlock" quality="1">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>3</availability>
+
+        <short>A poor quality padlock.</short>
+
+        <description>
+            <para>
+                A poor quality padlock, designed to keep a door or chest
+                shut. Requires a relatively big key, and can be quite easy
+                to pick. Often it is easier to just break it though, by
+                either hitting it very hard, or levering it open.
+            </para>
+        </description>
+
+        <weight>250</weight>
+        <material>iron</material>
+
+        <cost units="saxon">2000</cost>
+
+        <device xmlns="http://yagsbook.sourceforge.net/xml/d20">
+            <difficulty>20</difficulty>
+            <hardness>3</hardness>
+            <hitpoints>5</hitpoints>
+            <break>20</break>
+        </device>
+
+        <device xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <difficulty>15</difficulty>
+            <soak>10</soak>
+            <toughness>1</toughness>
+            <break>30</break>
+        </device>
+    </item>
+
+    <item name="Padlock" quality="2">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>4</availability>
+
+        <short>An average quality padlock.</short>
+
+        <description>
+            <para>
+                A padlock of average quality, of the sort used to keep
+                a door or chest locked shut.
+            </para>
+        </description>
+
+        <weight>300</weight>
+        <material>iron</material>
+
+        <cost units="saxon">5000</cost>
+
+        <device xmlns="http://yagsbook.sourceforge.net/xml/d20">
+            <difficulty>25</difficulty>
+            <hardness>3</hardness>
+            <hitpoints>6</hitpoints>
+            <break>22</break>
+        </device>
+
+        <device xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <difficulty>20</difficulty>
+            <soak>12</soak>
+            <toughness>1</toughness>
+            <break>33</break>
+        </device>
+    </item>
+
+    <item name="Padlock" quality="3">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>3</availability>
+
+        <short>A good quality padlock.</short>
+
+        <description>
+            <para>
+                A good quality padlock.
+            </para>
+        </description>
+
+        <weight>300</weight>
+        <material>iron</material>
+
+        <cost units="saxon">10000</cost>
+
+        <device xmlns="http://yagsbook.sourceforge.net/xml/d20">
+            <difficulty>30</difficulty>
+            <hardness>4</hardness>
+            <hitpoints>7</hitpoints>
+            <break>20</break>
+        </device>
+
+        <device xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <difficulty>25</difficulty>
+            <soak>12</soak>
+            <toughness>1</toughness>
+            <break>35</break>
+        </device>
+    </item>
+
+    <item name="Hourglass">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>4</availability>
+
+        <short>An hourglass, used to keep track of time.</short>
+
+        <description>
+            <para>
+                Made of glass, within a wooden frame, it is about
+                twenty centimetres tall and capable of timing events
+                for about 30 minutes.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>glass</material>
+
+        <cost units="saxon">30000</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Magnifying glass">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>5</availability>
+
+        <short>A small glass lens with a wooden handle.</short>
+
+        <description>
+            <para>
+                This lens is about 5cm in diameter, and has a useful
+                magnification of about x2. It is liable to fracture
+                if dropped.
+            </para>
+        </description>
+
+        <dimensions>
+            <length>15</length>
+            <width>6</width>
+            <height>6</height>
+        </dimensions>
+
+        <weight>100</weight>
+        <material>glass</material>
+
+        <cost units="saxon">20000</cost>
+
+        <properties>
+            <special/>
+        </properties>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/d20">
+            <skill>Appraise</skill>
+            <bonus>+2</bonus>
+            <notes>
+                Gives a bonus to appraise checks on small items.
+            </notes>
+        </tool>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Mechanical</skill>
+            <bonus>+3</bonus>
+            <notes>
+                Gives a bonus to disable traps and open locks.
+            </notes>
+        </tool>
+    </item>
+
+    <item name="Merchant's scale">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>4</availability>
+
+        <short>A weighing device.</short>
+
+        <weight>500</weight>
+        <material>metal</material>
+
+        <cost units="saxon">1000</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Mirror, small metal">
+        <category>Adventuring</category>
+
+        <availability>4</availability>
+
+        <short>A highly polished peice of metal.</short>
+
+        <weight>100</weight>
+        <material>bronze</material>
+
+        <cost units="saxon">1000</cost>
+    </item>
+
+    <item name="Perfume" quality="1">
+        <category>Fashion</category>
+        <importance>1</importance>
+
+        <availability>3</availability>
+
+        <short>A small vial of poor quality perfume.</short>
+
+        <weight>100</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">10</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Perfume" quality="2">
+        <category>Fashion</category>
+        <importance>2</importance>
+
+        <availability>4</availability>
+
+        <short>A small vial of perfume.</short>
+
+        <weight>100</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">200</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Perfume" quality="3">
+        <category>Fashion</category>
+        <importance>2</importance>
+
+        <availability>5</availability>
+
+        <short>A small vial of good quality perfume.</short>
+
+        <weight>50</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">1000</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Soap">
+        <category>Fashion</category>
+        <importance>2</importance>
+
+        <availability>3</availability>
+
+        <short>A bar of soap.</short>
+
+        <weight>250</weight>
+        <material>solid</material>
+
+        <cost units="saxon">4</cost>
+    </item>
+
+    <item name="Scroll case">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>4</availability>
+
+        <short>A tube for holding scrolls.</short>
+
+        <weight>250</weight>
+        <material>wood</material>
+
+        <cost units="saxon">8</cost>
+    </item>
+
+    <item name="Sewing needle">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>1</availability>
+
+        <short>A small bone sewing needle.</short>
+
+        <weight>5</weight>
+        <material>bone</material>
+
+        <cost units="saxon">5</cost>
+    </item>
+
+    <item name="Signal whistle">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>5</availability>
+
+        <short>A small iron whistle.</short>
+
+        <weight>5</weight>
+        <material>iron</material>
+
+        <cost units="saxon">100</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Signet ring">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>3</availability>
+
+        <short>A ring with a pattern embossed upon it.</short>
+
+        <weight>5</weight>
+        <material>silver</material>
+
+        <cost units="saxon">200</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Spyglass">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>6</availability>
+
+        <short>An iron tube with two lenses in it.</short>
+
+        <weight>500</weight>
+        <material>iron</material>
+
+        <cost units="saxon">20000</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Water clock">
+        <category>Adventuring</category>
+        <importance>1</importance>
+
+        <availability>5</availability>
+
+        <short>A clock which works by timing the drips of water.</short>
+
+        <weight>5000</weight>
+        <material>glass</material>
+
+        <cost units="saxon">20000</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Writing ink (vial)">
+        <category>Adventuring</category>
+        <importance>2</importance>
+
+        <availability>4</availability>
+
+        <short>A clay vial of writing ink.</short>
+
+        <weight>50</weight>
+        <material>clay</material>
+
+        <cost units="saxon">40</cost>
+
+        <properties>
+            <special/>
+        </properties>
+    </item>
+
+    <item name="Backpack">
+        <category>Container</category>
+        <importance>3</importance>
+
+        <availability>2</availability>
+
+        <short>A leather bag for keeping stuff in.</short>
+
+        <dimensions>
+            <length>50</length>
+            <width>40</width>
+            <height>40</height>
+        </dimensions>
+
+        <weight>2000</weight>
+        <material>leather</material>
+
+        <cost units="saxon">20</cost>
+    </item>
+
+    <item name="Barrel (small)">
+        <category>Container</category>
+        <importance>1</importance>
+
+        <availability>1</availability>
+
+        <short>A small wooden barrel.</short>
+
+        <dimensions>
+            <length>100</length>
+            <width>50</width>
+            <height>50</height>
+        </dimensions>
+
+        <weight>10000</weight>
+        <material>wood</material>
+
+        <cost units="saxon">40</cost>
+    </item>
+
+    <item name="Basket (large)">
+        <category>Container</category>
+        <importance>0</importance>
+
+        <availability>1</availability>
+
+        <short>A woven basket.</short>
+
+        <weight>500</weight>
+        <material>wood</material>
+
+        <cost units="saxon">12</cost>
+    </item>
+
+    <item name="Basket (small)">
+        <category>Container</category>
+        <importance>0</importance>
+
+        <availability>1</availability>
+
+        <short>A woven basket.</short>
+
+        <weight>100</weight>
+        <material>wood</material>
+
+        <cost units="saxon">2</cost>
+    </item>
+
+    <item name="Belt pouch (small)">
+        <category>Container</category>
+        <importance>1</importance>
+
+        <availability>2</availability>
+
+        <short>A small leather belt pouch.</short>
+
+        <weight>100</weight>
+        <material>leather</material>
+
+        <cost units="saxon">4</cost>
+    </item>
+
+    <item name="Belt pouch (large)">
+        <category>Container</category>
+        <importance>1</importance>
+
+        <availability>2</availability>
+
+        <short>A large leather belt pouch.</short>
+
+        <weight>250</weight>
+        <material>leather</material>
+
+        <cost units="saxon">6</cost>
+    </item>
+
+    <item name="Bolt case">
+        <category>Container</category>
+        <importance>2</importance>
+
+        <availability>2</availability>
+
+        <short>A wooden case for holding quarrels.</short>
+
+        <weight>500</weight>
+        <material>wood</material>
+
+        <cost units="saxon">100</cost>
+    </item>
+
+    <item name="Bucket, metal">
+        <category>Container</category>
+        <importance>1</importance>
+
+        <availability>2</availability>
+
+        <short>A metal bucket.</short>
+
+        <weight>2000</weight>
+        <material>iron</material>
+
+        <cost units="saxon">500</cost>
+    </item>
+
+    <item name="Bucket, wood">
+        <category>Container</category>
+        <importance>1</importance>
+
+        <availability>1</availability>
+
+        <short>A wooden bucket.</short>
+
+        <weight>2000</weight>
+        <material>wood</material>
+
+        <cost units="saxon">50</cost>
+    </item>
+
+    <item name="Chest, large">
+        <category>Container</category>
+        <importance>2</importance>
+
+        <availability>3</availability>
+
+        <short>A large wooden chest, almost a metre long.</short>
+
+        <dimensions>
+            <length>90</length>
+            <width>60</width>
+            <height>60</height>
+        </dimensions>
+
+        <weight>20000</weight>
+        <material>wood</material>
+
+        <cost units="saxon">40</cost>
+    </item>
+
+    <item name="Chest, small">
+        <category>Container</category>
+        <importance>2</importance>
+
+        <availability>2</availability>
+
+        <short>A small wooden chest.</short>
+
+        <dimensions>
+            <length>45</length>
+            <width>30</width>
+            <height>30</height>
+        </dimensions>
+
+        <weight>8000</weight>
+        <material>wood</material>
+
+        <cost units="saxon">20</cost>
+    </item>
+
+    <item name="Iron pot">
+        <category>Container</category>
+        <category>Cooking</category>
+
+        <availability>2</availability>
+
+        <short>An iron pot, of the sort used for cooking.</short>
+
+        <weight>3000</weight>
+        <material>metal</material>
+
+        <cost units="saxon">50</cost>
+    </item>
+
+    <item name="Quiver">
+        <category>Container</category>
+
+        <availability>2</availability>
+
+        <short>A quiver for holding arrows.</short>
+
+        <weight>500</weight>
+        <material>leather</material>
+
+        <cost units="saxon">40</cost>
+    </item>
+
+    <item name="Sack, large">
+        <category>Container</category>
+
+        <availability>2</availability>
+
+        <short>A sack big enough for a person.</short>
+
+        <weight>250</weight>
+        <material>cloth</material>
+
+        <cost units="saxon">20</cost>
+    </item>
+
+    <item name="Sack, small">
+        <category>Container</category>
+
+        <availability>1</availability>
+
+        <short>A small sack big enough to hold a chicken.</short>
+
+        <weight>100</weight>
+        <material>cloth</material>
+
+        <cost units="saxon">5</cost>
+    </item>
+
+    <item name="Strongbox (iron), large">
+        <category>Container</category>
+
+        <availability>4</availability>
+        <properties>
+            <special/>
+        </properties>
+
+        <short>An iron strongbox, for keeping valuables.</short>
+
+        <dimensions>
+            <length>90</length>
+            <width>60</width>
+            <height>60</height>
+        </dimensions>
+
+        <weight>60000</weight>
+        <material>iron</material>
+
+        <cost units="saxon">500</cost>
+    </item>
+
+    <item name="Strongbox (iron), small">
+        <category>Container</category>
+
+        <availability>4</availability>
+        <properties>
+            <special/>
+        </properties>
+
+        <short>An iron strongbox, for keeping valuables.</short>
+
+        <dimensions>
+            <length>45</length>
+            <width>30</width>
+            <height>30</height>
+        </dimensions>
+
+        <weight>25000</weight>
+        <material>iron</material>
+
+        <cost units="saxon">300</cost>
+    </item>
+
+    <item name="Strongbox (steel), large">
+        <category>Container</category>
+
+        <availability>5</availability>
+        <properties>
+            <special/>
+        </properties>
+
+        <short>A steel strongbox, for keeping valuables.</short>
+
+        <dimensions>
+            <length>90</length>
+            <width>60</width>
+            <height>60</height>
+        </dimensions>
+
+        <weight>50000</weight>
+        <material>steel</material>
+
+        <cost units="saxon">2000</cost>
+    </item>
+
+    <item name="Strongbox (steel), small">
+        <category>Container</category>
+
+        <availability>5</availability>
+        <properties>
+            <special/>
+        </properties>
+
+        <short>A steel strongbox, for keeping valuables.</short>
+
+        <dimensions>
+            <length>45</length>
+            <width>30</width>
+            <height>30</height>
+        </dimensions>
+
+        <weight>20000</weight>
+        <material>iron</material>
+
+        <cost units="saxon">1000</cost>
+    </item>
+
+    <item name="Water skin">
+        <category>Container</category>
+
+        <availability>2</availability>
+
+        <short>A watertight flask for holding wine or water.</short>
+
+        <weight>100</weight>
+        <material>leather</material>
+
+        <cost units="saxon">60</cost>
+    </item>
+
+    <item name="Block and tackle, light">
+        <category>Climbing</category>
+
+        <availability>4</availability>
+        <properties>
+            <special/>
+        </properties>
+
+        <short>A light block and tackle.</short>
+
+        <weight>1000</weight>
+        <material>metal</material>
+
+        <cost units="saxon">50</cost>
+    </item>
+
+    <item name="Block and tackle, medium">
+        <category>Climbing</category>
+
+        <availability>5</availability>
+        <properties>
+            <special/>
+        </properties>
+
+        <short>A meidum block and tackle.</short>
+
+        <weight>2000</weight>
+        <material>metal</material>
+
+        <cost units="saxon">100</cost>
+    </item>
+
+    <item name="Block and tackle, heavy">
+        <category>Climbing</category>
+
+        <availability>5</availability>
+        <properties>
+            <special/>
+        </properties>
+
+        <short>A heavy block and tackle.</short>
+
+        <weight>4000</weight>
+        <material>metal</material>
+
+        <cost units="saxon">500</cost>
+    </item>
+
+    <item name="Crampons">
+        <category>Climbing</category>
+
+        <availability>4</availability>
+        <properties>
+            <special/>
+        </properties>
+
+        <short>Spikes worn on a shoe to help in climbing.</short>
+
+        <weight>750</weight>
+        <material>metal</material>
+
+        <cost units="saxon">100</cost>
+    </item>
+
+    <item name="Grappling hook">
+        <category>Climbing</category>
+
+        <availability>3</availability>
+        <properties>
+            <special/>
+        </properties>
+
+        <short>A 3-way iron hook.</short>
+
+        <weight>1000</weight>
+        <material>metal</material>
+
+        <cost units="saxon">80</cost>
+    </item>
+
+    <item name="Ladder, wood">
+        <category>Climbing</category>
+
+        <availability>3</availability>
+
+        <short>2m of wooden ladder.</short>
+
+        <weight>3000</weight>
+        <material>wood</material>
+
+        <cost units="saxon">5</cost>
+    </item>
+
+    <item name="Ladder, metal">
+        <category>Climbing</category>
+
+        <availability>3</availability>
+        <properties>
+            <special/>
+        </properties>
+
+        <short>2m of metal ladder.</short>
+
+        <weight>5000</weight>
+        <material>iron</material>
+
+        <cost units="saxon">200</cost>
+    </item>
+
+    <item name="Piton">
+        <category>Climbing</category>
+
+        <availability>3</availability>
+
+        <short>A spike used in rock climbing.</short>
+
+        <weight>250</weight>
+        <material>iron</material>
+
+        <cost units="saxon">5</cost>
+    </item>
+
+    <item name="Rope, hemp">
+        <category>Climbing</category>
+
+        <availability>3</availability>
+
+        <short>20m of hemp rope.</short>
+
+        <weight>12000</weight>
+        <material>hemp</material>
+
+        <cost units="saxon">100</cost>
+    </item>
+
+    <item name="Rope, silk">
+        <category>Climbing</category>
+
+        <availability>5</availability>
+        <properties>
+            <special/>
+        </properties>
+
+        <short>20m of silk rope.</short>
+
+        <weight>5000</weight>
+        <material>silk</material>
+
+        <cost units="saxon">1600</cost>
+    </item>
+
+    <item name="Acid" quality="1">
+        <category>Rogue</category>
+        <availability>4</availability>
+        <source>Alchemist</source>
+
+        <properties>
+            <special/>
+        </properties>
+
+        <short>A weak acid, used for dissolving metal.</short>
+
+        <weight>250</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">2000</cost>
+    </item>
+
+
+
+
+    <item name="Jemmy">
+        <category>Rogue</category>
+        <availability>3</availability>
+        <source>Blacksmith</source>
+
+        <short>A short iron bar with a wedged end.</short>
+
+        <dimensions>
+            <length>50</length>
+            <width>3</width>
+            <height>2</height>
+        </dimensions>
+
+        <weight>500</weight>
+        <material>metal</material>
+
+        <cost units="saxon">50</cost>
+    </item>
+
+    <item name="Iron spikes">
+        <category>Rogue</category>
+        <availability>2</availability>
+        <source>Blacksmith</source>
+
+        <short>An iron spike.</short>
+
+        <weight>100</weight>
+        <material>metal</material>
+
+        <cost units="saxon">4</cost>
+    </item>
+
+    <item name="Lock picks">
+        <category>Rogue</category>
+        <availability>4</availability>
+        <source>Locksmith</source>
+
+        <properties>
+            <special/>
+            <illegal/>
+        </properties>
+
+        <short>Tools used to open locks.</short>
+
+        <weight>10</weight>
+        <material>metal</material>
+
+        <cost units="saxon">2000</cost>
+    </item>
+
+
+
+    <item name="Oil, lubricating">
+        <category>Rogue</category>
+        <availability>3</availability>
+
+        <short>A small flash of lubricating oil.</short>
+
+        <weight>250</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">12</cost>
+    </item>
+
+
+
+    <item name="Small hammer">
+        <category>Rogue</category>
+        <availability>2</availability>
+        <source>Blacksmith</source>
+
+        <short>A small hammer, easily concealed in a hand.</short>
+
+        <weight>200</weight>
+        <material>metal</material>
+
+        <cost units="saxon">10</cost>
+    </item>
+
+    <item name="String, hemp">
+        <category>Rogue</category>
+        <availability>2</availability>
+
+        <short>A 10m length of string.</short>
+
+        <weight>50</weight>
+        <material>hemp</material>
+
+        <cost units="saxon">3</cost>
+    </item>
+
+    <item name="String, silk">
+        <category>Rogue</category>
+        <availability>5</availability>
+
+        <properties>
+            <special/>
+        </properties>
+
+        <short>A 10m length of silk string.</short>
+
+        <weight>10</weight>
+        <material>silk</material>
+
+        <cost units="saxon">200</cost>
+    </item>
+
+    <item name="Weapon black">
+        <category>Rogue</category>
+        <availability>4</availability>
+
+        <short>Black coating to dull a single weapon.</short>
+
+        <weight>200</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">500</cost>
+    </item>
+
+    <item name="Wire saw">
+        <category>Rogue</category>
+        <availability>4</availability>
+        <source>Blacksmith</source>
+
+        <properties>
+            <special/>
+        </properties>
+
+        <short>A small wire saw, easily portable.</short>
+
+        <weight>20</weight>
+        <material>metal</material>
+
+        <cost units="saxon">2000</cost>
+    </item>
+
+    <item name="Blankets, simple">
+        <category>Adventuring</category>
+        <availability>2</availability>
+        <tech level="1"/>
+
+        <short>A thin blanket.</short>
+
+        <weight>1000</weight>
+        <material>cloth</material>
+
+        <cost units="saxon">20</cost>
+    </item>
+
+    <item name="Blankets, thick">
+        <category>Adventuring</category>
+        <availability>3</availability>
+        <tech level="1"/>
+
+        <short>A thick blanket.</short>
+
+        <weight>2000</weight>
+        <material>cloth</material>
+
+        <cost units="saxon">80</cost>
+    </item>
+
+    <item name="Blankets, winter">
+        <category>Adventuring</category>
+        <availability>3</availability>
+        <tech level="1"/>
+
+        <short>A thick winter blanket.</short>
+
+        <weight>5000</weight>
+        <material>cloth</material>
+
+        <cost units="saxon">400</cost>
+    </item>
+
+    <item name="Candle">
+        <category>Adventuring</category>
+        <availability>1</availability>
+        <tech level="1"/>
+
+        <short>A wax candle, provides about an hour of light.</short>
+
+        <weight>50</weight>
+        <material>wax</material>
+
+        <cost units="saxon">1</cost>
+    </item>
+
+    <item name="Canvas">
+        <category>Adventuring</category>
+        <availability>3</availability>
+        <tech level="1"/>
+
+        <short>A square metre of canvas.</short>
+
+        <weight>1000</weight>
+        <material>cloth</material>
+
+        <cost units="saxon">16</cost>
+    </item>
+
+    <item name="Chalk">
+        <category>Adventuring</category>
+        <availability>0</availability>
+        <tech level="0"/>
+
+        <short>A stick of white chalk.</short>
+
+        <weight>10</weight>
+        <material>stone</material>
+
+        <cost units="saxon">1</cost>
+    </item>
+
+    <item name="Fish hook">
+        <category>Adventuring</category>
+        <availability>2</availability>
+        <tech level="1"/>
+        <source>Blacksmith</source>
+
+        <short>A small metal hook.</short>
+
+        <weight>5</weight>
+        <material>metal</material>
+
+        <cost units="saxon">16</cost>
+    </item>
+
+    <item name="Fishing net">
+        <category>Adventuring</category>
+        <availability>2</availability>
+        <tech level="1"/>
+        <source>Fisherman</source>
+
+        <short>A 2m by 2m fishing net.</short>
+
+        <weight>3</weight>
+        <material>hemp</material>
+
+        <cost units="saxon">100</cost>
+    </item>
+
+    <item name="Flint and steel">
+        <category>Adventuring</category>
+        <availability>2</availability>
+        <tech level="1"/>
+
+        <short>A fire starting kit.</short>
+
+        <weight>50</weight>
+        <material>stone</material>
+
+        <cost units="saxon">40</cost>
+    </item>
+
+    <item name="Lantern, beacon">
+        <category>Adventuring</category>
+        <availability>5</availability>
+        <tech level="2"/>
+
+        <properties>
+            <special/>
+        </properties>
+
+        <short>A large glass lantern with an iron framework.</short>
+
+        <weight>20000</weight>
+        <material>glass</material>
+
+        <cost units="saxon">10000</cost>
+    </item>
+
+    <item name="Lantern, bullseye">
+        <category>Adventuring</category>
+        <availability>4</availability>
+        <tech level="1"/>
+
+        <properties>
+            <special/>
+        </properties>
+
+        <short>A bullseye lantern.</short>
+
+        <weight>2000</weight>
+        <material>glass</material>
+
+        <cost units="saxon">1200</cost>
+    </item>
+
+    <item name="Lantern, hooded">
+        <category>Adventuring</category>
+        <availability>3</availability>
+        <tech level="1"/>
+
+        <short>A standard hooded lantern.</short>
+
+        <weight>1000</weight>
+        <material>glass</material>
+
+        <cost units="saxon">800</cost>
+    </item>
+
+    <item name="Lamp oil">
+        <category>Adventuring</category>
+        <availability>3</availability>
+        <tech level="1"/>
+
+        <short>Lamp oil, enough for 6 hours.</short>
+
+        <weight>500</weight>
+        <material>liquid</material>
+
+        <cost units="saxon">6</cost>
+    </item>
+
+    <item name="Pavilion" quality="2">
+        <category>Adventuring</category>
+        <availability>5</availability>
+        <tech level="1"/>
+
+        <properties>
+            <special/>
+            <luxury/>
+        </properties>
+
+        <short>A tent large enough for 10 people.</short>
+
+        <weight>25000</weight>
+        <material>cloth</material>
+
+        <cost units="saxon">10000</cost>
+    </item>
+
+    <item name="Pavilion" quality="3">
+        <category>Adventuring</category>
+        <availability>5</availability>
+        <tech level="1"/>
+
+        <properties>
+            <special/>
+            <luxury/>
+        </properties>
+
+        <short>A tent large enough for 10 people.</short>
+
+        <weight>35000</weight>
+        <material>cloth</material>
+
+        <cost units="saxon">30000</cost>
+    </item>
+
+    <item name="Pavilion" quality="4">
+        <category>Adventuring</category>
+        <availability>5</availability>
+        <tech level="1"/>
+
+        <properties>
+            <special/>
+            <luxury/>
+        </properties>
+
+        <short>A tent large enough for 10 people.</short>
+
+        <weight>60000</weight>
+        <material>cloth</material>
+
+        <cost units="saxon">50000</cost>
+    </item>
+
+    <item name="Pavilion" quality="5">
+        <category>Adventuring</category>
+        <availability>5</availability>
+        <tech level="1"/>
+
+        <properties>
+            <special/>
+            <luxury/>
+        </properties>
+
+        <short>A tent large enough for 10 people.</short>
+
+        <weight>100000</weight>
+        <material>cloth</material>
+
+        <cost units="saxon">100000</cost>
+    </item>
+
+    <item name="Rations, standard">
+        <category>Adventuring</category>
+        <availability>1</availability>
+        <tech level="0"/>
+
+        <short>One week's worth of standard rations.</short>
+
+        <weight>5000</weight>
+        <material>food</material>
+
+        <cost units="saxon">100</cost>
+    </item>
+
+    <item name="Rations, dried">
+        <category>Adventuring</category>
+        <availability>3</availability>
+        <tech level="0"/>
+
+        <properties>
+            <special/>
+        </properties>
+
+        <short>One week's worth of dried rations.</short>
+
+        <weight>2000</weight>
+        <material>food</material>
+
+        <cost units="saxon">600</cost>
+    </item>
+
+    <item name="Tent, large">
+        <category>Adventuring</category>
+        <availability>4</availability>
+        <tech level="1"/>
+
+        <properties>
+            <special/>
+        </properties>
+
+        <short>A tent for four people.</short>
+
+        <weight>10000</weight>
+        <material>cloth</material>
+
+        <cost units="saxon">2000</cost>
+    </item>
+
+    <item name="Tent, small">
+        <category>Adventuring</category>
+        <availability>3</availability>
+        <tech level="1"/>
+
+        <properties>
+            <special/>
+        </properties>
+
+        <short>A tent for two people.</short>
+
+        <weight>6000</weight>
+        <material>cloth</material>
+
+        <cost units="saxon">400</cost>
+    </item>
+
+    <item name="Torch">
+        <category>Adventuring</category>
+        <availability>1</availability>
+        <tech level="0"/>
+
+        <short>A torch, lasts 1 hour.</short>
+
+        <weight>500</weight>
+        <material>wood</material>
+
+        <cost units="saxon">2</cost>
+    </item>
+
+    <item name="Whetstone">
+        <category>Adventuring</category>
+        <availability>2</availability>
+        <tech level="1"/>
+
+        <short>A small portable whetstone.</short>
+
+        <weight>500</weight>
+        <material>stone</material>
+
+        <cost units="saxon">2</cost>
+    </item>
+</equipment>
+
+
