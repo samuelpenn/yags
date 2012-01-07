@@ -1,0 +1,602 @@
+<?xml version="1.0"?>
+
+<!--
+
+    General equipment lists.
+
+    Copyright 2005-2007, Samuel Penn, sam@glendale.org.uk
+
+    Redistribution and use with or without modification are permitted provided
+    that the following conditions are met:
+
+    1) Redistributions of any source code (e.g. XML) must retain the
+        above copyright notice and this list of conditions.
+
+    2) Redistributions in binary/printed forms must include copyright
+        attribution.
+
+    The purpose of these equipment lists are to provide a generic and complete
+    list of equipment for RPG purposes, in a format that can be used in other
+    games by anyone, with minimum fuss and license worries. If you make changes
+    and/or additions, then it'd be great if they are passed back or made
+    freely available, but you don't have to.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-08-30 18:15:54 $
+
+    Categories
+
+    Adventuring     The sort of things only adventurers have.
+    Rogue           Thieves/assassins tools and the like.
+    Food            Food and drink.genre
+    Animals         An animal which isn't livestock - horses and dogs.
+    Livestock       Animals bred for food, such as pigs and cows.
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+
+    Prices should be in farthings, but prices can't really be trusted yet.
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+
+    <item name="Quilted jacket">
+        <category>Armour</category>
+        <importance>2</importance>
+        <availability>2</availability>
+
+        <short>A heavily padded cloth jacket.</short>
+
+        <description>
+            <para>
+                A heavy jacket of padded cloth. It is bulkier than
+                soft leather armour, but its extra thickness adds
+                greater protection. It is viewed as peasant armour,
+                and rarely worn by noble warriors.
+            </para>
+        </description>
+
+        <weight>2000</weight>
+        <material>cloth</material>
+        <cost units="saxon">12</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+3</protection>
+            <load>2</load>
+            <weight>2000</weight>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+            </covers>
+
+            <properties>
+                <light/>
+                <soft/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Quilted hauberk">
+        <category>Armour</category>
+        <importance>2</importance>
+        <availability>2</availability>
+
+        <short>A heavily padded cloth hauberk.</short>
+
+        <description>
+            <para>
+                A long heavy jacket of padded cloth. It is commonly
+                worn by militia troops, since it is cheap, light and
+                easy to make. It can be better than mail against
+                small improvised weapons since its thickness gives
+                better padding.
+            </para>
+        </description>
+
+        <weight>3000</weight>
+        <material>cloth</material>
+        <cost units="saxon">20</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+4</protection>
+            <load>3</load>
+
+            <covers>
+                <neck/>
+                <torso/>
+                <arms/>
+                <groin/>
+                <thighs/>
+            </covers>
+
+            <properties>
+                <restrictive score="1"/>
+                <light/>
+                <soft/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Quilted vest">
+        <category>Armour</category>
+        <importance>1</importance>
+        <availability>2</availability>
+
+        <short>A heavily padded cloth vest.</short>
+
+        <description>
+            <para>
+                A padded vest, which protects the torso. Often made
+                of cloth and wool. Cheap and light.
+            </para>
+        </description>
+
+        <weight>750</weight>
+        <material>cloth</material>
+        <cost units="saxon">8</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+2</protection>
+            <load>1</load>
+
+            <covers>
+                <torso/>
+            </covers>
+
+            <properties>
+                <light/>
+                <soft/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Quilted leggings">
+        <category>Armour</category>
+        <importance>2</importance>
+        <availability>2</availability>
+
+        <short>Heavily padded trousers.</short>
+
+        <description>
+            <para>
+                Made of cloth and wool, these are padded trousers which
+                cover the legs up to the waist. They tend to be quite
+                bulky and restrict leg movement quite a bit.
+            </para>
+        </description>
+
+        <weight>2000</weight>
+        <material>cloth</material>
+        <cost units="saxon">24</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+1</protection>
+            <load>2</load>
+
+            <covers>
+                <groin/>
+                <legs/>
+            </covers>
+
+            <properties>
+                <restrictive score="1"/>
+                <light/>
+                <soft/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Soft leather trousers">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>Leather trousers.</short>
+
+        <description>
+            <para>
+                Trousers made of thick leather. They are flexible so as
+                not to restrict movement, but only provide limited
+                protection. Often worn under mail to add extra padding.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>leather</material>
+        <cost units="saxon">40</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+1</protection>
+            <load>1</load>
+
+            <covers>
+                <groin/>
+                <legs/>
+            </covers>
+
+            <notes>Can be worn under mail leggings.</notes>
+
+            <properties>
+                <light/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Soft leather jacket">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>Leather jacket.</short>
+
+        <description>
+            <para>
+                A flexible and soft jacket which gives protection to
+                the torso and arms. It is thin enough to be worn
+                under mail - either a mail shirt or mail hauberk.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>leather</material>
+        <cost units="saxon">60</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+2</protection>
+            <load>1</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+            </covers>
+
+            <notes>
+                Can be worn under mail, a cuirass or vambraces.
+            </notes>
+
+            <properties>
+                <light/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Hard leather jacket">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>4</availability>
+
+        <short>Hard leather jacket.</short>
+
+        <description>
+            <para>
+                A tough leather jacket designed to protect the upper
+                body. It can be restrictive since much of it consists
+                of boiled leather plates.
+            </para>
+        </description>
+
+        <weight>2000</weight>
+        <material>leather</material>
+        <cost units="saxon">80</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+3</protection>
+            <load>2</load>
+
+            <covers>
+                <neck/>
+                <torso/>
+                <arms/>
+                <groin/>
+                <thighs/>
+            </covers>
+
+            <properties>
+                <restrictive score="1"/>
+                <light/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Kurbal cuirass">
+        <category>Armour</category>
+        <importance>2</importance>
+        <availability>3</availability>
+
+        <short>Hardened leather breastplate.</short>
+
+        <weight>500</weight>
+        <material>leather</material>
+        <cost units="saxon">12</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+1</protection>
+            <load>1</load>
+            <weight>1000</weight>
+
+            <notes>
+                Can be worn over soft leather or quilted armour.
+            </notes>
+
+            <covers>
+                <torso/>
+            </covers>
+
+            <properties>
+                <light/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Fur jacket">
+        <category>Armour</category>
+        <importance>2</importance>
+        <availability>3</availability>
+
+        <short>A heavy fur and leather jacket.</short>
+
+        <description>
+            <para>
+                A heavy jacket made of thick fur and leather. Suffers
+                from being bulky, but is also warm so useful in cold
+                climates.
+            </para>
+        </description>
+
+        <weight>3000</weight>
+        <material>fur</material>
+        <cost units="saxon">40</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+4</protection>
+            <load>3</load>
+
+            <covers>
+                <neck/>
+                <torso/>
+                <arms/>
+                <groin/>
+                <thighs/>
+            </covers>
+
+            <properties>
+                <restrictive score="1"/>
+                <light/>
+                <soft/>
+                <warm/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Fur trousers">
+        <category>Armour</category>
+        <importance>2</importance>
+        <availability>3</availability>
+
+        <short>Heavy fur and leather trousers.</short>
+
+        <description>
+            <para>
+                A heavy set of trousers of thick fur and leather.
+                Suffers from being bulky, but is also warm.
+            </para>
+        </description>
+
+        <weight>2000</weight>
+        <material>fur</material>
+        <cost units="saxon">40</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+2</protection>
+            <load>2</load>
+
+            <covers>
+                <groin/>
+                <legs/>
+            </covers>
+
+            <properties>
+                <restrictive score="1"/>
+                <light/>
+                <soft/>
+                <warm/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Metal helm">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>3</availability>
+
+        <short>A plain metal helm.</short>
+
+        <description>
+            <para>
+                A metal helm which covers the top, back and sides of
+                the head. Sometimes has a nose guard as well.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>metal</material>
+        <cost units="saxon">40</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+1</protection>
+            <load>1</load>
+
+            <covers>
+                <skull/>
+            </covers>
+
+            <properties>
+                <heavy/>
+                <vitals score="2"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Mail shirt">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>4</availability>
+
+        <short>A shirt of mail.</short>
+
+        <description>
+            <para>
+                A mail shirt which covers the torso but not the arms.
+                The chain links are backed with leather.
+            </para>
+        </description>
+
+        <weight>4000</weight>
+        <material>metal</material>
+        <cost units="saxon">200</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+4</protection>
+            <load>4</load>
+            <weight>4000</weight>
+
+            <covers>
+                <torso/>
+                <groin/>
+            </covers>
+
+            <properties>
+                <noisy score="1"/>
+                <mail/>
+                <heavy/>
+                <vitals score="2"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Mail hauberk">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>4</availability>
+
+        <short>A mail hauberk.</short>
+
+        <description>
+            <para>
+                A layer of mail which covers the torso, arms and upper
+                legs. It is heavy and noisy, but provides excellent
+                protection.
+            </para>
+        </description>
+
+        <weight>7000</weight>
+        <material>metal</material>
+        <cost units="saxon">400</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+6</protection>
+            <load>7</load>
+
+            <covers>
+                <torso/>
+                <arms/>
+                <groin/>
+                <thighs/>
+            </covers>
+
+            <properties>
+                <restrictive score="1"/>
+                <noisy score="1"/>
+                <mail/>
+                <heavy/>
+                <vitals score="3"/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Mail leggings">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>4</availability>
+
+        <short>Mail trousers.</short>
+
+        <description>
+            <para>
+                Mail trousers which cover the legs and waist. Can be
+                worn under a hauberk. Needs to be worn over cloth or
+                leather armour to prevent chaffing.
+            </para>
+        </description>
+
+        <weight>5000</weight>
+        <material>metal</material>
+        <cost units="saxon">400</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+3</protection>
+            <load>5</load>
+
+            <covers>
+                <groin/>
+                <legs/>
+            </covers>
+
+            <properties>
+                <restrictive score="1"/>
+                <noisy score="1"/>
+                <mail/>
+                <heavy/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Mail coif">
+        <category>Armour</category>
+        <importance>3</importance>
+        <availability>4</availability>
+
+        <short>Mail armour to cover head and neck.</short>
+
+        <description>
+            <para>
+                Covers the head and shoulders. Worn under a helm, it
+                protects the neck from sword blows.
+            </para>
+        </description>
+
+        <weight>2000</weight>
+        <material>metal</material>
+        <cost units="saxon">400</cost>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+1</protection>
+            <load>2</load>
+
+            <covers>
+                <neck/>
+                <skull/>
+            </covers>
+
+            <notes>Often worn under a helm.</notes>
+            <properties>
+                <mail/>
+                <heavy/>
+            </properties>
+        </armour>
+    </item>
+
+
+
+
+</equipment>
+
+
