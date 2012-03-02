@@ -425,9 +425,10 @@
 
                     <para>
                         Failure means that you lose 1 point of experience from a
-                        physical (Strength, Health, Agility, Dexterity or Perception)
+                        physical (Strength, Health, Agility or Dexterity) attribute
                         of your choice. Once an attribute has decayed in this way,
-                        it may never be improved.
+                        it may never be improved. If an attribute ever drops below
+                        one, then you die.
                     </para>
 
                     <para>
@@ -435,6 +436,35 @@
                         one point of <e>Decrepitude</e>. Decrepitude adds to the
                         difficulty of all further ageing checks.
                     </para>
+
+                    <para>
+                        If you have a high quality life style, add +1 to your roll.
+                        If you have a low quality life style, suffer a -1 penalty.
+                    </para>
+
+                    <sect4>
+                        <title>Gaining Decrepitude</title>
+
+                        <para>
+                            Whenever you gain <e>Decrepitude</e>, you need to make
+                            a check as follows. Roll 1d20 + decade + decrepitude.
+                        </para>
+
+                        <targetlist targetFirst="false">
+                            <item target="1-19" value="No effect."/>
+                            <item target="20-24" value="Decay."/>
+                            <item target="25-29" value="Illness."/>
+                            <item target="30+" value="Death."/>
+                        </targetlist>
+
+                        <para>
+                            The first time you get a <e>Decay</e> result, choose
+                            either Fitness (S/H), Flexibility (A/D), Memory (P/I)
+                            or Personality (E/W). From that point on, lose one point
+                            from the highest of the two associated attributes each
+                            time a <e>Decay</e> result is obtained.
+                        </para>
+                    </sect4>
 
                 </sect3>
             </sect2>

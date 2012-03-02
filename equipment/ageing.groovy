@@ -37,6 +37,20 @@ def decrepitude = 0
 		}
 		if (roll  < (decade + decrepitude) / 2) {
 			decrepitude ++;
+			crisis = die() + decade + decrepitude
+			if (crisis >= 30) {
+				stats.each() {
+					k, v ->
+					stats[k] = 0
+				}
+			} else if (crisis >= 25) {
+				stats.each() {
+					k, v ->
+					stats[k] -= 1
+				}
+			} else if (crisis >= 20) {
+				stats['H'] -= 1
+			}
 		}
 	}
 	for (i in stats.values()) {
