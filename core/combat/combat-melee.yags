@@ -1098,7 +1098,7 @@
                         You disarm your foe. They loose a single weapon
                         of your choice, which falls to the ground within
                         a few metres of them. If made as an unarmed
-                        attack, then invokes an additional
+                        attack, then it invokes an additional
                         <e>counter strike</e> if it fails. On a
                         <e>superb</e> success, you may grab the disarmed
                         weapon if you have a free hand.
@@ -1109,18 +1109,14 @@
                     <title>Grapple (good, unarmed)</title>
 
                     <para>
-                        Unarmed combat manoeuvre where you try to grab
-                        the target's limbs or neck in order to get a hold.
-                        Requires a <e>good</e> attack against a limb, and
-                        an <e>excellent</e> attack against the neck.
-                    </para>
-
-                    <para>
-                        On success, the target is held and an immediate
+                        Unarmed combat manoeuvre where you try to grab your
+                        target in order to get a hold. On a <e>good</e>
+                        success, the target is held and an immediate
                         contest of <y:strength>brawl</y:strength> is made
-                        to see if the attacker can keep hold. A second
-                        success means that the defender loses the rest of
-                        their declared actions that round (if any).
+                        to see if you can keep hold. If you fail then they
+                        break free and can act as normal, otherwise you
+                        have grappled them and they lose the rest of any
+                        declared actions that they have that round.
                     </para>
 
                     <para>
@@ -1129,57 +1125,40 @@
                         on the strength check causes -1 to the target's
                         attributes for any actions. If this penalty
                         equals or exceeds the target's <t>Strength</t> or
-                        <t>Agility</t>, then they can no longer act.
+                        <t>Agility</t>, then they can no longer act and
+                        are considered to be <e>immobilised</e>.
                     </para>
                 </sect3>
 
                 <sect3>
-                    <title>Improved Damage (excellent, aggressive, fatigue)</title>
-
-                    <para>
-                        Your attack does +5 damage if it hits. If you fail
-                        to get an <e>excellent</e> attack, then your entire
-                        attack fails completely.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Knockdown (good, aggressive, fatigue)</title>
+                    <title>Knock down (good, aggressive, fatigue)</title>
 
                     <para>
                         Your attack aims to force your foe to the ground.
-                        If your damage roll (ignoring armour and soak) is
-                        greater than your foe's strength x 10, then they
-                        are knocked to the ground <e>prone</e>. Damage
-                        caused is <e>stun</e> damage, regardless of the
-                        weapon.
+                        If you hit, make a damage roll against your foe's
+                        strength or agility (their choice) roll. If you
+                        succeed, they suffer a <e>fatigue</e>. If you succeed
+                        by 10 or more, then they are also knocked to the
+                        floor <e>prone</e>.
                     </para>
                 </sect3>
 
                 <sect3>
-                    <title>Massive Damage (superb, aggressive, fatigue)</title>
-
-                    <para>
-                        Your attack does +10 damage if it hits. If you fail
-                        to get a <e>superb</e> attack, then your entire
-                        attack fails completely.
-                    </para>
-                </sect3>
-
-                <sect3>
-                    <title>Overwhelming attacks</title>
+                    <title>Overwhelming attacks (aggressive, fatigue)</title>
 
                     <para>
                         Rather than attacking to harm, you aim to prevent
-                        your foe from striking. If you succeed, you do no
-                        damage, but your foe receives -5 per level of
-                        success to any further attacks or defences that
-                        they make that round against anyone.
+                        your foe from striking back. Make an attack roll,
+                        but your foe does not get to defend. Instead, every
+                        10 points you roll gives them a -5 penalty to all
+                        further attacks or defences that round.
                     </para>
 
                     <para>
-                        Obviously you need to hit your foe before they
-                        act in order for this to have maximum effect.
+                        If your damage is less than their soak (basic scores
+                        without a roll), then this manoeuvre has no effect.
+                        If they don't defend, then they also gain a level of
+                        fatigue.
                     </para>
                 </sect3>
 
@@ -1230,7 +1209,8 @@
                         free. This must be declared at the start of the
                         round, and does not use a standard attack but is
                         an opposed check between you and the person who
-                        has you held.
+                        has you held. Once you have been immobilised then
+                        you can no longer attempt this.
                     </para>
 
                     <para>
@@ -1252,7 +1232,7 @@
                 </para>
 
                 <sect3>
-                    <title>Improve Grapple (good)</title>
+                    <title>Improve Grapple (moderate)</title>
 
                     <para>
                         If you are currently grappling someone, you may
@@ -1261,33 +1241,36 @@
                         and on a success their penalty to <t>Agility</t>
                         and <t>Dexterity</t> is increased by 1.
                     </para>
-                </sect3>
-
-                <sect3>
-                    <title>Break limb (good)</title>
 
                     <para>
-                        If you are grappling someone, you may attempt to
-                        break one of their limbs. A standard
-                        <y:agility>Brawl</y:agility> attack is made
-                        requiring a <e>good</e> success. If achieved, roll
-                        damage as normal, and if two or more levels are
-                        caused, then the limb is broken. The target suffers
-                        one immediate wound on a broken limb and they are
-                        at an additional -40 to all attempts to use it.
+                        If either of their attributes is reduced to zero or
+                        less, then they are <e>immobilised</e>.
                     </para>
                 </sect3>
 
                 <sect3>
-                    <title>Break neck (excellent)</title>
+                    <title>Break limb</title>
+
+                    <para>
+                        If you are grappling someone to immobility, then you
+                        may attempt to break one of their limbs. Make a
+                        contested Strength check. If you get a <e>good</e>
+                        success then their limb is broken. They suffer a
+                        wound, and any checks made with that limb are
+                        halved.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Break neck</title>
 
                     <para>
                         This is the same as breaking a limb, except that
-                        an <e>excellent</e> success is required, and three
-                        levels of damage need to be caused. On success, the
-                        target drops to <e>fatally wounded</e> and must
-                        make a <y:health/> check to remain alive against
-                        10 + number of levels caused.
+                        an <e>excellent</e> success is required on the
+                        Strength contest. If you succeed, then they
+                        immediately drop to being <e>fatally wounded</e>
+                        and must make a <y:health/> check at difficulty 30
+                        to remain alive.
                     </para>
 
                     <para>
