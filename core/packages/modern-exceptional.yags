@@ -5,7 +5,7 @@
     <character name="Jacqueline Price">
         <description>
             <short>
-                An archaeologist.
+                An archaeologist working in Egypt in the 1920s.
             </short>
             <gender>Female</gender>
             <age>27</age>
@@ -14,12 +14,11 @@
 
             <background>
                 <para>
-                    Jenny grew up as an orphan in London during the Great War,
-                    living as a petty thief. As men started to take an interest
-                    in her, she found that she could make more money in
-                    prostitution until she realised that she could make even
-                    more money by instead of sleeping with them,
-                    conning them at either gaming tables or through blackmail.
+                    Born in 1905, Jacqueline's father was killed during the
+                    Great War, and her mother died of flue shortly afterwards.
+                    She spent her family inheritance in moving to Egypt, where
+                    she was able to take up her passions of Egyptian history and
+                    exploration.
                 </para>
 
                 <para>
@@ -57,17 +56,16 @@
                     <skill name="Speak Arabic" score="4" cost="0"/>
                     <skill name="Speak French" score="4" cost="0"/>
                     <skill name="Speak Hebrew" score="4" cost="0"/>
-                    <skill name="Ancient Egyptian" score="4" cost="0"/>
-                    <skill name="Area lore (Middle East)" score="4" cost="0"/>
+                    <skill name="Read Ancient Egyptian" score="4" cost="0"/>
+                    <skill name="Area lore (Middle East)" score="6" cost="11"/>
                     <skill name="Area lore (Europe)" score="4" cost="0"/>
                     <skill name="Area lore (England)" score="4"/>
                 </group>
 
                 <group name="Social" type="skills">
-                    <skill name="Streetwise" score="2"/>
                     <skill name="Intrigue" score="3"/>
-                    <skill name="History" score="4"/>
-                    <skill name="Archaeology" score="3"/>
+                    <skill name="History" score="5"/>
+                    <skill name="Archaeology" score="5"/>
                 </group>
 
                 <group name="Combat" type="skills">
@@ -77,7 +75,7 @@
 
             <advantages>
                 <advantage name="Educated" cost="0"/>
-                <advantage name="Luck" cost="0"/>
+                <advantage name="Lucky (+1)" cost="0"/>
 
                 <advantage name="Multi cultured" cost="2"/>
 
@@ -85,50 +83,53 @@
 
                 <advantage name="Carousing" skill="Social" cost="2"/>
                 <advantage name="Flirt" skill="Social" cost="4"/>
-                <advantage name="Etiquette" skill="Social" cost="4"/>
-                <advantage name="Fashion" skill="Social" cost="2"/>
+
+                <advantage name="Historian (Egypt)" skill="History" cost="2"/>
+                <advantage name="Historian (Pharaohs)" skill="History" cost="2"/>
+                <advantage name="Historian (Rome)" skill="History" cost="2"/>
             </advantages>
         </statistics>
     </character>
 
-
     <character name="Alfred Goodman">
         <description>
             <short>Explorer and archaeologist.</short>
-            <age>48</age>
+            <age>58</age>
             <gender>Male</gender>
 
             <image src="packages/alfred_goodman.jpg"/>
 
             <background>
                 <para>
-                    Joe started his career working on the docks, where he
-                    earned extra pay ensuring that certain crates got between
-                    ships and shore without the authorities seeing them.
-                    When there was trouble, he wasn't averse to using violence
-                    to get things quietened down.
+                    Lord Goodman counted himself as being one of the British
+                    Gentry. He inherited his family estates at the turn of
+                    the century, and fought in the War that soon followed.
+                    Though wounded, he survived, and decided that he wanted
+                    to see more of the world.
                 </para>
 
                 <para>
-                    Strings were pulled, and he now has a job as a customs
-                    inspector. He happily accepts bribes from various gangs
-                    and ensures that their cargo gets through without trouble.
+                    Ten years ago he moved permanently to Egypt, where he has
+                    many friends and acquaintances amongst the British in
+                    the Middle East. He has taught himself history and
+                    Egyptology, and spends his time and money digging up
+                    random places and plundering their treasures.
                 </para>
 
                 <para>
-                    Priorities were attributes, experience and background.
+                    Priorities were advantages, experience, and attributes.
                 </para>
             </background>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <attributes size="5" soak="12">
-                <attribute name="strength" score="4"/>
-                <attribute name="health" score="4"/>
-                <attribute name="agility" score="5"/>
-                <attribute name="dexterity" score="4"/>
+                <attribute name="strength" score="3"/>
+                <attribute name="health" score="3"/>
+                <attribute name="agility" score="2"/>
+                <attribute name="dexterity" score="3"/>
                 <attribute name="perception" score="4"/>
-                <attribute name="intelligence" score="2"/>
+                <attribute name="intelligence" score="5"/>
                 <attribute name="empathy" score="2"/>
                 <attribute name="will" score="3"/>
             </attributes>
@@ -137,7 +138,7 @@
                 <group name="Talents" type="talents">
                     <skill name="Athletics" score="3"/>
                     <skill name="Awareness" score="3"/>
-                    <skill name="Brawl" score="5"/>
+                    <skill name="Brawl" score="4"/>
                     <skill name="Charm" score="2"/>
                     <skill name="Guile" score="3"/>
                     <skill name="Sleight" score="2"/>
@@ -147,23 +148,33 @@
 
                 <group name="Knowledges" type="knowledges">
                     <skill name="Speak English" score="4"/>
-                    <skill name="Area lore (London)" score="4"/>
+                    <skill name="Speak French" score="2"/>
+                    <skill name="Speak Arabic" score="2"/>
+                    <skill name="Area lore (Europe)" score="4"/>
+                    <skill name="Area lore (Egypt)" score="3"/>
+                    <skill name="History" score="4"/>
+                    <skill name="Archaeology" score="4"/>
                 </group>
 
-                <group name="Criminal" type="skills">
-                    <skill name="Streetwise" score="5"/>
+                <group name="Military" type="skills">
                     <skill name="Guns" score="4"/>
-                    <skill name="Burglary" score="2"/>
-                    <skill name="Intimidation" score="4"/>
-                    <skill name="Administration" score="1"/>
+                    <skill name="Strategy" score="2"/>
+                    <skill name="Administration" score="2"/>
+                    <skill name="Riding" score="2"/>
+                    <skill name="Melee" score="1"/>
+                    <skill name="Heavy weapons" score="1"/>
                 </group>
             </skills>
 
             <advantages>
-                <advantage name="Poorly educated" cost="-1"/>
+                <advantage name="Educated" cost="0"/>
+                <advantage name="Lucky (+1)" cost="0"/>
 
-                <advantage name="Authority" cost="+1"/>
-                <advantage name="Heavily built" cost="+1"/>
+                <advantage name="Rich" cost="+3"/>
+                <advantage name="Contacts" cost="+1"/>
+
+                <advantage name="Historian (Egypt)" skill="History" cost="2"/>
+                <advantage name="Etiquette" skill="Social" cost="4"/>
             </advantages>
         </statistics>
     </character>
