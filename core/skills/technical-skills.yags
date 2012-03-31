@@ -88,17 +88,22 @@
 
     <skill name="Engineering">
         <group>Technical</group>
+        <default>Mechanics</default>
+        <default>Electronics</default>
 
         <short>The application of science and maths.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The knowledge and skill of designing, building and repairing
+                The knowledge and skill of designing and building
                 machines, buildings and other structures. The skill covers
                 a wide range of engineering disciplines, from civil engineering
                 (buildings and bridges), to engines (mechanical) and electronics
                 (electrical). It is recommended that you take one or more
-                specialisations.
+                specialisations. This skill is mostly theoretical design. If you
+                are interested in purely practical skill for maintaining things
+                built by someone else, see skills like <e>Mechanics</e> and
+                <e>Electronics</e>.
             </para>
 
             <para>
@@ -108,6 +113,51 @@
                 might be Machinist, Computers, Communications, etc.
                 If you already have a specialisation in <e>Electronics
                 operation</e>, then this can be used with <e>Engineering</e>.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Mechanics">
+        <group>Technical</group>
+        <default>Engineering</default>
+
+        <short>Building and repairing mechanical machines.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is the skill of repairing and building mechanical
+                machines, such as car engines, power generators, guns
+                and clockwork. It is not the skill used for designing
+                new machines from scratch (use <e>Engineering</e> for
+                that), but is the skill needed by car mechanics or
+                engineers on ships and other vehicles.
+            </para>
+
+            <para>
+                Generally, this skill focuses on machines which have
+                physical moving parts. You will know how to plug
+                electronic components together, but they are black boxes
+                as far as this skill is concerned. Fixing broken machines
+                will often require tools. Not having the necessary tools
+                will make it harder. Not having any tools may make your
+                task at fixing impossible.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Electronics">
+        <group>Technical</group>
+        <default>Engineering</default>
+        <default>Electronics operation</default>
+
+        <short>Fixing electrical devices.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This is the skill of diagnosing and fixing electronic
+                devices. It's not very useful for building basic electronic
+                components from scratch, but you know how to wire together
+                such components, diagnose fixes and repair them.
             </para>
         </description>
     </skill>

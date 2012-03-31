@@ -20,14 +20,9 @@
                     Jim is a government spy who spends most of his time
                     travelling around Europe and North Africa, infiltrating
                     potentially hostile groups in order to either obtain
-                    intelligence, or to act as an assassin.
-                </para>
-
-                <para>
-                    He spends his life befriending people he knows that he
-                    will have to betray, and on the occasions that he has
-                    found someone he truly cares for, then they have either
-                    been killed or have betrayed him.
+                    intelligence, or to act as an assassin. His life means
+                    he can never trust anyone, and whenever he has started
+                    to care for someone, they have either died or betrayed him.
                 </para>
             </background>
         </description>
@@ -117,23 +112,22 @@
         </statistics>
     </character>
 
-    <character name="Laura">
+    <character name="Laura Connelly">
         <description>
             <short>
-                An archaeologist working in Egypt in the 1920s.
+                Modern bodyguard.
             </short>
-            <gender>Male</gender>
+            <gender>Female</gender>
             <age>27</age>
 
-            <image src="packages/jacqueline_price.jpg"/>
+            <image src="packages/laura_connelly.jpg"/>
 
             <background>
                 <para>
-                    Born in 1905, Jacqueline's father was killed during the
-                    Great War, and her mother died of flue shortly afterwards.
-                    She spent her family inheritance in moving to Egypt, where
-                    she was able to take up her passions of Egyptian history and
-                    exploration.
+                    Laura is a bodyguard who works for rich businessmen,
+                    politicians and criminals. She is highly skilled in hand
+                    to hand combat and close quarters gun combat, though
+                    tries to avoid ranged fire fights.
                 </para>
 
                 <para>
@@ -156,13 +150,13 @@
 
             <skills>
                 <group name="Talents" type="talents">
-                    <skill name="Athletics" score="4"/>
+                    <skill name="Athletics" score="6"/>
                     <skill name="Awareness" score="4"/>
                     <skill name="Brawl" score="8"/>
                     <skill name="Charm" score="2"/>
                     <skill name="Guile" score="4"/>
                     <skill name="Sleight" score="2"/>
-                    <skill name="Stealth" score="5"/>
+                    <skill name="Stealth" score="4"/>
                     <skill name="Throw" score="4"/>
                 </group>
 
@@ -171,14 +165,15 @@
                     <skill name="Area lore (England)" score="4"/>
                 </group>
 
-                <group name="Social" type="skills">
-                    <skill name="Intrigue" score="3"/>
-                    <skill name="History" score="5"/>
-                    <skill name="Archaeology" score="5"/>
-                </group>
-
                 <group name="Combat" type="skills">
                     <skill name="Guns" score="8"/>
+                    <skill name="Tactics" score="5"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Drive" score="3"/>
+                    <skill name="Streetwise" score="2"/>
+                    <skill name="Burglary" score="2"/>
                 </group>
             </skills>
 
@@ -188,8 +183,23 @@
 
                 <advantage name="Enemy" cost="-1"/>
 
-                <advantage name="Carousing" skill="Social" cost="2"/>
-                <advantage name="Flirt" skill="Social" cost="4"/>
+                <advantage name="Close combat" skill="Brawl" cost="2"/>
+                <advantage name="Unarmed combat" skill="Brawl" cost="4"/>
+                <advantage name="Combat reflexes" skill="Brawl" cost="2"/>
+                <advantage name="Reflex dodge" skill="Brawl" cost="4"/>
+                <advantage name="Opportunity attack" skill="Brawl" cost="4"/>
+                <advantage name="Improved damage" skill="Brawl" cost="6"/>
+                <advantage name="Multiple attacks" skill="Brawl" cost="8"/>
+                <advantage name="Hard to kill" skill="Brawl" cost="2"/>
+                <advantage name="Ignore pain" skill="Brawl" cost="4"/>
+                <advantage name="Surprise attack" skill="Tactics" cost="2"/>
+                <advantage name="Tactical move" skill="Tactics" cost="4"/>
+                <advantage name="Lightly equipped" skill="Athletics" cost="4"/>
+
+                <advantage name="Quick load" skill="Firearms" cost="2"/>
+                <advantage name="Quick draw" skill="Guns" cost="2"/>
+                <advantage name="Multiple targets" skill="Firearms" cost="4"/>
+                <advantage name="Gun Fu" skill="Guns" cost="4"/>
 
             </advantages>
         </statistics>
