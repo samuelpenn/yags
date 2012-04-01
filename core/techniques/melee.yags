@@ -20,7 +20,7 @@
         </cvsinfo>
 
         <license type="Yags">
-            <year>2010</year>
+            <year>2012</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -353,7 +353,7 @@
                 Your skill enables you to throw weapons more effectively,
                 increasing their range. When throwing a weapon, increase
                 your <t>Strength</t> by +1 for purposes of the maximum
-                range of the attack. If your have a skill of 5 or more,
+                range of the attack. If your have a skill of 6 or more,
                 then the bonus is +2. Automatic.
             </para>
         </description>
@@ -363,8 +363,6 @@
         <cost points="4"/>
         <skill name="Missile"/>
 
-        <prerequisite>Greater range</prerequisite>
-
         <short>Reduced fumble chance when firing into melee.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -372,13 +370,13 @@
                 Your have practised difficult shots at moving and obscured
                 targets, increasing your effectiveness when firing into the
                 middle of a melee. If your fumble chance is increased due
-                to such a shot, this increase is halved. Declared.
+                to such a shot, this increase is halved (round down).
             </para>
         </description>
     </advantage>
 
     <advantage name="Deadly shot" type="technique">
-        <cost points="6"/>
+        <cost points="8"/>
         <skill name="Missile"/>
 
         <prerequisite>Fire into melee</prerequisite>
@@ -399,11 +397,42 @@
         </description>
     </advantage>
 
-    <advantage name="Fast shot" type="technique">
+    <advantage name="Crossbow reloading" type="technique">
         <cost points="2"/>
         <skill name="Bow"/>
+        <short>Load and fire a crossbow quickly.</short>
 
-        <short>Load and fire a bow quickly</short>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You can load a crossbow quickly, reducing it's reload
+                time by one. If this reduces the time to zero, then you
+                can load and fire in a single round, though your attack
+                will be slow, and considered a snapshot. If the time is
+                reduced to less than zero, then you can load and fire
+                as a normal action.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Crossbow accuracy" type="technique">
+        <cost points="4"/>
+        <skill name="Bow"/>
+        <default>Crossbow reloading</default>
+        <short>Fire a crossbow with greater accuracy.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You may halve the effective range when firing a crossbow.
+            </para>
+        </description>
+    </advantage>
+
+
+    <advantage name="Fast arrow" type="technique">
+        <cost points="4"/>
+        <skill name="Bow"/>
+
+        <short>Load and fire a standard bow quickly</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -416,36 +445,50 @@
         </description>
     </advantage>
 
+    <advantage name="Rain of arrows" type="technique">
+        <cost points="8"/>
+        <skill name="Bow"/>
+        <prerequisite>Fast arrow</prerequisite>
+
+        <short>Fire multiple times with a bow.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You can load and fire multiple arrows a round with a
+                standard bow (not a crossbow). For every four full
+                points of skill that you have, you can fire a single
+                arrow as a snapshot (e.g., at skill 8, you can fire
+                two arrows, at 12 you can fire three).
+            </para>
+        </description>
+    </advantage>
+
     <advantage name="Improved pull" type="technique">
         <cost points="4"/>
         <skill name="Bow"/>
 
-        <prerequisite>Fast shot</prerequisite>
-
-        <short>Extra damage with a long bow</short>
+        <short>Extra damage with a standard bow</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Due to extensive training with firing a bow, you gain a
-                +1 to your strength for purposes of using a longbow for
-                every four points of <e>Bow</e> skill.
+                +1 to your strength for purposes of using a standard bow
+                (not a crossbow) for every four points of <e>Bow</e> skill.
             </para>
         </description>
     </advantage>
 
     <advantage name="Improved aim" type="technique">
-        <cost points="6"/>
+        <cost points="4"/>
         <skill name="Bow"/>
-
-        <prerequisite>Improved pull</prerequisite>
 
         <short>Reduced range penalties</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You are exceptionally skilled at firing a long or
-                short bow. If a full round is spent aiming, then you
-                can halve all range and circumstance penalties.
+                You are exceptionally skilled at firing a standard bow
+                (not a crossbow). If you are not firing a snapshot, then
+                the effective range to the target is halved.
             </para>
         </description>
     </advantage>

@@ -673,14 +673,19 @@
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
+        <techLevel>0</techLevel>
 
         <short>A short bow.</short>
 
         <description>
             <para>
-                The short bow is a simple bow, about a metre in
-                length. The pentrating power is based on the strength
+                The short bow is a self bow, about a metre in
+                length. The penetrating power is based on the strength
                 of the user, and also the maximum pull of the bow.
+                Most bows are limited to Strength 3, but they can be
+                made at Strength 2 or 4. For each point your Strength
+                is lower than the pull of the bow, halve all ranges
+                and add +3 to the fumble chance.
             </para>
         </description>
 
@@ -703,15 +708,147 @@
                 </range>
             </combat>
 
-            <strength>2</strength>
+            <strength>3</strength>
             <load>0.5</load>
-            <reach>0</reach>
+            <reach>1</reach>
 
             <properties>
                 <missile/>
                 <impaling/>
+                <reload score="0"/>
             </properties>
         </weapon>
+
+        <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Crafting (Boyer)</skill>
+            <target need="4">15</target>
+            <time>Hours</time>
+        </make>
+    </item>
+
+    <item name="Long bow">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>1</techLevel>
+
+        <short>A long bow.</short>
+
+        <description>
+            <para>
+                The long bow is, like the short bow, a self bow (made of a
+                single piece of wood). However, it is longer, generally the
+                height of a man, to allow a greater draw distance. It is
+                otherwise similar to the short bow, but is more cumbersome.
+            </para>
+
+            <para>
+                Long bows are built for a particular strength of user. If
+                your Strength is higher than the pull of the bow, then the
+                benefits of the extra Strength are lost. For each point
+                your Strength is lower, halve all ranges and add +4 to the
+                fumble chance.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>wood</material>
+        <cost>80</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Bows</category>
+            <class>bow</class>
+
+            <combat>
+                <attack>+4</attack>
+                <damage>+12</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>60</short>
+                    <medium>120</medium>
+                    <long>240</long>
+                </range>
+            </combat>
+
+            <strength>3</strength>
+            <load>1</load>
+            <reach>3</reach>
+
+            <properties>
+                <missile/>
+                <impaling/>
+                <reload score="0"/>
+            </properties>
+        </weapon>
+
+        <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Crafting (Boyer)</skill>
+            <target need="5">20</target>
+            <time>Hours</time>
+        </make>
+    </item>
+
+    <item name="Composite bow">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>1</techLevel>
+
+        <short>A bow made of different woods.</short>
+
+        <description>
+            <para>
+                Composite bows are more complex than self bows, but combine
+                the compactness of a short bow with the strength of a long
+                bow. As well as being more complex to make, they are also
+                more fragile, since moisture can easily cause the woods to
+                split apart, ruining the bow.
+            </para>
+
+            <para>
+                Composite bows are built for a particular strength of user. If
+                your Strength is higher than the pull of the bow, then the
+                benefits of the extra Strength are lost. For each point
+                your Strength is lower, halve all ranges and add +3 to the
+                fumble chance.
+            </para>
+        </description>
+
+        <weight>1000</weight>
+        <material>wood</material>
+        <cost>80</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Bows</category>
+            <class>bow</class>
+
+            <combat>
+                <attack>+3</attack>
+                <damage>+11</damage>
+                <range>
+                    <increment>20</increment>
+                    <short>50</short>
+                    <medium>100</medium>
+                    <long>200</long>
+                </range>
+            </combat>
+
+            <strength>3</strength>
+            <load>1</load>
+            <reach>1</reach>
+
+            <properties>
+                <missile/>
+                <impaling/>
+                <reload score="0"/>
+            </properties>
+        </weapon>
+
+        <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Crafting (Boyer)</skill>
+            <target need="5">25</target>
+            <time>Days</time>
+        </make>
     </item>
 
     <item name="Throwing knife">

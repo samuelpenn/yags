@@ -92,15 +92,21 @@
 
         <description>
             <para>
-                A flask of cheap wine which is not particularly
-                tasty.
+                A flask of cheap, watered down wine. It is alcoholic enough to
+                make it safe to drink, but not really enough to get drunk on.
+                It tastes pretty poor as well.
             </para>
         </description>
 
         <weight>1000</weight>
         <material>liquid</material>
 
-        <cost units="saxon">5</cost>
+        <y:drug>
+            <y:string extra="+5">15</y:strength>
+            <y:intoxicant/>
+        </y:drug>
+
+        <cost units="saxon">4</cost>
     </item>
 
     <item name="Flask of wine" quality="2">
@@ -121,7 +127,12 @@
         <weight>1000</weight>
         <material>liquid</material>
 
-        <cost units="saxon">15</cost>
+        <y:drug>
+            <y:string extra="+10">20</y:strength>
+            <y:intoxicant/>
+        </y:drug>
+
+        <cost units="saxon">12</cost>
     </item>
 
     <item name="Flask of wine" quality="3">
@@ -141,7 +152,12 @@
         <weight>1000</weight>
         <material>liquid</material>
 
-        <cost units="saxon">30</cost>
+        <y:drug>
+            <y:string extra="+10">25</y:strength>
+            <y:intoxicant/>
+        </y:drug>
+
+        <cost units="saxon">32</cost>
     </item>
 
     <item name="Flask of wine" quality="4">
