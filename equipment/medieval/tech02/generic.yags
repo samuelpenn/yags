@@ -58,7 +58,8 @@
         <description>
             <para>
                 A small bronze hand bell, of the sort often used by
-                watchmen and guards to sound for aid.
+                watchmen and guards to sound for aid. Is easily heard
+		up to 100 metres away.
             </para>
         </description>
     </item>
@@ -67,7 +68,7 @@
         <category>Adventuring</category>
         <importance>2</importance>
         <availability>3</availability>
-        <weight>2000</weight>
+        <weight>1000</weight>
         <cost units="saxon">300</cost>
         <material>metal</material>
 
@@ -79,7 +80,7 @@
                 or securing animals. Normally made of iron. Longer
                 lengths of chain can be bought, this is just the cost
                 per metre. To break it requires a Strength check of
-                difficulty 50.
+                difficulty 50. Supports up to 200kg of weight.
             </para>
         </description>
 
@@ -105,7 +106,8 @@
                 A one metre length of chain, designed for heavy loads
                 such as securing large creatures, ships or heavy loads.
                 This is the price and weight per metre. Breaking it
-                requires a strength check of difficulty 70.
+                requires a strength check of difficulty 70. Supports
+                up to 1 tonne in weight.
             </para>
         </description>
 
@@ -146,6 +148,7 @@
     <item name="Padlock" quality="1">
         <category>Adventuring</category>
         <importance>1</importance>
+        <techLevel>1</techLevel>
 
         <availability>3</availability>
 
@@ -178,11 +181,18 @@
             <toughness>1</toughness>
             <break>30</break>
         </device>
+	
+        <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Smithing (Mechanical)</skill>
+            <target need="5">20</target>
+            <time>Hours</time>
+        </make>
     </item>
 
     <item name="Padlock" quality="2">
         <category>Adventuring</category>
         <importance>2</importance>
+        <techLevel>2</techLevel>
 
         <availability>4</availability>
 
@@ -191,7 +201,8 @@
         <description>
             <para>
                 A padlock of average quality, of the sort used to keep
-                a door or chest locked shut.
+                a door or chest locked shut. Can be picked quite easily
+                by someone practised in the art.
             </para>
         </description>
 
@@ -213,11 +224,18 @@
             <toughness>1</toughness>
             <break>33</break>
         </device>
+
+        <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Smithing (Mechanical)</skill>
+            <target need="5">30</target>
+            <time>Hours</time>
+        </make>
     </item>
 
     <item name="Padlock" quality="3">
         <category>Adventuring</category>
         <importance>1</importance>
+        <techLevel>2</techLevel>
 
         <availability>3</availability>
 
@@ -225,7 +243,9 @@
 
         <description>
             <para>
-                A good quality padlock.
+                A good quality padlock that is difficult for someone
+                to pick, and also tough and difficult to break with
+                brute force.
             </para>
         </description>
 
@@ -247,11 +267,18 @@
             <toughness>1</toughness>
             <break>35</break>
         </device>
+
+        <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Smithing (Mechanical)</skill>
+            <target need="5">40</target>
+            <time>Hours</time>
+        </make>
     </item>
 
     <item name="Hourglass">
         <category>Adventuring</category>
         <importance>1</importance>
+        <techLevel>2</techLevel>
 
         <availability>4</availability>
 
@@ -261,7 +288,7 @@
             <para>
                 Made of glass, within a wooden frame, it is about
                 twenty centimetres tall and capable of timing events
-                for about 30 minutes.
+                for about an hour, with accuracy to within a minute.
             </para>
         </description>
 
@@ -273,103 +300,26 @@
         <properties>
             <special/>
         </properties>
-    </item>
 
-    <item name="Magnifying glass">
-        <category>Adventuring</category>
-        <importance>1</importance>
-
-        <availability>5</availability>
-
-        <short>A small glass lens with a wooden handle.</short>
-
-        <description>
-            <para>
-                This lens is about 5cm in diameter, and has a useful
-                magnification of about x2. It is liable to fracture
-                if dropped.
-            </para>
-        </description>
-
-        <dimensions>
-            <length>15</length>
-            <width>6</width>
-            <height>6</height>
-        </dimensions>
-
-        <weight>100</weight>
-        <material>glass</material>
-
-        <cost units="saxon">20000</cost>
-
-        <properties>
-            <special/>
-        </properties>
-
-        <tool xmlns="http://yagsbook.sourceforge.net/xml/d20">
-            <skill>Appraise</skill>
-            <bonus>+2</bonus>
-            <notes>
-                Gives a bonus to appraise checks on small items.
-            </notes>
-        </tool>
-
-        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <skill>Mechanical</skill>
-            <bonus>+3</bonus>
-            <notes>
-                Gives a bonus to disable traps and open locks.
-            </notes>
-        </tool>
-    </item>
-
-    <item name="Merchant's scale">
-        <category>Adventuring</category>
-        <importance>1</importance>
-
-        <availability>4</availability>
-
-        <short>A weighing device.</short>
-
-        <weight>500</weight>
-        <material>metal</material>
-
-        <cost units="saxon">1000</cost>
-
-        <properties>
-            <special/>
-        </properties>
+        <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Glass smith (Mechanical)</skill>
+            <target need="5">30</target>
+            <time>Hours</time>
+        </make>
     </item>
 
     <item name="Mirror, small metal">
         <category>Adventuring</category>
 
         <availability>4</availability>
+        <importance>2</importance>
 
-        <short>A highly polished peice of metal.</short>
+        <short>A highly polished piece of metal.</short>
 
         <weight>100</weight>
         <material>bronze</material>
 
         <cost units="saxon">1000</cost>
-    </item>
-
-    <item name="Perfume" quality="1">
-        <category>Fashion</category>
-        <importance>1</importance>
-
-        <availability>3</availability>
-
-        <short>A small vial of poor quality perfume.</short>
-
-        <weight>100</weight>
-        <material>liquid</material>
-
-        <cost units="saxon">10</cost>
-
-        <properties>
-            <special/>
-        </properties>
     </item>
 
     <item name="Perfume" quality="2">
@@ -410,7 +360,7 @@
 
     <item name="Soap">
         <category>Fashion</category>
-        <importance>2</importance>
+        <importance>1</importance>
 
         <availability>3</availability>
 
@@ -458,6 +408,16 @@
 
         <short>A small iron whistle.</short>
 
+	<description>
+	    <para>
+		A small signal whistle, that can be heard up to 50m
+		away clearly. On a quiet night, this is an Awareness
+		check to hear, at difficulty 10. Each extra 50m adds
+		+5 to the difficulty. The difficulty increases if
+		there is a lot of background noise, fog or other factors.
+	    </para>
+	</description>
+
         <weight>5</weight>
         <material>iron</material>
 
@@ -486,36 +446,26 @@
         </properties>
     </item>
 
-    <item name="Spyglass">
-        <category>Adventuring</category>
-        <importance>2</importance>
-
-        <availability>6</availability>
-
-        <short>An iron tube with two lenses in it.</short>
-
-        <weight>500</weight>
-        <material>iron</material>
-
-        <cost units="saxon">20000</cost>
-
-        <properties>
-            <special/>
-        </properties>
-    </item>
-
     <item name="Water clock">
         <category>Adventuring</category>
         <importance>1</importance>
-
+        <techLevel>2</techLevel>
         <availability>5</availability>
 
         <short>A clock which works by timing the drips of water.</short>
 
-        <weight>5000</weight>
+        <weight>12000</weight>
         <material>glass</material>
 
         <cost units="saxon">20000</cost>
+
+        <description>
+            <para>
+                Made of glass, within a wooden frame, it is about
+                fifty centimetres tall and capable of timing events
+                for about a day, with accuracy to within 15 minutes.
+            </para>
+        </description>
 
         <properties>
             <special/>
@@ -560,53 +510,6 @@
         <cost units="saxon">20</cost>
     </item>
 
-    <item name="Barrel (small)">
-        <category>Container</category>
-        <importance>1</importance>
-
-        <availability>1</availability>
-
-        <short>A small wooden barrel.</short>
-
-        <dimensions>
-            <length>100</length>
-            <width>50</width>
-            <height>50</height>
-        </dimensions>
-
-        <weight>10000</weight>
-        <material>wood</material>
-
-        <cost units="saxon">40</cost>
-    </item>
-
-    <item name="Basket (large)">
-        <category>Container</category>
-        <importance>0</importance>
-
-        <availability>1</availability>
-
-        <short>A woven basket.</short>
-
-        <weight>500</weight>
-        <material>wood</material>
-
-        <cost units="saxon">12</cost>
-    </item>
-
-    <item name="Basket (small)">
-        <category>Container</category>
-        <importance>0</importance>
-
-        <availability>1</availability>
-
-        <short>A woven basket.</short>
-
-        <weight>100</weight>
-        <material>wood</material>
-
-        <cost units="saxon">2</cost>
-    </item>
 
     <item name="Belt pouch (small)">
         <category>Container</category>
@@ -634,48 +537,6 @@
         <material>leather</material>
 
         <cost units="saxon">6</cost>
-    </item>
-
-    <item name="Bolt case">
-        <category>Container</category>
-        <importance>2</importance>
-
-        <availability>2</availability>
-
-        <short>A wooden case for holding quarrels.</short>
-
-        <weight>500</weight>
-        <material>wood</material>
-
-        <cost units="saxon">100</cost>
-    </item>
-
-    <item name="Bucket, metal">
-        <category>Container</category>
-        <importance>1</importance>
-
-        <availability>2</availability>
-
-        <short>A metal bucket.</short>
-
-        <weight>2000</weight>
-        <material>iron</material>
-
-        <cost units="saxon">500</cost>
-    </item>
-
-    <item name="Bucket, wood">
-        <category>Container</category>
-        <importance>1</importance>
-
-        <availability>1</availability>
-
-        <short>A wooden bucket.</short>
-
-        <weight>2000</weight>
-        <material>wood</material>
-
-        <cost units="saxon">50</cost>
     </item>
 
     <item name="Chest, large">
@@ -718,20 +579,6 @@
         <cost units="saxon">20</cost>
     </item>
 
-    <item name="Iron pot">
-        <category>Container</category>
-        <category>Cooking</category>
-
-        <availability>2</availability>
-
-        <short>An iron pot, of the sort used for cooking.</short>
-
-        <weight>3000</weight>
-        <material>metal</material>
-
-        <cost units="saxon">50</cost>
-    </item>
-
     <item name="Quiver">
         <category>Container</category>
 
@@ -745,36 +592,11 @@
         <cost units="saxon">40</cost>
     </item>
 
-    <item name="Sack, large">
-        <category>Container</category>
-
-        <availability>2</availability>
-
-        <short>A sack big enough for a person.</short>
-
-        <weight>250</weight>
-        <material>cloth</material>
-
-        <cost units="saxon">20</cost>
-    </item>
-
-    <item name="Sack, small">
-        <category>Container</category>
-
-        <availability>1</availability>
-
-        <short>A small sack big enough to hold a chicken.</short>
-
-        <weight>100</weight>
-        <material>cloth</material>
-
-        <cost units="saxon">5</cost>
-    </item>
-
     <item name="Strongbox (iron), large">
         <category>Container</category>
 
         <availability>4</availability>
+        <importance>1</importance>
         <properties>
             <special/>
         </properties>
@@ -797,6 +619,7 @@
         <category>Container</category>
 
         <availability>4</availability>
+        <importance>1</importance>
         <properties>
             <special/>
         </properties>
@@ -819,6 +642,7 @@
         <category>Container</category>
 
         <availability>5</availability>
+        <importance>1</importance>
         <properties>
             <special/>
         </properties>
@@ -841,6 +665,7 @@
         <category>Container</category>
 
         <availability>5</availability>
+        <importance>1</importance>
         <properties>
             <special/>
         </properties>

@@ -42,7 +42,8 @@
 
     Prices should be in farthings, but prices can't really be trusted yet.
  -->
-<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+<equipment xmlns="http://yagsbook.sourceforge.net/xml"
+           xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <item name="Egg (chicken)">
         <category>Food</category>
         <importance>2</importance>
@@ -102,7 +103,7 @@
         <material>liquid</material>
 
         <y:drug>
-            <y:string extra="+5">15</y:strength>
+            <y:strength extra="+5">15</y:strength>
             <y:intoxicant/>
         </y:drug>
 
@@ -120,7 +121,9 @@
 
         <description>
             <para>
-                A flask of wine which is okay, but nothing special.
+                A flask of average quality wine, of the sort normally
+                served at a noble's table, or in a larger inn. Seen as
+                being higher quality than beer, but is more expensive.
             </para>
         </description>
 
@@ -128,7 +131,7 @@
         <material>liquid</material>
 
         <y:drug>
-            <y:string extra="+10">20</y:strength>
+            <y:strength extra="+10">20</y:strength>
             <y:intoxicant/>
         </y:drug>
 
@@ -153,7 +156,7 @@
         <material>liquid</material>
 
         <y:drug>
-            <y:string extra="+10">25</y:strength>
+            <y:strength extra="+10">25</y:strength>
             <y:intoxicant/>
         </y:drug>
 
@@ -162,7 +165,7 @@
 
     <item name="Flask of wine" quality="4">
         <category>Food</category>
-        <importance>3</importance>
+        <importance>1</importance>
 
         <availability>3</availability>
         <tech level="1"/>
@@ -171,7 +174,7 @@
         <description>
             <para>
                 A flask of excellent wine, of vintage stock. It tastes
-                exellent, but is quite expensive.
+                excellent, but is quite expensive.
             </para>
         </description>
 
@@ -181,41 +184,45 @@
         <cost units="saxon">100</cost>
     </item>
 
-    <item name="Flask of wine" quality="5">
-        <category>Food</category>
-        <importance>1</importance>
 
-        <availability>4</availability>
-        <tech level="1"/>
-        <short>A flask of exellent quality wine.</short>
+    <item name="Bread">
+        <category>Food</category>
+        <importance>3</importance>
+
+        <availability>2</availability>
+
+        <short>A fresh loaf of wheat bread.</short>
 
         <description>
             <para>
-                A flask of superb wine.
+                A loaf of wheat bread. This is considered good quality
+                bread, and will normally be available to the nobility.
             </para>
         </description>
 
-        <weight>1000</weight>
-        <material>liquid</material>
+        <weight>400</weight>
+        <material>food</material>
 
-        <cost units="saxon">500</cost>
+        <cost units="saxon">3</cost>
     </item>
 
-    <item name="Loaf of bread">
+    <item name="Bread (Rye)">
         <category>Food</category>
         <importance>3</importance>
 
         <availability>1</availability>
 
-        <short>A fresh loaf of bread.</short>
+        <short>A fresh loaf of rye bread.</short>
 
         <description>
             <para>
-                A pretty standard loaf of bread.
+                A loaf of rye or barley bread. It is darker and heavier
+                than wheat bread, and is the common fair amongst the
+                peasantry.
             </para>
         </description>
 
-        <weight>400</weight>
+        <weight>500</weight>
         <material>food</material>
 
         <cost units="saxon">2</cost>
@@ -252,7 +259,8 @@
 
         <description>
             <para>
-                A pint of good strong ale.
+                A pint of good strong ale. It was not uncommon for this to
+                be brewed by monks.
             </para>
         </description>
 
@@ -262,17 +270,18 @@
         <cost units="saxon">2</cost>
     </item>
 
-    <item name="Pint of bear">
+    <item name="Pint of beer">
         <category>Food</category>
         <importance>3</importance>
 
         <availability>1</availability>
 
-        <short>A pint of bear.</short>
+        <short>A pint of beer.</short>
 
         <description>
             <para>
-                A pint of good beer.
+                Beer is the common drink in Medieval Europe. It is unlikely
+                to be contaminated, unlike water, so was safer to drink.
             </para>
         </description>
 
