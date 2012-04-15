@@ -42,11 +42,11 @@
         </description>
     </skill>
 
-    <skill name="Paleontology" type="knowledge">
+    <skill name="Palaeontology" type="knowledge">
         <group>Academic</group>
         <group>Science</group>
         <techRange min="5" max="20"/>
-
+        <specialisation>Palaeontologist</specialisation>
         <short>The study of ancient life.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -63,9 +63,8 @@
 
     <skill name="Science" type="knowledge">
         <group>Academic</group>
-        <group>Science</group>
         <techRange min="4" max="20"/>
-
+        <specialisation>Scientist</specialisation>
         <short>Basic science, logic and reasoning.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -96,8 +95,9 @@
 
     <skill name="Mathematics" type="knowledge">
         <group>Academic</group>
-        <group>Science</group>
+
         <techRange min="3" max="20"/>
+        <specialisation>Mathematician</specialisation>
 
         <short>Geometry, algebra etc.</short>
 
@@ -124,6 +124,7 @@
         <techRange min="4" max="20"/>
         <prerequisite>First aid</prerequisite>
         <prerequisite>Science</prerequisite>
+        <specialisation>Medic</specialisation>
 
         <short>Diagnosis and healing.</short>
 
@@ -161,6 +162,7 @@
         <techRange min="4" max="20"/>
         <prerequisite>Medicine</prerequisite>
         <default>Medicine</default>
+        <specialisation>Surgeon</specialisation>
 
         <short>Diagnosis and healing.</short>
 
@@ -176,6 +178,7 @@
     <skill name="Naturopathy" skill="knowledge">
         <group>Academic</group>
         <techRange min="0" max="20"/>
+        <specialisation>Naturopath</specialisation>
 
         <short>Alternative medicine.</short>
 
@@ -217,6 +220,7 @@
         <techRange min="5" max="20"/>
 
         <default>Science</default>
+        <specialisation>Astronomer</specialisation>
         <short>The study of the stars and planets</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -229,13 +233,19 @@
                 objects, but theoretical knowledge of why things are
                 how they are is left to <e>Science (Astrophysics)</e>.
             </para>
+
+            <para>
+                It is possible to buy <e>Specialisations</e> in
+                <e>Astronomy</e>, as 4 point techniques.
+            </para>
         </description>
     </skill>
 
     <skill name="Anthropology" type="knowledge">
         <group>Academic</group>
-        <group>Science</group>
+
         <techRange min="5" max="20"/>
+        <specialisation>Anthropologist</specialisation>
 
         <short>The study of Hominids.</short>
 
@@ -250,8 +260,9 @@
 
     <skill name="Ecology" type="knowledge">
         <group>Academic</group>
-        <group>Science</group>
+
         <techRange min="5" max="20"/>
+        <specialisation>Ecologist</specialisation>
 
         <default>Survival</default>
 
@@ -278,6 +289,7 @@
         <group>Academic</group>
         <default>Educated</default>
         <short>Knowledge of the past.</short>
+        <specialisation>Historian</specialisation>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>

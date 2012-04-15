@@ -48,7 +48,7 @@
     <skill name="Drive" type="skill">
         <group>Vehicle</group>
         <tech level="6"/>
-
+        <familiarity>Driving familiarity</familiarity>
         <short>Driving simple ground vehicles.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -142,16 +142,15 @@
     <skill name="Pilot" type="skill">
         <group>Vehicle</group>
         <tech level="6"/>
-        <default>Gliding</default>
-        <default>Helicopter</default>
+        <familiarity>Aircraft familiarity</familiarity>
         <short>Piloting a powered aircraft.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The skill of piloting a powered aircraft. By default it
-                assumes a small low performance aircraft, such as a
-                Cessna or Spitfire. Larger aircraft require familiarity
-                similar to the <e>Drive</e> skill.
+                The skill of piloting a powered aircraft. When you first take
+                this skill, chose one free familiarity. Other familiarities
+                need to be purchased. Includes all forms of aircraft piloting,
+                including powered planes, helicopters and gliders.
             </para>
 
             <para>
@@ -202,37 +201,6 @@
         </examples>
    </skill>
 
-    <skill name="Helicopter" type="skill">
-        <group>Vehicle</group>
-        <tech level="6"/>
-        <default>Pilot</default>
-        <default>Gliding</default>
-        <short>Piloting a helicopter.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The skill of piloting a helicopter.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Gliding" type="skill">
-        <group>Vehicle</group>
-
-        <default>Pilot</default>
-        <default>Helicopter</default>
-        <short>Piloting an unpowered aircraft.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You have experience in flying gliders. This skill provides
-                you with the ability to fly a glider, to know how to find
-                and use thermals and geographic features for lift and how
-                to look after and maintain a glider. You'll also have
-                some knowledge of aviation law and etiquette.
-            </para>
-        </description>
-    </skill>
 </skill-list>
 
 
