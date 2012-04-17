@@ -673,35 +673,41 @@
         </description>
     </skill>
 
-    <skill name="Area lore" type="knowledge">
+    <skill name="Area knowledge (*)" type="knowledge">
         <group>Academic</group>
-
         <short>Knowledge about a given region.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Knowledge of a given area, including geographical and
-                political knowledge. The <e>Area lore</e> skill is used
-                when checking to see if a character has heard of a person,
-                place or organisation. Area lore is nearly always based on
-                intelligence.
+                Knowledge of a given area, including geographical, social and
+                political knowledge. The <e>Area knowledge</e> skill can be
+                used to see if you have heard of a particular place or person,
+                or to know common customs, such as how to use public transport
+                or how much to tip a waiter.
             </para>
 
             <para>
-                There is an area lore skill for each area, normally an area
-                the size of a country, with the same culture. An area lore
-                skill can give knowledge of surrounding areas, though such
-                knowledge will be prejudiced by the beliefs of the original
-                area the skill is for.
+                There are multiple <e>Area knowledge</e> skills, each for a
+                different area. This skill does not have specialisations, but
+                each skill is its own specialisation in a given area.
+            </para>
+
+            <para>
+                How big an area the skill covers is up to you, and like a
+                specialisation this affects how detailed the knowledge you
+                get from it is. You could take <e>Area knowledge (London)</e>,
+                <e>Area knowledge (UK)</e> or <e>Area knowledge (Europe)</e>,
+                and this would give you varying amounts of knowledge about
+                London for the same difficulty. For difficulty 10, you could
+                know, in order, where a good restaurant is, what the major
+                attractions are, and roughly where in England it is.
+            </para>
+
+            <para>
+                You will start with an <e>Area knowledge</e> skill for where
+                you grew up. This can be as localised or as broad as you want.
             </para>
         </description>
-
-        <examples>
-            <example target="10">
-                Knowledge that everyone knows, such as who the ruler is
-                to the names of major cities.
-            </example>
-        </examples>
     </skill>
 
 
@@ -734,75 +740,6 @@
                 one stun, and each 10 over that heals another level of
                 stuns. Stuns do not need to be treated before they begin
                 healing.
-            </para>
-        </description>
-    </skill>
-
-
-    <skill name="Animal husbandry" type="knowledge">
-        <group>Rural</group>
-        <default>First aid</default>
-
-        <short>Healing for animals.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Looking after animals, especially on a farm. May be used
-                to tend to sick or injured animals, in which case it may
-                default to <e>first aid</e>.
-            </para>
-        </description>
-    </skill>
-
-
-    <skill name="Religion" type="knowledge">
-        <group>Academic</group>
-
-        <short>Knowledge about gods and cults.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Knowledge of the traditions, ceremonies, laws, gods,
-                priests and mythology of a given religion. More broad or
-                narrow the skill is depends very much on the culture
-                and the level of knowledge required. In a monotheistic
-                culture, especially where knowledge of other religions
-                is discouraged (e.g. Medieval Europe), each religion
-                will have its own skill, and this will give little
-                knowledge of the others.
-            </para>
-
-            <para>
-                In a pantheistic culture, one skill can give knowledge
-                of all the gods and cults, though only on a general
-                level. Single skills will exist for each individual cult,
-                which will also give knowledge of other cults, though
-                that knowledge may be coloured by prejudice.
-            </para>
-
-            <para>
-                Where a religion actually grants supernatural abilities
-                to its cult members or priests, these may be represented
-                as <e>techniques</e> based on the cult's specific skill.
-            </para>
-        </description>
-    </skill>
-
-    <skill name="Theology" type="knowledge">
-        <group>Academic</group>
-        <default>Religion</default>
-
-        <techRange min="2" max="20"/>
-        <short>Theoretical knowledge about religion.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                The theory of religion, used by people who want to
-                understand the why and how of religious beliefs. In many
-                cultures doing this too critically can lead to charges
-                of heresy, thought good use of this skill will enable the
-                character to argue effectively and <e>safely</e> with
-                others.
             </para>
         </description>
     </skill>

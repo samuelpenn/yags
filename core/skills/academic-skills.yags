@@ -189,22 +189,24 @@
                 of the <e>Medicine</e> and <e>Surgery</e> skills with
                 the difference that it has little or no effect. Despite
                 being a <e>Knowledge</e> skill, it is based on
-                <e>Empathy</e> when used.
+                <e>Empathy</e> when used. If you need to convince
+                someone of its effectiveness, use this skill against
+                their <e>Science</e>.
             </para>
 
             <para>
                 If used in place of <e>Medicine</e>, on a roll of 20
                 treat as if the <e>Medicine</e> skill had been used.
-                Otherwise, it has no effect, though they patient may
+                Otherwise, it has no effect, though the patient may
                 feel better for a short while.
             </para>
 
             <para>
                 If used in place of <e>Surgery</e>, on a roll of 20
                 treat as if the <e>Surgery</e> skill was used, but
-                halve the roll. The fumble chance is increased is
-                increased by +1 per 10 difficulty. Otherwise, there
-                is no effect.
+                halve the roll. The fumble chance is increased by
+                +1 per 10 difficulty, and a fumble means that something
+                has gone horribly wrong. Otherwise, there is no effect.
             </para>
 
             <para>
@@ -265,6 +267,7 @@
         <specialisation>Ecologist</specialisation>
 
         <default>Survival</default>
+        <short>The study of ecosystems.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -275,12 +278,6 @@
                 <e>Ecology</e> does not cover the theoretical science
                 behind plants and animals. A modern ecologist would
                 have both <e>Ecology</e> and <e>Science</e>.
-            </para>
-
-            <para>
-                You may take <e>specialisations</e> in this at a cost
-                of 4 per specialisation. Examples include Zoology,
-                Botany, Rain Forests, Deserts etc.
             </para>
         </description>
     </skill>
@@ -312,6 +309,42 @@
         </description>
     </skill>
 
+    <skill name="Religion" type="knowledge">
+        <group>Academic</group>
+        <default>Educated</default>
+        <short>Knowledge of religion.</short>
+        <specialisation>Religion</specialisation>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You have a good knowledge of Religion, in all its varied
+                forms. If you default, you only have knowledge of those
+                religions common to your culture, otherwise this skill
+                covers all the world's religions. Unless you buy a
+                specialisation however, then those religions outside of
+                your cultural experience will be harder to know about.
+            </para>
+        </description>
+    </skill>
+
+    <skill name="Theology" type="knowledge">
+        <group>Academic</group>
+        <default>Religion</default>
+
+        <techRange min="2" max="20"/>
+        <short>Theoretical knowledge about religion.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The theory of religion, used by people who want to
+                understand the why and how of religious beliefs. In many
+                cultures doing this too critically can lead to charges
+                of heresy, thought good use of this skill will enable the
+                character to argue effectively and <e>safely</e> with
+                others.
+            </para>
+        </description>
+    </skill>
 
     <skill name="Research" type="skill">
         <group>Academic</group>
