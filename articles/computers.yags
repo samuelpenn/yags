@@ -25,7 +25,7 @@
         </cvsinfo>
 
         <license type="Yags">
-            <year>2007</year>
+            <year>2012</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -95,32 +95,114 @@
                 <title>Using a computer</title>
 
                 <para>
-                    The <e>Computer operation</e> skill covers basic use of
-                    a computer. This covers everything that is needed to be
-                    known at the current tech level in order to interface
-                    with such a machine. At TL6, it will be little more than
-                    how to load punch cards and how to interpret basic
-                    mechanical errors. Through TL7, information becomes
-                    more readily available until actual interactive use of
-                    the computer is possible, in the form of running queries
-                    and using word processors and simple programs.
+                    All forms of computer use, with the exception of fiddling
+                    with the hardware, is covered by the <e>Computers</e>
+                    skill. By itself it allows you to use a computer - perform
+                    searches, write documents and send emails for example.
+                    Having the <e>Scripting</e> technique allows you
+                    to automate tasks, and <e>Programming</e> allows
+                    you to write your own software. This assumes a TL8 level
+                    of computer technology.
                 </para>
 
                 <para>
-                    By TL8, most people can be trained to use a word processor,
-                    spread sheet or to perform simple queries. By the middle
-                    of this period, <e>computer operation</e> covers advanced
-                    usage of software - such as writing macros, finding
-                    information on the internet, installing software and
-                    a little knowledge of networks and viruses.
+                    If you don't have <e>Scripting</e>, you can default
+                    from the basic skill (halve all rolls and increased fumble
+                    chance). If you don't have <e>Programming</e>, then as
+                    long as you have <e>Scripting</e> you can default from
+                    your basic skill. If you don't have either technique, then
+                    you can't write software.
                 </para>
 
                 <para>
-                    Beyond TL8, most computer interfaces will probably be of
-                    the form of voice or mind control, making it far easier
-                    for unskilled people to control them. With the advent of
-                    true AIs, the skill may become completely redundant.
+                    There are other techniques available as well, covering
+                    aspects such as network administration, security and
+                    forensics. They all have <e>Scripting</e> as a
+                    pre-requisite.
                 </para>
+
+                <para>
+                    If the GM desires an extra level of detail, then requiring
+                    familiarity with different operating systems is an option.
+                    By default, you are familiar with whichever operating system
+                    is most common (e.g., Microsoft Windows - though this isn't
+                    always the case realistically).
+                </para>
+
+                <sect3>
+                    <title>Computers in TL 6</title>
+
+                    <para>
+                        The first computers were very different from those
+                        available today. The <e>Computers</e> skill covers
+                        some hardware related tasks, such as loading paper
+                        tape, replacing valves and unjamming mechanisms.
+                        It doesn't cover programming.
+                    </para>
+
+                    <para>
+                        Since most computers were unique, there is a
+                        different skill for each manufacturer. Each skill
+                        defaults to the others.
+                    </para>
+
+                    <para>
+                        There is no concept of computer security at this
+                        point, or networking. Data is kept on paper or card,
+                        and if you have physical access to it, then you have
+                        full access to the data.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Computers in TL 7</title>
+
+                    <para>
+                        Early TL7 is similar to TL6, by mid TL7 computers
+                        were very similar in concept to how they are today.
+                        Networks come into use (though world wide internets
+                        take a while to become possible) which link computers
+                        in an organisation.
+                    </para>
+
+                    <para>
+                        The computer itself is often a big mainframe, with
+                        users accessing them via dumb terminals. Breaking the
+                        security requires physical access to either a terminal
+                        or the network itself.
+                    </para>
+
+                    <para>
+                        By the time computers start becoming commonplace (at
+                        least in large organisations), they are settling down
+                        into designs, and a single computer skill covers all
+                        types of computers. However, <e>familiarity</e> will
+                        still be required, and there will be many different
+                        types of hardware and operating systems.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Computers in TL 9</title>
+
+                    <para>
+                        By TL9, computers are smaller, faster and more reliable
+                        than those of TL8. Fast networking is ubiquitous, and
+                        most consumer computing power is in the form of devices
+                        such as phones and tablets rather than as general purpose
+                        Personal Computers.
+                    </para>
+
+                    <para>
+                        Limited AI allows voice interfaces and natural language
+                        queries to reduce the need for computer skills from many
+                        of those who use them.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Computers in TL 10+</title>
+                </sect3>
             </sect2>
 
             <sect2>
@@ -215,7 +297,10 @@
                     <item target="20" value="Home system.">
                         Most home users know little about security, and tend
                         to run all sorts of software which provide any number
-                        of possible security holes.
+                        of possible security holes. This assumes that the
+                        system belongs to an inexperienced user running a
+                        wireless system with poor passwords, or even default
+                        passwords on routers and firewalls.
                     </item>
 
                     <item target="40" value="Small business.">
@@ -250,21 +335,27 @@
                         before any attempts are made.
                     </item>
 
-                    <item target="+50%" value="Uptodate security">
-                        Network owners have been keeping the system uptodate
-                        with the latest patches, and proactively securing
-                        the system.
+                    <item target="+50%" value="Up-to-date security">
+                        Network owners have been keeping the system up-to-date
+                        with the latest patches, and pro-actively securing
+                        the system. Modern operating systems now do this
+                        automatically.
                     </item>
 
                     <item target="-50%" value="Out of date">
                         The system is badly out of date, and hasn't had any
-                        patches installed.
+                        patches installed in the last couple of years.
                     </item>
 
                     <item target="-25%" value="Compromised">
                         If the system is already compromised (by trojans,
                         viruses and the like), then it is generally easier
                         to access.
+                    </item>
+
+                    <item target="-50%" value="Physical access">
+                        If you have physical access to the server, then halve
+                        the difficulty.
                     </item>
                 </targetlist>
 
