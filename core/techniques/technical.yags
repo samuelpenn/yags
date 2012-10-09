@@ -32,7 +32,7 @@
 
     <advantage name="System administration" type="technique">
         <cost points="4"/>
-        <skill name="Computer operation"/>
+        <skill name="Computing"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -52,7 +52,7 @@
 
     <advantage name="Computer intrusion" type="technique">
         <cost points="4"/>
-        <skill name="Computer operation"/>
+        <skill name="Computing"/>
 
         <prerequisite>System administration</prerequisite>
 
@@ -69,7 +69,7 @@
 
     <advantage name="Computer forensics" type="technique">
         <cost points="4"/>
-        <skill name="Computer operation"/>
+        <skill name="Computing"/>
         <prerequisite>System administration</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -98,23 +98,38 @@
         </description>
     </advantage>
 
-    <advantage name="Computer programming" type="technique">
+    <advantage name="Scripting" type="technique">
+        <cost points="2"/>
+        <skill name="Computing"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The ability to write simple scripts to automate tasks
+                on a computer. Scripts are simple programs that can
+                make life a lot easier. Working on large software
+                projects requires <e>Programming</e> however.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Programming" type="technique">
         <cost points="4"/>
-        <skill name="Computer operation"/>
+        <skill name="Computing"/>
+
+        <prerequisite>Scripting</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Knowledge of and experience with programming a computer
-                system. Needs to be taken for each type of computer
-                platform that can be programmed. If known, it halves
-                the difficulty of programming related tasks.
+                system. With this, it is possible to design and write
+                complex software products.
             </para>
         </description>
     </advantage>
 
     <advantage name="Cryptanalysis" type="technique">
         <cost points="4"/>
-        <skill name="Computer operation"/>
+        <skill name="Computing"/>
         <prerequisite>Cryptography</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
