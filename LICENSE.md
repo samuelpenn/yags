@@ -1,4 +1,5 @@
 Yet Another Game System
+=======================
 
 By Samuel Penn (sam@glendale.org.uk)
 
