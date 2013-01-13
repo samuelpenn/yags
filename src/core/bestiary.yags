@@ -5,7 +5,7 @@
          xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
     <header>
         <title>Bestiary</title>
-        <tagline>YAGS 0.7</tagline>
+        <tagline>YAGS</tagline>
 
         <summary>
             Information about animals and monsters.
@@ -17,8 +17,8 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.12 $</version>
-            <date>$Date: 2006-08-21 18:42:42 $</date>
+            <version>$Revision: 0.7.9 $</version>
+            <date>$Date: 2013-01-12 12:00:00 $</date>
         </cvsinfo>
 
         <license type="Yags">
@@ -60,87 +60,181 @@
                 fantastic) animals though, but also covers undead, constructs and
                 alien terrors as well.
             </para>
-        </sect1>
-
-
-        <sect1>
-            <title>Creature Statistics</title>
-
-            <para>
-                Meanings for some of the attributes.
-            </para>
 
             <sect2>
-                <title>Creature Type</title>
+                <title>Defining Creatures</title>
 
                 <para>
-                    The creature type defines the broad class of creature,
-                    which gives some indication to its form and properties.
+                    For the most part, creatures use the same rules as characters
+                    do, the difference is often merely in their behaviour and
+                    abilities. Some of the more fantastical creatures do have
+                    some special rules applied to them however, and to simplify
+                    this creatures are defined according to a couple of special
+                    criteria - <e>type</e> and <e>demeanour</e>.
                 </para>
 
-                <itemlist order="sort">
-                    <item name="Humanoid">
-                        A human, or human like creature. A natural, bipedal
-                        creature with some degree of sapience.
-                    </item>
+                <sect3>
+                    <title>Creature Type</title>
 
-                    <item name="Monster">
-                        A generic term for an unnatural, possibly magical,
-                        creature which does not fit into the natural
-                        ecology.
-                    </item>
+                    <para>
+                        The creature type defines the broad class of creature,
+                        which gives some indication to its form and properties.
+                        In a realistic modern setting, pretty much everything
+                        that you will meet will be either <e>Humanoids</e>
+                        (people) or <e>Animals</e>.
+                    </para>
 
-                    <item name="Animal">
-                        Animals are non-sapient natural creatures.
-                    </item>
+                    <itemlist order="sort">
+                        <item name="Humanoid">
+                            A human, or human like creature. A natural, bipedal
+                            creature with some degree of sapience.
+                        </item>
 
-                    <item name="Construct">
-                        Constructs are non living, artificially created. They
-                        do not require sleep or food (at least not in the
-                        way it is normally needed by living creatures). They
-                        are often mindless, and have no vital organs.
-                    </item>
+                        <item name="Monster">
+                            A generic term for an unnatural, possibly magical,
+                            creature which does not fit into the natural
+                            ecology.
+                        </item>
 
-                    <item name="Demon">
-                        A demon is an outer planer creature, magical in
-                        nature. Demons are not necessarily evil, though
-                        will generally have a mindset and goals quite
-                        different from that of humanity.
-                    </item>
+                        <item name="Animal">
+                            Animals are non-sapient natural creatures.
+                        </item>
 
-                    <item name="Elemental">
-                        Elementals are magical constructs inhabited by a
-                        spirit, clothed in material such as rock, earth,
-                        water or air. They have no need of food or sleep,
-                        and have no vital organs. They do however have
-                        free will. They suffer fatigue, but have twice the
-                        normal number of wound and stun levels.
-                    </item>
+                        <item name="Construct">
+                            Constructs are non living, artificially created. They
+                            do not require sleep or food (at least not in the
+                            way it is normally needed by living creatures). They
+                            are often mindless, and have no vital organs.
+                        </item>
 
-                    <item name="Vermin">
-                        Vermin are natural creatures with a tendency to
-                        swarm. They are small and numerous.
-                    </item>
+                        <item name="Demon">
+                            A demon is an outer planer creature, magical in
+                            nature. Demons are not necessarily evil, though
+                            will generally have a mindset and goals quite
+                            different from that of humanity.
+                        </item>
 
-                    <item name="Plant">
-                        Plant based creatures may be natural or magical,
-                        and may have unique properties.
-                    </item>
+                        <item name="Elemental">
+                            Elementals are magical constructs inhabited by a
+                            spirit, clothed in material such as rock, earth,
+                            water or air. They have no need of food or sleep,
+                            and have no vital organs. They do however have
+                            free will. They suffer fatigue, but have twice the
+                            normal number of wound and stun levels.
+                        </item>
 
-                    <item name="Undead">
-                        Undead are the walking dead. They have no vital
-                        organs, and have no need of food or sleep. They
-                        ignore fatigue, and have double the normal number
-                        of wound and stun levels for their size.
-                    </item>
+                        <item name="Vermin">
+                            Vermin are natural creatures with a tendency to
+                            swarm. They are small and numerous.
+                        </item>
 
-                    <item name="Ethereal">
-                        Ethereals have no physical body, and cannot be
-                        harmed by physical weapons. Likewise, they cannot
-                        affect the physical world, but may be able to
-                        strike at the spirit or soul of living creatures.
-                    </item>
-                </itemlist>
+                        <item name="Plant">
+                            Plant based creatures may be natural or magical,
+                            and may have unique properties.
+                        </item>
+
+                        <item name="Undead">
+                            Undead are the walking dead. They have no vital
+                            organs, and have no need of food or sleep. They
+                            ignore fatigue, and have double the normal number
+                            of wound and stun levels for their size.
+                        </item>
+
+                        <item name="Ethereal">
+                            Ethereals have no physical body, and cannot be
+                            harmed by physical weapons. Likewise, they cannot
+                            affect the physical world, but may be able to
+                            strike at the spirit or soul of living creatures.
+                        </item>
+                    </itemlist>
+                </sect3>
+
+                <sect3>
+                    <title>Demeanour</title>
+
+                    <para>
+                        A beast's demeanour is a rough guide to its behaviour.
+                        Mostly, the descriptions given below deal with how a
+                        creature will act if it is threatened, hungry or just
+                        surprised. Intelligent beasts have far more complex
+                        behaviour patterns than animals, so really this applies
+                        to animals only. Intelligent creatures will nearly
+                        always have a demeanour of <e>Selfish</e>.
+                    </para>
+
+                    <itemlist order="sort">
+                        <item name="Predator">
+                            A predator is a carnivorous hunter, who will stalk
+                            and kill prey for food. Creatures it does not
+                            consider prey it will generally ignore, unless it
+                            feels threatened. If the prey it attacks puts up
+                            a good fight, then it will generally retreat before
+                            it can be seriously injured, unless it is already
+                            very hungry.
+                        </item>
+
+                        <item name="Scavenger">
+                            A scavenger seeks food that is either already dead,
+                            or looks like it is about to become dead. It will
+                            avoid healthy food, and patiently wait for injured
+                            food to weaken rather than risk injury by attacking
+                            something still able to put up an effective defence.
+                        </item>
+
+                        <item name="Herd">
+                            Herd animals are generally passive, but can get
+                            aggressive if threatened. Normal reaction to danger
+                            is for the herd to run, though animals with suitable
+                            defensive abilities may turn and fight if running is
+                            not seen as a viable option. Herd does not necessarily
+                            mean herd in the zoological sense.
+                        </item>
+
+                        <item name="Violent">
+                            Violent beasts are very rare, and are generally
+                            unnatural, magical or insane types. A violent beast
+                            will attack for no reason other than because it
+                            enjoys killing. It will often fight until heavily
+                            injured, and pursue prey that flees.
+                        </item>
+
+                        <item name="Passive">
+                            Passive creatures have a poor sense of danger, and
+                            are unable to defend themselves. They may run from
+                            danger, but danger is often not noticed until
+                            something is actually attacking them. It is possible
+                            to walk up to such beasts, without scaring them.
+                        </item>
+
+                        <item name="Unintelligent">
+                            Unintelligent beasts are generally constructs. They
+                            have no free will, and no sense of self
+                            preservation. Depending on their programming, they
+                            may defend themselves if attacked, and will always
+                            fight to the death unless specifically programmed
+                            not to. Some plants may be unintelligent - they
+                            may have the ability to grab and hold prey, but will
+                            have no concept of fleeing.
+                        </item>
+
+                        <item name="Selfish">
+                            Sapient creatures are often selfish. They will act
+                            in their own best interest (though what their best
+                            interest is will not always be obvious, or simple).
+                            They will generally be suspicious of things they
+                            do not know, but only attack if they feel threatened
+                            or they think they will get something from it.
+                        </item>
+
+                        <item name="Aggressive">
+                            Aggressive creatures are prone to violence, though
+                            are not as extreme as <e>violent</e> creatures are.
+                            They are easily provoked, but unless they are
+                            hunting food, they will not bother giving chase to
+                            those that flee.
+                        </item>
+                    </itemlist>
+                </sect3>
             </sect2>
 
             <sect2>
@@ -155,7 +249,7 @@
                 </para>
 
                 <para>
-                    The smallest possible size is zero - a small cat or
+                    The smallest possible <t>Size</t> is zero - a small cat or
                     something similar with a mass around 7-8kg. Anything
                     smaller than this is still considered size zero, but
                     will be marked as <e>Tiny</e> (starting at 300g-3kg).
@@ -199,92 +293,6 @@
                 </para>
             </sect2>
 
-            <sect2>
-                <title>Demeanour</title>
-
-                <para>
-                    A beast's demeanour is a rough guide to its behaviour.
-                    Mostly, the descriptions given below deal with how a
-                    creature will act if it is threatened, hungry or just
-                    surprised. Intelligent beasts have far more complex
-                    behaviour patterns than animals, so really this applies
-                    to animals only. Intelligent creatures will nearly
-                    always have a demeanour of <e>Selfish</e>.
-                </para>
-
-                <itemlist order="sort">
-                    <item name="Predator">
-                        A predator is a carnivorous hunter, who will stalk
-                        and kill prey for food. Creatures it does not
-                        consider prey it will generally ignore, unless it
-                        feels threatened. If the prey it attacks puts up
-                        a good fight, then it will generally retreat before
-                        it can be seriously injured, unless it is already
-                        very hungry.
-                    </item>
-
-                    <item name="Scavenger">
-                        A scavenger seeks food that is either already dead,
-                        or looks like it is about to become dead. It will
-                        avoid healthy food, and patiently wait for injured
-                        food to weaken rather than risk injury by attacking
-                        something still able to put up an effective defence.
-                    </item>
-
-                    <item name="Herd">
-                        Herd animals are generally passive, but can get
-                        aggressive if threatened. Normal reaction to danger
-                        is for the herd to run, though animals with suitable
-                        defensive abilities may turn and fight if running is
-                        not seen as a viable option. Herd does not necessarily
-                        mean herd in the zoological sense.
-                    </item>
-
-                    <item name="Violent">
-                        Violent beasts are very rare, and are generally
-                        unnatural, magical or insane types. A violent beast
-                        will attack for no reason other than because it
-                        enjoys killing. It will often fight until heavily
-                        injured, and pursue prey that flees.
-                    </item>
-
-                    <item name="Passive">
-                        Passive creatures have a poor sense of danger, and
-                        are unable to defend themselves. They may run from
-                        danger, but danger is often not noticed until
-                        something is actually attacking them. It is possible
-                        to walk up to such beasts, without scaring them.
-                    </item>
-
-                    <item name="Unintelligent">
-                        Unintelligent beasts are generally constructs. They
-                        have no free will, and no sense of self
-                        preservation. Depending on their programming, they
-                        may defend themselves if attacked, and will always
-                        fight to the death unless specifically programmed
-                        not to. Some plants may be unintelligent - they
-                        may have the ability to grab and hold prey, but will
-                        have no concept of fleeing.
-                    </item>
-
-                    <item name="Selfish">
-                        Sapient creatures are often selfish. They will act
-                        in their own best interest (though what their best
-                        interest is will not always be obvious, or simple).
-                        They will generally be suspicious of things they
-                        do not know, but only attack if they feel threatened
-                        or they think they will get something from it.
-                    </item>
-
-                    <item name="Aggressive">
-                        Aggressive creatures are prone to violence, though
-                        are not as extreme as <e>violent</e> creatures are.
-                        They are easily provoked, but unless they are
-                        hunting food, they will not bother giving chase to
-                        those that flee.
-                    </item>
-                </itemlist>
-            </sect2>
         </sect1>
 
         <sect1>
