@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+
+<!--
+
+    General equipment lists.
+
+    Copyright 2013 Samuel Penn, www.glendale.org.uk.
+
+    Redistribution and use in source, binary and printed forms with or
+    without modification, are permitted.
+
+    Importance
+    0               Only include in complete lists.
+    1               Detail, not often needed.
+    2               Normally list.
+    3               Very important. Always list
+
+    All units are in cgs.
+
+    Prices are in credits.
+
+    Tech Level
+     4 1450-1700
+     5 1700-1900
+     6 1900-1950
+     7 1950-1980
+     8 1980-2020
+     9 2020+ (Interplanetary)
+    10 Interstellar (early jump)
+    11 Interstellar (Jump)
+    12 Interstellar (Imperium)
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="Gas Mask">
+        <category>Clothing</category>
+        <importance>1</importance><availability>3</availability>
+        <techLevel>6</techLevel>
+        <legality>4</legality>
+        <weight>500</weight>
+        <cost units="usd">100</cost>
+
+        <short>Basic gas mask to protect from chemical warfare.</short>
+        <description>
+            <para>
+                These gas masks were introduced early during the Great War
+                to protect against poison gas attacks. Originally, they were
+                cloth masks dipped in chemicals to help neutralise the gas.
+            </para>
+        </description>
+    </item>
+
+    <item name="Body Shield">
+        <category>Armour</category>
+        <importance>2</importance><availability>3</availability>
+        <techLevel>6</techLevel>
+        <legality>4</legality>
+        <weight>18000</weight>
+        <cost units="usd">1200</cost>
+
+        <short>Bullet proof armour from the Great War</short>
+        <description>
+            <para>
+                A heavy metal vest designed to protect from bullets. It is
+                quite effective, though incredibly heavy so not always
+                practical to wear. It is also limited to protecting just
+                the torso of the wearer.
+            </para>
+        </description>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+12</protection>
+            <load>18</load>
+            <weight>18000</weight>
+            <covers>
+                <torso/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <heavy/>
+            </properties>
+        </armour>
+    </item>
+
+    <item name="Silk bulletproof vest">
+        <category>Armour</category>
+        <importance>3</importance><availability>3</availability>
+        <techLevel>6</techLevel>
+        <legality>4</legality>
+        <weight>1000</weight>
+        <cost units="usd">800</cost>
+
+        <short>Bullet proof armour from the Great War</short>
+        <description>
+            <para>
+                Consisting of up to 30 layers of silk, these vests are
+                capable of protecting you from a bullet. Thought they
+                won't negate all damage, they can reduce it significantly.
+            </para>
+        </description>
+
+        <armour xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <protection>+6</protection>
+            <load>1</load>
+            <weight>1000</weight>
+            <covers>
+                <torso/>
+                <arms/>
+            </covers>
+
+            <properties>
+                <bulletproof/>
+                <light/>
+            </properties>
+        </armour>
+    </item>
+
+</equipment>
+
+
