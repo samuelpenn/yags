@@ -13,7 +13,7 @@
 <bestiary xmlns="http://yagsbook.sourceforge.net/xml">
 
     <!-- Basic Bear information -->
-    <beast name="Bear" primary="true">
+    <beast name="Bears" primary="true">
         <information>
             <type>Animal</type>
             <demeanor>Selfish</demeanor>
@@ -104,16 +104,36 @@
                     are good swimmers, being comfortable in the water.
                     Such bears are also very good climbers, often climbing
                     trees in quick bounds, and capable of dropping several
-                    metres without harm.
+                    metres without harm. They are also very dexterous, being
+                    able to open doors.
                 </para>
             </physical>
 
             <social>
                 <para>
-                    Bears are generally only dangerous if surprised, though
-                    mothers can be very protective of their young.
+                    Black bears are mostly vegetarian, though will often eat
+                    carrion if it is available, especially soon after they
+                    come out of hibernation. The also eat fish and insects,
+                    and sometimes hunt larger animals such as deer.
+                </para>
+                <para>
+                    If hunting larger prey, black bears generally rely on
+                    surprise to ambush their prey. Most often, fights with
+                    other animals will occur over carrion. The can fight
+                    smaller animals such as cougars, but will often lose
+                    to packs of wolves.
                 </para>
             </social>
+
+            <tactics>
+                <para>
+                    Black bears are generally less aggressive than brown bears,
+                    and aren't so protective of their young. They will attack
+                    humans if hungry however. If their meal puts up a fight,
+                    they are more likely to flee rather than suffer serious
+                    injury.
+                </para>
+            </tactics>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
@@ -121,12 +141,20 @@
                 <attribute name="strength" score="5"/>
                 <attribute name="health" score="3"/>
                 <attribute name="agility" score="3"/>
-                <attribute name="dexterity" score="1"/>
+                <attribute name="dexterity" score="2"/>
                 <attribute name="perception" score="4"/>
-                <attribute name="intelligence" score="1"/>
+                <attribute name="intelligence" score="2"/>
                 <attribute name="empathy" score="2"/>
                 <attribute name="will" score="2"/>
             </attributes>
+
+            <traits>
+                <trait name="Bravery" score="2"/>
+                <trait name="Orneriness" score="4"/>
+                <trait name="Patience" score="3"/>
+            </traits>
+
+
 
             <skills>
                 <group name="Talents" type="talents">
