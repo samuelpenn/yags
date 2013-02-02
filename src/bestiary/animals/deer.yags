@@ -10,7 +10,7 @@
     Bestiary containing information on deers.
 -->
 
-<bestiary>
+<bestiary xmlns="http://yagsbook.sourceforge.net/xml">
 
     <!-- Basic deer information -->
     <beast name="Deer" primary="true">
@@ -32,11 +32,20 @@
             <short>
                 Timid mammals.
             </short>
+
+            <physical>
+                <para>
+                    Deer are several species of ruminant mammals which are found
+                    throughout the world in pretty much all climates, ranging
+                    from Africa to the Arctic. Generally, male deer grow antlers
+                    every year
+                </para>
+            </physical>
         </description>
     </beast>
 
     <!-- Black Bear -->
-    <beast name="Roe Deer">
+    <beast name="Roe Deer" parent="Deer">
         <information>
             <type>Animal</type>
             <demeanor>Selfish</demeanor>
@@ -93,12 +102,12 @@
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <attributes size="3" soak="9">
                 <attribute name="strength" score="2"/>
-                <attribute name="stamina" score="3"/>
+                <attribute name="health" score="3"/>
                 <attribute name="agility" score="5"/>
                 <attribute name="dexterity" score="1"/>
                 <attribute name="perception" score="4"/>
                 <attribute name="intelligence" score="1"/>
-                <attribute name="charisma" score="1"/>
+                <attribute name="empathy" score="1"/>
                 <attribute name="will" score="2"/>
             </attributes>
 
@@ -154,7 +163,7 @@
         </statistics>
     </beast>
 
-    <beast name="Red Deer">
+    <beast name="Red Deer" parent="Deer">
         <information>
             <type>Animal</type>
             <demeanor>Selfish</demeanor>
@@ -205,12 +214,12 @@
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <attributes size="5" soak="12">
                 <attribute name="strength" score="3"/>
-                <attribute name="stamina" score="3"/>
+                <attribute name="health" score="3"/>
                 <attribute name="agility" score="4"/>
                 <attribute name="dexterity" score="1"/>
                 <attribute name="perception" score="4"/>
                 <attribute name="intelligence" score="1"/>
-                <attribute name="charisma" score="1"/>
+                <attribute name="empathy" score="1"/>
                 <attribute name="will" score="2"/>
             </attributes>
 
