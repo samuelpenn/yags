@@ -10,7 +10,7 @@
 -->
 
 <bestiary xmlns="http://yagsbook.sourceforge.net/xml">
-    <beast name="Cat">
+    <beast name="Cats">
         <information>
             <type>Animal</type>
             <demeanor>Predator</demeanor>
@@ -41,21 +41,16 @@
                     their sense of smell.
                 </para>
             </physical>
-
-            <social>
-                <para>
-                </para>
-            </social>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <attributes size="1" soak="12">
-                <attribute name="strength" score="1"/>
+            <attributes size="0" soak="12">
+                <attribute name="strength" score="0"/>
                 <attribute name="health" score="3"/>
                 <attribute name="agility" score="5"/>
                 <attribute name="dexterity" score="1"/>
-                <attribute name="perception" score="4"/>
-                <attribute name="intelligence" score="1"/>
+                <attribute name="perception" score="5"/>
+                <attribute name="intelligence" score="2"/>
                 <attribute name="empathy" score="2"/>
                 <attribute name="will" score="2"/>
             </attributes>
@@ -65,8 +60,8 @@
                     <skill name="Athletics" score="7"/>
                     <skill name="Awareness" score="5"/>
                     <skill name="Brawl" score="5"/>
-                    <skill name="Charm" score="0"/>
-                    <skill name="Guile" score="0"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
                     <skill name="Sleight" score="1"/>
                     <skill name="Stealth" score="7"/>
                     <skill name="Throw" score="0"/>
@@ -80,24 +75,23 @@
 
             <combat>
                 <combatstyle style="Bite and claw" skill="Brawl">
-                    <initiative attribute="agility" bonus="-10"/>
-                    <attack attribute="agility" bonus="-3"/>
-                    <defence attribute="agility" bonus="-2"/>
-                    <damage type="split" bonus="-3"/>
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="split" bonus="2"/>
                 </combatstyle>
 
                 <armourstyle style="Base"/>
             </combat>
 
-            <passions>
-                <passion name="Bravery" score="3"/>
-                <passion name="Ego" score="2"/>
-                <passion name="Restraint" score="2"/>
-                <passion name="Temperence" score="2"/>
-            </passions>
+            <traits>
+                <trait name="Bravery" score="3"/>
+                <trait name="Orneriness" score="6"/>
+                <trait name="Patience" score="4"/>
+            </traits>
 
             <advantages>
                 <advantage name="Animal"/>
+                <advantage name="Weak"/>
                 <advantage name="Night vision" score="+2"/>
                 <advantage name="Good sense of smell" score="+1"/>
                 <advantage name="Good hearing" score="+1"/>
@@ -177,7 +171,6 @@
 
             <combat>
                 <combatstyle style="Bite and claw" skill="Brawl">
-                    <initiative attribute="agility" bonus="-10"/>
                     <attack attribute="agility" bonus="-3"/>
                     <defence attribute="agility" bonus="-2"/>
                     <damage type="split" bonus="-2"/>
@@ -186,12 +179,12 @@
                 <armourstyle style="Base"/>
             </combat>
 
-            <passions>
-                <passion name="Bravery" score="3"/>
-                <passion name="Ego" score="2"/>
-                <passion name="Restraint" score="2"/>
-                <passion name="Temperence" score="2"/>
-            </passions>
+            <traits>
+                <trait name="Bravery" score="3"/>
+                <trait name="Orneriness" score="6"/>
+                <trait name="Patience" score="4"/>
+            </traits>
+
 
             <advantages>
                 <advantage name="Animal"/>
