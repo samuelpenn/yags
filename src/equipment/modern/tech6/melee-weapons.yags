@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+
+<!--
+
+    General equipment lists.
+
+    Copyright 2005-2013, Samuel Penn, sam@glendale.org.uk
+
+    Redistribution and use with or without modification are permitted provided
+    that the following conditions are met:
+
+    1) Redistributions of any source code (e.g. XML) must retain the
+        above copyright notice and this list of conditions.
+
+    2) Redistributions in binary/printed forms must include copyright
+        attribution.
+
+    The purpose of these equipment lists are to provide a generic and complete
+    list of equipment for RPG purposes, in a format that can be used in other
+    games by anyone, with minimum fuss and license worries. If you make changes
+    and/or additions, then it'd be great if they are passed back or made
+    freely available, but you don't have to.
+
+    Version: $Revision: 1.1 $
+    Date:    $Date: 2007-08-30 18:15:54 $
+
+ -->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <item name="Hand axe">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>4</techLevel>
+
+        <short>A small steel weapon designed to be used in one hand.</short>
+
+        <description>
+            <para>
+                A small steel axe, not designed specifically for combat but
+                can be used in close quarters fighting. It has a small
+                head, with a haft about 30cm long.
+            </para>
+        </description>
+
+        <weight>250</weight>
+        <material>metal</material>
+
+        <cost units="usd">1</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Axes</category>
+            <class>single</class>
+
+            <combat>
+                <attack>+2</attack>
+                <defence>+1</defence>
+                <damage>+6</damage>
+            </combat>
+
+            <strength>1</strength>
+            <load>0.5</load>
+            <reach>1</reach>
+
+            <properties>
+                <heavy/>
+                <throwable/>
+            </properties>
+        </weapon>
+
+        <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Smithing (Weaponsmith)</skill>
+            <target need="1">15</target>
+            <time>Days</time>
+        </make>
+    </item>
+
+
+    <item name="Club">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>0</techLevel>
+
+        <short>A wooden club, a very simple weapon.</short>
+
+        <description>
+            <para>
+                Often, a club is not much more than a shaft of wood,
+                maybe with some metal on one end to weight it. It is
+                considered to be a simple weapon.
+            </para>
+        </description>
+
+        <weight>500</weight>
+        <material>wood</material>
+
+        <cost units="usd">1</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Clubs</category>
+            <class>brawl</class>
+            <class>single</class>
+
+            <combat>
+                <attack>+2</attack>
+                <defence>+3</defence>
+                <damage type="split">+5</damage>
+            </combat>
+
+            <strength>2</strength>
+            <load>1</load>
+            <reach>1</reach>
+
+            <properties>
+                <light/>
+            </properties>
+        </weapon>
+
+        <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Crafting</skill>
+            <target need="1">10</target>
+            <time>Hours</time>
+        </make>
+    </item>
+
+    <item name="Dagger">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>4</techLevel>
+
+        <short>A short bladed steel weapon.</short>
+
+        <description>
+            <para>
+                Daggers are halfway between a knife and a sword - unlike
+                a knife they are properly designed as a weapon rather
+                than a tool or eating implement.
+            </para>
+        </description>
+
+        <weight>250</weight>
+        <material>metal</material>
+
+        <cost units="usd">2</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Knives</category>
+            <class>brawl</class>
+            <class>single</class>
+
+            <combat>
+                <attack>+2</attack>
+                <defence>+3</defence>
+                <damage>+5</damage>
+            </combat>
+
+            <strength>1</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+
+            <properties>
+                <impaling/>
+                <light/>
+            </properties>
+        </weapon>
+
+        <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Smithing (Weaponsmith)</skill>
+            <target need="1">20</target>
+            <time>Days</time>
+        </make>
+    </item>
+
+
+
+    <item name="Knife">
+        <category>Weapon</category>
+        <importance>3</importance>
+        <availability>3</availability>
+        <techLevel>4</techLevel>
+
+        <short>A short bladed weapon.</short>
+
+        <weight>100</weight>
+        <material>metal</material>
+
+        <cost units="usd">1</cost>
+
+        <description>
+            <para>
+                Steel knives are found everywhere, whether they are flick knives,
+                hunting knives or table knives. They aren't really effective weapons,
+                but will do in a pinch.
+            </para>
+        </description>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Knives</category>
+            <class>brawl</class>
+            <class>single</class>
+
+            <combat>
+                <attack>+1</attack>
+                <defence>+2</defence>
+                <damage type="mixed">+2</damage>
+            </combat>
+
+            <strength>1</strength>
+            <load>0.25</load>
+            <reach>0</reach>
+            <weight>250</weight>
+
+            <properties>
+                <light/>
+                <throwable/>
+                <weak/>
+            </properties>
+        </weapon>
+
+        <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Smithing (Weaponsmith)</skill>
+            <target need="1">15</target>
+            <time>Days</time>
+        </make>
+    </item>
+
+
+
+    <item name="Throwing axe">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>3</availability>
+        <techLevel>4</techLevel>
+
+        <short>A small axe designed for throwing.</short>
+
+        <weight>250</weight>
+        <material>metal</material>
+        <cost units="usd">3</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Axes</category>
+            <class>thrown</class>
+
+            <combat>
+                <attack>+2</attack>
+                <damage>+5</damage>
+                <range strength="true">
+                    <increment>10</increment>
+                    <short>3</short>
+                    <medium>6</medium>
+                    <long>9</long>
+                </range>
+            </combat>
+
+            <strength>2</strength>
+            <load>0.5</load>
+            <reach>0</reach>
+
+            <properties>
+                <missile/>
+                <heavy/>
+            </properties>
+        </weapon>
+    </item>
+
+
+
+    <item name="Throwing knife">
+        <category>Weapon</category>
+        <importance>2</importance>
+        <availability>4</availability>
+        <techLevel>4</techLevel>
+
+        <short>A knife designed for throwing.</short>
+
+        <weight>250</weight>
+        <material>metal</material>
+        <cost units="usd">2</cost>
+
+        <weapon xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <category>Knives</category>
+            <class>thrown</class>
+
+            <combat mode="Thrown" importance="2">
+                <attack>+3</attack>
+                <damage>+2</damage>
+                <range strength="true">
+                    <increment>10</increment>
+                    <short>2</short>
+                    <medium>5</medium>
+                    <long>10</long>
+                </range>
+            </combat>
+
+            <strength>1</strength>
+            <load>0.25</load>
+            <reach>0</reach>
+
+            <properties>
+                <missile/>
+                <weak/>
+                <light/>
+            </properties>
+        </weapon>
+
+        <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill>Smithing (Weaponsmith)</skill>
+            <target need="1">20</target>
+            <time>Hours</time>
+        </make>
+    </item>
+
+</equipment>
+
+
