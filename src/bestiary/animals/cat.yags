@@ -14,6 +14,40 @@
         <information>
             <type>Animal</type>
             <demeanor>Predator</demeanor>
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                Cats are members of the species Felis catus, which include
+                all breeds of domesticated cats, as well as feral varieties.
+            </short>
+
+            <physical>
+                <para>
+                    Cats include smaller, domestic and feral varieties of cats -
+                    the big cats have their own individual entries. All cats
+                    are excellent predators, and are often responsible for
+                    massive destruction of local wildlife where they are kept
+                    as pets. Due to their adaptability, they are considered to
+                    be one of the worst invasive species.
+                </para>
+
+                <para>
+                    Cats have excellent night vision and better sense of smell
+                    then humans, though tend rely more on sight than smell than
+                    some other animals such as dogs.
+                </para>
+            </physical>
+        </description>
+    </beast>
+
+
+    <beast name="Domestic Cat" parent="Cats">
+        <information>
+            <type>Animal</type>
+            <demeanor>Predator</demeanor>
 
             <habitat climate="Any" terrain="Any" frequency="Varies"/>
 
@@ -25,26 +59,35 @@
 
         <description>
             <short>
-                Domestic cats tend to be small, and actually not that well
-                domesticated (at least not as much as dogs are).
+                Domestic cats are often kept as pets, though they are often
+                still capable hunters.
             </short>
-
-            <movement>
-                <walk normal="10" max="5"/>
-            </movement>
 
             <physical>
                 <para>
                     Domestic cats vary greatly in colour and size, though
-                    are generally on the small size. They see well in the
-                    dark, and unlike dogs, rely more on their vision than
-                    their sense of smell.
+                    are generally on the small size. They see extremely well
+                    in the dark, and though they also have a good sense of
+                    smell, they rely on it less than dogs do.
+                </para>
+                <para>
+                    All cats are carnivorous, and need a high proportion of
+                    protein in their diet.
                 </para>
             </physical>
+
+            <social>
+                <para>
+                    Though cats are naturally solitary, domesticated cats are
+                    happy to live in large groups. This can cause problems
+                    if they go feral, since they can form into large groups
+                    covering a wide area.
+                </para>
+            </social>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <attributes size="0" soak="12">
+            <attributes size="0" soak="7">
                 <attribute name="strength" score="0"/>
                 <attribute name="health" score="3"/>
                 <attribute name="agility" score="5"/>
@@ -58,8 +101,8 @@
             <skills>
                 <group name="Talents" type="talents">
                     <skill name="Athletics" score="7"/>
-                    <skill name="Awareness" score="5"/>
-                    <skill name="Brawl" score="5"/>
+                    <skill name="Awareness" score="6"/>
+                    <skill name="Brawl" score="4"/>
                     <skill name="Charm" score="1"/>
                     <skill name="Guile" score="1"/>
                     <skill name="Sleight" score="1"/>
@@ -77,7 +120,7 @@
                 <combatstyle style="Bite and claw" skill="Brawl">
                     <attack attribute="agility" bonus="0"/>
                     <defence attribute="agility" bonus="0"/>
-                    <damage type="split" bonus="2"/>
+                    <damage type="mixed" bonus="2"/>
                 </combatstyle>
 
                 <armourstyle style="Base"/>
@@ -85,23 +128,25 @@
 
             <traits>
                 <trait name="Bravery" score="3"/>
-                <trait name="Orneriness" score="6"/>
+                <trait name="Orneriness" score="5"/>
                 <trait name="Patience" score="4"/>
             </traits>
 
             <advantages>
                 <advantage name="Animal"/>
                 <advantage name="Weak"/>
-                <advantage name="Night vision" score="+2"/>
-                <advantage name="Good sense of smell" score="+1"/>
-                <advantage name="Good hearing" score="+1"/>
+                <advantage name="Night vision" score="+3"/>
+                <advantage name="Good sense of smell" score="+2"/>
+                <advantage name="Good hearing" score="+2"/>
+                <advantage name="Land on feet"/>
 
-                <advantage name="Ambush"/>
+                <advantage name="Ambush" skill="Brawl" cost="2"/>
+                <advantage name="Pounce" skill="Brawl" cost="4"/>
             </advantages>
         </statistics>
     </beast>
 
-    <beast name="Wild cat" parent="Cat">
+    <beast name="African Wild Cat" parent="Cats">
         <information>
             <type>Animal</type>
             <demeanor>Predator</demeanor>
@@ -116,14 +161,10 @@
 
         <description>
             <short>
-                Wild cats tend to be viscious versions of domestic cats.
+                Wild cats tend to be viscous versions of domestic cats.
                 Sometimes, they are half breeds, or just abandoned
                 domestic cats.
             </short>
-
-            <movement>
-                <walk normal="10" max="5"/>
-            </movement>
 
             <physical>
                 <para>
@@ -140,24 +181,24 @@
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <attributes size="2" soak="12">
-                <attribute name="strength" score="1"/>
-                <attribute name="health" score="3"/>
+            <attributes size="0" soak="7">
+                <attribute name="strength" score="0"/>
+                <attribute name="health" score="4"/>
                 <attribute name="agility" score="5"/>
                 <attribute name="dexterity" score="1"/>
-                <attribute name="perception" score="4"/>
-                <attribute name="intelligence" score="1"/>
-                <attribute name="empathy" score="1"/>
+                <attribute name="perception" score="5"/>
+                <attribute name="intelligence" score="2"/>
+                <attribute name="empathy" score="2"/>
                 <attribute name="will" score="2"/>
             </attributes>
 
             <skills>
                 <group name="Talents" type="talents">
-                    <skill name="Athletics" score="6"/>
-                    <skill name="Awareness" score="5"/>
-                    <skill name="Brawl" score="6"/>
-                    <skill name="Charm" score="0"/>
-                    <skill name="Guile" score="0"/>
+                    <skill name="Athletics" score="7"/>
+                    <skill name="Awareness" score="6"/>
+                    <skill name="Brawl" score="5"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
                     <skill name="Sleight" score="1"/>
                     <skill name="Stealth" score="7"/>
                     <skill name="Throw" score="0"/>
@@ -171,9 +212,9 @@
 
             <combat>
                 <combatstyle style="Bite and claw" skill="Brawl">
-                    <attack attribute="agility" bonus="-3"/>
-                    <defence attribute="agility" bonus="-2"/>
-                    <damage type="split" bonus="-2"/>
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="mixed" bonus="2"/>
                 </combatstyle>
 
                 <armourstyle style="Base"/>
@@ -192,8 +233,8 @@
                 <advantage name="Good sense of smell" score="+1"/>
                 <advantage name="Good hearing" score="+1"/>
 
-                <advantage name="Ambush"/>
-                <advantage name="Killing blow"/>
+                <advantage name="Ambush" skill="Brawl" cost="2"/>
+                <advantage name="Pounce" skill="Brawl" cost="4"/>
             </advantages>
         </statistics>
     </beast>
