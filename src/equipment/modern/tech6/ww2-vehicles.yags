@@ -68,6 +68,7 @@
         <techLevel>6</techLevel>
         <legality>1</legality>
         <short>Medium tank.</short>
+        <importance>2</importance>
 
         <cost units="usd">31000</cost>
         <weight>33200000</weight>
@@ -153,6 +154,7 @@
         <short>German medium tank.</short>
         <cost units="usd">26000</cost>
         <weight>27500000</weight>
+        <importance>2</importance>
 
         <construction>
             <manufacturer>Germany</manufacturer>
@@ -232,6 +234,7 @@
         <cost units="usd">56000</cost>
         <techLevel>6</techLevel>
         <weight>62600000</weight>
+        <importance>2</importance>
 
         <short>WWII German heavy tank.</short>
 
@@ -311,6 +314,7 @@
         <cost units="usd">65000</cost>
         <techLevel>6</techLevel>
         <weight>28600000</weight>
+        <importance>2</importance>
 
         <short>WWII Russian heavy tank.</short>
 
@@ -400,6 +404,7 @@
         <legality>1</legality>
         <techLevel>6</techLevel>
         <weight>27600000</weight>
+        <importance>2</importance>
 
         <short>WWII British tank.</short>
 
@@ -468,6 +473,108 @@
                         <firearm/>
                         <heavy/>
                         <automatic score="20"/>
+                    </properties>
+                </weapon>
+            </combat>
+        </vehicle>
+    </item>
+
+    <item name="Heinkel Bomber">
+        <category>Vehicle</category>
+        <genre>WWII</genre>
+        <legality>1</legality>
+        <cost units="usd">65000</cost>
+        <techLevel>6</techLevel>
+        <weight>8220000</weight>
+        <importance>2</importance>
+
+        <short>German He 111H Medium Bomber.</short>
+
+        <description>
+            <para>
+                The Heinkel He 111 was one of the most recognised German bombers of
+                World War II. It was originally classed as a transport aircraft, but
+                was mostly used as a medium bomber during the war.
+            </para>
+        </description>
+
+        <construction>
+            <year>1935</year>
+            <manufacturer>Germany</manufacturer>
+        </construction>
+
+        <performance realm="air">
+            <speed>440</speed>
+            <acceleration>50</acceleration>
+            <range>2300</range>
+        </performance>
+
+        <vehicle xmlns="http://yagsbook.sourceforge.net/xml/yags">
+
+            <attributes size="15" soak="22" move="80" acceleration="15">
+                <attribute name="strength" score="40"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="2"/>
+            </attributes>
+
+            <combat>
+                <armour location="All" score="15"/>
+
+                <weapon name="20mm MG FF Cannon">
+                    <attack score="25"/>
+                    <damage score="35"/>
+                    <size>10</size>
+                    <increment>30</increment>
+                    <rof>50</rof><capacity>500</capacity>
+                    <recoil>0</recoil>
+                    <range>
+                        <short>1000</short>
+                        <medium>4000</medium>
+                        <long>10000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <vehicle/>
+                        <explosive score="1"/>
+                        <automatic score="25"/>
+                    </properties>
+                </weapon>
+
+                <weapon name="13mm MG 131 Cannon">
+                    <attack score="25"/>
+                    <damage score="25"/>
+                    <size>10</size>
+                    <increment>30</increment>
+                    <rof>200</rof><capacity>1000</capacity>
+                    <recoil>0</recoil>
+                    <range>
+                        <short>1000</short>
+                        <medium>4000</medium>
+                        <long>10000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <vehicle/>
+                        <explosive score="1"/>
+                        <automatic score="50"/>
+                    </properties>
+                </weapon>
+
+                <weapon name="Light Machine Gun 7.92mm (x7)">
+                    <attack score="5"/>
+                    <damage score="32"/>
+                    <increment>25</increment>
+                    <rof>30</rof><capacity>2000</capacity>
+                    <recoil>-5</recoil>
+                    <range>
+                        <short>750</short>
+                        <medium>2000</medium>
+                        <long>4000</long>
+                    </range>
+                    <properties>
+                        <firearm/>
+                        <heavy/>
+                        <automatic/>
                     </properties>
                 </weapon>
             </combat>
