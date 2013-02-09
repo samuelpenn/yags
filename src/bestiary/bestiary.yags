@@ -296,15 +296,41 @@
             </sect2>
 
             <sect2>
-                <title>Weak Creatures</title>
-
+                <title>Strength</title>
                 <para>
-                    Some animals are classed as being <e>Weak</e>. These always
-                    have a <t>Strength</t> of zero. Any <t>Strength</t> rolls
-                    that they make against another creature that isn't either
-                    <e>Weak</e> or <e>Tiny</e> is halved (round down). This
-                    includes damage rolls (and includes any damage bonuses).
+                    Like characters, all creatures have a <t>Strength</t> attribute.
+                    This is often related to the <t>Size</t> of the creature, though
+                    there can be a wide variety of strengths for creatures of a
+                    similar size.
                 </para>
+                <para>
+                    Though large creatures tend to have a very high capability to carry
+                    or pull weight, this does not always transfer to an ability to
+                    cause damage. In these case, a creature will also have a
+                    <e>half strength</e> (which may not be exactly half of their full
+                    strength). This is denoted in their statistics as a two-part
+                    <t>Strength</t> of "X / Y". The second, lower, number is their
+                    half strength, and it is this which is used to calculate damage.
+                </para>
+                <para>
+                    When calculating <t>Strength</t> for an animal, assume that each
+                    +2 <t>Size</t> increases <t>Strength</t> by +1. Add a further +2
+                    if they are a quadruped, or +3 if they have six or more legs.
+                    Animals noted for being particularly strong or weak may then
+                    modify this base either way (normally by one or two points).
+                </para>
+
+                <sect3>
+                    <title>Weak Creatures</title>
+
+                    <para>
+                        Some animals are classed as being <e>Weak</e>. These always
+                        have a <t>Strength</t> of zero. Any <t>Strength</t> rolls
+                        that they make against another creature that isn't either
+                        <e>Weak</e> or <e>Tiny</e> is halved (round down). This
+                        includes damage rolls (and includes any damage bonuses).
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
@@ -703,6 +729,7 @@
 
                 <import-beasts importance="0">
                     <href>animals/bear.yags</href>
+                    <href>animals/bison.yags</href>
                     <href>animals/boar.yags</href>
                     <href>animals/cat.yags</href>
                     <href>animals/dinosaurs.yags</href>
