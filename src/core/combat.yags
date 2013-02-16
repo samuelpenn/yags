@@ -247,133 +247,160 @@
                         Distance, and effects how much damage the weapon
                         does.
                     </item>
-                </itemlist>
-            </sect2>
 
-            <sect2>
-                <title>Combat skills</title>
-
-                <para>
-                    There are a huge variety of different weapons that can
-                    be used in combat, from knives to two handed swords, from
-                    pistols to sniper rifles and light machine guns. However,
-                    there are only a small number of very broad skills that
-                    need to be learnt. The most common skills for personal
-                    weapons are:
-                </para>
-
-                <itemlist order="sort">
-                    <item name="Brawl">
-                        All forms of unarmed combat, including punching,
-                        kicking, biting and wrestling. It also covers use
-                        of small (non-martial) weapons. All specialist
-                        martial arts (such as karate or marines close
-                        combat) are specialisations of brawl.
+                    <item name="Reach">
+                        The reach of a melee weapon is an indication of how
+                        long it is, and weapons with longer reach have an
+                        advantage against shorter reach weapons. In a
+                        confined space however, longer reach weapons have a
+                        disadvantage. Missile weapons also have a reach,
+                        which indicates how suitable they are in close combat.
                     </item>
 
-                    <item name="Melee">
-                        Using a melee weapon of any type, from knives to
-                        maces or long swords. Use of shields also comes
-                        under melee.
-                    </item>
-
-                    <item name="Throw">
-                        Throwing weapons of any type, including knives,
-                        spears, stones or bottles. Using a sling or atlatl
-                        also comes under throw.
-                    </item>
-
-                    <item name="Guns">
-                        Using personal guns, including pistols, SMGs,
-                        assault rifles, shotguns and sniper rifles.
-                    </item>
-
-                    <item name="Bow">
-                        All types of bows except for crossbows. Includes
-                        short and long bows, as well as historical and modern
-                        variants of both.
-                    </item>
-
-                    <item name="Crossbow">
-                        Use of crossbows. Crossbows can also be used with
-                        the Throw skill, but mastery (and fast loading)
-                        requires this skill.
+                    <item name="Shock">
+                        Particularly painful types of damage can cause shock,
+                        which reduces your initiative.
                     </item>
                 </itemlist>
 
-                <para>
-                    <e>Techniques</e> provide the ability to specialise in
-                    particular types of weapons or styles of combat, and a
-                    true master will do this. You can use a sword and shield
-                    with the <e>Melee</e> skill, but knowing the
-                    <e>Weapon and shield</e> technique makes it easier to
-                    defend against multiple opponents, or to use the shield
-                    offensively at the same time for example.
-                </para>
-            </sect2>
+                <sect3>
+                    <title>Combat skills</title>
 
-            <sect2>
-                <title>Weapons</title>
+                    <para>
+                        There are a huge variety of different weapons that can
+                        be used in combat, from knives to two handed swords, from
+                        pistols to sniper rifles and light machine guns. However,
+                        there are only a small number of very broad skills that
+                        need to be learnt. The most common skills for personal
+                        weapons are:
+                    </para>
 
-                <para>
-                    Every melee weapon provides three combat bonuses -
-                    <e>attack</e>, <e>defence</e> and <e>damage</e> which
-                    add to the attack, defence an damage rolls of a
-                    character.
-                </para>
+                    <itemlist order="sort">
+                        <item name="Brawl">
+                            All forms of unarmed combat, including punching,
+                            kicking, biting and wrestling. It also covers use
+                            of small (non-martial) weapons. All specialist
+                            martial arts (such as karate or marines close
+                            combat) are specialisations of brawl.
+                        </item>
 
-                <para>
-                    There are plenty of other statistics for each weapon,
-                    but these three are the primary ones which are used
-                    in the basic combat system.
-                </para>
-            </sect2>
+                        <item name="Melee">
+                            Using a melee weapon of any type, from knives to
+                            maces or long swords. Use of shields also comes
+                            under melee.
+                        </item>
 
-            <sect2>
-                <title>Armour</title>
+                        <item name="Throw">
+                            Throwing weapons of any type, including knives,
+                            spears, stones or bottles. Using a sling or atlatl
+                            also comes under throw.
+                        </item>
 
-                <para>
-                    Every creature has a basic soak score, which reduces
-                    the damage done to them in an attack. Armour gives a
-                    protective bonus which adds to this soak.
-                </para>
-            </sect2>
+                        <item name="Guns">
+                            Using personal guns, including pistols, SMGs,
+                            assault rifles, shotguns and sniper rifles.
+                        </item>
 
-            <sect2>
-                <title>Encumbrance</title>
+                        <item name="Bow">
+                            All types of bows except for crossbows. Includes
+                            short and long bows, as well as historical and modern
+                            variants of both.
+                        </item>
 
-                <para>
-                    You can only carry so much equipment before you start
-                    suffering penalties. You can carry a <e>load</e>
-                    equal to the square of your <s>Strength</s> without
-                    penalty. Load is measured in kilogrammes, however an
-                    armour's load rating may be lower than this when
-                    worn if the weight is well distributed (this will be
-                    factored into the armours load value).
-                </para>
+                        <item name="Crossbow">
+                            Use of crossbows. Crossbows can also be used with
+                            the Throw skill, but mastery (and fast loading)
+                            requires this skill.
+                        </item>
 
-                <targetlist>
-                    <valueLabel>Load</valueLabel>
-                    <targetLabel>Effects</targetLabel>
+                        <item name="Heavy weapons">
+                            Large, normally vehicle mounted, guns. Defaults to
+                            the Guns skills.
+                        </item>
+                    </itemlist>
 
-                    <item value="Str" target="Unencumbered.">
-                    </item>
-                    <item value="Str^2" target="Light (-0).">
-                    </item>
-                    <item value="2 x Str^2" target="Medium (-1).">
-                    </item>
-                    <item value="4 x Str^2" target="Heavy (-2)."/>
-                    <item value="10 x Str^2" target="Extreme (-3)."/>
-                </targetlist>
+                    <para>
+                        <e>Techniques</e> provide the ability to specialise in
+                        particular types of weapons or styles of combat, and a
+                        true master will do this. You can use a sword and shield
+                        with the <e>Melee</e> skill, but knowing the
+                        <e>Weapon and shield</e> technique makes it easier to
+                        defend against multiple opponents, or to use the shield
+                        offensively at the same time for example.
+                    </para>
+                </sect3>
 
-                <para>
-                    Penalties normally apply to <t>Agility</t>, though
-                    specific circumstances may have their own effects.
-                    For some actions, the penalty may be multiplied, in
-                    which case <e>Light</e> counts as 0.5 (round down).
-                    For example, you suffer double penalty whilst
-                    swimming, so would be at -1 if lightly encumbered.
-                </para>
+                <sect3>
+                    <title>Weapons</title>
+
+                    <para>
+                        Every melee weapon provides three combat bonuses -
+                        <e>attack</e>, <e>defence</e> and <e>damage</e> which
+                        add to the attack, defence an damage rolls of a
+                        character.
+                    </para>
+
+                    <para>
+                        Missile weapons have a short, medium and long range
+                        which determine their maximum effectiveness. They
+                        also have an <e>increment</e>, which is a measure of
+                        their accuracy and determines how hard it is to hit
+                        a target.
+                    </para>
+
+                    <para>
+                        There are plenty of other statistics for each weapon,
+                        but these three are the primary ones which are used
+                        in the basic combat system.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Armour</title>
+
+                    <para>
+                        Every creature has a basic soak score, which reduces
+                        the damage done to them in an attack. Armour gives a
+                        protective bonus which adds to this soak.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Encumbrance</title>
+
+                    <para>
+                        You can only carry so much equipment before you start
+                        suffering penalties. You can carry a <e>load</e>
+                        equal to the square of your <s>Strength</s> without
+                        penalty. Load is measured in kilogrammes, however an
+                        armour's load rating may be lower than this when
+                        worn if the weight is well distributed (this will be
+                        factored into the armours load value).
+                    </para>
+
+                    <targetlist>
+                        <valueLabel>Load</valueLabel>
+                        <targetLabel>Effects</targetLabel>
+
+                        <item value="Str" target="Unencumbered.">
+                        </item>
+                        <item value="Str^2" target="Light (-0).">
+                        </item>
+                        <item value="2 x Str^2" target="Medium (-1).">
+                        </item>
+                        <item value="4 x Str^2" target="Heavy (-2)."/>
+                        <item value="10 x Str^2" target="Extreme (-3)."/>
+                    </targetlist>
+
+                    <para>
+                        Penalties normally apply to <t>Agility</t>, though
+                        specific circumstances may have their own effects.
+                        For some actions, the penalty may be multiplied, in
+                        which case <e>Light</e> counts as 0.5 (round down).
+                        For example, you suffer double penalty whilst
+                        swimming, so would be at -1 if lightly encumbered.
+                    </para>
+                </sect3>
             </sect2>
         </sect1>
 
@@ -397,11 +424,12 @@
             </y:skeq>
 
             <para>
-                If you fumble your initiative roll, then you may not act
-                for the first round of combat. If you were in the middle
-                of doing something (running, picking something up) then
-                you may continue doing that however (but cannot attack,
-                or declare defences).
+                If you fumble your initiative roll, then your initiative
+                is zero. An initiative of zero is bad, because it halves
+                all your skill checks and means that you always go last
+                each round. You can opt to re-roll your initiative later
+                in the combat - see the initiative section for details on
+                how to do this.
             </para>
 
             <sect2>
@@ -480,7 +508,7 @@
                 </sect3>
 
                 <sect3>
-                    <title>Declaring Defenses</title>
+                    <title>Declaring Defences</title>
 
                     <para>
                         You must declare the number of defences though do
@@ -514,7 +542,8 @@
                         If you are making a melee attack but do not declare
                         a defence against the target, then they get a
                         <e>counter strike</e> against you after your attack
-                        has been resolved.
+                        has been resolved (assuming that they are still
+                        standing).
                     </para>
                 </sect3>
 
@@ -526,7 +555,9 @@
                         a wait action. You must say what event you are
                         waiting for, and what you will do if it occurs.
                         If the event doesn't happen, then you don't do
-                        anything that round.
+                        anything that round. You <e>cannot</e> state that
+                        you will do one thing if something happens, and
+                        another thing if it doesn't.
                     </para>
                 </sect3>
 
