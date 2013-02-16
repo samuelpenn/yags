@@ -7,7 +7,7 @@
          xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
 
     <header>
-        <title>Combat (Missile)</title>
+        <title>Combat</title>
         <tagline>YAGS</tagline>
 
         <summary>
@@ -27,7 +27,7 @@
         </cvsinfo>
 
         <license type="Yags">
-            <year>2007</year>
+            <year>2013</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -1454,6 +1454,103 @@
                             type of rounds. Often, they can only be fired in
                             pump-action mode.
                         </para>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Elemental Attacks</title>
+                    <para>
+                        Historically, fire has been a dangerous and terrifying
+                        weapon. In the modern era, weapons such as flame throwers
+                        have upped the terror factor, though the risks involved
+                        in carrying a tank of highly flammable substance on your
+                        back whilst spraying fire at people isn't one to be
+                        ignored.
+                    </para>
+                    <para>
+                        Acid and other forms of corrosive attacks are treated in
+                        much the same way as fire.
+                    </para>
+                    <para>
+                        Elemental attacks tend to be light splash damage unless
+                        it is ongoing, so it will often cause <e>stuns</e> rather
+                        than anything more serious. If it is applied over multiple
+                        rounds however, then it increases by a damage category
+                        each round. Generally, a burning weapon does not count as
+                        continuous, so will only cause <e>stun</e> damage.
+                    </para>
+                    <para>
+                        Elemental attacks will also cause <e>shock</e>, which
+                        reduces your initiative. Each level of damage (either stun
+                        or wound) causes 5 shock damage.
+                    </para>
+
+                    <sect4>
+                        <title>Fire</title>
+                        <para>
+                            Normally, fire is the most common form of elemental
+                            damage. In combat, it may be due to being hit with a
+                            burning torch. Outside of combat, it may be due to
+                            falling into a fire.
+                        </para>
+                        <para>
+                            Amount of damage done is affected by not only the heat
+                            of the flame, but also how well it contacts the flesh.
+                            Burning liquids can cause more damage than hotter
+                            solid material.
+                        </para>
+                        <targetlist>
+                            <targetFirst>false</targetFirst>
+                            <valueLabel>Type of fire</valueLabel>
+                            <targetLabel>Damage</targetLabel>
+                            <item value="Torch" target="+5s">
+                                Hitting someone with a burning torch.
+                                Does stun damage.
+                            </item>
+                            <item value="Campfire" target="+10s">
+                                Falling, or being bushed into, a camp fire.
+                                If you do not get out within a round, damage
+                                becomes mixed, and the round after wounds.
+                            </item>
+                            <item value="Bonfire" target="+20s">
+                                Falling, or being bushed into, a large bonfire.
+                                Damage is initially mixed, and increases to
+                                wounds in the second and subsequent rounds.
+                            </item>
+                            <item value="Flamethrower" target="+15m">
+                                Military weapon which projects a jet of burning
+                                fuel at the target. The fuel continues to burn
+                                for another two rounds.
+                            </item>
+                        </targetlist>
+                        <para>
+                            Each round you are engulfed in fire, the damage
+                            also increases by +5 up to double the base damage.
+                        </para>
+                        <example title="Fire">
+                            <para>
+                                Jason is trussed up and thrown onto a bonfire,
+                                taking +20 stun damage that round. He takes
+                                two stuns (and -10 shock) and is unable to
+                                leave until he's untied himself.
+                            </para>
+                            <para>
+                                The second round, the damage is now +25, and is
+                                mixed damage. He takes another two stuns, plus
+                                also a wound, plus a total of -15 shock. By now,
+                                his initiative has probably been taken down to
+                                zero, so any skill checks he makes to try and
+                                escape will be halved unless he spends fatigue.
+                            </para>
+                            <para>
+                                In the third round, the damage is now +30, and
+                                it is all wounds. He takes 4 wounds (taking
+                                him down to -25, plus the -10 from the stuns).
+                                The -20 shock probably has no further effect.
+                                If he doesn't escape this turn then he is most
+                                likely to die a very painful death.
+                            </para>
+                        </example>
                     </sect4>
                 </sect3>
             </sect2>
