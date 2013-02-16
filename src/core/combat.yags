@@ -361,46 +361,21 @@
                     <para>
                         Every creature has a basic soak score, which reduces
                         the damage done to them in an attack. Armour gives a
-                        protective bonus which adds to this soak.
+                        protective bonus which adds to this soak, but may
+                        cause you to suffer a penalty to actions.
+                    </para>
+
+                    <para>
+                        Armour is either <e>light</e> or <e>heavy</e>. The
+                        former isn't as effective against weapons designed
+                        to penetrate armour, but is often less likely to
+                        restrict your movement. In modern settings, some
+                        armour is also rated as being <e>bulletproof</e>.
+                        If it isn't, then effectiveness against firearms
+                        is greatly reduced.
                     </para>
                 </sect3>
 
-                <sect3>
-                    <title>Encumbrance</title>
-
-                    <para>
-                        You can only carry so much equipment before you start
-                        suffering penalties. You can carry a <e>load</e>
-                        equal to the square of your <s>Strength</s> without
-                        penalty. Load is measured in kilogrammes, however an
-                        armour's load rating may be lower than this when
-                        worn if the weight is well distributed (this will be
-                        factored into the armours load value).
-                    </para>
-
-                    <targetlist>
-                        <valueLabel>Load</valueLabel>
-                        <targetLabel>Effects</targetLabel>
-
-                        <item value="Str" target="Unencumbered.">
-                        </item>
-                        <item value="Str^2" target="Light (-0).">
-                        </item>
-                        <item value="2 x Str^2" target="Medium (-1).">
-                        </item>
-                        <item value="4 x Str^2" target="Heavy (-2)."/>
-                        <item value="10 x Str^2" target="Extreme (-3)."/>
-                    </targetlist>
-
-                    <para>
-                        Penalties normally apply to <t>Agility</t>, though
-                        specific circumstances may have their own effects.
-                        For some actions, the penalty may be multiplied, in
-                        which case <e>Light</e> counts as 0.5 (round down).
-                        For example, you suffer double penalty whilst
-                        swimming, so would be at -1 if lightly encumbered.
-                    </para>
-                </sect3>
             </sect2>
         </sect1>
 
@@ -426,10 +401,18 @@
             <para>
                 If you fumble your initiative roll, then your initiative
                 is zero. An initiative of zero is bad, because it halves
-                all your skill checks and means that you always go last
-                each round. You can opt to re-roll your initiative later
-                in the combat - see the initiative section for details on
-                how to do this.
+                all your skill checks and means that all your actions are
+                <e>slow</e> (meaning that you always go last each round).
+                You can opt to re-roll your initiative later in the combat,
+                doing so means that you cannot take any other actions that
+                round (including movement or defences), though this is
+                also considered a skill check that is halved.
+            </para>
+
+            <para>
+                If you do have an initiative of zero, then you can always
+                choose to gain a level of <e>fatigue</e> to act normally
+                that round. This can be used when re-rolling initiative.
             </para>
 
             <sect2>
@@ -440,8 +423,7 @@
                     Once a round has been completed, combat either ends
                     or everyone starts a new round. Initiative is very
                     important in combat, since a high initiative gives
-                    a character a big tactical advantage over everyone
-                    else.
+                    you a big tactical advantage over everyone else.
                 </para>
 
                 <itemlist order="1">
