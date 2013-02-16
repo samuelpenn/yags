@@ -777,6 +777,43 @@
                         </para>
                     </sect4>
                 </sect3>
+
+                <sect3>
+                    <title>Encumbrance</title>
+
+                    <para>
+                        You can only carry so much equipment before you start
+                        suffering penalties. You can carry a <e>load</e>
+                        equal to the square of your <s>Strength</s> without
+                        penalty. Load is measured in kilogrammes, however an
+                        armour's load rating may be lower than this when
+                        worn if the weight is well distributed (this will be
+                        factored into the armours load value).
+                    </para>
+
+                    <targetlist>
+                        <valueLabel>Load</valueLabel>
+                        <targetLabel>Effects</targetLabel>
+
+                        <item value="Str" target="Unencumbered.">
+                        </item>
+                        <item value="Str^2" target="Light (-0).">
+                        </item>
+                        <item value="2 x Str^2" target="Medium (-1).">
+                        </item>
+                        <item value="4 x Str^2" target="Heavy (-2)."/>
+                        <item value="10 x Str^2" target="Extreme (-3)."/>
+                    </targetlist>
+
+                    <para>
+                        Penalties normally apply to <t>Agility</t>, though
+                        specific circumstances may have their own effects.
+                        For some actions, the penalty may be multiplied, in
+                        which case <e>Light</e> counts as 0.5 (round down).
+                        For example, you suffer double penalty whilst
+                        swimming, so would be at -1 if lightly encumbered.
+                    </para>
+                </sect3>
             </sect2>
 
             <sect2>
