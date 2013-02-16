@@ -30,15 +30,23 @@
 
 
     <advantage name="Combat paralysis" type="disadvantage">
-        <cost points="-1"/>
+        <cost points="-3"/>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You are fearful and indecisive, and react poorly in combat.
-                You are unable to act in the first round of combat. If
-                you have surprise, then you do not get any benefit from
-                the surprise. A fumbled initiative means that you are
-                indecisive for two rounds.
+                Whenever you roll initiative at the start of combat, it is
+                always automatically zero. You must take a level of
+                <e>fatigue</e> if you ever want to re-roll initiative during
+                combat, at which point the normal rules apply (so you must
+                gain a second <e>fatigue</e> not to have that roll halved).
+            </para>
+            <para>
+                This disadvantage is pretty crippling if you ever get
+                involved in a fight. Note that it does not apply to sports
+                such as fencing or judo where you're not trying to hurt
+                each other. If a sport turns nasty though, then it
+                immediately kicks in and your initiative drops to zero.
             </para>
         </description>
     </advantage>
@@ -49,7 +57,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You do not know how to read or right, and do not
+                You do not know how to read or write, and do not
                 start with reading or writing skills in any language.
                 This disadvantage can only be taken in a setting where
                 literacy is the norm.
@@ -158,7 +166,6 @@
         </description>
     </advantage>
 
-
     <advantage name="Small" type="disadvantage">
         <cost points="-1"/>
         <forbiddon>Large</forbiddon>
@@ -177,9 +184,6 @@
         </description>
     </advantage>
 
-
-
-
     <advantage name="Animal enmity" type="disadvantage">
         <cost points="-1"/>
         <genre>Common</genre>
@@ -192,8 +196,6 @@
             </para>
         </description>
     </advantage>
-
-
 
     <advantage name="Gullible" type="disadvantage">
         <cost points="-1"/>
@@ -419,23 +421,6 @@
         </description>
     </advantage>
 
-    <advantage name="Non-combatant" type="disadvantage">
-        <cost points="-3"/>
-        <genre>Common</genre>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Either because you are a pacifist, or just because you
-                are a coward, you have a distinct dislike of combat.
-                Whenever you are in a real combat situation, you suffer
-                a -1 to <t>Agility</t>, <t>Dexterity</t> and
-                <t>Perception</t>, and your initiative roll is halved.
-                You do not suffer this penalty in sporting events, so
-                you can fence or perform target practise without penalty.
-            </para>
-        </description>
-    </advantage>
-
     <advantage name="Cannot lie" type="disadvantage">
         <cost points="-3"/>
         <genre>Common</genre>
@@ -448,7 +433,6 @@
             </para>
         </description>
     </advantage>
-
 
     <advantage name="Absent minded" type="disadvantage">
         <cost points="-1"/>
