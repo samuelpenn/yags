@@ -12,7 +12,7 @@
 <bestiary xmlns="http://yagsbook.sourceforge.net/xml">
 
     <!-- Generic information on dogs -->
-    <beast name="Dog">
+    <beast name="Dogs">
         <information>
             <type>Animal</type>
 
@@ -26,15 +26,15 @@
 
         <description>
             <short>
-                Dogs have served men for many millenia, and fill many
+                Dogs have served men for many millennia, and fill many
                 rolls from hunting to simple companionship.
             </short>
 
             <physical>
                 <para>
                     Dogs vary greatly in size, though in low tech settings
-                    tend to be larger varities, some not far removed from
-                    wolves in ancestory.
+                    tend to be larger varieties, some not far removed from
+                    wolves in ancestry.
                 </para>
             </physical>
 
@@ -49,8 +49,105 @@
         </description>
     </beast>
 
+    <beast name="Hunting Dog" parent="Dogs">
+        <information>
+            <type>Animal</type>
+            <demeanor>Predator</demeanor>
+
+            <habitat climate="Any" terrain="Any" frequency="Varies"/>
+
+            <organisation group="Trained" number="Varies"/>
+
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                Dogs trained to hunt for humans.
+            </short>
+
+            <movement>
+                <walk normal="10" max="5"/>
+            </movement>
+
+            <scale length="1" width="1"/>
+
+            <physical>
+                <para>
+                    These dogs have been specially bred for using in warfare,
+                    and are capable of bringing down an adult man without
+                    too much difficulty. They are heavy set, but fast with
+                    good stamina, able to run along side a mounted warrior
+                    over long distances.
+                </para>
+
+                <para>
+                    Such dogs will often have a spiked collar, which is more
+                    for show than anything. Rarely, they may be armoured with
+                    leather, though most dogs do not like this.
+                </para>
+            </physical>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="3" soak="8">
+                <attribute name="strength" score="2"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="4"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="5"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="empathy" score="2"/>
+                <attribute name="will" score="2"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="4"/>
+                    <skill name="Awareness" score="7"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="0"/>
+                    <skill name="Guile" score="0"/>
+                    <skill name="Sleight" score="4"/>
+                    <skill name="Stealth" score="3"/>
+                    <skill name="Throw" score="0"/>
+                </group>
+
+                <group name="Misc" type="skills">
+                    <skill name="Survival" score="2"/>
+                    <skill name="Swim" score="2"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Bite and claw" skill="Brawl">
+                    <attack attribute="agility" bonus="+3"/>
+                    <defence attribute="agility" bonus="+2"/>
+                    <damage type="split" bonus="+3"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+            </combat>
+
+            <traits>
+                <trait name="Bravery" score="3"/>
+                <trait name="Orneriness" score="2"/>
+                <trait name="Patience" score="5"/>
+            </traits>
+
+            <advantages>
+                <advantage name="Animal"/>
+                <advantage name="Acute sense of smell" score="+2"/>
+                <advantage name="Acute sense of hearing" score="+1"/>
+
+                <advantage name="Loyalty (owner)" score="+2"/>
+            </advantages>
+        </statistics>
+    </beast>
+
     <!-- War dog -->
-    <beast name="War Dog" parent="Dog">
+    <beast name="War Dog" parent="Dogs">
         <information>
             <type>Animal</type>
             <demeanor>Predator</demeanor>
@@ -103,20 +200,20 @@
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <attributes size="4" soak="12">
-                <attribute name="strength" score="4" half="3"/>
-                <attribute name="stamina" score="4"/>
+                <attribute name="strength" score="4"/>
+                <attribute name="health" score="4"/>
                 <attribute name="agility" score="4"/>
                 <attribute name="dexterity" score="1"/>
                 <attribute name="perception" score="3"/>
                 <attribute name="intelligence" score="1"/>
-                <attribute name="charisma" score="2"/>
+                <attribute name="empathy" score="2"/>
                 <attribute name="will" score="2"/>
             </attributes>
 
             <skills>
                 <group name="Talents" type="talents">
-                    <skill name="Athletics" score="5"/>
-                    <skill name="Awareness" score="5"/>
+                    <skill name="Athletics" score="4"/>
+                    <skill name="Awareness" score="4"/>
                     <skill name="Brawl" score="6"/>
                     <skill name="Charm" score="0"/>
                     <skill name="Guile" score="0"/>
@@ -126,10 +223,8 @@
                 </group>
 
                 <group name="Misc" type="skills">
-                    <skill name="Survival" score="3"/>
-                    <skill name="Battle" score="2"/>
-                    <skill name="Tracking" score="4"/>
-                    <skill name="Swim" score="3"/>
+                    <skill name="Survival" score="2"/>
+                    <skill name="Swim" score="1"/>
                 </group>
             </skills>
 
@@ -155,12 +250,11 @@
                 </armourstyle>
             </combat>
 
-            <passions>
-                <passion name="Bravery" score="6"/>
-                <passion name="Ego" score="4"/>
-                <passion name="Restraint" score="4"/>
-                <passion name="Temperence" score="4"/>
-            </passions>
+            <traits>
+                <trait name="Bravery" score="5"/>
+                <trait name="Orneriness" score="3"/>
+                <trait name="Patience" score="3"/>
+            </traits>
 
             <advantages>
                 <advantage name="Animal"/>
