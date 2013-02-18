@@ -1,0 +1,138 @@
+<?xml version = '1.0' ?>
+<?xml-stylesheet href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<!--
+    $Revision: 1.2 $
+    $Date: 2005-04-07 22:04:02 $
+
+    Bestiary containing information on domestic cats.
+-->
+
+<bestiary xmlns="http://yagsbook.sourceforge.net/xml">
+    <beast name="Vermin">
+        <information>
+            <type>Animal</type>
+            <demeanor>Predator</demeanor>
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                Vermin are small swarming creatures.
+            </short>
+
+            <physical>
+                <para>
+                    Lots of tiny creatures.
+                </para>
+            </physical>
+        </description>
+    </beast>
+
+
+    <beast name="Rat" parent="Vermin">
+        <information>
+            <type>Animal</type>
+            <demeanor>Predator</demeanor>
+
+            <habitat climate="Any" terrain="Any" frequency="Varies"/>
+
+            <organisation group="Trained" number="Varies"/>
+
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                Domestic cats are often kept as pets, though they are often
+                still capable hunters.
+            </short>
+
+            <physical>
+                <para>
+                    Domestic cats vary greatly in colour and size, though
+                    are generally on the small size. They see extremely well
+                    in the dark, and though they also have a good sense of
+                    smell, they rely on it less than dogs do.
+                </para>
+                <para>
+                    All cats are carnivorous, and need a high proportion of
+                    protein in their diet.
+                </para>
+            </physical>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="0" soak="0">
+                <attribute name="strength" score="0"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="5"/>
+                <attribute name="dexterity" score="2"/>
+                <attribute name="perception" score="5"/>
+                <attribute name="intelligence" score="2"/>
+                <attribute name="empathy" score="2"/>
+                <attribute name="will" score="2"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="4"/>
+                    <skill name="Awareness" score="7"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="4"/>
+                    <skill name="Throw" score="0"/>
+                </group>
+
+                <group name="Skills" type="skills">
+                    <skill name="Survival" score="4"/>
+                    <skill name="Swim" score="4"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Bite and claw" skill="Brawl">
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="stun" bonus="0"/>
+                </combatstyle>
+
+                <combatstyle style="Swarm" skill="Brawl">
+                    <attack attribute="agility" bonus="+10"/>
+                    <defence attribute="agility" bonus="+3"/>
+                    <damage type="stun" bonus="+10"/>
+                </combatstyle>
+
+                <combatstyle style="Dense Swarm" skill="Brawl">
+                    <attack attribute="agility" bonus="+15"/>
+                    <defence attribute="agility" bonus="+3"/>
+                    <damage type="stun" bonus="+15"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+            </combat>
+
+            <traits>
+                <trait name="Bravery" score="2"/>
+                <trait name="Orneriness" score="4"/>
+                <trait name="Patience" score="2"/>
+            </traits>
+
+            <advantages>
+                <advantage name="Animal"/>
+                <advantage name="Weak"/>
+                <advantage name="Tiny" score="2"/>
+                <advantage name="Swarm"/>
+                <advantage name="Night vision" score="+3"/>
+                <advantage name="Good sense of smell" score="+2"/>
+                <advantage name="Good hearing" score="+2"/>
+            </advantages>
+        </statistics>
+    </beast>
+
+</bestiary>
