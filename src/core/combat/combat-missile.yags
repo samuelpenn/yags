@@ -816,14 +816,12 @@
                     <para>
                         In some circumstances, you don't care who you hit
                         as long as you hit someone. If firing at a group
-                        of potential targets, then you can reduce the
-                        distance modifier by 5 for each doubling of the
-                        number of targets.
+                        of potential targets, then you get a +5 bonus to
+                        hit for each doubling of the number of targets.
                     </para>
 
                     <para>
-                        The distance modifier cannot be reduced below zero.
-                        If you hit, then you hit a random target.
+                        If you hit, you hit a random target.
                     </para>
                 </sect3>
 
@@ -1468,26 +1466,29 @@
                 <sect3>
                     <title>Elemental Attacks</title>
                     <para>
-                        Historically, fire has been a dangerous and terrifying
-                        weapon. In the modern era, weapons such as flame throwers
-                        have upped the terror factor, though the risks involved
-                        in carrying a tank of highly flammable substance on your
-                        back whilst spraying fire at people isn't one to be
-                        ignored.
+                        Elemental attacks are those that involve fire, cold, acid
+                        or gas. They are somewhat more complex that direct physical
+                        damage, and can sometimes bypass damage or cause damage
+                        over multiple rounds. For the most part though, elemental
+                        damage will tend to be light splash damage that causes
+                        <e>stuns</e>. However, due to the pain they often cause
+                        they also generate <e>shock</e>, which reduces initiative
+                        if in combat.
                     </para>
-                    <para>
-                        Acid and other forms of corrosive attacks are treated in
-                        much the same way as fire.
+                    <para flag="green">
+                        Armour normally protects fully against elemental damage
+                        for the first round. If you are engulfed by the attack,
+                        then any armour is ignored after the first round.
                     </para>
-                    <para>
-                        Elemental attacks tend to be light splash damage unless
-                        it is ongoing, so it will often cause <e>stuns</e> rather
-                        than anything more serious. If it is applied over multiple
-                        rounds however, then it increases by a damage category
-                        each round. Generally, a burning weapon does not count as
-                        continuous, so will only cause <e>stun</e> damage.
+                    <para flag="green">
+                        Damage is normally <e>stun</e>. However, ongoing damage will
+                        increase by one damage type per round.
                     </para>
-                    <para>
+                    <para flag="green">
+                        Ongoing damage increases by +5 each round, up to double the
+                        base damage.
+                    </para>
+                    <para flag="green">
                         Elemental attacks will also cause <e>shock</e>, which
                         reduces your initiative. Each level of damage (either stun
                         or wound) causes 5 shock damage.
@@ -1533,11 +1534,27 @@
                             <item value="Close to Lava" target="+10/s">
                                 Standing within a few metres of Lava.
                             </item>
+                            <item value="In Lava" target="+25/w">
+                                Engulfed in lava, you are unlikely to survive
+                                for long.
+                            </item>
                         </targetlist>
+
                         <para>
                             Each round you are engulfed in fire, the damage
                             also increases by +5 up to double the base damage.
                         </para>
+
+                        <para>
+                            Though armour can protect against fire damage, unless
+                            it is designed to be fire resistant, it won't protect
+                            fully against being engulfed in fire. If you are
+                            <e>engulfed</e>, then armour only protects for the
+                            first round. On subsequent rounds, it is assumed that
+                            the armour has been heated enough to start causing
+                            you harm itself, or flammable material has got into it.
+                        </para>
+
                         <example title="Fire">
                             <para>
                                 Jason is trussed up and thrown onto a bonfire,
@@ -1562,6 +1579,38 @@
                                 likely to die a very painful death.
                             </para>
                         </example>
+                    </sect4>
+
+                    <sect4>
+                        <title>Cold</title>
+                        <para>
+                            Cold attacks are very rare, and will generally only
+                            be common in a fantasy setting where magical creatures
+                            might have freezing attacks. However, having liquid
+                            nitrogen thrown on you is a possible cold attack that you
+                            could suffer in a modern setting.
+                        </para>
+                        <para>
+                            Note that standing out in the snow is not considered a
+                            cold attack, and is treated differently. To be effective
+                            in combat, a cold attack needs to cause significant harm
+                            over a period of a few seconds.
+                        </para>
+                        <targetlist>
+                            <targetFirst>false</targetFirst>
+                            <valueLabel>Type of fire</valueLabel>
+                            <targetLabel>Damage</targetLabel>
+                            <item value="Supercold water" target="+5/s">
+                                A jet of super cold water.
+                            </item>
+                            <item value="Liquid nitrogen" target="+25/m">
+                                Having a bucket of liquid nitrogen thrown over you
+                                is likely to cause serious harm. Falling into a pool
+                                of it would be the same, except you would be engulfed
+                                and suffer ongoing damage.
+                            </item>
+                        </targetlist>
+
                     </sect4>
                 </sect3>
             </sect2>
