@@ -26,14 +26,25 @@
 
             <physical>
                 <para>
-                    Lions are giant hunting cats common to Africa.
+                    Lions are big hunting cats common to Africa and also some parts
+                    of Asia. Males can weigh more than 250kg, females are somewhat
+                    smaller (-1 Size, -1 Strength). They hunt their prey using
+                    stealth, trying to take it down immediately without having to
+                    resort to a long chase.
+                </para>
+                <para>
+                    They do not normally attack humans, but may do so if hungry or
+                    feeling threatened. Like most animals, unless attacking out of
+                    fear they will break off an attack if they are injured - they'd
+                    rather miss a meal than suffer an injury that is likely to kill
+                    them, or prevent them hunting again.
                 </para>
             </physical>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <attributes size="7" soak="17">
-                <attribute name="strength" score="8" half="5"/>
+            <attributes size="7" soak="14">
+                <attribute name="strength" score="6"/>
                 <attribute name="health" score="4"/>
                 <attribute name="agility" score="5"/>
                 <attribute name="dexterity" score="1"/>
@@ -63,12 +74,12 @@
 
             <combat>
                 <combatstyle style="Bite and claw" skill="Brawl">
-                    <attack attribute="agility" bonus="0"/>
-                    <defence attribute="agility" bonus="0"/>
-                    <damage type="mixed" bonus="2"/>
+                    <attack attribute="agility" bonus="3"/>
+                    <defence attribute="agility" bonus="1"/>
+                    <damage type="mixed" bonus="5"/>
                 </combatstyle>
 
-                <armourstyle style="Base"/>
+                <armourstyle style="Base" bonus="1"/>
             </combat>
 
             <traits>
