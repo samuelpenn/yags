@@ -1,0 +1,127 @@
+<?xml version = '1.0' ?>
+<?xml-stylesheet href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl" type="text/xsl"?>
+
+<!--
+    Copyright Samuel Penn, GPL v2.
+-->
+
+<bestiary xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <beast name="Skeletons" primary="true">
+        <information>
+            <type>Undead</type>
+            <demeanor>Unintelligent</demeanor>
+
+            <origin>Horror</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                Animated skeletal corpses.
+            </short>
+
+            <physical>
+                <para>
+                    Skeletons are a basic form of undead, though unlike zombies
+                    they generally lack flesh - the only thing holding their bones
+                    together is magic. For this reason skeletons are far more
+                    common in fantasy than in modern horror, since it is much
+                    harder to come up with a sensible explanation of how they
+                    are animated using science.
+                </para>
+                <para>
+                    Most skeletons are of humans, though skeletal animals and
+                    monsters are possible. Skeletons which have free will generally
+                    fall under a different heading - these entries are only for the
+                    unintelligent undead which are generally summoned and controlled
+                    by necromancers.
+                </para>
+            </physical>
+        </description>
+    </beast>
+
+    <beast name="Skeleton" parent="Skeletons">
+        <information>
+            <type>Undead</type>
+            <demeanor>Unintelligent</demeanor>
+
+            <habitat climate="Any" terrain="Any land" frequency="Very rare"/>
+
+            <organisation group="Horde" number="1-100"/>
+
+            <origin>Horror</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                An animated humanoid skeleton.
+            </short>
+
+            <image src="undead/graphics/skeleton.jpg"/>
+
+            <physical>
+                <para>
+                    Skeletons are the animated remains of the long dead.
+                    They lack flesh or any vital organs, making them
+                    difficult to kill in any way other than smashing their
+                    bones to pieces. Unfettered by flesh to slow them down,
+                    they are generally fast and agile, though generally
+                    weaker than zombies.
+                </para>
+            </physical>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12">
+                <attribute name="strength" score="3"/>
+                <attribute name="health" score="3"/>
+                <attribute name="agility" score="4"/>
+                <attribute name="dexterity" score="4"/>
+                <attribute name="perception" score="2"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="empathy" score="1"/>
+                <attribute name="will" score="1"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="3"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+
+                <group name="Other" type="skills">
+                    <skill name="Melee" score="4"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Brawl" skill="Brawl">
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="stun" bonus="0"/>
+                </combatstyle>
+                <combatstyle style="Sword" skill="Melee">
+                    <attack attribute="dexterity" bonus="0"/>
+                    <defence attribute="dexterity" bonus="0"/>
+                    <damage type="wound" bonus="0"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+            </combat>
+
+            <advantages>
+                <advantage name="Undead"/>
+                <advantage name="Stupid"/>
+            </advantages>
+        </statistics>
+    </beast>
+
+</bestiary>
