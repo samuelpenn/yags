@@ -1,0 +1,211 @@
+<?xml version = '1.0' ?>
+<?xml-stylesheet href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl" type="text/xsl"?>
+
+<!--
+
+
+    Copyright Samuel Penn, GPL v2.
+-->
+
+<bestiary xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <!-- Basic Bear information -->
+    <beast name="Zombies" primary="true">
+        <information>
+            <type>Undead</type>
+            <demeanor>Unintelligent</demeanor>
+
+            <origin>Horror</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                The most common form of undead.
+            </short>
+
+            <physical>
+                <para>
+                    Zombies are generally the unintelligent re-animated corpses
+                    of the recently dead. They have flesh, often enough to still
+                    be recognisable as the person they were in life, but they
+                    are no longer alive, instead animated by some magic that
+                    gives them purpose and movement.
+                </para>
+
+                <para>
+                    Though the typical zombie is an animated corpse, this entry
+                    also covers zombies which have either been animated by some
+                    immoral science, or even living humans infected by some
+                    disease or virus which has effectively turned them into the
+                    living dead.
+                </para>
+
+                <para>
+                    In either case, zombies are all similar in that they have
+                    little or no will of their own, and are generally driven
+                    either by hatred or hunger to attack and (often eat) those
+                    who are still blessed with life.
+                </para>
+            </physical>
+        </description>
+    </beast>
+
+    <beast name="Infected" parent="Zombies">
+        <information>
+            <type>Humanoid</type>
+            <demeanor>Unintelligent</demeanor>
+
+            <habitat climate="Any" terrain="Any land" frequency="Very rare"/>
+
+            <organisation group="Horde" number="1-100"/>
+
+            <origin>Horror</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                A virus infected human.
+            </short>
+
+            <image src="undead/graphics/zombie.jpg"/>
+
+            <physical>
+                <para>
+                    The <e>infected</e> are similar to zombies, but they
+                    are not <e>undead</e>. Instead they are humans infected
+                    by some 'natural' virus (or similar agent) that has
+                    taken control of their bodies, removing their humanity
+                    and leaving behind only a gaping hunger.
+                </para>
+                <para>
+                    They are often faster moving than zombies, and can infect
+                    others through wounds, or even close proximity.
+                </para>
+            </physical>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12">
+                <attribute name="strength" score="4"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="2"/>
+                <attribute name="dexterity" score="2"/>
+                <attribute name="perception" score="2"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="empathy" score="1"/>
+                <attribute name="will" score="1"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="3"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Brawl" skill="Brawl">
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="stun" bonus="0"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+            </combat>
+
+            <advantages>
+                <advantage name="Stupid"/>
+            </advantages>
+        </statistics>
+    </beast>
+
+    <beast name="Zombie" parent="Zombies">
+        <information>
+            <type>Undead</type>
+            <demeanor>Unintelligent</demeanor>
+
+            <habitat climate="Any" terrain="Any land" frequency="Very rare"/>
+
+            <organisation group="Horde" number="1-100"/>
+
+            <origin>Horror</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                A corpse re-animated by black magic.
+            </short>
+
+            <image src="undead/graphics/zombie.jpg"/>
+
+            <physical>
+                <para>
+                    Zombies are little more than animated corpses. Their
+                    state of decay can vary immensely, but they generally
+                    have enough flesh on their bones to hold themselves
+                    together. Zombies which have rotted away to skeletons
+                    are generally treated as undead <e>skeletons</e>.
+                </para>
+            </physical>
+
+            <tactics>
+                <para>
+                    Zombies generally move towards the living and try to
+                    eat them.
+                </para>
+            </tactics>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="17">
+                <attribute name="strength" score="4"/>
+                <attribute name="health" score="5"/>
+                <attribute name="agility" score="2"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="2"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="empathy" score="1"/>
+                <attribute name="will" score="1"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="3"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Brawl" skill="Brawl">
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="stun" bonus="0"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+            </combat>
+
+            <advantages>
+                <advantage name="Undead"/>
+                <advantage name="Stupid"/>
+                <advantage name="Slow"/>
+            </advantages>
+        </statistics>
+    </beast>
+
+</bestiary>
