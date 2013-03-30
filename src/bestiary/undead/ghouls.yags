@@ -1,0 +1,205 @@
+<?xml version = '1.0' ?>
+<?xml-stylesheet href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl" type="text/xsl"?>
+
+<!--
+    Copyright Samuel Penn, GPL v2.
+-->
+
+<bestiary xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <beast name="Ghouls" primary="true">
+        <information>
+            <type>Undead</type>
+            <demeanor>Unintelligent</demeanor>
+
+            <origin>Horror</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                A graveyard dwelling eater of the dead.
+            </short>
+
+            <physical>
+                <para>
+                    Ghouls are generally similar to Zombies, but they are
+                    generally portrayed as being more cunning and less blatant.
+                    Folklore has they dwelling in graveyards, feasting on the
+                    flesh of the recently dead. They are Arabic in origin, but
+                    are more generic in modern fantasy.
+                </para>
+
+                <para>
+                    A ghoul may be an undead creature, or it may be a cursed
+                    human that has taken to eating the dead.
+                </para>
+            </physical>
+        </description>
+    </beast>
+
+    <beast name="Ghoul" parent="Ghouls">
+        <information>
+            <type>Undead</type>
+            <demeanor>Scavenger</demeanor>
+
+            <habitat climate="Any" terrain="Any land" frequency="Very rare"/>
+
+            <organisation group="Group" number="1-6"/>
+
+            <origin>Horror</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                An undead creature that infests graveyards or deserted ruins.
+            </short>
+
+            <image src="undead/graphics/ghoul.jpg"/>
+
+            <physical>
+                <para>
+                    Ghouls lurk at the edges of civilisation, or within the
+                    ruins of a dead civilisation. They live by feeding on the
+                    corpses of the truly dead. They are scavengers, unwilling
+                    to confront threats directly but surviving through cunning
+                    and stealth.
+                </para>
+            </physical>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12">
+                <attribute name="strength" score="4"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="3"/>
+                <attribute name="dexterity" score="3"/>
+                <attribute name="perception" score="4"/>
+                <attribute name="intelligence" score="2"/>
+                <attribute name="empathy" score="1"/>
+                <attribute name="will" score="2"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="3"/>
+                    <skill name="Awareness" score="4"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="5"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Brawl" skill="Brawl">
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="stun" bonus="0"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+            </combat>
+
+            <advantages>
+                <advantage name="Reduced pain"/>
+                <advantage name="Resistence to shock"/>
+            </advantages>
+        </statistics>
+    </beast>
+
+    <beast name="Zombie" parent="Zombies">
+        <information>
+            <type>Undead</type>
+            <demeanor>Unintelligent</demeanor>
+
+            <habitat climate="Any" terrain="Any land" frequency="Very rare"/>
+
+            <organisation group="Horde" number="1-100"/>
+
+            <origin>Horror</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                A corpse re-animated by black magic.
+            </short>
+
+            <image src="undead/graphics/zombie.jpg"/>
+
+            <physical>
+                <para>
+                    Zombies are little more than animated corpses. Their
+                    state of decay can vary immensely, but they generally
+                    have enough flesh on their bones to hold themselves
+                    together. Zombies which have rotted away to skeletons
+                    are generally treated as undead <e>skeletons</e>.
+                </para>
+            </physical>
+            <tactics>
+                <para>
+                    Zombies can be quite hard to kill. In most Zombie
+                    stories, going for the head is the only way to kill them.
+                    Because a 'living' Zombie is always conscious, you
+                    cannot coup de grace them however.
+                </para>
+                <para>
+                    An attack to the head against a fatally wounded zombie
+                    will kill it immediately. It requires a good attack to
+                    strike the head of a zombie. It is somewhat easier than
+                    a strike at the head of a living creature, because
+                    zombies are slow and more predictable.
+                </para>
+            </tactics>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="17">
+                <attribute name="strength" score="4"/>
+                <attribute name="health" score="7"/>
+                <attribute name="agility" score="2"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="2"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="empathy" score="1"/>
+                <attribute name="will" score="1"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="3"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Brawl" skill="Brawl">
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="stun" bonus="0"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+            </combat>
+
+            <advantages>
+                <advantage name="Undead"/>
+                <advantage name="Stupid"/>
+                <advantage name="Slow"/>
+                <advantage name="Reduced pain"/>
+                <advantage name="Resistence to shock"/>
+            </advantages>
+        </statistics>
+    </beast>
+
+</bestiary>
