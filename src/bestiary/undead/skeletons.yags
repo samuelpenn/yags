@@ -41,14 +41,14 @@
         </description>
     </beast>
 
-    <beast name="Skeleton" parent="Skeletons">
+    <beast name="Skeletal warrior" parent="Skeletons">
         <information>
             <type>Undead</type>
             <demeanor>Unintelligent</demeanor>
 
             <habitat climate="Any" terrain="Any land" frequency="Very rare"/>
 
-            <organisation group="Horde" number="1-100"/>
+            <organisation group="Squad" number="2-12"/>
 
             <origin>Horror</origin>
             <genre>Fantasy</genre>
@@ -71,14 +71,31 @@
                     weaker than zombies.
                 </para>
             </physical>
+            <tactics>
+                <para>
+                    Skeletal warriors will fall apart once they become
+                    <e>fatally wounded</e>. However, some skeletons have
+                    the ability to re-assemble themselves. At the end of
+                    the following round, these skeletons have a chance
+                    of springing back into action, fully healed. They get
+                    a <t>Health</t> check of 30+ to do so. On success,
+                    their Health drops by from 1 to 3 points (depending
+                    on the strength of the magic used to animate them)
+                    and they can attack the following round.
+                </para>
+                <para>
+                    Such skeletons can re-assemble as often as they
+                    make the new <t>Health</t> check.
+                </para>
+            </tactics>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <attributes size="5" soak="12">
+            <attributes size="5" soak="17">
                 <attribute name="strength" score="3"/>
-                <attribute name="health" score="3"/>
+                <attribute name="health" score="6"/>
                 <attribute name="agility" score="4"/>
-                <attribute name="dexterity" score="4"/>
+                <attribute name="dexterity" score="5"/>
                 <attribute name="perception" score="2"/>
                 <attribute name="intelligence" score="1"/>
                 <attribute name="empathy" score="1"/>
@@ -98,7 +115,7 @@
                 </group>
 
                 <group name="Other" type="skills">
-                    <skill name="Melee" score="4"/>
+                    <skill name="Melee" score="5"/>
                 </group>
             </skills>
 
@@ -109,9 +126,9 @@
                     <damage type="stun" bonus="0"/>
                 </combatstyle>
                 <combatstyle style="Sword" skill="Melee">
-                    <attack attribute="dexterity" bonus="0"/>
-                    <defence attribute="dexterity" bonus="0"/>
-                    <damage type="wound" bonus="0"/>
+                    <attack attribute="dexterity" bonus="5"/>
+                    <defence attribute="dexterity" bonus="5"/>
+                    <damage type="wound" bonus="9"/>
                 </combatstyle>
 
                 <armourstyle style="Base"/>

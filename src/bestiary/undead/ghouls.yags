@@ -38,6 +38,96 @@
         </description>
     </beast>
 
+    <beast name="Cursed" parent="Ghouls">
+        <information>
+            <type>Humanoid</type>
+            <demeanor>Scavenger</demeanor>
+
+            <habitat climate="Any" terrain="Any land" frequency="Very rare"/>
+
+            <organisation group="Group" number="2-12"/>
+
+            <origin>Horror</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                Cursed people who feed on the dead.
+            </short>
+
+            <image src="undead/graphics/ghoul.jpg"/>
+
+            <physical>
+                <para>
+                    The <e>Cursed</e> are not undead, but they are sometimes
+                    mistaken for them. They are often scrawny in appearance,
+                    with pale skin and their clothes, if any, are often ragged
+                    or dirty. They live in small groups on the edges of civilisation,
+                    often around graveyards or picking through the corpses left
+                    on battlefields.
+                </para>
+                <para>
+                    Overtime, a <e>Cursed</e> may become a ghoul, either through
+                    necromantic rituals of their own devising, or through the
+                    end result of whatever dark magic drove them to live out this
+                    lifestyle.
+                </para>
+            </physical>
+            <social>
+                <para>
+                    Such people have fallen far from what most would consider to
+                    be civilised society.
+                </para>
+            </social>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12">
+                <attribute name="strength" score="3"/>
+                <attribute name="health" score="3"/>
+                <attribute name="agility" score="4"/>
+                <attribute name="dexterity" score="3"/>
+                <attribute name="perception" score="4"/>
+                <attribute name="intelligence" score="2"/>
+                <attribute name="empathy" score="2"/>
+                <attribute name="will" score="2"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="4"/>
+                    <skill name="Awareness" score="5"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="2"/>
+                    <skill name="Guile" score="2"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="5"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Brawl" skill="Brawl">
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="stun" bonus="0"/>
+                </combatstyle>
+                <combatstyle style="Knife" skill="Brawl">
+                    <attack attribute="agility" bonus="+1"/>
+                    <defence attribute="agility" bonus="+1"/>
+                    <damage type="mixed" bonus="+2"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+            </combat>
+
+            <advantages>
+                <advantage name="Diseased"/>
+            </advantages>
+        </statistics>
+    </beast>
+
     <beast name="Ghoul" parent="Ghouls">
         <information>
             <type>Undead</type>
@@ -75,10 +165,10 @@
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <attributes size="5" soak="12">
+            <attributes size="5" soak="17">
                 <attribute name="strength" score="4"/>
                 <attribute name="health" score="7"/>
-                <attribute name="agility" score="4"/>
+                <attribute name="agility" score="5"/>
                 <attribute name="dexterity" score="3"/>
                 <attribute name="perception" score="5"/>
                 <attribute name="intelligence" score="2"/>
@@ -115,5 +205,4 @@
             </advantages>
         </statistics>
     </beast>
-
 </bestiary>
