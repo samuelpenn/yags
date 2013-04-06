@@ -51,7 +51,7 @@
     <beast name="Infected" parent="Zombies">
         <information>
             <type>Humanoid</type>
-            <demeanor>Unintelligent</demeanor>
+            <demeanor>Violent</demeanor>
 
             <habitat climate="Any" terrain="Any land" frequency="Very rare"/>
 
@@ -81,14 +81,48 @@
                     others through wounds, or even close proximity.
                 </para>
             </physical>
+            <tactics>
+                <para>
+                    <e>Infected</e> people are most dangerous due to their
+                    numbers and the fact that they are highly contagious.
+                    Against an organised group of military personnel, their
+                    hordes are quite weak (at least, until the ammo runs out),
+                    but if they can corner a person alone and unarmed, they
+                    can be dangerous.
+                </para>
+                <para>
+                    They count as being <e>Venomous</e>. If they strike with
+                    a natural attack (fist or bite), then make a second damage
+                    check for a venomous attack. If the skin is pierced, then
+                    the victim becomes infected and could succumb.
+                </para>
+                <para>
+                    The <e>potency</e> of the infection is normally 40/10,
+                    and the <e>duration</e> is normally Hours, but both can
+                    vary considerably depending on the setting. The effects
+                    of the infection are: -1 HI / ...
+                </para>
+                <para>
+                    If either <t>Health</t> or <t>Intelligence</t> drops to
+                    zero, then the victim becomes one of the <e>Infected</e>.
+                </para>
+            </tactics>
+            <social>
+                <para>
+                    The <e>Infected</e> tend to gather into packs for mutual
+                    protection. They are incapable of caring for themselves,
+                    let alone each other, and weakened individuals will tend
+                    to get turned on and eaten.
+                </para>
+            </social>
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <attributes size="5" soak="12">
                 <attribute name="strength" score="4"/>
                 <attribute name="health" score="4"/>
-                <attribute name="agility" score="2"/>
-                <attribute name="dexterity" score="2"/>
+                <attribute name="agility" score="3"/>
+                <attribute name="dexterity" score="3"/>
                 <attribute name="perception" score="2"/>
                 <attribute name="intelligence" score="1"/>
                 <attribute name="empathy" score="1"/>
@@ -122,6 +156,7 @@
                 <advantage name="Stupid"/>
                 <advantage name="Reduced pain"/>
                 <advantage name="Resistence to shock"/>
+                <advantage name="Venonmous"/>
             </advantages>
         </statistics>
     </beast>
