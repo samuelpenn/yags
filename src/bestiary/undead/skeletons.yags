@@ -41,6 +41,80 @@
         </description>
     </beast>
 
+    <beast name="Skeletal hound" parent="Skeletons">
+        <information>
+            <type>Undead</type>
+            <demeanor>Unintelligent</demeanor>
+
+            <habitat climate="Any" terrain="Any land" frequency="Very rare"/>
+
+            <organisation group="Pack" number="2-20"/>
+
+            <origin>Horror</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                An animated skeletal war dog.
+            </short>
+
+            <image src="undead/graphics/skeletal_hound.jpg"/>
+
+            <physical>
+                <para>
+                    Skeletal hounds are undead animals raised by necromantic
+                    magic as guard dogs or war dogs. Like their humanoid
+                    counterparts, they are incapable of complex reasoning
+                    but can follow simple instructions, such as to guard a
+                    door or to hunt down a particular target.
+                </para>
+            </physical>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="3" soak="13">
+                <attribute name="strength" score="3"/>
+                <attribute name="health" score="5"/>
+                <attribute name="agility" score="5"/>
+                <attribute name="dexterity" score="1"/>
+                <attribute name="perception" score="2"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="empathy" score="1"/>
+                <attribute name="will" score="1"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="4"/>
+                    <skill name="Awareness" score="4"/>
+                    <skill name="Brawl" score="5"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="1"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Brawl" skill="Brawl">
+                    <attack attribute="agility" bonus="+3"/>
+                    <defence attribute="agility" bonus="+1"/>
+                    <damage type="mixed" bonus="+3"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+            </combat>
+
+            <advantages>
+                <advantage name="Animal"/>
+                <advantage name="Undead"/>
+                <advantage name="Stupid"/>
+            </advantages>
+        </statistics>
+    </beast>
+
     <beast name="Skeletal warrior" parent="Skeletons">
         <information>
             <type>Undead</type>
