@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<!--
+    TechLevel 10 Military Vehicles.
+-->
+<equipment xmlns="http://yagsbook.sourceforge.net/xml"
+           xmlns:y="http://yagsbook.sourceforge.net/xml/yags">
+
+    <item name="Rocketship">
+        <category>Vehicle</category>
+        <genre>SciFi</genre>
+        <techLevel>6</techLevel>
+        <legality>1</legality>
+        <availability>1</availability>
+        <importance>3</importance>
+
+        <short>Single stage rocket ship</short>
+
+        <cost units="Cr">8210000</cost>
+        <weight>117000000</weight>
+
+        <construction>
+            <year>1930</year>
+            <manufacturer>Human</manufacturer>
+        </construction>
+
+        <performance realm="Space">
+            <acceleration>20</acceleration>
+            <deltavee>7200</deltavee>
+        </performance>
+
+        <description>
+            <para>
+                A very early design for a rocket ship.
+            </para>
+        </description>
+
+        <spaceship xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="19" soak="9" dt="50">
+                <attribute name="strength" score="22"/>
+                <attribute name="health" score="1"/>
+                <attribute name="agility" score="1"/>
+                <attribute name="perception" score="0"/>
+            </attributes>
+
+            <drive type="chemical-liquid" size="5" fuel="40"/>
+
+            <stealth signature="-2"/>
+
+            <combat>
+                <armour location="Hull" score="20"/>
+            </combat>
+        </spaceship>
+
+        <tool xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <skill name="Sensors" level="5"/>
+        </tool>
+    </item>
+
+</equipment>
+
+
