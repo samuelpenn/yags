@@ -48,6 +48,97 @@
         </description>
     </beast>
 
+    <beast name="Haitian Zombie" parent="Zombies">
+        <information>
+            <type>Humanoid</type>
+            <demeanor>Violent</demeanor>
+
+            <habitat climate="Any" terrain="Any land" frequency="Very rare"/>
+
+            <organisation group="Group" number="1-6"/>
+
+            <origin>Horror</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                A living human under the influence of drugs and voodoo.
+            </short>
+
+            <physical>
+                <para>
+                   The zombies of Haiti myth are said to have been raised
+                   with black magic to work as slaves for their masters.
+                   A more rational explanation is that they have been
+                   drugged and/or poisoned, leaving them in a state where
+                   they have no memory of their previous life. They are
+                   living people, but oblivious to much of what goes on
+                   around them.
+                </para>
+            </physical>
+            <social>
+                <para>
+                    Such zombies have no social life. They do what they are
+                    told to do, often performing manual labour for their
+                    slave masters. They have little freewill of their own,
+                    and though they aren't aggressive they may be a threat
+                    of directly commanded to fight. However, they are
+                    generally biddable, rather than being 'controlled' by
+                    anyone, and are likely to follow the commands of anyone
+                    giving them direct instructions.
+                </para>
+                <para>
+                    It has been known for such zombies to recover, and
+                    start to remember part of their previous lives. If
+                    they try to escape their slave masters though, they will
+                    generally be hunted down and killed.
+                </para>
+            </social>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12">
+                <attribute name="strength" score="4"/>
+                <attribute name="health" score="3"/>
+                <attribute name="agility" score="2"/>
+                <attribute name="dexterity" score="2"/>
+                <attribute name="perception" score="1"/>
+                <attribute name="intelligence" score="2"/>
+                <attribute name="empathy" score="1"/>
+                <attribute name="will" score="1"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="2"/>
+                    <skill name="Awareness" score="2"/>
+                    <skill name="Brawl" score="2"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="2"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Brawl" skill="Brawl">
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="stun" bonus="0"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+            </combat>
+
+            <advantages>
+                <advantage name="Stupid"/>
+                <advantage name="Reduced pain"/>
+            </advantages>
+        </statistics>
+    </beast>
+
     <beast name="Infected" parent="Zombies">
         <information>
             <type>Humanoid</type>
