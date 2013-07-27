@@ -767,8 +767,9 @@
                 <para>
                     You generally don't need to worry about whether a creature
                     is poisonous or not unless you intend to eat it - a poisonous
-                    creature is one which has poisons in its body which prevent it
-                    from being eaten. A <e>venomous</e> creature however is one
+                    creature is one which has poisons in its body which discourages
+                    others from eating it.
+                    A <e>venomous</e> creature however is one
                     that injects nasty chemicals into its prey in order to kill or
                     immobilise it.
                 </para>
@@ -792,7 +793,7 @@
                 </para>
                 <para flag="green">
                     If you are successfully bitten, then you take no damage,
-                    but must checks for the effects of the venom.
+                    but must check for the effects of the venom.
                 </para>
 
                 <sect3>
@@ -811,9 +812,9 @@
                         venom has a duration, which will normally be hours, minutes or
                         rounds. Whether you fail or pass the health check, another one
                         needs to be made every duration, though the potency drops each
-                        time by a set amount. The potency is listed as the initial potency
-                        plus the drop rate, e.g. 40/-5 means that the initial health check
-                        is difficulty 40, the next is 35, then 30 etc.
+                        time by a set amount. The potency is listed as the initial
+                        potency plus the drop rate, e.g. 40/-5 means that the initial
+                        health check is difficulty 40, the next is 35, then 30 etc.
                     </para>
                     <para>
                         A venom has a list of effects which are applied each time that
@@ -865,16 +866,61 @@
                         </para>
                     </example>
                     <para>
-                        As shown in the example, you are unlikely to resist all the effects
-                        of a venom, but a healthy person can avoid the worst effects.
+                        As shown in the example, you are unlikely to resist all the
+                        effects of a venom, but a healthy person can avoid the worst
+                        effects.
                     </para>
+                </sect3>
+                <sect3>
+                    <title>Common Effects</title>
+                    
+                    <itemlist order="sort">
+                        <item name="-X attrs">
+                            Reduce the listed attributes by X. Attributes
+                            will be S, H, A, D, P, I, E or W. If Health is
+                            reduced, then this makes future checks to resist
+                            the venom harder. Attributes normally return at
+                            a rate of 1 point per day, after the venom has
+                            run its course. An attribute never drops below
+                            zero.
+                        <item>
+                        <item name="shock">
+                            Initiative drops to zero. This is normally the
+                            first result of poisons designed to immediately
+                            disable the target, and is the result of intense
+                            main.
+                        </item>
+                        <item name="Ex">
+                            Causes one level of exhaustion. Results beyond
+                            unconsciousness are ignored.
+                        </item>
+                        <item name="Fa">
+                            Causes one level of fatigue. Results beyond
+                            unconsciousness become exhaustion.
+                        </item>
+                        <item name="Wound">
+                            Causes one level of wound.
+                        </item>
+                        <item name="Paralysis">
+                            You are unable to move, both Dexterity and Agility
+                            drop to zero. You collapse into a heap on the floor.
+                        </item>
+                        <item name="Coma">
+                            You fall into a coma, and are unable to act.
+                        </item>
+                        <item name="Death">
+                            You die. This result will be the last in the
+                            chain for venoms guaranteed to kill.
+                        </item>
+                    </itemlist>
                 </sect3>
                 <sect3>
                     <title>Basic Venoms</title>
                     <para>
-                        The following are some generic venoms which are typical of different
-                        types of creatures. Note that truly instant fatality is very rare,
-                        and some can take hours or days to play out their effects.
+                        The following are some generic venoms which are typical of
+                        different types of creatures. Note that truly instant fatality
+                        is very rare, and some can take hours or days to play out their
+                        effects.
                     </para>
 
                     <table>
@@ -895,28 +941,42 @@
 
                         <tbody>
                             <row>
-                                <entry>A</entry><entry>30/5</entry><entry>I/Minute</entry>
+                                <entry>A</entry><entry>30/5</entry>
+                                <entry>I/Minute</entry>
                                 <entry>Shock / Stun / ...</entry>
                             </row>
                             <row>
-                                <entry>B</entry><entry>40/5</entry><entry>I/Minute</entry>
-                                <entry>Shock / -1 D / -1 A / -1 D / -1 A / -1 AD / ...</entry>
+                                <entry>B</entry><entry>40/5</entry>
+                                <entry>I/Minute</entry>
+                                <entry>
+                                    Shock / -1 D / -1 A / -1 D / -1 A / -1 AD / ...
+                                   </entry>
                             </row>
                             <row>
-                                <entry>C</entry><entry>40/5</entry><entry>I/Minute</entry>
+                                <entry>C</entry><entry>40/5</entry>
+                                <entry>I/Minute</entry>
                                 <entry>-1 AD Shock / -1 AD Stun / ...</entry>
                             </row>
                             <row>
-                                <entry>D</entry><entry>40/5</entry><entry>Hour</entry>
-                                <entry>-1 SAD / -2 SAD / Paralysis / Coma / Death</entry>
+                                <entry>D</entry><entry>40/5</entry>
+                                <entry>Hour</entry>
+                                <entry>
+                                    -1 SAD / -2 SAD / Paralysis / Coma / Death
+                                </entry>
                             </row>
                             <row>
-                                <entry>E</entry><entry>50/5</entry><entry>Day</entry>
-                                <entry>-1 H / -1 SH / -1 SAD / -2 SAD / -2 SAD / Coma / Death</entry>
+                                <entry>E</entry><entry>50/5</entry>
+                                <entry>Day</entry>
+                                <entry>
+                                  -1 H / -1 SH / -1 SAD / -2 SAD / -2 SAD / Coma / Death
+                                </entry>
                             </row>
                             <row>
-                                <entry>F</entry><entry>40/5</entry><entry>I/Round</entry>
-                                <entry>Shock / -1 S Ex / -1 S Ex / Ex / ...</entry>
+                                <entry>F</entry><entry>40/5</entry>
+                                <entry>I/Round</entry>
+                                <entry>
+                                    Shock / -1 S Ex / -1 S Ex / Ex / ...
+                                </entry>
                             </row>
                         </tbody>
                     </table>
