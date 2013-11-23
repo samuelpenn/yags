@@ -58,6 +58,110 @@
         </description>
     </advantage>
 
+    <advantage name="Claws (S/M/L)" type="advantage">
+        <genre>Real</genre>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This creature has claws or talons which can be effectively
+                used in combat. Claws are mostly of use in the attack, and
+                don't provide a large defensive bonus. There are three types
+                of claws, based on the size of them
+            </para>
+            <para>
+                <s>Small:</s> They provide a +1 damage bonus. The damage
+                type of small claws is <e>stun</e>. Cats and birds often
+                have small claws.
+            </para>
+            <para>
+                <s>Medium:</s> They provide +1 attack, +3 to damage and
+                change the damage type to <e>mixed</e>. Big cats or large
+                birds of prey may have medium claws.
+            </para>
+            <para>
+                <s>Large:</s> They provide +1 defence, +3 attack, +5 to
+                damage and change the damage type to <e>wound</e>. Animals
+                such as Utah Raptor may have large claws.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Bite (S/M/L)" type="advantage">
+        <genre>Real</genre>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This creature has a bite can be used effectively in combat.
+                They can be small, medium or large, and this is determined
+                by the relative size of the teeth, and their biting power.
+                Bites are almost exclusively offensive weapons which do not
+                provide much in the way of defensive bonuses.
+            </para>
+            <para>
+                <s>Small:</s> They provide a +2 damage bonus. The damage
+                type of a small bite is <e>mixed</e>. Cats and dogs have
+                small bites.
+            </para>
+            <para>
+                <s>Medium:</s> They provide +1 attack, +4 to damage and
+                change the damage type to <e>mixed</e>. Big cats have
+                medium bites.
+            </para>
+            <para>
+                <s>Large:</s> They provide +2 attack, +7 to damage
+                damage and change the damage type to <e>wound</e>.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Kick (S/M/L)" type="advantage">
+        <genre>Real</genre>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This creature has the capability to kick its prey. This
+                generally requires long, agile legs, with clawed or blunt
+                feet which can cause considerable damage. They can be
+                used defensively to keep an attacker at bay.
+            </para>
+            <para>
+                <s>Small:</s> They provide +1 to attack and defence, and
+                +2 damage. The damage type is <e>stun</e>.
+            </para>
+            <para>
+                <s>Medium:</s> They provide +2 attack and defence, as well
+                as +4 damage. The damage type is <e>mixed</e>. Horses and
+                similar creatures have medium Kicks.
+            </para>
+            <para>
+                <s>Large:</s> They provide +3 attack and defence, and +7
+                damage. The damage type is <e>wound</e>.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Horns (S/M/L>" type="advantage">
+        <genre>Real</genre>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The creature has horns, antlers or tusks which it can use in
+                combat. Often, such adornments are used only in mating rituals,
+                but they can be deadly in combat. They provide a +3 bonus to
+                defence, a +1 bonus to attack and damage, and change the damage
+                type to <e>mixed</e>.
+            </para>
+            <para>
+                <s>Small:</s> They provide +2 to attack, defence and damage.
+                The damage type is <e>mixed</e>.
+            </para>
+            <para>
+                <s>Medium:</s> They provide +4 to attack, defence and damage.
+                The damage type is <e>mixed</e>.
+            </para>
+            <para>
+                <s>Large:</s> They provide +6 to attack, defence and damage.
+                The damage type is <e>wound</e>.
+            </para>
+        </description>
+    </advantage>
+
     <advantage name="Slow" type="advantage">
         <genre>Real</genre>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
@@ -119,8 +223,8 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 This creature is resistant to the effects of shock. Their
-                initiative cannot be reduced by any means due to shock,
-                except for explosions.
+                initiative cannot be reduced by shock unless due to
+                explosions.
             </para>
         </description>
     </advantage>
@@ -231,11 +335,63 @@
                 An incorporeal creature has no physical body, and hence no
                 direct way to affect the physical world. They have no wound
                 or stun levels, and no soak, since they cannot be harmed
-                physically. An incorporeal may attack by draining the energy
-                from people, causing fatigue levels. When attacking, it only
-                requires to touch the individual - a parry is useless. Damage
-                uses its will instead of strength, and the target uses
-                their <health/> for soaking.
+                physically. An incorporeal creature may often have the
+                <e>Life Drain</e> ability.
+            </para>
+            <para>
+                Incorporeal creatures will often have a visible form, though
+                it is wispy and difficult to see. Incorporeal undead generally
+                keep roughly the same shape and form that they had in life,
+                but they can shrink or flatten themselves as desired. They
+                are often unable to attack in this form, and it takes a round
+                of concentration to drastically change shape or size.
+            </para>
+            <para>
+                The incorporeal can move wherever they please, including
+                through solid walls. Base movement is equal to their
+                <t>agility</t> + <t>will</t>, though is slowed through
+                dense material. For anything denser than water, reduce
+                movement by the density of the material. So rock walls will
+                reduce movement to a third, lead to a tenth, gold to a
+                twentieth etc.
+            </para>
+            <para>
+                Only <e>Blessed</e> or otherwise spirit affecting attacks
+                can harm an incorporeal creature.
+            </para>
+        </description>
+    </advantage>
+
+    <advantage name="Life Drain" type="advantage">
+        <genre>Mythical</genre>
+        <genre>Horror</genre>
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                A creature with <e>Life Drain</e> is able to suck the life out
+                of a living target. Many, but not all, such creatures are
+                also <e>incorporeal</e>. All they need to do is to touch their
+                victim, and a coldness will be felt that brings them closer
+                to death.
+            </para>
+            <para>
+                For an incorporeal creature, any successful hit will cause
+                life drain. For a corporeal creature, the strike must be
+                firm enough such that it is felt, so any hit must cause
+                damage (even if it is only a single stun).
+            </para>
+            <para>
+                A successful life drain always reduces the highest of agility
+                and dexterity by one point (the victim's choice if both are
+                equal). This is recovered at a rate of one point per day.
+                Both attacker and victim then make Will checks, with damage
+                being caused as <e>exhaustion</e> just as a damage and soak
+                check would.
+            </para>
+            <para>
+                Once unconscious, the victim will be further drained until
+                their agility and dexterity are both zero. After that,
+                strength and health are drained in the same way until the
+                victim dies when zero is reached on all physical attributes.
             </para>
         </description>
     </advantage>
@@ -245,16 +401,16 @@
         <genre>Horror</genre>
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-		This creatures causes <e>Horror</e> in those that see
-		it. A fear check is needed when the creature is first
-		seen, against the level of the Horror ability. Failure
-		results in the victim being struck by unnatural fear.
-		See the section on Undead for details on Horror checks.
+                This creatures causes <e>Horror</e> in those that see
+                it. A fear check is needed when the creature is first
+                seen, against the level of the Horror ability. Failure
+                results in the victim being struck by unnatural fear.
+                See the section on Undead for details on Horror checks.
             </para>
-	    <para>
-		Note that <e>Horror</e> is always supernatural, and is
-		not considered to be regular fear.
-	    </para>
+            <para>
+                Note that <e>Horror</e> is always supernatural, and is
+                not considered to be regular fear.
+            </para>
         </description>
     </advantage>
 

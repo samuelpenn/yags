@@ -1,0 +1,127 @@
+<?xml version = '1.0' ?>
+<?xml-stylesheet href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl" type="text/xsl"?>
+
+<!--
+    Copyright Samuel Penn, GPL v2.
+-->
+
+<bestiary xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <beast name="Wraiths" primary="true">
+        <information>
+            <type>Undead</type>
+            <demeanor>Violent</demeanor>
+
+            <origin>Horror</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                An incorporeal undead.
+            </short>
+
+            <physical>
+                <para>
+                    Wraiths are a form of incorporeal undead. They are spirits
+                    which have no physical form, but which may harm the living
+                    through their cold touch. They generally have a hatred of
+                    the living, for their memories of their life have been
+                    twisted to bitter thoughts.
+                </para>
+            </physical>
+        </description>
+    </beast>
+
+    <beast name="Wraith" parent="Wraiths">
+        <information>
+            <type>Humanoid</type>
+            <demeanor>Violent</demeanor>
+
+            <habitat climate="Any" terrain="Ruins" frequency="Very rare"/>
+
+            <organisation group="Group" number="2-12"/>
+
+            <origin>Horror</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                The cruel spirit of a long dead human.
+            </short>
+
+            <physical>
+                <para>
+                    Wraiths have no physical form, but are generally visible to
+                    the living except when their are dormant. They often take the
+                    form of a wispy cloaked figure, with skeletal arms and a
+                    faceless hood. The exact physical appearance though can vary
+                    greatly according to culture.
+                </para>
+            </physical>
+            <social>
+                <para>
+                    Wraiths may be found together if many dead have been left
+                    in the same place. They are united only in their hatred of
+                    living things. They do not need to feed, and have no wish to
+                    socialise, but they are often unable to harm each other.
+                </para>
+            </social>
+            <tactics>
+                <para>
+                    Wraiths may have lost most of their mental faculties, but
+                    they still have a level of devious cunning which allows
+                    them to haunt effectively.
+                </para>
+                <para>
+                    Their most effective weapon is that they can be difficult
+                    to spot. When dormant, they are practically invisible.
+                </para>
+            </tactics>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="0">
+                <attribute name="strength" score="0"/>
+                <attribute name="health" score="0"/>
+                <attribute name="agility" score="4"/>
+                <attribute name="dexterity" score="3"/>
+                <attribute name="perception" score="4"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="empathy" score="0"/>
+                <attribute name="will" score="3"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="4"/>
+                    <skill name="Awareness" score="5"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="0"/>
+                    <skill name="Guile" score="0"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="10"/>
+                    <skill name="Throw" score="0"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Touch" skill="Brawl">
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="fatigue" bonus="0"/>
+                </combatstyle>
+                <armourstyle style="Base"/>
+            </combat>
+
+            <advantages>
+                <advantage name="Incorporeal"/>
+                <advantage name="Life Drain"/>
+                <advantage name="Horror" score="20"/>
+            </advantages>
+        </statistics>
+    </beast>
+
+
+</bestiary>
