@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship
+        xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Free Trader</ss:name>
+        <ss:inService>-294</ss:inService>
+        <ss:manufacturer>Public Domain</ss:manufacturer>
+        <ss:type>Freighter</ss:type>
+        <ss:brief>
+            Rugged free trader designed for operation in low tech
+            environments.
+        </ss:brief>
+
+        <ss:physical>
+            A very basic design which was simple and cheap to manufacture,
+            making it ubiquitous for its time. Limited wings provide lift
+            during take off and re-entry.
+        </ss:physical>
+
+        <ss:background>
+            Designed in the third century of the Third Imperium by Outworld
+            Workshops at Orkney in Ilelish, the Adder was one of their
+            first commercially successful designs. Built with redundant
+            systems, a rugged hull which is highly forgiving of rushed repair
+            jobs and good atmospheric capability it is highly suited for
+            working for long periods away from good quality space ports.
+            These days, it is often used by smugglers and traders working
+            the edges of civilised space.
+        </ss:background>
+
+        <ss:image top="true">freetrader</ss:image>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Flat</ss:configuration>
+        <ss:displacement>100</ss:displacement>
+        <ss:techLevel>12</ss:techLevel>
+        <ss:health>4</ss:health>
+        <ss:agility>2</ss:agility>
+        <ss:armour>20</ss:armour>
+        <ss:cargo>15</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="15" techLevel="12">
+            <ss:plasma/>
+        </ss:drive>
+        <ss:fuel mass="5"/>
+        <ss:jump rating="1"/>
+        <ss:repulsor mass="4" techLevel="12"/>
+    </ss:systems>
+
+    <ss:mounts>
+        <ss:mount name="Top turret" type="LightTurret">
+            <ss:weapon type="PulseLaser" techLevel="9"/>
+        </ss:mount>
+
+        <ss:mount name="Bottom turret" type="LightTurret">
+            <ss:weapon type="BeamLaser"/>
+        </ss:mount>
+    </ss:mounts>
+
+    <ss:crew>
+        <ss:bridge number="2"/>
+        <ss:quarters number="4">
+            <ss:property name="cramped"/>
+        </ss:quarters>
+    </ss:crew>
+</ss:spaceship>

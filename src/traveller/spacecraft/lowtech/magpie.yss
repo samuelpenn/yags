@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Magpie</ss:name>
+        <ss:inService>-500</ss:inService>
+        <ss:manufacturer>Terran Origin</ss:manufacturer>
+        <ss:type>Freighter</ss:type>
+        <ss:brief>
+            The Magpie is a 200dt Jump-1 tramp freighter. It has good deep-space
+            performance with its Ion Drive, but lacks thrust.
+        </ss:brief>
+
+        <ss:image top="true">magpie</ss:image>
+
+        <ss:physical><![CDATA[
+            <p>
+                The Magpie looks like a half-finished skeleton of a hull,
+                with the main drive system separated from the main cargo
+                and living quarters by a long thin central section. It is
+                40m long, 16m wide and 20m tall, though most of this volume
+                is empty space.
+            </p>
+        ]]></ss:physical>
+
+        <ss:background><![CDATA[
+            <p>
+                A distinctive Jump-1 capable tramp freighter, the Magpie
+                was designed to transport small cargos over short distances.
+                Its Ion Drive is relatively large, providing more thrust
+                than is common for such systems, but it is still hampered
+                when in close orbit to a planet.
+            </p>
+        ]]></ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Cylinder</ss:configuration>
+        <ss:displacement>200</ss:displacement>
+        <ss:techLevel>11</ss:techLevel>
+        <ss:health>2</ss:health>
+        <ss:agility>1</ss:agility>
+        <ss:armour>0</ss:armour>
+        <ss:cargo>40</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="40">
+            <ss:ionDrive/>
+        </ss:drive>
+        <ss:fuel mass="50"/>
+        <ss:jump rating="1"/>
+    </ss:systems>
+
+    <ss:crew>
+        <ss:bridge number="2"/>
+        <ss:quarters number="4" type="cramped"/>
+    </ss:crew>
+</ss:spaceship>

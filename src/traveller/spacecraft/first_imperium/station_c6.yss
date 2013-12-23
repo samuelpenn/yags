@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship
+        xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Class C6 Station</ss:name>
+        <ss:inService>Unknown</ss:inService>
+        <ss:manufacturer>Public Domain</ss:manufacturer>
+        <ss:type>Station</ss:type>
+        <ss:brief>
+            A small space station that used to be common around worlds with a
+            C class star port. Provides facilities befitting a trade and
+            refuelling post.
+        </ss:brief>
+
+        <ss:physical><![CDATA[
+            <p>
+                The old Class C6 stations consist of a hexagonal ellipsoid which
+                contains most of the facilities, plus a stabilization spine which
+                houses most of the life support and maintenance systems.
+            </p>
+
+            <p>
+                The main bulk of the station is about 250m across and 125m thick
+                at the centre. Most of the internal space is taken up with hangar
+                bays which are open to space on the 'topside' of the station,
+                plus support facilities surrounding them. Living quarters are
+                found beneath the station, where a view of the planet is
+                possible. The station spins slowly to provide stability.
+            </p>
+        ]]></ss:physical>
+
+        <ss:background><![CDATA[
+            <p>
+                Some of the older C6 stations are said to be over a thousand
+                years old. They are tough, reliable and easily constructed so
+                tend to be common throughout the Imperium.
+            </p>
+
+            <p>
+                As well as providing a base for trade vessels, they are also
+                equipped with fighter bays for short range patrols and
+                defence. Typically, the quality of the fighters and their
+                pilots leaves much to be desired.
+            </p>
+        ]]></ss:background>
+
+        <ss:image>station_c6</ss:image>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Block</ss:configuration>
+        <ss:displacement>200000</ss:displacement>
+        <ss:techLevel>12</ss:techLevel>
+        <ss:health>4</ss:health>
+        <ss:agility>0</ss:agility>
+        <ss:armour>1000</ss:armour>
+        <ss:cargo>50000</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="0"/>
+        <ss:fuel mass="0"/>
+        <ss:sensors mass="100"/>
+        <ss:computers mass="10"/>
+    </ss:systems>
+
+    <ss:mounts>
+        <ss:mount name="Top turrets" type="HeavyTurret" number="12">
+            <ss:weapon type="PulseLaser"/>
+        </ss:mount>
+
+        <ss:mount name="Bottom turrets" type="HeavyTurret" number="12">
+            <ss:weapon type="PulseLaser"/>
+        </ss:mount>
+    </ss:mounts>
+
+    <ss:components>
+        <ss:hangar name="Internal bays" mass="400" number="24"/>
+        <ss:hangar name="Fighter bays" mass="20" number="12"/>
+
+        <ss:storage name="Plasma fuel store" mass="15000"/>
+        <ss:storage name="Jump fuel store" mass="10000"/>
+    </ss:components>
+
+    <ss:crew>
+        <ss:bridge number="50"/>
+        <ss:quarters number="2000" type="standard"/>
+        <ss:quarters number="150" type="spacious"/>
+        <ss:quarters number="20" type="luxury"/>
+        <ss:quarters number="5000" type="spacious" name="Station personel"/>
+    </ss:crew>
+</ss:spaceship>

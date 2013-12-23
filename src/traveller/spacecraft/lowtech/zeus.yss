@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:alf="http://www.alfresco.org" xmlns:chiba="http://chiba.sourceforge.net/xforms"
+              xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Zeus Heavy Cruiser</ss:name>
+        <ss:inService>-350</ss:inService>
+        <ss:manufacturer>Terran Origin</ss:manufacturer>
+        <ss:type>Heavy Combat Vessel</ss:type>
+        <ss:brief>
+            Heavy combat vessel designed for outer system patrol duties
+            and serious military engagements.
+        </ss:brief>
+
+        <ss:image top="true">zeus</ss:image>
+
+        <ss:physical><![CDATA[
+            <p>
+                The Zeus is a bulky cylindrical design, 80m in length, 32m
+                wide and 16m tall.
+                The bottom of the ship bristles with heavy missile turrets,
+                with beam and railguns mounted on the side and top
+                respectively.
+            </p>
+        ]]></ss:physical>
+
+        <ss:background><![CDATA[
+            <p>
+                One of the largest type of military craft available at
+                this technology level. It is a cruiser class vessel,
+                designed for deep patrol and rapid response.
+            </p>
+
+            <p>
+                It's main armament consists of 8 missile launchers, with
+                a total of 64 heavy missiles. General tactics are to
+                try and destroy targets at a distance with missiles, before
+                closing to use beam lasers and rail guns. Designed to use
+                these sorts of tactics makes it strictly a military vessel,
+                not designed for boarding actions or customs checks.
+            </p>
+        ]]></ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Cylinder</ss:configuration>
+        <ss:displacement>2500</ss:displacement>
+        <ss:techLevel>10</ss:techLevel>
+        <ss:health>2</ss:health>
+        <ss:agility>2</ss:agility>
+        <ss:armour>200</ss:armour>
+        <ss:cargo>100</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="200">
+            <ss:highPerformance/>
+        </ss:drive>
+        <ss:fuel mass="1700"/>
+        <ss:sensors mass="4"/>
+    </ss:systems>
+
+    <ss:crew>
+        <ss:bridge number="12"/>
+        <ss:quarters number="90" type="cramped"/>
+    </ss:crew>
+
+    <ss:mounts>
+        <ss:mount name="Top turrets" type="HeavyTurret" number="4">
+            <ss:weapon type="Railgun"/>
+        </ss:mount>
+        <ss:mount name="Side Mounted Turrets" type="LightTurret" number="16">
+            <ss:weapon type="BeamLaser"/>
+        </ss:mount>
+        <ss:mount name="Bottom Mounted Turrets" type="HeavyTurret" number="8">
+            <ss:weapon type="HeavyMissile"/>
+        </ss:mount>
+    </ss:mounts>
+
+    <ss:magazines>
+        <ss:magazine type="HeavyMissile" capacity="64"/>
+    </ss:magazines>
+</ss:spaceship>

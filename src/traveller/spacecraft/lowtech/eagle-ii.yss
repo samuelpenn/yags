@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Eagle II</ss:name>
+        <ss:inService>180</ss:inService>
+        <ss:manufacturer>Terran Origin</ss:manufacturer>
+        <ss:type>Freighter</ss:type>
+        <ss:brief>
+            Large jump capable bulk freighter.
+        </ss:brief>
+
+        <ss:image top="true">eagle</ss:image>
+
+        <ss:physical><![CDATA[
+            <p>
+                The Eagle II class Bulk Freighter is an ugly block design.
+                The oversized engines at the rear, kept external to the hull
+                to simplify shielding, are quite distinctive. It mounts two
+                heavy turrets on top (one fore, one aft) for basic defence.
+            </p>
+        ]]></ss:physical>
+
+        <ss:background><![CDATA[
+            <p>
+                Upgraded in early TL 11 to take advantage of the improvements
+                to Jump drive technology, the Mk II Eagle was superior in
+                almost every way to the initial variants. Though it was still
+                only capable of Jump-1, the drive was smaller and more
+                efficient, allowing extra room for reaction mass and cargo.
+            </p>
+
+            <p>
+                Cargo capacity was upped to 700 dt, and range was more than
+                doubled, with a 50% increase to acceleration. Some variants
+                swapped cargo for reaction mass (or vice versa) depending on
+                requirements.
+            </p>
+
+            <p>
+                Fitted with two dorsal mounted heavy turrets, the <em>Eagle</em>
+                has some defensive capability. It still had a low thrust
+                compared to the sort of ships used by pirates, but Q-ship
+                variants could be heavily armed and armoured.
+            </p>
+        ]]></ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Block</ss:configuration>
+        <ss:displacement>3200</ss:displacement>
+        <ss:techLevel>11</ss:techLevel>
+        <ss:health>2</ss:health>
+        <ss:agility>1</ss:agility>
+        <ss:armour>50</ss:armour>
+        <ss:cargo>700</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="150">
+            <ss:lowImpulsePlasma/>
+        </ss:drive>
+        <ss:fuel mass="1250"/>
+        <ss:jump rating="1"/>
+    </ss:systems>
+
+    <ss:crew>
+        <ss:bridge number="10"/>
+        <ss:quarters number="40" type="cramped"/>
+    </ss:crew>
+
+    <ss:mounts>
+        <ss:mount name="Top turrets" type="HeavyTurret" number="2">
+            <ss:weapon type="PulseLaser"/>
+        </ss:mount>
+    </ss:mounts>
+</ss:spaceship>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship
+        xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>JT-500 Light Freighter</ss:name>
+        <ss:inService>Unknown</ss:inService>
+        <ss:manufacturer>Public Domain</ss:manufacturer>
+        <ss:type>Freighter</ss:type>
+        <ss:brief>
+            An ancient but common design of 500dt light freighter.
+        </ss:brief>
+
+        <ss:physical><![CDATA[
+            <p>
+                A bulky freighter that is mostly cargo space strapped to a
+                plasma drive and jump drive. It isn't designed for atmospheric
+                capability.
+            </p>
+        ]]></ss:physical>
+
+        <ss:background><![CDATA[
+            <p>
+                A common Jump-2 capable freighter that dates to the First Imperium
+                but which is still built today since it can be constructed from
+                off the shelf parts without a license. Despite being twice the
+                size of the JT-250, it's cargo capacity is only slightly greater
+                but it makes up for this with double the jump range.
+            </p>
+
+            <p>
+                There are many variants of this ship available, and it's popular
+                for use as a mobile home, converting some of the cargo space into
+                extra living quarters.
+            </p>
+        ]]></ss:background>
+
+        <ss:image top="true">jt500</ss:image>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Flat</ss:configuration>
+        <ss:displacement>500</ss:displacement>
+        <ss:techLevel>12</ss:techLevel>
+        <ss:health>4</ss:health>
+        <ss:agility>2</ss:agility>
+        <ss:armour>25</ss:armour>
+        <ss:cargo>186</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="30">
+            <ss:plasma/>
+        </ss:drive>
+        <ss:fuel mass="40"/>
+        <ss:jump rating="2"/>
+    </ss:systems>
+
+    <ss:mounts>
+        <ss:mount name="Top turret" type="LightTurret" number="2">
+            <ss:weapon type="PulseLaser"/>
+        </ss:mount>
+    </ss:mounts>
+
+    <ss:crew>
+        <ss:bridge number="4" type="cabin"/>
+        <ss:quarters number="8" type="cramped"/>
+    </ss:crew>
+</ss:spaceship>

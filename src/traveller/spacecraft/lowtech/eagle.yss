@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Eagle</ss:name>
+        <ss:inService>-150</ss:inService>
+        <ss:manufacturer>Terran Origin</ss:manufacturer>
+        <ss:type>Freighter</ss:type>
+        <ss:brief>
+            Large jump capable bulk freighter.
+        </ss:brief>
+
+        <ss:image top="true">eagle</ss:image>
+
+        <ss:physical><![CDATA[
+            <p>
+                The Eagle class Bulk Freighter is an ugly block design.
+                The oversized engines at the rear, kept external to the hull
+                to simplify shielding, are quite distinctive. It mounts two
+                heavy turrets on top (one fore, one aft) for basic defence.
+            </p>
+        ]]></ss:physical>
+
+        <ss:background><![CDATA[
+            <p>
+                One of the earliest interstellar freighters that was built
+                in Sol shipyards following the Long Night, the Eagle class
+                (and its many variants) stayed around for several hundred
+                years before being superceded by newer and better designs.
+            </p>
+
+            <p>
+                Capable of carrying 500dt of cargo, and having a jump range
+                of 1 parsec, it was an expensive way to ship goods around,
+                but it was the best available at the time.
+            </p>
+
+            <p>
+                Fitted with two dorsal mounted heavy turrets, the <em>Eagle</em>
+                has some defensive capability. It's low thrust and limited
+                range greatly reduce it's ability to run from attackers however,
+                and it was often seen as a juicy target if found in less
+                secure systems.
+            </p>
+        ]]></ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Block</ss:configuration>
+        <ss:displacement>3200</ss:displacement>
+        <ss:techLevel>10</ss:techLevel>
+        <ss:health>2</ss:health>
+        <ss:agility>1</ss:agility>
+        <ss:armour>50</ss:armour>
+        <ss:cargo>500</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="150">
+            <ss:lowImpulsePlasma/>
+        </ss:drive>
+        <ss:fuel mass="750"/>
+        <ss:jump rating="1"/>
+    </ss:systems>
+
+    <ss:crew>
+        <ss:bridge number="10"/>
+        <ss:quarters number="40" type="cramped"/>
+    </ss:crew>
+
+    <ss:mounts>
+        <ss:mount name="Top turrets" type="HeavyTurret" number="2">
+            <ss:weapon type="PulseLaser"/>
+        </ss:mount>
+    </ss:mounts>
+</ss:spaceship>

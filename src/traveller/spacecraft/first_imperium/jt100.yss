@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship
+        xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>JT-100 Free Trader</ss:name>
+        <ss:inService>Unknown</ss:inService>
+        <ss:manufacturer>Public Domain</ss:manufacturer>
+        <ss:type>Freighter</ss:type>
+        <ss:brief>
+            An ancient design of free trader common during the First Imperium
+            that has survived until the present day.
+        </ss:brief>
+
+        <ss:physical><![CDATA[
+            <p>
+                A simple, rugged design which is cheap to manufacture. It's flat
+                design provide some aerodynamic capability making it suitable for
+                planetary landing.
+            </p>
+        ]]></ss:physical>
+
+        <ss:background><![CDATA[
+            <p>
+                Designed back during the First Imperium, the original designers
+                of the <em>JT-100</em> have long since been forgotten, and its
+                designs have now been circulated, modified and re-implemented all
+                across the Third Imperium.
+            </p>
+
+            <p>
+                As would be expected, there are many variants of the design, but
+                they generally all follow the same rugged design. Modern variants
+                are built from off the shelf components, making it possible for
+                low tech shipyards to construct their own versions by buying in
+                the higher tech modules from elsewhere.
+            </p>
+        ]]></ss:background>
+
+        <ss:image top="true">jt100</ss:image>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Flat</ss:configuration>
+        <ss:displacement>100</ss:displacement>
+        <ss:techLevel>12</ss:techLevel>
+        <ss:health>4</ss:health>
+        <ss:agility>2</ss:agility>
+        <ss:armour>10</ss:armour>
+        <ss:cargo>28</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="20">
+            <ss:plasma/>
+        </ss:drive>
+        <ss:fuel mass="4"/>
+        <ss:jump rating="1"/>
+        <ss:repulsor mass="3"/>
+    </ss:systems>
+
+    <ss:mounts>
+        <ss:mount name="Top turret" type="LightTurret">
+            <ss:weapon type="PulseLaser"/>
+        </ss:mount>
+    </ss:mounts>
+
+    <ss:crew>
+        <ss:bridge number="2" type="cabin"/>
+        <ss:quarters number="4" type="cramped"/>
+    </ss:crew>
+</ss:spaceship>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:alf="http://www.alfresco.org" xmlns:chiba="http://chiba.sourceforge.net/xforms"
+              xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xf="http://www.w3.org/2002/xforms"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Olympus Frigate</ss:name>
+        <ss:inService>-350</ss:inService>
+        <ss:manufacturer>Terran Origin</ss:manufacturer>
+        <ss:type>Heavy Combat Vessel</ss:type>
+        <ss:brief>
+            Military vessel designed for in-system defence.
+        </ss:brief>
+
+        <ss:image>olympus</ss:image>
+
+        <ss:physical><![CDATA[
+            <p>
+                The Olympus is a typical TL 10 design, a 50m long cylinder
+                12m in diameter,
+                with main drives at the rear and command and control in
+                an external bridge towards the front. Weapon systems are
+                arrayed along the length.
+            </p>
+        ]]></ss:physical>
+
+        <ss:background><![CDATA[
+            <p>
+                The <i>Olympus Frigate</i> is a combat vessel designed for
+                escort and support duties within a system. Lacking a jump
+                drive, it must rely on jump tenders to reach other systems.
+                It's combat effectiveness is much higher because of this
+                however, and it was one of the most common light military
+                vessels of the period.
+            </p>
+
+            <p>
+                Later varients tend to swap railguns and massdrivers for
+                laser weapon systems, or possible extra missile launchers.
+                Early in TL10, lasers were still expensive and mostly
+                untested in real combat. Having such a wide range of
+                different weapon types in such a small ship increases
+                maintenance and supply costs.
+            </p>
+        ]]></ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Cylinder</ss:configuration>
+        <ss:displacement>450</ss:displacement>
+        <ss:techLevel>10</ss:techLevel>
+        <ss:health>3</ss:health>
+        <ss:agility>3</ss:agility>
+        <ss:armour>40</ss:armour>
+        <ss:cargo>0</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="50">
+            <ss:highPerformance/>
+        </ss:drive>
+        <ss:fuel mass="310"/>
+        <ss:sensors mass="2"/>
+    </ss:systems>
+
+    <ss:crew>
+        <ss:bridge number="12"/>
+        <ss:quarters number="24" type="cramped"/>
+    </ss:crew>
+
+    <ss:mounts>
+        <ss:mount name="Top turrets" type="HeavyTurret" number="2">
+            <ss:weapon type="Railgun"/>
+        </ss:mount>
+        <ss:mount name="Fore turrets" type="HeavyTurret" number="2">
+            <ss:weapon type="MassDriver"/>
+        </ss:mount>
+        <ss:mount name="Side Mounted Turrets" type="LightTurret" number="4">
+            <ss:weapon type="BeamLaser"/>
+        </ss:mount>
+        <ss:mount name="Side Mounted Turrets" type="HeavyTurret" number="2">
+            <ss:weapon type="HeavyMissile"/>
+        </ss:mount>
+    </ss:mounts>
+
+    <ss:magazines>
+        <ss:magazine type="HeavyMissile" capacity="8"/>
+    </ss:magazines>
+
+</ss:spaceship>

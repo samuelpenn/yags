@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship
+        xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>E-300 Explorer</ss:name>
+        <ss:inService>Unknown</ss:inService>
+        <ss:manufacturer>Public Domain</ss:manufacturer>
+        <ss:type>Scout</ss:type>
+        <ss:brief>
+            Explorer class scout craft, designed for exploration of worlds on
+            the fringes of the Imperium.
+        </ss:brief>
+
+        <ss:physical><![CDATA[
+            <p>
+                An ancient design of scout craft. It's wedge shaped hull provides
+                some aerodynamic capability, and coupled with it's powerful drives
+                it can land on most worlds. However, it has no weapons or defensive
+                systems, and is mostly drives systems with some room for a crew.
+            </p>
+        ]]></ss:physical>
+
+        <ss:background><![CDATA[
+            <p>
+                This exploration class scout is another ancient design that is
+                sometimes used as a courier or patrol craft by low tech worlds.
+                The most common variant is to outfit it with more capable in-system
+                drives, which can more than double it's range and acceleration.
+            </p>
+
+            <p>
+                As with most craft that date from the First Imperium, the original
+                manufacturer is unknown, but many variants are still constructed
+                from standard component parts by outer rim worlds from the now
+                freely available blueprints. It is not used by the Imperial Scout
+                Service however, which prefer the Sulieman or other designs which
+                are far more capable. Note that the E-300's size is entirely
+                governed by its Jump-2 drives, which at the time couldn't be
+                mounted on anything smaller and still maintain a stable jump field.
+            </p>
+        ]]></ss:background>
+
+        <ss:image top="true">e300</ss:image>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Wedge</ss:configuration>
+        <ss:displacement>300</ss:displacement>
+        <ss:techLevel>12</ss:techLevel>
+        <ss:health>3</ss:health>
+        <ss:agility>2</ss:agility>
+        <ss:armour>5</ss:armour>
+        <ss:cargo>2</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="42">
+            <ss:plasma/>
+        </ss:drive>
+        <ss:fuel mass="26"/>
+        <ss:jump rating="2" fuel="2"/>
+        <ss:repulsor mass="5"/>
+    </ss:systems>
+
+    <ss:crew>
+        <ss:bridge number="3" type="cabin"/>
+        <ss:quarters number="4" type="cramped"/>
+    </ss:crew>
+</ss:spaceship>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Swallow</ss:name>
+        <ss:inService>-500</ss:inService>
+        <ss:manufacturer>Terran Origin</ss:manufacturer>
+        <ss:type>Freighter</ss:type>
+        <ss:brief>
+            Small interplanetary freighter.
+        </ss:brief>
+
+        <ss:image>swallow</ss:image>
+
+        <ss:physical><![CDATA[
+            <p>
+                Late TL 9 freighter with experimental plasma drive. The crew
+                quarters are placed as far from the drives as possible, to
+                reduce the radiation hazard. The hull itself is very light,
+                and easily damaged by micrometeorites. It's total length is
+                40m, though much of this is the thin neck. The main bulk of
+                the ship is 9m wide.
+            </p>
+        ]]></ss:physical>
+
+        <ss:background><![CDATA[
+            <p>
+                Though ion drives were great for getting about a solar system,
+                they were terrible for leaving planetary orbit, requiring
+                complicated orbital manouevering to overcome even a small
+                planet's gravity. The advent of the plasma drive improved
+                things, but early versions were rare in non-military craft
+                due to expense and also their perceived risk.
+            </p>
+
+            <p>
+                The <i>Swallow</i> was one design which tried to make use of the
+                early plasma drive designs to allow fast orbital insertion and
+                escape. Compared craft such as the <i>Albatross</i>, it could
+                simply point away from the planet and thrust. In order to
+                achieve this though, the <i>Swallow</i> sacrifices maximum
+                speed and also durability - the design is stripped down to the
+                bare essentials in order to reduce mass to a minimum.
+            </p>
+        ]]></ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Block</ss:configuration>
+        <ss:displacement>140</ss:displacement>
+        <ss:techLevel>9</ss:techLevel>
+        <ss:health>1</ss:health>
+        <ss:agility>1</ss:agility>
+        <ss:armour>0</ss:armour>
+        <ss:cargo>55</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="15">
+            <ss:lowImpulsePlasma/>
+        </ss:drive>
+        <ss:fuel mass="60"/>
+    </ss:systems>
+
+    <ss:crew>
+        <ss:bridge number="2"/>
+        <ss:quarters number="4" type="cramped"/>
+    </ss:crew>
+</ss:spaceship>

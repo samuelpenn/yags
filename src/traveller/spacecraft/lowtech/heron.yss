@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ss:spaceship xmlns:ss="http://glendale.org.uk/alfresco/spaceship"
+              xmlns:xhtml="http://www.w3.org/1999/xhtml"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <ss:description>
+        <ss:name>Heron</ss:name>
+        <ss:inService>-250</ss:inService>
+        <ss:manufacturer>Terran Origin</ss:manufacturer>
+        <ss:type>Freighter</ss:type>
+        <ss:brief>
+            Small interplanetary freighter.
+        </ss:brief>
+
+        <ss:image top="true">heron</ss:image>
+
+        <ss:physical><![CDATA[
+            <p>
+                The <i>Heron</i> is built around a cylindrical body with drive
+                systems at rear, and living quarters up front. Cargo is stored
+                centrally for easy access, with most of the central body opening
+                for access. The total length is 20m, and it is 9m wide.
+            </p>
+        ]]></ss:physical>
+
+        <ss:background><![CDATA[
+            <p>
+                Based on a much earlier design from before the Second Imperium,
+                the <i>Heron</i> is simply a box with an engine fitted to the
+                back. Designed for interplanetary travel, it has no aerodynamic
+                properties, and is incapable of landing.
+            </p>
+
+            <p>
+                Because of the simplicity of design, modern versions sometimes
+                replace the primitive ion drive with a plasma torch. This is
+                a simple design change, which greatly improves speed and range.
+            </p>
+        ]]></ss:background>
+    </ss:description>
+
+    <ss:attributes>
+        <ss:configuration>Cylinder</ss:configuration>
+        <ss:displacement>100</ss:displacement>
+        <ss:techLevel>10</ss:techLevel>
+        <ss:health>2</ss:health>
+        <ss:agility>1</ss:agility>
+        <ss:armour>0</ss:armour>
+        <ss:cargo>42</ss:cargo>
+    </ss:attributes>
+
+    <ss:systems>
+        <ss:drive mass="10">
+            <ss:ionDrive/>
+        </ss:drive>
+        <ss:fuel mass="40"/>
+    </ss:systems>
+
+    <ss:crew>
+        <ss:bridge number="2"/>
+        <ss:quarters number="4" type="cramped"/>
+    </ss:crew>
+</ss:spaceship>
