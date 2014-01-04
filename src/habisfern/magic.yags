@@ -8,7 +8,7 @@
          xmlns:h="http://yagsbook.sourceforge.net/xml/yags/habisfern">
     <header>
         <title>Rune Magic</title>
-        <tagline>Yags Habisfern</tagline>
+        <tagline>YAGS Habisfern</tagline>
 
         <summary>
             Magic in the world of Habisfern, describing how it is used
@@ -21,12 +21,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 1.33 $</version>
+            <version>$Revision: 0.7.9 $</version>
             <date>$Date: 2006-06-07 21:30:46 $</date>
         </cvsinfo>
 
         <license type="Yags">
-            <year>2004</year>
+            <year>2013</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -735,12 +735,17 @@
             <title>The Mystery of Water</title>
             <para>
                 Knowledge of the Mystery of Water gives you power over lakes
-                and rivers, seas and water. It also governs cold and darkness,
-                and so masters of Water are viewed with a touch of suspicion
-                by many.
+                and rivers, seas and water. It represents the deep ocean which
+                engulfs and swallows those within it, the darkness which hides
+                and frightens and the coldness which stills limbs and depresses
+                the spirit. As water quenches fire, so this power quenches
+                passions and energy.
             </para>
+
             <para>
-                Water is tied to men.
+                <e>Water</e> is associated with the masculine side of magic
+                and so male wizards suffer fewer penalties when it is
+                mastered.
             </para>
             <sect2>
                 <title>Innate Abilities</title>
@@ -792,9 +797,7 @@
                 <sect3>
                     <title>Water</title>
                     <para>
-                        You have power over water and watery things. These
-                        abilities require an hour of concentration, and you
-                        gain one level of exhaustion.
+                        You have power over water and watery things.
                     </para>
                     <targetlist targetFirst="true" bold="true">
                         <targetLabel>Target</targetLabel>
@@ -804,7 +807,26 @@
                             This cancels poisons, and turns tainted water
                             good. Salted water turns fresh. Other liquids,
                             such as wine or blood, become fresh but otherwise
-                            remain in their natural form.
+                            remain in their natural form. Takes an hour, and
+                            causes one level of exhaustion.
+                        </item>
+                        <item target="10" value="Dryness.">
+                            You may keep water from you, allowing you to
+                            remain dry in light rain. Each hour causes you
+                            one level of exhaustion.
+                        </item>
+                        <item target="20" value="Dryness.">
+                            You may remain dry in moderate or heavy rain.
+                            Each hour causes you one level of exhaustion.
+                        </item>
+                        <item target="30" value="Dryness.">
+                            You may remain dry in a tropical storm, or when
+                            submerged in water. Each hour causes you
+                            one level of exhaustion.
+                        </item>
+                        <item target="40" value="Walk on water.">
+                            You may walk on still water. Each minute causes
+                            you one level of exhaustion.
                         </item>
                     </targetlist>
                 </sect3>
@@ -860,8 +882,49 @@
                 <sect3>
                     <title>Cold</title>
                     <para>
-                        You can make it cold.
+                        You can make it cold. Takes an hour, and causes one
+                        level of exhaustion. You may continue to concentrate
+                        to keep the temperature deflated. Gain another level
+                        of exhaustion after a number of hours equal to your
+                        Will.
                     </para>
+                    <para>
+                        How long the temperature takes to recover depends on
+                        the size of the area affected, the local geography and
+                        the temperature difference. Generally, assume that there
+                        is a half life, with the difference halving over some
+                        period of time. This may be a minute for a 3m radius
+                        area, or a day for a 1km radius area in a depression.
+                    </para>
+                    <targetlist targetFirst="true" bold="true">
+                        <targetLabel>Target</targetLabel>
+                        <valueLabel>Effect</valueLabel>
+                        <item target="10" value="Cold 3m.">
+                            The temperature of the air immediately around you drops
+                            by one level. A strong wind may prevent the temperature
+                            drop due to the colder air being replaced by warmer air,
+                            though this can affect wind patterns over a larger area.
+                        </item>
+                        <item target="20" value="Cold 10m.">
+                            Drop the air temperature by one level out to 10m radius.
+                        </item>
+                        <item target="30" value="Cold 30m.">
+                            Drop the air temperature by one level out to 30m radius.
+                        </item>
+                        <item target="40" value="Cold 100m.">
+                            Drop the air temperature by one level out to 100m radius.
+                        </item>
+                        <item target="50" value="Rain 300m.">
+                            Drop the air temperature by one level out to 300m radius.
+                        </item>
+                        <item target="60" value="Rain 1km.">
+                            Drop the air temperature by one level out to 1000m radius.
+                        </item>
+                        <item target="+5" value="Make it colder.">
+                            Increase the amount that the temperature drops by one
+                            further level.
+                        </item>
+                    </targetlist>
                 </sect3>
             </sect2>
         </sect1>
@@ -930,41 +993,44 @@
                     <title>Aura</title>
 
                     <para>
-                        <e>Sense spirit</e> enables the wizard to see and
-                        examine the spirits of those around her. All living
-                        things have a spirit, and all spirits have an aura.
-                        The aura is a reflection of the spirit's true
-                        nature, and is difficult to mask.
+                        You may sense the aura of all those around you. All living
+                        things have a spirit, and all spirits have an aura. The
+                        aura is a reflection of the spirit's true nature, and it is
+                        difficult to mask.
                     </para>
 
                     <para>
-                        By spending a round concentrating on an animal or
-                        person, the wizard can see the aura of the target.
-                        Targets with a <t>Will</t> get a resistance, other
-                        targets have a target difficulty of 10.
+                        By spending a round concentrating on an animal or person,
+                        you can see their aura. Normally, there is no resistance
+                        to this, and the base difficulty is 10. Under some circumstance,
+                        the target may get to resist with their <t>Will</t>, but this
+                        is exceptional.
+                    </para>
+                    <para>
+                        You must be able to clearly see the target in order to view
+                        their aura, and they must be Near to you.
                     </para>
 
                     <targetlist targetFirst="true">
                         <valueLabel>Detail seen</valueLabel>
                         <targetLabel>Success</targetLabel>
 
-                        <item target="Moderate" value="Type.">
-                            The wizard can tell the type of spirit being
-                            examined. She knows whether the aura is
-                            human, fey, beast or dead. She can also tell
-                            the gender and general age of the target. A
-                            single strong emotion can be detected as well,
-                            if one is active.
+                        <item target="Moderate (10)" value="Type.">
+                            You can tell the type of spirit being examined, and know
+                            whether it is a human, fey, beast or undead. You can also
+                            tell the gender and general age of the spirit, and if they
+                            have a strong emotion active than this can also be
+                            determined.
                         </item>
 
-                        <item target="Good" value="State.">
+                        <item target="Good (20)" value="State.">
                             The general state of mind of the target, as
                             well as some of the strongest emotions that
                             drive the target, even if they aren't currently
                             active.
                         </item>
 
-                        <item target="Excellent" value="Emotions.">
+                        <item target="Excellent (30)" value="Emotions.">
                             Visions of what the target's strongest emotions
                             represent. A person thinking about their true
                             love would present an image of their love. If
@@ -973,382 +1039,54 @@
                             seen.
                         </item>
 
-                        <item target="Superb" value="History.">
+                        <item target="Superb (40)" value="History.">
                             Visions of important events in the life of the
                             target. Images of their parents or family,
                             their loves and hates.
                         </item>
                     </targetlist>
-
-                    <para>
-                        A useful ritual is to rub water over your eyes
-                        before invoking. Another ritual is to say an
-                        incantation that calls upon Thot.
-                    </para>
                 </sect3>
-
                 <sect3>
-                    <title>Control</title>
-
+                    <title>Warding</title>
                     <para>
-                        <e>Control spirit</e> enables the wizard to put up
-                        a ward against spirits. Whilst she concentrates,
-                        spirits cannot approach the wizard unless they
-                        make their resistance check. Spirits are kept back
-                        by 1m for each point they failed their check by.
+                        You may create a circle of warding against spirits.
+                        You inscribe an area, and all the time you remain
+                        within the area pure spirits can not cross over the
+                        boundary unless they beat you with a contest of will.
+                        If they fail, then they gain a level of exhaustion.
+                        They may try again after a minute.
                     </para>
-
                     <para>
-                        Spirits which equal to the wizard's magic total
-                        can almost touch the wizard, but cannot harm her.
-                        A warded spirit can make a new check every hour.
-                    </para>
-
-                    <para>
-                        A useful ritual is to inscribe a warding circle
-                        which acts as a focus for the magic. As well as
-                        giving the standard ritual benefits, it prevents
-                        all spirits from passing across its perimeter
-                        if they fail their resistance. It can have a radius
-                        up to a number of metres equal to the skill of
-                        the wizard. Using a circle gives an all or nothing
-                        result - either a spirit can pass the perimeter,
-                        or it can't. It is useful for protecting a group
-                        of people, or to contain a spirit.
+                        The radius of the warded area is normally limited to
+                        <e>Reach</e>. Warding an area out to <e>Near</e>
+                        reduces your effective Will by one. The warded area
+                        must be visible to you, and you must be awake for the
+                        ward to have an effect.
                     </para>
                 </sect3>
-
                 <sect3>
-                    <title>Summon</title>
-
+                    <title>Necromancy</title>
                     <para>
-                        <e>Summon spirit</e> forces spirits in the nearby
-                        area to make themselves visible. Each spirit gets
-                        a resistance check against the magic of the wizard,
-                        at a bonus of +1 per metre of distance.
+                        You may summon, and communicate with, the spirits of
+                        the recently dead. The spirit must still be present,
+                        which normally means the body must be mostly intact
+                        and not decayed. Once a body has decayed, a spirit is
+                        free to move to the underworld. Generally, the dead
+                        are burnt within a couple of days of death, in order
+                        to free their spirit as soon as possible.
                     </para>
-
                     <para>
-                        Summoned spirits do not have to cooperate, though
-                        if the <e>summon</e> check was double the spirit's
-                        resistance, then the wizard can compel them.
+                        You gain a level of exhaustion summoning a dead spirit,
+                        and it is visible to all those nearby. It can communicate
+                        in any language that it knows, but is not compelled to
+                        answer questions.
                     </para>
-
                     <para>
-                        Spirits remain whilst the wizard concentrates.
-                    </para>
-
-                    <sect4>
-                        <title>Summoning the Dead</title>
-
-                        <para>
-                            The wizard can summon the spirits of those who
-                            have been recently killed. Such a spirit
-                            remains with the body, gradually fading with
-                            time. How long it remains depends on the
-                            personality of the spirit and how well the
-                            body is preserved.
-                        </para>
-
-                        <para>
-                            If the body has been completely burnt, then the
-                            spirit is gone and cannot be summoned. Neither
-                            can it return to haunt the living (this is why
-                            most cultures cremate their dead).
-                        </para>
-
-                        <para>
-                            A spirit otherwise remains in the body for a
-                            number of days equal to the will of the person.
-                            Each day, the will drops by one (and the spirit
-                            looses an equal proportion of their memories),
-                            but the summoning difficulty rises by +10.
-                        </para>
-
-                        <para>
-                            A well preserved body (very dry or very cold
-                            environment) lasts weeks rather than days.
-                        </para>
-                    </sect4>
-                </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Masters of Spirit</title>
-
-                <y:advantages title="Spirit Mastery">
-                    <y:advantage name="Aura sight">
-                        <y:short>See auras all the time.</y:short>
-
-                        <description>
-                            <para>
-                                You can see the auras of people and animals
-                                at will. Each time this is taken, you get
-                                one automatic success level of information.
-                                No roll is required.
-                            </para>
-                        </description>
-                    </y:advantage>
-
-                    <y:advantage name="Truth sight">
-                        <y:short>Detect lies and falsehoods.</y:short>
-                        <description>
-                            <para>
-                                Your mastery of the spirits of people grants
-                                you better ability at seeking lies. Your
-                                <t>empathy</t> difficulty to detect a lie
-                                or misdirection is halved. You may only
-                                take this once.
-                            </para>
-                        </description>
-                    </y:advantage>
-
-                    <y:advantage name="Second sight">
-                        <y:short>See spirits.</y:short>
-
-                        <description>
-                            <para>
-                                This duplicates the advantage of the same
-                                name. You can see ghosts and spirits
-                                even when they are hidden to normal sight.
-                                If you already have the <e>Second Sight</e>
-                                advantage, then taking it as a Mastery
-                                ability gives no effect,
-                            </para>
-                        </description>
-                    </y:advantage>
-
-                    <y:advantage name="Charisma">
-                        <y:short>Add score to empathy checks.</y:short>
-
-                        <description>
-                            <para>
-                                You can add your <e>Spirit</e> score
-                                to empathy checks when trying to persuade
-                                others. May only be taken once.
-                            </para>
-                        </description>
-                    </y:advantage>
-
-                    <y:advantage name="Iron will">
-                        <y:short>Strong at resisting magic.</y:short>
-
-                        <description>
-                            <para>
-                                You gain a +1 bonus to your Will to resist
-                                the effects of magic. You may take this
-                                multiple times.
-                            </para>
-                        </description>
-                    </y:advantage>
-
-                    <y:advantage name="Divination">
-                        <y:short>Foretell the future.</y:short>
-
-                        <description>
-                            <para>
-                                You gain the ability to predict the future
-                                as if you had the <e>Divination</e>
-                                advantage.
-                            </para>
-                        </description>
-                    </y:advantage>
-                </y:advantages>
-            </sect2>
-
-            <sect2>
-                <title>Spirit Cantrips</title>
-
-                <h:import-spells href="spells/spirit.yags" type="spirit"/>
-            </sect2>
-        </sect1>
-
-        <sect1>
-            <title>Water</title>
-
-            <para>
-                <e>Water</e> gives power over the wet, dark and cold.
-                It represents the deep ocean which engulfs and swallows
-                those within it, the darkness which hides and frightens
-                and the coldness which stills limbs and depresses the
-                soul. As water quenches fire, so this power quenches
-                passions and energy.
-            </para>
-
-            <para>
-                <e>Water</e> is associated with the masculine side of magic
-                and so male wizards suffer fewer penalties when it is
-                mastered.
-            </para>
-
-            <sect2>
-                <title>Water Powers</title>
-
-                <sect3>
-                    <title>Sense</title>
-
-                    <para>
-                        You may <e>Sense</e> the properties of a liquid by
-                        taking a small taste of it. You may try to discern
-                        its properties by scent, though this adds +20 to
-                        the difficulty. Except for the most potent of
-                        poisons, the taste is rarely enough to be harmful.
-                        A skill check is required using
-                        <y:perception>Water</y:perception>. You can sample
-                        a cup sized volume of liquid.
-                    </para>
-
-                    <targetlist targetFirst="true">
-                        <valueLabel>Detail seen</valueLabel>
-                        <targetLabel>Success</targetLabel>
-
-                        <item target="Moderate" value="Type.">
-                            A general feel as to the whether the liquid is
-                            harmful or beneficial. A degree (slightly or
-                            very) is also known.
-                        </item>
-
-                        <item target="Good">
-                            Knowledge of the main property of the liquid.
-                        </item>
-
-                        <item target="Excellent">
-                            Knowledge of most of the properties of the
-                            liquid.
-                        </item>
-
-                        <item target="Superb">
-                            Detailed knowledge of all the properties of a
-                            liquid.
-                        </item>
-                    </targetlist>
-                </sect3>
-
-                <sect3>
-                    <title>Control</title>
-
-                    <para>
-                        Control over <e>Water</e> enables you to manipulate
-                        the behaviour of water, including its movement and
-                        ability to make things wet.
-                    </para>
-
-                    <targetlist>
-                        <item target="Moderate">
-                            Keep dry in light rain.
-                        </item>
-
-                        <item target="Good">
-                            Keep dry in heavy rain. Remove liquid from
-                            wet clothes.
-                        </item>
-
-                        <item target="Excellent">
-                            Walk on still water.
-                        </item>
-                    </targetlist>
-                </sect3>
-
-                <sect3>
-                    <title>Summon</title>
-
-                    <para>
-                        <e>Summon water</e> only works out in the open.
-                        The default effect is to cause it to start raining
-                        over the course of an hour, covering a 250m radius
-                        area.
-                    </para>
-
-                    <para>
-                        Each level of success increases the intensity of
-                        the rain. Add +5 to the target difficulty for each
-                        doubling of the radius affected. Add +10 to cause
-                        the rain to reach full strength in a minute instead
-                        of an hour, or +20 to reduce that time to a round.
-                    </para>
-
-                    <para>
-                        The magic lasts as long as the wizard concentrates.
+                        The base difficulty to summon a spirit is 10. If the
+                        spirit does not wish to be summoned, then the difficulty
+                        is equal to the <t>Will</t> of the spirit.
                     </para>
                 </sect3>
-            </sect2>
-
-            <sect2>
-                <title>Masters of Water</title>
-
-                <para>
-                    A Master of Water may choose from the following
-                    abilities.
-                </para>
-
-                <y:advantages>
-                    <y:advantage name="Breath water">
-                        <y:short>The ability to breath water.</y:short>
-
-                        <description>
-                            <para>
-                                The wizard gains the ability to breath
-                                water as if it were air. This does not
-                                affect their ability to breath air in any
-                                way. Water enters their lungs as air does,
-                                and the oxygen extracted from it.
-                            </para>
-                        </description>
-                    </y:advantage>
-
-                    <y:advantage name="Water movement">
-                        <y:short>Freedom of action in water.</y:short>
-
-                        <description>
-                            <para>
-                                The wizard can move freely through water.
-                                Running or walking through water is hardly
-                                hindered at all, and swimming is at full
-                                movement rate, in any direction.
-                            </para>
-
-                            <para>
-                                If this is taken a second time, then the
-                                wizard may walk on the surface of water.
-                            </para>
-                        </description>
-                    </y:advantage>
-
-                    <y:advantage name="Cold resist">
-                        <y:short>Gain a resistance to cold.</y:short>
-
-                        <description>
-                            <para>
-                                The wizard may act as if the temperature
-                                were up to three levels higher than it
-                                actually is. He also gains a +10 bonus to
-                                soak to resist cold related damage. If
-                                taken more than once, this advantage stacks
-                                with itself.
-                            </para>
-                        </description>
-                    </y:advantage>
-
-                    <y:advantage name="Poison resist">
-                        <y:short>Gain a resistance to poison.</y:short>
-
-                        <description>
-                            <para>
-                                You gain a high resistance to poisons of
-                                all types, getting a +3 bonus to all
-                                <t>Health</t> checks to resist their
-                                effects. You may take this ability
-                                multiple times.
-                            </para>
-                        </description>
-                    </y:advantage>
-                </y:advantages>
-            </sect2>
-
-            <sect2>
-                <title>Water Cantrips</title>
-
-                <h:import-spells href="spells/water.yags" type="water"/>
             </sect2>
         </sect1>
 
@@ -1416,113 +1154,6 @@
                         even seeing visions if applicable.
                     </item>
                 </targetlist>
-            </sect2>
-
-            <sect2>
-                <title>Control</title>
-
-                <para>
-                    <e>Control earth</e> gives the wizard power over
-                    the fertility and growth of living things. She can
-                    increase crop yields, increase a woman's chances
-                    of conceiving and speed recovery.
-                </para>
-
-                <para>
-                    Increasing plant growth takes a day, and the base
-                    difficulty increases growth of all plants by about
-                    10% over a 10m radius. Each +5 doubles the radius,
-                    and each +10 increases the yield by another 10%.
-                    This magic can only be used once per growth cycle,
-                    and does tend to deplete the soil of nutrients.
-                </para>
-            </sect2>
-
-            <sect2>
-                <title>Summon</title>
-
-                <para>
-                    Summon an earth elemental.
-                </para>
-            </sect2>
-
-            <sect2>
-                <title>Mastery</title>
-
-                <para>
-                    A wizard who has mastered Earth has power over the
-                    ground, fertility and sexuality. She also has power
-                    over nature and animals, for they are an expression
-                    of life itself.
-                </para>
-
-                <para>
-                    An Earth Master may choose one of the following
-                    advantages when she achieves a score of 10 in Earth.
-                    She may choose a second at 12, a third at 15 and
-                    one more every 5 points thereafter.
-                </para>
-
-                <para>
-                    Earth is directly opposed to <e>Air</e>, so she
-                    receives a penalty to her Will for Air based magic.
-                    It also affects <e>Spirit</e> and <e>Fire</e> to
-                    a lesser extent.
-                </para>
-
-                <y:advantages title="Mastery of Earth">
-                    <y:advantage name="Earth sense">
-                        <description>
-                            <para>
-                                A Master of Earth's senses are extended
-                                whilst she is in contact with the ground.
-                                She has a sense of anything else that
-                                contacts the ground within a number of
-                                metres of her equal to her score. She
-                                can sense them as if she can see them,
-                                so is unaffected by darkness, and it is
-                                impossible to hide from her.
-                            </para>
-
-                            <para>
-                                This advantage may be taken multiple
-                                times, each extra time doubles the
-                                range of the ability.
-                            </para>
-                        </description>
-                    </y:advantage>
-
-                    <y:advantage name="Fertility">
-                        <description>
-                            <para>
-                                The Earth Master has full control over
-                                her own fertility, and may choose to
-                                conceive or not when coupling with
-                                another. If male, the Earth Master may
-                                cause a partner to automatically
-                                conceive, regardless of herbal
-                                contraception.
-                            </para>
-
-                            <para>
-                                If taken a second time, then the Earth
-                                Master has complete control over her own
-                                sexuality. Over the course of a day,
-                                they may change their sex. They keep the
-                                same general appearance, though appear
-                                a male or female version of what they
-                                once were (probably being mistaken for a
-                                brother or sister).
-                            </para>
-                        </description>
-                    </y:advantage>
-                </y:advantages>
-            </sect2>
-
-            <sect2>
-                <title>Earth Cantrips</title>
-
-                <h:import-spells href="spells/earth.yags" type="earth"/>
             </sect2>
         </sect1>
 
