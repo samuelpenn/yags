@@ -101,3 +101,38 @@
         </table>
     </div>
 </div>
+
+<div>
+    <h4>General Skills</h4>
+    <table>
+        <tr>
+            <td>Melee</td>
+            <td><input type="number" name="attr_Melee" value="0"/></td>
+            <td><select name="attr_MeleeAttr">
+                <option value="@{S}">Str</option>
+                <option value="@{H}">Hea</option>
+                <option value="@{A}">Agi</option>
+                <option value="@{D}">Dex</option>
+                <option value="@{P}">Per</option>
+                <option value="@{I}">Int</option>
+                <option value="@{E}">Emp</option>
+                <option value="@{W}">Wil</option>
+            </select></td>
+            <td><button type="roll" value="Melee roll [[@{Melee} * @{MeleeAttr} + 1d20]]"/></td>
+        </tr>
+    </table>
+    <fieldset class="repeating_skill">
+        <input type="text" name="attr_skillname" />
+        <input type="number" name="attr_skillscore" />
+        <select name="attr_skillattr">
+            <option value="S">Str</option>
+            <option value="H">Hea</option>
+            <option value="A">Agi</option>
+            <option value="D">Dex</option>
+            <option value="P">Per</option>
+            <option value="I">Int</option>
+            <option value="E">Emp</option>
+            <option value="W">Wil</option>
+        </select>
+    </fieldset>
+</div>
