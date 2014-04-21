@@ -1,0 +1,103 @@
+<div class="sheet-3colrow">
+
+    <div class="sheet-col">
+
+        <label>Name:</label><input type="text" name="attr_character_name" />
+        <label>Gender:</label><input type="text" name="attr_rank" />
+        <label>Age:</label><input type="number" name="attr_xp" />
+
+    </div>
+
+    <div class="sheet-col">
+
+        <label>Social class:</label><input type="text" name="attr_class"/>
+        <label>Profession:</label><input type="text" name="attr_profession" />
+
+    </div>
+
+</div>
+<hr/>
+
+<div class='sheet-3colrow'>
+    <div class='sheet-col'>
+        <table>
+            <tr><td>Strength</td><td><input type="number" name="attr_S" value="3" /></td>
+                <td><button type="roll" value="/roll @{S}*4 + 1d20"/></td>
+            </tr>
+            <tr><td>Health</td><td><input type="number" name="attr_H" value="3" /></td>
+                <td><button type="roll" value="/roll @{H}*4 + 1d20"/></td>
+            </tr>
+            <tr><td>Agility</td><td><input type="number" name="attr_A" value="3" /></td>
+                <td><button type="roll" value="/roll @{A}*4 + 1d20"/></td>
+            </tr>
+            <tr><td>Dexterity</td><td><input type="number" name="attr_D" value="3" /></td>
+                <td><button type="roll" value="/roll @{D}*4 + 1d20"/></td>
+            </tr>
+            <tr><td>Perception</td><td><input type="number" name="attr_P" value="3" /></td>
+                <td><button type="roll" value="/roll @{P}*4 + 1d20"/></td>
+            </tr>
+            <tr><td>Intelligence</td><td><input type="number" name="attr_I" value="3" /></td>
+                <td><button type="roll" value="/roll @{I}*4 + 1d20"/></td>
+            </tr>
+            <tr><td>Empathy</td><td><input type="number" name="attr_E" value="3" /></td>
+                <td><button type="roll" value="/roll @{E}*4 + 1d20"/></td>
+            </tr>
+            <tr><td>Will</td><td><input type="number" name="attr_W" value="3" /></td>
+                <td><button type="roll" value="/roll @{W}*4 + 1d20"/></td>
+            </tr>
+        </table>
+    </div>
+    <div class='sheet-col'>
+        <table>
+            <tr><td>Athletics</td><td><input type="number" name="attr_At" value="2" /></td>
+                <td><button type="roll" value="Agility/Athletics [[@{A} * @{At} + 1d20]]"/>A</td>
+            </tr>
+            <tr><td>Awareness</td><td><input type="number" name="attr_Aw" value="2" /></td>
+                <td><button type="roll" value="Perception/Awareness [[@{P} * @{Aw} + 1d20]]"/>A</td>
+            </tr>
+            <tr><td>Brawl</td><td><input type="number" name="attr_Br" value="2" /></td>
+                <td><button type="roll" value="Agility/Brawl [[@{A} * @{Br} + 1d20]]"/>A</td>
+            </tr>
+            <tr><td>Charm</td><td><input type="number" name="attr_Ch" value="2" /></td>
+                <td><button type="roll" value="Empathy/Charm [[@{E} * @{Ch} + 1d20]]"/>E</td>
+            </tr>
+            <tr><td>Guile</td><td><input type="number" name="attr_Gu" value="2" /></td>
+                <td><button type="roll" value="Empathy/Guile [[@{E} * @{Gu} + 1d20]]"/>E</td>
+                <td><button type="roll" value="Will/Guile [[@{W} * @{Gu} + 1d20]]"/>W</td>
+            </tr>
+            <tr><td>Sleight</td><td><input type="number" name="attr_Sl" value="2" /></td>
+                <td><button type="roll" value="Dexterity/Sleight [[@{D} * @{Sl} + 1d20]]"/>D</td>
+            </tr>
+            <tr><td>Stealth</td><td><input type="number" name="attr_St" value="2" /></td>
+                <td><button type="roll" value="Agility/Stealth [[@{A} * @{Gu} + 1d20]]"/>A</td>
+                <td><button type="roll" value="Agility/Stealth [[@{P} * @{Gu} + 1d20]]"/>P</td>
+            </tr>
+            <tr><td>Throw</td><td><input type="number" name="attr_Th" value="2" /></td>
+                <td><button type="roll" value="Dexterity/Throw [[@{D} * @{Th} + 1d20]]"/>D</td>
+            </tr>
+        </table>
+    </div>
+    <div class="sheet-col">
+        <table>
+            <tr>
+                <td>Soak</td>
+                <td><input type="number" name="attr_Soak" value="12"/></td>
+                <td><button type="roll" value="Base soak [[@{Soak} + 1d20]]"/></td>
+            </tr>
+            <tr>
+                <td>Armour</td>
+                <td><input type="number" name="attr_Armour" value="0"/></td></td>
+                <td><button type="roll" value="Full Soak [[@{Soak} + @{Armour} + 1d20]]">Full</button></td>
+                <td><button type="roll" value="Full Soak [[@{Soak} + floor(@{Armour}/2) + 1d20]]">Half</button></td>
+            </tr>
+            <tr>
+                <td>Move</td>
+                <td><input type="number" name="attr_Move" value="12"/></td>
+            </tr>
+            <tr>
+                <td>TN</td>
+                <td><input type="number" name="attr_TN" value="15"/></td>
+            </tr>
+        </table>
+    </div>
+</div>
