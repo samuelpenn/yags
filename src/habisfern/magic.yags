@@ -976,10 +976,10 @@
                         <item target="40" value="Cold 100m.">
                             Drop the air temperature by one level out to 100m radius.
                         </item>
-                        <item target="50" value="Rain 300m.">
+                        <item target="50" value="Cold 300m.">
                             Drop the air temperature by one level out to 300m radius.
                         </item>
-                        <item target="60" value="Rain 1km.">
+                        <item target="60" value="Cold 1km.">
                             Drop the air temperature by one level out to 1000m radius.
                         </item>
                         <item target="+5" value="Make it colder.">
@@ -1359,15 +1359,15 @@
                     <targetLabel>Skill</targetLabel>
                     <valueLabel>Innate Ability</valueLabel>
                     <item target="1" value="Creature of Warmth.">
-                        You may reduce the effective temperature by a level for
-                        each point of Fire skill that you have. You also gain a
-                        soak bonus equal to the same against fire or heat based
-                        damage.
+                        You may ignore up to one level of hot temperature for
+                        each point of Fire skill that you have. You also gain
+                        a soak bonus equal to the same against fire or heat
+                        based damage.
                     </item>
                     <item target="3" value="Mobility.">
                         Your affinity with Fire grants you speed and
                         reactions beyond that of a normal person. You may
-                        add your Fire skill to your move when running or
+                        add your Fire skill to your total move when running or
                         sprinting, and also gain it as an initiative bonus.
                     </item>
                     <item target="5" value="Fire Eyes.">
@@ -1407,33 +1407,56 @@
                     </para>
                     <para>
                         The quality of the visions depend on the size of
-                        the flames, and your distance from them.
+                        the flames, and your distance from them. At a base,
+                        it is assumed that the fire is the size of a camp fire,
+                        and that it is within 100m.
+                    </para>
+                    <para>
+                        This ability only extends to vision - you may not
+                        hear things through the ability. However, you don't
+                        need an absolutely clear line of sight - being able
+                        to see some of the flames through bushes, or a crack
+                        in a wall, is enough.
                     </para>
                     <targetlist targetFirst="true">
                         <targetLabel>Success</targetLabel>
                         <valueLabel>Vision quality</valueLabel>
 
-                        <item target="Moderate">
-                            Poor quality, the wizard can make out shadowy
-                            shapes, but not much else.
+                        <item target="10" value="Poor quality.">
+                            Your vision through the fire is poor, and you can
+                            not make out much more than shadowy shapes within
+                            a few metres of the flames.
+                        </item>
+                        <item target="20" value="Medium quality.">
+                            Your vision is reasonable, and you can make out
+                            enough detail to recognise individual people.
+                            However, what you see is slightly blurry and
+                            unstable.
+                        </item>
+                        <item target="30" value="High quality.">
+                            Your vision is as clear as if you were there
+                            yourself.
+                        </item>
+                        <item target="40" value="Sounds.">
+                            As well as having clear vision, you can begin to
+                            make out sounds. You can hear speech, but cannot
+                            recognise words.
                         </item>
 
-                        <item target="Good">
-                            Low quality, the wizard can see enough to
-                            recognise people, but not details about what
-                            they are holding or wearing.
+                        <item target="50" value="Speech.">
+                            Your ability to hear sound allows you to understand
+                            speech close to the fire, as if you were located in
+                            the fire.
                         </item>
-
-                        <item target="Excellent">
-                            The wizard can see details about people, though
-                            not enough to read by. Some sound can be heard,
-                            and though voices may be recognised, words
-                            cannot be.
+                        <item target="+5" value="x3 distance.">
+                            You can see from fires up to triple the normal distance
+                            away. This takes the range to 300m, or can be combined
+                            with the x10 distance multiplier.
                         </item>
-
-                        <item target="Superb">
-                            Good enough quality to read by, and conversations
-                            can be heard and understood.
+                        <item target="+10" value="x10 distance.">
+                            You can see from fires up to ten times the normal distance
+                            away. This takes the range to 1km, but you can take this
+                            multiple times (and combine it with the x3 multiplier).
                         </item>
                     </targetlist>
                 </sect3>
