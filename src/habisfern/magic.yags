@@ -1370,9 +1370,12 @@
                         add your Fire skill to your total move when running or
                         sprinting, and also gain it as an initiative bonus.
                     </item>
-                    <item target="5" value="Fire Eyes.">
+                    <item target="5" value="Create of Fire.">
                         You may see things by their warmth, even in complete
-                        darkness.
+                        darkness. You also gain a resistance to fire adding
+                        three times your skill to resist fire damage. This
+                        affects only you, not any of your possessions. You
+                        still suffer from the effects of smoke.
                     </item>
                     <item target="7" value="Body of Fire.">
                         As a woman, you gain incredible resistance to fire
@@ -1466,8 +1469,24 @@
                     <para>
                         You may control a fire that is close by, causing it to
                         burn more intensely or to die down. You may also cause
-                        it to explode outwards.
+                        it to explode outwards. It is assumed that the fire is
+                        near to you (15m), and the size of a small bonfire.
                     </para>
+                    <targetlist targetFirst="true">
+                        <targetLabel>Success</targetLabel>
+                        <valueLabel>Effect</valueLabel>
+
+                        <item target="10" value="Feed the flames.">
+                            You can cause a fire to burn more intensely. Half the
+                            time it lasts, but increase the heat (damage) by 50%.
+                        </item>
+                        <item target="10" value="Quell the flames.">
+                            You can cause a fire to die down, reducing in size
+                            by one level. Each extra level of success reduces
+                            by a further level each round. You may extinguish a
+                            fire in this way.
+                        </item>
+                    </targetlist>
                 </sect3>
             </sect2>
 
