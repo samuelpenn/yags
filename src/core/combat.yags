@@ -23,12 +23,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 0.7.8 $</version>
+            <version>$Revision: 0.7.9 $</version>
             <date>$Date: 2007-07-29 20:34:33 $</date>
         </cvsinfo>
 
         <license type="Yags">
-            <year>2013</year>
+            <year>2014</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -620,40 +620,31 @@
                     <title>Inflicting Damage</title>
 
                     <para>
-                        If you have successfully hit your target, then make
+                        If you have successfully hit your target, then you make
                         a damage roll. A damage roll never fumbles.
                     </para>
 
                     <y:skeq>
                         <y:title>Damage roll</y:title>
                         <y:attr>strength</y:attr>
-                        <y:const>4</y:const>
+                        <y:const>1</y:const>
                         <y:bonus>weapon damage bonus</y:bonus>
                         <y:die/>
                     </y:skeq>
 
                     <para>
-                        The target now makes a <e>soak</e> roll to try and
-                        resist the damage. Soak rolls never fumble.
+                        Your damage roll is compared to the target's soak, including
+                        any bonuses they have from armour. If the damage is greater
+                        than or equal to the target's soak, then damage has been
+                        caused, otherwise the blow was not of sufficient strength to
+                        cause any real harm.
                     </para>
-
-                    <y:skeq>
-                        <y:title>Soak roll</y:title>
-                        <y:attr>soak</y:attr>
-                        <y:bonus>armour bonus</y:bonus>
-                        <y:die/>
-                    </y:skeq>
-
                     <para>
-                        If the damage roll is equal or greater than the
-                        soak roll, then damage has been caused, otherwise
-                        the blow was not of sufficient strength to cause
-                        any real harm. One <e>wound</e> is caused, plus
-                        a further wound for every 5 points of damage
-                        above the soak roll. If you are already wounded,
-                        then any new wounds add to the existing wounds.
-                        If you have two wounds (light, -5), and receive
-                        another two wounds, you will now have four wounds
+                        If damage is done, then one <e>wound</e> will be caused plus
+                        one for every five points the damage was above the soak. If
+                        the target is already wounded, then any new wounds add to
+                        the existing wounds. If they have two wounds (light, -5), and
+                        receive another two wounds, they will now have four wounds
                         (heavy, -15).
                     </para>
 
