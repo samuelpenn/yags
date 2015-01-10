@@ -24,7 +24,7 @@
         </cvsinfo>
 
         <license type="Yags">
-            <year>2012</year>
+            <year>2015</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -183,6 +183,10 @@
 
             <sect2>
                 <title>Fantasy</title>
+
+                <quote signature="J.R.R. Tolkien">
+                    A safe fairyland is untrue to all worlds.
+                </quote>
 
                 <para>
                     A large proportion of fantasy campaigns are probably
@@ -580,7 +584,7 @@
                 <para>
                     If you attempt to force march, then you will gain two levels
                     of exhaustion in your third watch, and three levels in
-                    your fourth watch (for a total of seven), etc. Most people
+                    your fourth watch (for a total of seven) etc. Most people
                     will be unable to march solidly for four watches (16 hours)
                     without significant rest.
                 </para>
@@ -595,7 +599,13 @@
                     <title>Environmental Factors</title>
                     <para>
                         Both the type of terrain and the current weather can have
-                        a big affect on how far you can travel in a day.
+                        a big affect on how far you can travel in a day. Basic travel
+                        distances assume clear, flat ground or road with dry conditions.
+                    </para>
+                    <para>
+                        Each condition that makes travel harder reduces movement by a
+                        third (33%). Some particularly severe conditions can reduce it
+                        by two thirds (66%).
                     </para>
 
                     <targetlist bold="true" targetFirst="false">
@@ -606,17 +616,30 @@
                             A clear path, such as flat grassland or a cleared
                             trail.
                         </item>
-                        <item target="+33%" value="Road.">
-                            A good quality road.
-                        </item>
                         <item target="-33%" value="Rough ground.">
-                            Travelling rough ground, such as heathland or woods.
+                            Rough ground includes woods or scrub, where there is significant
+                            underbrush or obstacles (trees, bushes) that need to be avoided.
+                            Thick woods have more trees, but less underbrush, so for these
+                            purposes are considered the same.
+                        </item>
+                        <item target="-33%" value="Broken ground.">
+                            Broken ground is made up of cliffs, rocks and gulleys which need
+                            to be worked around or climbed over in order to proceed.
                         </item>
                         <item target="-33%" value="Hilly ground.">
-                            Hills, foot hills or mountains. This may also count
-                            as rough ground, in which case both apply. Mountains
-                            may completely block movement, this assumes that there
-                            is a path through the mountains.
+                            Hills and foot hills. This may also count as rough ground,
+                            in which case both penalties apply. Roads do not reduce the
+                            penalty due to hilly ground.
+                        </item>
+                        <item target="-66%" value="Mountains.">
+                            Mountains can make travel very difficult, generally because
+                            there is no direct route from one place to another, so roads
+                            do not reduce the penalty for mountains.
+                        </item>
+                        <item target="-33%" value="Wetlands.">
+                            Wetlands are marshes or swamps where the ground is permanently
+                            water logged, with large standing areas of water making travel
+                            difficult.
                         </item>
                         <item target="-33%" value="Wet conditions.">
                             If it is raining, or the ground is muddy, reduce
@@ -630,6 +653,14 @@
                         <item target="-66%" value="Heavy snow.">
                             Heavy snow can easily bring travel to a halt.
                         </item>
+                        <item target="-33%" value="Moonlight.">
+                            Under dim light, such as moonlight, movement is reduced by
+                            a third. Under some circumstances, there may be a risk of
+                            falling into ravines or off cliffs depending on the terrain.
+                        </item>
+                        <item target="-66%" value="Starlight.">
+                            Under almost total darkness, movement is very slow.
+                        </item>
                     </targetlist>
                     <para>
                         All the modifiers that apply should be used, and they all
@@ -637,13 +668,117 @@
                         movement by two thirds.
                     </para>
                     <para>
+                        A path will allow you to ignore the penalty for woods,
+                        and a paved road will allow you to ignore the first 33% of penalty
+                        for anything except for hills and mountains.
+                    </para>
+                    <para>
                         If travel is brought to zero, then some movement may still be
-                        possible, but a <y:agility>Survival</y:agility> check is required.
+                        possible, but a <y:health>Survival</y:health> check is required.
                         For every 10 rolled, 1km of distance may be covered in a watch,
                         up to a maximum of one third normal movement. All <e>Exhaustion</e>
                         gained is doubled that watch.
                     </para>
+                    <para>
+                        If movement is reduced to below zero (<e>Heavy snow</e> in
+                        <e>Rough</e> <e>Hills</e> for a total movement of -33% for example),
+                        then the <e>Survival</e> check is harder. Each 33% below zero
+                        increases the base target required by 5, and increases the
+                        <e>Exhaustion</e> by another multiple.
+                    </para>
+
+                    <sect4>
+                        <title>The Temperate Landscape</title>
+                        <para>
+                            The following types of terrain are common.
+                        </para>
+
+                        <sect5>
+                            <title>Woods</title>
+                            <para>
+                                Woods and forests count as <e>rough</e> ground. There may
+                                be paths through the woods, in which case the standard
+                                movement penalty can be ignored.
+                            </para>
+                        </sect5>
+
+                        <sect5>
+                            <title>Hills</title>
+                            <para>
+                                Hills range from rolling downs to foothills at the edge of
+                                mountains. Both are treated as <e>Hilly ground</e>, but
+                                foothills may also count as <e>Broken</e>.
+                            </para>
+                            <para>
+                                Hills may also be <e>Rough ground</e> if they are woods or
+                                moorland.
+                            </para>
+                        </sect5>
+
+                        <sect5>
+                            <title>Wetlands</title>
+                            <para>
+                                Wetlands can either be swamps (covered by trees) or marshes
+                                (grassland without trees), but the general idea is the same.
+                                Swamps are doubly hard since they also count as <e>Rough</e>.
+                            </para>
+                            <para>
+                                In wetlands, a <y:perception>Survival</y:perception> check of
+                                20 is needed every <e>watch</e> to avoid running into problems.
+                                You can halve this difficulty if the area is familiar to you.
+                            </para>
+                            <para>
+                                If you have a boat, wetlands may be easier, but you may need
+                                to portage the boat across areas of dry land. The speed is
+                                the same, but you remove the chance of running into problems.
+                            </para>
+                        </sect5>
+
+                        <sect5>
+                            <title>Mountains</title>
+                            <para>
+                                Mountains will also count as <e>Broken Ground</e> unless there
+                                is a road or path available, making them almost impassable.
+                                It is normally assumed that travel through mountains is done
+                                by finding a route through, rather than by climbing over them.
+                            </para>
+                            <para>
+                                <e>High mountains</e> are assumed to have no easy route, and
+                                require climbing to bypass. A <y:agility>Athletics</y:agility>
+                                check is required at a target of 20 to make any progress during
+                                a <e>Watch</e>. Every multiple of 20 rolled allows you to move
+                                one kilometre through high mountains.
+                            </para>
+                        </sect5>
+                    </sect4>
                 </sect3>
+            </sect2>
+
+            <sect2>
+                <title>Horse and Cart</title>
+
+                <para>
+                    Walking long distances can be tiring, and for those that can
+                    afford it a horse is often a better means of transport. Though
+                    they aren't necessarily much quicker, you are less likely to
+                    reach your destination fatigued. You can also carry more for
+                    less effort.
+                </para>
+                <para>
+                    However, horses (and especially) carts can have greater
+                    difficulties in hard terrain.
+                </para>
+                <para>
+                    If you have a <e>Ride</e> skill of at least two, you can halve
+                    the rate at which <e>Exhaustion</e> is gained if you are riding.
+                    If you are riding in a cart, you automatically halve the
+                    <e>Exhaustion</e> rate.
+                </para>
+                <para>
+                    Carts double all speed penalties however unless they are on a
+                    road or path. Horses take a further 33% penalty in rough
+                    or broken ground.
+                </para>
             </sect2>
         </sect1>
 
