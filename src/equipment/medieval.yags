@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet
-                href="/home/sam/src/forge/yagsbook/xml/xslt/html/yagsbook.xsl"
+    href="/home/sam/src/forge/yagsbook/xml/xslt/html/yagsbook.xsl"
     type="text/xsl"?>
 
 <article xmlns="http://yagsbook.sourceforge.net/xml"
@@ -765,7 +765,7 @@
                 <para>
                     When running, you cover roughly the same distance when you walk but
                     every hour instead of every <e>Watch</e> (so four times faster).
-                    Every hour you spend running, you gain two levels of exhaustion,
+                    Every hour you spend running, you gain one level of exhaustion,
                     and must make a check to see how much ground you cover by making
                     a <y:health>Athletics</y:health> check.
                 </para>
@@ -774,31 +774,37 @@
                     <targetLabel>Target</targetLabel>
                     <valueLabel>Distance Travelled</valueLabel>
 
-                    <item target="0" value="-6km.">
-
+                    <item target="0" value="-12km.">
                     </item>
-                    <item target="10" value="-3km.">
+                    <item target="10" value="-9km.">
                     </item>
-                    <item target="20" value="+0km.">
+                    <item target="20" value="-6km.">
                     </item>
-                    <item target="30" value="+1km.">
+                    <item target="30" value="-3km.">
                     </item>
-                    <item target="40" value="+2km.">
+                    <item target="40" value="+0km.">
                     </item>
-                    <item target="50" value="+3km.">
+                    <item target="50" value="+1km.">
                     </item>
-                    <item target="60" value="+4km.">
+                    <item target="60" value="+2km.">
                     </item>
-                    <item target="70" value="+5km.">
+                    <item target="70" value="+3km.">
+                    </item>
+                    <item target="+80" value="+4km.">
                     </item>
                 </targetlist>
 
                 <para>
                     The base distance is your normal move in kilometres, modified by
-                    the results on the table above. Your base movement is also modified
-                    by terrain as for standard movement. You may take a -20 penalty to the
-                    check to reduce the amount of <e>Exhaustion</e> you gain each hour
-                    by one.
+                    the results on the table above. You then apply any modifiers due
+                    to terrain or conditions as you normally would.
+                </para>
+                <para>
+                    If you want to run faster, then you double the rate at which you
+                    gain <e>Exhaustion</e> but get to add +10 to your roll.
+                <para>
+                    If your modified roll is less than zero, or your base move is
+                    modified to less than zero, then you move one kilometre.
                 </para>
             </sect2>
 
