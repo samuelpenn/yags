@@ -12,7 +12,7 @@
         <duration>Concentration</duration>
         <resist>Strength</resist>
 
-        <summary>Create a breeze that blows away from you.</summary>
+        <short>Create a breeze that blows away from you.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -39,7 +39,7 @@
 
         <prerequisite>Breeze</prerequisite>
 
-        <summary>Predict the weather.</summary>
+        <short>Predict the weather.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -54,7 +54,7 @@
                      title="Boost (Good):">
             <para>
                 You can predict the weather over the course of the next
-                three days.
+                three days, or your accuracy increases to within 15 minutes.
             </para>
         </description>
     </spell>
@@ -66,7 +66,7 @@
 
         <prerequisite>Know Weather</prerequisite>
 
-        <summary>Allows you to summon weather of your choosing.</summary>
+        <short>Allows you to summon weather of your choosing.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -123,13 +123,36 @@
         </description>
     </spell>
 
-    <spell name="Mist" level="3" type="air">
+    <spell name="Fog Shroud" level="3" type="air">
+        <time>Round</time>
+        <range>Self</range>
+        <duration>Concentration</duration>
+        <radius>Large</radius>
+
+        <short>Summons a thick fog to obscure vision.</short>
         <prerequisite>Breeze</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Covers area in a mist, cutting vision and obscuring the
-                ground.
+                Summons a thick mist that covers the region around you, and
+                follows you as you move. Anything beyond 10m is obscured
+                completely.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good):">
+            <para>
+                The thickness of the fog is increased, and vision beyond 5m
+                is completely obscured.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent):">
+            <para>
+                The thickness of the fog is increased, and vision beyond 2m
+                is completely obscured.
             </para>
         </description>
     </spell>
