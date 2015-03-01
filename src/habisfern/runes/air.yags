@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+
+<!--
+    Air cantrips.
+    Version: $Revision: 1.5 $
+    Date:    $Date: 2005-08-13 15:47:35 $
+-->
+<grimoire xmlns="http://yagsbook.sourceforge.net/xml/yags/habisfern" name="Air">
+    <spell name="Breeze" level="1" type="air">
+        <time>Action</time>
+        <range>Short</range>
+        <duration>Concentration</duration>
+        <resist>Strength</resist>
+
+        <summary>Create a breeze that blows away from you.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You invoke a breeze that blows away from you in a direct line.
+                The channel is 3 metres wide and as tall as you are, lasting as
+                long as you concentrate. The breeze is strong enough to blow
+                back smoke, or raise a cloud of dust.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good):">
+            <para>
+                The breeze becomes a strong wind, and requires a Strength check
+                with a target of 15 to move against it.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Know Weather" level="3" type="air">
+        <time>Round</time>
+        <range>Sight</range>
+        <duration>Momentary</duration>
+
+        <prerequisite>Breeze</prerequisite>
+
+        <summary>Predict the weather.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You can predict what the weather will be over the course of
+                the next day (until the next sunrise or sunset, whichever is
+                furthest away), for the area which you can see. You know to
+                within an hour when weather effects will begin or end.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good):">
+            <para>
+                You can predict the weather over the course of the next
+                three days.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Glow" level="1" type="air">
+        <range>Touch</range>
+        <duration>Concentration</duration>
+        <target>One</target>
+        <radius>Tiny</radius>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You place a soft glow on a single object no larger than yourself.
+                The glow is steady and pure white, and illuminates an area out
+                to the radius of the effect to that of an overcast day (bright
+                enough to see clearly by, but not blinding).
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good):">
+            <para>
+                You can boost the duration to be <e>Day</e>.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Scent" level="3" type="air">
+        <range>-1/m</range>
+        <duration>Concentration</duration>
+        <target>+5/size</target>
+
+        <prerequisite>Breeze</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Places a scent on an object, or masks an existing scent.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Mist" level="3" type="air">
+        <prerequisite>Breeze</prerequisite>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Covers area in a mist, cutting vision and obscuring the
+                ground.
+            </para>
+        </description>
+    </spell>
+
+</grimoire>
+
+

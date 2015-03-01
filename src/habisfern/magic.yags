@@ -26,7 +26,7 @@
         </cvsinfo>
 
         <license type="Yags">
-            <year>2014</year>
+            <year>2015</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -351,7 +351,7 @@
                     </para>
 
                     <h:spell name="Example Rune" level="1" type="any">
-                        <h:time>Round</h:time>
+                        <h:time>Action</h:time>
                         <h:range>Short</h:range>
                         <h:duration>Concentration</h:duration>
                         <h:area>Large</h:area>
@@ -362,8 +362,16 @@
 
                         <description>
                             <para>
-                                A description for an example rune. This is a
-                                simple rune for simple people.
+                                A description of what the Rune does and how it
+                                can be used. Most Runes are relatively simple in
+                                their effects.
+                            </para>
+                        </description>
+
+                        <description title="Boost (Good):">
+                            <para>
+                                A description of what can be achieved on a <e>good</e>
+                                success when invoking the Rune.
                             </para>
                         </description>
                     </h:spell>
@@ -378,8 +386,11 @@
                         <title>Time</title>
 
                         <para>
-                            The time required to invoke the rune. Most
-                            rune will have a casting time of 1 round.
+                            How long it takes to invoke the <e>rune</e>. Most runes can
+                            be invoked in a single <s>Action</s>, and you can move or
+                            defend yourself at the same time as invoking the rune. Runes
+                            can have a time of <s>Round</s>, in which case you cannot
+                            move or take any other actions that round.
                         </para>
                     </sect4>
 
@@ -387,64 +398,68 @@
                         <title>Range</title>
 
                         <para>
-                            The range of the rune. If the rune affects
-                            multiple targets, then the range to the furthest
-                            target counts. The range will generally be the
-                            distance out to which there is no penalty. There
-                            is a -5 penalty for each multiple of the range
-                            (or part) beyond this.
+                            <e>Runes</e> have a limit to how far away the target of their
+                            effects can be. If their are multiple targets, then unless
+                            otherwise specified in the description of the rune then this
+                            is the distance to the furthest one.
                         </para>
-
                         <para>
-                            A rune with a range of <e>short</e>, has no
-                            penalty up to 10m, -5 up to 20m, -10 up to 30m
-                            etc. Unless otherwise stated, you must have
-                            line of sight to the target.
+                            If you gain a <e>good</e> or better success when invoking the
+                            rune, then some ranges can be boosted to increase their range.
+                            The range can be boosted multiple times if you gain higher
+                            levels of success, as long as the new range allows boosting.
                         </para>
 
                         <itemlist order="strict">
                             <item name="Self">
-                                The rune either can only affect you, or
-                                the effects are centred on you.
+                                The rune either can only affect you, or the effects are
+                                centred on you.
                             </item>
 
                             <item name="Touch">
-                                You must be touching the target.
+                                You can affect yourself, or a target you are directly
+                                touching. You can boost this range to Reach.
                             </item>
 
                             <item name="Reach">
-                                There is no penalty if you are touching the
-                                target, but you can affect targets at range
-                                at a penalty of -5 per metre.
+                                You can affect a target you can touch with an item you
+                                are holding, or within three metres of you which you
+                                can clearly see. You can boost this range to Short.
                             </item>
 
                             <item name="Short">
-                                There is no penalty out to 10m, and a -5
-                                penalty every 10m beyond that.
+                                You can affect a target out to a range of 25m. You can
+                                boost this range to be Medium.
                             </item>
 
                             <item name="Medium">
-                                There is no penalty out to 50m, and a -5
-                                penalty every 50m beyond that.
+                                You can affect a target out to a range of 100m. You can
+                                boost this range to be Long.
                             </item>
 
                             <item name="Long">
-                                There is no penalty out to 1km, and a -5
-                                penalty every 1km beyond that.
+                                You can affect a target out to a range of 250m. This
+                                range can be boosted multiple times. Each time it is
+                                boosted you can double the maximum distance.
+                            </item>
+
+                            <item name="Sight">
+                                You can affect everything that you can see. This is
+                                normally an attribute of Runes which have passive effects.
                             </item>
 
                             <item name="Communication">
-                                You must be able to communicate with the
-                                target.
+                                You must be able to communicate clearly with the target
+                                using voice. If communication requires speech, then they
+                                must be able to understand you.
                             </item>
 
-                            <item name="Relationship">
-                                There is no line of sight requirement, and
-                                the distance depends on how well you know
-                                the target. If the target is well known,
-                                then the distance is Long, moderately known
-                                then half this, and poorly known quarter of
-                                Long.
+                            <item name="Blood">
+                                You must have some of the targets blood, flesh or hair
+                                to be able to affect them. As long as this requirement
+                                is met, there is no limit to the range. You require a
+                                small cup full of blood, flesh the size of a toe or
+                                a full lock of hair.
                             </item>
                         </itemlist>
                     </sect4>
@@ -453,25 +468,26 @@
                         <title>Duration</title>
 
                         <para>
-                            How long the cantrip lasts after it has been
-                            invoked.
+                            <e>Duration</e> determines how long the effects of the rune
+                            invocation lasts. The duration cannot normally be boosted.
                         </para>
 
                         <itemlist order="strict">
                             <item name="Momentary">
-                                The magic lasts only an instant.
+                                The magic lasts only an instant, though the consequences
+                                may be permanent. A spell which slays a person would be
+                                momentary, but death lasts forever.
                             </item>
-
                             <item name="Concentration">
-                                The magic lasts for as long as you
-                                concentrate.
+                                The magic lasts for as long as you concentrate. As soon
+                                as you stop concentrating the effect ends.
                             </item>
-
-                            <item name="Natural">
-                                The magic creates an effect, which lasts
-                                as long as it would naturally. Shaping
-                                earth into a wall for example, the shape
-                                will hold for as long as gravity allows.
+                            <item name="Day">
+                                The effect lasts until the next sunset. If the far north
+                                of the world, such effects can last many months.
+                            </item>
+                            <item name="Moon">
+                                The effect lasts until the next new moon.
                             </item>
                         </itemlist>
                     </sect4>
@@ -480,45 +496,51 @@
                         <title>Target</title>
 
                         <para>
-                            The target of the rune defines how many
-                            targets can be affected in a single invocation.
-                            As for range, it defines how many are affected
-                            for free, plus there is a penalty if more than
-                            that are targeted.
+                            The target of the rune defines how many individual targets
+                            can be affected by a single invocation. As for the
+                            <e>Range</e>, the number of targets can be boosted if you
+                            need to affect a larger number of things.
                         </para>
 
                         <itemlist order="strict">
                             <item name="Self">
-                                You can only affect yourself with this rune.
+                                You can only affect yourself with this rune. Runes with
+                                a range of Self normally also have a target of Self.
                             </item>
 
                             <item name="One">
-                                The target can be a single individual,
-                                either yourself or a target within range.
+                                You can affect a single individual target.
                             </item>
 
                             <item name="Individual">
-                                Can affect one individual at no penalty,
-                                or more at -5 for each extra target.
+                                The target can be a single individual, either yourself
+                                or a target within range. You can boost this to Few.
                             </item>
 
                             <item name="Few">
-                                Can affect up to 3 targets at no penalty,
-                                and -5 for every 3 beyond that.
+                                Can affect up to 3 targets with this Rune. You can
+                                boost it to be Dozen.
                             </item>
 
                             <item name="Dozen">
-                                Can affect up to 12 targets at no penalty
-                                and -5 for every 12 beyond that.
+                                Can affect up to 12 targets with this Rune. You can
+                                select individual targets out of a crowd, but none can
+                                be more than 5 metres from another.
+                                You can boost to be Crowd.
                             </item>
 
                             <item name="Crowd">
-                                Can affect up to 50 targets at no penalty
-                                and -5 for each 50 beyond that.
+                                Can affect up to 50 targets, but are unable to limit
+                                this to particular individuals. You designate a particular
+                                individual and all those closest to them are affected.
+                                None can be more than 10 metres from another.
+                                You can boost this multiple times, doubling the number
+                                affected each time.
                             </item>
 
                             <item name="Range">
-                                All targets within range of the rune.
+                                All targets within range of the rune are affected
+                                regardless of number.
                             </item>
                         </itemlist>
                     </sect4>
@@ -535,29 +557,24 @@
 
                         <itemlist order="strict">
                             <item name="Tiny">
-                                Up to 1m for free, -5 each 1m beyond that.
+                                Affects an area out to 1m from the target point.
+                                Can be boosted to Small.
                             </item>
 
                             <item name="Small">
-                                Up to 3m for free, -5 every 3m beyond that.
+                                Affects an area out to 3m from the target point.
+                                Can be boosted to Medium.
                             </item>
 
                             <item name="Medium">
-                                Up to 10 for free, -5 every 10m beyond that.
+                                Affects an area out to 10m from the target point.
+                                Can be boosted to Large.
                             </item>
 
                             <item name="Large">
-                                Up to 25m for free, -5 every 25m beyond that.
-                            </item>
-
-                            <item name="Village">
-                                Up to 100m radius for free, -5 every 100m
-                                beyond that.
-                            </item>
-
-                            <item name="Town">
-                                Up to 500m radius for free, -5 every 500m
-                                beyond that.
+                                Affects an area out to 25m from the target point.
+                                Can be boosted multiple times, each level of boost
+                                will double the radius.
                             </item>
                         </itemlist>
                     </sect4>
@@ -1390,7 +1407,11 @@
                     </item>
                 </sect3>
             </sect2>
+            <sect2>
+                <title>Air Runes</title>
 
+                <h:import-spells href="runes/air.yags"/>
+            </sect2>
         </sect1>
 
         <sect1>
