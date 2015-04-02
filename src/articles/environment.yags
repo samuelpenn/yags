@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="/usr/share/web/xsl/yagsbook/html/yagsbook.xsl" type="text/xsl"?>
 
 <article xmlns="http://yagsbook.sourceforge.net/xml">
@@ -33,7 +33,6 @@
             </text>
         </license>
 
-
         <style name="core"/>
     </header>
 
@@ -41,37 +40,41 @@
         <sect1>
             <title>The Environment</title>
 
-            <para>
-                Representing the environment in game terms can be
-                complicated, and often it is not necessary to do so.
-                There are a few situations however where having a
-                consistent in-game representation of the world can
-                be useful, especially when magic is involved.
-            </para>
+            <quote signature="Sir Rannulph Fiennes">
+                There is no such thing as bad weath, only inappropriate clothing.
+            </quote>
 
             <para>
-                What follows is a number of rating systems for
-                describing the natural environment - the weather,
-                fires and disasters for instance
+                For the most part, the environment in which characters encounter
+                challenges is flavour text that is just part of the background
+                rather than being a focus of the game itself. In such situations
+                no rules are needed, and a simple description to set the scene is
+                all that is required. There are times though when the environment
+                itself becomes the challenge, and so a simple framework of rules
+                to cover weather and other effects becomes useful.
             </para>
-
-        </sect1>
-
-        <sect1>
-            <title>Weather</title>
+            <para>
+                In a fantasy world where magic is common, characters can also have
+                a direct effect on the environment, and so a consistent set of
+                rules can be used to define the level of magic possible.
+            </para>
+            <para>
+                To this end, <tm>YAGS</tm> defines many aspects of the environment
+                as a simple set of numbers.
+            </para>
 
             <sect2>
                 <title>Clothing</title>
 
                 <para>
-                    Not really the weather, but describes what sort of
-                    clothing gives good protection against the weather.
-                    How well protected you are from the environment is
-                    defined as a level from 0 (totally naked) to 5 or
-                    more (modern arctic clothing).
+                    Your choice of clothing is just as likely to kill you as the
+                    environment you are in. Clothing is rated based on how much
+                    insulation it provides, from 0 (totally naked) to 5 or more
+                    (modern Arctic clothing). Wearing clothing adds to the
+                    effective temperature level of the environment.
                 </para>
 
-                <targetlist targetFirst="true" bold="true">
+                <targetlist bold="true" targetFirst="true" align="center" width="12">
                     <targetLabel>Level</targetLabel>
                     <valueLabel>Description</valueLabel>
 
@@ -87,18 +90,15 @@
                         off your torso. Anything which provides a thin
                         covering over the torso, and bare arms and legs.
                     </item>
-
                     <item target="2" value="Light clothes.">
                         You have light clothing, which covers your torso, arms
                         and legs, providing minimal insulation and reducing
                         wind chill.
                     </item>
-
                     <item target="3" value="Moderate clothes.">
                         Jacket, plus shirt and trousers of reasonable
                         thickness.
                     </item>
-
                     <item target="4" value="Heavy clothes.">
                         Heavy jacket and/or a couple of layers of clothes
                         underneath.
@@ -110,103 +110,107 @@
                     </item>
 
                     <item target="6" value="Arctic clothing.">
-                        Modern arctic clothing with internal heating system.
+                        Modern Arctic clothing with internal heating system.
                     </item>
                 </targetlist>
             </sect2>
 
             <sect2>
-                <title>Hot and Cold</title>
+                <title>Temperature</title>
 
                 <para>
-                    Heat and cold assume that the character is totally
-                    without protection - i.e. naked. Layers of clothing
-                    will increase the effective temperature (each level
-                    of clothing increases the temperature by one level).
+                    The temperature of the environment is represented by a single
+                    number where zero is taken to be <e>moderate</e> (around 25°C).
+                    Positive numbers represent hotter temperatures,
+                    and negative numbers represent colder temperatures. Each level
+                    of clothing worn adds to the effective temperature, so a
+                    <e>comfortable</e> temperature is assumed to be one where you
+                    are comfortable naked.
                 </para>
-
                 <para>
                     A breeze will tend to lower the effective temperature
                     since it takes heat away from the body. Every two
                     levels of wind reduces the temperature by one level.
                     This can take the temperature be
                 </para>
-
                 <para>
                     Note that these temperatures assume a temperature which
                     is comfortable for humans to be the average.
                 </para>
 
-                <targetlist>
-                    <item target="-7" value="Extreme cold.">
-                        The coldest recorded naturally occurring temperature
-                        was -90C, which this is equivalent to.
-                    </item>
+                <targetlist bold="true" targetFirst="true" align="center" width="12">
+                    <targetLabel>Level</targetLabel>
+                    <valueLabel>Description</valueLabel>
 
-                    <item target="-6" value="Extreme cold.">
-                        Around -70C, equivalent to the coldest place on
-                        Earth (on the Antarctic Plateau). Without protection,
-                        you gain one stun and one fatigue every Health
-                        rounds.
+                    <item target="+5" value="Extreme heat (50°C - 59°C).">
+                        About 90°C. Gain a level of stun every round.
                     </item>
-
-                    <item target="-5" value="Extreme cold.">
-                        Arctic winter conditions, temperature around -50C.
-                        Every minute a character gains a fatigue level.
-                        When they become unconscious, this becomes wounds.
+                    <item target="+4" value="Severe heat (43°C - 49°C).">
+                        About 70°C, which is hotter than temperatures get
+                        naturally anywhere on Earth (except for actual fires).
+                        Gain exhaustion every minute. Drinking doesn't help.
                     </item>
-
+                    <item target="+3" value="Very hot (38°C - 42°C).">
+                        About 50°C, which is unbearably hot. Even with lots
+                        of water, you will gain a level of exhaustion each
+                        hour. Without sufficient water, double the rate.
+                    </item>
+                    <item target="+2" value="Hot (33°C - 37°C).">
+                        An uncomfortably warm 35°C which is unpleasant if you are
+                        performing work of any kind. You will gain exhaustion every
+                        four hours if you are resting, or every hour if you are
+                        performing physical activity.
+                    </item>
+                    <item target="+1" value="Warm (28°C - 32°C).">
+                        A pleasantly warm 30°, ideal for sunbathing but can be
+                        uncomfortable if performing strenuous exercise. Gain one
+                        level of exhaustion for every four hours of physical
+                        activity.
+                    </item>
+                    <item target="+0" value="Comfortable (23°C - 27°C).">
+                        A temperature just comfortable enough for you to be able
+                        to lay around naked. This is actually warmer than most
+                        people consider a 'comfortable' outdoors temperature,
+                        since it assumes no clothing.
+                    </item>
+                    <item target="-1" value="Cool.">
+                        Around 10°C. One fatigue per Health hours.
+                    </item>
+                    <item target="-2" value="Chilly.">
+                        Around 0°C. Character gains one fatigue every
+                        Health minutes. Once unconscious, then they gain wounds
+                        at the same rate.
+                    </item>
+                    <item target="-3" value="Cold.">
+                        Around -10°C.
+                    </item>
                     <item target="-4" value="Severe cold.">
                         Dangerously cold, around -30C. Gain a point of
                         fatigue every 10 minutes.
                     </item>
-
-                    <item target="-3" value="Very cold.">
-                        Around -10C.
+                    <item target="-5" value="Extreme cold.">
+                        Arctic winter conditions, temperature around -50°C.
+                        Every minute a character gains a fatigue level.
+                        When they become unconscious, this becomes wounds.
                     </item>
-
-                    <item target="-2" value="Cold.">
-                        Around 0C. Character gains one fatigue every
-                        Health minutes. Once unconscious, then they gain wounds
-                        at the same rate.
+                    <item target="-6" value="Extreme cold.">
+                        Around -70°C, equivalent to the coldest place on
+                        Earth (on the Antarctic Plateau). Without protection,
+                        you gain one stun and one fatigue every Health
+                        rounds.
                     </item>
-
-                    <item target="-1" value="Chilly.">
-                        Around 10C. One fatigue per Health hours.
-                    </item>
-
-                    <item target="+0" value="Comfortable.">
-                        Around 20C. Moderate clothes.
-                    </item>
-
-                    <item target="+1" value="Warm.">
-                        A warm 30C. Very pleasantly warm, though can be
-                        too warm if you are also exerting yourself.
-                    </item>
-
-                    <item target="+2" value="Hot.">
-                        An unpleasantly hot 40C. Nice if you are sunbathing,
-                        but too hot to get much work done. One level of
-                        exhaustion each hour unless plenty of water is
-                        being drunk.
-                    </item>
-
-                    <item target="+3" value="Very hot.">
-                        About 50C, which is unbearably hot. Even with lots
-                        of water, you will gain a level of exhaustion each
-                        hour. Without sufficient water, double the rate.
-                    </item>
-
-                    <item target="+4" value="Severe heat.">
-                        About 70C, which is hotter than temperatures get
-                        naturally anywhere on Earth (except for actual fires).
-                        Gain exhaustion every minute. Drinking doesn't help.
-                    </item>
-
-                    <item target="+5" value="Extreme heat.">
-                        About 90C. Gain a level of stun every round.
+                    <item target="-7" value="Extreme cold.">
+                        The coldest recorded naturally occurring temperature
+                        was -90°C, which this is equivalent to.
                     </item>
                 </targetlist>
+
+                <para>
+                    Physical activity assumes relatively light work such as walking.
+                    In hot temperatures, more intense work will increase the rate at
+                    which <e>exhaustion</e> is gained. Heavy activity, such as
+                    digging, climbing or running will double the rate of exhaustion.
+                </para>
             </sect2>
             <sect2>
                 <title>Humidity</title>
@@ -216,7 +220,7 @@
                     cause rain, and this scale is combined measure of both
                     humidity and rainfall.
                 </para>
-                <targetlist>
+                <targetlist bold="true" targetFirst="true" align="center" width="12">
                     <item target="-5" value="Parched.">
                     </item>
                     <item target="-2" value="Very dry...">
