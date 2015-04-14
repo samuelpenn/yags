@@ -23,57 +23,43 @@
     </description>
 
     <spell name="Ignite" level="1" type="fire">
-        <range>-5/m</range>
+        <range>Touch</range>
         <duration>Momentary</duration>
-        <target>+5/size</target>
+        <target>Tiny</target>
 
         <summary>Ignites flammable material.</summary>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Ignites targeted flammable material. An intense, momentary
-                heat is applied to the targets, which has a chance of
-                igniting them if they are flammable. The degree of success
-                denotes the types of items which will burn.
+                You create a brief spark that can ignite whatever you touch.
+                Materials which are highly flammable, such as oil, tinder or
+                dry paper will immediately burst into flame. If the target is
+                larger than the size affected, then only a portion of the
+                target will immediately ignite. In the case of highly
+                flammable materials, the fire will very quickly spread to
+                the rest of the target though.
             </para>
-
-            <targetlist>
-                <valueLabel>Type of material</valueLabel>
-                <targetLabel>Success</targetLabel>
-
-                <item target="Moderate" value="Flammable">
-                    Oil, tinder.
-                </item>
-
-                <item target="Good" value="Combustable">
-                    Dry paper.
-                </item>
-
-                <item target="Excellent" value="">
-                    Wood chippings, cloth.
-                </item>
-
-                <item target="Superb" value="Burnable">
-                    Wood.
-                </item>
-
-                <item target="Fantastic" value="Resistent">
-                    Damp wood, flesh.
-                </item>
-
-                <item target="Amazing" value="Very resistent">
-                </item>
-            </targetlist>
-
             <para>
-                If the affected item is larger than the size targeted by
-                the spell, then only a portion of the item is affected. Fire
-                spreads though, so the entire item may be consumed anyway.
+                Moderately flammable material such as dry wood or cloth will
+                ignite on a 10+ on a d20 roll. Poorly flammable material
+                will ignite on a 20+.
             </para>
+        </description>
 
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good):">
             <para>
-                Only the surface of the item is affected by the initial
-                spell, though the fire may spread inwards naturally.
+                The sparks are larger and more intense, capable of setting
+                fire to moderately flammable materials such as dry wood or cloth.
+                Poorly flammable material will ignite on a 10+.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent):">
+            <para>
+                You release a flash of fire that can ignite poorly flammable
+                materials such as wet wood or flesh.
             </para>
         </description>
     </spell>
@@ -82,7 +68,7 @@
     <spell name="Warm" level="3" type="fire">
         <range>Self</range>
         <duration>Concentration</duration>
-        <radius>+5/m beyond 1m</radius>
+        <radius>Small</radius>
 
         <prerequisite>Ignite</prerequisite>
 
@@ -90,50 +76,11 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Gently warms a spherical volume of air according to the
-                success level of the cantrip. The effect is centred on
-                the caster, and extends out to a sphere one metre in
-                radius, or greater if extended. The caster is affected
-                by the temperature change.
+                Gently warms a spherical volume of air around you. The radius
+                of the volume can be boosted as necessary to increase the size
+                of effect. By default, the temperature is increased by one
+                level (see the <e>Environment</e> article on temperature).
             </para>
-
-            <para>
-                Each level of success raises the temperature by one
-                category according to the <e>Environment</e> article
-                on weather. The air temperature takes time to rise,
-                normally one minute for the total change.
-            </para>
-
-            <targetlist targetFirst="true" bold="true">
-                <valueLabel>Environment</valueLabel>
-                <targetLabel>Level</targetLabel>
-
-                <item target="-2" value="Very cold.">
-                    Dangerously cold. Very thick clothing will keep
-                    people warm, but those with less clothing will
-                    suffer from exposure.
-                </item>
-
-                <item target="-1" value="Cold.">
-                    Uncomfortably cold, but not dangerously so. People
-                    are comfortable in thick clothing, and will suffer
-                    from exposure if naked for many hours.
-                </item>
-
-                <item target="0" value="Comfortable.">
-                    Room temperature. People are okay indefinitely in
-                    light clothing.
-                </item>
-
-                <item target="+1" value="Warm.">
-                    Nicely warm, people will be uncomfortable in anything
-                    heavier than light clothing.
-                </item>
-
-                <item target="+2" value="Hot.">
-                    Uncomfortably warm.
-                </item>
-            </targetlist>
 
             <para>
                 If there is a wind, then warmed air will be continually
@@ -141,12 +88,26 @@
                 warmer air will rise.
             </para>
         </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good):">
+            <para>
+                The temperature can be increased by up to three levels.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent):">
+            <para>
+                The temperature can be increased by up to five levels.
+            </para>
+        </description>
     </spell>
 
     <spell name="Heat" level="5" type="fire">
-        <range>-1/1m</range>
+        <range>Reach</range>
         <duration>Concentration</duration>
-        <target>+3/size</target>
+        <target>Small</target>
 
         <prerequisite>Warm</prerequisite>
 
