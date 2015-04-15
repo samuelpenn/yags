@@ -67,7 +67,7 @@
 
     <spell name="Warm" level="3" type="fire">
         <range>Self</range>
-        <duration>Concentration</duration>
+        <duration>Will</duration>
         <radius>Small</radius>
 
         <prerequisite>Ignite</prerequisite>
@@ -106,7 +106,7 @@
 
     <spell name="Heat" level="5" type="fire">
         <range>Reach</range>
-        <duration>Concentration</duration>
+        <duration>Concentration (Minutes)</duration>
         <target>Medium</target>
 
         <prerequisite>Warm</prerequisite>
@@ -116,47 +116,22 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 You can heat an object to above normal temperature so that
-                it is uncomfortably warm to the touch. If used on a living
-                creature then this can cause damage.
+                it is uncomfortably warm to the touch. A metal item requires
+                a <t>Health</t> check of 20+ to keep hold of. Metal armour
+                requires a <t>Health</t> check of 25 to be able to act
+                that round.
             </para>
-
-            <targetlist>
-                <valueLabel>Temperature</valueLabel>
-                <targetLabel>Level</targetLabel>
-
-                <item target="+0" value="Comfortable.">
-                    A reasonable, comfortable temperature.
-                </item>
-                <item target="+1" value="Warm.">
-                    Uncomfortably warm, an object will be too hot to
-                    hold for long. If a living creature is heated to
-                    this extent, then they will soon die, gaining a
-                    point of exhaustion every hour, then gaining
-                    wounds until they die.
-                </item>
-                <item target="+2" value="Hot.">
-                    Too hot to touch, doing so will burn living flesh.
-                    Water will scaled, though not boil. If used to
-                    heat a living creature, then exhaustion is gained
-                    every minute.
-                </item>
-                <item target="+3" value="Very hot.">
-                    Water will boil vigorously, metal cannot be held,
-                    highly flammable objects will burst into flame.
-                    Living creatures gain exhaustion every round.
-                </item>
-                <item target="+4" value="Scorching.">
-                    Most flammable objects will ignite, living flesh
-                    will also begin to burn, causing a wound every
-                    round and making the creature incapable of
-                    coherent action. Metals will begin to glow.
-                </item>
-                <item target="+5" value="Utterly hot.">
-                    Metals will glow brightly, and will be hot enough
-                    to work. Living flesh will ignite causing two
-                    wounds a round.
-                </item>
-            </targetlist>
+            <para>
+                If used on a living creature, then this can actually keep
+                them warm. Any creature not larger than the size affected
+                can be warmed as if the temperature were three levels
+                warmer. Each extra size category increases their temperature
+                by another three levels.
+            </para>
+            <para>
+                It will cause snow and ice to melt within a minute, and
+                provide a warm bath in a couple of minutes more.
+            </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
@@ -164,24 +139,29 @@
             <para>
                 You can heat the object to the point where it burns anyone
                 who touches it. Metal weapons will be dropped, and armour
-                will cause damage.
+                will cause damage. Armour causes a <e>wound</e> each minute
+                it is worn, metal items require a <t>Health</t> check of
+                30+ each round to be kept hold of.
+            </para>
+            <para>
+                A living creature is warmed, but also receives a <e>Fatigue</e>
+                each minute.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Excellent):">
             <para>
-                The temperature can be increased by up to five levels.
+                A living creature will receive a <e>Wound</e> each minute.
             </para>
         </description>
     </spell>
 
 
     <spell name="Burning Wind" level="7" type="fire">
-        <duration>Concentration</duration>
-        <range>-1/5m</range>
-        <resist>Soak</resist>
-        <effect>+1 mixed damage/1</effect>
+        <duration>Concentration (Rounds)</duration>
+        <range>Short</range>
+        <time>Round</time>
 
         <prerequisite>Heat</prerequisite>
 
@@ -192,23 +172,27 @@
                 Creates an intensely hot wind which blows from the caster
                 in the specified direction, in a 30 degree arc. The range
                 can be doubled by halving the angle. Any within the blast
-                of air suffers burning damage.
+                of air suffers +20 burning damage.
             </para>
-
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good):">
             <para>
-                The wizard cannot do anything else (including defend)
-                whilst concentrating on this magic, though may turn to
-                face a new direction each round if they desire. It may
-                be cast as a single blast effect which does damage
-                once and ends.
+                The damage is +25.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent):">
+            <para>
+                The damage is +30.
             </para>
         </description>
     </spell>
 
-    <spell name="Whither" level="9" type="fire">
+    <spell name="Wither" level="9" type="fire">
         <range>Self</range>
         <duration>Momentary</duration>
-        <area>+1/20m radius</area>
+        <radius>Medium</radius>
 
         <prerequisite>Burning Wind</prerequisite>
 
@@ -220,6 +204,10 @@
                 first, followed by flowers, bushes and trees depending
                 on the level of success. Plant life withers and dies as
                 if suffering from severe drought.
+            </para>
+            <para>
+                All grass, flowers and shrubs will shrivel up and die
+                within a few rounds of the invocation of this rune.
             </para>
 
             <targetlist targetFirst="true">
@@ -262,9 +250,9 @@
     <spell name="Summer" level="12" type="fire">
         <range>Self</range>
         <duration>Day</duration>
-        <radius>+1/50m</radius>
+        <radius>Large</radius>
 
-        <prerequisite>Whither</prerequisite>
+        <prerequisite>Wither</prerequisite>
 
         <summary>Warms a large region for a day.</summary>
 
@@ -279,9 +267,9 @@
     </spell>
 
     <spell name="Control Fire" level="3" type="fire">
-        <range>-1/m</range>
-        <duration>Concentration</duration>
-        <target>+3/size</target>
+        <range>Reach</range>
+        <duration>Concentration (Minutes)</duration>
+        <target>Small</target>
 
         <prerequisite>Ignite</prerequisite>
 
@@ -302,10 +290,9 @@
 
 
     <spell name="Resist Fire" level="5" type="fire">
-        <range>-1/m</range>
-        <duration>Concentration</duration>
-        <target>-5/extra target</target>
-        <effect>+1 soak/1</effect>
+        <range>Reach</range>
+        <duration>Will</duration>
+        <target>Few</target>
 
         <prerequisite>Control Fire</prerequisite>
 
@@ -313,27 +300,31 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Increases the soak of the targets versus fire and heat.
+                Increases the soak of the targets versus fire and heat by +5.
                 Range is to the furthest target to be protected at time
                 of casting. Also reduces the effect of any fire spells
                 that work according to the level of effect, such as
                 <e>Heat</e> or <e>Ignite</e>.
             </para>
-
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good):">
             <para>
-                The wizard is automatically protected, plus the cantrip
-                can be extended to protect other objects or people. No
-                single target can have a size larger than the wizard's
-                <e>Fire</e> score.
+                The protection is +10.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent):">
+            <para>
+                The protection is +20.
             </para>
         </description>
     </spell>
 
     <spell name="Smoke" level="5" type="fire">
-        <range>+1/5m</range>
-        <radius>+1/3m</radius>
-        <duration>Concentration</duration>
-        <resist>Stamina</resist>
+        <range>Self</range>
+        <radius>Medium</radius>
+        <duration>Concentration (Minutes)</duration>
 
         <prerequisite>Control Fire</prerequisite>
 
@@ -346,38 +337,31 @@
                 obscured and fatigue is gained for each level of success
                 beyond moderate.
             </para>
-
-            <targetlist targetFirst="true">
-                <targetLabel>Success</targetLabel>
-                <valueLabel>Results</valueLabel>
-
-                <item target="Moderate">
-                    Light smoke, vision is limited to 20m. May cause
-                    some coughing and irritated eyes.
-                </item>
-
-                <item target="Good">
-                    Moderate smoke, vision is limited to 5m and gain
-                    a fatigue each round spent in the area.
-                </item>
-
-                <item target="Excellent">
-                    Thick smoke, vision is limited to 2m, gain a fatigue
-                    each round spent in the area.
-                </item>
-
-                <item target="Superb">
-                    Vision is limited to 1m, and two fatigue is gained
-                    each round whilst in the area.
-                </item>
-            </targetlist>
+            <para>
+                Vision is limited to 10m, and the density of the smoke may
+                cause some coughing and irritated eyes.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                    title="Boost (Good):">
+            <para>
+                Vision is limited to 5m, and anyone in the area other
+                than yourself gains a level of fatigue each minute.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                    title="Boost (Excellent):">
+            <para>
+                Vision is limited to 2m, and anyone in the area other
+                than yourself gains a level of fatigue each round.
+            </para>
         </description>
     </spell>
 
     <spell name="Fire Cloud" level="7" type="fire">
-        <range>+1/5m</range>
-        <radius>+1/3m</radius>
-        <duration>Concentration</duration>
+        <range>Short</range>
+        <radius>Small</radius>
+        <duration>Concentration (Rounds)</duration>
 
         <prerequisite>Smoke</prerequisite>
 
@@ -386,7 +370,21 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Cause a fire to give off a thick cloud of smoke which
-                burns everything it comes into contact with.
+                burns everything it comes into contact with. Anyone
+                within it takes a level of fatigue each round, and
+                suffers +5 fire damage.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                    title="Boost (Good):">
+            <para>
+                Everyone within takes +10 fire damage.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                    title="Boost (Excellent):">
+            <para>
+                Everyone within takes +15 fire damage.
             </para>
         </description>
     </spell>
@@ -413,7 +411,7 @@
             <para>
                 Enables the targets to react quicker, giving a bonus to
                 initiative. Each level of effect gives a +1 bonus to
-                initiative and awareness rolls whilst the cantrip
+                initiative and awareness rolls whilst the invocation
                 is in effect.
             </para>
         </description>
@@ -428,7 +426,7 @@
 
         <prerequisite>Alertness</prerequisite>
 
-        <summary>Increases base movemet.</summary>
+        <summary>Increases base movement.</summary>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
