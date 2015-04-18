@@ -47,19 +47,11 @@
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Good):">
+                     title="Boost (Good)">
             <para>
                 The sparks are larger and more intense, capable of setting
                 fire to moderately flammable materials such as dry wood or cloth.
                 Poorly flammable material will ignite on a 10+.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Excellent):">
-            <para>
-                You release a flash of fire that can ignite poorly flammable
-                materials such as wet wood or flesh.
             </para>
         </description>
     </spell>
@@ -90,23 +82,16 @@
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Good):">
+                     title="Boost (Good)">
             <para>
                 The temperature can be increased by up to three levels.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Excellent):">
-            <para>
-                The temperature can be increased by up to five levels.
             </para>
         </description>
     </spell>
 
     <spell name="Heat" level="5" type="fire">
         <range>Reach</range>
-        <duration>Concentration (Minutes)</duration>
+        <duration>Minutes</duration>
         <target>Medium</target>
 
         <prerequisite>Warm</prerequisite>
@@ -135,7 +120,7 @@
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Good):">
+                     title="Boost (Good)">
             <para>
                 You can heat the object to the point where it burns anyone
                 who touches it. Metal weapons will be dropped, and armour
@@ -150,7 +135,7 @@
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Excellent):">
+                     title="Boost (Excellent)">
             <para>
                 A living creature will receive a <e>Wound</e> each minute.
             </para>
@@ -159,7 +144,7 @@
 
 
     <spell name="Burning Wind" level="7" type="fire">
-        <duration>Concentration (Rounds)</duration>
+        <duration>Rounds</duration>
         <range>Short</range>
         <time>Round</time>
 
@@ -176,13 +161,13 @@
             </para>
         </description>
         <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Good):">
+                     title="Boost (Good)">
             <para>
                 The damage is +25.
             </para>
         </description>
         <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Excellent):">
+                     title="Boost (Excellent)">
             <para>
                 The damage is +30.
             </para>
@@ -263,12 +248,15 @@
                 lasts until the next sunrise or sunset. It is often used
                 to protect crops, or a village, from cold weather.
             </para>
+            <para>
+                The temperature is increased by up to five levels.
+            </para>
         </description>
     </spell>
 
     <spell name="Control Fire" level="3" type="fire">
         <range>Reach</range>
-        <duration>Concentration (Minutes)</duration>
+        <duration>Minutes</duration>
         <target>Small</target>
 
         <prerequisite>Ignite</prerequisite>
@@ -308,13 +296,13 @@
             </para>
         </description>
         <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Good):">
+                     title="Boost (Good)">
             <para>
                 The protection is +10.
             </para>
         </description>
         <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Excellent):">
+                     title="Boost (Excellent)">
             <para>
                 The protection is +20.
             </para>
@@ -324,7 +312,7 @@
     <spell name="Smoke" level="5" type="fire">
         <range>Self</range>
         <radius>Medium</radius>
-        <duration>Concentration (Minutes)</duration>
+        <duration>Minutes</duration>
 
         <prerequisite>Control Fire</prerequisite>
 
@@ -343,14 +331,14 @@
             </para>
         </description>
         <description xmlns="http://yagsbook.sourceforge.net/xml"
-                    title="Boost (Good):">
+                    title="Boost (Good)">
             <para>
                 Vision is limited to 5m, and anyone in the area other
                 than yourself gains a level of fatigue each minute.
             </para>
         </description>
         <description xmlns="http://yagsbook.sourceforge.net/xml"
-                    title="Boost (Excellent):">
+                    title="Boost (Excellent)">
             <para>
                 Vision is limited to 2m, and anyone in the area other
                 than yourself gains a level of fatigue each round.
@@ -361,7 +349,7 @@
     <spell name="Fire Cloud" level="7" type="fire">
         <range>Short</range>
         <radius>Small</radius>
-        <duration>Concentration (Rounds)</duration>
+        <duration>Rounds</duration>
 
         <prerequisite>Smoke</prerequisite>
 
@@ -376,13 +364,13 @@
             </para>
         </description>
         <description xmlns="http://yagsbook.sourceforge.net/xml"
-                    title="Boost (Good):">
+                    title="Boost (Good)">
             <para>
                 Everyone within takes +10 fire damage.
             </para>
         </description>
         <description xmlns="http://yagsbook.sourceforge.net/xml"
-                    title="Boost (Excellent):">
+                    title="Boost (Excellent)">
             <para>
                 Everyone within takes +15 fire damage.
             </para>
@@ -393,36 +381,36 @@
 
     <!--
         Begin the 'Alertness' thread.
-        Cantrips which make things faster or more perception. Also
+        Cantrips which make things faster or more perceptive. Also
         scrying type cantrips are part of this thread.
      -->
 
     <spell name="Alertness" level="1" type="fire">
-        <range>-5/m</range>
-        <duration>Concentration</duration>
-        <target>-5/extra target</target>
-        <effect>+1 initiative/1</effect>
-
-        <prerequisite>Ignite</prerequisite>
+        <range>Self</range>
+        <duration>Will</duration>
+        <target>Self</target>
 
         <summary>Increases perception and initiative.</summary>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Enables the targets to react quicker, giving a bonus to
-                initiative. Each level of effect gives a +1 bonus to
-                initiative and awareness rolls whilst the invocation
-                is in effect.
+                An increase to your senses and reflexes gives you a bonus
+                to your <e>Initiative</e> and <e>Awareness</e> of +3.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The bonus is increased to +6.
             </para>
         </description>
     </spell>
 
     <spell name="Quicken" level="3" type="fire">
-        <range>-5/m</range>
-        <duration>Concentration</duration>
-        <target>-5/extra target</target>
-        <effect>+1 base move/5</effect>
-        <resist>Ego</resist>
+        <range>Self</range>
+        <duration>Will</duration>
+        <target>Self</target>
 
         <prerequisite>Alertness</prerequisite>
 
@@ -430,16 +418,24 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Increases base movement speed of the target.
+                Your base movement speed is increased by +3. This affects your
+                speed in both combat, running and over long distances as long
+                as you maintain the invocation.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                Your bonus to movement is increased to +6.
             </para>
         </description>
     </spell>
 
     <spell name="Haste" level="5" type="fire">
         <range>Self</range>
-        <duration>Concentration</duration>
-        <effect>1 + 1/10</effect>
-        <target>-20/extra person</target>
+        <duration>Will</duration>
+        <target>Self</target>
 
         <prerequisite>Quicken</prerequisite>
 
@@ -447,36 +443,63 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The agility and dexterity of the wizard is increased by
-                the effect of the cantrip for its duration, with the
-                effect being split between the two as equally as possible,
-                odd points going on agility (three points of effect
-                would give +2 agility, +1 dexterity).
+                When you invoke this rune upon yourself, your give yourself
+                a bonus of +1 to both <t>Agility</t> and <t>Dexterity</t>
+                for as long as you maintain it.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The <t>Agility</t> and <t>Dexterity</t> bonus is increased
+                to be +2.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The <t>Agility</t> and <t>Dexterity</t> bonus is increased
+                to be +3.
             </para>
         </description>
     </spell>
 
     <spell name="Fire Sight" level="5" type="fire">
         <range>Self</range>
-        <duration>Concentration</duration>
+        <duration>Will</duration>
+        <target>Self</target>
 
         <prerequisite>Alertness</prerequisite>
 
-        <summary>Caster can see heat.</summary>
+        <summary>You can see the heat of others.</summary>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Enables the caster to see heat, as if they had infravision.
-                At its basic level the caster can see warm bodies, at
-                better levels of effect they may be able to discern warm
-                footprints, or tell apart different substances.
+                When you invoke this rune, your vision is changed so that you
+                can see things according to the heat that they give off. This
+                replaces your normal sight, so you lose the ability to see
+                colour, texture and details such as writing. However, at night
+                or in darkness your vision may be greatly improved.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                Your vision becomes a combination of both normal sight and
+                your ability to see the temperature of things. You can operate
+                normally in daylight, but are are able to see things by their
+                warmth alone.
             </para>
         </description>
     </spell>
 
-    <spell name="Visions of Flame" level="7" type="fire">
-        <range>-1/100m</range>
-        <duration>Concentration</duration>
+    <spell name="Visions from Flame" level="7" type="fire">
+        <target>One</target>
+        <range>Long</range>
+        <duration>Minutes</duration>
 
         <prerequisite>Fire Sight</prerequisite>
 
@@ -484,11 +507,34 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                A fire can be used to see through another fire. One fire
-                must have been lit from the other. The wizard can look
-                through one and 'see out' the other. The quality of the
-                image received depends on the quality of success achieved.
-                Only vision, not sound or smell, is obtained.
+                If you can see a fire in your line of sight which is in range
+                of this invocation, then you can 'see' what that fire sees.
+                How far you can see from the fire is dependent on how far the
+                light of the fire extends.
+            </para>
+            <para>
+                At night, if you can see a campfire, then you will be able to
+                see people within the light of the campfire as if they were
+                sitting next to you. The quality of the vision is indistinct -
+                enough to recognise faces, but not good enough to read lips
+                or writing.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                You can hear sound that is spoken within range of the fire. The
+                sound will be muffled, so whispered voices will not be heard, but
+                normal speech will be clear to you.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                You can boost the quality of the scrying so that you can either
+                hear whispered speech or see details such as writing.
             </para>
         </description>
     </spell>
@@ -499,9 +545,10 @@
      -->
 
     <spell name="Flame" level="5" type="fire">
+        <time>Action</time>
         <range>Self</range>
-        <duration>Concentration</duration>
-        <effect>+1 mixed damage/2</effect>
+        <duration>Rounds</duration>
+        <resist>Soak</resist>
 
         <prerequisite>Control Fire</prerequisite>
 
@@ -509,24 +556,40 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                A free burning flame is created in the caster's hand.
-                The flame can be used to ignite material, strike at
-                someone to cause damage, or even thrown.
+                When you invoke this rune, a free burning flame is created
+                in your hand. It does no damage to you, but it can be used
+                to ignite material, strike at someone to cause damage, or
+                even thrown. The flame does +15 fire damage to anyone that
+                it hits.
             </para>
-
             <para>
-                The cantrip ends when either the wizard stops
-                concentrating on the flame, or it is thrown.
+                You can throw the flame, or strike at someone with it, as
+                soon as it is invoked. You don't have to maintain concentration
+                in the round that you do this, but the invocation is immediately
+                cancelled as soon as the attack is resolved. This means that
+                you don't suffer the usual penalties for maintaining concentration
+                when you attack.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The flame does +20 fire damage.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The flame does +25 fire damage.
             </para>
         </description>
     </spell>
 
     <spell name="Ring of Fire" level="7" type="fire">
-        <range>-3/m</range>
-        <duration>Concentration</duration>
+        <range>Self</range>
+        <radius>Small</radius>
+        <duration>Minutes</duration>
         <resist>Soak</resist>
-        <effect>+1</effect>
-        <target>-10/extra ring</target>
 
         <prerequisite>Flame</prerequisite>
 
@@ -546,7 +609,7 @@
 
     <spell name="Engulf" level="9" type="fire">
         <range>Self</range>
-        <duration>Concentration</duration>
+        <duration>Minutes</duration>
         <resist>Soak</resist>
         <effect>+1</effect>
         <target>-5/extra</target>
@@ -581,7 +644,7 @@
 
     <spell name="Body of Fire" level="12" type="fire">
         <range>Self</range>
-        <duration>Concentration</duration>
+        <duration>Minutes</duration>
 
         <prerequisite>Engulf</prerequisite>
 

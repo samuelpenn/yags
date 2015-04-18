@@ -410,7 +410,7 @@
                             </item>
                             <item name="Minute">
                                 Invoking this rune takes a whole minute. Every round in
-                                which you have to move or defend yourself adds 10 to the
+                                which you have to move or defend yourself adds 5 to the
                                 difficulty to invoke the rune.
                             </item>
                         </itemlist>
@@ -491,7 +491,8 @@
 
                         <para>
                             <e>Duration</e> determines how long the effects of the rune
-                            invocation lasts. The duration cannot normally be boosted.
+                            invocation lasts. Boosting the duration is much harder than
+                            other attributes of a rune.
                         </para>
 
                         <itemlist order="strict">
@@ -499,6 +500,11 @@
                                 The magic lasts only an instant, though the consequences
                                 may be permanent. A spell which slays a person would be
                                 momentary, but death lasts forever.
+                            </item>
+                            <item name="Natural">
+                                The magic has an affect which will decay naturally over
+                                time. The rate of decay will be described in the description
+                                of the rune.
                             </item>
                             <item name="Will">
                                 The magic lasts as long as you will it to. Such magic does
@@ -509,25 +515,51 @@
                                 multiple magical effects, but the penalties stack. You can
                                 end a willed invocation at any time.
                             </item>
-                            <item name="Concentration">
-                                The magic lasts for as long as you concentrate. As soon
-                                as you stop concentrating the effect ends. Concentration
-                                requires far more thought than Will effects, and you
-                                cannot invoke any further runes whilst concentrating. All
-                                other skill checks are halved, and you move at half speed.
-                                A concentration effect will be listed with a time
-                                (normally rounds, minutes, or hours). At the end of that
-                                time, you can end the effect, or decide to continue it
-                                at a cost of one point of Fatigue.
+                            <item name="Rounds">
+                                The magic lasts for as long as you concentrate. Every extra
+                                round you concentrate for beyond the first gains you one
+                                Fatigue. Can be boosted to Minutes at an increase of +15.
+                            </item>
+                            <item name="Minutes">
+                                The magic lasts for as long as you concentrate. Every extra
+                                minute that you concentrate for beyond the first gains you
+                                one level of Fatigue. Can be boosted to Hours at an increase
+                                of +30.
+                            </item>
+                            <item name="Hours">
+                                The magic lasts for as long as you concentrate. Every extra
+                                hour that you concentrate for beyond the first gains you
+                                one level of Exhaustion.
                             </item>
                             <item name="Day">
                                 The effect lasts until the next sunset. If the far north
                                 of the world, such effects can last many months.
                             </item>
                             <item name="Moon">
-                                The effect lasts until the next new moon.
+                                The effect lasts until the next new moon. The actual time
+                                of ending is when the new crescent first rises above the
+                                horizon. Mountains, buildings and other obstructions that
+                                block the horizon do not affect this, but your altitude
+                                does.
                             </item>
                         </itemlist>
+                        <para>
+                            Invocations which last <e>Rounds</e>, <e>Minutes</e> or
+                            <e>Hours</e> require intense concentration to maintain. Whilst
+                            concentrating, you cannot invoke any other runes, though you
+                            can try using raw magical effects. All skill checks are halved,
+                            and you move at half speed. At the end of each period, you can
+                            choose whether to continue concentrating or to drop the effect.
+                            If you continue, you gain a <e>Fatigue</e> (or an <e>Exhaustion</e>
+                            for <e>Hours</e> effects) and must make a <t>Will</t> check at
+                            a target of 10. If you fail, the effect ends anyway (though you
+                            still gain <e>Fatigue</e> or <e>Exhaustion</e>).
+                        </para>
+                        <para>
+                            Both <e>Will</e> and <e>Concentration</e> effects require you to
+                            be conscious, so anything that causes you to lose consciousness
+                            (including sleep) causes them to immediately end.
+                        </para>
                     </sect4>
 
                     <sect4>
@@ -543,16 +575,18 @@
                         <itemlist order="strict">
                             <item name="Self">
                                 You can only affect yourself with this rune. Runes with
-                                a range of Self normally also have a target of Self.
+                                a range of Self normally also have a target of Self,
+                                though some may have a radius effect centred on you.
                             </item>
 
                             <item name="One">
-                                You can affect a single individual target.
+                                You can affect a single individual target, either yourself
+                                or one target within range.
                             </item>
 
                             <item name="Individual">
                                 The target can be a single individual, either yourself
-                                or a target within range. You can boost this to Few.
+                                or one target within range. You can boost this to Few.
                             </item>
 
                             <item name="Few">
@@ -666,6 +700,10 @@
                         reduce the <e>Exhaustion</e> to <e>Fatigue</e>, and a second will
                         allow you to suffer no adverse effect.
                     </para>
+                    <para>
+                        The decisions to boost effectiveness or reduce fatigue is made
+                        after the roll to invoke the rune.
+                    </para>
                 </sect3>
             </sect2>
             <sect2>
@@ -721,7 +759,7 @@
                 </sect3>
             </sect2>
         </sect1>
-        
+
         <sect1>
             <title>The Mystery of Earth</title>
             <para>
@@ -953,8 +991,16 @@
                     </targetlist>
                 </sect3>
             </sect2>
+            <sect2>
+                <title>Runes of Earth</title>
+                <para>
+                    The following Runes are available to you if you have studied
+                    the Mystery of Earth.
+                </para>
+                <h:import-spells href="runes/earth.yags"/>
+            </sect2>
         </sect1>
-        
+
         <sect1>
             <title>The Mystery of Water</title>
             <para>
@@ -1655,8 +1701,14 @@
                     </targetlist>
                 </sect3>
             </sect2>
-
-
+            <sect2>
+                <title>Runes of Fire</title>
+                <para>
+                    The following Runes are available to you if you have studied
+                    the Mystery of Fire.
+                </para>
+                <h:import-spells href="runes/fire.yags"/>
+            </sect2>
         </sect1>
 
         <sect1>
@@ -1728,6 +1780,14 @@
                         </para>
                     </sect4>
                 </sect3>
+            </sect2>
+            <sect2>
+                <title>Runes of Iron</title>
+                <para>
+                    The following Runes are available to you if you have studied
+                    the Mystery of Iron.
+                </para>
+                <h:import-spells href="runes/iron.yags"/>
             </sect2>
         </sect1>
 
