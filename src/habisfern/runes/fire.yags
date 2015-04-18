@@ -593,76 +593,79 @@
 
         <prerequisite>Flame</prerequisite>
 
-        <summary>Create a ring of fire around caster.</summary>
+        <summary>Create a ring of fire around you.</summary>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Creates a ring of fire centred on the wizard with a radius
-                of the cantrip. Any who pass through the flames takes mixed
-                damage equal to the effect of the cantrip. If multiple
-                rings are created, then each is at the next multiple of
-                radius. The flames can range in height from 1m up to
-                the fire score of the wizard.
+                When invoked, this ring creates a ring of fire that surrounds
+                you out to the radius of the invocation. Anyone who comes through
+                the ring takes fire damage of +15. The flames are as tall as you
+                are, but you are unaffected by the heat from them.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The height of the flames can be varied from one metre in height
+                up to three times your height.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The ground between you and the perimeter of the ring can be
+                engulfed in fire as well, automatically damaging anyone who
+                is within the ring each round.
             </para>
         </description>
     </spell>
 
     <spell name="Engulf" level="9" type="fire">
-        <range>Self</range>
+        <time>Action</time>
+        <range>Touch</range>
         <duration>Minutes</duration>
         <resist>Soak</resist>
-        <effect>+1</effect>
-        <target>-5/extra</target>
+        <target>Few</target>
 
         <prerequisite>Ring of Fire</prerequisite>
 
-        <summary>Engulf the caster in flames.</summary>
+        <summary>You are engulfed in flames.</summary>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The wizard is surrounded by an aura of flame, which
-                engulfs him but does not harm him. The flames will keep
-                the wizard comfortably warm, and can be made to
-                brighten or dim at will. Each round, it acts as per
-                <e>Ignite</e> on everything the wizard touches. If
-                another creature is touched, then it does mixed damage
-                equal to the effect.
+                When this rune is invoked, you are engulfed in fire. The flames
+                surround you in a burning aura, but do not harm your body, though
+                your clothes and anything you carry will burn if they are flammable.
+                If you touch anything, it acts as <e>Ignite</e>. The flames also keep
+                you warm, optionally bringing the effective temperature up by five
+                levels.
             </para>
-
             <para>
-                If extra targets are specified, then the wizard can
-                opt to pass the effects of the cantrip onto others
-                as they are touched, rather than burning them. They
-                will also be surrounded by the aura. As many extra
-                people as specified can be affected. All end at
-                the same time. If the target is larger than the
-                wizard, then the effect is reduced since the fire
-                must cover a larger surface.
+                You can affect others with this rune, and they become <e>engulfed</e>
+                in flames as you are. They are not harmed, though cannot end it until
+                you decide to end it for everyone.
+            </para>
+            <para>
+                Anyone who strikes at you in melee combat will receive +15 fire
+                damage. You may strike at someone with the flames, doing +20 fire
+                damage to them in an attack, with an attack and defence bonus equal
+                to your <e>Fire</e> score. Others may also attack in the same way,
+                though they get no bonus on their attack or defence.
             </para>
         </description>
-    </spell>
-
-    <spell name="Body of Fire" level="12" type="fire">
-        <range>Self</range>
-        <duration>Minutes</duration>
-
-        <prerequisite>Engulf</prerequisite>
-
-        <summary>Change the caster into fire.</summary>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
             <para>
-                The wizard's body is changed to fire, allowing her to
-                fly, fit through narrow openings, and burn anything
-                touched. Only the wizard's body is affected, and all
-                clothes and items carried will either fall to the
-                ground or burn.
+                Others affected by this rune also gain your <e>Fire</e> score as a
+                bonus when they attack or defend.
             </para>
-
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
             <para>
-                It is difficult to harm the wizard in this form, all
-                physical damage is divided by five (before soak, which
-                is equal to the wizard's <e>Fire</e> score).
+                When used to strike at enemies, the fires do +25 damage instead.
+                If you strike with a melee weapon instead, you do an extra +5
+                fire damage on top of the weapon's normal damage.
             </para>
         </description>
     </spell>
