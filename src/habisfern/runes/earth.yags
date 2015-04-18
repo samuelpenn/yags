@@ -26,15 +26,24 @@
             <para>
                 With this rune you can determine the physical ailments
                 of a person or animal. This knowledges provides you with a
-                bonus to any <e>first aid</e> check you may make when
-                trying to heal them. The bonus is +3 per level of success.
+                +5 bonus to any <e>first aid</e> check you may make when
+                trying to heal them.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                You are aware of more detailed information about the physical
+                state of a person, and gain a +10 bonus to <e>first aid</e>
+                checks.
             </para>
         </description>
     </spell>
 
     <spell name="Purify" level="3" type="earth">
         <range>Reach</range>
-        <duration>Special</duration>
+        <duration>Natural</duration>
         <target>One</target>
         <prerequisite>Aid</prerequisite>
 
@@ -43,16 +52,23 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 By invoking this rune upon a person, you can help them
-                resist the effects of poison or disease. Each level of
-                success provides a +5 bonus to their next check.
+                resist the effects of poison or disease. They get a +5
+                bonus to their next <t>Health</t> check to resist a poison
+                or disease they are currently suffering from.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The bonus to their <t>Health</t> check is +10.
             </para>
         </description>
     </spell>
 
     <spell name="Heal" level="5" type="earth">
         <time>Minute</time>
-        <range>Reach</range>
-        <duration>Natural</duration>
+        <range>Touch</range>
+        <duration>Momentary</duration>
         <target>One</target>
         <prerequisite>Purify</prerequisite>
 
@@ -60,9 +76,24 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                For each level of success you may heal up to one level
-                of wounds or stuns in the target. For each level healed,
-                you gain one level of <e>exhaustion</e>.
+                You may heal a creature of their injuries, removing one stun
+                from them. Attempting to invoke this more than once in any
+                given day on a creature has no further effect.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                You may heal up to three stuns, or alternatively a single wound
+                on a person. If healing a wound, this rune cannot be invoked
+                more than once a week on a single creature.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                You may heal all of a creature's stuns. Alternatively, you may
+                heal up to three wounds on the creature.
             </para>
         </description>
     </spell>
@@ -80,16 +111,27 @@
                 The target of this rune will decay rapidly, turning to
                 dust within a few rounds. Each target can be a single
                 once-living being, such as a dead tree, dead person or
-                dead whale. A <e>moderate</e> success will turn the corpses
-                to a skeleton, a <e>good</e> success will decay most of
-                the skeleton and better success will leave nothing.
+                dead whale.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                You can destroy all flesh from a corpse, leaving just a skeleton.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                You can destroy a corpse completely, turning even a skeleton
+                to dust.
             </para>
         </description>
     </spell>
 
     <spell name="Age" level="7" type="earth">
         <range>Short</range>
-        <duration>Natural</duration>
+        <duration>Momentary</duration>
         <target>Individual</target>
         <prerequisite>Decay</prerequisite>
         <resist>Health</resist>
@@ -98,42 +140,21 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The target of this rune will begin to age rapidly.
-                The target gets a check to resist, but if they fail
-                then they will be racked with pain (-5 to all actions
-                per level of success), and age according to the
-                success of the magic.
+                When this rune is invoked upon a living creature, they will be
+                racked with pain (-5 to all actions, and their initiative reduced
+                to zero) for the next hour. Over that period they will age 3 years.
             </para>
-
-            <targetlist targetFirst="true">
-                <targetLabel>Success</targetLabel>
-                <valueLabel>Effect</valueLabel>
-
-                <item target="Moderate">
-                    Target is aged by one year.
-                </item>
-
-                <item target="Good">
-                    Target is aged by 3 years.
-                </item>
-
-                <item target="Excellent">
-                    Target is aged by 10 years.
-                </item>
-
-                <item target="Superb">
-                    Target is aged by 30 years.
-                </item>
-
-                <item target="Fantastic">
-                    Target is aged by 90 years.
-                </item>
-            </targetlist>
-
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
             <para>
-                The target will age one year per round. A success level
-                can be used to double the rate of ageing, but obviously
-                reduces the total years aged by.
+                The creature will age 10 years.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The creature will age 30 years.
             </para>
         </description>
     </spell>
@@ -141,7 +162,7 @@
     <spell name="Fertility" level="7" type="earth">
         <range>Self</range>
         <duration>Concentration</duration>
-        <radius>Village</radius>
+        <radius>Large</radius>
         <resist>Will</resist>
         <prerequisite>Heal</prerequisite>
 
@@ -164,7 +185,7 @@
 
     <spell name="Beauty" level="7" type="earth">
         <range>Reach</range>
-        <duration>Special</duration>
+        <duration>Natural</duration>
         <target>Individual</target>
         <resist>Will</resist>
         <prerequisite>Heal</prerequisite>
@@ -173,7 +194,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When you invoke this cantrip upon a person, you cause an
+                When you invoke this rune upon a person, you cause an
                 alteration of their body in order to make them more
                 beautiful. A <e>moderate</e> success will make minor
                 changes, but every two full levels of success is
@@ -189,7 +210,7 @@
 
     <spell name="Ugly" level="7" type="earth">
         <range>Short</range>
-        <duration>Special</duration>
+        <duration>Natural</duration>
         <target>Individual</target>
         <resist>Will</resist>
         <prerequisite>Decay</prerequisite>
@@ -198,7 +219,7 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                This cantrip warps and twists a person's appearance to make
+                This rune warps and twists a person's appearance to make
                 them appear ugly. Every level of success is equivalent to
                 one level of the <e>Ugly</e> disadvantage, and initially
                 levels of <e>Beauty</e> will be cancelled.
