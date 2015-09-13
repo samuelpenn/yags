@@ -57,14 +57,16 @@
             <para>
                 You lay an enchantment upon a creature, protecting them from
                 harm. They gain a +3 bonus to their soak score whilst under
-                the effects of the rune.
+                the effects of the rune, but their <t>Agility</t> is reduced
+                by one.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Good)">
             <para>
-                The soak bonus is increased to +6.
+                The soak bonus is increased to +6, or the target's <t>Agility</t>
+                is unaffected.
             </para>
         </description>
     </spell>
@@ -92,7 +94,7 @@
         </description>
     </spell>
 
-    <spell name="Strength" level="5" type="iron">
+    <spell name="Strengthen" level="5" type="iron">
         <range>Touch</range>
         <duration>Minutes</duration>
         <target>Individual</target>
@@ -109,14 +111,152 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Good)">
             <para>
-                The <t>Strength</t> bonus is increased to +2.
+                They also gain a +1 bonus to their <t>Health</t>.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Excellent)">
             <para>
-                The <t>Strength</t> bonus is increased to 3.
+                The <t>Strength</t> bonus is increased to +2, as well as
+                getting the <t>Health</t> bonus.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Enlarge" level="7" type="iron">
+        <range>Touch</range>
+        <duration>Minutes</duration>
+        <target>Individual</target>
+        <resist>Will</resist>
+
+        <short>Make a creature larger.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You lay an enchantment on a living creature, making them grow in size
+                by a considerable amount. They gain +3 points of <t>Size</t>, growing
+                by one point at the end of each round. Only the creature is affected,
+                clothes and armour that they are wearing, or items that they are carrying
+                are unaffected. Every second point of <t>Size</t> that is gained also
+                increases <t>Strength</t> by one point.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                Either standard clothing increases in size as well, or <t>Size</t>
+                increases by a further point to +4.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                Either standard clothing increases in size as well, or <t>Size</t>
+                increases by a further point to +4. Metal armour does not increase
+                in size, neither do items carried.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Shield" level="1" type="iron">
+        <range>Self</range>
+        <duration>Will</duration>
+        <target>Self</target>
+
+        <short>Defend yourself against metal weapons.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You lay an enchantment upon yourself that protects you against
+                metal weapons. Any attack that uses a metal weapon (including
+                spears or arrows that have metal points) gives you a +5 defence
+                bonus. This affects any active defences that you make, as well
+                as your passive defence.
+            </para>
+            <para>
+                If you are wearing metal armour, then any <t>Agility</t> or
+                <t>Dexterity</t> based checks that you make are at a penalty
+                equal to the soak bonus of the armour.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The defence bonus is increased to +10.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Grasp" level="3" type="iron">
+        <range>Reach</range>
+        <duration>Momentary</duration>
+        <target>One</target>
+
+        <short>Make a metal item fly to your hand.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Any single item within range immediately flies to your hand.
+                The item can be no larger or heavier than what you can hold
+                in one hand. If the item is restrained, or being held by another,
+                then the invocation fails.
+            </para>
+            <para>
+                If you wish, the item may fall at your feet rather than land in
+                your hand.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                If the item is being held by another, you make an opposed check
+                with your <t>Will</t> against their <t>Strength</t>. If you win,
+                they lose the item and it moves to your hand.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Dance" level="5" type="iron">
+        <range>Reach</range>
+        <duration>Rounds</duration>
+        <target>One</target>
+
+        <short>Cause a metal weapon to fight by itself.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                A single metal weapon (or similar object which could be held by
+                you and used as a weapon) can be made to fight by itself, attacking
+                one person within range.
+            </para>
+            <para>
+                The weapon's attack skill is equal to your <e>Melee</e> skill, but
+                it uses your <t>Intelligence</t> as the attribute. It gets its normal
+                attack bonus, and does damage as normal using your <t>Will</t> instead
+                of <t>Strength</t>.
+            </para>
+            <para>
+                Whilst concentrating on this invocation, you do not halve your skill
+                used for attacking with this weapon.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                You gain a bonus to your attacks equal to your <e>Iron</e> score.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                You gain a bonus to your attacks equal to twice your <e>Iron</e> score.
             </para>
         </description>
     </spell>
