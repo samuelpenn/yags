@@ -12,17 +12,15 @@
 
     <description xmlns="http://yagsbook.sourceforge.net/xml">
         <para>
-            Cantrips of <e>Iron</e> focus on making things stronger, more
+            Runes of <e>Iron</e> focus on making things stronger, more
             stable and less likely to change.
         </para>
     </description>
 
     <!--
-        Following are the core spells. Various other threads split off from
-        this one.
-     -->
-
-
+        Level One Runes.
+        May have a maximum of one boost.
+    -->
     <spell name="Harden" level="1" type="iron">
         <range>Touch</range>
         <duration>Will</duration>
@@ -42,121 +40,6 @@
                      title="Boost (Good)">
             <para>
                 The soak bonus is increased to +10.
-            </para>
-        </description>
-    </spell>
-
-    <spell name="Toughness" level="3" type="iron">
-        <range>Touch</range>
-        <duration>Rounds</duration>
-        <target>Individual</target>
-
-        <short>Make a creature tougher.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You lay an enchantment upon a creature, protecting them from
-                harm. They gain a +3 bonus to their soak score whilst under
-                the effects of the rune, but their <t>Agility</t> is reduced
-                by one.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Good)">
-            <para>
-                The soak bonus is increased to +6, or the target's <t>Agility</t>
-                is unaffected.
-            </para>
-        </description>
-    </spell>
-
-    <spell name="Sharpen" level="3" type="iron">
-        <range>Touch</range>
-        <duration>Rounds</duration>
-        <target>Individual</target>
-
-        <short>Make a weapon sharper.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You lay an enchantment upon a single weapon that you touch,
-                increasing its sharpness. This will affect only edged or
-                piercing weapons. The damage of the weapon is increased by +2.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Good)">
-            <para>
-                The damage of the weapon is increased by +4.
-            </para>
-        </description>
-    </spell>
-
-    <spell name="Strengthen" level="5" type="iron">
-        <range>Touch</range>
-        <duration>Minutes</duration>
-        <target>Individual</target>
-
-        <short>Make a creature stronger.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You lay an enchantment upon a creature, providing them with a
-                +1 bonus to their <t>Strength</t>.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Good)">
-            <para>
-                They also gain a +1 bonus to their <t>Health</t>.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Excellent)">
-            <para>
-                The <t>Strength</t> bonus is increased to +2, as well as
-                getting the <t>Health</t> bonus.
-            </para>
-        </description>
-    </spell>
-
-    <spell name="Enlarge" level="7" type="iron">
-        <range>Touch</range>
-        <duration>Minutes</duration>
-        <target>Individual</target>
-        <resist>Will</resist>
-
-        <short>Make a creature larger.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You lay an enchantment on a living creature, making them grow in size
-                by a considerable amount. They gain +3 points of <t>Size</t>, growing
-                by one point at the end of each round. Only the creature is affected,
-                clothes and armour that they are wearing, or items that they are carrying
-                are unaffected. Every second point of <t>Size</t> that is gained also
-                increases <t>Strength</t> by one point.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Good)">
-            <para>
-                Either standard clothing increases in size as well, or <t>Size</t>
-                increases by a further point to +4.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Excellent)">
-            <para>
-                Either standard clothing increases in size as well, or <t>Size</t>
-                increases by a further point to +4. Metal armour does not increase
-                in size, neither do items carried.
             </para>
         </description>
     </spell>
@@ -191,10 +74,66 @@
         </description>
     </spell>
 
+    <!--
+        Level Three Runes.
+        May have a maximum of one boost.
+    -->
+
+    <spell name="Toughen" level="3" type="iron">
+        <range>Touch</range>
+        <duration>Rounds</duration>
+        <target>Individual</target>
+        <prerequisite>Harden</prerequisite>
+
+        <short>Make a creature tougher.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You lay an enchantment upon a creature, protecting them from
+                harm. They gain a +3 bonus to their soak score whilst under
+                the effects of the rune, but their <t>Agility</t> is reduced
+                by one.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The soak bonus is increased to +6, or the target's <t>Agility</t>
+                is unaffected.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Sharpen" level="3" type="iron">
+        <range>Touch</range>
+        <duration>Rounds</duration>
+        <target>Individual</target>
+        <prerequisite>Toughness</prerequisite>
+
+        <short>Make a weapon sharper.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You lay an enchantment upon a single weapon that you touch,
+                increasing its sharpness. This will affect only edged or
+                piercing weapons. The damage of the weapon is increased by +2.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The damage of the weapon is increased by +4.
+            </para>
+        </description>
+    </spell>
+
     <spell name="Grasp" level="3" type="iron">
         <range>Reach</range>
         <duration>Momentary</duration>
         <target>One</target>
+        <prerequisite>Shield</prerequisite>
 
         <short>Make a metal item fly to your hand.</short>
 
@@ -221,10 +160,47 @@
         </description>
     </spell>
 
+    <!--
+        Level Five Runes.
+        May have a maximum of two boosts.
+    -->
+
+    <spell name="Strengthen" level="5" type="iron">
+        <range>Touch</range>
+        <duration>Minutes</duration>
+        <target>Individual</target>
+        <prerequisite>Toughen</prerequisite>
+
+        <short>Make a creature stronger.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You lay an enchantment upon a creature, providing them with a
+                +1 bonus to their <t>Strength</t>.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                They also gain a +1 bonus to their <t>Health</t>.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The <t>Strength</t> bonus is increased to +2, as well as
+                getting the <t>Health</t> bonus.
+            </para>
+        </description>
+    </spell>
+
     <spell name="Dance" level="5" type="iron">
         <range>Reach</range>
         <duration>Rounds</duration>
         <target>One</target>
+        <prerequisite>Grasp</prerequisite>
 
         <short>Cause a metal weapon to fight by itself.</short>
 
@@ -260,6 +236,132 @@
             </para>
         </description>
     </spell>
+
+    <spell name="Rust" level="5" type="iron">
+        <range>Touch</range>
+        <duration>Momentary</duration>
+        <target>Individual</target>
+        <prerequisite>Grasp</prerequisite>
+
+        <short>Cause a metal item to turn to rust.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                A single metal object up to the size of a set of armour turns to
+                rust and falls apart within a round. The item must be a single
+                continuous piece of metal, such as a sword but not including mail
+                armour.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                You can affect a complex item such as a suit of mail armour.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The item can be made to explode into many sharp pieces, doing +10
+                damage to all within 3m, or double damage to the wearer if the item
+                is a set of full metal armour.
+            </para>
+        </description>
+    </spell>
+
+    <!--
+        Level Seven Runes.
+        May have a maximum of two boosts.
+    -->
+
+    <spell name="Enlarge" level="7" type="iron">
+        <range>Touch</range>
+        <duration>Minutes</duration>
+        <target>Individual</target>
+        <resist>Will</resist>
+        <prerequisite>Strengthen</prerequisite>
+
+        <short>Make a creature larger.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You lay an enchantment on a living creature, making them grow in size
+                by a considerable amount. They gain +3 points of <t>Size</t>, growing
+                by one point at the end of each round. Only the creature is affected,
+                clothes and armour that they are wearing, or items that they are carrying
+                are unaffected. Every second point of <t>Size</t> that is gained also
+                increases <t>Strength</t> by one point.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                Either standard clothing increases in size as well, or <t>Size</t>
+                increases by a further two points to +5.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                Clothing increases in size and <t>Size</t> increases by +5. Metal
+                armour does not increase in size, neither do items carried.
+            </para>
+        </description>
+    </spell>
+
+    <!--
+        Level Nine Runes.
+        May have a maximum of three boosts.
+    -->
+
+    <spell name="Iron skin" level="9" type="iron">
+        <range>Touch</range>
+        <duration>Rounds</duration>
+        <target>Individual</target>
+        <resist>Will</resist>
+        <prerequisite>Enlarge</prerequisite>
+
+        <short>Creature becomes as tough as iron.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You lay an enchantment on a living creature, changing their skin
+                to iron-like hardness, and providing them with a +9 bonus to soak
+                against all attacks. Their <t>Agility</t> and <t>Dexterity</t> are
+                both reduced by one whilst so changed.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                Either the penalty to attributes is ignored, or the soak bonus is
+                increased to +12.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                There is no penalty to attributes, and the soak bonus is +12.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Superb)">
+            <para>
+                There is no penalty to attributes, and the soak bonus is +15.
+            </para>
+        </description>
+    </spell>
+
+
+
+
 
 </grimoire>
 
