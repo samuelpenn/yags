@@ -28,7 +28,7 @@
         </cvsinfo>
 
         <license type="Yags">
-            <year>2014</year>
+            <year>2015</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -254,6 +254,19 @@
                     <item name="Shock">
                         Particularly painful types of damage can cause shock,
                         which reduces your initiative.
+                    </item>
+
+                    <item name="Active defence">
+                        An active defence is normally a dodge or a parry. You
+                        must be aware of the attack to be able to make an
+                        active defence, and you have a limited number you can
+                        make in a round.
+                    </item>
+
+                    <item name="Passive defence">
+                        You passive defence is a fixed number, and is the
+                        difficulty for someone to hit you when you aren't
+                        performing an active defence. It is normally 15.
                     </item>
                 </itemlist>
 
@@ -581,10 +594,9 @@
 
                     <para>
                         To attack, make a melee attack roll using your
-                        relevant combat skill modified by the attack
-                        bonus of the weapon. Most melee skills are based
-                        on dexterity, though <e>Brawl</e> is based on
-                        agility.
+                        relevant combat skill modified by the attack bonus
+                        of the weapon. Both <e>Melee</e> and <e>Brawl</e>
+                        both use <t>Agility</t>.
                     </para>
 
                     <y:skeq>
@@ -596,9 +608,10 @@
                     </y:skeq>
 
                     <para>
-                        If the target is defending, then they get to make
-                        a defence roll. If not, then the base target
-                        difficulty is 15.
+                        If the target is defending, then they get to make an
+                        active defence roll. If not, then the target difficulty
+                        of the attack is equal to their passive defence, which
+                        is normally 15.
                     </para>
 
                     <y:skeq>
@@ -611,7 +624,7 @@
 
                     <para>
                         If the attack roll is equal to or greater than the
-                        defence roll, then the target has been hit, and
+                        defence, then the target has been hit, and
                         damage should be determined.
                     </para>
                 </sect3>
@@ -706,7 +719,7 @@
                         success, then you can continue fighting, but
                         must make another check at the end of each round
                         at a target of 20. If you are unconscious or
-                        resting you only need to make a check every
+                        resting you only need to make a check once every
                         minute.
                     </para>
 
