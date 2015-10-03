@@ -1,0 +1,136 @@
+<?xml version = '1.0' ?>
+<?xml-stylesheet href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl" type="text/xsl"?>
+
+<!--
+    Copyright Samuel Penn, GPL v2.
+-->
+
+<bestiary xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <beast name="Orcs" primary="true">
+        <information>
+            <type>Humanoid</type>
+            <demeanor>Violent</demeanor>
+
+            <origin>Fantasy</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                Degenerate humanoids.
+            </short>
+
+            <physical>
+                <para>
+                    Orcs are degenerate humanoids often born through dark magic in
+                    spawning pits deep beneath the ground. What they lack in intelligence
+                    they make up for with cunning and violence, being born fully grown
+                    and knowing how to fight and kill from the start.
+                </para>
+
+                <para>
+                    Orcs will generally kill for the sake of killing. Though they can
+                    form large tribes, they are anarchic in nature, with the toughest
+                    bully taking charge only for as long as he can hold it.
+                </para>
+            </physical>
+        </description>
+    </beast>
+
+    <beast name="Common Orc" parent="Orcs">
+        <information>
+            <type>Humanoid</type>
+            <demeanor>Violent</demeanor>
+
+            <habitat climate="Any" terrain="Wilderness" frequency="Common"/>
+
+            <organisation group="Hunting party" number="3-12"/>
+            <organisation group="Raiding party" number="5-30"/>
+
+            <origin>Fantasy</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                A typical orc warrior.
+            </short>
+
+            <image src="monsters/graphics/orc.jpg"/>
+
+            <physical>
+                <para>
+                    Most orcs are grey skinned, typically human sized but with a
+                    wiry build that hides their great strength. They are foul
+                    smelling, dirty and often disease ridden - though they seem
+                    to be immune to most of the diseases that they carry.
+                </para>
+                <para>
+                    Orcs don't like the daylight, and tend to stay within their caves
+                    during the day. In bright light, they have difficulty seeing.
+                </para>
+            </physical>
+            <social>
+                <para>
+                    Orcs organise into tribes that live in caves and tunnels
+                    beneath the ground.
+                </para>
+            </social>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12">
+                <attribute name="strength" score="4"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="3"/>
+                <attribute name="dexterity" score="3"/>
+                <attribute name="perception" score="4"/>
+                <attribute name="intelligence" score="2"/>
+                <attribute name="empathy" score="2"/>
+                <attribute name="will" score="2"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="4"/>
+                    <skill name="Awareness" score="4"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="2"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="4"/>
+                    <skill name="Throw" score="3"/>
+                </group>
+
+                <group name="Skills" type="skills">
+                    <skill name="Speak own" score="2"/>
+                    <skill name="Survival" score="4"/>
+                    <skill name="Melee" score="4"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Brawl" skill="Brawl">
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="stun" bonus="0"/>
+                </combatstyle>
+                <combatstyle style="Orc Sword" skill="Brawl">
+                    <attack attribute="agility" bonus="+4"/>
+                    <defence attribute="agility" bonus="+4"/>
+                    <damage type="wound" bonus="+13"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+            </combat>
+
+            <advantages>
+                <advantage name="Light sensitivity"/>
+                <advantage name="Disease resistance"/>
+                <advantage name="Poison resistance"/>
+                <advantage name="Dark vision"/>
+            </advantages>
+        </statistics>
+    </beast>
+</bestiary>
