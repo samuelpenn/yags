@@ -1,0 +1,124 @@
+<?xml version = '1.0' ?>
+<?xml-stylesheet href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl" type="text/xsl"?>
+
+<!--
+    Copyright Samuel Penn, GPL v2.
+-->
+
+<bestiary xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <beast name="Ogres" primary="true">
+        <information>
+            <type>Humanoid</type>
+            <demeanor>Violent</demeanor>
+
+            <origin>Fantasy</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                Giant humanoid.
+            </short>
+
+            <physical>
+                <para>
+                    Ogres are similar to orcs - degenerate, violent psychopaths that
+                    delight in killing and maiming others. Unlike orcs they are much
+                    larger than humans, being considerably stronger and tougher.
+                    Fortunately they are also stupid, and lack much of the cunning
+                    of orcs.
+                </para>
+            </physical>
+        </description>
+    </beast>
+
+    <beast name="Ogre" parent="Ogres">
+        <information>
+            <type>Humanoid</type>
+            <demeanor>Violent</demeanor>
+
+            <habitat climate="Any" terrain="Wilderness" frequency="Common"/>
+
+            <organisation group="Hunting party" number="2-5"/>
+            <organisation group="Raiding party" number="3-18"/>
+
+            <origin>Fantasy</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                A typical ogre warrior.
+            </short>
+
+            <image src="monsters/graphics/orgre.jpg"/>
+
+            <physical>
+                <para>
+                    Ogres are large, almost 2.5 metres tall. They are dim-witted and
+                    slow, and rarely use weapons more complicated than a club.
+                </para>
+            </physical>
+            <social>
+                <para>
+                    Ogres form small tribes of maybe a dozen individuals.
+                </para>
+            </social>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="7" soak="15">
+                <attribute name="strength" score="7"/>
+                <attribute name="health" score="5"/>
+                <attribute name="agility" score="2"/>
+                <attribute name="dexterity" score="2"/>
+                <attribute name="perception" score="4"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="empathy" score="2"/>
+                <attribute name="will" score="2"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="4"/>
+                    <skill name="Awareness" score="4"/>
+                    <skill name="Brawl" score="6"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="3"/>
+                </group>
+
+                <group name="Skills" type="skills">
+                    <skill name="Speak own" score="3"/>
+                    <skill name="Survival" score="3"/>
+                    <skill name="Melee" score="4"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Brawl" skill="Brawl">
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="stun" bonus="0"/>
+                </combatstyle>
+                <combatstyle style="Club" skill="Brawl">
+                    <attack attribute="agility" bonus="+4"/>
+                    <defence attribute="agility" bonus="+3"/>
+                    <damage type="mixed" bonus="+16"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+            </combat>
+
+            <advantages>
+                <advantage name="Light sensitivity"/>
+                <advantage name="Disease resistance"/>
+                <advantage name="Poison resistance"/>
+                <advantage name="Dark vision"/>
+            </advantages>
+        </statistics>
+    </beast>
+</bestiary>
