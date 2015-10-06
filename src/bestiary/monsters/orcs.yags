@@ -116,7 +116,7 @@
                     <defence attribute="agility" bonus="0"/>
                     <damage type="stun" bonus="0"/>
                 </combatstyle>
-                <combatstyle style="Orc Sword" skill="Brawl">
+                <combatstyle style="Orc Sword" skill="Melee">
                     <attack attribute="agility" bonus="+4"/>
                     <defence attribute="agility" bonus="+4"/>
                     <damage type="wound" bonus="+13"/>
@@ -214,7 +214,7 @@
                     <defence attribute="agility" bonus="0"/>
                     <damage type="stun" bonus="0"/>
                 </combatstyle>
-                <combatstyle style="Orc Sword" skill="Brawl">
+                <combatstyle style="Orc Sword" skill="Melee">
                     <attack attribute="agility" bonus="+4"/>
                     <defence attribute="agility" bonus="+4"/>
                     <damage type="wound" bonus="+13"/>
@@ -225,6 +225,120 @@
 
             <advantages>
                 <advantage name="Light sensitivity"/>
+                <advantage name="Disease resistance"/>
+                <advantage name="Poison resistance"/>
+                <advantage name="Dark vision"/>
+            </advantages>
+        </statistics>
+    </beast>
+
+    <beast name="Orc Hunter" parent="Orcs">
+        <information>
+            <type>Humanoid</type>
+            <demeanor>Violent</demeanor>
+
+            <habitat climate="Any" terrain="Wilderness" frequency="Common"/>
+
+            <organisation group="Hunting party" number="2-8"/>
+
+            <origin>Fantasy</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                A orc hunter.
+            </short>
+
+            <image src="monsters/graphics/orc.jpg"/>
+
+            <physical>
+                <para>
+                    Orcish hunters are trained to hunt on the surface, often during
+                    the day, and so have a better acclimatisation to daylight. They
+                    prefer stealth over direct confrontation, which better suits their
+                    smaller size and strength, but greater agility and speed.
+                </para>
+            </physical>
+            <social>
+                <para>
+                    Hunters tend to be ostracised by other orcs, but most are forced
+                    to accept that their skills are necessary to the survival of the
+                    tribe. Not only are they good at finding food, they can lead their
+                    tribe to more interesting prey, often scouting out settlements of
+                    humans and other races.
+                </para>
+            </social>
+            <tactics>
+                <para>
+                    Hunters generally rely on stealth, positioning and ranged combat
+                    when fighting others. They will often try to retreat rather than
+                    engage in melee, though are capable fighters. Equipped with bows
+                    and spears, they prefer to find high places and engage from a
+                    position where their prey will find it difficult to retaliate.
+                </para>
+                <para>
+                    They will often use poisons on their arrows, or failing that,
+                    simply cover the points in excrement and hope infection runs its
+                    course. Unlike most other orcs, hunters are capable of being
+                    patient.
+                </para>
+            </tactics>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="5" soak="12">
+                <attribute name="strength" score="3"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="4"/>
+                <attribute name="dexterity" score="3"/>
+                <attribute name="perception" score="5"/>
+                <attribute name="intelligence" score="2"/>
+                <attribute name="empathy" score="2"/>
+                <attribute name="will" score="2"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="6"/>
+                    <skill name="Awareness" score="6"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="6"/>
+                    <skill name="Throw" score="5"/>
+                </group>
+
+                <group name="Skills" type="skills">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Survival" score="6"/>
+                    <skill name="Melee" score="4"/>
+                    <skill name="Bow" score="6"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Brawl" skill="Brawl">
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="stun" bonus="0"/>
+                </combatstyle>
+                <combatstyle style="Orc Sword" skill="Melee">
+                    <attack attribute="agility" bonus="+4"/>
+                    <defence attribute="agility" bonus="+4"/>
+                    <damage type="wound" bonus="+13"/>
+                </combatstyle>
+                <combatstyle style="Short bow" skill="Bow">
+                    <attack attribute="agility" bonus="+4"/>
+                    <defence attribute="agility" bonus="+4"/>
+                    <damage type="wound" bonus="+13"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+            </combat>
+
+            <advantages>
                 <advantage name="Disease resistance"/>
                 <advantage name="Poison resistance"/>
                 <advantage name="Dark vision"/>
