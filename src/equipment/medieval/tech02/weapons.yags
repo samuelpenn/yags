@@ -669,7 +669,7 @@
         </weapon>
     </item>
 
-    <item name="Short bow">
+    <item name="Bow">
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
@@ -679,13 +679,15 @@
 
         <description>
             <para>
-                The short bow is a self bow, about a metre in
-                length. The penetrating power is based on the strength
-                of the user, and also the maximum pull of the bow.
-                Most bows are limited to Strength 3, but they can be
-                made at Strength 2 or 4. For each point your Strength
-                is lower than the pull of the bow, halve all ranges
-                and add +3 to the fumble chance.
+                This is a self bow, about a metre in length. It is not as great
+                or powerful as a longbow, but is somewhat easier to use. However,
+                like a longbow, it needs to be crafted with a particular pull
+                suited to a given strength.
+            </para>
+            <para>
+                The base damage of a bow is always +0, but the bonus from Strength
+                is equal to 2x the Strength of the user, up to the maximum Strength
+                of the bow.
             </para>
         </description>
 
@@ -698,8 +700,8 @@
             <class>bow</class>
 
             <combat>
-                <attack>+3</attack>
-                <damage>+5</damage>
+                <attack>+5</attack>
+                <damage>+0</damage>
                 <range>
                     <increment>15</increment>
                     <short>30</short>
@@ -741,13 +743,21 @@
                 height of a man, to allow a greater draw distance. It is
                 otherwise similar to the short bow, but is more cumbersome.
             </para>
-
             <para>
-                Long bows are built for a particular strength of user. If
-                your Strength is higher than the pull of the bow, then the
-                benefits of the extra Strength are lost. For each point
-                your Strength is lower, halve all ranges and add +4 to the
-                fumble chance.
+                The effectiveness of a longbow is highly dependent on the pull
+                strength of the user, and a bow has to be crafted to the user's
+                strength. A strength 4 bow is no more effective in the hands of
+                a strength 5 user as one with strength 4 is, and is also very
+                difficult to use for anyone with less than strength 4. A highly
+                skilled longbow man is capable of drawing higher strength bows
+                however.
+            </para>
+            <para>
+                A longbow has zero base damage, and instead does damage entirely
+                proportional to the strength of the user. In the hands of an
+                untrained warrior, this is twice the user's strength, as for
+                most two-handed weapons. For someone specifically trained in the
+                longbow, it is four times the user's strength.
             </para>
         </description>
 
@@ -761,7 +771,7 @@
 
             <combat>
                 <attack>+4</attack>
-                <damage>+12</damage>
+                <damage>+0</damage>
                 <range>
                     <increment>20</increment>
                     <short>60</short>
