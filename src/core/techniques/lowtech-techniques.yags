@@ -256,17 +256,31 @@
         </description>
     </advantage>
 
+    <advantage name="Longbowman" type="technique">
+        <cost points="2"/>
+        <skill name="Bow"/>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You are practised with the shooting of longbows. When firing a
+                longbow, your damage bonus is equal to 4x your Strength. If you
+                do not have this technique, then your damage bonus is equal to
+                2x your strength.
+            </para>
+        </description>
+    </advantage>
+
     <advantage name="Improved pull" type="technique">
         <cost points="4"/>
         <skill name="Bow"/>
 
-        <prerequisite>Fast shot</prerequisite>
+        <prerequisite>Longbowman</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Due to extensive training with firing a bow, you gain a
                 +1 to your strength for purposes of using a longbow for
-                every four points of <e>Bow</e> skill.
+                every four points of <e>Bow</e> skill that you have.
             </para>
         </description>
     </advantage>
