@@ -64,20 +64,21 @@
     </advantage>
 
 
-    <advantage name="Single weapon fighting" type="technique">
+    <advantage name="Single weapon" type="technique">
         <cost points="2"/>
         <skill name="Melee"/>
 
-        <short>Use agility for defence.</short>
+        <short>Combine dodge and parry when defending.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 When fighting with a single one-handed melee weapon, you may use
-                <t>Agility</t> instead of <t>Dexterity</t> for defence.
-                You still use the <e>Melee</e> skill, plus all the
-                bonuses from defending with a weapon. If you are no
-                more than lightly encumbered, then you may also use
-                <t>Agility</t> for attack.
+                your <e>Brawl</e> skill for defence if you wish. You still gain
+                your weapon defence bonus on your defence roll.
+            </para>
+            <para>
+                Normally when attacking with a melee weapon you must use your
+                <e>Melee</e> skill when defending.
             </para>
         </description>
     </advantage>
@@ -86,33 +87,37 @@
         <cost points="4"/>
         <skill name="Melee"/>
 
-        <prerequisite>Single weapon fighting</prerequisite>
+        <prerequisite>Single weapon </prerequisite>
 
         <short>Increases base soak.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When defending against an attack with your <e>Melee</e>
+                When defending against an attack with your <e>Brawl</e>
                 skill and using a single weapon, you have learnt to
-                retreat from blows without losing ground, lessening the
-                impact of the strike. You gain a bonus to your soak
-                equal to your <t>Agility</t> (modified by encumbrance
-                and armour).
+                retreat from blows lessening the impact of the strike.
+                You gain a bonus to your soak equal to your <t>Agility</t>
+                (modified by encumbrance and armour), but must retreat one
+                metre back.
             </para>
         </description>
     </advantage>
 
-    <advantage name="Shield fighting" type="technique">
+    <advantage name="Weapon and shield" type="technique">
         <cost points="2"/>
         <skill name="Melee"/>
         <short>The art of fighting with a shield.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When using a one handed weapon and a shield, the full
-                attack, defence and damage bonus of the shield is
-                added when fighting.
+                When using a one handed weapon and a shield, the full attack,
+                defence and damage bonus of the shield is added when attacking
+                and defending in melee.
             </para>
+            <para>
+                Normally a shield is treated just like any other second melee
+                weapon, and you only get half of the second weapon's defence
+                bonus.
         </description>
     </advantage>
 
@@ -120,6 +125,8 @@
         <cost points="4"/>
         <skill name="Melee"/>
         <short>Form a solid defensive wall of shields.</short>
+
+        <prerequisite>Weapon and shield</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -138,7 +145,7 @@
     <advantage name="Shielded attack" type="technique">
         <cost points="4"/>
         <skill name="Melee"/>
-        <prerequisite>Shield fighting</prerequisite>
+        <prerequisite>Weapon and shield</prerequisite>
 
         <short>Gain a free defence.</short>
 
@@ -236,20 +243,19 @@
         </description>
     </advantage>
 
-    <advantage name="Great weapon fighting" type="technique">
+    <advantage name="Great weapons" type="technique">
         <cost points="2"/>
         <skill name="Melee"/>
 
-        <short>Greater effectiveness.</short>
+        <short>Practised with great weapons.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When fighting with a <e>Great weapon</e>, your gain a
-                +50% bonus to your size for purposes of damaging large
-                opponents. Further, the level of success required for
-                the melee manoeuvres <e>Improved damage</e>,
-                <e>Knockdown</e> and <e>Massive damage</e> is reduced
-                by one.
+                When fighting with a <e>Great weapon</e>, your gain a +3 bonus
+                to your size for purposes of damaging large opponents. Further,
+                the level of success required for the melee manoeuvres
+                <e>Improved damage</e>, <e>Knockdown</e> and <e>Massive damage</e>
+                is reduced by one.
             </para>
         </description>
     </advantage>
@@ -258,7 +264,7 @@
         <cost points="4"/>
         <skill name="Melee"/>
 
-        <prerequisite>Great weapon fighting</prerequisite>
+        <prerequisite>Great weapons</prerequisite>
 
         <short>Get bonus to damage when aggressive.</short>
 
@@ -276,14 +282,14 @@
         <cost points="6"/>
         <skill name="Melee"/>
 
-        <prerequisite>Great weapon fighting</prerequisite>
+        <prerequisite>Great blow</prerequisite>
 
         <short>Increased chance of killing opponent.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 If you critically or fatally wound your foe when you
-                strike with a great weapon, then must make a health
+                strike with a great weapon, they must make a health
                 check as if they were fatally wounded. Further, all
                 such checks suffer a penalty equal to your <e>Melee</e>
                 skill.
