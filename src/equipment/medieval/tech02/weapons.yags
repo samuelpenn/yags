@@ -669,7 +669,7 @@
         </weapon>
     </item>
 
-    <item name="Bow">
+    <item name="Short bow">
         <category>Weapon</category>
         <importance>3</importance>
         <availability>3</availability>
@@ -680,14 +680,15 @@
         <description>
             <para>
                 This is a self bow, about a metre in length. It is not as great
-                or powerful as a longbow, but is somewhat easier to use. However,
-                like a longbow, it needs to be crafted with a particular pull
-                suited to a given strength.
+                or powerful as a longbow, but is somewhat easier to use. Since it
+                is a two handed weapon, you add twice your <t>Strength</t> to the
+                damage done. They are normally just called <e>bows</e>.
             </para>
             <para>
-                The base damage of a bow is always +0, but the bonus from Strength
-                is equal to 2x the Strength of the user, up to the maximum Strength
-                of the bow.
+                Short bows need to be made to a particular <t>Strength</t> requirement,
+                and cannot be used effectively if you <t>Strength</t> is more than one
+                away from that. A short bow cannot be made with a <e>Strength</e> higher
+                than four.
             </para>
         </description>
 
@@ -701,7 +702,7 @@
 
             <combat>
                 <attack>+5</attack>
-                <damage>+0</damage>
+                <damage>+3</damage>
                 <range>
                     <increment>15</increment>
                     <short>30</short>
@@ -723,7 +724,7 @@
 
         <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <skill>Crafting (Boyer)</skill>
-            <target need="4">15</target>
+            <target need="4">5 * Strength</target>
             <time>Hours</time>
         </make>
     </item>
@@ -746,18 +747,11 @@
             <para>
                 The effectiveness of a longbow is highly dependent on the pull
                 strength of the user, and a bow has to be crafted to the user's
-                strength. A strength 4 bow is no more effective in the hands of
-                a strength 5 user as one with strength 4 is, and is also very
-                difficult to use for anyone with less than strength 4. A highly
-                skilled longbow man is capable of drawing higher strength bows
-                however.
+                strength. If your <t>Strength</t> deviates from the strength of
+                the bow by more than one, then it cannot be used effectively.
             </para>
             <para>
-                A longbow has zero base damage, and instead does damage entirely
-                proportional to the strength of the user. In the hands of an
-                untrained warrior, this is twice the user's strength, as for
-                most two-handed weapons. For someone specifically trained in the
-                longbow, it is four times the user's strength.
+                Longbows cannot be made with a strength greater than six.
             </para>
         </description>
 
@@ -770,8 +764,8 @@
             <class>bow</class>
 
             <combat>
-                <attack>+4</attack>
-                <damage>+0</damage>
+                <attack>+3</attack>
+                <damage>+5</damage>
                 <range>
                     <increment>20</increment>
                     <short>60</short>
@@ -793,7 +787,7 @@
 
         <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <skill>Crafting (Boyer)</skill>
-            <target need="5">20</target>
+            <target need="5">5 + 5 * Strength</target>
             <time>Hours</time>
         </make>
     </item>
@@ -814,13 +808,9 @@
                 more fragile, since moisture can easily cause the woods to
                 split apart, ruining the bow.
             </para>
-
             <para>
-                Composite bows are built for a particular strength of user. If
-                your Strength is higher than the pull of the bow, then the
-                benefits of the extra Strength are lost. For each point
-                your Strength is lower, halve all ranges and add +3 to the
-                fumble chance.
+                Standard sized composite bows cannot be made with a strength
+                higher than 8.
             </para>
         </description>
 
@@ -833,8 +823,8 @@
             <class>bow</class>
 
             <combat>
-                <attack>+3</attack>
-                <damage>+11</damage>
+                <attack>+4</attack>
+                <damage>+5</damage>
                 <range>
                     <increment>20</increment>
                     <short>50</short>
@@ -856,7 +846,7 @@
 
         <make xmlns="http://yagsbook.sourceforge.net/xml/yags">
             <skill>Crafting (Boyer)</skill>
-            <target need="5">25</target>
+            <target need="5">10 + 5 * Strength</target>
             <time>Days</time>
         </make>
     </item>
