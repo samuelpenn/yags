@@ -538,12 +538,25 @@
                 <title>Base Soak</title>
 
                 <para>
-                    A creature's base soak isn't just based on their
-                    size, but a guideline for a typical creature is
-                    <t>Size</t> + 7. Note that this doesn't mean that
-                    a particular animal that is larger or smaller than
-                    the norm has a different Soak - a human with the
-                    <e>Large</e> advantage doesn't get a Soak bonus.
+                    A creature's base soak isn't just based on their <t>Size</t>,
+                    but for most creatures a good guideline is a base <e>soak</e>
+                    of their <t>Size</t> + 7. This works for creatures with a
+                    <t>Size</t> between 3 and 9.
+                </para>
+                <para>
+                    For larger creatures, every extra 3 points of <t>Size</t> gives
+                    them a +1 bonus to their base soak. So a <t>Size</t> 9 creature
+                    has a base soak of 16, a <t>Size</t> 12 would have 17 etc.
+                </para>
+                <para>
+                    A <t>Size</t> 3 creature has a typical base soak of 10. Every
+                    point of <t>Size</t> below this drops their soak by 3. Small
+                    creatures tend to be very fragile.
+                </para>
+                <para>
+                    Note that this guideline only applies to a type of creature,
+                    not to individuals within it. So a human, with a base soak of 12,
+                    won't get a +1 Soak if they take the <e>Large</e> advantage.
                 </para>
             </sect2>
 
@@ -1200,8 +1213,31 @@
             </para>
 
             <sect2>
+                <title>Weapon Sizes</title>
+
+                <para>
+                    Many tool using creatures in fantasy are of abnormal sizes,
+                    either being very small (like goblins) or very large (like
+                    giants). The weapons they use will tend to be sized appropriately
+                    for them.
+                </para>
+                <para>
+                    Each point of <t>Size</t> larger than normal adds +1 to the
+                    weapon's attack bonus and +1 to the damage it does. Every two
+                    points of size larger adds +1 to the defence bonus of the
+                    weapon.
+                </para>
+                <para>
+                    For smaller weapons, every point smaller than normal reduces
+                    the weapon's damage by 1, and every two points smaller reduces
+                    the attack and defence bonus of the weapon by one.
+                </para>
+            </sect2>
+
+            <sect2>
                 <title>Fantasy Bestiary</title>
                 <import-beasts importance="0">
+                    <href>fantasy/goblins.yags</href>
                     <href>fantasy/ogres.yags</href>
                     <href>fantasy/orcs.yags</href>
                 </import-beasts>

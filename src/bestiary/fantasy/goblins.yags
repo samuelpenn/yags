@@ -1,0 +1,139 @@
+<?xml version = '1.0' ?>
+<?xml-stylesheet href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl" type="text/xsl"?>
+
+<!--
+    Copyright Samuel Penn, GPL v2.
+-->
+
+<bestiary xmlns="http://yagsbook.sourceforge.net/xml">
+
+    <beast name="Goblins" primary="true">
+        <information>
+            <type>Humanoid</type>
+            <demeanor>Violent</demeanor>
+
+            <origin>Fantasy</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                Small degenerate humanoids.
+            </short>
+
+            <physical>
+                <para>
+                    Goblins are small humanoids with dark yellow or reddish brown
+                    skin, large eyes and a unnatural urge for violence and chaos.
+                    Despite only standing 1.25m tall, they are as strong as an
+                    adult human, agile and quick, capable of climbing and leaping
+                    to an unexpected degree.
+                </para>
+            </physical>
+
+            <social>
+                <para>
+                    Goblins form large tribes ruled by the concept of might is right.
+                    They will have a king who is at the top of a strict, ever changing,
+                    pecking order of bullies, and a number of sub-chiefs who will
+                </para>
+            </social>
+        </description>
+    </beast>
+
+    <beast name="Goblin Warrior" parent="Goblins">
+        <information>
+            <type>Humanoid</type>
+            <demeanor>Violent</demeanor>
+
+            <habitat climate="Any" terrain="Wilderness" frequency="Common"/>
+
+            <organisation group="Hunting party" number="3-12"/>
+            <organisation group="Raiding party" number="5-30"/>
+
+            <origin>Fantasy</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                A typical goblin warrior.
+            </short>
+
+            <image src="monsters/graphics/goblin.jpg"/>
+
+            <physical>
+                <para>
+                    Goblin warriors are the most common type of goblin encountered,
+                    and make up the bulk of any tribe. They can be male or female,
+                    and there are few differences in the capabilities of both. Even
+                    heavily pregnant females have been known to charge into battle
+                    along with their kin.
+                </para>
+            </physical>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="3" soak="9">
+                <attribute name="strength" score="3"/>
+                <attribute name="health" score="4"/>
+                <attribute name="agility" score="4"/>
+                <attribute name="dexterity" score="3"/>
+                <attribute name="perception" score="3"/>
+                <attribute name="intelligence" score="2"/>
+                <attribute name="empathy" score="2"/>
+                <attribute name="will" score="2"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="5"/>
+                    <skill name="Awareness" score="4"/>
+                    <skill name="Brawl" score="3"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="2"/>
+                    <skill name="Sleight" score="2"/>
+                    <skill name="Stealth" score="4"/>
+                    <skill name="Throw" score="3"/>
+                </group>
+
+                <group name="Skills" type="skills">
+                    <skill name="Speak own" score="4"/>
+                    <skill name="Survival" score="3"/>
+                    <skill name="Melee" score="3"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Brawl" skill="Brawl">
+                    <attack attribute="agility" bonus="0"/>
+                    <defence attribute="agility" bonus="0"/>
+                    <damage type="stun" bonus="0"/>
+                </combatstyle>
+                <combatstyle style="Short sword and shield" skill="Melee">
+                    <attack attribute="agility" bonus="+4"/>
+                    <defence attribute="agility" bonus="+4"/>
+                    <damage type="wound" bonus="+7"/>
+                </combatstyle>
+                <combatstyle style="War spear and shield" skill="Melee">
+                    <attack attribute="agility" bonus="+5"/>
+                    <defence attribute="agility" bonus="+4"/>
+                    <damage type="wound" bonus="+9"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+
+                <armourstyle style="Armoured">
+                    <armour name="Hard leather jacket" protection="2"/>
+                </armourstyle>
+            </combat>
+
+            <advantages>
+                <advantage name="Light sensitivity"/>
+                <advantage name="Disease resistance"/>
+                <advantage name="Poison resistance"/>
+                <advantage name="Dark vision"/>
+            </advantages>
+        </statistics>
+    </beast>
+</bestiary>
