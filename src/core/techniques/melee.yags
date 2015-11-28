@@ -31,65 +31,13 @@
         </license>
     </header>
 
-    <advantage name="Finesse" type="technique">
-        <cost points="2"/>
-        <skill name="Melee"/>
-
-        <short>+5 to attack, -5 to damage.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                You can choose to attack with speed and finesse rather
-                than power. You get a +5 bonus to your attack, roll, but a
-                -5 penalty to your damage. You can only use this technique
-                whilst wielding one handed blades.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Acrobatic attack" type="technique">
-        <cost points="4"/>
-        <skill name="Melee"/>
-        <prerequisite>Finesse</prerequisite>
-
-        <short>Bonus when making performing a stunt.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                When performing a stunt before making an attack, the
-                character can gain a bonus to the athletics roll
-                equal to their <e>single weapon</e> skill. Automatic.
-            </para>
-        </description>
-    </advantage>
 
 
     <advantage name="Single weapon" type="technique">
-        <cost points="2"/>
-        <skill name="Melee"/>
-
-        <short>Combine dodge and parry when defending.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                When fighting with a single one-handed melee weapon, you may use
-                your <e>Brawl</e> skill for defence if you wish. You still gain
-                your weapon defence bonus on your defence roll.
-            </para>
-            <para>
-                Normally when attacking with a melee weapon you must use your
-                <e>Melee</e> skill when defending.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Acrobatic dodge" type="technique">
         <cost points="4"/>
         <skill name="Melee"/>
 
-        <prerequisite>Single weapon </prerequisite>
-
-        <short>Increases base soak.</short>
+        <short>Retreat in defence.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -103,26 +51,44 @@
         </description>
     </advantage>
 
+    <advantage name="Fast riposte" type="technique">
+        <cost points="6"/>
+        <skill name="Melee"/>
+
+        <prerequisite>Single weapon</prerequisite>
+
+        <short>Strike back fast.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If you succeed in a defence roll against an opponent,
+                then the following round you may add your <e>Melee</e>
+                score to your <e>Initiative</e> score as long as you
+                make an <e>aggressive</e> attack against that opponent.
+                The bonus remains as long as you continue fighting that
+                opponent, and may stack with itself in subsequent
+                rounds.
+            </para>
+        </description>
+    </advantage>
+
     <advantage name="Weapon and shield" type="technique">
-        <cost points="2"/>
+        <cost points="4"/>
         <skill name="Melee"/>
         <short>The art of fighting with a shield.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When using a one handed weapon and a shield, the full attack,
-                defence and damage bonus of the shield is added when attacking
-                and defending in melee.
+                When using a one handed weapon and a shield, you gain a free
+                defence again one attacker. This means that you can defend
+                against two attackers in the same round without penalty,
+                and further attackers at reduced penalty.
             </para>
-            <para>
-                Normally a shield is treated just like any other second melee
-                weapon, and you only get half of the second weapon's defence
-                bonus.
         </description>
     </advantage>
 
     <advantage name="Shield wall" type="technique">
-        <cost points="4"/>
+        <cost points="6"/>
         <skill name="Melee"/>
         <short>Form a solid defensive wall of shields.</short>
 
@@ -130,39 +96,21 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When fighting alongside one or more others who know
-                this technique, as long as you are all fighting
-                using a weapon and shield combination then you grant
-                a defence bonus to both your neighbours equal to
-                your <e>Melee</e> skill. A bonus only gains the
-                highest bonus if they gain one from multiple people
-                in the shield wall. You do not gain or grant this
-                bonus if fighting aggressively.
-            </para>
-        </description>
-    </advantage>
-
-    <advantage name="Shielded attack" type="technique">
-        <cost points="4"/>
-        <skill name="Melee"/>
-        <prerequisite>Weapon and shield</prerequisite>
-
-        <short>Gain a free defence.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                When fighting with a shield you gain a free defence,
-                allowing you to make two defences without penalty.
-                The free defence is always made with your <e>Melee</e>
-                skill.
+                When fighting alongside your companions then you grant
+                a defence bonus equal to half your <e>Melee</e> skill
+                as long as you are all fighting with a shield. Any one
+                person will only gain the best bonus from their
+                companion, and you may only grant it to at most two
+                people. You do not gain or grant this bonus if you are
+                fighting <e>aggressively</e> that round.
             </para>
         </description>
     </advantage>
 
     <advantage name="Reliable defence" type="technique">
-        <cost points="6"/>
+        <cost points="8"/>
         <skill name="Melee"/>
-        <prerequisite>Shielded attack</prerequisite>
+        <prerequisite>Shield wall</prerequisite>
 
         <short>Re-roll defence and reduced wound penalties.</short>
 
@@ -177,7 +125,7 @@
     </advantage>
 
     <advantage name="Spear fighting" type="technique">
-        <cost points="2"/>
+        <cost points="4"/>
         <skill name="Melee"/>
 
         <short>Gain a +5 bonus against short weapons</short>
@@ -193,7 +141,7 @@
     </advantage>
 
     <advantage name="Spear wall" type="technique">
-        <cost points="4"/>
+        <cost points="6"/>
         <skill name="Melee"/>
         <prerequisite>Spear fighting</prerequisite>
 
