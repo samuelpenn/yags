@@ -529,7 +529,7 @@
                             <item name="Will">
                                 The magic lasts as long as you will it to. Such magic does
                                 not require much thought to maintain, and you can perform
-                                other actions, including casting other spells, whilst doing
+                                other actions, including invoking other runes, whilst doing
                                 it. Any runes you invoke during this time though are at +10
                                 difficulty (+15 if from an opposed mystery). You can will
                                 multiple magical effects, but the penalties stack. You can
@@ -704,10 +704,31 @@
                     <para>
                         When a <e>Rune</e> is invoked, you must make a
                         <y:skeq><y:attr>Will</y:attr><y:sk>Mystery</y:sk><y:die/></y:skeq>
-                        check against a difficulty equal to five times the level of
-                        the <e>Rune</e>. If you succeed, then the rune is invoked
-                        and you gain one level of <e>exhaustion</e>. If you fail,
-                        you gain a level of <e>fatigue</e> and nothing happens.
+                        check against a target difficulty equal to five times the level
+                        of the <e>Rune</e> (plus any extras from <e>boosting</e>. If you
+                        succeed, then the rune is invoked and you gain an amount of
+                        <e>Exhaustion</e> based on the level of the rune. If you fail,
+                        then you gain one Fatigue and nothing happens.
+                    </para>
+
+                    <targetlist targetFirst="true">
+                        <targetLabel>Level</targetLabel>
+                        <valueLabel>Fatigue / Exhaustion</valueLable>
+
+                        <item target="1" value="1 Fatigue"/>
+                        <item target="3, 5" value="1 Exhaustion"/>
+                        <item target="7, 9" value="2 Exhaustion"/>
+                        <item target="11, 13" value="3 Exhaustion"/>
+                        <item target="15+" value="4 Exhaustion"/>
+                    </targetlist>
+
+                    <para>
+                        Each level of success you get above the target needed may be
+                        used to reduce the <e>Exhaustion</e> by 1 level. Dropping it
+                        below 1 will reduce it to a single level of <e>Fatigue</e>,
+                        and beyond that to zero. High level runes are harder to
+                        invoke, and also require more successes to avoid becoming.
+                        exhausted.
                     </para>
 
                     <sect4>
@@ -740,6 +761,16 @@
                             The decisions to boost effectiveness or reduce fatigue is made
                             after the roll to invoke the rune. You may combine reducing the
                             fatigue with boosting the effect.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Words and Gestures</title>
+                        <para>
+                            Invoking a <e>Rune</e> requires the words of the rune to be
+                            spoken allowed, and in some cases for gestures to be made to
+                            trace out the symbols being spoken. The more powerful the
+                            invocation, the bolder the voice and gestures required.
                         </para>
                     </sect4>
                 </sect3>

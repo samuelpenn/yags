@@ -6,10 +6,11 @@
     Date:    $Date: 2005-08-13 15:47:35 $
 -->
 <grimoire xmlns="http://yagsbook.sourceforge.net/xml/yags/habisfern" name="Air">
+
     <spell name="Breeze" level="1" type="air">
         <time>Action</time>
         <range>Short</range>
-        <duration>Concentration</duration>
+        <duration>Rounds</duration>
         <resist>Strength</resist>
 
         <short>Create a breeze that blows away from you.</short>
@@ -26,8 +27,11 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Good):">
             <para>
-                The breeze becomes a strong wind, and requires a Strength check
-                with a target of 15 to move against it.
+                You can create swirls and eddies in the breeze in order to
+                manipulate things. Make a <t>Dexterity</t> check against a
+                target difficulty. To knock off a hat or lift a skirt, this
+                is 15, to close a book, 20, to bring a small item to you is
+                25.
             </para>
         </description>
     </spell>
@@ -61,8 +65,8 @@
 
     <spell name="Change Weather" level="5" type="air">
         <time>Minute</time>
-        <range>Sight</range>
-        <duration>Concentration</duration>
+        <range>Long</range>
+        <duration>Minutes</duration>
 
         <prerequisite>Know Weather</prerequisite>
 
@@ -70,18 +74,61 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                By invoking this <e>rune</e> you can alter the weather around
-                you. You must have a clear view of the sky for this <e>rune</e>
-                to have any effect.
+                By invoking this <e>rune</e> you can alter the weather immediately
+                around you, taking control of the air within range of the invocation.
+                You must have line of sight to everywhere you affect, so though it
+                may be invoked indoors or underground, you are limited by the size
+                of the space you are in.
+            </para>
+            <para>
+                You can raise or lower the temperature, and change the humidity.
+                You may change either by a total of three levels.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost:">
+                     title="Boost (Good):">
             <para>
                 You can boost this <e>rune</e> to increase an effect by another
                 two levels. You can split this effect between two or more
                 elements of the weather if you desire.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent):">
+            <para>
+                You can boost this <e>rune</e> to increase an effect by another
+                two levels. You can split this effect between two or more
+                elements of the weather if you desire.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Whisper" level="3" type="air">
+        <time>Round</time>
+        <range>Short</range>
+        <duration>Will</duration>
+
+        <prerequisite>Breeze</prerequisite>
+
+        <short>Send a message on the air</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You may send a words to someone on the breeze. You must have
+                a direct line of sight from your mouth to their ears in order
+                for them to hear you, and the words must be whispered.
+                Those around your target are unable to hear your words though.
+                You may continue talking for as long as you will the invocation
+                to last.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You may carry the target's words back to you, allowing you to
+                hear their response.
             </para>
         </description>
     </spell>
