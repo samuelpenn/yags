@@ -63,44 +63,114 @@
         </description>
     </spell>
 
-    <spell name="Change Weather" level="5" type="air">
-        <time>Minute</time>
-        <range>Long</range>
-        <duration>Minutes</duration>
+    <spell name="Blast" level="5" type="air">
+        <time>Round</time>
+        <range>Medium</range>
+        <duration>Momentary</duration>
+        <target>Individual</target>
 
         <prerequisite>Know Weather</prerequisite>
 
-        <short>Allows you to summon weather of your choosing.</short>
+        <short>Knocks a target down, disorientating them.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                By invoking this <e>rune</e> you can alter the weather immediately
-                around you, taking control of the air within range of the invocation.
-                You must have line of sight to everywhere you affect, so though it
-                may be invoked indoors or underground, you are limited by the size
-                of the space you are in.
-            </para>
-            <para>
-                You can raise or lower the temperature, and change the humidity.
-                You may change either by a total of three levels.
+                By invoking this <e>rune</e> you call a sudden gust of wind that
+                can knock down a single target. Make an opposed <t>Will</t> check
+                against the target's <t>Strength</t>, and on success the target
+                is knocked to the ground where they stand and takes a single
+                <e>Stun</e>. Each level of success on this check does a further
+                <e>Stun</e> and knocks them back a metre.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Good):">
             <para>
-                You can boost this <e>rune</e> to increase an effect by another
-                two levels. You can split this effect between two or more
-                elements of the weather if you desire.
+                Either, you can add +10 to your <t>Will</t> check, or you can
+                try to disorientate your target. If they are knocked down, their
+                <e>initiative</e> is dropped to zero and they are unable to act
+                for the rest of the round.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Excellent):">
             <para>
-                You can boost this <e>rune</e> to increase an effect by another
-                two levels. You can split this effect between two or more
-                elements of the weather if you desire.
+                You gain a +10 bonus to your <t>Will</t> check, and the target
+                is disorientated on success. On failure, their initiative still
+                drops by 10.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Lightning" level="7" type="air">
+        <time>Round</time>
+        <range>Medium</range>
+        <duration>Momentary</duration>
+        <target>One</target>
+
+        <prerequisite>Blast</prerequisite>
+
+        <short>Summon a lightning strike.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This invocation calls down a bolt of lightning from the sky,
+                striking a single target. The bolt will do +20 damage to the
+                target, ignoring armour. If at least one wound is caused,
+                then it does an amount of <e>shock</e> equal to the damage,
+                reducing the target's initiative.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good):">
+            <para>
+                The bolt does +25 damage.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent):">
+            <para>
+                The bolt does +30 damage.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Sky Fall" level="9" type="air">
+        <time>Round</time>
+        <range>Medium</range>
+        <duration>Momentary</duration>
+        <target>Medium</target>
+
+        <prerequisite>Lightning</prerequisite>
+
+        <short>Throw a target into the sky.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When invoked this rune throws the target into the sky, then
+                allows them to fall back to the ground, possibly killing them
+                in the process. The target is thrown 10 metres into the air,
+                and then they will take falling damage when they land.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good):">
+            <para>
+                The target is thrown 20 metres into the air, and can be landed
+                anywhere within 5m of their starting location.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent):">
+            <para>
+                The target is thrown 30 metres into the air, and can be landed
+                anywhere within 10m of their starting location.
             </para>
         </description>
     </spell>
@@ -135,37 +205,51 @@
 
     <spell name="Glow" level="1" type="air">
         <range>Touch</range>
-        <duration>Concentration</duration>
-        <target>One</target>
+        <duration>Minutes</duration>
+        <target>Tiny</target>
         <radius>Tiny</radius>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You place a soft glow on a single object no larger than yourself.
+                You place a soft glow on a single object no larger than your fist.
                 The glow is steady and pure white, and illuminates an area out
-                to the radius of the effect to that of an overcast day (bright
-                enough to see clearly by, but not blinding).
+                to the radius of the effect to that of bright moonlight. The item
+                affected must remain within the invocation's range, or the effect
+                will end.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Good):">
             <para>
-                You can boost the duration to be <e>Day</e>.
+                You can boost the intensity of the glow to be that of an overcast
+                day. It is bright enough to see clearly by, but not blinding.
             </para>
         </description>
     </spell>
 
-    <spell name="Scent" level="3" type="air">
-        <range>-1/m</range>
-        <duration>Concentration</duration>
-        <target>+5/size</target>
+    <spell name="Apparition" level="3" type="air">
+        <range>Reach</range>
+        <duration>Minutes</duration>
+        <target>Medium</target>
 
-        <prerequisite>Breeze</prerequisite>
+        <prerequisite>Glow</prerequisite>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Places a scent on an object, or masks an existing scent.
+                You create a stationary apparition that looks like anything you
+                like, up to the size limit of the invocation. The image is slightly
+                translucent, and an easy <e>Awareness</e> check will notice this
+                fact.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good):">
+            <para>
+                Either the image can move at a walking pace under you direction,
+                or it appears solid, requiring a difficult <e>Awareness</e> check
+                to notice that something is out of place.
             </para>
         </description>
     </spell>
@@ -191,14 +275,6 @@
                      title="Boost (Good):">
             <para>
                 The thickness of the fog is increased, and vision beyond 5m
-                is completely obscured.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Excellent):">
-            <para>
-                The thickness of the fog is increased, and vision beyond 2m
                 is completely obscured.
             </para>
         </description>

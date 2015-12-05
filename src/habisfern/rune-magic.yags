@@ -591,7 +591,8 @@
                             The target of the rune defines how many individual targets
                             can be affected by a single invocation. As for the
                             <e>Range</e>, the number of targets can be boosted if you
-                            need to affect a larger number of things.
+                            need to affect a larger number of things. All targets must
+                            be within the <e>Range</e> of the spell.
                         </para>
 
                         <itemlist order="strict">
@@ -612,8 +613,8 @@
                             </item>
 
                             <item name="Few">
-                                Can affect up to 3 targets with this Rune. You can
-                                boost it to be Dozen.
+                                Can affect up to 3 targets with this Rune, none more
+                                than 3 metres from another. You can boost it to be Dozen.
                             </item>
 
                             <item name="Dozen">
@@ -634,7 +635,7 @@
 
                             <item name="Range">
                                 All targets within range of the rune are affected
-                                regardless of number.
+                                regardless of number or distance from each other.
                             </item>
 
                             <item name="Tiny">
@@ -650,7 +651,7 @@
                                 large.
                             </item>
                             <item name="Large">
-                                Affects a single target up to size 9. Can be boosted to
+                                Affects a single target up to size 10. Can be boosted to
                                 huge.
                             </item>
                             <item name="Huge">
@@ -658,7 +659,9 @@
                                 gigantic.
                             </item>
                             <item name="Gigantic">
-                                Affects a single target up to size 21.
+                                Affects a single target up to size 20. Each further
+                                boosting increases the size that can be affected by
+                                +5.
                             </item>
                         </itemlist>
                     </sect4>
@@ -713,7 +716,7 @@
 
                     <targetlist targetFirst="true">
                         <targetLabel>Level</targetLabel>
-                        <valueLabel>Fatigue / Exhaustion</valueLable>
+                        <valueLabel>Fatigue / Exhaustion</valueLabel>
 
                         <item target="1" value="1 Fatigue"/>
                         <item target="3, 5" value="1 Exhaustion"/>
