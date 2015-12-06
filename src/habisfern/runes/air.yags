@@ -36,29 +36,28 @@
         </description>
     </spell>
 
-    <spell name="Know Weather" level="3" type="air">
+    <spell name="Fog" level="3" type="air">
         <time>Round</time>
-        <range>Sight</range>
-        <duration>Momentary</duration>
+        <range>Self</range>
+        <duration>Concentration</duration>
+        <radius>Large</radius>
 
+        <short>Summons a thick fog to obscure vision.</short>
         <prerequisite>Breeze</prerequisite>
-
-        <short>Predict the weather.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                You can predict what the weather will be over the course of
-                the next day (until the next sunrise or sunset, whichever is
-                furthest away), for the area which you can see. You know to
-                within an hour when weather effects will begin or end.
+                Summons a thick mist that covers the region around you, and
+                follows you as you move. Anything beyond 10m is obscured
+                completely.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Good):">
             <para>
-                You can predict the weather over the course of the next
-                three days, or your accuracy increases to within 15 minutes.
+                The thickness of the fog is increased, and vision beyond 5m
+                is completely obscured.
             </para>
         </description>
     </spell>
@@ -69,7 +68,7 @@
         <duration>Momentary</duration>
         <target>Individual</target>
 
-        <prerequisite>Know Weather</prerequisite>
+        <prerequisite>Fog</prerequisite>
 
         <short>Knocks a target down, disorientating them.</short>
 
@@ -254,31 +253,7 @@
         </description>
     </spell>
 
-    <spell name="Fog Shroud" level="3" type="air">
-        <time>Round</time>
-        <range>Self</range>
-        <duration>Concentration</duration>
-        <radius>Large</radius>
 
-        <short>Summons a thick fog to obscure vision.</short>
-        <prerequisite>Breeze</prerequisite>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Summons a thick mist that covers the region around you, and
-                follows you as you move. Anything beyond 10m is obscured
-                completely.
-            </para>
-        </description>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml"
-                     title="Boost (Good):">
-            <para>
-                The thickness of the fog is increased, and vision beyond 5m
-                is completely obscured.
-            </para>
-        </description>
-    </spell>
 
 </grimoire>
 
