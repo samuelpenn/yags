@@ -663,6 +663,109 @@
             </para>
 
             <sect2>
+                <title>Explosives</title>
+
+                <quote signature="Charlie Croker, The Italian Job">
+                    You're only supposed to blow the bloody doors off!"
+                </quote>
+
+                <para>
+                    Though explosives start being used in the West during the
+                    medieval period, they really come into their own during the
+                    19th and 20th centuries where they are used to level entire
+                    cities. Explosives generally cause damage either through
+                    fragmentation or concussive effects. The difference in game
+                    terms is that fragmentation explosives have a much larger
+                    'kill radius'.
+                </para>
+                <para>
+                    Weapons which cause explosive damage are listed with the
+                    property of <s>Ex-X</s>, where <s>X</s> is the base radius
+                    of the explosion.
+                </para>
+
+                <sect3>
+                    <title>Anti-personnel Explosives</title>
+                    <para>
+                        Small scale explosives are designed to affect human
+                        targets, and are considered to be less than 500 grammes
+                        equivalent of TNT. This is generally more than enough
+                        to kill a human, so most anti-personnel devices are much
+                        smaller than this.
+                    </para>
+                    <para>
+                        A simple 10 gramme explosive charge of TNT does +20 damage
+                        and is considered a <e>Size 5</e> attack. Each doubling of
+                        the explosive amount does a further +5 damage. The base
+                        radius is equal to one twentieth of the damage.
+                    </para>
+                    <para flag="green">
+                        Out to the base radius, targets receive the full force
+                        of the explosion and suffer <e>Wounds</e> from the damage.
+                    </para>
+                    <para flag="green">
+                        Out to twice the radius, targets receive <e>Mixed</e> damage.
+                    </para>
+                    <para flag="green">
+                        Out to triple the radius, targets receive <e>Stuns</e>.
+                        Vehicles become immune to the damage at this point, though
+                        occupants may still be affected.
+                    </para>
+                    <para flag="green">
+                        Each multiple of the radius beyond this halves the number
+                        of stuns caused. The damage value itself is unaffected, so
+                        it still penetrates armour and soak.
+                    </para>
+                    <para>
+                        A 10g explosive charge does +20 damage with a radius of 1m.
+                        A 20g charge goes +25 damage, and a 40g charge does +30 damage.
+                    </para>
+                    <para>
+                        An explosive designed to have a fragmentation effect will
+                        have a larger radius. For a typical modern fragmentation
+                        grenade, multiply the blast radius by 10.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Anti-vehicle Explosives</title>
+                    <para>
+                        The smallest anti-vehicle explosive does <e>Vehicle</e>
+                        scale damage of +30, with a blast radius of 5m and is
+                        considered a <e>Size 10</e> attack. This is considered to
+                        be half a kilogramme of TNT.
+                    </para>
+                    <para flag="green">
+                        Out to the radius of the explosion, the damage type is
+                        <e>Major</e>.
+                    </para>
+                    <para flag="green">
+                        Out to twice the radius of the explosion, the damage type
+                        is considered <e>Minor</e>.
+                    </para>
+                    <para flag="green">
+                        Each doubling of the radius beyond this reduces the damage
+                        by 100.
+                    </para>
+                    <para>
+                        Each doubling of the TNT equivalent amount causes +10 damage;
+                        each ten fold increase doubles the radius; each thousand
+                        fold increase adds +10 to the <t>Size</t>.
+                    </para>
+                </sect3>
+
+                <sect3>
+                    <title>Avoiding Explosives</title>
+                    <para>
+                        Getting into cover is the best defence against explosives.
+                        A successful dodge against an explosive attack allows you
+                        to move your combat move away from the point of impact,
+                        hopefully to a less deadly range band.
+                    </para>
+                </sect3>
+            </sect2>
+
+            <sect2>
                 <title>Weapons</title>
 
                 <para>
@@ -695,8 +798,7 @@
 
                         <item name="Ex-X">
                             Explosive damage. Does full damage to the target and
-                            those within X metres. Does mixed damage at -5 out to
-                            double X, and stun damage at -10 out to triple X.
+                            those within X metres.
                         </item>
 
                         <item name="Fi">
