@@ -38,7 +38,7 @@
                     tusks or overgrown teeth.
                 </para>
                 <para>
-                    Ogres stand about two and a half metres tall, and generally weigh
+                    Ogres stand about three metres tall, and generally weigh
                     around 500kg.
                 </para>
             </physical>
@@ -99,8 +99,8 @@
         </description>
 
         <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
-            <attributes size="7" soak="15">
-                <attribute name="strength" score="7"/>
+            <attributes size="8" soak="15">
+                <attribute name="strength" score="10"/>
                 <attribute name="health" score="5"/>
                 <attribute name="agility" score="2"/>
                 <attribute name="dexterity" score="2"/>
@@ -131,17 +131,113 @@
 
             <combat>
                 <combatstyle style="Brawl" skill="Brawl">
-                    <attack attribute="agility" bonus="0"/>
-                    <defence attribute="agility" bonus="0"/>
-                    <damage type="stun" bonus="0"/>
+                    <reach score="1"/>
+                    <attack attribute="agility" bonus="1"/>
+                    <defence attribute="agility" bonus="1"/>
+                    <damage type="stun" bonus="1"/>
                 </combatstyle>
-                <combatstyle style="Club" skill="Brawl">
-                    <attack attribute="agility" bonus="+4"/>
-                    <defence attribute="agility" bonus="+3"/>
-                    <damage type="mixed" bonus="+16"/>
+                <combatstyle style="Great club" skill="Melee">
+                    <reach score="3"/>
+                    <attack attribute="dexterity" bonus="+7"/>
+                    <defence attribute="dexterity" bonus="+5"/>
+                    <damage type="mixed" bonus="+12"/>
                 </combatstyle>
 
                 <armourstyle style="Base"/>
+
+                <armourstyle style="Furs">
+                    <armour name="Thick furs" protection="7"/>
+                </armourstyle>
+            </combat>
+
+            <advantages>
+                <advantage name="Light sensitivity"/>
+                <advantage name="Disease resistance"/>
+                <advantage name="Poison resistance"/>
+                <advantage name="Dark vision"/>
+            </advantages>
+        </statistics>
+    </beast>
+
+    <beast name="Mountain Ogre" parent="Ogres">
+        <information>
+            <type>Humanoid</type>
+            <demeanor>Violent</demeanor>
+
+            <habitat climate="Any" terrain="Wilderness" frequency="Common"/>
+
+            <organisation group="Hunting party" number="2-5"/>
+            <organisation group="Raiding party" number="3-18"/>
+
+            <origin>Fantasy</origin>
+            <genre>Fantasy</genre>
+        </information>
+
+        <description>
+            <short>
+                The largest type of commonly encountered ogre.
+            </short>
+
+            <physical>
+                <para>
+                    Standing four metres tall, <e>mountain ogres</e> are generally
+                    considered the largest of their kind. They may be as dim-witted
+                    and slow as their smaller brethren, but they are significantly
+                    larger, stronger and tougher.
+                </para>
+            </physical>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="11" soak="20">
+                <attribute name="strength" score="9"/>
+                <attribute name="health" score="5"/>
+                <attribute name="agility" score="2"/>
+                <attribute name="dexterity" score="2"/>
+                <attribute name="perception" score="4"/>
+                <attribute name="intelligence" score="1"/>
+                <attribute name="empathy" score="2"/>
+                <attribute name="will" score="2"/>
+            </attributes>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="4"/>
+                    <skill name="Awareness" score="4"/>
+                    <skill name="Brawl" score="7"/>
+                    <skill name="Charm" score="1"/>
+                    <skill name="Guile" score="1"/>
+                    <skill name="Sleight" score="1"/>
+                    <skill name="Stealth" score="2"/>
+                    <skill name="Throw" score="3"/>
+                </group>
+
+                <group name="Skills" type="skills">
+                    <skill name="Speak own" score="3"/>
+                    <skill name="Survival" score="4"/>
+                    <skill name="Melee" score="7"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Brawl" skill="Brawl">
+                    <reach score="1"/>
+                    <attack attribute="agility" bonus="3"/>
+                    <defence attribute="agility" bonus="2"/>
+                    <damage type="stun" bonus="3"/>
+                </combatstyle>
+                <combatstyle style="Great club" skill="Melee">
+                    <reach score="3"/>
+                    <attack attribute="dexterity" bonus="+10"/>
+                    <defence attribute="dexterity" bonus="+7"/>
+                    <damage type="mixed" bonus="+19"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+
+                <armourstyle style="Furs">
+                    <armour name="Thick furs" protection="9"/>
+                </armourstyle>
             </combat>
 
             <advantages>
