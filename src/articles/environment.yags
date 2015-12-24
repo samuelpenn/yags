@@ -115,75 +115,162 @@
                         protection suit similar to a space suit.
                     </item>
                 </targetlist>
+
+                <sect3>
+                    <title>Inappropriate Clothing</title>
+
+                    <para>
+                        If you are inappropriately garbed whilst in a hostile
+                        environment, then you will suffer <e>Exhaustion</e> until
+                        you die. How quickly you gain such <e>Exhaustion</e> will
+                        depend on the severity of the environment. Whether it is
+                        too hot, too cold, extreme gravity or just bad air, the
+                        effects are much the same.
+                    </para>
+
+                    <sect4>
+                        <title>Poor Conditions</title>
+                        <para>
+                            In <e>Poor</e> conditions, you will gain a level of
+                            <e>Exhaustion</e> every four hours. Once you are
+                            unconscious, you will gain a <e>Wound</e> every four
+                            hours instead until you die.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Bad Conditions</title>
+                        <para>
+                            In <e>Bad</e> conditions you will gain a level of
+                            <e>Exhaustion</e> every two hours, then gaining
+                            <e>Wounds</e> after falling unconscious.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Dangerous Conditions</title>
+                        <para>
+                            In <e>Dangerous</e> conditions you will gain a level of
+                            <e>Exhaustion</e> every hour, then gaining <e>Wounds</e>
+                            after falling unconscious.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Deadly Conditions</title>
+                        <para>
+                            In <e>Deadly</e> conditions you will gain a level of
+                            <e>Exhaustion</e> every 15 minutes, then gaining
+                            <e>Wounds</e> after falling unconscious.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Insane Conditions</title>
+                        <para>
+                            In <e>Insane</e> conditions you will gain a level of
+                            <e>Exhaustion</e> every minute, then gaining
+                            <e>Wounds</e> after falling unconscious.
+                        </para>
+                    </sect4>
+
+                </sect3>
             </sect2>
 
             <sect2>
                 <title>Temperature</title>
 
                 <para>
-                    The temperature of the environment is represented by a single
-                    number where zero is taken to be <e>moderate</e> (around 25°C).
-                    Positive numbers represent hotter temperatures,
-                    and negative numbers represent colder temperatures. Each level
-                    of clothing worn adds to the effective temperature, so a
-                    <e>comfortable</e> temperature is assumed to be one where you
-                    are comfortable naked.
+                    The temperature of the environment is probably the single biggest
+                    factor that normally impacts survivability (minor quibbles such
+                    as lack of breathable air tend to be rarer). Room temperature is
+                    normally considered to be around 20°C - 24°C, though the exact
+                    numbers shouldn't be taken to be precise. If as GM you want to
+                    play it looser, then simply pick a suitable category that gives
+                    the effect you want.
                 </para>
                 <para>
-                    A breeze will tend to lower the effective temperature since it
-                    takes heat away from the body. Every two levels of wind reduces
-                    the temperature by one level. This can take the temperature off
-                    the bottom of the chart.
+                    Wind will tend to lower the temperature, which is good in high
+                    temperatures but can be deadly in cold temperatures.
                 </para>
                 <para>
-                    Note that these temperatures assume a temperature which
-                    is comfortable for humans to be the average.
+                    If you are fully submersed in water, either hot or cold, then the
+                    effects are much more serious, and you gain Exhaustion every
+                    minute rather than every hour.
                 </para>
+
+                <sect3>
+                    <title>Effects of Temperature</title>
+
+                    <sect4>
+                        <title>Heat</title>
+
+                        <para>
+                            A breeze will drop the temperature one level, whilst a
+                            strong wind will drop it two levels.
+                        </para>
+                        <para>
+                            The chart below assumes little or no humidity. With
+                            moderate humidity (50%+), if the temperature is above
+                            25°C then increase the temperature by one level. With
+                            high humidity (75%+), increase it by two levels. In
+                            extreme humidity (90%+), increase by three levels.
+                        </para>
+
+                        <itemlist order="strict">
+                            <item name="20°C - 24°C">
+                                A comfortable temperature suitable for lounging
+                                around naked, or at least in light clothing. This
+                                is considered the 'room temperature' norm and has
+                                no special rules.
+                            </item>
+                            <item name="25°C - 29°C">
+                                Pleasantly warm, ideal for a day down the beach.
+                                There are no ill effects of this temperature as
+                                long as it is not too humid and you don't wear
+                                too much clothing.
+                            </item>
+                            <item name="30°C - 39°C">
+                                Hot, considered to be Poor conditions.
+                            </item>
+                            <item name="40°C - 49°C">
+                                Very hot, considered Poor conditions. Anything
+                                that gains you fatigue gains you double the amount.
+                            </item>
+                            <item name="50°C - 69°C">
+                                Very hot, Bad, gain double fatigue.
+                            </item>
+                            <item name="70°C - 89°C">
+                                Dangerous conditions. Gain double Fatigue.
+                            </item>
+                            <item name="90°C - 119°C">
+                                Dangerous conditions, Gain triple Fatigue.
+                            </item>
+                            <item name="120°C - 149°C">
+                                Deadly.
+                            </item>
+                            <item name="150°C +">
+                                Deadly
+                            </item>
+                        </itemlist>
+                    </sect4>
+                </sect3>
 
                 <targetlist bold="true" targetFirst="true" align="center" width="12">
                     <targetLabel>Level</targetLabel>
                     <valueLabel>Description</valueLabel>
 
-                    <item target="+5" value="Extreme heat (50°C - 59°C).">
-                        About 90°C. Gain a level of stun every round.
+                    <item target="-1" value="Cool (20°C).">
+                        Slightly cooler than is comfortable, you will gain one
+                        level of exhaustion every four hours unless you are keeping
+                        active.
                     </item>
-                    <item target="+4" value="Severe heat (43°C - 49°C).">
-                        About 60°C, which is hotter than temperatures get
-                        naturally anywhere on Earth (except for actual fires).
-                        Gain exhaustion every minute. Drinking doesn't help.
-                    </item>
-                    <item target="+3" value="Very hot (40°C - 55°C).">
-                        About 45°C, which is unbearably hot. Even with lots
-                        of water, you will gain a level of exhaustion each
-                        hour. Without sufficient water, double the rate.
-                    </item>
-                    <item target="+2" value="Hot (33°C - 37°C).">
-                        An uncomfortably warm 35°C which is unpleasant if you are
-                        performing work of any kind. You will gain exhaustion every
-                        four hours if you are resting, or every hour if you are
-                        performing physical activity.
-                    </item>
-                    <item target="+1" value="Warm (28°C - 32°C).">
-                        A pleasantly warm 30°, ideal for sunbathing but can be
-                        uncomfortable if performing strenuous exercise. Gain one
-                        extra level of exhaustion for every four hours of physical
-                        activity (including walking).
-                    </item>
-                    <item target="+0" value="Comfortable (23°C - 27°C).">
-                        A temperature just comfortable enough for you to be able
-                        to lay around naked. This is actually warmer than most
-                        people consider a 'comfortable' outdoors temperature,
-                        since it assumes no clothing.
-                    </item>
-                    <item target="-1" value="Cool.">
-                        Around 15°C. One fatigue per Health hours.
-                    </item>
-                    <item target="-2" value="Chilly.">
+                    <item target="-2" value="Chilly (15°C).">
                         Around 5°C. Character gains one fatigue every
                         Health minutes. Once unconscious, then they gain wounds
                         at the same rate.
                     </item>
-                    <item target="-3" value="Cold.">
+                    <item target="-3" value="Cold (10°C).">
                         Around -10°C.
                     </item>
                     <item target="-4" value="Severe cold.">
