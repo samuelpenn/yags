@@ -52,7 +52,7 @@
 
     <spell name="Mist" level="3" type="water">
         <range>Self</range>
-        <duration>Concentration</duration>
+        <duration>Minutes</duration>
         <radius>Large</radius>
         <prerequisite>Wet</prerequisite>
 
@@ -65,40 +65,24 @@
                 ceased, the mist will dissipate normally. Sound is also
                 muffled in the mist, often more effectively than vision.
             </para>
-
-            <targetlist targetFirst="true">
-                <valueLabel>Thickness</valueLabel>
-                <targetLabel>Effect</targetLabel>
-
-                <item target="Moderate" value="Light.">
-                    A light mist, vision is reduced to 250m (which may mean
-                    no effect if the mist isn't this extensive). Surfaces
-                    become moist (see the Wet cantrip) after a minute.
-                </item>
-
-                <item target="Good" value="Moderate.">
-                    Vision is reduced to 100m.
-                </item>
-
-                <item target="Excellent" value="Heavy.">
-                    Vision is reduced to 25m.
-                </item>
-
-                <item target="Superb" value="Thick.">
-                    Vision is reduced to 10m.
-                </item>
-
-                <item target="Fantastic" value="Very thick.">
-                    An unnatural mist that reduces vision to 1m.
-                </item>
-            </targetlist>
+            <para>
+                There is a +1 to any <t>Perception</t> checks for each
+                metre of mist between you and the target.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The mist is particularly dense, increase the difficulty
+                to spot targets by +2 per metre.
+            </para>
         </description>
     </spell>
 
 
     <spell name="Flood" level="5" type="water">
         <range>Short</range>
-        <duration>Concentration</duration>
+        <duration>Minutes</duration>
         <radius>Medium</radius>
         <prerequisite>Mist</prerequisite>
 
@@ -106,32 +90,38 @@
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                This rune affects all free flowing liquid (e.g., not
-                water in a living body) to greatly increase in volume.
-                Each level of success doubles the water volume. This
-                will often cause the water to flood. Once the water
-                has left the area of effect, or as soon as you stop
-                concentrating, the water will begin to return to its
-                normal volume, reducing in volume by a multiple of
-                the original amount each minute. Water which has been
-                quadrupled in volume (i.e., two success levels) will
-                take 3 minutes to return to normal (x3 after 1 minute,
-                x2 after 2 minutes and normal size after 3 minutes).
+                This rune affects all free flowing liquid (e.g., not water
+                in a living body or a sealed container) within the effect
+                of the invocation to double in volume. This will cause
+                rivers and pools to flood, and containers to overflow.
             </para>
-
             <para>
-                If you invoke this magic upon a river or other region
-                where water is flowing in, then any water coming into
-                the area will <e>flood</e>. This may be used to cause
-                serious flood damage down stream.
+                Once the water leaves the area, it will return to its
+                normal volume within a minute. Water that remains within
+                range of the invocation will not continue to increase in
+                size.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                Water affected by this invocation will triple in volume.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                Water affected by this invocation will quadruple in volume,
+                or water in a sealed container (but not a living creature)
+                can be made to burst the container, doubling in volume.
             </para>
         </description>
     </spell>
 
 
-    <spell name="Drown" level="7" type="water">
+    <spell name="Sink" level="7" type="water">
         <range>Medium</range>
-        <duration>Concentration</duration>
+        <duration>Rounds</duration>
         <area>Medium</area>
         <prerequisite>Flood</prerequisite>
 
@@ -144,21 +134,72 @@
                 try to envelope any object on its surface, and drag them
                 down to their deaths. Creatures cannot resist the magic
                 itself, but can try to resist the drowning by making a
-                <y:strength>Swim</y:strength> check.
+                <y:strength>Swim</y:strength> check each round versus
+                your <t>Will</t>.
             </para>
-
             <para>
-                The base difficulty of the swim check is 30. This is
-                increased by 5 for each level of success.
+                Objects with good buoyancy (boats and ships, but not logs,
+                rafts or dead bodies) have a fixed <t>Will</t> difficulty
+                of their <t>Size</t> x 3. Once it has taken significant
+                water on board, it may no longer be counted as having good
+                buoyancy.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                You gain a +10 bonus to your <t>Will</t> check when opposed
+                against targets.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                You gain a +20 bonus to your <t>Will</t> check when opposed
+                against targets.
             </para>
         </description>
     </spell>
 
-    <spell name="Fog" level="7" type="water">
-        <range>Self</range>
-        <duration>Concentration</duration>
-        <area>Village</area>
+    <spell name="Drown" level="7" type="water">
+        <range>Short</range>
+        <duration>Natural</duration>
+        <target>Individual</target>
         <prerequisite>Flood</prerequisite>
+
+        <short>Cause a creature to drown.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You cause water to form in the lungs of the designated
+                creature, who will immediately begin to drown. They immediately
+                gain a level of <e>Fatigue</e> and are incapacitated, unable
+                to do anything than to try to choke up water. Each round
+                afterwards they must make a <t>Health</t> check at a target of
+                30, or gain another <e>Fatigue</e>. Each round, the difficulty
+                drops by 5. On rounds they succeed, they are able to act
+                normally.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The initial <t>Health</t> difficulty is 40.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The initial <t>Health</t> difficulty is 50.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Fog" level="9" type="water">
+        <range>Self</range>
+        <duration>Hours</duration>
+        <radius>Huge</radius>
+        <prerequisite>Sink</prerequisite>
 
         <short>Blanket a large area in thick fog.</short>
 
@@ -166,9 +207,27 @@
             <para>
                 A thick fog spreads out from you when this rune is
                 invoked. Within about a minute, it will cover the full area
-                of effect. Once concentration ceases, then it will begin
-                to disperse naturally. If you move whilst concentrating
-                on it, then it will move with you.
+                of effect, only dispersing once you cease concentration.
+            </para>
+            <para>
+                The fog is thick, and cold. It drops the temperature of the
+                region affected by one level, and coats everything with a
+                layer of cold water. The difficulty of any <t>Perception</t>
+                checks is increased by +2 for each metre of distance.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The temperature drops by three levels, or the fog is so thick
+                that <t>Peception</t> difficulties are increased by +5 per
+                metre of fog.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The fog is both colder and thicker.
             </para>
         </description>
     </spell>
