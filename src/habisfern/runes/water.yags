@@ -236,89 +236,95 @@
 
 
     <!--
-        Extingiush thread. Adds cancelling heat and light.
+        Gloom thread. Adds cancelling heat and light.
     -->
+    <spell name="Gloom" level="`" type="water">
+        <range>Self</range>
+        <duration>Minutes</duration>
+        <radius>Medium</radius>
 
-    <spell name="Extinguish" level="1" type="water">
+        <short>Darkens the immediate area.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When invoked, causes the area around you to darken,
+                dropping one level of darkness. This rune does not
+                work when in full, bright, sunlight.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The area darkens even further, dropping two levels
+                of darkness. Alternatively, it can drop one level
+                even in bright sunlight.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Extinguish" level="3" type="water">
         <range>Short</range>
         <duration>Momentary</duration>
         <target>Few</target>
         <resist>Will</resist>
+        <prerequisite>Gloom</prerequisite>
 
         <short>Extinguishes fires.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 All targeted fires will be extinguished by this rune.
-                The maximum size of fire you can affect depends on the
-                level of success achieved. Torches and candles held by a
-                person do not get to resist, though a creature of fire,
-                such as an elemental, does.
+                Any fire up to the size of a torch can be extinguished.
+                The fire immediately goes out, as if starved of air.
             </para>
-
-            <targetlist targetFirst="true">
-                <item target="Moderate" value="Torches.">
-                </item>
-
-                <item target="Good" value="Camp fires.">
-                </item>
-
-                <item target="Excellent" value="Medium fires.">
-                </item>
-
-                <item target="Superb" value="Large fires.">
-                </item>
-
-                <item target="Fantastic" value="House fires.">
-                </item>
-            </targetlist>
         </description>
-    </spell>
-
-    <spell name="Gloom" level="3" type="water">
-        <range>Self</range>
-        <duration>Concentration</duration>
-        <radius>Medium</radius>
-        <prerequisite>Extinguish</prerequisite>
-
-        <short>Darkens the immediate area.</short>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
             <para>
-                Each level of success causes one level of darkness.
+                Fires up to the size of a small campfire can be
+                extinguished.
             </para>
         </description>
     </spell>
+
 
     <spell name="Blind" level="5" type="water">
         <range>Short</range>
-        <duration>Concentration</duration>
+        <duration>Rounds</duration>
         <target>Individual</target>
-        <prerequisite>Gloom</prerequisite>
+        <prerequisite>Extinguish</prerequisite>
         <resist>Will</resist>
 
         <short>Blinds the target.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Causes the eyes of the target to blacken, and become blind.
-                A <e>moderate</e> success will cause an effective two levels
-                of darkness, whilst a <e>good</e> success or better will
-                completely blind them. The effect lasts until you stop
-                concentrating.
+                When this rune is invoked, the eyes of the target blacken
+                and they become blind. The target gets to make an opposed
+                <t>Will</t> check to resist. The effects last for as long
+                as you concentrate.
             </para>
-
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
             <para>
-                A <e>Fantastic</e> success will may, at your option,
-                permanently blind the target.
+                You gain a +10 to your Will to overcome the resistance of
+                the target.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                You gain a +20 to your Will to overcome the resistance of
+                the target.
             </para>
         </description>
     </spell>
 
     <spell name="Night" level="7" type="water">
         <range>Self</range>
-        <duration>Concentration</duration>
-        <radius>Village</radius>
+        <duration>Minutes</duration>
+        <radius>Huge</radius>
         <prerequisite>Blind</prerequisite>
 
         <short>Engulfs a large area in darkness.</short>
@@ -326,9 +332,24 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 By invoking this rune you summon down an unnatural night
-                on the entire area. Each level of success causes two levels
-                of darkness, and the temperature drops by one level.
-                The <e>Night</e> will move with you as you move.
+                on the entire area, dropping the light level by two. Light
+                given off by fires only illuminates half as far.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The night summoned becomes utterly dark, and light given
+                off by fires only illuminates one quarter the normal
+                distance.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                Light given off by fires only illuminates to one tenth
+                their usual radius, and furthermore, cannot even be seen
+                more then twice this distance away.
             </para>
         </description>
     </spell>
@@ -337,10 +358,11 @@
         Cold/fatigue thread.
     -->
 
-    <spell name="Chill" level="1" type="water">
+    <spell name="Chill" level="3" type="water">
         <range>Short</range>
         <duration>Concentration</duration>
         <target>Individual</target>
+        <prerequisite>Gloom</prerequisite>
 
         <short>Make a person cold.</short>
 
@@ -360,21 +382,18 @@
     </spell>
 
 
-    <spell name="Fatigue" level="3" type="water">
+    <spell name="Fatigue" level="5" type="water">
         <range>Reach</range>
         <duration>Momentary</duration>
         <target>Individual</target>
-        <resist>Health</resist>
         <prerequisite>Chill</prerequisite>
 
         <short>Drains energy from the target.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                When you invoke this rune on the target, unless they
-                resist it then their energy is drained from them, and
-                they gain one level of <e>exhaustion</e> per level of
-                success.
+                When this rune is invoked upon a person, they gain one level
+                of <e>Fatigue</e>.
             </para>
         </description>
     </spell>
@@ -406,7 +425,7 @@
         </description>
     </spell>
 
-    <spell name="Slow" level="5" type="water">
+    <spell name="Slow" level="7" type="water">
         <range>Short</range>
         <duration>Concentration</duration>
         <target>Few</target>
