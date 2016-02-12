@@ -20,9 +20,9 @@
         </information>
 
         <description>
-	    <aka>Hominidae</aka>
+            <aka>Hominidae</aka>
             <short>
-		        Apes are a type of mostly aorboreal primates common
+		        Apes are a type of mostly arboreal primates common
 		        to Africa and Asia.
             </short>
 
@@ -34,7 +34,7 @@
 		            purposes. There is a large range in size between
                     the various ape species, but all are strong and
                     agile. With the exception of gorillas, apes are
-                    aorboreal.
+                    arboreal.
                 </para>
             </physical>
 
@@ -91,7 +91,7 @@
             <attributes size="3" soak="8">
                 <attribute name="strength" score="4"/>
                 <attribute name="health" score="3"/>
-                <attribute name="agility" score="4"/>
+                <attribute name="agility" score="5"/>
                 <attribute name="dexterity" score="3"/>
                 <attribute name="perception" score="4"/>
                 <attribute name="intelligence" score="3"/>
@@ -108,13 +108,13 @@
             <skills>
                 <group name="Talents" type="talents">
                     <skill name="Athletics" score="6"/>
-                    <skill name="Awareness" score="4"/>
-                    <skill name="Brawl" score="2"/>
-                    <skill name="Charm" score="2"/>
-                    <skill name="Guile" score="2"/>
-                    <skill name="Sleight" score="2"/>
-                    <skill name="Stealth" score="2"/>
-                    <skill name="Throw" score="2"/>
+                    <skill name="Awareness" score="5"/>
+                    <skill name="Brawl" score="4"/>
+                    <skill name="Charm" score="3"/>
+                    <skill name="Guile" score="3"/>
+                    <skill name="Sleight" score="3"/>
+                    <skill name="Stealth" score="4"/>
+                    <skill name="Throw" score="3"/>
                 </group>
 
                 <group name="Misc" type="skills">
@@ -148,4 +148,102 @@
         </statistics>
     </beast>
 
+    <beast name="Chimpanzee" parent="Apes">
+        <information>
+            <type>Animal</type>
+            <demeanor>Selfish</demeanor>
+
+            <habitat climate="Warm" terrain="Forest" frequency="Rare"/>
+
+            <organisation group="Group" number="20-50"/>
+
+            <origin>Common</origin>
+            <genre>Real</genre>
+        </information>
+
+        <description>
+            <short>
+                A common species of great ape, with black hair and known for
+                its human-like behaviour.
+            </short>
+
+            <physical>
+                <para>
+                    Chimpanzee males are between 40kg and 65kg in weight, and stand
+                    over a metre tall on their hind legs. They have course black
+                    fur, with bare face, hands and feet. They live in the forests
+                    and savannahs of west and central Africa.
+                </para>
+            </physical>
+
+            <social>
+                <para>
+                    Chimpanzees live in groups up to 150 in size, though may be
+                    found individually whilst foraging. They can be incredibly
+                    aggressive towards each other, and even form war parties to
+                    attack and kill other groups.
+                </para>
+            </social>
+        </description>
+
+        <statistics xmlns="http://yagsbook.sourceforge.net/xml/yags">
+            <attributes size="3" soak="8">
+                <attribute name="strength" score="5"/>
+                <attribute name="health" score="3"/>
+                <attribute name="agility" score="4"/>
+                <attribute name="dexterity" score="3"/>
+                <attribute name="perception" score="4"/>
+                <attribute name="intelligence" score="3"/>
+                <attribute name="empathy" score="3"/>
+                <attribute name="will" score="2"/>
+            </attributes>
+
+            <traits>
+                <trait name="Bravery" score="2"/>
+                <trait name="Orneriness" score="2"/>
+                <trait name="Patience" score="4"/>
+            </traits>
+
+            <skills>
+                <group name="Talents" type="talents">
+                    <skill name="Athletics" score="6"/>
+                    <skill name="Awareness" score="5"/>
+                    <skill name="Brawl" score="5"/>
+                    <skill name="Charm" score="3"/>
+                    <skill name="Guile" score="3"/>
+                    <skill name="Sleight" score="3"/>
+                    <skill name="Stealth" score="4"/>
+                    <skill name="Throw" score="3"/>
+                </group>
+
+                <group name="Misc" type="skills">
+                    <skill name="Survival" score="4"/>
+                </group>
+            </skills>
+
+            <combat>
+                <combatstyle style="Bite and claw" skill="Brawl">
+                    <attack attribute="agility" bonus="3"/>
+                    <defence attribute="agility" bonus="2"/>
+                    <damage type="mixed" bonus="2"/>
+                </combatstyle>
+
+                <armourstyle style="Base"/>
+
+                <armourstyle style="Natural">
+                    <armour name="Fur" protection="1"/>
+                </armourstyle>
+            </combat>
+
+            <advantages>
+                <advantage name="Animal"/>
+                <advantage name="Acute sense of smell" score="+2"/>
+                <advantage name="Acute hearing" score="+1"/>
+                <advantage name="Poor eyesight" score="-1"/>
+                <advantage name="Good climber" score="+1"/>
+
+                <advantage name="Tracking" skill="Survival" score="4"/>
+            </advantages>
+        </statistics>
+    </beast>
 </bestiary>
