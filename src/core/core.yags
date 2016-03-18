@@ -20,12 +20,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 0.7.9 $</version>
+            <version>$Revision: 0.7.10 $</version>
             <date>$Date: 2012-12-20 12:00:00 $</date>
         </cvsinfo>
 
         <license type="Yags">
-            <year>2012</year>
+            <year>2016</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -246,11 +246,11 @@
                         A single twenty sided die, a d20.
                     </item>
 
-                    <item name="Difficulty">
+                    <item name="Target Number (TN)">
                         A number which represents how difficult a task is.
                         You must roll your ability + d20 and equal or
-                        exceed the difficulty of the task to succeed. A
-                        moderate (average) task has a difficulty of 20.
+                        exceed the TN of the task to succeed. A
+                        moderate (average) task has a TN of 20.
                     </item>
                 </itemlist>
             </sect2>
@@ -269,9 +269,9 @@
                 <para>
                     The GM should determine the most suitable <e>attribute</e>
                     and <e>skill</e> combination to use, and set a target
-                    level for the task. <e>Very easy</e> tasks have a target
-                    of 10, <e>moderate</e> tasks have a target of 20 and
-                    <e>difficult</e> tasks have a target of 30. In some cases
+                    number (TN) for the task. <e>Very easy</e> tasks have a TN
+                    of 10, <e>moderate</e> tasks have a TN of 20 and
+                    <e>difficult</e> tasks have a TN of 30. In some cases
                     you may need to make a check just against an attribute
                     (for example, a <e>Health</e> check to remain conscious)
                     where no skill is involved.
@@ -280,34 +280,47 @@
                 <para flag="green">
                     To make a skill check, you roll <s>Attribute</s> x
                     <s>Skill</s> + 1d20, and if it equals or exceeds the
-                    target difficulty then you succeed.
+                    Target Number (TN) then you succeed.
                 </para>
 
                 <para flag="green">
                     To make a pure attribute check, then you roll
                     <s>Attribute</s> x 4 + 1d20, and if it equals or exceeds
-                    the target difficulty then you succeed.
+                    the Target Number (TN) then you succeed.
                 </para>
 
                 <para flag="red">
                     If the d20 rolls a natural '1', then you automatically
                     fail. This is the 'fumble chance', and is normally 1.
                     In some situations, the fumble chance will be higher.
+                    If the fumble chance is 3, then a roll of '1', '2' or '3'
+                    will result in failure.
                 </para>
 
                 <para>
                     If it is important how well you succeed, then every 10
-                    points by which you beat the target is considered an
-                    extra level of success. Simply beating the target is
-                    considered a <e>moderate</e> success, beating it by
+                    points by which you beat the TN is considered an extra
+                    level of success. Simply beating the TN is considered
+                    a <e>moderate</e> success, beating it by
                     10 or more is a <e>good</e> success (2 levels), by 20
                     or more is <e>excellent</e> and 30+ is <e>superb</e>.
                 </para>
 
+                <targetlist targetFirst="true" bold="true">
+                    <targetLabel>Roll</targetLabel>
+                    <valueLabel>Level of Success</valueLabel>
+
+                    <item target="TN + 0" value="Moderate"> success.</item>
+                    <item target="TN + 10" value="Good"> success.</item>
+                    <item target="TN + 20" value="Excellent"> success.</item>
+                    <item target="TN + 30" value="Superb"> success.</item>
+                    <item target="TN + 40" value="Fantastic"> success.</item>
+                </targetlist>
+
                 <para>
                     Sometimes, a skill contest is called for between two or
                     more characters. In this case, instead of trying to beat
-                    a set target number, you try to beat your opponent's
+                    a set TN, you try to beat your opponent's
                     ability check.
                 </para>
 
@@ -320,8 +333,8 @@
 
                 <para flag="green">
                     In a skill contest, if one of you rolls a natural '20'
-                    then you automatically win as long as your skill score
-                    is higher than your opponents.
+                    then you automatically win if your skill score is higher
+                    than your opponents.
                 </para>
 
                 <sect3>
@@ -931,14 +944,14 @@
 
                     <para>
                         When making an ability check, there are some common
-                        difficulty levels, which are described in the
+                        Target Numbers, which are described in the
                         following table. The descriptions assume an average
                         level of attribute - those with an above average
                         attribute will be able to get by with less skill.
                     </para>
 
                     <para>
-                        Most tasks will be against a fixed target number. If
+                        Most tasks will be against a fixed TN. If
                         you are competing against another character, then
                         they get a skill check with a modifier. The modifier
                         is given in parenthesis below, and adds to the
@@ -949,7 +962,7 @@
                         <title>Task Difficulties</title>
 
                         <valueLabel>Type of Task</valueLabel>
-                        <targetLabel>Target</targetLabel>
+                        <targetLabel>TN</targetLabel>
 
                         <item target="10 (-10)" value="Very easy.">
                             Such a task can be achieved by a
@@ -1158,20 +1171,21 @@
                     </para>
 
                     <para>
-                        Such tasks have a difficulty as normal, but require
+                        Such tasks have a TN as normal, but require
                         a number of successes to be achieved before the task
                         is complete. For example, disabling a complex trap
-                        may be difficulty 20/3, requiring 3 successes over
-                        a base difficulty of 20. It's possible to achieve
-                        success with a single roll of 40+. It may require
-                        three rolls however.
+                        may be TN 20/3, requiring 3 successes against a base
+                        TN of 20. You can make multiple rolls, each roll taking
+                        a period of time. Every time you succeed, you gain at
+                        least one level of success towards completion (1 level
+                        on a <e>moderate</e>, 2 on a <e>good</e> success etc).
                     </para>
 
                     <para>
                         If a check fails, then no successes are gained towards
                         completion, and the fumble chance for all further checks
                         increases by +1. Two failures in a row result in
-                        complete failure, the results of which are task
+                        complete failure, the effect of which are task
                         dependant. A fumble counts as a normal failure, and
                         so increases the fumble chance.
                     </para>
@@ -1451,17 +1465,17 @@
 
                     <para>
                         Many knowledge skills allow <e>Specialisations</e>.
-                        Normally, the difficulty of a knowledge task is
+                        Normally, the TN of a knowledge task is
                         based on how specialised a bit of knowledge
                         is. Knowing when the <e>Civil War</e> started is
                         a specific bit of knowledge from late English
-                        history, so might be difficulty 30.
+                        history, so might be TN 30.
                     </para>
 
                     <para>
                         If you were specialised in <e>English History</e>
                         or <e>Military History</e>, or <e>17th Century</e>
-                        then it becomes easier, maybe difficulty 20. For a
+                        then it becomes easier, maybe TN 20. For a
                         specialisation in <e>The English Civil War</e>,
                         such a piece of knowledge is obvious.
                     </para>
@@ -1743,7 +1757,7 @@
                     </para>
 
                     <para>
-                        Every level of <e>Tiny</e> adds +5 to the difficulty to
+                        Every level of <e>Tiny</e> adds +5 to the TN to
                         hit the target in melee. For missile combat, take the
                         worst of +5 or doubling the range penalty per level.
                         See the <s>Bestiary</s> article for a full description
@@ -1964,8 +1978,7 @@
                 When looking at skill difficulties, it should be remembered
                 that for these skills, the majority of people will have an
                 ability of 6 (3 x 2) - an average roll of 17. A skill check
-                of <e>moderate</e> difficulty will be failed 65% of the
-                time.
+                of <e>moderate</e> TN will be failed 65% of the time.
             </para>
 
             <sect2>
@@ -2016,7 +2029,7 @@
                         footpath can require a lot of skill and luck. If the
                         path is not clear and easy, then an
                         <y:agility>athletics</y:agility> check is needed
-                        each round. The difficulty is modified by how fast
+                        each round. The TN is modified by how fast
                         you are moving - halved if moving carefully, doubled
                         if running and tripled if sprinting.
                     </para>
@@ -2079,7 +2092,7 @@
                     <para>
                         If you fail, you make no progress that round. If
                         falling could be dangerous, make a second check at
-                        the same difficulty - failure again means that you
+                        the same TN - failure again means that you
                         fall and suffer the consequences. You can choose to
                         succeed either failed check by gaining a point of
                         <e>Fatigue</e>, as long as success was possible in
@@ -2143,7 +2156,7 @@
 
                         <para>
                             When climbing things which require more than a
-                            round to complete, the difficulty is more based
+                            round to complete, the TN is more based
                             on the complexity of the task than the time it
                             takes to complete.
                         </para>
@@ -2154,7 +2167,7 @@
                             <y:strength>Athletics</y:strength> check each
                             round, failure means no distance is climbed, and
                             make an <y:agility>Athletics</y:agility> check at
-                            the same difficulty or fall. Alternatively, the
+                            the same TN or fall. Alternatively, the
                             second check can be ignored if you take a level
                             of <e>Fatigue</e>.
                         </para>
@@ -2216,7 +2229,7 @@
 
                         <para>
                             If you want to climb carefully, halve speed, and
-                            on failure half the difficulty of the second check
+                            on failure half the TN of the second check
                             (the first check is still the same however).
                         </para>
                     </sect4>
@@ -2279,22 +2292,22 @@
                     <valueLabel>Situation</valueLabel>
 
                     <item target="+0" value="Spot a standing person.">
-                        Base difficulty to see a person who is standing in
+                        Base TN to see a person who is standing in
                         the open, making no attempt to hide themselves.
                     </item>
                     <item target="+5" value="Distance 50m - 100m.">
                         If the target is over 50m away, then increase the
-                        difficulty by +5.
+                        TN by +5.
                     </item>
                     <item target="+10" value="Distance over 100m.">
                         If the target is 100m away or more, then increase the
-                        difficulty by +10. Each doubling (200m, 400m) adds
+                        TN by +10. Each doubling (200m, 400m) adds
                         a further +10.
                     </item>
                     <item target="-5/pt" value="Size above 5.">
                         Each point of size of the target above 5, reduce the
-                        difficulty by 5. If they are smaller, then increase
-                        the difficulty by 5 per point.
+                        TN by 5. If they are smaller, then increase
+                        the TN by 5 per point.
                     </item>
                     <item target="+10" value="Half cover.">
                         If the target is hidden in half cover.
@@ -2607,15 +2620,15 @@
                 <para>
                     <e>Throw</e> is generally based on <t>Dexterity</t>.
                     If throwing at someone, then it's considered an
-                    attack and they may get a dodge plus the difficulty
+                    attack and they may get a dodge plus the TN
                     will be modified by range (+1 per metre for typical
-                    objects). A doorway is about difficulty 10 to throw
+                    objects). A doorway is about TN 10 to throw
                     something through, a window 15, a car window about 20.
                 </para>
 
                 <para>
                     Catching something like a ball, which was thrown to
-                    you, is about 10, modified by +1 for each point the
+                    you, is about 10, modified by +2 for each point the
                     thrower missed you by on their attempt to throw.
                 </para>
             </sect2>
