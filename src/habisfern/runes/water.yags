@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <!--
-    Water cantrips.
+    Water Runes.
     Version: $Revision: 1.7 $
     Date:    $Date: 2006-05-14 14:18:24 $
 -->
@@ -44,7 +44,7 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Good)">
             <para>
-                A thin layer of water covers all surfaces, and small fires will
+                A thin layer of water covers all surfaces, and torches will
                 be extinguished.
             </para>
         </description>
@@ -66,14 +66,14 @@
                 muffled in the mist, often more effectively than vision.
             </para>
             <para>
-                There is a +1 to the difficulty of any <t>Perception</t>
+                There is a +1 to the TN of any <t>Perception</t>
                 checks for each metre of mist between you and the target.
             </para>
         </description>
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Good)">
             <para>
-                The mist is particularly dense, increase the difficulty
+                The mist is particularly dense, increase the TN
                 to spot targets by +2 per metre.
             </para>
         </description>
@@ -86,7 +86,7 @@
         <radius>Medium</radius>
         <prerequisite>Mist</prerequisite>
 
-        <short>Greatly increases the volumne of water.</short>
+        <short>Greatly increases the volume of water.</short>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
@@ -164,7 +164,7 @@
     <spell name="Drown" level="7" type="water">
         <range>Short</range>
         <duration>Natural</duration>
-        <target>Individual</target>
+        <target>Medium</target>
         <prerequisite>Flood</prerequisite>
 
         <short>Cause a creature to drown.</short>
@@ -179,6 +179,9 @@
                 30, or gain another <e>Fatigue</e>. Each round, the difficulty
                 drops by 5. On rounds they succeed, they are able to act
                 normally and need not make any further <t>Health</t> checks.
+            </para>
+            <para>
+                If they fall unconscious, then they die.
             </para>
         </description>
         <description xmlns="http://yagsbook.sourceforge.net/xml"
@@ -233,7 +236,146 @@
     </spell>
 
 
+    <spell name="Rain" level="5" type="water">
+        <range>Self</range>
+        <duration>Minutes</duration>
+        <radius>Huge</radius>
+        <prerequisite>Mist</prerequisite>
 
+        <short>It begins to rain.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Invoking this rune causes it to rain over the affected area.
+                You must be outdoors when the rune is invoked, and the rain
+                falls from the sky, so does not affect those indoors.
+            </para>
+            <para>
+                The amount of rain depends on the humidity. In a dry climate,
+                then the rain is not much more than a drizzle. In a temperate
+                climate it is a light rain, and in a wet climate it is a
+                moderate rain.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                Increase the level of rain by one level.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                Increase the level of rain by two levels, or cause it to
+                rain indoors. Waters appears on the ceiling above your
+                head, raining down to cover the room.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Foul" level="5" type="water">
+        <range>Reach</range>
+        <duration>Momentary</duration>
+        <target>Medium</target>
+        <prerequisite>Mist</prerequisite>
+
+        <short>Make liquid foul and undrinkable.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When invoked, this rune causes a liquid to become foul and
+                undrinkable. The liquid cannot be part of a living creature.
+                An amount of liquid up to the size of a human is affected.
+            </para>
+            <para>
+                The liquid is not poisonous, but will not provide sustenance
+                and its taste will make it undrinkable.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The liquid becomes poisonous. Make a <t>Health</t> check
+                against a TN of 25 or become violently ill for up to a
+                minute.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The liquid becomes acidic. Take +10 damage each round
+                submersed in the liquid, or +5 damage (mixed) if splashed
+                with it.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Purify" level="5" type="water">
+        <range>Reach</range>
+        <duration>Momentary</duration>
+        <target>Medium</target>
+        <prerequisite>Mist</prerequisite>
+
+        <short>Liquid is purified.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When invoked, this rune causes a liquid to become purified and
+                drinkable. The liquid cannot be part of a living creature.
+                An amount of liquid up to the size of a human is affected.
+            </para>
+            <para>
+                The liquid becomes cool and refreshing.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                You can change the property of a liquid, to change its colour
+                and taste.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                You can change the property of a liquid to make it alcoholic.
+                It can take on a strength similar to strong wine.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Desiccate" level="7" type="water">
+        <range>Short</range>
+        <duration>Momentary</duration>
+        <target>Medium</target>
+        <prerequisite>Foul</prerequisite>
+
+        <short>Desiccate a living creature.</short>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                This unpleasant rune removes water from a living creature. The
+                water drains out through their skin, leaving behind a dried
+                out creature. They immediately take two <e>wounds</e>, and
+                unless a <t>Health</t> check versus your <t>Will</t> is made,
+                they take a further one as well.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                Get a +10 bonus to your Will check. For every extra success
+                you get on this check, an extra level of <e>wounds</e> is
+                caused.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                As for <e>good</e>, but the bonus is +20.
+            </para>
+        </description>
+    </spell>
 
     <!--
         Gloom thread. Adds cancelling heat and light.

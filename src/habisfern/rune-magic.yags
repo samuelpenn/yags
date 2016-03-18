@@ -21,7 +21,7 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 0.7.9 $</version>
+            <version>$Revision: 0.7.10 $</version>
             <date>$Date: 2006-06-07 21:30:46 $</date>
         </cvsinfo>
 
@@ -202,19 +202,19 @@
                     seeking understanding of the voices that penetrate from the
                     Dream Lands. With guidance from your teacher, you learn to
                     understand how the world speaks. At the end of the month, you
-                    must have an <t>Intelligence</t> check at a target of 30.
+                    must have an <t>Intelligence</t> check at a TN of 30.
                 </para>
                 <para>
                     During the second month, you learn to take charge of the voices,
                     and begin to exercise your will upon the world. At the end of
-                    it you must make a <t>Will</t> check at a difficulty of 30.
+                    it you must make a <t>Will</t> check at a TN of 30.
                     If you succeed, you may proceed to the final stage of your
                     study.
                 </para>
                 <para>
                     During your third month you learn to draw the powers you need
                     to create your magic into your body. At the end of it, you
-                    must make a difficulty 30 <t>Health</t> check. On success,
+                    must make a TN 30 <t>Health</t> check. On success,
                     you gain a skill in your first Mystery at a level of 1. On
                     failure, you must begin again. At least three months must
                     pass before your next attempt.
@@ -225,16 +225,20 @@
                     that part of it, and +1 for each time you have failed it.
                     If you succeed in the <t>Intelligence</t> stage, but fail
                     at the <t>Will</t> stage, then next time you try the
-                    <t>Intelligence</t> difficulty is only 27, and the <t>Will</t>
+                    <t>Intelligence</t> TN is only 27, and the <t>Will</t>
                     is only 29.
                 </para>
                 <sect3>
                     <title>Improving Your Chances</title>
                     <para>
-                        The following actions can be taken in order to improve
-                        your chance of success.
+                        Opening your mind to a mystery can be hard even for the
+                        best people, resulting in many failed attempts. Fortunately
+                        there are ways to improve your chance of success.
                     </para>
-                    <targetlist>
+                    <targetlist targetFirst="false" bold="true">
+                        <targetLabel>Bonus</targetLabel>
+                        <valueLabel>Situation</valueLabel>
+
                         <item target="+5" value="Equinox.">
                             Starting the first month of training on an
                             Equinox makes the Intelligence check easier.
@@ -253,7 +257,7 @@
                             but greatly simplifies the process. You may
                             do this for each of the months.
                         </item>
-                        <item target="+3" value="Fast.">
+                        <item target="+5" value="Fast.">
                             You may fast during the period.
                         </item>
                     </targetlist>
@@ -264,8 +268,8 @@
                         Once you have been taught a single Mystery, learning
                         the others can be done without the guide of a teacher.
                         It takes a month of meditation, and at the end requires
-                        an <t>Intelligence</t> check of 20 + 5 per every Mystery
-                        currently known.
+                        an <t>Intelligence</t> check against a TN of 20 + 5 per
+                        every Mystery currently known.
                     </para>
                     <para>
                         You may open your mind up to the <e>Dreamlands</e>, which
@@ -278,33 +282,35 @@
             </sect2>
 
             <sect2>
-                <title>Using Powers</title>
+                <title>Using Raw Powers</title>
 
                 <para>
-                    When using one of the powers of a Mystery, a skill
-                    check is made using <y:will>Mystery</y:will> against
-                    either a straight difficulty of 10 or the <y:will/> of
-                    a resisting target.
+                    Each <e>Mystery</e> has a number of raw powers that can be
+                    used as long as you have at least 1 point in that Mystery.
+                    To use such a power, you make a <y:will>Mystery</y:will> check
+                    against a TN of either 10, or the <y:will/> of a resisting
+                    target.
                 </para>
 
                 <para>
                     Unless otherwise specified, it takes a full round to
                     use a Power, and the effect will either be momentary
-                    or last as long as the wizard concentrates. Using a
+                    or last as long as you concentrate. Using a
                     power is a <e>slow</e> action, but does not require
                     any gestures or incantations unless specified.
                 </para>
 
                 <para>
-                    If a wizard is hit in combat whilst activating
-                    magic, then they add +10 to the casting difficulty
-                    for every level of stun or wound taken.
+                    If you are hit in combat whilst activating a power, then
+                    you add +10 to the TN for every level of <e>wound</e> or
+                    <e>stun</e> that you suffered. This is in addition to
+                    the normal penalties for being wounded.
                 </para>
 
                 <para>
-                    A wizard who is concentrating on magic is at -1 to
-                    agility, dexterity and perception for each effect
-                    they are concentrating on.
+                    Whilst concentrating on a magic power, you are at -1 to
+                    any agility, dexterity or perception checks that you
+                    make for each power you are concentrating on.
                 </para>
             </sect2>
 
@@ -338,7 +344,6 @@
                     not mean weak however, and some rune are capable
                     of destroying a town or slaying someone with a word.
                 </para>
-
                 <para>
                     Each rune must be learnt separately, and is treated
                     as a <e>technique</e>, in that they have a prerequisite
@@ -346,20 +351,24 @@
                     cannot be purchased with experience, but must
                     be learnt through meditation and self-sacrifice.
                 </para>
+                <para>
+                    Runes are thought to be an inherent part of the world,
+                    created originally by the gods. As such, it is not
+                    possible to invent new runes of your own.
+                </para>
 
                 <sect3>
                     <title>Learning Runes</title>
 
                     <para>
                         Learning <e>runes</e> takes at least a week, and requires
-                        an <t>Intelligence</t> check of 5 * level of the <e>rune</e>.
-                        Each point you roll over the target difficulty gains you one
-                        point towards learning the <e>rune</e>. When you have gained
-                        points equal to the difficulty, the <e>rune</e> is learnt.
+                        an <t>Intelligence</t> check against a TN of 5 * level of the
+                        <e>rune</e>. You require a number of successes equal to the
+                        level of rune, and it takes a week for each roll.
                     </para>
                     <para>
                         If you wish, you can attempt to learn a <e>rune</e> in days
-                        rather than weeks. This doubles the difficulty, but allows a
+                        rather than weeks. This doubles the TN, but allows a
                         roll every day rather than every week.
                     </para>
                     <para>
@@ -392,18 +401,17 @@
                         <sect5>
                             <title>Fasting</title>
                             <para>
-                                Any exhaustion penalties you have from starvation
-                                can instead be added as a bonus.
+                                You gain +5 bonus if you fast during this period.
                             </para>
                         </sect5>
                     </sect4>
                 </sect3>
 
                 <sect3>
-                    <title>Using Runes</title>
+                    <title>Describing Runes</title>
 
                     <para>
-                        Most runes can be invoked in a single round, and
+                        Most runes can be invoked in a single action, and
                         require little in the way of gestures or
                         incantations. Runes are described under the
                         section for the individual Mysteries, and they all
@@ -439,16 +447,21 @@
 
                     <para>
                         The first part of the description lists basic attributes
-                        of the rune. Their meanings are given below. Boosting an
-                        attribute raises the difficulty of invoking the rune by 5
-                        each time - an invocation can be boosted as many times as
-                        you wish. This must be chosen before you make the skill check.
+                        of the rune. Their meanings are given below. These attributes
+                        can often be <e>extended</e>, increasing the range, duration
+                        or area of the rune. Each time a rune is extended, it increases
+                        the TN, normally by 5. You can extend multiple attributes
+                        multiple times, as long as you can achieve the new TN. Choosing
+                        to extend a rune must be done before attempting the invocation.
                     </para>
                     <para>
-                        If the result of the invocation check is a <e>Good</e> (+10) or
-                        <e>Excellent</e> (+20) success, then you can choose to boost it
-                        further to add a special improvement, as noted in the spell
-                        description.
+                        It is also possible to <e>boost</e> a rune. This is decided
+                        after the roll. Each rune lists the effects of boosting, and
+                        can be achieved on a <e>Good</e> or better success.
+                    </para>
+                    <para>
+                        Rather than boosting you can opt to reduce the <e>Fatigue</e>
+                        gained when invoking the rune.
                     </para>
 
                     <sect4>
@@ -472,7 +485,7 @@
                             <item name="Minute">
                                 Invoking this rune takes a whole minute. Every round in
                                 which you have to move or defend yourself adds 5 to the
-                                difficulty to invoke the rune.
+                                TN to invoke the rune.
                             </item>
                         </itemlist>
                     </sect4>
@@ -482,15 +495,14 @@
 
                         <para>
                             <e>Runes</e> have a limit to how far away the target of their
-                            effects can be. If their are multiple targets, then unless
+                            effects can be. If there are multiple targets, then unless
                             otherwise specified in the description of the rune then this
                             is the distance to the furthest one.
                         </para>
                         <para>
-                            If you gain a <e>good</e> or better success when invoking the
-                            rune, then some ranges can be boosted to increase their range.
-                            The range can be boosted multiple times if you gain higher
-                            levels of success, as long as the new range allows boosting.
+                            Each time you extend the range of a rune, then you add +5
+                            to the TN. Runes with a range of Self, Sight, Communication
+                            or Blood cannot be extended.
                         </para>
 
                         <itemlist order="strict">
@@ -501,29 +513,29 @@
 
                             <item name="Touch">
                                 You can affect yourself, or a target you are directly
-                                touching. You can boost this range to Reach.
+                                touching. You can extend this range to Reach.
                             </item>
 
                             <item name="Reach">
                                 You can affect a target you can touch with an item you
                                 are holding, or within three metres of you which you
-                                can clearly see. You can boost this range to Short.
+                                can clearly see. You can extend this range to Short.
                             </item>
 
                             <item name="Short">
                                 You can affect a target out to a range of 25m. You can
-                                boost this range to be Medium.
+                                extend this range to be Medium.
                             </item>
 
                             <item name="Medium">
                                 You can affect a target out to a range of 100m. You can
-                                boost this range to be Long.
+                                extend this range to be Long.
                             </item>
 
                             <item name="Long">
                                 You can affect a target out to a range of 250m. This
                                 range can be boosted multiple times. Each time it is
-                                boosted you can double the maximum distance.
+                                extended you can double the maximum distance.
                             </item>
 
                             <item name="Sight">
@@ -552,8 +564,9 @@
 
                         <para>
                             <e>Duration</e> determines how long the effects of the rune
-                            invocation lasts. Boosting the duration is much harder than
-                            other attributes of a rune.
+                            invocation lasts. Extending the duration is much harder than
+                            other attributes of a rune, and only runes with a duration
+                            of <e>Rounds</e> or <e>Minutes</e> can be extended.
                         </para>
 
                         <itemlist order="strict">
@@ -572,19 +585,19 @@
                                 not require much thought to maintain, and you can perform
                                 other actions, including invoking other runes, whilst doing
                                 it. Any runes you invoke during this time though are at +10
-                                difficulty (+15 if from an opposed mystery). You can will
+                                TN (+15 if from an opposed mystery). You can will
                                 multiple magical effects, but the penalties stack. You can
                                 end a willed invocation at any time.
                             </item>
                             <item name="Rounds">
                                 The magic lasts for as long as you concentrate. Every extra
                                 round you concentrate for beyond the first gains you one
-                                Fatigue. Can be boosted to Minutes at an increase of +15.
+                                Fatigue. Can be extended to Minutes at an increase of +15.
                             </item>
                             <item name="Minutes">
                                 The magic lasts for as long as you concentrate. Every extra
                                 minute that you concentrate for beyond the first gains you
-                                one level of Fatigue. Can be boosted to Hours at an increase
+                                one level of Fatigue. Can be extended to Hours at an increase
                                 of +30.
                             </item>
                             <item name="Hours">
@@ -615,7 +628,7 @@
                             choose whether to continue concentrating or to drop the effect.
                             If you continue, you gain a <e>Fatigue</e> (or an <e>Exhaustion</e>
                             for <e>Hours</e> effects) and must make a <t>Will</t> check at
-                            a target of 10. If you fail, the effect ends anyway (though you
+                            a TN of 10. If you fail, the effect ends anyway (though you
                             still gain <e>Fatigue</e> or <e>Exhaustion</e>).
                         </para>
                         <para>
@@ -631,7 +644,7 @@
                         <para>
                             The target of the rune defines how many individual targets
                             can be affected by a single invocation. As for the
-                            <e>Range</e>, the number of targets can be boosted if you
+                            <e>Range</e>, the number of targets can be extended if you
                             need to affect a larger number of things. All targets must
                             be within the <e>Range</e> of the spell.
                         </para>
@@ -650,19 +663,19 @@
 
                             <item name="Individual">
                                 The target can be a single individual, either yourself
-                                or one target within range. You can boost this to Few.
+                                or one target within range. You can extend this to Few.
                             </item>
 
                             <item name="Few">
                                 Can affect up to 3 targets with this Rune, none more
-                                than 3 metres from another. You can boost it to be Dozen.
+                                than 3 metres from another. You can extend it to be Dozen.
                             </item>
 
                             <item name="Dozen">
                                 Can affect up to 12 targets with this Rune. You can
                                 select individual targets out of a crowd, but none can
                                 be more than 5 metres from another.
-                                You can boost to be Crowd.
+                                You can extend this to be Crowd.
                             </item>
 
                             <item name="Crowd">
@@ -670,7 +683,7 @@
                                 this to particular individuals. You designate a particular
                                 individual and all those closest to them are affected.
                                 None can be more than 10 metres from another.
-                                You can boost this multiple times, doubling the number
+                                You can extend this multiple times, doubling the number
                                 affected each time.
                             </item>
 
@@ -680,28 +693,28 @@
                             </item>
 
                             <item name="Tiny">
-                                Affects a single target up to size 1. Can be boosted to
+                                Affects a single target up to size 1. Can be extended to
                                 small.
                             </item>
                             <item name="Small">
-                                Affects a single target up to size 3. Can be boosted to
+                                Affects a single target up to size 3. Can be extended to
                                 medium.
                             </item>
                             <item name="Medium">
-                                Affects a single target up to size 6. Can be boosted to
+                                Affects a single target up to size 6. Can be extended to
                                 large.
                             </item>
                             <item name="Large">
-                                Affects a single target up to size 10. Can be boosted to
+                                Affects a single target up to size 10. Can be extended to
                                 huge.
                             </item>
                             <item name="Huge">
-                                Affects a single target up to size 15. Can be boosted to
+                                Affects a single target up to size 15. Can be extended to
                                 gigantic.
                             </item>
                             <item name="Gigantic">
                                 Affects a single target up to size 20. Each further
-                                boosting increases the size that can be affected by
+                                extension increases the size that can be affected by
                                 +5.
                             </item>
                         </itemlist>
@@ -720,23 +733,23 @@
                         <itemlist order="strict">
                             <item name="Tiny">
                                 Affects an area out to 1m from the target point.
-                                Can be boosted to Small.
+                                Can be extended to Small.
                             </item>
                             <item name="Small">
                                 Affects an area out to 3m from the target point.
-                                Can be boosted to Medium.
+                                Can be extended to Medium.
                             </item>
                             <item name="Medium">
                                 Affects an area out to 10m from the target point.
-                                Can be boosted to Large.
+                                Can be extended to Large.
                             </item>
                             <item name="Large">
                                 Affects an area out to 25m from the target point.
-                                Can be boosted to Huge.
+                                Can be extended to Huge.
                             </item>
                             <item name="Huge">
                                 Affects an area out to 50m from the target point.
-                                Can be boosted multiple times, each level of boost
+                                Can be extended multiple times, each level of boost
                                 will double the radius.
                             </item>
                         </itemlist>
@@ -750,7 +763,7 @@
                         When a <e>Rune</e> is invoked, you must make a
                         <y:skeq><y:attr>Will</y:attr><y:sk>Mystery</y:sk><y:die/></y:skeq>
                         check against a target difficulty equal to five times the level
-                        of the <e>Rune</e> (plus any extras from <e>boosting</e>. If you
+                        of the <e>Rune</e> (plus any extras from <e>extending</e>. If you
                         succeed, then the rune is invoked and you gain an amount of
                         <e>Exhaustion</e> based on the level of the rune. If you fail,
                         then you gain one Fatigue and nothing happens.
@@ -777,12 +790,13 @@
                     </para>
 
                     <sect4>
-                        <title>Boosting Attributes</title>
+                        <title>Extending Attributes</title>
 
                         <para>
-                            Before you attempt the invocation, you can choose to <e>boost</e>
-                            one or more of the standard attributes of the rune. Each level of
-                            boost adds +5 to the target difficulty.
+                            Before you attempt the invocation, you can choose to
+                            <e>extend</e> one or more of the standard attributes
+                            of the rune. Each level of boost normally adds +5 to
+                            the TN of the invocation.
                         </para>
                     </sect4>
 
@@ -792,9 +806,7 @@
                             If you succeed with extra levels of success, then you can either
                             use these to boost the effectiveness of the invocation (either
                             for a <e>Good</e> or <e>Excellent</e> success), or to reduce the
-                            effort involved in the invocation. One level of success will
-                            reduce the <e>Exhaustion</e> to <e>Fatigue</e>, and a second will
-                            allow you to suffer no adverse effect.
+                            effort involved in the invocation.
                         </para>
                         <para>
                             Level one and three runes can be boosted once (with a <e>Good</e>
