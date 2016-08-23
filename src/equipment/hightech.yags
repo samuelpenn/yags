@@ -368,6 +368,17 @@
                     </item>
                 </targetlist>
             </sect2>
+            <sect2>
+                <title>Sickness</title>
+
+                <para>
+                    <e>Sickness</e> covers all forms of physical conditions that
+                    aren't simple damage. It can include disease, infections and
+                    <e>radiation sickness</e>. A sickness provides a penalty to
+                    actions similar to <e>wounds</e> or <e>fatigue</e>, but
+                    has its own track.
+                </para>
+            </sect2>
         </sect1>
 
         <sect1>
@@ -402,16 +413,16 @@
                     the <e>Gray</e> and the <e>Sievert</e>. These are not simply different
                     units, but different ways of measuring radiation so there isn't a
                     direct conversion factor between them. For simplicity, <tm>YAGS</tm>
-                    uses a <s>Radiation</s> score for someone who has been exposed
-                    to radiation. This starts at zero, and 100 or more is considered
-                    fatal, which is about equivalent to 5 <e>Sieverts</e> or
-                    30 <e>Grays</e>.
+                    uses a <s>Radiation Dose</s> score for someone who has been exposed
+                    to radiation, which amalgamates all these different ways. This starts
+                    at zero, and fatality can occur around 100.
                 </para>
                 <para>
-                    Radiation sickness comes in two forms - <e>acute</e> and <e>chronic</e>.
-                    Acute radiation sickness consist of health effects which manifest within
-                    24 hours of being irradiated. Chronic sickness will show up months or
-                    years later.
+                    There are two effects of a radiation dose - <e>acute</e> and <e>chronic</e>.
+                    Acute effects are suffered if the dosage is received in a short space
+                    of time - seconds or minutes. Generally only high levels of radiation
+                    exposure (e.g., an exposed reactor core) will cause acute effects.
+                    Chronic effects will show up months or years later.
                 </para>
 
                 <sect3>
@@ -518,10 +529,22 @@
                             </item>
                         </targetlist>
                     </sect4>
+
+                    <sect4>
+                        <title>Radiation Sickness</title>
+
+                        <para>
+                            <e>Radiation Sickness</e> is a form of <e>Sickness</e>
+                            (see previous chapter) that is contracted from exposure
+                            to radiation. Each level gives you a penalty to all
+                            actions (both physical and mental), and also makes it
+                            harder to heal.
+                        </para>
+                    </sect4>
                 </sect3>
 
                 <sect3>
-                    <title>Intense Radiation Effects</title>
+                    <title>Acute Radiation Effects</title>
                     <para>
                         Very rarely, you may be submitted to highly intense doses
                         of radiation in a very short period of time, over minutes
@@ -531,130 +554,175 @@
                     </para>
 
                     <sect4>
-                        <title>Rounds</title>
+                        <title>Radiation Burns</title>
                         <para>
-                            If you receive 10 or more <e>Radiation</e> in a single
-                            round, then you take one level of <e>Mixed</e> damage
-                            from burns and tissue damage per full 10 points of
-                            <e>Radiation</e>.
+                            If you receive a <e>Radiation Dose</e> of 100 or more in
+                            a single <e>round</e>, then you immediately take one level
+                            of <e>Mixed</e> damage from burns and tissue damage per full
+                            100 points of <e>Dose</e>.
                         </para>
                         <para>
-                            If you are in an environment this hostile then you will
-                            receive a fatal dose in less than a minute, and need to
-                            think about getting somewhere safe as quickly as possible.
-                            Such high levels of radiation are very rare though, and
-                            only likely if you are directly exposed to an exposed
-                            reactor core.
+                            At this point you're pretty much dead anyway, it's just a
+                            question of how quickly and painfully you die.
                         </para>
                     </sect4>
 
                     <sect4>
-                        <title>Minutes</title>
+                        <title>Immediate Symptoms</title>
                         <para>
-                            If you receive 10 or more <e>Radiation</e> in a single
-                            minute, then you will become <e>nauseous</e> after a
-                            number of minutes equal to your <t>Health</t>. This
-                            will last until the hourly nausea effect expires (see
-                            below) and give you a -1 penalty to attributes for any
-                            skill checks.
+                            If you receive a <e>Radiation Dose</e> of 5 or more
+                            in a single hour then you need to make a <t>Health</t>
+                            check or suffer the effects listed below. Make a single
+                            <t>Health</t> check for all of the effects, and suffer
+                            any that apply.
                         </para>
-                        <para>
-                            If you receive more than ten times your <t>Health</t>
-                            in <e>Radiation</e> in the same period, then you will
-                            begin suffering from vomiting as well. This takes twice
-                            as long to manifest as the nausea does, and gives
-                            double the penalty.
-                        </para>
+                        <sect5>
+                            <title>Radiation Sickness (5+)</title>
+                            <para>
+                                <e><t>Health</t> check to avoid:</e> Twice Dose
+                            </para>
+                            <para>
+                                <e>Radiation Sickness</e> is a <e>sickness</e> that
+                                manifests as nausea, vomiting and diarrhoea <t>Health</t>
+                                hours after receiving the <e>Dose</e>.
+                            </para>
+                            <para flag="red">
+                                You receive one level of <e>Radiation Sickness</e>,
+                                plus an extra one for each full 10 points of <e>Dose</e>.
+                            </para>
+                            <para flag="red">
+                                The <e>sickness</e> normally starts in <t>Health</t>
+                                hours after receiving the dose. Halve the time if
+                                the dose was 20+. At 40+, in starts in minutes rather
+                                than hours. At 80+, it starts in rounds.
+                            </para>
+                            <para flag="green">
+                                Every day, make a <t>Health</t> check of 20+ to
+                                recover one level of <e>sickness</e>.
+                            </para>
+                        </sect5>
+                        <sect5>
+                            <title>Haemorrhaging (20+)</title>
+                            <para>
+                                <e><t>Health</t> check to avoid:</e> Dose
+                            </para>
+                            <para>
+                                Whilst you are suffering from the effects of
+                                <e>radiation sickness</e>, you are also haemorrhaging
+                                from the eyes and mouth.
+                            </para>
+                            <para flag="red">
+                                Add +1 fumble chance to any healing checks, or checks
+                                to stay alive, for each level of <e>sickness</e>.
+                            </para>
+                        </sect5>
+                        <sect5>
+                            <title>Weakness (40+)</title>
+                            <para>
+                                <e><t>Health</t> check to avoid:</e> Half Dose
+                            </para>
+                            <para>
+                                For the duration of the <e>sickness</e> you also feel
+                                weak and exhausted.
+                            </para>
+                            <para flag="red">
+                                Take a -1 penalty to <t>Strength</t>, <t>Agility</t>,
+                                and <t>Dexterity</t>.
+                            </para>
+                            <para flag="red">
+                                You also gain a level of <e>Exhaustion</e> and your
+                                movement rate is halved. The <e>Exhaustion</e> does
+                                not go away until the sickness is cured.
+                            </para>
+                            <para flag="red">
+                                At a dose of 80+, double the penalties and gain two
+                                levels of <e>Exhaustion</e>.
+                            </para>
+                        </sect5>
+                        <sect5>
+                            <title>Coma (100+)</title>
+                            <para>
+                                <e><t>Health</t> check to avoid:</e> Tenth Dose
+                            </para>
+                            <para>
+                                You fall into a coma within <t>Health</t> minutes
+                                from which you are unlikely to recover.
+                            </para>
+                            <para flag="red">
+                                Permanently lose one point of <t>Health</t> every 12
+                                hours. If the <e>dose</e> was 200+, reduce the time
+                                to every 8 hours. Every extra 100 points of dose reduce
+                                the time by 2 hours to a minimum of 2 hours.
+                            </para>
+                            <para flag="green">
+                                Every day make a <t>Health</t> check of 20+ to
+                                recover. This check is made after any <t>Health</t>
+                                loss.
+                            </para>
+                        </sect5>
                     </sect4>
-                </sect3>
 
-                <sect3>
-                    <title>Radiation Sickness</title>
-                    <para>
-                        If you receive a large enough dose of radiation in a short
-                        amount of time, then it can have an immediately deleterious
-                        affect on your body known as <e>Radiation Sickness</e>.
-                        Generally, any large dose in a 24 hour period will have
-                        this effect. Subsequent doses that occur before the symptoms
-                        of the previous dose have run their course add to the
-                        original dose, making it worse.
-                    </para>
-                    <para>
-                        <e>Radiation Sickness</e> can kill you in anything
-                        from hours to weeks. It generally results in tissue damage
-                        and organ failure. How quickly it manifests depends on the
-                        size of the dose.
-                    </para>
                     <sect4>
-                        <title>Dose of 3+</title>
+                        <title>Latent Effects</title>
+
                         <para>
-                            You gain one level of <e>Exhaustion</e> that lasts
-                            a number of days equal to the dose, as well as nausea
-                            that lasts for a day. If the dose is greater than your
-                            <t>Health</t>, then the nausea lasts two days and you
-                            gain two levels of <e>Exhaustion</e> (one each day).
+                            Latent affects generally kick in days or even weeks
+                            after suffering a high dose of radiation. They are based
+                            on the total amount of radiation received in the last
+                            24 hours.
                         </para>
-                        <para>
-                            Make a <t>Health</t> check of 20+ after it ends, and
-                            each week thereafter to recover the <e>Exhaustion</e>.
-                            If you fumble (1), gain a level of <e>Exhaustion</e>
-                            instead. If you go beyond <e>Exhausted</e>, you die.
-                        </para>
-                    </sect4>
-                    <sect4>
-                        <title>Dose of 10+</title>
-                        <para>
-                            You suffer nausea for a couple of days which gives
-                            you a -1 attribute penalty to any skill checks. You
-                            gain a level of <e>Exhaustion</e> each day of nausea.
-                            Your hair begins to fall out.
-                        </para>
-                        <para>
-                            Each week, for a number of weeks per 5 points of dose,
-                            make a <t>Health</t> check of 30, or gain a level of
-                            <e>Exhaustion</e>. Each time you go beyond
-                            <e>Exhausted</e>, lose one level of <t>Health</t>.
-                            Add +1 to the fumble chance per 10 Dose. A fumble means
-                            you immediately lose a level of <t>Health</t>.
-                        </para>
-                        <para>
-                            Each week thereafter, recover <e>Exhaustion</e>
-                            as per 3+. The <t>Health</t> loss is permanent.
-                        </para>
-                    </sect4>
-                    <sect4>
-                        <title>Dose of 30+</title>
-                        <para>
-                            As for 10+, but the effect of symptoms is measured in
-                            days rather than weeks. If you survive, the recovery
-                            time is in months.
-                        </para>
-                        <para>
-                            If you fumble twice in a row, you die.
-                        </para>
-                    </sect4>
-                    <sect4>
-                        <title>Dose of 100+</title>
-                        <para>
-                            Within minutes you will begin to suffer from heavy
-                            vomiting and diarrhoea, giving you a -2 penalty to
-                            your attributes for all skill checks. Make a
-                            <t>Health</t> check of 30+ or go blind.
-                        </para>
-                        <para>
-                            You will gain a level of <e>Exhaustion</e> every
-                            hour until you are <e>Exhausted</e>, at which point
-                            you will lose one level from each of your physical
-                            attributes every eight hours until your death.
-                        </para>
-                    </sect4>
-                    <sect4>
-                        <title>Dose of 300+</title>
-                        <para>
-                            You are incapacitated within minutes. You will
-                            lose one level from each of your physical attributes
-                            every hour until your death.
-                        </para>
+
+                        <sect5>
+                            <title>Immune Deficiency (10+)</title>
+                            <para>
+                                <e><t>Health</t> check to avoid:</e> None
+                            </para>
+                            <para>
+                                <t>Health</t> days after suffering a dose, take a
+                                level of <e>Immune Deficiency</e> sickness for every
+                                10 points of <e>dose</e>. This gives a penalty to
+                                healing checks and for resisting disease or other
+                                sicknesses. Each level also adds +1 fumble chance
+                                to <e>all</e> <t>Health</t> checks.
+                            </para>
+                            <para>
+                                Every week, make a <t>Health</t> check of 20+ to
+                                recover one level of this sickness. On a fumble,
+                                you gain one level instead. If you are already at
+                                maximum, then you lose one level of <t>Health</t>
+                                permanently.
+                            </para>
+                        </sect5>
+
+                        <sect5>
+                            <title>Moderate Effects (40+)</title>
+                            <para>
+                                <e><t>Health</t> check to avoid:</e> Half dose
+                            </para>
+                            <para>
+                                You suffer hair loss and begin haemorrhaging.
+                                You gain a level of <e>Exhaustion</e> every
+                                day (which can be cured by rest) for as long as
+                                your <e>Immune Deficiency</e> sickness lasts.
+                            </para>
+                        </sect5>
+
+                        <sect5>
+                            <title>Fatal Effects (100+)</title>
+                            <para>
+                                <e><t>Health</t> check to avoid:</e> None
+                            </para>
+                            <para>
+                                Beginning <t>Health</t> days after the dose, and
+                                every day thereafter, make a <t>Health</t> check
+                                of 20+ or permanently lose one point from each of
+                                your physical attributes.
+                            </para>
+                            <para>
+                                This stops if you roll a natural '20'. If the
+                                dose was 200 or more, it never stops.
+                            </para>
+                        </sect5>
                     </sect4>
                 </sect3>
 
@@ -675,7 +743,7 @@
                     <para>
                         Regardless of whether you suffered <e>Radiation Sickness</e>
                         or not, if you have a current <e>Dose</e> of one or higher,
-                        then each you must roll to check for any long term effects.
+                        then each year you must roll to check for any long term effects.
                         Roll a d20 + 1 per 5 Dose.
                     </para>
                     <targetlist targetFirst="true">
@@ -692,7 +760,7 @@
                         </item>
                         <item target="35" value="-1 level all physical attributes.">
                         </item>
-                        <item target="40+" value="Die within the year.">
+                        <item target="40+" value="Die within the next 12 months.">
                         </item>
                     </targetlist>
                     <para>
@@ -700,7 +768,7 @@
                         so a small dose for a short period may deteriorate before you
                         need to make a check. However, it won't drop below the 'background'
                         level. If you gained 3 points in the previous year from radiation,
-                        then won't drop below 3.
+                        then it won't drop below 3.
                     </para>
                 </sect3>
             </sect2>
