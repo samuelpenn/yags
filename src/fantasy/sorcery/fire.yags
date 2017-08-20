@@ -1,0 +1,675 @@
+<?xml version="1.0"?>
+
+<!--
+    Fire Runes.
+    Version: $Revision: 1.17 $
+    Date:    $Date: 2005-09-18 16:11:31 $
+-->
+
+<grimoire xmlns="http://yagsbook.sourceforge.net/xml/yags/habisfern" name="Fire">
+    <description xmlns="http://yagsbook.sourceforge.net/xml">
+        <para>
+            The domain of fire includes all that is hot and combustible.
+            It represents speed, energy and vitality as well as the
+            burning flames of fire. It can inflame passions and cause
+            fevers.
+        </para>
+
+        <para>
+            Those who know Fire get to add their Fire score to any resistances
+            against heat or flame, including for soak and the effect level
+            of spells.
+        </para>
+    </description>
+
+    <spell name="Ignite" level="0" type="fire">
+        <range>Touch</range>
+        <duration>Momentary</duration>
+        <damage>Minimal</damage>
+        <target>Tiny</target>
+
+        <summary>Ignites flammable material.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You create a brief spark that can ignite whatever you touch.
+                Materials which are highly flammable, such as oil, tinder or
+                dry paper will immediately burst into flame. If the target is
+                larger than the size affected, then only a portion of the
+                target will immediately ignite. In the case of highly
+                flammable materials, the fire will very quickly spread to
+                the rest of the target though.
+            </para>
+            <para>
+                Moderately flammable material such as dry wood or cloth will
+                ignite on a 10+ on a d20 roll. Poorly flammable material
+                will ignite on a 20+.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The sparks are larger and more intense, capable of setting
+                fire to moderately flammable materials such as dry wood or cloth.
+                Poorly flammable material will ignite on a 10+.
+            </para>
+        </description>
+    </spell>
+
+
+    <spell name="Warm" level="3" type="fire">
+        <range>Self</range>
+        <duration>Will</duration>
+        <radius>Small</radius>
+
+        <prerequisite>Ignite</prerequisite>
+
+        <summary>Warms a volume of air.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Gently warms a spherical volume of air around you. The radius
+                of the volume can be boosted as necessary to increase the size
+                of effect. By default, the temperature is increased by one
+                level (see the <e>Environment</e> article on temperature).
+            </para>
+
+            <para>
+                If there is a wind, then warmed air will be continually
+                carried away and replaced by colder air. Even in still air,
+                warmer air will rise.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The temperature can be increased by up to three levels.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Heat" level="5" type="fire">
+        <range>Reach</range>
+        <duration>Minutes</duration>
+        <target>Medium</target>
+
+        <prerequisite>Warm</prerequisite>
+
+        <summary>Heat a solid material to a high temperature.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                You can heat an object to above normal temperature so that
+                it is uncomfortably warm to the touch. A metal item requires
+                a <t>Health</t> check of 20+ to keep hold of. Metal armour
+                requires a <t>Health</t> check of 25 to be able to act
+                that round.
+            </para>
+            <para>
+                If used on a living creature, then this can actually keep
+                them warm. Any creature not larger than the size affected
+                can be warmed as if the temperature were three levels
+                warmer. Each extra size category increases their temperature
+                by another three levels.
+            </para>
+            <para>
+                It will cause snow and ice to melt within a minute, and
+                provide a warm bath in a couple of minutes more.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                You can heat the object to the point where it burns anyone
+                who touches it. Metal weapons will be dropped, and armour
+                will cause damage. Armour causes a <e>wound</e> each minute
+                it is worn, metal items require a <t>Health</t> check of
+                30+ each round to be kept hold of.
+            </para>
+            <para>
+                A living creature is warmed, but also receives a <e>Fatigue</e>
+                each minute.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                A living creature will receive a <e>Wound</e> each minute.
+            </para>
+        </description>
+    </spell>
+
+
+    <spell name="Burning Wind" level="7" type="fire">
+        <duration>Rounds</duration>
+        <range>Short</range>
+        <time>Round</time>
+
+        <prerequisite>Heat</prerequisite>
+
+        <summary>Creates a blast of hot wind that burns.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Creates an intensely hot wind which blows from the caster
+                in the specified direction, in a 30 degree arc. The range
+                can be doubled by halving the angle. Any within the blast
+                of air suffers +20 burning damage.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The damage is +25.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The damage is +30.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Wither" level="9" type="fire">
+        <range>Self</range>
+        <duration>Momentary</duration>
+        <radius>Medium</radius>
+
+        <prerequisite>Burning Wind</prerequisite>
+
+        <summary>Kills plant life in a large area.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Destroys all plant life in a large area. Grass will die
+                first, followed by flowers, bushes and trees depending
+                on the level of success. Plant life withers and dies as
+                if suffering from severe drought.
+            </para>
+            <para>
+                All grass, flowers and shrubs will shrivel up and die
+                within a few rounds of the invocation of this rune.
+            </para>
+
+            <targetlist targetFirst="true">
+                <targetLabel>Success</targetLabel>
+                <valueLabel>Effect</valueLabel>
+
+                <item target="Moderate">
+                    All grass shrivels and dies within a minute.
+                </item>
+
+                <item target="Good">
+                    Grass shrivels and dies in a few rounds, flowers and
+                    shrubs die in a minute.
+                </item>
+
+                <item target="Excellent">
+                    Grass dies immediately, flowers and shrubs in a few
+                    rounds and bushes in a minute.
+                </item>
+
+                <item target="Superb">
+                    Grass, flowers and shrubs die immediately, bushes take
+                    a few rounds and small trees about a minute.
+                </item>
+
+                <item target="Fantastic">
+                    Anything smaller than a small tree dies immediately,
+                    small trees take a few rounds and larger trees about
+                    a minute.
+                </item>
+
+                <item target="Amazing">
+                    Large trees take a few rounds to die and collapse,
+                    anything smaller shrivels within a round.
+                </item>
+            </targetlist>
+        </description>
+    </spell>
+
+    <spell name="Summer" level="12" type="fire">
+        <range>Self</range>
+        <duration>Day</duration>
+        <radius>Large</radius>
+
+        <prerequisite>Wither</prerequisite>
+
+        <summary>Warms a large region for a day.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                As per <e>Warm</e>, but effects a much larger area. The
+                region affected is static even if the caster moves, and
+                lasts until the next sunrise or sunset. It is often used
+                to protect crops, or a village, from cold weather.
+            </para>
+            <para>
+                The temperature is increased by up to five levels.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Control Fire" level="3" type="fire">
+        <range>Reach</range>
+        <duration>Minutes</duration>
+        <target>Small</target>
+
+        <prerequisite>Ignite</prerequisite>
+
+        <summary>Make a fire take on recognisable shapes.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Causes an existing fire to take on a specific shape,
+                or change a property. Heat, light and rate of burning
+                can each be halved or doubled for each level of
+                success. One level will change the shape of the
+                fire to a slight degree, two levels will form a
+                recognisable but unnatural shape (such as a face).
+                More success allow greater amount of detail.
+            </para>
+        </description>
+    </spell>
+
+
+    <spell name="Resist Fire" level="5" type="fire">
+        <range>Reach</range>
+        <duration>Will</duration>
+        <target>Few</target>
+
+        <prerequisite>Control Fire</prerequisite>
+
+        <summary>Provides protection from fire.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Increases the soak of the targets versus fire and heat by +5.
+                Range is to the furthest target to be protected at time
+                of casting. Also reduces the effect of any fire spells
+                that work according to the level of effect, such as
+                <e>Heat</e> or <e>Ignite</e>.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The protection is +10.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The protection is +20.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Smoke" level="5" type="fire">
+        <range>Self</range>
+        <radius>Medium</radius>
+        <duration>Minutes</duration>
+
+        <prerequisite>Control Fire</prerequisite>
+
+        <summary>Fill an area with smoke.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Cause a fire to give off thick smoke which fills an area
+                choking and obscuring anyone caught within. Vision is
+                obscured and fatigue is gained for each level of success
+                beyond moderate.
+            </para>
+            <para>
+                Vision is limited to 10m, and the density of the smoke may
+                cause some coughing and irritated eyes.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                    title="Boost (Good)">
+            <para>
+                Vision is limited to 5m, and anyone in the area other
+                than yourself gains a level of fatigue each minute.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                    title="Boost (Excellent)">
+            <para>
+                Vision is limited to 2m, and anyone in the area other
+                than yourself gains a level of fatigue each round.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Fire Cloud" level="7" type="fire">
+        <range>Short</range>
+        <radius>Small</radius>
+        <duration>Rounds</duration>
+
+        <prerequisite>Smoke</prerequisite>
+
+        <summary>Fill an area with burning smoke.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Cause a fire to give off a thick cloud of smoke which
+                burns everything it comes into contact with. Anyone
+                within it takes a level of fatigue each round, and
+                suffers +5 fire damage.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                    title="Boost (Good)">
+            <para>
+                Everyone within takes +10 fire damage.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                    title="Boost (Excellent)">
+            <para>
+                Everyone within takes +15 fire damage.
+            </para>
+        </description>
+    </spell>
+
+
+
+    <!--
+        Begin the 'Alertness' thread.
+        Cantrips which make things faster or more perceptive. Also
+        scrying type runes are part of this thread.
+     -->
+
+    <spell name="Alertness" level="1" type="fire">
+        <range>Self</range>
+        <duration>Will</duration>
+        <target>Self</target>
+
+        <summary>Increases perception and initiative.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                An increase to your senses and reflexes gives you a bonus
+                to your <e>Initiative</e> and <e>Awareness</e> of +3.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The bonus is increased to +6.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Quicken" level="3" type="fire">
+        <range>Self</range>
+        <duration>Will</duration>
+        <target>Self</target>
+
+        <prerequisite>Alertness</prerequisite>
+
+        <summary>Increases base movement.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Your base movement speed is increased by +3. This affects your
+                speed in both combat, running and over long distances as long
+                as you maintain the invocation.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                Your bonus to movement is increased to +6.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Haste" level="5" type="fire">
+        <range>Self</range>
+        <duration>Will</duration>
+        <target>Self</target>
+
+        <prerequisite>Quicken</prerequisite>
+
+        <summary>Increases agility and dexterity.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When you invoke this rune upon yourself, your give yourself
+                a bonus of +1 to both <t>Agility</t> and <t>Dexterity</t>
+                for as long as you maintain it.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The <t>Agility</t> and <t>Dexterity</t> bonus is increased
+                to be +2.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The <t>Agility</t> and <t>Dexterity</t> bonus is increased
+                to be +3.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Fire Sight" level="5" type="fire">
+        <range>Self</range>
+        <duration>Will</duration>
+        <target>Self</target>
+
+        <prerequisite>Alertness</prerequisite>
+
+        <summary>You can see the heat of others.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When you invoke this rune, your vision is changed so that you
+                can see things according to the heat that they give off. This
+                replaces your normal sight, so you lose the ability to see
+                colour, texture and details such as writing. However, at night
+                or in darkness your vision may be greatly improved.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                Your vision becomes a combination of both normal sight and
+                your ability to see the temperature of things. You can operate
+                normally in daylight, but are are able to see things by their
+                warmth alone.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Visions from Flame" level="7" type="fire">
+        <target>One</target>
+        <range>Long</range>
+        <duration>Minutes</duration>
+
+        <prerequisite>Fire Sight</prerequisite>
+
+        <summary>Scry a distant fire.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                If you can see a fire in your line of sight which is in range
+                of this invocation, then you can 'see' what that fire sees.
+                How far you can see from the fire is dependent on how far the
+                light of the fire extends.
+            </para>
+            <para>
+                At night, if you can see a campfire, then you will be able to
+                see people within the light of the campfire as if they were
+                sitting next to you. The quality of the vision is indistinct -
+                enough to recognise faces, but not good enough to read lips
+                or writing.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                You can hear sound that is spoken within range of the fire. The
+                sound will be muffled, so whispered voices will not be heard, but
+                normal speech will be clear to you.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                You can boost the quality of the scrying so that you can either
+                hear whispered speech or see details such as writing.
+            </para>
+        </description>
+    </spell>
+
+    <!--
+        Combat thread.
+        All these runes are combat related.
+     -->
+
+    <spell name="Flame" level="5" type="fire">
+        <time>Action</time>
+        <range>Self</range>
+        <duration>Rounds</duration>
+        <resist>Soak</resist>
+
+        <prerequisite>Control Fire</prerequisite>
+
+        <summary>Creates a flame in the palm of the hand.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When you invoke this rune, a free burning flame is created
+                in your hand. It does no damage to you, but it can be used
+                to ignite material, strike at someone to cause damage, or
+                even thrown. The flame does +15 fire damage to anyone that
+                it hits.
+            </para>
+            <para>
+                You can throw the flame, or strike at someone with it, as
+                soon as it is invoked. You don't have to maintain concentration
+                in the round that you do this, but the invocation is immediately
+                cancelled as soon as the attack is resolved. This means that
+                you don't suffer the usual penalties for maintaining concentration
+                when you attack.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The flame does +20 fire damage.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The flame does +25 fire damage.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Ring of Fire" level="7" type="fire">
+        <range>Self</range>
+        <radius>Small</radius>
+        <duration>Minutes</duration>
+        <resist>Soak</resist>
+
+        <prerequisite>Flame</prerequisite>
+
+        <summary>Create a ring of fire around you.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When invoked, this ring creates a ring of fire that surrounds
+                you out to the radius of the invocation. Anyone who comes through
+                the ring takes fire damage of +15. The flames are as tall as you
+                are, but you are unaffected by the heat from them.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The height of the flames can be varied from one metre in height
+                up to three times your height.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                The ground between you and the perimeter of the ring can be
+                engulfed in fire as well, automatically damaging anyone who
+                is within the ring each round.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Engulf" level="9" type="fire">
+        <time>Action</time>
+        <range>Touch</range>
+        <duration>Minutes</duration>
+        <resist>Soak</resist>
+        <target>Few</target>
+
+        <prerequisite>Ring of Fire</prerequisite>
+
+        <summary>You are engulfed in flames.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                When this rune is invoked, you are engulfed in fire. The flames
+                surround you in a burning aura, but do not harm your body, though
+                your clothes and anything you carry will burn if they are flammable.
+                If you touch anything, it acts as <e>Ignite</e>. The flames also keep
+                you warm, optionally bringing the effective temperature up by five
+                levels.
+            </para>
+            <para>
+                You can affect others with this rune, and they become <e>engulfed</e>
+                in flames as you are. They are not harmed, though cannot end it until
+                you decide to end it for everyone.
+            </para>
+            <para>
+                Anyone who strikes at you in melee combat will receive +15 fire
+                damage. You may strike at someone with the flames, doing +20 fire
+                damage to them in an attack, with an attack and defence bonus equal
+                to your <e>Fire</e> score. Others may also attack in the same way,
+                though they get no bonus on their attack or defence.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                Others affected by this rune also gain your <e>Fire</e> score as a
+                bonus when they attack or defend.
+            </para>
+        </description>
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                When used to strike at enemies, the fires do +25 damage instead.
+                If you strike with a melee weapon instead, you do an extra +5
+                fire damage on top of the weapon's normal damage.
+            </para>
+        </description>
+    </spell>
+</grimoire>
+
+

@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<?xml-stylesheet
+    href="/usr/share/xml/yagsbook/article/xslt/html/yagsbook.xsl"
+    type="text/xsl"?>
+
+<article xmlns="http://yagsbook.sourceforge.net/xml"
+         xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
+         xmlns:h="http://yagsbook.sourceforge.net/xml/yags/habisfern">
+    <header>
+        <title>Magic</title>
+        <tagline>YAGS Fantasy</tagline>
+
+        <summary>
+            A fantasy magic system.
+        </summary>
+
+        <author>
+            <fullname>Samuel Penn</fullname>
+            <email>sam@glendale.org.uk</email>
+        </author>
+
+        <cvsinfo>
+            <version>$Revision: 0.7.10 $</version>
+            <date>$Date: 2006-06-07 21:30:46 $</date>
+        </cvsinfo>
+
+        <license type="Yags">
+            <year>2017</year>
+            <holder>Samuel Penn</holder>
+            <text>
+                This document can be redistributed and/or modified
+                under the terms of the GNU Public License as published
+                by the Free Software Foundation version 2.
+            </text>
+        </license>
+
+        <style name="magic"/>
+    </header>
+
+    <body>
+        <sect1>
+            <title>Magic</title>
+
+            <para>
+                Magic provides a means by which wizards and sorcerers can 
+                control nature and force it to do their bidding.
+            </para>
+
+            <sect2>
+                <title>The Elements</title>
+
+                <para>
+                    Knowledge of magic is divided into seven
+                    <e>Elements</e>, each of which grants the you power over
+                    that facet of the world.
+                </para>
+
+                <para>
+                    The six main Elements are <e>Spirit</e>, <e>Water</e>,
+                    <e>Earth</e>, <e>Iron</e>, <e>Fire</e> and <e>Air</e>.
+                    There is a seventh, called <e>Dragon</e>, which stands
+                    separate to the others. It cannot be learnt until the
+                    others have been understood to a sufficient degree,
+                    and it gives power over the fundamental reality of the
+                    world.
+                </para>
+                <para>
+                    Mysteries can be considered to form a circle, with each
+                    one opposed by the one opposite. Learning an opposing
+                    Mystery can interfere with what you know. Every full three
+                    points of skill in a Mystery causes a -1 penalty to your
+                    attribute when using an opposed Mystery.
+                </para>
+                <para>
+                    A Mystery is supported by its two neighbours. For every
+                    four full points of the lowest neighbour, you gain +1 to
+                    your attribute when making a Mystery check.
+                </para>
+            </sect2>
+            
+            <sect2>
+                <title>Arcane Magic</title>
+                
+                <para>
+                    Arcana covers magic which is powered from the natural magical
+                    nature of the world itself. There are two ways of channelling
+                    arcane magic - either through <e>Sorcery</e> or <e>Wizardry</e>.
+                </para>
+                
+                <para>
+                    <e>Sorcery</e> is raw, wild, magic, channelled using the raw
+                    talent of the caster. Sorcerers are closely tied to the world,
+                    and don't have need of books or other forms of structured
+                    learning in order to make use of magic.
+                </para>
+                
+                <para>
+                    Sorcery though is crude and simple, and lacks some of the finer
+                    options available through wizardry. A sorcerer has more flexibility
+                    in what they can do with what they have, but what they have is
+                    limited. Sorcerers are common amongst tribesmen and uncultured
+                    races which don't have access to libraries and books.
+                </para>
+                
+                <para>
+                    <e>Wizardry</e> is harder to learn, and requires highly structured
+                    formulae that need to be mastered before any given spell can be
+                    cast. However, Wizards have a great many spells available to learn,
+                    many of which are more subtle and complex compared to Sorcery.
+                    Wizards are also able to invent their own spells.
+                </para>
+            </sect2>
+
+        </sect1>
+        
+        <sect1>
+            <title>Sorcery</title>
+            
+            <para>
+                Sorcery is flexible.
+            </para>
+            
+
+
+
+            <sect2>
+                <title>Spells</title>
+
+                <para>
+                    Though most wizards keep to using the basic powers of
+                    the Mysteries, a few strive to gain a deeper knowledge
+                    of magic, by learning <e>Runes</e>. A rune is a
+                    simple invocation which is associated with a Mystery,
+                    and which provides a simple magical effect. Simple does
+                    not mean weak however, and some rune are capable
+                    of destroying a town or slaying someone with a word.
+                </para>
+                <para>
+                    Each rune must be learnt separately, and is treated
+                    as a <e>technique</e>, in that they have a prerequisite
+                    of a skill level and other rune. However, they
+                    cannot be purchased with experience, but must
+                    be learnt through meditation and self-sacrifice.
+                </para>
+                <para>
+                    Runes are thought to be an inherent part of the world,
+                    created originally by the gods. As such, it is not
+                    possible to invent new runes of your own.
+                </para>
+
+                <sect3>
+                    <title>Learning Runes</title>
+
+                    <para>
+                        Learning <e>runes</e> takes at least a week, and requires
+                        an <t>Intelligence</t> check against a TN of 5 * level of the
+                        <e>rune</e>. You require a number of successes equal to the
+                        level of rune, and it takes a week for each roll.
+                    </para>
+
+                </sect3>
+
+                <sect3>
+                    <title>Describing Spells</title>
+
+                    <para>
+                        Most runes can be invoked in a single action, and
+                        require little in the way of gestures or
+                        incantations. Runes are described under the
+                        section for the individual Mysteries, and they all
+                        follow the same format. An example rune is given
+                        below.
+                    </para>
+
+                    <h:spell name="Example Rune" level="1" type="any">
+                        <h:time>Action</h:time>
+                        <h:range>Short</h:range>
+                        <h:duration>Concentration</h:duration>
+                        <h:area>Large</h:area>
+                        <h:target>Few</h:target>
+                        <h:resist>Will</h:resist>
+
+                        <h:prerequisite>Another rune</h:prerequisite>
+
+                        <description>
+                            <para>
+                                A description of what the Rune does and how it
+                                can be used. Most Runes are relatively simple in
+                                their effects.
+                            </para>
+                        </description>
+
+                        <description title="Boost (Good):">
+                            <para>
+                                A description of what can be achieved on a <e>good</e>
+                                success when invoking the Rune.
+                            </para>
+                        </description>
+                    </h:spell>
+
+                    <para>
+                        The first part of the description lists basic attributes
+                        of the rune. Their meanings are given below. These attributes
+                        can often be <e>extended</e>, increasing the range, duration
+                        or area of the spell. Each extension increases the TN by 5.
+                        You can extend a spell a number of times equal to your score
+                        in that <e>Element</e>.
+                    </para>
+
+
+                    <sect4>
+                        <title>Range</title>
+
+                        <para>
+                            <e>Spells</e> have a limit to how far away the target of their
+                            effects can be. If there are multiple targets, then unless
+                            otherwise specified in the description of the rune then this
+                            is the distance to the furthest one.
+                        </para>
+                        <para>
+                            Each time you extend the range of a spell, then you add +5
+                            to the TN. Runes with a range of Self and Touch cannot be
+                            extended.
+                        </para>
+
+                        <itemlist order="strict">
+                            <item name="Self">
+                                The rune either can only affect you, or the effects are
+                                centred on you.
+                            </item>
+
+                            <item name="Touch">
+                                You can affect yourself, or a target you are directly
+                                touching.
+                            </item>
+
+                            <item name="Reach (1m)">
+                                You can affect a target within 1m of you. Each time you
+                                extend the range, you add 1m.
+                            </item>
+
+                            <item name="Short (3m)">
+                                You can affect a target within 3m of you. Each time you
+                                extend the range, you add a further 3m.
+                            </item>
+
+                            <item name="Medium (10m)">
+                                You can affect a target out to a range of 10m. Each time
+                                you extend the range, you add a further 10m.
+                            </item>
+
+                            <item name="Long (30m)">
+                                You can affect a target out to a range of 30m. Each time
+                                you extend the range, you add a further 30m.
+                            </item>
+
+                            <item name="Far (100m)">
+                                You can affect a target out to a range of 100m. Each time
+                                you extend the range, you add a further 100m.
+                            </item>
+
+                        </itemlist>
+                    </sect4>
+
+                    <sect4>
+                        <title>Duration</title>
+
+                        <para>
+                            <e>Duration</e> determines how long the effects of the rune
+                            invocation lasts. Extending the duration is much harder than
+                            other attributes of a rune, and only runes with a duration
+                            of <e>Rounds</e> or <e>Minutes</e> can be extended.
+                        </para>
+
+                        <itemlist order="strict">
+                            <item name="Momentary">
+                                The magic lasts only an instant, though the consequences
+                                may be permanent. A spell which slays a person would be
+                                momentary, but death lasts forever.
+                            </item>
+                            <item name="Natural">
+                                The magic has an affect which will decay naturally over
+                                time. The rate of decay will be described in the description
+                                of the rune.
+                            </item>
+                            <item name="Will">
+                                The magic lasts as long as you will it to. Such magic does
+                                not require much thought to maintain, and you can perform
+                                other actions, including invoking other runes, whilst doing
+                                it. Any runes you invoke during this time though are at +10
+                                TN (+15 if from an opposed mystery). You can will
+                                multiple magical effects, but the penalties stack. You can
+                                end a willed invocation at any time.
+                            </item>
+                            <item name="Rounds">
+                                The magic lasts for as long as you concentrate. Every extra
+                                round you concentrate for beyond the first gains you one
+                                Fatigue. Can be extended to Minutes at an increase of +15.
+                            </item>
+                            <item name="Minutes">
+                                The magic lasts for as long as you concentrate. Every extra
+                                minute that you concentrate for beyond the first gains you
+                                one level of Fatigue. Can be extended to Hours at an increase
+                                of +30.
+                            </item>
+                            <item name="Hours">
+                                The magic lasts for as long as you concentrate. Every extra
+                                hour that you concentrate for beyond the first gains you
+                                one level of Exhaustion.
+                            </item>
+                            <item name="Day">
+                                The effect lasts until the next sunset. In the far north
+                                of the world, such effects can last many months. If underground,
+                                the invocation ends at sunset as if you were on the surface
+                                at your location.
+                            </item>
+                            <item name="Moon">
+                                The effect lasts until the next new moon. The actual time
+                                of ending is when the new crescent first rises above the
+                                horizon. Mountains, buildings and other obstructions that
+                                block the horizon do not affect this, but your altitude
+                                does.
+                            </item>
+                        </itemlist>
+                        <para>
+                            Invocations which last <e>Rounds</e>, <e>Minutes</e> or
+                            <e>Hours</e> require intense concentration to maintain. Whilst
+                            concentrating, you cannot invoke any other runes, though you
+                            can try using raw magical effects. All skill checks are halved,
+                            and you move at half speed. At the end of each period, you can
+                            choose whether to continue concentrating or to drop the effect.
+                            If you continue, you gain a <e>Fatigue</e> (or an <e>Exhaustion</e>
+                            for <e>Hours</e> effects) and must make a <t>Will</t> check at
+                            a TN of 10. If you fail, the effect ends anyway (though you
+                            still gain <e>Fatigue</e> or <e>Exhaustion</e>).
+                        </para>
+                        <para>
+                            Both <e>Will</e> and <e>Concentration</e> effects require you to
+                            be conscious, so anything that causes you to lose consciousness
+                            (including sleep) causes them to immediately end.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Target</title>
+
+                        <para>
+                            The target of the rune defines how many individual targets
+                            can be affected by a single invocation. As for the
+                            <e>Range</e>, the number of targets can be extended if you
+                            need to affect a larger number of things. All targets must
+                            be within the <e>Range</e> of the spell.
+                        </para>
+
+                        <itemlist order="strict">
+                            <item name="Self">
+                                You can only affect yourself with this rune. Runes with
+                                a range of Self normally also have a target of Self,
+                                though some may have a radius effect centred on you.
+                            </item>
+
+                            <item name="One">
+                                You can affect a single individual target, either yourself
+                                or one target within range.
+                            </item>
+
+                            <item name="Individual">
+                                The target can be a single individual, either yourself
+                                or one target within range. You can extend this to Few.
+                            </item>
+
+                            <item name="Few">
+                                Can affect up to 3 targets with this Rune, none more
+                                than 3 metres from another. You can extend it to be Dozen.
+                            </item>
+
+                            <item name="Dozen">
+                                Can affect up to 12 targets with this Rune. You can
+                                select individual targets out of a crowd, but none can
+                                be more than 5 metres from another.
+                                You can extend this to be Crowd.
+                            </item>
+
+                            <item name="Crowd">
+                                Can affect up to 50 targets, but are unable to limit
+                                this to particular individuals. You designate a particular
+                                individual and all those closest to them are affected.
+                                None can be more than 10 metres from another.
+                                You can extend this multiple times, doubling the number
+                                affected each time.
+                            </item>
+
+                            <item name="Range">
+                                All targets within range of the rune are affected
+                                regardless of number or distance from each other.
+                            </item>
+
+                            <item name="Tiny">
+                                Affects a single target up to size 1. Can be extended to
+                                small.
+                            </item>
+                            <item name="Small">
+                                Affects a single target up to size 3. Can be extended to
+                                medium.
+                            </item>
+                            <item name="Medium">
+                                Affects a single target up to size 6. Can be extended to
+                                large.
+                            </item>
+                            <item name="Large">
+                                Affects a single target up to size 10. Can be extended to
+                                huge.
+                            </item>
+                            <item name="Huge">
+                                Affects a single target up to size 15. Can be extended to
+                                gigantic.
+                            </item>
+                            <item name="Gigantic">
+                                Affects a single target up to size 20. Each further
+                                extension increases the size that can be affected by
+                                +5.
+                            </item>
+                        </itemlist>
+                    </sect4>
+
+                    <sect4>
+                        <title>Radius</title>
+
+                        <para>
+                            If a radius is given instead of a target, then
+                            the rune affects everything within this
+                            radius, focused on a point within the maximum
+                            range.
+                        </para>
+
+                        <itemlist order="strict">
+                            <item name="Tiny">
+                                Affects an area out to 1m from the target point.
+                                Can be extended to Small.
+                            </item>
+                            <item name="Small">
+                                Affects an area out to 3m from the target point.
+                                Can be extended to Medium.
+                            </item>
+                            <item name="Medium">
+                                Affects an area out to 10m from the target point.
+                                Can be extended to Large.
+                            </item>
+                            <item name="Large">
+                                Affects an area out to 25m from the target point.
+                                Can be extended to Huge.
+                            </item>
+                            <item name="Huge">
+                                Affects an area out to 50m from the target point.
+                                Can be extended multiple times, each level of boost
+                                will double the radius.
+                            </item>
+                        </itemlist>
+                    </sect4>
+                </sect3>
+
+                <sect3>
+                    <title>Invoking a Rune</title>
+
+                    <para>
+                        When a <e>Rune</e> is invoked, you must make a
+                        <y:skeq><y:attr>Will</y:attr><y:sk>Mystery</y:sk><y:die/></y:skeq>
+                        check against a target difficulty equal to five times the level
+                        of the <e>Rune</e> (plus any extras from <e>extending</e>. If you
+                        succeed, then the rune is invoked and you gain an amount of
+                        <e>Exhaustion</e> based on the level of the rune. If you fail,
+                        then you gain one Fatigue and nothing happens.
+                    </para>
+
+                    <targetlist targetFirst="true">
+                        <targetLabel>Level</targetLabel>
+                        <valueLabel>Fatigue / Exhaustion</valueLabel>
+
+                        <item target="1" value="1 Fatigue"/>
+                        <item target="3, 5" value="1 Exhaustion"/>
+                        <item target="7, 9" value="2 Exhaustion"/>
+                        <item target="11, 13" value="3 Exhaustion"/>
+                        <item target="15+" value="4 Exhaustion"/>
+                    </targetlist>
+
+                    <para>
+                        Each level of success you get above the target needed may be
+                        used to reduce the <e>Exhaustion</e> by 1 level. Dropping it
+                        below 1 will reduce it to a single level of <e>Fatigue</e>,
+                        and beyond that to zero. High level runes are harder to
+                        invoke, and also require more successes to avoid becoming.
+                        exhausted.
+                    </para>
+
+                    <sect4>
+                        <title>Extending Attributes</title>
+
+                        <para>
+                            Before you attempt the invocation, you can choose to
+                            <e>extend</e> one or more of the standard attributes
+                            of the rune. Each level of boost normally adds +5 to
+                            the TN of the invocation.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Boosting Effects</title>
+                        <para>
+                            If you succeed with extra levels of success, then you can either
+                            use these to boost the effectiveness of the invocation (either
+                            for a <e>Good</e> or <e>Excellent</e> success), or to reduce the
+                            effort involved in the invocation.
+                        </para>
+                        <para>
+                            Level one and three runes can be boosted once (with a <e>Good</e>
+                            success), level five and seven runes can be boosted twice (with an
+                            <e>Excellent</e> success). Higher level runes may be boosted up
+                            to three times (with a <e>Superb</e> success).
+                        </para>
+                        <para>
+                            The decisions to boost effectiveness or reduce fatigue is made
+                            after the roll to invoke the rune. You may combine reducing the
+                            fatigue with boosting the effect.
+                        </para>
+                    </sect4>
+
+                    <sect4>
+                        <title>Words and Gestures</title>
+                        <para>
+                            Invoking a <e>Rune</e> requires the words of the rune to be
+                            spoken allowed, and in some cases for gestures to be made to
+                            trace out the symbols being spoken. The more powerful the
+                            invocation, the bolder the voice and gestures required.
+                        </para>
+                    </sect4>
+                </sect3>
+            </sect2>
+
+
+        </sect1>
+    </body>
+
+</article>
+
+
