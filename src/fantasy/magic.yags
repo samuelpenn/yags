@@ -7,7 +7,7 @@
          xmlns:y="http://yagsbook.sourceforge.net/xml/yags"
          xmlns:h="http://yagsbook.sourceforge.net/xml/yags/habisfern">
     <header>
-        <title>Magic</title>
+        <title>Arcane Magic</title>
         <tagline>YAGS Fantasy</tagline>
 
         <summary>
@@ -20,12 +20,12 @@
         </author>
 
         <cvsinfo>
-            <version>$Revision: 0.7.10 $</version>
+            <version>$Revision: 0.8.0 $</version>
             <date>$Date: 2006-06-07 21:30:46 $</date>
         </cvsinfo>
 
         <license type="Yags">
-            <year>2017</year>
+            <year>2018</year>
             <holder>Samuel Penn</holder>
             <text>
                 This document can be redistributed and/or modified
@@ -39,7 +39,7 @@
 
     <body>
         <sect1>
-            <title>Magic</title>
+            <title>Arcane Magic</title>
 
             <para>
                 In a fantasy world where magic is everywhere, the difference between magic and
@@ -54,6 +54,26 @@
                 forcing it to obey your commands rather than those of the natural order. There
                 are two ways of doing this - through <e>Sorcery</e> and through 
                 <e>Wizardry</e>.
+            </para>
+            
+            <para>
+                The two forms of magic are very similar in how they are used, but are very
+                different in how they are learned. A <e>sorcerer</e> has natural talent for
+                channelling magic, making use of their raw natural talent. They have no need
+                for books or formal study, and don't need spell components. However, the type
+                of magic they can perform is limited to the natural words of power they have
+                access to. Sorcerey is often used by tribal shamans, amongst humanoid tribes
+                or by unusual creatures.
+            </para>
+            
+            <para>
+                A <e>wizard</e> takes a more formal and structured approach to mastering magic,
+                studying the art from books and tutors. Each spell must be learned individually
+                through study. However, because a wizard has an understanding of how the world
+                works, they are able to invent their own spells, giving them access to a much
+                wider range of powers and effects than a sorcerer can master. However, wizards
+                are only found in civilised areas where access to libraries of magical lore can
+                be found.
             </para>
 
             <sect2>
@@ -102,44 +122,10 @@
                     be used effectively against each other.
                 </para>
             </sect2>
-            
-            <sect2>
-                <title>Arcane Magic</title>
-                
-                <para>
-                    Arcana covers magic which is powered from the natural magical
-                    nature of the world itself. There are two ways of channelling
-                    arcane magic - either through <e>Sorcery</e> or <e>Wizardry</e>.
-                </para>
-                
-                <para>
-                    <e>Sorcery</e> is raw, wild, magic, channelled using the raw
-                    talent of the caster. Sorcerers are closely tied to the world,
-                    and don't have need of books or other forms of structured
-                    learning in order to make use of magic.
-                </para>
-                
-                <para>
-                    Sorcery though is crude and simple, and lacks some of the finer
-                    options available through wizardry. A sorcerer has more flexibility
-                    in what they can do with what they have, but what they have is
-                    limited. Sorcerers are common amongst tribesmen and uncultured
-                    races which don't have access to libraries and books.
-                </para>
-                
-                <para>
-                    <e>Wizardry</e> is harder to learn, and requires highly structured
-                    formulae that need to be mastered before any given spell can be
-                    cast. However, Wizards have a great many spells available to learn,
-                    many of which are more subtle and complex compared to Sorcery.
-                    Wizards are also able to invent their own spells.
-                </para>
-            </sect2>
-
         </sect1>
         
         <sect1>
-            <title>Sorcery</title>
+            <title>Arcane Spells</title>
             
             <para>
                 Sorcery is flexible.
@@ -302,10 +288,9 @@
                         <title>Duration</title>
 
                         <para>
-                            <e>Duration</e> determines how long the effects of the rune
-                            invocation lasts. Extending the duration is much harder than
-                            other attributes of a rune, and only runes with a duration
-                            of <e>Rounds</e> or <e>Minutes</e> can be extended.
+                            <e>Duration</e> determines how long the effects of the spell lasts.
+                            Most durations can't be extended, the effects of the spell simply
+                            last as long as specified.
                         </para>
 
                         <itemlist order="strict">
@@ -322,58 +307,48 @@
                             <item name="Will">
                                 The magic lasts as long as you will it to. Such magic does
                                 not require much thought to maintain, and you can perform
-                                other actions, including invoking other runes, whilst doing
-                                it. Any runes you invoke during this time though are at +10
-                                TN (+15 if from an opposed mystery). You can will
-                                multiple magical effects, but the penalties stack. You can
-                                end a willed invocation at any time.
+                                other actions, including invoking other spells, whilst doing
+                                it. Any spells you invoke during this time though are at +10
+                                TN to cast. You can will multiple magical effects, but the 
+                                penalties stack. You can end a willed spell at any time.
+                            </item>
+                            <item name="Brief">
+                                The magic lasts for a brief period of time then expires
+                                after three rounds. It does not require concentration of any
+                                sort, and you can cast other spells during this period without
+                                any penalty.
                             </item>
                             <item name="Rounds">
-                                The magic lasts for as long as you concentrate. Every extra
-                                round you concentrate for beyond the first gains you one
-                                Fatigue. Can be extended to Minutes at an increase of +15.
+                                The magic lasts for as long as you concentrate, and you gain
+                                one fatigue every extra round it lasts.
                             </item>
                             <item name="Minutes">
-                                The magic lasts for as long as you concentrate. Every extra
-                                minute that you concentrate for beyond the first gains you
-                                one level of Fatigue. Can be extended to Hours at an increase
-                                of +30.
+                                The magic lasts for as long as you concentrate, and you gain
+                                one fatigue every extra minute it lasts.
                             </item>
                             <item name="Hours">
-                                The magic lasts for as long as you concentrate. Every extra
-                                hour that you concentrate for beyond the first gains you
-                                one level of Exhaustion.
-                            </item>
-                            <item name="Day">
-                                The effect lasts until the next sunset. In the far north
-                                of the world, such effects can last many months. If underground,
-                                the invocation ends at sunset as if you were on the surface
-                                at your location.
-                            </item>
-                            <item name="Moon">
-                                The effect lasts until the next new moon. The actual time
-                                of ending is when the new crescent first rises above the
-                                horizon. Mountains, buildings and other obstructions that
-                                block the horizon do not affect this, but your altitude
-                                does.
+                                The magic lasts for as long as you concentrate, and you gain
+                                one fatigue every extra hour it lasts.
                             </item>
                         </itemlist>
                         <para>
                             Invocations which last <e>Rounds</e>, <e>Minutes</e> or
                             <e>Hours</e> require intense concentration to maintain. Whilst
-                            concentrating, you cannot invoke any other runes, though you
-                            can try using raw magical effects. All skill checks are halved,
-                            and you move at half speed. At the end of each period, you can
-                            choose whether to continue concentrating or to drop the effect.
-                            If you continue, you gain a <e>Fatigue</e> (or an <e>Exhaustion</e>
-                            for <e>Hours</e> effects) and must make a <t>Will</t> check at
-                            a TN of 10. If you fail, the effect ends anyway (though you
-                            still gain <e>Fatigue</e> or <e>Exhaustion</e>).
+                            concentrating, you have -1 to <t>Agility</t>, <t>Dexterity</t>,
+                            <t>Perception</t>, <t>Intelligence</t> and <t>Empathy</t>.
                         </para>
+                        
                         <para>
-                            Both <e>Will</e> and <e>Concentration</e> effects require you to
-                            be conscious, so anything that causes you to lose consciousness
-                            (including sleep) causes them to immediately end.
+                            If you are concentrating on multiple spells, then these penalties
+                            stack for each extra spell you are concentrating on. If you lose
+                            consciousness, then all spells immediately end.
+                        </para>
+                        
+                        <para>
+                            If you take damage whilst concentrating, you must make a <t>Will</t>
+                            check at a TN of 10 + five times number of wounds received for
+                            each spell you are concentrating on. If you fail, the spell ends
+                            immediately. This rolls are considered to be simultaneous.
                         </para>
                     </sect4>
 
@@ -381,49 +356,55 @@
                         <title>Target</title>
 
                         <para>
-                            The target of the rune defines how many individual targets
-                            can be affected by a single invocation. As for the
+                            The target of the spell defines how many individual targets
+                            can be affected by a single casting. As for the
                             <e>Range</e>, the number of targets can be extended if you
                             need to affect a larger number of things. All targets must
                             be within the <e>Range</e> of the spell.
                         </para>
+                        
+                        <para>
+                            When affecting multiple targets, each individual can only be
+                            affected once.
+                        </para>
 
                         <itemlist order="strict">
                             <item name="Self">
-                                You can only affect yourself with this rune. Runes with
+                                You can only affect yourself with this spell. Runes with
                                 a range of Self normally also have a target of Self,
                                 though some may have a radius effect centred on you.
                             </item>
 
                             <item name="One">
                                 You can affect a single individual target, either yourself
-                                or one target within range.
+                                or one target within range. All targets must be within range
+                                of the spell, plus the distance between the furthest two
+                                targets must be within the range of the spell.
                             </item>
 
-                            <item name="Individual">
+                            <item name="Individual (1)">
                                 The target can be a single individual, either yourself
-                                or one target within range. You can extend this to Few.
+                                or one target within range. Each time it is extended you
+                                can affect another individual.
                             </item>
 
-                            <item name="Few">
-                                Can affect up to 3 targets with this Rune, none more
-                                than 3 metres from another. You can extend it to be Dozen.
+                            <item name="Few (3)">
+                                Can affect up to 3 targets with this spell. Each time you
+                                extend the target you can affect a further 3 individuals.
                             </item>
 
-                            <item name="Dozen">
-                                Can affect up to 12 targets with this Rune. You can
-                                select individual targets out of a crowd, but none can
-                                be more than 5 metres from another.
-                                You can extend this to be Crowd.
+                            <item name="Dozen (12)">
+                                Can affect up to 12 targets with this spell. Each time it
+                                is extended you can affect another 12 individuals. All must
+                                be within range of the spell, and each other.
                             </item>
 
-                            <item name="Crowd">
+                            <item name="Crowd (50)">
                                 Can affect up to 50 targets, but are unable to limit
                                 this to particular individuals. You designate a particular
                                 individual and all those closest to them are affected.
-                                None can be more than 10 metres from another.
-                                You can extend this multiple times, doubling the number
-                                affected each time.
+                                Each time this is extended the spell will affect another
+                                50 individuals.
                             </item>
 
                             <item name="Range">
@@ -432,31 +413,23 @@
                             </item>
 
                             <item name="Tiny">
-                                Affects a single target up to size 1. Can be extended to
-                                small.
+                                Affects a single target up to size 1.
                             </item>
                             <item name="Small">
-                                Affects a single target up to size 3. Can be extended to
-                                medium.
+                                Affects a single target up to size 3.
                             </item>
                             <item name="Medium">
-                                Affects a single target up to size 6. Can be extended to
-                                large.
+                                Affects a single target up to size 6.
                             </item>
                             <item name="Large">
-                                Affects a single target up to size 10. Can be extended to
-                                huge.
-                            </item>
-                            <item name="Huge">
-                                Affects a single target up to size 15. Can be extended to
-                                gigantic.
-                            </item>
-                            <item name="Gigantic">
-                                Affects a single target up to size 20. Each further
-                                extension increases the size that can be affected by
-                                +5.
+                                Affects a single target up to size 10.
                             </item>
                         </itemlist>
+                        
+                        <para>
+                            If a target size is specified, then each extension increases the
+                            maximum size of the target by the given amount.
+                        </para>
                     </sect4>
 
                     <sect4>
@@ -470,26 +443,20 @@
                         </para>
 
                         <itemlist order="strict">
-                            <item name="Tiny">
+                            <item name="Tiny (1m)">
                                 Affects an area out to 1m from the target point.
-                                Can be extended to Small.
                             </item>
-                            <item name="Small">
+                            <item name="Small (3m)">
                                 Affects an area out to 3m from the target point.
-                                Can be extended to Medium.
                             </item>
-                            <item name="Medium">
+                            <item name="Medium (10m)">
                                 Affects an area out to 10m from the target point.
-                                Can be extended to Large.
                             </item>
-                            <item name="Large">
+                            <item name="Large (25m)">
                                 Affects an area out to 25m from the target point.
-                                Can be extended to Huge.
                             </item>
-                            <item name="Huge">
+                            <item name="Huge (50m)">
                                 Affects an area out to 50m from the target point.
-                                Can be extended multiple times, each level of boost
-                                will double the radius.
                             </item>
                         </itemlist>
                     </sect4>

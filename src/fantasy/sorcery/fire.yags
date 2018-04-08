@@ -14,19 +14,13 @@
             burning flames of fire. It can inflame passions and cause
             fevers.
         </para>
-
-        <para>
-            Those who know Fire get to add their Fire score to any resistances
-            against heat or flame, including for soak and the effect level
-            of spells.
-        </para>
     </description>
 
-    <spell name="Ignite" level="10" type="fire">
-        <range>Touch</range>
+    <spell name="Ignite" level="0" type="fire">
+        <range>Reach (1m)</range>
         <duration>Momentary</duration>
-        <damage>Minimal</damage>
-        <target>Tiny</target>
+        <damage>Minimal (+1)</damage>
+        <target>Tiny (1)</target>
 
         <summary>Ignites flammable material.</summary>
 
@@ -56,9 +50,107 @@
             </para>
         </description>
     </spell>
+    
+    <spell name="Fiery Bolt" level="10" type="fire">
+        <range>Close (3m)</range>
+        <duration>Momentary</duration>
+        <damage>Light</damage>
+        <target>One</target>
+        
+        <prerequisite>Ignite</prerequisite>
+        <summary>Shoots a bolt of fire at a single target.</summary>
+        
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Shoots a <e>bolt</e> of fire at a single target within range, doing 
+                <e>wounding</e> damage.
+            </para>
+        </description>
 
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                You can fire two bolts at up to two targets, or a single bolt that
+                does <e>Medium</e> damage.
+            </para>
+        </description>
 
-    <spell name="Warm" level="3" type="fire">
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                You can fire three bolts at up to three targets.
+            </para>
+        </description>
+    </spell>
+    
+    <spell name="Flaming Ray" level="20" type="fire">
+        <range>Short (10m)</range>
+        <duration>Momentary</duration>
+        <damage>Moderate (+6)</damage>
+        <target>One</target>
+        
+        <prerequisite>Fiery Bolt</prerequisite>
+        <summary>Shoots a ray of fire at a single target.</summary>
+        
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Shoots a <e>ray</e> of flaming energy at the specified target, doing
+                the specified amount of fire damage.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                If it does damage, the ray also causes 5 points of shock.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                If it does damage, the ray can also set the target on fire. The 
+                target suffers a <e>wound</e> every round until the fire is
+                extinguished.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Fireball" level="30" type="fire">
+        <range>Short (10m)</range>
+        <duration>Momentary</duration>
+        <damage>Moderate (+6)</damage>
+        <target>One</target>
+        <radius>Small (3m)</radius>
+        
+        <prerequisite>Flaming Ray</prerequisite>
+        <summary>Causes an explosion of fire.</summary>
+        
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                The specified point explodes in a burst of fire, doing fire damage to
+                everyone within the radius of effect.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Good)">
+            <para>
+                The explosion also does 10 points of shock to anyone that it damages.
+            </para>
+        </description>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml"
+                     title="Boost (Excellent)">
+            <para>
+                As well as causing shock, the explosion can also knock people off their
+                feet. If the damage exceeds <t>Size</t> x 5 of each target, then that
+                target is knocked down.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Warm" level="10" type="fire">
         <range>Self</range>
         <duration>Will</duration>
         <radius>Small</radius>
@@ -90,7 +182,7 @@
         </description>
     </spell>
 
-    <spell name="Heat" level="5" type="fire">
+    <spell name="Heat" level="20" type="fire">
         <range>Reach</range>
         <duration>Minutes</duration>
         <target>Medium</target>
@@ -144,7 +236,7 @@
     </spell>
 
 
-    <spell name="Burning Wind" level="7" type="fire">
+    <spell name="Burning Wind" level="30" type="fire">
         <duration>Rounds</duration>
         <range>Short</range>
         <time>Round</time>
@@ -175,7 +267,7 @@
         </description>
     </spell>
 
-    <spell name="Wither" level="9" type="fire">
+    <spell name="Wither" level="40" type="fire">
         <range>Self</range>
         <duration>Momentary</duration>
         <radius>Medium</radius>
@@ -233,7 +325,7 @@
         </description>
     </spell>
 
-    <spell name="Summer" level="12" type="fire">
+    <spell name="Summer" level="50" type="fire">
         <range>Self</range>
         <duration>Day</duration>
         <radius>Large</radius>
@@ -255,33 +347,13 @@
         </description>
     </spell>
 
-    <spell name="Control Fire" level="3" type="fire">
-        <range>Reach</range>
-        <duration>Minutes</duration>
-        <target>Small</target>
-
-        <prerequisite>Ignite</prerequisite>
-
-        <summary>Make a fire take on recognisable shapes.</summary>
-
-        <description xmlns="http://yagsbook.sourceforge.net/xml">
-            <para>
-                Causes an existing fire to take on a specific shape,
-                or change a property. Heat, light and rate of burning
-                can each be halved or doubled for each level of
-                success. One level will change the shape of the
-                fire to a slight degree, two levels will form a
-                recognisable but unnatural shape (such as a face).
-                More success allow greater amount of detail.
-            </para>
-        </description>
-    </spell>
 
 
-    <spell name="Resist Fire" level="5" type="fire">
-        <range>Reach</range>
+    <spell name="Resist Fire" level="0" type="fire">
+        <range>Self</range>
         <duration>Will</duration>
-        <target>Few</target>
+        <target>Self</target>
+        <effect>Moderate (+3)</effect>
 
         <prerequisite>Control Fire</prerequisite>
 
@@ -306,6 +378,28 @@
                      title="Boost (Excellent)">
             <para>
                 The protection is +20.
+            </para>
+        </description>
+    </spell>
+
+    <spell name="Control Fire" level="10" type="fire">
+        <range>Reach</range>
+        <duration>Minutes</duration>
+        <target>Small</target>
+
+        <prerequisite>Resist Fire</prerequisite>
+
+        <summary>Make a fire take on recognisable shapes.</summary>
+
+        <description xmlns="http://yagsbook.sourceforge.net/xml">
+            <para>
+                Causes an existing fire to take on a specific shape,
+                or change a property. Heat, light and rate of burning
+                can each be halved or doubled for each level of
+                success. One level will change the shape of the
+                fire to a slight degree, two levels will form a
+                recognisable but unnatural shape (such as a face).
+                More success allow greater amount of detail.
             </para>
         </description>
     </spell>
