@@ -19,7 +19,6 @@
     <spell name="Ignite" level="0" type="fire">
         <range>Reach (1m)</range>
         <duration>Momentary</duration>
-        <damage>Minimal (+1)</damage>
         <target>Tiny (1)</target>
 
         <summary>Ignites flammable material.</summary>
@@ -39,6 +38,9 @@
                 ignite on a 10+ on a d20 roll. Poorly flammable material
                 will ignite on a 20+.
             </para>
+            <para>
+                If cast on a living target, it does +3 <e>stun</e> damage.
+            </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
@@ -52,9 +54,8 @@
     </spell>
     
     <spell name="Fiery Bolt" level="10" type="fire">
-        <range>Close (3m)</range>
+        <range>Short (10m)</range>
         <duration>Momentary</duration>
-        <damage>Light</damage>
         <target>One</target>
         
         <prerequisite>Ignite</prerequisite>
@@ -63,61 +64,58 @@
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
                 Shoots a <e>bolt</e> of fire at a single target within range, doing 
-                <e>wounding</e> damage.
+                +7 <e>wounding</e> damage.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Good)">
             <para>
-                You can fire two bolts at up to two targets, or a single bolt that
-                does <e>Medium</e> damage.
+                The bolt does +11 fire damage.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Excellent)">
             <para>
-                You can fire three bolts at up to three targets.
+                The bolt does +17 fire damage.
             </para>
         </description>
     </spell>
     
     <spell name="Flaming Ray" level="20" type="fire">
-        <range>Short (10m)</range>
+        <range>Medium (30m)</range>
         <duration>Momentary</duration>
-        <damage>Moderate (+6)</damage>
-        <target>One</target>
+        <target>Individual (1)</target>
         
         <prerequisite>Fiery Bolt</prerequisite>
-        <summary>Shoots a ray of fire at a single target.</summary>
+        <summary>Shoots a ray of fire at one or more targets.</summary>
         
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                Shoots a <e>ray</e> of flaming energy at the specified target, doing
-                the specified amount of fire damage.
+                Shoots a <e>ray</e> of flaming energy at the specified targets, doing
+                +11 <e>wounding</e> fire damage to each one. If multiple rays are fired,
+                each much be at a different target.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Good)">
             <para>
-                If it does damage, the ray also causes 5 points of shock.
+                Each ray does +17 fire damage if it hits.
             </para>
         </description>
 
         <description xmlns="http://yagsbook.sourceforge.net/xml"
                      title="Boost (Excellent)">
             <para>
-                If it does damage, the ray can also set the target on fire. The 
-                target suffers a <e>wound</e> every round until the fire is
-                extinguished.
+                Each ray does +25 fire damage if it hits.
             </para>
         </description>
     </spell>
 
     <spell name="Fireball" level="30" type="fire">
-        <range>Short (10m)</range>
+        <range>Medium (30m)</range>
         <duration>Momentary</duration>
         <damage>Moderate (+6)</damage>
         <target>One</target>
@@ -128,7 +126,7 @@
         
         <description xmlns="http://yagsbook.sourceforge.net/xml">
             <para>
-                The specified point explodes in a burst of fire, doing fire damage to
+                The specified point explodes in a burst of fire, doing +11 fire damage to
                 everyone within the radius of effect.
             </para>
         </description>

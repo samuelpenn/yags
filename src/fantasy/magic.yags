@@ -463,46 +463,48 @@
                 </sect3>
 
                 <sect3>
-                    <title>Invoking a Rune</title>
+                    <title>Casting a Spell</title>
 
                     <para>
-                        When a <e>Rune</e> is invoked, you must make a
+                        When a <e>Spell</e> is cast, you must make a
                         <y:skeq><y:attr>Will</y:attr><y:sk>Mystery</y:sk><y:die/></y:skeq>
-                        check against a target difficulty equal to five times the level
-                        of the <e>Rune</e> (plus any extras from <e>extending</e>. If you
-                        succeed, then the rune is invoked and you gain an amount of
-                        <e>Exhaustion</e> based on the level of the rune. If you fail,
-                        then you gain one Fatigue and nothing happens.
+                        check against the level of the spell. Whether you succeed or fail
+                        you gain one level of <e>fatigue</e>.
                     </para>
-
-                    <targetlist targetFirst="true">
-                        <targetLabel>Level</targetLabel>
-                        <valueLabel>Fatigue / Exhaustion</valueLabel>
-
-                        <item target="1" value="1 Fatigue"/>
-                        <item target="3, 5" value="1 Exhaustion"/>
-                        <item target="7, 9" value="2 Exhaustion"/>
-                        <item target="11, 13" value="3 Exhaustion"/>
-                        <item target="15+" value="4 Exhaustion"/>
-                    </targetlist>
-
+                    
                     <para>
-                        Each level of success you get above the target needed may be
-                        used to reduce the <e>Exhaustion</e> by 1 level. Dropping it
-                        below 1 will reduce it to a single level of <e>Fatigue</e>,
-                        and beyond that to zero. High level runes are harder to
-                        invoke, and also require more successes to avoid becoming.
-                        exhausted.
+                        <e>Before</e> you cast the spell, you can make some choices to
+                        extend the spell or take stress. Extending the spell increases
+                        the spell's various attributes. Each +5 you add to the TN of the
+                        spell, you can extend one of its attributes once. The maximum number
+                        of times you can extend a spell is equal to your <t>Intelligence</t>.
+                    </para>
+                    
+                    <para>
+                        You may also take stress, which gives you one extra level of
+                        <e>Exhaustion</e> once the attempt has been made. Each level of
+                        <e>Exhaustion</e> that you take gives you a free extension, that
+                        doesn't count towards your limit. If you do this, then you cannot
+                        reduce fatigue later however well you roll.
+                    </para>
+                    
+                    <para>
+                        After you roll to cast the spell, if you get a <e>Good</e> success
+                        or better, then you can choose to either <e>boost</e> the spell,
+                        in which case you take one of the boost effects, or you can reduce
+                        the fatigue from the spell by one level. You can mix these results
+                        if you want, taking a level of boost and reducing the fatigue, as
+                        long as you roll enough successes over the TN.
                     </para>
 
                     <sect4>
                         <title>Extending Attributes</title>
 
                         <para>
-                            Before you attempt the invocation, you can choose to
+                            Before you attempt the spell, you can choose to
                             <e>extend</e> one or more of the standard attributes
                             of the rune. Each level of boost normally adds +5 to
-                            the TN of the invocation.
+                            the TN of the spell.
                         </para>
                     </sect4>
 
@@ -510,9 +512,9 @@
                         <title>Boosting Effects</title>
                         <para>
                             If you succeed with extra levels of success, then you can either
-                            use these to boost the effectiveness of the invocation (either
+                            use these to boost the effectiveness of the spell (either
                             for a <e>Good</e> or <e>Excellent</e> success), or to reduce the
-                            effort involved in the invocation.
+                            effort involved in the spell.
                         </para>
                         <para>
                             Level one and three runes can be boosted once (with a <e>Good</e>
@@ -522,7 +524,7 @@
                         </para>
                         <para>
                             The decisions to boost effectiveness or reduce fatigue is made
-                            after the roll to invoke the rune. You may combine reducing the
+                            after the roll to invoke the spell. You may combine reducing the
                             fatigue with boosting the effect.
                         </para>
                     </sect4>
@@ -530,10 +532,10 @@
                     <sect4>
                         <title>Words and Gestures</title>
                         <para>
-                            Invoking a <e>Rune</e> requires the words of the rune to be
+                            Invoking a <e>spell</e> requires the words of the spell to be
                             spoken allowed, and in some cases for gestures to be made to
                             trace out the symbols being spoken. The more powerful the
-                            invocation, the bolder the voice and gestures required.
+                            spell, the bolder the voice and gestures required.
                         </para>
                     </sect4>
                 </sect3>
